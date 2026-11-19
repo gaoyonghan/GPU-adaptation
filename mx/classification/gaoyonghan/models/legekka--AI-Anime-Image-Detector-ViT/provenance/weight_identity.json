@@ -1,0 +1,36 @@
+{
+  "sequence": 76,
+  "files": [
+    {
+      "path": "model.safetensors",
+      "bytes": 350486200,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "config.json",
+      "bytes": 726,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "preprocessor_config.json",
+      "bytes": 205,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2624,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": ".gitattributes",
+      "bytes": 1519,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    }
+  ],
+  "mismatches": []
+}

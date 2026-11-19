@@ -1,0 +1,72 @@
+{
+  "sequence": 186,
+  "files": [
+    {
+      "path": "pytorch_model.bin",
+      "bytes": 343286257,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "config.json",
+      "bytes": 800,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "preprocessor_config.json",
+      "bytes": 228,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "README.md",
+      "bytes": 912,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "weight_verification.json",
+      "bytes": 1200,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "images/bedroom.jpg",
+      "bytes": 31528,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "images/bathroom.jpg",
+      "bytes": 14900,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "images/kitchen.jpg",
+      "bytes": 22867,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "images/dining_room.jpg",
+      "bytes": 38379,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "images/living_room.jpg",
+      "bytes": 27327,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "runs/events.out.tfevents.1644646376.abd485e46fe5.81.0",
+      "bytes": 1444,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    }
+  ],
+  "mismatches": []
+}

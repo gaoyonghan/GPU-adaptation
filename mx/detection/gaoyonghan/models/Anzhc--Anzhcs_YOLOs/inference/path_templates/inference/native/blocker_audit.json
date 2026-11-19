@@ -1,0 +1,131 @@
+{
+  "audited_on": "2026-09-05",
+  "total_detection_models": 62,
+  "existing_green_batch": 37,
+  "remaining_models": 25,
+  "scope_note": "37是已选入队列数，不是全量完成数。25按唯一model_id统计；任务/权重子记录不重复计数。",
+  "source_manifest": "__MODEL_ROOT__/resources/runtime/assets/workspace/official_object_detection_eval/models.json",
+  "source_sha256": "b45b4ecf6abc95ee7f2f542b2125dd8fcf4b013bed08cf81dc50c452ce023c00",
+  "primary_blocker_counts": {
+    "旧替代集类别不全，需核对任务覆盖": 4,
+    "私有数据且缺任务匹配的公开金标": 2,
+    "原协议/划分不明，现有数据可做参考评测": 8,
+    "数据已有，缺任务适配或多权重覆盖": 8,
+    "仅下载了说明/发布链接，实际权重缺失": 2,
+    "数据下载未完成，当前目录为空": 1
+  },
+  "models": [
+    {
+      "sequence": 8,
+      "excel_row": 9,
+      "model_id": "Anzhc/Anzhcs_YOLOs",
+      "primary_blocker": "私有数据且缺任务匹配的公开金标",
+      "historical_reason": "P2-替代待筛选｜已从本地17个权重中每项保留1个：①Anzhc Face seg 640 v4 y11n.pt；②Anzhcs ManFace v02 1024 y8n.pt；③Anzhcs WomanFace v05 1024 y8n.pt；④Anzhc Eyes -seg-hd.pt；⑤Anzhc HeadHair seg y8m.pt；⑥Anzhc Breasts Seg v1 1024m.pt；⑦Anzhcs Breast size det cls v8 640 y11m.pt；⑧Anzhcs Drones v03 1024 y11n.pt；⑨Anzhcs Anime Score CLS v1.pt；⑩Anzhcs-text-seg-v9-y11m.pt；⑪Anzhc Manga Panels -seg.pt。模型卡明确作者数据多为自标封闭集；Anime Score虽源于Danbooru/Safebooru，精确抽样与划分也未公开。不能按模型卡直接下载官方集，下一步需逐任务选全类别、同标注类型的公开替代集，不得共用一个数据集。依据：https://huggingface.co/Anzhc/Anzhcs_YOLOs",
+      "required_tasks": [
+        "face_bbox_mask",
+        "manface_bbox_mask",
+        "womanface_bbox_mask",
+        "eye_bbox_mask",
+        "headhair_bbox_mask",
+        "breast_bbox_mask",
+        "breast_size_detection",
+        "drone_detection",
+        "anime_score_classification",
+        "text_bbox_mask",
+        "manga_panel_bbox_mask"
+      ],
+      "task_inventory_status": "model_card_and_prior_audit",
+      "weight_files_present": [
+        {
+          "file": "Anzhc Breasts Seg v1 1024m.pt",
+          "bytes": 54931149
+        },
+        {
+          "file": "Anzhc Breasts Seg v1 1024n.pt",
+          "bytes": 6894933
+        },
+        {
+          "file": "Anzhc Breasts Seg v1 1024s.pt",
+          "bytes": 23971669
+        },
+        {
+          "file": "Anzhc Eyes -seg-hd.pt",
+          "bytes": 6906493
+        },
+        {
+          "file": "Anzhc Face -seg.pt",
+          "bytes": 6834492
+        },
+        {
+          "file": "Anzhc Face seg 1024 v2 y8n.pt",
+          "bytes": 6948693
+        },
+        {
+          "file": "Anzhc Face seg 640 v2 y8n.pt",
+          "bytes": 6878186
+        },
+        {
+          "file": "Anzhc Face seg 640 v3 y11n.pt",
+          "bytes": 6083105
+        },
+        {
+          "file": "Anzhc Face seg 640 v4 y11n.pt",
+          "bytes": 6020644
+        },
+        {
+          "file": "Anzhc Face seg 768 v2 y8n.pt",
+          "bytes": 6900842
+        },
+        {
+          "file": "Anzhc Face seg 768MS v2 y8n.pt",
+          "bytes": 6915968
+        },
+        {
+          "file": "Anzhc HeadHair seg y8m.pt",
+          "bytes": 54879821
+        },
+        {
+          "file": "Anzhc HeadHair seg y8n.pt",
+          "bytes": 6813030
+        },
+        {
+          "file": "Anzhc Manga Panels -seg.pt",
+          "bytes": 23863380
+        },
+        {
+          "file": "Anzhcs Anime Score CLS v1.pt",
+          "bytes": 3234174
+        },
+        {
+          "file": "Anzhcs Breast size det cls v8 640 y11m.pt",
+          "bytes": 40579464
+        },
+        {
+          "file": "Anzhcs Drones v03 1024 y11n.pt",
+          "bytes": 6130017
+        },
+        {
+          "file": "Anzhcs ManFace v02 1024 y8n.pt",
+          "bytes": 6354855
+        },
+        {
+          "file": "Anzhcs WomanFace v05 1024 y8n.pt",
+          "bytes": 6363111
+        },
+        {
+          "file": "Anzhcs-text-seg-v6-y11m.pt",
+          "bytes": 45226687
+        },
+        {
+          "file": "Anzhcs-text-seg-v9-y11m.pt",
+          "bytes": 45220856
+        }
+      ],
+      "next_action": "按11个任务分别选择检测框、真实掩码或分类金标；仅检测AP不能代替mask/分类指标。",
+      "source_model_card": "https://huggingface.co/Anzhc/Anzhcs_YOLOs",
+      "local_model_card": "__MODEL_ROOT__/weights/Anzhc/Anzhcs_YOLOs/README.md",
+      "technical_complete": false,
+      "metrics": null
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "dataset": "SOMASet",
+  "source": "https://www.kaggle.com/datasets/vicolab/somaset",
+  "archive": "datasets_171_200/somaset/raw/somaset.data.zip",
+  "archive_sha256": "613e917b0df5433cf8e0208497f7966b0a75c498ce30e612c4a43643f8ebd294",
+  "sample_seed": 174,
+  "images": 600,
+  "sampling": "12 images per prototype: one from each garment 01-08 and four extra views",
+  "target_labels": null,
+  "status": "prediction_only",
+  "reason": "SOMASet documents mixed somatotype prototypes but no auditable per-prototype or per-image three-class labels.",
+  "mapping_reference": "https://arxiv.org/html/1701.03153"
+}

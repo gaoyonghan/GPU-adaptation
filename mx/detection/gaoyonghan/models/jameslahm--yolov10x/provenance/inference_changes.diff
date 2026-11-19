@@ -1,0 +1,25 @@
+--- original_inference.py
++++ inference/native/run_m29_native.py
+@@ -14,10 +14,10 @@
+ from run_native_18_20_21 import dataset_for_run
+ 
+ HERE = Path(__file__).resolve().parent
+-SOURCE = Path('/home/ubuntu/gaoyonghan/gpu/official_sources/object_detection/yolov10')
++SOURCE = Path('/data2/gaoyonghan/gpu_model_standalone_20261110/release/model/检测/jameslahm--yolov10x/resources/runtime/assets/workspace/official_sources/object_detection/yolov10')
+ REVISION = '453c6e38a51e9d1d5a2aa5fb7f1014a711913397'
+-MODEL = Path('/data2/gaoyonghan/gpu/model/jameslahm/yolov10x')
+-OUT = Path('/home/ubuntu/gaoyonghan/gpu/results/m29_native_v1')
++MODEL = Path('/data2/gaoyonghan/gpu_model_standalone_20261110/release/model/检测/jameslahm--yolov10x/resources/model_index/jameslahm/yolov10x')
++OUT = Path('/data2/gaoyonghan/gpu_model_standalone_20261110/release/model/检测/jameslahm--yolov10x/results/run_001/m029')
+ REFERENCE = 'https://github.com/THU-MIG/yolov10#validation'
+ 
+ 
+@@ -40,7 +40,7 @@
+     import_module('pycocotools.cocoeval')
+     font = ultralytics.utils.USER_CONFIG_DIR / 'Arial.ttf'
+     if not font.exists():
+-        cached = Path('/home/ubuntu/.config/Ultralytics/Arial.ttf')
++        cached = Path('/data2/gaoyonghan/gpu_model_standalone_20261110/release/model/检测/jameslahm--yolov10x/resources/runtime/assets/fonts/Arial.ttf')
+         assert cached.is_file(), 'Missing cached Arial.ttf'
+         font.symlink_to(cached)
+     return {'source': str(SOURCE), 'revision': REVISION,

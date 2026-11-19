@@ -1,0 +1,190 @@
+{
+  "generated_at": "2026-09-05T10:58:31.409026+00:00",
+  "total_detection_models": 62,
+  "existing_green_queue": 37,
+  "current_scope_unique_models": 25,
+  "initial_primary_blocker_counts": {
+    "旧替代集类别不全，需核对任务覆盖": 4,
+    "私有数据且缺任务匹配的公开金标": 2,
+    "原协议/划分不明，现有数据可做参考评测": 8,
+    "数据已有，缺任务适配或多权重覆盖": 8,
+    "仅下载了说明/发布链接，实际权重缺失": 2,
+    "数据下载未完成，当前目录为空": 1
+  },
+  "current_state_counts": {
+    "complete": 21,
+    "partial_complete": 3,
+    "blocked": 1
+  },
+  "counting_rule": "Unique model IDs; all required tasks must have complete frozen benchmark metrics. PubTables means the model-blind 1000-image benchmark, not the original 93834-image test. Invalid cmarkea and all superseded Qualcomm v1/v2 results excluded.",
+  "fidelity_counts": {
+    "reference_baseline": 25
+  },
+  "comparison_counts": {
+    "not_officially_comparable": 25
+  },
+  "case_type_counts": {
+    "special": 25
+  },
+  "models": [
+    {
+      "sequence": 47,
+      "model_id": "foduucom/thermal-image-object-detection",
+      "state": "complete",
+      "all_tasks_complete": true,
+      "required_tasks": [
+        "bbox_detection_classification"
+      ],
+      "results": [
+        {
+          "status": "complete",
+          "task": "bbox",
+          "valid_complete": true,
+          "images": 1144,
+          "result_directory": "__MODEL_ROOT__/resources/runtime/assets/workspace/results/remaining25_v2/m47-thermal-image-object-detection/bbox",
+          "metrics": {
+            "metrics": {
+              "AP": 0.14140495187860957,
+              "AP50": 0.266755745184812,
+              "AP75": 0.12673998510250578,
+              "AP_small": 0.08982816736138795,
+              "AP_medium": 0.2355213092648175,
+              "AP_large": 0.24201464590665955,
+              "AR1": 0.0623172885148158,
+              "AR10": 0.17913912254312978,
+              "AR100": 0.19799213360109627,
+              "AR_small": 0.1511406068023085,
+              "AR_medium": 0.2900991114245673,
+              "AR_large": 0.258972278566599,
+              "per_class_AP": {
+                "person": 0.2763276927200659,
+                "bicycle": 0.09198191220682048,
+                "car": 0.48012010634477115,
+                "motorcycle": 0.0,
+                "bus": 0.0,
+                "truck": 0.0
+              }
+            },
+            "unit": "fraction_0_to_1",
+            "coverage": {
+              "model_labels": {
+                "0": "empty",
+                "1": "person",
+                "2": "bicycle",
+                "3": "car",
+                "4": "motorcycle",
+                "5": "airplane",
+                "6": "bus",
+                "7": "train",
+                "8": "truck",
+                "9": "boat",
+                "10": "traffic light",
+                "11": "fire hydrant",
+                "12": "stop sign",
+                "13": "parking meter"
+              },
+              "mapping": {
+                "1": 1,
+                "2": 2,
+                "3": 3,
+                "4": 4,
+                "6": 6,
+                "8": 8
+              },
+              "covered_labels": [
+                "person",
+                "bicycle",
+                "car",
+                "motorcycle",
+                "bus",
+                "truck"
+              ],
+              "missing_labels": [
+                "empty",
+                "airplane",
+                "train",
+                "boat",
+                "traffic light",
+                "fire hydrant",
+                "stop sign",
+                "parking meter"
+              ],
+              "covered_count": 6,
+              "total_model_classes": 14,
+              "gt_instances_per_class": {
+                "person": 4470,
+                "bicycle": 170,
+                "car": 7133,
+                "motorcycle": 55,
+                "bus": 179,
+                "truck": 46
+              }
+            },
+            "evaluation_images": 1144,
+            "annotation_sha256": "8c955ba4b7f724115c14e1390f6efc21cb58e410f095e529d04e1c328e267854",
+            "protocol_fingerprint": "604a48ff001bca42670d92b5427ff936d4c8511c4d8b4e095b200700eb210f0b",
+            "reference_check": "not_officially_comparable"
+          },
+          "coverage": {
+            "model_labels": {
+              "0": "empty",
+              "1": "person",
+              "2": "bicycle",
+              "3": "car",
+              "4": "motorcycle",
+              "5": "airplane",
+              "6": "bus",
+              "7": "train",
+              "8": "truck",
+              "9": "boat",
+              "10": "traffic light",
+              "11": "fire hydrant",
+              "12": "stop sign",
+              "13": "parking meter"
+            },
+            "mapping": {
+              "1": 1,
+              "2": 2,
+              "3": 3,
+              "4": 4,
+              "6": 6,
+              "8": 8
+            },
+            "covered_labels": [
+              "person",
+              "bicycle",
+              "car",
+              "motorcycle",
+              "bus",
+              "truck"
+            ],
+            "missing_labels": [
+              "empty",
+              "airplane",
+              "train",
+              "boat",
+              "traffic light",
+              "fire hydrant",
+              "stop sign",
+              "parking meter"
+            ],
+            "covered_count": 6,
+            "total_model_classes": 14,
+            "gt_instances_per_class": {
+              "person": 4470,
+              "bicycle": 170,
+              "car": 7133,
+              "motorcycle": 55,
+              "bus": 179,
+              "truck": 46
+            }
+          },
+          "error": null
+        }
+      ],
+      "next_action": "FLIR thermal validation六类映射后运行检测AP，记录热成像模态。"
+    }
+  ],
+  "supplemental_updated_at": "2026-09-05T15:25:21.596769+00:00",
+  "supplemental_summary": "supplemental_20260905/summary.json"
+}

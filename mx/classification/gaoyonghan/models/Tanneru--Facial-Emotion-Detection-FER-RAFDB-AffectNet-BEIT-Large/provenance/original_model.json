@@ -1,0 +1,157 @@
+{
+  "sequence": 81,
+  "model_id": "Tanneru/Facial-Emotion-Detection-FER-RAFDB-AffectNet-BEIT-Large",
+  "task": "image_classification",
+  "task_name": "图像分类",
+  "reported_result": "acc：65.59%",
+  "reference": "未核实对应模型卡指标",
+  "model_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/model_index/Tanneru/Facial-Emotion-Detection-FER-RAFDB-AffectNet-BEIT-Large",
+  "model_exists_at_build": true,
+  "dataset": {
+    "id": "fer2013",
+    "relation": "public_replacement",
+    "split": "PrivateTest",
+    "note": "FER2013 PrivateTest 3589 图替代未明确的组合评测划分；结果为 provisional，标签映射尚未验证。"
+  },
+  "environment_id": "classification-shared",
+  "runner_family": "special",
+  "final_result_sources": [
+    {
+      "source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m081/metrics-0.json",
+      "sha256": "79bd57fab7f589cb3d2463eda23ac3c433ee8b24541cade27654e9cc4d20832c",
+      "selection": "requires_metric_review",
+      "data": {
+        "state": "provisional_complete",
+        "accepted_for_report": false,
+        "label_mapping_status": "unverified_inference_from_author_report_order",
+        "provisional_metrics": {
+          "accuracy": 0.6558930064084704,
+          "accuracy_percent": 65.58930064084704,
+          "correct": 2354,
+          "evaluation_images": 3589,
+          "confusion_matrix_label_order": [
+            "angry",
+            "disgust",
+            "fear",
+            "happy",
+            "sad",
+            "surprise",
+            "neutral"
+          ],
+          "confusion_matrix": [
+            [
+              0,
+              30,
+              200,
+              25,
+              150,
+              17,
+              69
+            ],
+            [
+              0,
+              44,
+              5,
+              1,
+              2,
+              1,
+              2
+            ],
+            [
+              0,
+              1,
+              316,
+              4,
+              110,
+              39,
+              58
+            ],
+            [
+              0,
+              0,
+              19,
+              759,
+              17,
+              32,
+              52
+            ],
+            [
+              0,
+              3,
+              57,
+              15,
+              365,
+              11,
+              143
+            ],
+            [
+              0,
+              1,
+              36,
+              6,
+              6,
+              359,
+              8
+            ],
+            [
+              0,
+              5,
+              17,
+              12,
+              73,
+              8,
+              511
+            ]
+          ]
+        },
+        "official_reference_comparable": false,
+        "protocol_fingerprint": "1a38423d03548378684a098178da1ccdeecbbf891c6f3e7194e80d86894c559a",
+        "predictions_sha256": "96c5345cceb0e19ac0048c38bad32fc785727c3b4c17093b9afeff4d24a8466d"
+      },
+      "source_original": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/m81_fer2013_v1/full/run_20260915_160723_995381/provisional_metrics.json"
+    }
+  ],
+  "code": {
+    "source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/m81_fer2013_v1/full/run_20260915_160723_995381/run_m81_fer2013.py",
+    "sha256": "330393608509aac1dce6f2bd47ff8addf8c777ebd33fc3992244b5b36932f11c",
+    "recorded_sha256": null,
+    "attestation": "result_batch_snapshot",
+    "status_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m081/status.json",
+    "selection": "same_run_snapshot",
+    "archive": "code_archive/330393608509aac1_run_m81_fer2013.py"
+  },
+  "support_files": [
+    "run_m75_fer2013.py",
+    "run_m81_fer2013.py",
+    "preprocessor_config.json",
+    "run_m81_fer2013.sh",
+    "protocol.json",
+    "config.json",
+    "models_m81.json",
+    "provisional_metrics.json"
+  ],
+  "final_scorer": null,
+  "backend_package": "classification8_eval",
+  "readiness": "needs_metric_review",
+  "launch_status": "configured",
+  "metadata_warning": null,
+  "dataset_variants": [],
+  "scoring_recovery_20261009": {
+    "scorer": "protocol_alignment/rescore_classification.py",
+    "score_status": "provisional_label_mapping",
+    "formal_score_allowed": false,
+    "evidence": "Author config still generic LABEL_0..6 at unchanged revision 68cbe4de6a93da0ec70267ab792b539311ad3d3f; 2026-10-09 public repository has no discussions or label encoder"
+  },
+  "evaluation_protocol": {
+    "id": "fer2013_privatetest_provisional_v1",
+    "scope": "FER2013 PrivateTest 3589张；沿用历史候选类别映射",
+    "expected_inference_images": 3589,
+    "expected_scored_images": 3589,
+    "metrics_path": "comparison_metrics.json",
+    "official_reference_comparable": false,
+    "limitations": [
+      "缺少作者类别编号证明；不得用测试集优化映射"
+    ],
+    "scoring_entry": "protocol_alignment/rescore_classification.py"
+  }
+}

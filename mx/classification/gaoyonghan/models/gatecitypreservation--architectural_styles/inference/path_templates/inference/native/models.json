@@ -1,0 +1,167 @@
+{
+  "schema_version": 1,
+  "sources": {},
+  "models": [
+    {
+      "sequence": 189,
+      "model_id": "gatecitypreservation/architectural_styles",
+      "model_path": "__MODEL_ROOT__/weights/gatecitypreservation/architectural_styles",
+      "revision": "ae57ad5ef7d339c28bee56b608e4e8830284c8f3",
+      "task_type": "image-classification",
+      "status": "not_started",
+      "official_model_card": "https://huggingface.co/gatecitypreservation/architectural_styles",
+      "official_reference": {
+        "source": "https://huggingface.co/gatecitypreservation/architectural_styles",
+        "local_card_sha256": "721f60562f7fd166319f393f44f51c98df914e1e6cd9fe597d61bdb0d6694cdc",
+        "model_index": [
+          {
+            "name": "architectural_styles",
+            "results": [
+              {
+                "task": {
+                  "name": "Image Classification",
+                  "type": "image-classification"
+                },
+                "metrics": [
+                  {
+                    "name": "Accuracy",
+                    "type": "accuracy",
+                    "value": 0.7796609997749329
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "text_report_values": null,
+        "units": "fractions for extracted accuracy/F1; original model-index units as published",
+        "comparison": "Manual protocol review required; no automatic drop calculation",
+        "note": "Card reports retained as provenance, not proof that local data/split/framework exactly reproduces the reported run."
+      },
+      "reference_comparison": "manual_reference_required",
+      "known_differences": [
+        "Broader dataset styles are not a verified bijection to craftsman bungalow/tudor cottage subclasses. Predictions/timing only until taxonomy is resolved.",
+        "Local checkpoint and publisher inference components retained. Offline file paths, eval mode, batching, timing observation and reference scoring are external orchestration."
+      ],
+      "config": {
+        "_name_or_path": "google/vit-base-patch16-224-in21k",
+        "architectures": [
+          "ViTForImageClassification"
+        ],
+        "attention_probs_dropout_prob": 0.0,
+        "hidden_act": "gelu",
+        "hidden_dropout_prob": 0.0,
+        "hidden_size": 768,
+        "id2label": {
+          "0": "classical revival architecture",
+          "1": "craftsman bungalow architecture",
+          "2": "mid-century modern ranch",
+          "3": "queen anne architecture",
+          "4": "tudor cottage architecture"
+        },
+        "image_size": 224,
+        "initializer_range": 0.02,
+        "intermediate_size": 3072,
+        "label2id": {
+          "classical revival architecture": "0",
+          "craftsman bungalow architecture": "1",
+          "mid-century modern ranch": "2",
+          "queen anne architecture": "3",
+          "tudor cottage architecture": "4"
+        },
+        "layer_norm_eps": 1e-12,
+        "model_type": "vit",
+        "num_attention_heads": 12,
+        "num_channels": 3,
+        "num_hidden_layers": 12,
+        "patch_size": 16,
+        "qkv_bias": true,
+        "torch_dtype": "float32",
+        "transformers_version": "4.15.0"
+      },
+      "preprocessing": {
+        "do_normalize": true,
+        "do_resize": true,
+        "feature_extractor_type": "ViTFeatureExtractor",
+        "image_mean": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "image_std": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "resample": 2,
+        "size": 224
+      },
+      "architecture": [
+        "ViTForImageClassification"
+      ],
+      "files": {
+        "pytorch_model.bin": {
+          "size": 343286257,
+          "sha256": "d93bde479d97a6546b2f92ceaac3cdf4fa73387961f02095d0a836eb07089f49"
+        },
+        "config.json": {
+          "size": 980,
+          "sha256": "4173ab4d0be14b702ee888b221370fd03d1440ebba7b7e12318ee0f1c47e0fe5"
+        },
+        "preprocessor_config.json": {
+          "size": 228,
+          "sha256": "af4eb4d79cf61b47010fc0bc9352ee967579c417423b4917188d809b7e048948"
+        },
+        "README.md": {
+          "size": 3620,
+          "sha256": "721f60562f7fd166319f393f44f51c98df914e1e6cd9fe597d61bdb0d6694cdc"
+        }
+      },
+      "weight": "pytorch_model.bin",
+      "backend": "hf_published",
+      "environment": "shared_hf",
+      "dataset_relation": "public_replacement",
+      "split": "three previously selected candidate styles, one archive tree",
+      "excluded_source_labels": {},
+      "images": 1539,
+      "covered_target_classes": 0,
+      "num_output_classes": 5,
+      "label_mapping": {
+        "0": "classical revival architecture",
+        "1": "craftsman bungalow architecture",
+        "2": "mid-century modern ranch",
+        "3": "queen anne architecture",
+        "4": "tudor cottage architecture"
+      },
+      "scoring": "prediction_only",
+      "evaluator": null,
+      "fidelity": "reference_baseline",
+      "case_type": "special",
+      "special_tags": [
+        "framework_numeric_difference",
+        "dataset_replacement",
+        "official_evaluator_missing"
+      ],
+      "inference_entry": "publisher_transformers_model_and_processor",
+      "default_batch_size": 1,
+      "dtype": "float32",
+      "warmup_batches": 10,
+      "index": "__MODEL_ROOT__/inference/native/indices/189.jsonl",
+      "index_sha256": "9ffe63911c42bb57caa0b6bee8d8ca402e4f72a7a5449fff81e63c50be030b31",
+      "data_containers": {
+        "__DATASET_ROOT__/datasets_171_200/architectural_styles/raw/architectural-styles-dataset.zip": {
+          "size": 1677638078,
+          "mtime_ns": 1598635471000000000
+        }
+      },
+      "protocol_fingerprint": "83fe71c25e9bf7cd088613b51bcd29a314d603b16b02f63b3aace7bd6256893c"
+    }
+  ],
+  "runtime_defaults": {
+    "batch_size": 1,
+    "device": "cuda:0",
+    "warmup_batches": 10,
+    "workers": 2
+  },
+  "scope": "Each published model retained; 177 includes all five weights; no full GPU inference launched by preparation."
+}

@@ -1,0 +1,41 @@
+{
+  "audited_on": "2026-09-05",
+  "total_detection_models": 62,
+  "existing_green_batch": 37,
+  "remaining_models": 25,
+  "scope_note": "37是已选入队列数，不是全量完成数。25按唯一model_id统计；任务/权重子记录不重复计数。",
+  "source_manifest": "__MODEL_ROOT__/resources/runtime/assets/workspace/official_object_detection_eval/models.json",
+  "source_sha256": "b45b4ecf6abc95ee7f2f542b2125dd8fcf4b013bed08cf81dc50c452ce023c00",
+  "primary_blocker_counts": {
+    "旧替代集类别不全，需核对任务覆盖": 4,
+    "私有数据且缺任务匹配的公开金标": 2,
+    "原协议/划分不明，现有数据可做参考评测": 8,
+    "数据已有，缺任务适配或多权重覆盖": 8,
+    "仅下载了说明/发布链接，实际权重缺失": 2,
+    "数据下载未完成，当前目录为空": 1
+  },
+  "models": [
+    {
+      "sequence": 12,
+      "excel_row": 13,
+      "model_id": "foduucom/table-detection-and-extraction",
+      "primary_blocker": "原协议/划分不明，现有数据可做参考评测",
+      "historical_reason": "P1-协议可试评｜模型卡明确数据集为 foduucom/table-detection-yolo，并给出mAP@0.5：all 0.962、bordered 0.961、borderless 0.963。没有独立论文，也未明确写出split；本地TensorBoard指标名称为val/mAP，官方validation 70图最可能是这些数字的来源。先跑validation；若结果接近即可固定协议，同时可把官方test 34图另作外部验证。依据：https://huggingface.co/foduucom/table-detection-and-extraction；https://huggingface.co/datasets/foduucom/table-detection-yolo",
+      "required_tasks": [
+        "bbox_detection_classification"
+      ],
+      "task_inventory_status": "model_card_and_prior_audit",
+      "weight_files_present": [
+        {
+          "file": "best.pt",
+          "bytes": 22509112
+        }
+      ],
+      "next_action": "运行作者validation 70图；切分未披露，指标相近也不能证明原协议身份。",
+      "source_model_card": "https://huggingface.co/foduucom/table-detection-and-extraction",
+      "local_model_card": "__MODEL_ROOT__/weights/foduucom/table-detection-and-extraction/README.md",
+      "technical_complete": false,
+      "metrics": null
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "sources": {},
+  "models": [
+    {
+      "sequence": 176,
+      "model_id": "avazquez2/helloWorld",
+      "model_path": "__MODEL_ROOT__/weights/avazquez2/helloWorld",
+      "revision": "ec7f94f0b02d6632fecbe103928afb68f19631ce",
+      "task_type": "image-classification",
+      "status": "not_started",
+      "official_model_card": "https://huggingface.co/avazquez2/helloWorld",
+      "official_reference": {
+        "source": "https://huggingface.co/avazquez2/helloWorld",
+        "local_card_sha256": "51de18ac88d806f80bb203d76fabe30efd098d5dc93ad5de201c1bfd9feb0cfd",
+        "model_index": null,
+        "text_report_values": null,
+        "units": "fractions for extracted accuracy/F1; original model-index units as published",
+        "comparison": "Manual protocol review required; no automatic drop calculation",
+        "note": "No unambiguous numeric reference for this exact checkpoint was extracted from the frozen card."
+      },
+      "reference_comparison": "manual_reference_required",
+      "known_differences": [
+        "Train/reference scoring; not a Kaggle leaderboard reproduction. Record binary log loss as reference.",
+        "Local checkpoint and publisher inference components retained. Offline file paths, eval mode, batching, timing observation and reference scoring are external orchestration."
+      ],
+      "config": {
+        "_name_or_path": "AutoTrain",
+        "architectures": [
+          "ViTForImageClassification"
+        ],
+        "attention_probs_dropout_prob": 0.0,
+        "encoder_stride": 16,
+        "hidden_act": "gelu",
+        "hidden_dropout_prob": 0.0,
+        "hidden_size": 768,
+        "id2label": {
+          "0": "cat",
+          "1": "dog"
+        },
+        "image_size": 224,
+        "initializer_range": 0.02,
+        "intermediate_size": 3072,
+        "label2id": {
+          "cat": "0",
+          "dog": "1"
+        },
+        "layer_norm_eps": 1e-12,
+        "max_length": 128,
+        "model_type": "vit",
+        "num_attention_heads": 12,
+        "num_channels": 3,
+        "num_hidden_layers": 12,
+        "padding": "max_length",
+        "patch_size": 16,
+        "problem_type": "single_label_classification",
+        "qkv_bias": true,
+        "torch_dtype": "float32",
+        "transformers_version": "4.22.1"
+      },
+      "preprocessing": {
+        "do_normalize": true,
+        "do_resize": true,
+        "feature_extractor_type": "ViTFeatureExtractor",
+        "image_mean": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "image_std": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "resample": 2,
+        "size": 224
+      },
+      "architecture": [
+        "ViTForImageClassification"
+      ],
+      "files": {
+        "pytorch_model.bin": {
+          "size": 343266993,
+          "sha256": "8fb5f7703115de0c0c15e04616bcfcf01d5dba29023a829fb68b5bc82533a75b"
+        },
+        "config.json": {
+          "size": 743,
+          "sha256": "70177e0892c75651cdd959f160ff6cbebd03cd84db18cb313219f27e060f84bc"
+        },
+        "preprocessor_config.json": {
+          "size": 228,
+          "sha256": "af4eb4d79cf61b47010fc0bc9352ee967579c417423b4917188d809b7e048948"
+        },
+        "README.md": {
+          "size": 158,
+          "sha256": "51de18ac88d806f80bb203d76fabe30efd098d5dc93ad5de201c1bfd9feb0cfd"
+        }
+      },
+      "weight": "pytorch_model.bin",
+      "backend": "hf_published",
+      "environment": "shared_hf",
+      "dataset_relation": "public_replacement",
+      "split": "labelled competition train; test ground truth unavailable",
+      "excluded_source_labels": {},
+      "images": 25000,
+      "covered_target_classes": 2,
+      "num_output_classes": 2,
+      "label_mapping": {
+        "0": "cat",
+        "1": "dog"
+      },
+      "scoring": "reference",
+      "evaluator": "sklearn reference scoring",
+      "fidelity": "reference_baseline",
+      "case_type": "special",
+      "special_tags": [
+        "framework_numeric_difference",
+        "dataset_replacement",
+        "official_evaluator_missing"
+      ],
+      "inference_entry": "publisher_transformers_model_and_processor",
+      "default_batch_size": 1,
+      "dtype": "float32",
+      "warmup_batches": 10,
+      "index": "__MODEL_ROOT__/inference/native/indices/176.jsonl",
+      "index_sha256": "a5f91e7dbc6c6059eaa4c18bdf025fa898a49c9a4c75d215c90f1b5c06cb49dc",
+      "data_containers": {
+        "__DATASET_ROOT__/datasets_171_200/cats_dogs_redux/raw/dogs-vs-cats-redux-kernels-edition.zip": {
+          "size": 853083403,
+          "mtime_ns": 1576009197000000000
+        }
+      },
+      "protocol_fingerprint": "9e8727d85638cdb11e9f40d07182023f87064f8636a91d003f0fcfe149a5e291"
+    }
+  ],
+  "runtime_defaults": {
+    "batch_size": 1,
+    "device": "cuda:0",
+    "warmup_batches": 10,
+    "workers": 2
+  },
+  "scope": "Each published model retained; 177 includes all five weights; no full GPU inference launched by preparation."
+}

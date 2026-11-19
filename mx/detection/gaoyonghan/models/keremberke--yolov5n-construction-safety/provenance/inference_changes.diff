@@ -1,0 +1,24 @@
+--- original_inference.py
++++ inference/native/run_m60_native.py
+@@ -15,9 +15,9 @@
+ import zipfile
+ 
+ HERE = Path(__file__).resolve().parent
+-OUT = Path('/home/ubuntu/gaoyonghan/gpu/results/m60_native706_v1')
+-ARCHIVE = Path('/data2/gaoyonghan/gpu/dataset/construction_safety_v1_valid/data/valid.zip')
+-WEIGHT = Path('/data2/gaoyonghan/gpu/model/keremberke/yolov5n-construction-safety/best.pt')
++OUT = Path('/data2/gaoyonghan/gpu_model_standalone_20261110/release/model/检测/keremberke--yolov5n-construction-safety/results/run_001/m060')
++ARCHIVE = Path('/home/ubuntu/文档/ChatGPT/idea 2/outputs/launch_audit_20261005/migration_inputs/datasets/construction_safety_v1_valid/data/valid.zip')
++WEIGHT = Path('/data2/gaoyonghan/gpu_model_standalone_20261110/release/model/检测/keremberke--yolov5n-construction-safety/resources/model_index/keremberke/yolov5n-construction-safety/best.pt')
+ PACKAGES = {
+     'yolov5-7.0.6-py36.py37.py38-none-any.whl': '2f03334b7d1c53f6dd438b9c3853f529db84e3e0a5d650be82d0d350194d0930',
+     'm60_ipython_runtime.zip': '4042fb0d695a5b48579c9d26dfb17306ce204367027079464870d1dac453ffe8',
+@@ -58,7 +58,7 @@
+     assert version('yolov5')=='7.0.6' and site.resolve() in Path(val.__file__).resolve().parents
+     font=CONFIG_DIR/'Arial.ttf'
+     if not font.exists():
+-        source=Path('/home/ubuntu/.config/Ultralytics/Arial.ttf')
++        source=Path('/data2/gaoyonghan/gpu_model_standalone_20261110/release/model/检测/keremberke--yolov5n-construction-safety/resources/runtime/assets/fonts/Arial.ttf')
+         assert source.is_file(), 'Missing cached font; no automatic download'
+         font.symlink_to(source)
+     return val

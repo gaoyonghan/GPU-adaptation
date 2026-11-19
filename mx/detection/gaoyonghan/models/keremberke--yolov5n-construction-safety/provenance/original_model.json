@@ -1,0 +1,180 @@
+{
+  "sequence": 60,
+  "model_id": "keremberke/yolov5n-construction-safety",
+  "task": "object_detection",
+  "task_name": "目标检测",
+  "reported_result": "36.54",
+  "reference": "36.5355761042875",
+  "model_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/model_index/keremberke/yolov5n-construction-safety",
+  "model_exists_at_build": true,
+  "dataset": {
+    "id": "construction_safety_valid",
+    "relation": "original_exact",
+    "split": "validation",
+    "note": "Construction Site Safety v1 · validation · 57 图\n官方原集（不代表全协议已对齐）"
+  },
+  "environment_id": "detection-yolov5",
+  "runner_family": "official_detection",
+  "final_result_sources": [
+    {
+      "source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m060/metrics-0.json",
+      "sha256": "9cc405b9d52760a69f264c415410300676cb479c3df288905b5deb1528286cf5",
+      "selection": "workbook_score_match",
+      "data": {
+        "metrics": {
+          "precision": 0.7840806436219684,
+          "recall": 0.37524711293594915,
+          "AP50": 0.36535782939427164,
+          "AP": 0.22859866218223443
+        },
+        "per_class": {
+          "Barricade": {
+            "GT": 0,
+            "AP": null,
+            "AP50": null
+          },
+          "Dumpster": {
+            "GT": 0,
+            "AP": null,
+            "AP50": null
+          },
+          "EXCAVATORS": {
+            "GT": 3,
+            "AP": 0.5003530851063831,
+            "AP50": 0.8300000000000002
+          },
+          "Gloves": {
+            "GT": 5,
+            "AP": 0.0,
+            "AP50": 0.0
+          },
+          "Hardhat": {
+            "GT": 115,
+            "AP": 0.25859789814052003,
+            "AP50": 0.66058212953689
+          },
+          "Mask": {
+            "GT": 0,
+            "AP": null,
+            "AP50": null
+          },
+          "NO-Hardhat": {
+            "GT": 9,
+            "AP": 0.6130785186840694,
+            "AP50": 0.8316638655462183
+          },
+          "NO-Mask": {
+            "GT": 14,
+            "AP": 0.047551615125615135,
+            "AP50": 0.08867465909090909
+          },
+          "NO-Safety Vest": {
+            "GT": 14,
+            "AP": 0.0,
+            "AP50": 0.0
+          },
+          "Person": {
+            "GT": 23,
+            "AP": 0.005269432201397631,
+            "AP50": 0.019068928379237276
+          },
+          "Safety Net": {
+            "GT": 0,
+            "AP": null,
+            "AP50": null
+          },
+          "Safety Shoes": {
+            "GT": 13,
+            "AP": 0.0,
+            "AP50": 0.0
+          },
+          "Safety Vest": {
+            "GT": 6,
+            "AP": 0.0023055510638297872,
+            "AP50": 0.003842585106382979
+          },
+          "dump truck": {
+            "GT": 8,
+            "AP": 0.3656169944735989,
+            "AP50": 0.5901039556773502
+          },
+          "mini-van": {
+            "GT": 0,
+            "AP": null,
+            "AP50": null
+          },
+          "truck": {
+            "GT": 0,
+            "AP": null,
+            "AP50": null
+          },
+          "wheel loader": {
+            "GT": 11,
+            "AP": 0.7218121892091648,
+            "AP50": 0.995
+          }
+        },
+        "unit": "fraction_0_to_1",
+        "evaluation_images": 57,
+        "GT_instances": 221,
+        "reference_AP50": 0.36535576104287554,
+        "AP50_difference_percentage_points": 0.00020683513961006206,
+        "evaluator": "unmodified yolov5 7.0.6 val.run / ap_per_class",
+        "timings_ms": [
+          0.18785292642158374,
+          4.292446270323636,
+          3.124856112296121
+        ]
+      },
+      "source_original": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/m60_native706_v1/full/run_20260915_140531_562592/metrics.json"
+    }
+  ],
+  "code": {
+    "source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/official_object_detection_eval/run_m60_native.py",
+    "sha256": "c34744b94388c3ba85f893e2b0cc94b71386b11bbb144d9d5ddc9cacc40dab04",
+    "recorded_sha256": null,
+    "attestation": "current_code_unverified",
+    "status_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m060/status.json",
+    "selection": "current_special_code",
+    "archive": "code_archive/c34744b94388c3ba_run_m60_native.py"
+  },
+  "support_files": [
+    "download_official_source.py",
+    "models.json",
+    "run_model.py",
+    "m27_lingbot_config.json",
+    "run_m29_native.sh",
+    "run_m15_native_tight.sh",
+    "m27_native_config.py",
+    "run_m33x_native.py",
+    "run_m27_native.py",
+    "setup_env.sh",
+    "setup_repairs.sh",
+    "run_m33x_native.sh",
+    "audit_completed.py",
+    "repair_protocol.json",
+    "run_all.sh",
+    "run_m60_native.py",
+    "run_repairs.sh",
+    "retinanet_official.py",
+    "run_m24_native.py",
+    "run_m29_native.py",
+    "run_native_18_20_21.py",
+    "run_m24_native.sh",
+    "prepare_wilddet_weights.py",
+    "run_m07_native.py",
+    "run_m27_native.sh",
+    "run_m60_native.sh",
+    "check_environment.py",
+    "run_m07_native.sh",
+    "check_table_repair.py",
+    "run_native_18_20_21.sh",
+    "run_m15_native_tight.py",
+    "native_18_20_21.json"
+  ],
+  "final_scorer": null,
+  "backend_package": "official_object_detection_eval",
+  "readiness": "code_and_result_identified",
+  "launch_status": "configured",
+  "metadata_warning": null
+}

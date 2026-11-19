@@ -1,0 +1,9 @@
+{
+  "python": "3.11.16",
+  "requirements": "environments/e23-mamba/requirements.txt",
+  "expected": "environments/e23-mamba/expected.json",
+  "local_packages": [],
+  "original_python": "/home/ubuntu/文档/ChatGPT/gpu/classification171_200_eval/.venv-mamba/bin/python",
+  "torch": "2.6.0+cu124",
+  "python_version_scope": "Pinned to original interpreter version"
+}

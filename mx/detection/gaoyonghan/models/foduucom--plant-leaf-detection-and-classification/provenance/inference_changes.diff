@@ -1,0 +1,17 @@
+--- original_inference.py
++++ inference/native/run_m34_native.py
+@@ -13,10 +13,10 @@
+ import zipfile
+ 
+ HERE = Path(__file__).resolve().parent
+-OLD = Path('/home/ubuntu/gaoyonghan/gpu/results/remaining25_v4/m34-plant-leaf-detection-and-classification/plantdoc_species')
+-DATA = Path('/data2/gaoyonghan/gpu/dataset')
+-MODEL = Path('/data2/gaoyonghan/gpu/model/foduucom/plant-leaf-detection-and-classification')
+-OUT = Path('/home/ubuntu/gaoyonghan/gpu/results/m34_native8043_v1')
++OLD = Path('/data2/gaoyonghan/gpu_model_standalone_20261110/release/model/检测/foduucom--plant-leaf-detection-and-classification/resources/runtime/assets/workspace/results/remaining25_v4/m34-plant-leaf-detection-and-classification/plantdoc_species')
++DATA = Path('/home/ubuntu/文档/ChatGPT/idea 2/outputs/launch_audit_20261005/migration_inputs/datasets')
++MODEL = Path('/data2/gaoyonghan/gpu_model_standalone_20261110/release/model/检测/foduucom--plant-leaf-detection-and-classification/resources/model_index/foduucom/plant-leaf-detection-and-classification')
++OUT = Path('/data2/gaoyonghan/gpu_model_standalone_20261110/release/model/检测/foduucom--plant-leaf-detection-and-classification/results/run_001/m034')
+ 
+ 
+ def sha(path):

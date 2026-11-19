@@ -1,0 +1,82 @@
+{
+  "sequence": 2,
+  "model_id": "microsoft/table-transformer-detection",
+  "task": "object_detection",
+  "task_name": "目标检测",
+  "reported_result": "96.816022999795",
+  "reference": "97",
+  "model_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/model_index/microsoft/table-transformer-detection",
+  "model_exists_at_build": true,
+  "dataset": {
+    "id": "pubtables_detection_test",
+    "relation": "original_exact",
+    "split": "official test",
+    "note": "PubTables-1M Detection · official test · 57125 图\n官方原集（不代表全协议已对齐）"
+  },
+  "environment_id": "detection-hf",
+  "runner_family": "official_detection",
+  "final_result_sources": [
+    {
+      "source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m002/metrics-0.json",
+      "sha256": "5d672d26483ad8f5f9ca77e24dedab226ed381ac6e3f9246ff192675755e22bf",
+      "selection": "workbook_score_match",
+      "data": {
+        "metrics": {
+          "AP": 0.9681602299979504,
+          "AP50": 0.9950291424636071,
+          "AP75": 0.9892121609164042,
+          "AP_small": -1.0,
+          "AP_medium": 0.5788300102633955,
+          "AP_large": 0.9682292103331914,
+          "AR1": 0.9011020134472834,
+          "AR10": 0.9841910297746713,
+          "AR100": 0.9842295004186108,
+          "AR_small": -1.0,
+          "AR_medium": 0.6351145038167939,
+          "AR_large": 0.9845729144606912
+        },
+        "metrics_percent": {
+          "AP": 96.81602299979504,
+          "AP50": 99.5029142463607,
+          "AP75": 98.92121609164042,
+          "AP_small": -100.0,
+          "AP_medium": 57.88300102633956,
+          "AP_large": 96.82292103331915,
+          "AR1": 90.11020134472834,
+          "AR10": 98.41910297746713,
+          "AR100": 98.42295004186109,
+          "AR_small": -100.0,
+          "AR_medium": 63.51145038167939,
+          "AR_large": 98.45729144606912
+        },
+        "official_reference": null,
+        "reference_check": {
+          "classification": "manual_reference_required"
+        }
+      },
+      "source_original": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/object_detection_official_v2/m02-table-transformer-detection/metrics.json"
+    }
+  ],
+  "code": {
+    "source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/object_detection_official_v2/_source_snapshot/run_model.py",
+    "sha256": "f2fb744cfeffd526f9088df0d3ee7e4b17ce65eeada64030fe37deb96dd485dc",
+    "recorded_sha256": null,
+    "attestation": "result_batch_snapshot",
+    "status_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m002/status.json",
+    "selection": "same_batch_snapshot",
+    "archive": "code_archive/f2fb744cfeffd526_run_model.py"
+  },
+  "support_files": [
+    "download_official_source.py",
+    "models.json",
+    "run_model.py",
+    "setup_env.sh",
+    "run_all.sh",
+    "check_environment.py"
+  ],
+  "final_scorer": null,
+  "backend_package": "remaining_detection_eval",
+  "readiness": "code_and_result_identified",
+  "launch_status": "configured",
+  "metadata_warning": null
+}

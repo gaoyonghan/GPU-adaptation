@@ -1,0 +1,108 @@
+{
+  "sequence": 173,
+  "files": [
+    {
+      "path": "quantize_config.json",
+      "bytes": 810,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "config.json",
+      "bytes": 879,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "preprocessor_config.json",
+      "bytes": 327,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1302,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": ".gitattributes",
+      "bytes": 1519,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "onnx/model.onnx",
+      "bytes": 343479278,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "onnx/model_quantized.onnx",
+      "bytes": 87485840,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "onnx/model_q4f16.onnx",
+      "bytes": 49721446,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "onnx/model_uint8.onnx",
+      "bytes": 86917608,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "onnx/model_bnb4.onnx",
+      "bytes": 51460563,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "onnx/model_q4.onnx",
+      "bytes": 56768451,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "onnx/model_fp16.onnx",
+      "bytes": 171957607,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "variants/dima806-facial_emotions_image_detection/pytorch/747cf16692eea925b54b7b543cf436848128b68d/model.safetensors",
+      "bytes": 343239356,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "variants/dima806-facial_emotions_image_detection/pytorch/747cf16692eea925b54b7b543cf436848128b68d/config.json",
+      "bytes": 907,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "variants/dima806-facial_emotions_image_detection/pytorch/747cf16692eea925b54b7b543cf436848128b68d/preprocessor_config.json",
+      "bytes": 578,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "variants/dima806-facial_emotions_image_detection/pytorch/747cf16692eea925b54b7b543cf436848128b68d/README.md",
+      "bytes": 1020,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "variants/dima806-facial_emotions_image_detection/pytorch/747cf16692eea925b54b7b543cf436848128b68d/weight_source.json",
+      "bytes": 1618,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    }
+  ],
+  "mismatches": []
+}

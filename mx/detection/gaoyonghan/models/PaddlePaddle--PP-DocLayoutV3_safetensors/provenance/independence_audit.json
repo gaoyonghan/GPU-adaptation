@@ -1,0 +1,22 @@
+{
+  "sequence": 39,
+  "model_id": "PaddlePaddle/PP-DocLayoutV3_safetensors",
+  "source_archive_hash_matches": true,
+  "source_archive_sha256": "6c64c44bfd1e658477c1db236a97a1b1704be133d61356a50fcf215b1e1292c1",
+  "prepared_entry_source_sha256": "e73f383404a89f147f13a2086c4ba4aa187758f6e88521c041a34f239b98b699",
+  "local_entry_sha256": "2b3f8c8122396c0f6d8dc4291b1b2de0e10d16668f671867e507a34ae97e8c92",
+  "local_entry": "inference/native/run_m39_omni.py",
+  "central_dispatch_in_entry": false,
+  "unexpected_external_links": [],
+  "declared_dataset_links": [],
+  "broken_links": [],
+  "path_template_count": 473,
+  "state": "entrypoint_verified_full_run_pending",
+  "validation": {
+    "returncode": 0,
+    "python": "/home/ubuntu/gaoyonghan/miniconda3/envs/object-detection-hf-v2/bin/python",
+    "checked_at": "2026-11-10T15:48:42.946162+08:00",
+    "scope": "native help/import/path check only; not full inference"
+  },
+  "smoke_verification": null
+}

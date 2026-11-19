@@ -1,0 +1,127 @@
+{
+  "sequence": 189,
+  "model_id": "gatecitypreservation/architectural_styles",
+  "task": "image_classification",
+  "task_name": "图像分类",
+  "reported_result": [
+    {
+      "variant": null,
+      "inference_status": "complete",
+      "accuracy": 0.7617021276595745,
+      "forward_seconds": 7.779913355588912,
+      "inference_e2e_seconds": 19.62957406649366,
+      "metric_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/outputs/classification171_200_excluded_review_20260926/m189/metrics.json",
+      "timing_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/full/m189/timing.json"
+    }
+  ],
+  "reference": {
+    "source": "https://huggingface.co/gatecitypreservation/architectural_styles",
+    "local_card_sha256": "721f60562f7fd166319f393f44f51c98df914e1e6cd9fe597d61bdb0d6694cdc",
+    "model_index": [
+      {
+        "name": "architectural_styles",
+        "results": [
+          {
+            "task": {
+              "name": "Image Classification",
+              "type": "image-classification"
+            },
+            "metrics": [
+              {
+                "name": "Accuracy",
+                "type": "accuracy",
+                "value": 0.7796609997749329
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "text_report_values": null,
+    "units": "fractions for extracted accuracy/F1; original model-index units as published",
+    "comparison": "Manual protocol review required; no automatic drop calculation",
+    "note": "Card reports retained as provenance, not proof that local data/split/framework exactly reproduces the reported run."
+  },
+  "model_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/model_index/gatecitypreservation/architectural_styles",
+  "model_exists_at_build": true,
+  "dataset": {
+    "id": "classification171_189",
+    "relation": "public_replacement",
+    "split": "three previously selected candidate styles, one archive tree",
+    "note": [
+      "Broader dataset styles are not a verified bijection to craftsman bungalow/tudor cottage subclasses. Predictions/timing only until taxonomy is resolved.",
+      "Local checkpoint and publisher inference components retained. Offline file paths, eval mode, batching, timing observation and reference scoring are external orchestration."
+    ],
+    "index_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/classification171_200_eval/indices/189.jsonl",
+    "data_containers": [
+      "/data2/gaoyonghan/model inference for GPU adaptation/dataset/datasets_171_200/architectural_styles/raw/architectural-styles-dataset.zip"
+    ]
+  },
+  "environment_id": "classification171-shared_hf",
+  "runner_family": "classification171",
+  "final_result_sources": [
+    {
+      "source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m189/metrics-0.json",
+      "sha256": "913dfd51522605a2beeeb7f983fa5c065712c36742788b6422b105db1ff97e31",
+      "selection": "final_171_200_registry",
+      "source_original": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/outputs/classification171_200_excluded_review_20260926/m189/metrics.json"
+    }
+  ],
+  "code": {
+    "source": "/home/ubuntu/Documents/Codex/2026-09-27/codex-threads-01a0de0e-9d72-7fc0-b485/work/reorg/historical171/run_model.py",
+    "sha256": "8b61859273a256a4401a98181b66a0b3a487793a85c3fcf7d1f84491e2e0d5c1",
+    "recorded_sha256": "8b61859273a256a4401a98181b66a0b3a487793a85c3fcf7d1f84491e2e0d5c1",
+    "attestation": "hash_exact",
+    "status_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m189/status.json",
+    "selection": "recovered_exact_code",
+    "archive": "code_archive/8b61859273a256a4_run_model.py"
+  },
+  "support_files": [
+    "run_model.py"
+  ],
+  "final_scorer": null,
+  "backend_package": "classification171_200_eval",
+  "readiness": "code_and_result_identified",
+  "launch_status": "configured",
+  "metadata_warning": null,
+  "final_weight_records": [
+    {
+      "variant": null,
+      "model_revision": "ae57ad5ef7d339c28bee56b608e4e8830284c8f3",
+      "protocol_fingerprint": "ec7bfa9d7ddd2134e967e88188afc285d21ccc1c6906056447669eae3332d402",
+      "inference_status": "complete",
+      "scoring_kind": "filtered_mapping",
+      "review_status": null,
+      "dataset_relation": "public_replacement",
+      "device": "cuda:1",
+      "scored_images": 1175,
+      "forward_seconds": 7.779913355588912,
+      "inference_e2e_seconds": 19.62957406649366,
+      "metric_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/outputs/classification171_200_excluded_review_20260926/m189/metrics.json",
+      "detailed_metrics_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/outputs/classification171_200_excluded_review_20260926/m189/metrics.json",
+      "timing_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/full/m189/timing.json",
+      "status_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/full/m189/status.json",
+      "prediction_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/full/m189/predictions.jsonl",
+      "note": "Accuracy uses a filtered 1,175-image subset; timing covers all 1,539 images"
+    }
+  ],
+  "scoring_recovery_20261009": {
+    "scorer": "protocol_alignment/rescore_classification.py",
+    "score_status": "conditional_filtered_proxy",
+    "images": 1175,
+    "excluded_images": 364,
+    "note": "Historical two-source-class mapping retained explicitly; Tudor Revival→Tudor cottage taxonomy remains an assumption"
+  },
+  "evaluation_protocol": {
+    "id": "architecture_filtered_proxy_v1",
+    "scope": "1539张预测；排除American craftsman style后评分1175张",
+    "expected_inference_images": 1539,
+    "expected_scored_images": 1175,
+    "metrics_path": "comparison_metrics.json",
+    "official_reference_comparable": false,
+    "limitations": [
+      "沿用Queen Anne→3、Tudor Revival→4；后者并非已证明的分类体系等价"
+    ],
+    "scoring_entry": "protocol_alignment/rescore_classification.py"
+  }
+}

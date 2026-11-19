@@ -1,0 +1,112 @@
+{
+  "sequence": 64,
+  "model_id": "google/owlvit-base-patch32",
+  "task": "zero_shot_detection",
+  "task_name": "零样本检测",
+  "reported_result": "HF：AP 18.35% / APr 16.47%\n原生流程：AP 18.27% / APr 16.63%\n两条结果均保留；原生权重由HF反转换",
+  "reference": "官方README AP19.30% / APr16.90%\n同版本config注释AP20.90%，存在冲突",
+  "model_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/model_index/google/owlvit-base-patch32",
+  "model_exists_at_build": true,
+  "dataset": {
+    "id": "lvis_v1_val",
+    "relation": "official_protocol_adapter",
+    "split": null,
+    "note": "LVIS v1 · val · 19809 图\n官方原集（不代表全协议已对齐）"
+  },
+  "environment_id": "zero-shot",
+  "runner_family": "zero_shot",
+  "final_result_sources": [
+    {
+      "source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m064/metrics-0.json",
+      "sha256": "c8018d3a68ac634f0886d6df00f7bc4181787ee8a91b81317a5f922dc5893d01",
+      "selection": "workbook_score_match",
+      "data": {
+        "fidelity": "official_protocol_adapter",
+        "metric_implementation": "lvis-api LVISEval",
+        "metrics": {
+          "AP": 0.18354716597297038,
+          "AP50": 0.2875344842013346,
+          "AP75": 0.19264951809943773,
+          "APc": 0.1755213182367042,
+          "APf": 0.2007954916145654,
+          "APl": 0.4267774072231147,
+          "APm": 0.25536474824925126,
+          "APr": 0.16468262266929823,
+          "APs": 0.0859620828829966,
+          "AR@300": 0.2955079904374279,
+          "ARl@300": 0.6369626612716985,
+          "ARm@300": 0.3771443606734031,
+          "ARs@300": 0.11152075776771253
+        },
+        "model_key": "owlvit-base-patch32",
+        "official_reference_comparison": {
+          "alternative_reference_comparisons": [
+            {
+              "classification": "does_not_match_reference",
+              "delta_points": {
+                "AP": -2.5452834027029603,
+                "APr": -0.43173773307017527
+              },
+              "reference": {
+                "id": "clip_b32_config_docstring",
+                "metrics_percent": {
+                  "AP": 20.9,
+                  "APr": 16.9
+                },
+                "source": "https://github.com/google-research/scenic/blob/08ee9dc4288a1a103df053915fd92e755a6b05da/scenic/projects/owl_vit/configs/clip_b32.py"
+              }
+            }
+          ],
+          "classification": "matches_reference",
+          "delta_points": {
+            "AP": -0.9452834027029624,
+            "APr": -0.43173773307017527
+          },
+          "reference": {
+            "alternative_references": [
+              {
+                "id": "clip_b32_config_docstring",
+                "metrics_percent": {
+                  "AP": 20.9,
+                  "APr": 16.9
+                },
+                "source": "https://github.com/google-research/scenic/blob/08ee9dc4288a1a103df053915fd92e755a6b05da/scenic/projects/owl_vit/configs/clip_b32.py"
+              }
+            ],
+            "mapping_basis": "Scenic README 的 CLIP B/32 公共 checkpoint 行",
+            "metrics_percent": {
+              "AP": 19.3,
+              "APr": 16.9
+            },
+            "note": "同一固定版本 config 注释写 AP 20.9；两组官方值并列保留。",
+            "scope": "OWL-ViT CLIP B/32 public checkpoint table",
+            "source": "https://github.com/google-research/scenic/blob/08ee9dc4288a1a103df053915fd92e755a6b05da/scenic/projects/owl_vit/README.md"
+          },
+          "tolerance_absolute_points": 1.0
+        },
+        "protocol_fingerprint": "969e103ef3dc43947554a0f86d656b384fb502e9b09c65b8783783d5e33c3418"
+      },
+      "source_original": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/zero_shot_official/owlvit-base-patch32/metrics.json"
+    }
+  ],
+  "code": {
+    "source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/official_zero_shot_eval/run_model.py",
+    "sha256": "6b5c4102bc12ce6a9198c4e3055d3a6f6080dd62026df39af93db031843a0ad6",
+    "recorded_sha256": null,
+    "attestation": "current_code_unverified",
+    "status_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m064/status.json",
+    "selection": "current_shared_code",
+    "archive": "code_archive/6b5c4102bc12ce6a_run_model.py"
+  },
+  "support_files": [
+    "models.json",
+    "run_model.py",
+    "setup_env.sh",
+    "run_all.sh"
+  ],
+  "final_scorer": null,
+  "backend_package": "classification8_eval",
+  "readiness": "code_and_result_identified",
+  "launch_status": "configured",
+  "metadata_warning": null
+}

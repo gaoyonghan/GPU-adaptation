@@ -1,0 +1,176 @@
+{
+  "sequence": 199,
+  "model_id": "timm/tf_efficientnetv2_s.in21k",
+  "variant": null,
+  "phase": "smoke",
+  "protocol_fingerprint": "f8b0d7c776f8f2e698a7dc366caeb64d6343d7707afc000db31937bb2c9041e7",
+  "protocol": {
+    "model": "69d274bf7def1dabef722c2a83955f06898bd80063f5deb2538d2809a81e4bcc",
+    "code": {
+      "run_model.py": "b9b7e34d4db126e9495d674a9fd24dea83a732fe2ad0a28cda953f4856831ec8",
+      "common.py": "87e119ea13cd713bb054693dae0e04b7064b4fd683c8479b7715fd9b3883d045",
+      "prepare.py": "bf5bd4e223b181dd89142dbf467f92fe7c09b88ab4c82b061346248019f4ad9b",
+      "dispatch.py": "5d421d08e4b36dc0ad02144dd8540c007b125f4e2c728c490e5e3270375e58cf",
+      "timing.py": "db23cf873121e5e9345f23488d02d7757560a25084f330a56e38d5969d448342",
+      "native_js.mjs": "7ce8d0c8d4119a2ce2a4a0b3b89ffaffea9e4028e1e4196b09d8cdbf922685b1"
+    },
+    "environment": {
+      "python": "3.11.16 (main, Aug 27 2026, 14:44:21) [GCC 14.3.0]",
+      "versions": {
+        "torch": "2.5.1+cu121",
+        "torchvision": "0.20.1+cu121",
+        "transformers": "4.50.0",
+        "timm": "1.0.15",
+        "Pillow": "11.1.0",
+        "numpy": "1.26.4",
+        "scikit-learn": "1.5.2",
+        "pyarrow": "19.0.1"
+      },
+      "cuda_runtime": "12.1",
+      "cuda_available": true
+    },
+    "device": "cuda:1",
+    "batch_size": 1,
+    "warmup": 10,
+    "workers": 2,
+    "variant": null
+  },
+  "model_manifest": {
+    "sequence": 199,
+    "model_id": "timm/tf_efficientnetv2_s.in21k",
+    "model_path": "__MODEL_ROOT__/weights/timm/tf_efficientnetv2_s.in21k",
+    "revision": "91e43067637cfaf6f3d55d927a7d6a96a481ff8c",
+    "task_type": "image-classification",
+    "status": "not_started",
+    "official_model_card": "https://huggingface.co/timm/tf_efficientnetv2_s.in21k",
+    "official_reference": null,
+    "reference_comparison": "manual_reference_required",
+    "known_differences": [
+      "Keep full model output head. Not an independent original model test set."
+    ],
+    "config": {
+      "architecture": "tf_efficientnetv2_s",
+      "num_classes": 21843,
+      "num_features": 1280,
+      "pretrained_cfg": {
+        "tag": "in21k",
+        "custom_load": false,
+        "input_size": [
+          3,
+          300,
+          300
+        ],
+        "test_input_size": [
+          3,
+          384,
+          384
+        ],
+        "fixed_input_size": false,
+        "interpolation": "bicubic",
+        "crop_pct": 1.0,
+        "crop_mode": "center",
+        "mean": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "std": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "num_classes": 21843,
+        "pool_size": [
+          10,
+          10
+        ],
+        "first_conv": "conv_stem",
+        "classifier": "classifier"
+      }
+    },
+    "preprocessing": {
+      "tag": "in21k",
+      "custom_load": false,
+      "input_size": [
+        3,
+        300,
+        300
+      ],
+      "test_input_size": [
+        3,
+        384,
+        384
+      ],
+      "fixed_input_size": false,
+      "interpolation": "bicubic",
+      "crop_pct": 1.0,
+      "crop_mode": "center",
+      "mean": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "std": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "num_classes": 21843,
+      "pool_size": [
+        10,
+        10
+      ],
+      "first_conv": "conv_stem",
+      "classifier": "classifier"
+    },
+    "architecture": "tf_efficientnetv2_s",
+    "files": {
+      "model.safetensors": {
+        "size": 193322802,
+        "sha256": "c72d0066f2aedcafbfb6474d47a290dec817041d64f5d878555bcf5a703b2b25"
+      },
+      "config.json": {
+        "size": 632,
+        "sha256": "a1386bdc9c57192d18f46a8ea6fed2ba938bf15d60e78f082ec78ce895a9f037"
+      },
+      "README.md": {
+        "size": 4091,
+        "sha256": "ad115a02000edfad76579f52ac077ac9a33dfb97e00f498ca25967725e14dffe"
+      }
+    },
+    "weight": "model.safetensors",
+    "backend": "timm_native",
+    "environment": "shared_hf",
+    "dataset_relation": "public_replacement",
+    "split": "ImageNet-1K val overlap 999 classes",
+    "excluded_source_labels": {},
+    "images": 49950,
+    "covered_target_classes": 999,
+    "num_output_classes": 21843,
+    "label_mapping": {},
+    "scoring": "native",
+    "evaluator": "timm.validate",
+    "fidelity": "official_protocol_adapter",
+    "case_type": "special",
+    "special_tags": [
+      "framework_numeric_difference",
+      "dataset_replacement"
+    ],
+    "inference_entry": "publisher_transformers_model_and_processor",
+    "default_batch_size": 1,
+    "dtype": "float32",
+    "warmup_batches": 10,
+    "index": "__MODEL_ROOT__/resources/runtime/assets/workspace/classification171_200_eval/indices/199.jsonl",
+    "index_sha256": "802e24aa30cd79e7ed9f1891bc7aaa71696ffa53302151df6f39dcbee7fb619f",
+    "data_containers": {},
+    "class_map": "__DATASET_ROOT__/datasets_171_200/imagenet_overlap_199/native_class_map.txt",
+    "class_map_sha256": "66362bdedf36d933382edca5493fc562dcc17128ce36403c9e730a75f48cb2f2",
+    "protocol_fingerprint": "69d274bf7def1dabef722c2a83955f06898bd80063f5deb2538d2809a81e4bcc"
+  },
+  "status": "partial_complete",
+  "gpu_at_start": "0, GPU-edb63bcd-7ac5-4284-b9ea-825830b8ebba, NVIDIA GeForce RTX 4090, 580.126.09, 780 MiB, 22 %\n1, GPU-a11f730c-a975-2bf0-b765-3c24d83b7104, NVIDIA GeForce RTX 4090, 580.126.09, 133 MiB, 13 %",
+  "full_evaluation": false,
+  "images": 10,
+  "timing_file": "__MODEL_ROOT__/resources/runtime/assets/workspace/classification171_200_eval/.validation/v2/smoke/m199/timing.json",
+  "run_wall_seconds_this_segment": 5.21072100661695
+}

@@ -1,0 +1,247 @@
+{
+  "schema_version": 1,
+  "sources": {},
+  "models": [
+    {
+      "sequence": 185,
+      "model_id": "LishaV01/agriculture-crop-disease-detection",
+      "model_path": "__MODEL_ROOT__/weights/LishaV01/agriculture-crop-disease-detection",
+      "revision": "24abe2d06442f62d8168041ec539832cd39d397e",
+      "task_type": "image-classification",
+      "status": "not_started",
+      "official_model_card": "https://huggingface.co/LishaV01/agriculture-crop-disease-detection",
+      "official_reference": {
+        "source": "https://huggingface.co/LishaV01/agriculture-crop-disease-detection",
+        "local_card_sha256": "0df231bcd8832baf36c805cdfb22b038cc7720dca7e9d41138c03d3c578978ff",
+        "model_index": null,
+        "text_report_values": null,
+        "units": "fractions for extracted accuracy/F1; original model-index units as published",
+        "comparison": "Manual protocol review required; no automatic drop calculation",
+        "note": "No unambiguous numeric reference for this exact checkpoint was extracted from the frozen card."
+      },
+      "reference_comparison": "manual_reference_required",
+      "known_differences": [
+        "Full ViT state dict is published, no adapter_config or LoRA tensors; load original full checkpoint, no merging. Exclude nonmatching diseases rather than guess.",
+        "Local checkpoint and publisher inference components retained. Offline file paths, eval mode, batching, timing observation and reference scoring are external orchestration."
+      ],
+      "config": {
+        "architectures": [
+          "ViTForImageClassification"
+        ],
+        "attention_probs_dropout_prob": 0.0,
+        "encoder_stride": 16,
+        "hidden_act": "gelu",
+        "hidden_dropout_prob": 0.0,
+        "hidden_size": 192,
+        "id2label": {
+          "0": "Corn___Common_Rust",
+          "1": "Corn___Gray_Leaf_Spot",
+          "10": "Wheat___Brown_Rust",
+          "11": "Wheat___Healthy",
+          "12": "Wheat___Yellow_Rust",
+          "13": "Rice_Bacterial Blight Disease",
+          "14": "Rice_Blast Disease",
+          "15": "Rice_Brown Spot Disease",
+          "16": "Rice_False Smut Disease",
+          "17": "sugarcane_Bacterial Blight",
+          "18": "sugarcane_Healthy",
+          "19": "sugarcane_Red Rot",
+          "2": "Corn___Healthy",
+          "3": "Invalid",
+          "4": "Potato___Early_Blight",
+          "5": "Potato___Healthy",
+          "6": "Potato___Late_Blight",
+          "7": "Rice___Brown_Spot",
+          "8": "Rice___Healthy",
+          "9": "Rice___Leaf_Blast"
+        },
+        "image_size": 224,
+        "initializer_range": 0.02,
+        "intermediate_size": 768,
+        "label2id": {
+          "Corn___Common_Rust": 0,
+          "Corn___Gray_Leaf_Spot": 1,
+          "Corn___Healthy": 2,
+          "Invalid": 3,
+          "Potato___Early_Blight": 4,
+          "Potato___Healthy": 5,
+          "Potato___Late_Blight": 6,
+          "Rice_Bacterial Blight Disease": 13,
+          "Rice_Blast Disease": 14,
+          "Rice_Brown Spot Disease": 15,
+          "Rice_False Smut Disease": 16,
+          "Rice___Brown_Spot": 7,
+          "Rice___Healthy": 8,
+          "Rice___Leaf_Blast": 9,
+          "Wheat___Brown_Rust": 10,
+          "Wheat___Healthy": 11,
+          "Wheat___Yellow_Rust": 12,
+          "sugarcane_Bacterial Blight": 17,
+          "sugarcane_Healthy": 18,
+          "sugarcane_Red Rot": 19
+        },
+        "layer_norm_eps": 1e-12,
+        "model_type": "vit",
+        "num_attention_heads": 3,
+        "num_channels": 3,
+        "num_hidden_layers": 12,
+        "patch_size": 16,
+        "pooler_act": "tanh",
+        "pooler_output_size": 192,
+        "problem_type": "single_label_classification",
+        "qkv_bias": true,
+        "torch_dtype": "float32",
+        "transformers_version": "4.55.0"
+      },
+      "preprocessing": {
+        "crop_size": null,
+        "data_format": "channels_first",
+        "default_to_square": true,
+        "device": null,
+        "disable_grouping": null,
+        "do_center_crop": null,
+        "do_convert_rgb": null,
+        "do_normalize": true,
+        "do_rescale": true,
+        "do_resize": true,
+        "image_mean": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "image_processor_type": "ViTImageProcessorFast",
+        "image_std": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "input_data_format": null,
+        "resample": 2,
+        "rescale_factor": 0.00392156862745098,
+        "return_tensors": null,
+        "size": {
+          "height": 224,
+          "width": 224
+        }
+      },
+      "architecture": [
+        "ViTForImageClassification"
+      ],
+      "files": {
+        "model.safetensors": {
+          "size": 22135824,
+          "sha256": "b973c0f908888c3970b142b90822219b5a301c568770b88978d031705dba4b11"
+        },
+        "config.json": {
+          "size": 1890,
+          "sha256": "831470e9e6e32f689e39e8b5e6e6a2a869e7b8f1f32b5c0435304008b08960b9"
+        },
+        "preprocessor_config.json": {
+          "size": 567,
+          "sha256": "0f4fa902852c3c041a118219c5219073f9f2fa8d97d8a5bcc34b9627b820254b"
+        },
+        "README.md": {
+          "size": 1641,
+          "sha256": "0df231bcd8832baf36c805cdfb22b038cc7720dca7e9d41138c03d3c578978ff"
+        }
+      },
+      "weight": "model.safetensors",
+      "backend": "hf_published",
+      "environment": "shared_hf",
+      "dataset_relation": "public_replacement",
+      "split": "exact-name supported crop/disease classes only",
+      "excluded_source_labels": {
+        "Cashew leaf miner": 1487,
+        "Cashew red rust": 1815,
+        "Cassava brown spot": 1483,
+        "Cassava mosaic": 1200,
+        "Chili Healthy Leaf": 458,
+        "Chilli Nutrition Deficiency": 444,
+        "Chilli White spot": 195,
+        "Citrus Black spot": 312,
+        "Citrus Healthy": 87,
+        "Citrus canker": 368,
+        "Cotton Bacterial Blight": 1000,
+        "Cotton Curl Virus": 1000,
+        "Cotton Healthy Leaf": 1000,
+        "Grape___Black_rot": 1180,
+        "Grape___Leaf_blight": 1076,
+        "Grape___healthy": 423,
+        "Groundnut healthy leaf": 1462,
+        "Groundnut late leaf spot": 1491,
+        "Groundnut nutrition deficiency": 1255,
+        "Maize leaf spot": 1261,
+        "Maize streak virus": 1004,
+        "Papaya BacterialSpot": 916,
+        "Papaya Healthy": 456,
+        "Papaya RingSpot": 1066,
+        "Soyabean Caterpillar": 3309,
+        "Soyabean Diabrotica speciosa": 2205,
+        "Soyabean Healthy": 896,
+        "Sugarcane Brown Spot": 1722,
+        "Sugarcane Grassy shoot": 346,
+        "Sugarcane Healthy Leaves": 430,
+        "healthy_cashew": 1336,
+        "healthy_cassava": 1184,
+        "healthy_maize": 211,
+        "healthy_tomato": 500,
+        "leaf blight_tomato": 1309,
+        "septoria leaf spot_tomato": 2340
+      },
+      "images": 9708,
+      "covered_target_classes": 9,
+      "num_output_classes": 20,
+      "label_mapping": {
+        "0": "Corn___Common_Rust",
+        "1": "Corn___Gray_Leaf_Spot",
+        "10": "Wheat___Brown_Rust",
+        "11": "Wheat___Healthy",
+        "12": "Wheat___Yellow_Rust",
+        "13": "Rice_Bacterial Blight Disease",
+        "14": "Rice_Blast Disease",
+        "15": "Rice_Brown Spot Disease",
+        "16": "Rice_False Smut Disease",
+        "17": "sugarcane_Bacterial Blight",
+        "18": "sugarcane_Healthy",
+        "19": "sugarcane_Red Rot",
+        "2": "Corn___Healthy",
+        "3": "Invalid",
+        "4": "Potato___Early_Blight",
+        "5": "Potato___Healthy",
+        "6": "Potato___Late_Blight",
+        "7": "Rice___Brown_Spot",
+        "8": "Rice___Healthy",
+        "9": "Rice___Leaf_Blast"
+      },
+      "scoring": "reference",
+      "evaluator": "sklearn reference scoring",
+      "fidelity": "reference_baseline",
+      "case_type": "special",
+      "special_tags": [
+        "framework_numeric_difference",
+        "dataset_replacement",
+        "official_evaluator_missing"
+      ],
+      "inference_entry": "publisher_transformers_model_and_processor",
+      "default_batch_size": 1,
+      "dtype": "float32",
+      "warmup_batches": 10,
+      "index": "__MODEL_ROOT__/inference/native/indices/185.jsonl",
+      "index_sha256": "7570bf545b2a930d2ae57888d2eb978beeab667f1a65ebf4158e6b5332c7164c",
+      "data_containers": {
+        "__DATASET_ROOT__/datasets_171_200/fc45dhlpd/15 Crop 45 Disease and Healthy Leaf dataset.zip": {
+          "size": 4456991104,
+          "mtime_ns": 1790018085976639598
+        }
+      },
+      "protocol_fingerprint": "3bb996bf0c48ce49c4b1bb3a537cffa2230beebf3b8ee4969893ab07828466e9"
+    }
+  ],
+  "runtime_defaults": {
+    "batch_size": 1,
+    "device": "cuda:0",
+    "warmup_batches": 10,
+    "workers": 2
+  },
+  "scope": "Each published model retained; 177 includes all five weights; no full GPU inference launched by preparation."
+}

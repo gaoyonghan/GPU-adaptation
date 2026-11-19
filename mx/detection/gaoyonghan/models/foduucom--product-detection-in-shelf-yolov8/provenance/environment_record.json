@@ -1,0 +1,9 @@
+{
+  "python": "3.11.16",
+  "requirements": "environments/e01-m12-ultralytics8043/requirements.txt",
+  "expected": "environments/e01-m12-ultralytics8043/expected.json",
+  "local_packages": [],
+  "original_python": "/home/ubuntu/gaoyonghan/gpu/.venv-m12-ultralytics8043/bin/python",
+  "torch": "2.5.1+cu124",
+  "python_version_scope": "Pinned to original interpreter version"
+}

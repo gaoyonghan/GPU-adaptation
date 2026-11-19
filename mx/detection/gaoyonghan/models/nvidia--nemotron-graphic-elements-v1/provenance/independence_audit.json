@@ -1,0 +1,22 @@
+{
+  "sequence": 48,
+  "model_id": "nvidia/nemotron-graphic-elements-v1",
+  "source_archive_hash_matches": true,
+  "source_archive_sha256": "a1fb3d0042276957f20e417947dce79430029f3eb8eeae39712f75a3df4b551d",
+  "prepared_entry_source_sha256": "b5f84815ba2c1a5406b4721302c22bd73db7479e9833b28c938a724f6b7e34dd",
+  "local_entry_sha256": "54696044d30060f20e856310f61a840429afa236bbc983bec3db34c9269e20ff",
+  "local_entry": "inference/native/run_m48_native.py",
+  "central_dispatch_in_entry": false,
+  "unexpected_external_links": [],
+  "declared_dataset_links": [],
+  "broken_links": [],
+  "path_template_count": 433,
+  "state": "entrypoint_verified_full_run_pending",
+  "validation": {
+    "returncode": 0,
+    "python": "/home/ubuntu/gaoyonghan/miniconda3/envs/object-detection-eval/bin/python",
+    "checked_at": "2026-11-10T15:49:37.253818+08:00",
+    "scope": "native help/import/path check only; not full inference"
+  },
+  "smoke_verification": null
+}

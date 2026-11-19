@@ -1,0 +1,41 @@
+{
+  "audited_on": "2026-09-05",
+  "total_detection_models": 62,
+  "existing_green_batch": 37,
+  "remaining_models": 25,
+  "scope_note": "37是已选入队列数，不是全量完成数。25按唯一model_id统计；任务/权重子记录不重复计数。",
+  "source_manifest": "__MODEL_ROOT__/resources/runtime/assets/workspace/official_object_detection_eval/models.json",
+  "source_sha256": "b45b4ecf6abc95ee7f2f542b2125dd8fcf4b013bed08cf81dc50c452ce023c00",
+  "primary_blocker_counts": {
+    "旧替代集类别不全，需核对任务覆盖": 4,
+    "私有数据且缺任务匹配的公开金标": 2,
+    "原协议/划分不明，现有数据可做参考评测": 8,
+    "数据已有，缺任务适配或多权重覆盖": 8,
+    "仅下载了说明/发布链接，实际权重缺失": 2,
+    "数据下载未完成，当前目录为空": 1
+  },
+  "models": [
+    {
+      "sequence": 30,
+      "excel_row": 31,
+      "model_id": "yainage90/fashion-object-detection",
+      "primary_blocker": "数据已有，缺任务适配或多权重覆盖",
+      "historical_reason": "P1-协议待确认｜作者数据来源可追溯到 ModaNet+Fashionpedia，但合并后的7类映射和原验证索引未公开。优先申请/确认作者合并划分；现有 Fashionpedia val虽可映射覆盖 bag、bottom、dress、hat、outer、shoes、top，仍只能作为替代结果单列。依据：https://github.com/eBay/modanet",
+      "required_tasks": [
+        "bbox_detection_classification"
+      ],
+      "task_inventory_status": "model_card_and_prior_audit",
+      "weight_files_present": [
+        {
+          "file": "model.safetensors",
+          "bytes": 174081852
+        }
+      ],
+      "next_action": "Fashionpedia七类显式合并，冻结映射并完成检测AP。",
+      "source_model_card": "https://huggingface.co/yainage90/fashion-object-detection",
+      "local_model_card": "__MODEL_ROOT__/weights/yainage90/fashion-object-detection/README.md",
+      "technical_complete": false,
+      "metrics": null
+    }
+  ]
+}

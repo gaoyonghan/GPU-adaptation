@@ -1,0 +1,10 @@
+{
+  "repository": "dima806/facial_emotions_image_detection",
+  "revision": "747cf16692eea925b54b7b543cf436848128b68d",
+  "directory": "dima806/facial_emotions_image_detection/pytorch/747cf16692eea925b54b7b543cf436848128b68d",
+  "weight": "model.safetensors",
+  "weight_sha256": "ffad6b9e5cb20d4857f4b532c2543055d7d0e7e1422ab7469087edaab82f8dd8",
+  "dtype": "float32",
+  "nv_rerun_required": true,
+  "change": "upstream PyTorch checkpoint replacing Xenova ONNX conversion; numeric equivalence not assumed"
+}

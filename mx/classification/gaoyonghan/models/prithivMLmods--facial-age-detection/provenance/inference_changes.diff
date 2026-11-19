@@ -1,0 +1,11 @@
+--- original_inference.py
++++ inference/native/run_m99.py
+@@ -189,7 +189,7 @@
+     parser.add_argument('--describe', action='store_true')
+     parser.add_argument('--preflight', action='store_true')
+     parser.add_argument('--max-images', type=int, default=0)
+-    parser.add_argument('--output-root', type=Path, default=Path('/home/ubuntu/gaoyonghan/gpu/results/m99_author_source_v1'))
++    parser.add_argument('--output-root', type=Path, default=Path('/data2/gaoyonghan/gpu_model_standalone_20261110/release/model/分类/prithivMLmods--facial-age-detection/resources/runtime/assets/workspace/results/m99_author_source_v1'))
+     args = parser.parse_args()
+     if args.describe:
+         print(json.dumps(spec, ensure_ascii=False, indent=2)); return

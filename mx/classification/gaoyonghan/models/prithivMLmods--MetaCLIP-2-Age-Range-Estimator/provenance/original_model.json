@@ -1,0 +1,94 @@
+{
+  "sequence": 183,
+  "model_id": "prithivMLmods/MetaCLIP-2-Age-Range-Estimator",
+  "task": "image_classification",
+  "task_name": "图像分类",
+  "reported_result": [
+    {
+      "variant": null,
+      "inference_status": "complete",
+      "accuracy": 0.9564051325199832,
+      "forward_seconds": 88.08891467666578,
+      "inference_e2e_seconds": 240.12544491747394,
+      "metric_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/outputs/classification171_200_review_20260926/m183/metrics.json",
+      "timing_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/outputs/classification171_200_review_20260926/m183/timing_from_journal.json"
+    }
+  ],
+  "reference": {
+    "source": "https://huggingface.co/prithivMLmods/MetaCLIP-2-Age-Range-Estimator",
+    "local_card_sha256": "4b5b2cc7b5a640789b711ac04d350dd4c6476c27e3938b9ba22c1e0b98569370",
+    "model_index": null,
+    "text_report_values": {
+      "accuracy": 0.9559,
+      "macro_f1": 0.9451,
+      "weighted_f1": 0.9556
+    },
+    "units": "fractions for extracted accuracy/F1; original model-index units as published",
+    "comparison": "Manual protocol review required; no automatic drop calculation",
+    "note": "Card reports retained as provenance, not proof that local data/split/framework exactly reproduces the reported run."
+  },
+  "model_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/model_index/prithivMLmods/MetaCLIP-2-Age-Range-Estimator",
+  "model_exists_at_build": true,
+  "dataset": {
+    "id": "classification171_183",
+    "relation": "original_protocol_incomplete",
+    "split": "published train; no independent test",
+    "note": [
+      "Full-precision probabilities retained for metrics; publisher demo rounds probabilities to three decimals only for Gradio display. Display rounding is not used to rank classes.",
+      "Local checkpoint and publisher inference components retained. Offline file paths, eval mode, batching, timing observation and reference scoring are external orchestration."
+    ],
+    "index_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/classification171_200_eval/indices/183.jsonl",
+    "data_containers": [
+      "/data2/gaoyonghan/model inference for GPU adaptation/dataset/datasets_171_200/age_classification/raw/0000.parquet",
+      "/data2/gaoyonghan/model inference for GPU adaptation/dataset/datasets_171_200/age_classification/raw/0001.parquet"
+    ]
+  },
+  "environment_id": "classification171-new_hf",
+  "runner_family": "classification171",
+  "final_result_sources": [
+    {
+      "source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m183/metrics-0.json",
+      "sha256": "3a2d723ca4aff33b2b51bb82db8c0c930ad5e32075ab7380dafc44933ed4b768",
+      "selection": "final_171_200_registry",
+      "source_original": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/outputs/classification171_200_review_20260926/m183/metrics.json"
+    }
+  ],
+  "code": {
+    "source": "/home/ubuntu/Documents/Codex/2026-09-27/codex-threads-01a0de0e-9d72-7fc0-b485/work/reorg/historical171/run_model.py",
+    "sha256": "8b61859273a256a4401a98181b66a0b3a487793a85c3fcf7d1f84491e2e0d5c1",
+    "recorded_sha256": "8b61859273a256a4401a98181b66a0b3a487793a85c3fcf7d1f84491e2e0d5c1",
+    "attestation": "hash_exact",
+    "status_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m183/status.json",
+    "selection": "recovered_exact_code",
+    "archive": "code_archive/8b61859273a256a4_run_model.py"
+  },
+  "support_files": [
+    "run_model.py"
+  ],
+  "final_scorer": null,
+  "backend_package": "classification171_200_eval",
+  "readiness": "code_and_result_identified",
+  "launch_status": "configured",
+  "metadata_warning": null,
+  "final_weight_records": [
+    {
+      "variant": null,
+      "model_revision": "7b80ac7d3bce892d6507496d2f6e89ef02b1d30a",
+      "protocol_fingerprint": "650db27e030cefd816fc6ed143e231f17cde7fbb7c442e5a7bb0d0557af009dc",
+      "inference_status": "complete",
+      "scoring_kind": "scoring_recovered",
+      "review_status": null,
+      "dataset_relation": "original_protocol_incomplete",
+      "device": "cuda:1",
+      "scored_images": 19016,
+      "forward_seconds": 88.08891467666578,
+      "inference_e2e_seconds": 240.12544491747394,
+      "metric_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/outputs/classification171_200_review_20260926/m183/metrics.json",
+      "detailed_metrics_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/outputs/classification171_200_review_20260926/m183/metrics.json",
+      "timing_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/outputs/classification171_200_review_20260926/m183/timing_from_journal.json",
+      "status_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/full/m183/status.json",
+      "prediction_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/full/m183/predictions.jsonl",
+      "note": "Predictions completed in the original run; scoring failed after inference"
+    }
+  ]
+}

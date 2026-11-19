@@ -1,0 +1,35 @@
+{
+  "schema": "model-eval/classification-inventory/v1",
+  "scope": "Existing 59 classification models; model 93 is retrieval and excluded.",
+  "models": [
+    {
+      "sequence": 192,
+      "model_id": "osanseviero/llama-alpaca-guanaco-vicuna",
+      "runner_family": "classification171",
+      "adapter": "native_labels",
+      "state": "integrated",
+      "dataset": {
+        "id": "classification171_192",
+        "relation": "public_replacement",
+        "split": "accepted external reference set",
+        "note": [
+          "Keep full model output head. Not an independent original model test set.",
+          "800 records, 793 unique hashes; original within-class duplicates retained; four conflicting files excluded.",
+          "Local checkpoint and publisher inference components retained. Offline file paths, eval mode, batching, timing observation and reference scoring are external orchestration."
+        ],
+        "index_source": "__MODEL_ROOT__/inference/native/indices/192.jsonl",
+        "data_containers": []
+      },
+      "qualification": "public_replacement",
+      "limitations": [],
+      "num_classes": 4,
+      "expected_images": 800,
+      "category_reference": {
+        "file": "__MODEL_ROOT__/inference/native/models.json",
+        "sequence": 192,
+        "field": "label_mapping"
+      },
+      "gt_index": "__MODEL_ROOT__/inference/native/indices/192.jsonl"
+    }
+  ]
+}

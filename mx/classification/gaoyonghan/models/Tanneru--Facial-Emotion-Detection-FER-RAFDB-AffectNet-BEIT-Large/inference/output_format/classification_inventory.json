@@ -1,0 +1,68 @@
+{
+  "schema": "model-eval/classification-inventory/v1",
+  "scope": "Existing 59 classification models; model 93 is retrieval and excluded.",
+  "models": [
+    {
+      "sequence": 81,
+      "model_id": "Tanneru/Facial-Emotion-Detection-FER-RAFDB-AffectNet-BEIT-Large",
+      "runner_family": "special",
+      "adapter": "fer_provisional",
+      "state": "integrated",
+      "dataset": {
+        "id": "fer2013",
+        "relation": "public_replacement",
+        "split": "PrivateTest",
+        "note": "FER2013 PrivateTest 3589 图替代未明确的组合评测划分；结果为 provisional，标签映射尚未验证。"
+      },
+      "qualification": "provisional_label_mapping",
+      "limitations": [
+        "Preserve the existing unverified model-to-FER permutation. Not a verified formal score.",
+        "Historical output may contain only Top-1. Missing Top-5 remains unavailable; never reconstruct ranking silently."
+      ],
+      "num_classes": 7,
+      "categories": [
+        {
+          "id": 0,
+          "name": "angry"
+        },
+        {
+          "id": 1,
+          "name": "disgust"
+        },
+        {
+          "id": 2,
+          "name": "fear"
+        },
+        {
+          "id": 3,
+          "name": "happy"
+        },
+        {
+          "id": 4,
+          "name": "sad"
+        },
+        {
+          "id": 5,
+          "name": "surprise"
+        },
+        {
+          "id": 6,
+          "name": "neutral"
+        }
+      ],
+      "expected_images": 3589,
+      "existing_protocol": {
+        "id": "fer2013_privatetest_provisional_v1",
+        "scope": "FER2013 PrivateTest 3589张；沿用历史候选类别映射",
+        "expected_inference_images": 3589,
+        "expected_scored_images": 3589,
+        "metrics_path": "comparison_metrics.json",
+        "official_reference_comparable": false,
+        "limitations": [
+          "缺少作者类别编号证明；不得用测试集优化映射"
+        ],
+        "scoring_entry": "protocol_alignment/rescore_classification.py"
+      }
+    }
+  ]
+}

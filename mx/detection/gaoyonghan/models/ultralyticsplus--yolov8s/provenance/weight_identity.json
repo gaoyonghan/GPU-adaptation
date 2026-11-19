@@ -1,0 +1,30 @@
+{
+  "sequence": 21,
+  "files": [
+    {
+      "path": "config.json",
+      "bytes": 65,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2165,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": ".gitattributes",
+      "bytes": 1477,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "yolov8s.pt",
+      "bytes": 22573363,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    }
+  ],
+  "mismatches": []
+}

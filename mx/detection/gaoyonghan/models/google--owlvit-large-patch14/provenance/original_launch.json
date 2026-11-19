@@ -1,0 +1,31 @@
+[
+  {
+    "command": [
+      "/home/ubuntu/gaoyonghan/miniconda3/envs/owlvit-scenic-native/bin/python",
+      "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/project/backends/owlvit_scenic_native/run_model.py",
+      "--output-root",
+      "/data2/gaoyonghan/gpu_model_standalone_20261110/build_results/m070/scenic_native",
+      "--scenic-root",
+      "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/official_sources/scenic-08ee9dc4",
+      "--native-data-root",
+      "/home/ubuntu/gaoyonghan/gpu/native_owlvit_l14/data",
+      "--dataset-root",
+      "/data2/gaoyonghan/model inference for GPU adaptation/dataset",
+      "--model-root",
+      "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/model_index",
+      "--device",
+      "cuda:0",
+      "--phase",
+      "full"
+    ],
+    "cwd": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/project/backends/owlvit_scenic_native",
+    "environment": {
+      "PATH": "/home/ubuntu/.local/bin:/home/ubuntu/bin:/home/ubuntu/.codex/tmp/arg0/codex-arg0CXlF7D:/home/ubuntu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override:/home/ubuntu/.local/bin:/home/ubuntu/bin:/home/ubuntu/.local/bin:/home/ubuntu/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/ubuntu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback:/usr/lib/chatgpt/resources",
+      "PYTHONNOUSERSITE": "1",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "output": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_results/m070",
+    "index": 1,
+    "phase": "full"
+  }
+]

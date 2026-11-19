@@ -1,0 +1,23 @@
+--- before_selector.py
++++ inference/native/run_model.py
+@@ -268,7 +268,6 @@
+ 
+ def main():
+     parser = argparse.ArgumentParser(description=__doc__)
+-    parser.add_argument("--model")
+     parser.add_argument("--describe", action="store_true")
+     parser.add_argument("--preflight", action="store_true")
+     parser.add_argument("--check-environment", action="store_true")
+@@ -283,9 +282,9 @@
+         print(check_environment()); return 0
+     if args.summarize:
+         summarize(args.output_root); return 0
+-    specs = [s for s in MANIFEST["models"] if args.model in (str(s["sequence"]), s["model_id"], s["model_key"])]
+-    if len(specs) != 1:
+-        parser.error("Choose model from 77,78,79,80,96,97,98")
++    if len(MANIFEST["models"]) != 1:
++        raise ValueError("Expected one model in this folder")
++    specs = MANIFEST["models"]
+     if args.describe:
+         print(json.dumps({"model": specs[0], "dataset": MANIFEST["dataset"]}, ensure_ascii=False, indent=2)); return 0
+     return 0 if run(specs[0], args) else 1

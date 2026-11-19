@@ -1,0 +1,72 @@
+{
+  "sequence": 92,
+  "files": [
+    {
+      "path": "model.safetensors",
+      "bytes": 343233204,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "config.json",
+      "bytes": 837,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "preprocessor_config.json",
+      "bytes": 327,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "README.md",
+      "bytes": 878,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": ".gitattributes",
+      "bytes": 1785,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "images/Oblong.jpg",
+      "bytes": 43217,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "images/Square.jpg",
+      "bytes": 22744,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "images/Oval.jpg",
+      "bytes": 227042,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "images/Round.jpg",
+      "bytes": 10072,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "images/Heart.jpg",
+      "bytes": 9376,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "runs/events.out.tfevents.1702350464.f29ef9ead6b8.1207.0",
+      "bytes": 18939,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    }
+  ],
+  "mismatches": []
+}

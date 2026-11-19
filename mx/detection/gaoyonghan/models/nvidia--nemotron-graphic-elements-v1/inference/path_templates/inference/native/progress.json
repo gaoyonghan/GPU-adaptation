@@ -1,0 +1,246 @@
+{
+  "generated_at": "2026-09-05T10:58:31.409026+00:00",
+  "total_detection_models": 62,
+  "existing_green_queue": 37,
+  "current_scope_unique_models": 25,
+  "initial_primary_blocker_counts": {
+    "旧替代集类别不全，需核对任务覆盖": 4,
+    "私有数据且缺任务匹配的公开金标": 2,
+    "原协议/划分不明，现有数据可做参考评测": 8,
+    "数据已有，缺任务适配或多权重覆盖": 8,
+    "仅下载了说明/发布链接，实际权重缺失": 2,
+    "数据下载未完成，当前目录为空": 1
+  },
+  "current_state_counts": {
+    "complete": 21,
+    "partial_complete": 3,
+    "blocked": 1
+  },
+  "counting_rule": "Unique model IDs; all required tasks must have complete frozen benchmark metrics. PubTables means the model-blind 1000-image benchmark, not the original 93834-image test. Invalid cmarkea and all superseded Qualcomm v1/v2 results excluded.",
+  "fidelity_counts": {
+    "reference_baseline": 25
+  },
+  "comparison_counts": {
+    "not_officially_comparable": 25
+  },
+  "case_type_counts": {
+    "special": 25
+  },
+  "models": [
+    {
+      "sequence": 48,
+      "model_id": "nvidia/nemotron-graphic-elements-v1",
+      "state": "complete",
+      "all_tasks_complete": true,
+      "required_tasks": [
+        "bbox_detection_classification"
+      ],
+      "results": [
+        {
+          "status": "failed",
+          "task": "chart_roles",
+          "valid_complete": false,
+          "images": null,
+          "result_directory": "__MODEL_ROOT__/resources/runtime/assets/workspace/results/remaining25_v4/m48-nemotron-graphic-elements-v1/chart_roles",
+          "metrics": null,
+          "coverage": null,
+          "error": "RuntimeError('尚未实现的数据适配器: coco')"
+        },
+        {
+          "status": "failed",
+          "task": "chart_roles",
+          "valid_complete": false,
+          "images": null,
+          "result_directory": "__MODEL_ROOT__/resources/runtime/assets/workspace/results/remaining25_nemotron_v1/m48-nemotron-graphic-elements-v1/chart_roles",
+          "metrics": null,
+          "coverage": null,
+          "error": "ModuleNotFoundError(\"No module named 'pandas'\")"
+        },
+        {
+          "status": "complete",
+          "task": "chart_roles",
+          "valid_complete": true,
+          "images": 1873,
+          "result_directory": "__MODEL_ROOT__/resources/runtime/assets/workspace/results/remaining25_nemotron_v2/m48-nemotron-graphic-elements-v1/chart_roles",
+          "metrics": {
+            "metrics": {
+              "AP": 0.6313379945144393,
+              "AP50": 0.7295287209120164,
+              "AP75": 0.715313737338827,
+              "AP_small": 0.6053250297654702,
+              "AP_medium": 0.635947362125954,
+              "AP_large": 0.5450761034689087,
+              "AR1": 0.3265799330454105,
+              "AR10": 0.6333992078573507,
+              "AR100": 0.7019507031485986,
+              "AR_small": 0.6761024625554974,
+              "AR_medium": 0.7111843995715482,
+              "AR_large": 0.5906511951861987,
+              "per_class_AP": {
+                "chart_title": 0.7671590637894237,
+                "axis_title": 0.8871856143198374,
+                "tick_label": 0.8202204700571261,
+                "other": 0.3026918906554364,
+                "legend_label": 0.828201241454849,
+                "legend_title": 0.6580786926762051,
+                "mark_label": 0.2754949198161578,
+                "value_label": 0.5116720633464785
+              }
+            },
+            "unit": "fraction_0_to_1",
+            "coverage": {
+              "model_labels": {
+                "0": "chart_title",
+                "1": "x_title",
+                "2": "y_title",
+                "3": "xlabel",
+                "4": "ylabel",
+                "5": "other",
+                "6": "legend_label",
+                "7": "legend_title",
+                "8": "mark_label",
+                "9": "value_label"
+              },
+              "mapping": {
+                "0": 1,
+                "1": 2,
+                "2": 2,
+                "3": 3,
+                "4": 3,
+                "5": 4,
+                "6": 5,
+                "7": 6,
+                "8": 7,
+                "9": 8
+              },
+              "covered_labels": [
+                "chart_title",
+                "x_title",
+                "y_title",
+                "xlabel",
+                "ylabel",
+                "other",
+                "legend_label",
+                "legend_title",
+                "mark_label",
+                "value_label"
+              ],
+              "missing_labels": [],
+              "covered_count": 10,
+              "total_model_classes": 10,
+              "gt_instances_per_class": {
+                "chart_title": 516,
+                "axis_title": 3312,
+                "tick_label": 28322,
+                "other": 3031,
+                "legend_label": 4178,
+                "legend_title": 406,
+                "mark_label": 1054,
+                "value_label": 1865
+              }
+            },
+            "evaluation_images": 1873,
+            "annotation_sha256": "b56f8621d72ff04fe6dd821f3c7c09cc55f34cf4a4ff8949ee52d4eccf47a20e",
+            "protocol_fingerprint": "741e61b7c610e9f8749f2b892603f63583a71c4f8e7ccc37eca53aaca9207828",
+            "reference_check": "not_officially_comparable"
+          },
+          "coverage": {
+            "model_labels": {
+              "0": "chart_title",
+              "1": "x_title",
+              "2": "y_title",
+              "3": "xlabel",
+              "4": "ylabel",
+              "5": "other",
+              "6": "legend_label",
+              "7": "legend_title",
+              "8": "mark_label",
+              "9": "value_label"
+            },
+            "mapping": {
+              "0": 1,
+              "1": 2,
+              "2": 2,
+              "3": 3,
+              "4": 3,
+              "5": 4,
+              "6": 5,
+              "7": 6,
+              "8": 7,
+              "9": 8
+            },
+            "covered_labels": [
+              "chart_title",
+              "x_title",
+              "y_title",
+              "xlabel",
+              "ylabel",
+              "other",
+              "legend_label",
+              "legend_title",
+              "mark_label",
+              "value_label"
+            ],
+            "missing_labels": [],
+            "covered_count": 10,
+            "total_model_classes": 10,
+            "gt_instances_per_class": {
+              "chart_title": 516,
+              "axis_title": 3312,
+              "tick_label": 28322,
+              "other": 3031,
+              "legend_label": 4178,
+              "legend_title": 406,
+              "mark_label": 1054,
+              "value_label": 1865
+            }
+          },
+          "error": null
+        }
+      ],
+      "next_action": "执行本地原生YOLOX，在冻结公开替代集上评估。表结构1000图按文件名SHA256选定，非完整官方test；图表1873图按公开8类合并协议。",
+      "supplemental_results": [
+        {
+          "sequence": 48,
+          "label": "原val，官方示例默认",
+          "state": "complete",
+          "result_directory": "__MODEL_ROOT__/resources/runtime/assets/workspace/results/remaining25_supplemental_20260905/m48-cached-val560-native10",
+          "images": 560,
+          "classes": 10,
+          "gt_instances": 11520,
+          "predictions": 11771,
+          "AP": 0.7067380938305386,
+          "AP50": 0.8163196179534254,
+          "AR100": 0.7685921530696853,
+          "unit": "fraction_0_to_1",
+          "protocol_fingerprint": "0fa7894730efca0397ec043138ed88406d0e3deeeb59531cf864787bb34e1bed",
+          "weight_sha256": "580b566b6746a5f1f045e1b935a5d7e3eed18d2e8a5d731246c4011243d2caa6",
+          "independent_verification": "model48/independent_verification.json",
+          "metrics_sha256": "0456fbca0f6833fde7865310ac9b6785237d5a9a272748d23e40d393c00ea190"
+        },
+        {
+          "sequence": 48,
+          "label": "同一val，仅取消额外0.1过滤",
+          "state": "complete",
+          "result_directory": "__MODEL_ROOT__/resources/runtime/assets/workspace/results/remaining25_supplemental_20260905/m48-cached-val560-native10-raw-wrapper",
+          "images": 560,
+          "classes": 10,
+          "gt_instances": 11520,
+          "predictions": 12179,
+          "AP": 0.7085983701073635,
+          "AP50": 0.8201606323298115,
+          "AR100": 0.7716184995515637,
+          "unit": "fraction_0_to_1",
+          "protocol_fingerprint": "fec0cbd29bdfd99cf5a14d9850be917eca94cfd56d71e34eda5b826c6f48b14b",
+          "weight_sha256": "580b566b6746a5f1f045e1b935a5d7e3eed18d2e8a5d731246c4011243d2caa6",
+          "independent_verification": "model48/independent_verification_raw.json",
+          "metrics_sha256": "f967271739c8441a1f306d457b0432ba6276ab924dd6617363a324a46a049df1"
+        }
+      ],
+      "preferred_reference_result_directory": "__MODEL_ROOT__/resources/runtime/assets/workspace/results/remaining25_supplemental_20260905/m48-cached-val560-native10",
+      "supplemental_note": "已使用CACHED原val560图、11520框、原生10类全量重跑，逐类图数/框数全部匹配卡。官方示例默认AP70.6738%；仅取消额外0.1过滤AP70.8598%。卡逐类AP均值74.37%，7类差不到2个百分点，other/legend_title/mark_label仍有较大差距。旧1873图8组63.13仅作历史。"
+    }
+  ],
+  "supplemental_updated_at": "2026-09-05T15:25:21.596769+00:00",
+  "supplemental_summary": "supplemental_20260905/summary.json"
+}

@@ -1,0 +1,99 @@
+{
+  "sequence": 174,
+  "model_id": "glazzova/body_type",
+  "task": "image_classification",
+  "task_name": "图像分类",
+  "reported_result": [
+    {
+      "variant": null,
+      "inference_status": "complete",
+      "accuracy": 0.3611111111111111,
+      "forward_seconds": 1.0602679159992476,
+      "inference_e2e_seconds": 1.509592975000487,
+      "metric_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_proxy174_v1/full/metrics.json",
+      "timing_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_proxy174_v1/full/timing.json"
+    }
+  ],
+  "reference": null,
+  "model_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/model_index/glazzova/body_type",
+  "model_exists_at_build": true,
+  "dataset": {
+    "id": "proxy174",
+    "relation": "public_replacement",
+    "split": "36-image 3-class proxy",
+    "note": [],
+    "index_source": null,
+    "data_containers": []
+  },
+  "environment_id": "classification171-shared_hf",
+  "runner_family": "proxy174",
+  "final_result_sources": [
+    {
+      "source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m174/metrics-0.json",
+      "sha256": "30c76921cc2cb3268374ee36b40d1c96abce75a97ce16e5f0b35ead1dadb9d60",
+      "selection": "final_171_200_registry",
+      "source_original": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_proxy174_v1/full/metrics.json"
+    }
+  ],
+  "code": {
+    "source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/classification171_200_eval/run_proxy_174.py",
+    "sha256": "660597244bca043260e76f3c3cb289e6abc1cfba6f8a413f55e52fbf3890e484",
+    "recorded_sha256": null,
+    "attestation": "current_code_unverified",
+    "status_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m174/status.json",
+    "selection": "current_proxy_code",
+    "archive": "code_archive/660597244bca0432_run_proxy_174.py"
+  },
+  "support_files": [
+    "run_proxy_174.py",
+    "run_model.py",
+    "common.py",
+    "setup_env.sh",
+    "native_js.mjs",
+    "prepare.py",
+    "model_card_references.json",
+    "run_all.sh",
+    "dispatch.py",
+    "timing.py",
+    "package.json",
+    "package-lock.json",
+    "release.json"
+  ],
+  "final_scorer": null,
+  "backend_package": "classification171_200_eval",
+  "readiness": "code_and_result_identified",
+  "launch_status": "configured",
+  "metadata_warning": null,
+  "final_weight_records": [
+    {
+      "variant": null,
+      "model_revision": "49c5c2cc437566416b56364095cdc9e6b357e7cf",
+      "protocol_fingerprint": "63db7fc78e538e69552388a66b58ac4ee0059f6dd7fc057301b665cc170efc3a",
+      "inference_status": "complete",
+      "scoring_kind": "three_class_proxy",
+      "review_status": null,
+      "dataset_relation": "public_replacement",
+      "device": "cpu",
+      "scored_images": 36,
+      "forward_seconds": 1.0602679159992476,
+      "inference_e2e_seconds": 1.509592975000487,
+      "metric_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_proxy174_v1/full/metrics.json",
+      "detailed_metrics_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_proxy174_v1/full/metrics.json",
+      "timing_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_proxy174_v1/full/timing.json",
+      "status_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_proxy174_v1/full/status.json",
+      "prediction_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_proxy174_v1/full/predictions.jsonl",
+      "note": "36-image CPU proxy; not directly comparable with the model card"
+    }
+  ],
+  "evaluation_protocol": {
+    "id": "body_type_three_class_proxy36_v1",
+    "scope": "36张三类公开代理集；每类12张，保留模型四类输出",
+    "expected_inference_images": 36,
+    "expected_scored_images": 36,
+    "metrics_path": "full/metrics.json",
+    "official_reference_comparable": false,
+    "limitations": [
+      "没有hulk类别真实样本；预测为hulk仍按错误计分"
+    ]
+  }
+}

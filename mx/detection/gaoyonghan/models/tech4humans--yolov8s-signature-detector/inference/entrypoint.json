@@ -1,0 +1,41 @@
+{
+  "sequence": 16,
+  "model_id": "tech4humans/yolov8s-signature-detector",
+  "task": "detection",
+  "commands": [
+    {
+      "arguments": [
+        "__PYTHON__",
+        "__MODEL_ROOT__/inference/native/mx_variant.py",
+        "--phase",
+        "full",
+        "--device",
+        "cuda:0",
+        "--output-root",
+        "__OUTPUT_ROOT__/m016/pytorch_fp32"
+      ],
+      "environment": {
+        "PYTHONNOUSERSITE": "1",
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "HF_HUB_OFFLINE": "1",
+        "TRANSFORMERS_OFFLINE": "1",
+        "YOLO_AUTOINSTALL": "false",
+        "CODEX_TIMING_OUTPUT_DIR": "__OUTPUT_ROOT__/m016/timing/full",
+        "CODEX_TIMING_DEVICE": "cuda:0",
+        "CODEX_TIMING_FRAMEWORK": "torch",
+        "PYTHONPATH": "__MODEL_ROOT__/inference/native:__MODEL_ROOT__/inference/output_format:__MODEL_ROOT__/resources/runtime/project/timing_runtime:__MODEL_ROOT__/resources/runtime/project/backends",
+        "AUTO_SETUP": "0",
+        "BENCH_PROBE_NO_INSTALL": "1",
+        "TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD": "1"
+      }
+    }
+  ],
+  "single_model_sample": false,
+  "smoke_commands": [],
+  "state": "runnable",
+  "accepts_max_images": false,
+  "accepts_smoke_flag": false,
+  "scoring_protocol": "coco",
+  "platform": "metax",
+  "mx_weight_variant": "pytorch_fp32"
+}

@@ -1,0 +1,112 @@
+{
+  "sequence": 3,
+  "model_id": "foduucom/stockmarket-pattern-detection-yolov8",
+  "task": "object_detection",
+  "task_name": "目标检测",
+  "reported_result": "64.6301886133517",
+  "reference": "61.355",
+  "model_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/model_index/foduucom/stockmarket-pattern-detection-yolov8",
+  "model_exists_at_build": true,
+  "dataset": {
+    "id": "stock_pxex9_eval_clean",
+    "relation": "public_replacement",
+    "split": "cleaned test",
+    "note": "Stock stock-pxex9 cleaned public replacement · cleaned test · 159 图\n非官方评测集：公开替代"
+  },
+  "environment_id": "detection-yolo",
+  "runner_family": "remaining_detection",
+  "final_result_sources": [
+    {
+      "source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m003/metrics-0.json",
+      "sha256": "326a73e37d8b46e0e8401b7dc0d88825fac06cfb1d4b3aea1f50beca0ae40d84",
+      "selection": "workbook_score_match",
+      "data": {
+        "metrics": {
+          "AP": 0.4881487843846986,
+          "AP50": 0.6463018861335174,
+          "AP75": 0.6027723617254663,
+          "AP_small": null,
+          "AP_medium": 0.30414244847668287,
+          "AP_large": 0.5487450418361072,
+          "AR1": 0.5826142907226886,
+          "AR10": 0.6546610794183862,
+          "AR100": 0.6546610794183862,
+          "AR_small": null,
+          "AR_medium": 0.5206645021645021,
+          "AR_large": 0.6821905591504894,
+          "per_class_AP": {
+            "Head and shoulders bottom": 0.5936558439032262,
+            "Head and shoulders top": 0.5584224859424708,
+            "M_Head": 0.5308911467047477,
+            "StockLine": null,
+            "Triangle": 0.22795491413548133,
+            "W_Bottom": 0.5298195312375669
+          }
+        },
+        "unit": "fraction_0_to_1",
+        "coverage": {
+          "model_labels": {
+            "0": "Head and shoulders bottom",
+            "1": "Head and shoulders top",
+            "2": "M_Head",
+            "3": "StockLine",
+            "4": "Triangle",
+            "5": "W_Bottom"
+          },
+          "mapping": {
+            "0": 1,
+            "1": 2,
+            "2": 3,
+            "3": 4,
+            "4": 5,
+            "5": 6
+          },
+          "covered_labels": [
+            "Head and shoulders bottom",
+            "Head and shoulders top",
+            "M_Head",
+            "Triangle",
+            "W_Bottom"
+          ],
+          "missing_labels": [
+            "StockLine"
+          ],
+          "covered_count": 5,
+          "total_model_classes": 6,
+          "gt_instances_per_class": {
+            "Head and shoulders bottom": 51,
+            "Head and shoulders top": 59,
+            "M_Head": 57,
+            "StockLine": 0,
+            "Triangle": 7,
+            "W_Bottom": 69
+          }
+        },
+        "evaluation_images": 159,
+        "annotation_sha256": "5f96e3b9f9dd7902728b66ec94c3400d850fa9702a7b4867211a0f74b17b35b6",
+        "protocol_fingerprint": "d87d371ea56805b588c0e4a430f88e7a2abc6af8d5a695fa8d59c4aef09021d6",
+        "reference_check": "not_officially_comparable"
+      },
+      "source_original": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/remaining25_v2/m03-stockmarket-pattern-detection-yolov8/bbox/metrics.json"
+    }
+  ],
+  "code": {
+    "source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/remaining25_v2/_source_snapshot/run_model.py",
+    "sha256": "166c80d5179b72ba36b3c6eef76833b0a97d0428e7556f46b346388e527a549d",
+    "recorded_sha256": null,
+    "attestation": "result_batch_snapshot",
+    "status_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m003/status.json",
+    "selection": "same_batch_snapshot",
+    "archive": "code_archive/166c80d5179b72ba_run_model.py"
+  },
+  "support_files": [
+    "models.json",
+    "run_model.py",
+    "run_ready.sh"
+  ],
+  "final_scorer": null,
+  "backend_package": "remaining_detection_eval",
+  "readiness": "code_and_result_identified",
+  "launch_status": "configured",
+  "metadata_warning": null
+}

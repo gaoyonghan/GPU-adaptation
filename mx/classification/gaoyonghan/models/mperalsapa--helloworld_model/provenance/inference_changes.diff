@@ -1,0 +1,25 @@
+--- original_inference.py
++++ inference/native/run_model.py
+@@ -55,10 +55,9 @@
+ 
+ 
+ def check_environment():
+-    assert sys.version_info[:2] == (3, 11), "Use Python 3.11"
+-    versions = {k: importlib.metadata.version(k) for k in MANIFEST["versions"]}
+-    assert versions == MANIFEST["versions"], "Environment differs: run setup_env.sh"
+-    return versions
++    from metax_runtime import check_archived_environment
++    return check_archived_environment(MANIFEST["versions"])
++
+ 
+ 
+ def verify_assets(root, files):
+@@ -174,6 +173,8 @@
+                 print(f"[{spec['sequence']}] preflight_ready: {len(data['rows'])} images")
+                 return True
+             limit = len(data["rows"]) if not args.max_images else min(args.max_images, len(data["rows"]))
++            from classification_capture import snapshot_gt
++            snapshot_gt(output, data["rows"][:limit])
+             records = read_predictions(output / "predictions.jsonl", data["rows"])
+             if old and old["state"] == "complete":
+                 saved = json.loads((output / "metrics.json").read_text())

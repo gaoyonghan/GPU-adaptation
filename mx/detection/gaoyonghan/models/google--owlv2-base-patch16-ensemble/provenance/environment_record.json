@@ -1,0 +1,9 @@
+{
+  "python": "3.11.16",
+  "requirements": "environments/e22-zero-shot-eval/requirements.txt",
+  "expected": "environments/e22-zero-shot-eval/expected.json",
+  "local_packages": [],
+  "original_python": "/home/ubuntu/gaoyonghan/miniconda3/envs/zero-shot-eval/bin/python",
+  "torch": "2.5.1+cu124",
+  "python_version_scope": "Pinned to original interpreter version"
+}

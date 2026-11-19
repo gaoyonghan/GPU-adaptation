@@ -1,0 +1,33 @@
+--- original_inference.py
++++ inference/native/run_m39_omni.py
+@@ -13,16 +13,16 @@
+ from run_model import core, digest, file_hash
+ 
+ HERE = Path(__file__).resolve().parent
+-MODEL = Path('/data2/gaoyonghan/gpu/model/PaddlePaddle/PP-DocLayoutV3_safetensors')
+-DATA = Path('/data2/gaoyonghan/gpu/dataset/omnidocbench_eval')
+-OUT = Path('/home/ubuntu/gaoyonghan/gpu/results/m39_omni_native_v1')
++MODEL = Path('/data2/gaoyonghan/gpu_model_standalone_20261110/release/model/检测/PaddlePaddle--PP-DocLayoutV3_safetensors/resources/model_index/PaddlePaddle/PP-DocLayoutV3_safetensors')
++DATA = Path('/home/ubuntu/文档/ChatGPT/idea 2/outputs/launch_audit_20261005/migration_inputs/datasets/omnidocbench_eval')
++OUT = Path('/data2/gaoyonghan/gpu_model_standalone_20261110/release/model/检测/PaddlePaddle--PP-DocLayoutV3_safetensors/results/run_001/m039/native')
+ THRESHOLD = 0.001
+ 
+ 
+ def preflight():
+     from transformers.models.pp_doclayout_v3 import image_processing_pp_doclayout_v3_fast as processing
+     from transformers.models.pp_doclayout_v3 import modeling_pp_doclayout_v3 as modeling
+-    old_path = Path('/home/ubuntu/gaoyonghan/gpu/results/remaining25_pp_v2/PP-DocLayoutV3_safetensors/status.json')
++    old_path = Path('/data2/gaoyonghan/gpu_model_standalone_20261110/release/model/检测/PaddlePaddle--PP-DocLayoutV3_safetensors/resources/runtime/assets/workspace/results/remaining25_pp_v2/PP-DocLayoutV3_safetensors/status.json')
+     old = json.loads(old_path.read_text())['protocol']
+     weights = {n: file_hash(MODEL/n) for n in old['weights']}
+     assert weights == old['weights'], 'V3 weights/config changed since previous run'
+@@ -33,7 +33,8 @@
+     assert len(labels) == 25 and labels[5] == 'display_formula' and labels[15] == 'inline_formula'
+     assert config['id2label']['5'] == config['id2label']['15'] == 'formula'
+     versions = {n: version(n) for n in ['transformers','torch','torchvision','numpy','Pillow','safetensors','PyYAML']}
+-    assert versions['transformers'] == '5.3.0' and versions['torch'] == '2.5.1+cu121'
++    if versions['transformers'] != '5.3.0' or versions['torch'] != '2.5.1+cu121':
++        print(f"WARNING: MetaX allowlisted environment differs from archived reference: {versions}", flush=True)
+     pages = json.loads((DATA/'OmniDocBench.json').read_text())
+     assert len(pages) == 1651
+     images = []

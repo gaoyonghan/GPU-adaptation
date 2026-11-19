@@ -1,0 +1,60 @@
+{
+  "sequence": 187,
+  "files": [
+    {
+      "path": "pytorch_model.bin",
+      "bytes": 343280113,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "config.json",
+      "bytes": 698,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "preprocessor_config.json",
+      "bytes": 228,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "README.md",
+      "bytes": 799,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": ".gitattributes",
+      "bytes": 1175,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "images/London.jpg",
+      "bytes": 42964,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "images/New_York.jpg",
+      "bytes": 41621,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "images/Tokyo.jpg",
+      "bytes": 36619,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "runs/events.out.tfevents.1642096341.501cb390ff85.795.0",
+      "bytes": 1162,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    }
+  ],
+  "mismatches": []
+}

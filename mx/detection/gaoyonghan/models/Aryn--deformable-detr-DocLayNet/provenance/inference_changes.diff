@@ -1,0 +1,15 @@
+--- original_inference.py
++++ inference/native/run.py
+@@ -18,9 +18,9 @@
+ from transformers import AutoConfig, AutoImageProcessor, AutoModelForObjectDetection
+ 
+ HERE = Path(__file__).resolve().parent
+-DATA = Path('/data2/gaoyonghan/gpu/dataset/supplemental_20260905/model19')
+-WEIGHT = Path('/data2/gaoyonghan/gpu/model/Aryn/deformable-detr-DocLayNet')
+-OUTPUT = Path('/home/ubuntu/gaoyonghan/gpu/results/remaining25_supplemental_20260905/m19-doclaynet-competition498')
++DATA = Path('/home/ubuntu/文档/ChatGPT/idea 2/outputs/launch_audit_20261005/migration_inputs/datasets/supplemental_20260905/model19')
++WEIGHT = Path('/data2/gaoyonghan/gpu_model_standalone_20261110/release/model/检测/Aryn--deformable-detr-DocLayNet/resources/model_index/Aryn/deformable-detr-DocLayNet')
++OUTPUT = Path('/data2/gaoyonghan/gpu_model_standalone_20261110/release/model/检测/Aryn--deformable-detr-DocLayNet/results/run_001/m019/gpu_local_v2')
+ 
+ 
+ def sha(path):

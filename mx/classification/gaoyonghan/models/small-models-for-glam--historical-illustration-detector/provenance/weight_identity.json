@@ -1,0 +1,90 @@
+{
+  "sequence": 83,
+  "files": [
+    {
+      "path": "model.safetensors",
+      "bytes": 9080216,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "illustrated_0.jpg",
+      "bytes": 332374,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "config.json",
+      "bytes": 752,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "preprocessor_config.json",
+      "bytes": 435,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4083,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": ".gitattributes",
+      "bytes": 1646,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "not_illustrated_0.jpg",
+      "bytes": 592781,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "onnx/model.onnx",
+      "bytes": 2641378,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "onnx/model_quantized.onnx",
+      "bytes": 2641378,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "pytorch/3aab2a6336291b732a1552c562fd15b1bd606213/model.safetensors",
+      "bytes": 9080216,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "pytorch/3aab2a6336291b732a1552c562fd15b1bd606213/config.json",
+      "bytes": 752,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "pytorch/3aab2a6336291b732a1552c562fd15b1bd606213/preprocessor_config.json",
+      "bytes": 435,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "pytorch/3aab2a6336291b732a1552c562fd15b1bd606213/README.md",
+      "bytes": 4083,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "pytorch/3aab2a6336291b732a1552c562fd15b1bd606213/weight_source.json",
+      "bytes": 1705,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    }
+  ],
+  "mismatches": []
+}

@@ -1,0 +1,144 @@
+{
+  "sequence": 8,
+  "files": [
+    {
+      "path": "Anzhc HeadHair seg y8m.pt",
+      "bytes": 54879821,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "Anzhc Eyes -seg-hd.pt",
+      "bytes": 6906493,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "Anzhc Face seg 1024 v2 y8n.pt",
+      "bytes": 6948693,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "Anzhc Face seg 640 v4 y11n.pt",
+      "bytes": 6020644,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "Anzhc Face seg 640 v3 y11n.pt",
+      "bytes": 6083105,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "Anzhcs-text-seg-v6-y11m.pt",
+      "bytes": 45226687,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "Anzhcs Drones v03 1024 y11n.pt",
+      "bytes": 6130017,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "Anzhc Face seg 768MS v2 y8n.pt",
+      "bytes": 6915968,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "Anzhcs-text-seg-v9-y11m.pt",
+      "bytes": 45220856,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "README.md",
+      "bytes": 19293,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "Anzhc Face -seg.pt",
+      "bytes": 6834492,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "Anzhc Breasts Seg v1 1024n.pt",
+      "bytes": 6894933,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": ".gitattributes",
+      "bytes": 1519,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "Anzhc HeadHair seg y8n.pt",
+      "bytes": 6813030,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "Anzhcs WomanFace v05 1024 y8n.pt",
+      "bytes": 6363111,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "Anzhcs Breast size det cls v8 640 y11m.pt",
+      "bytes": 40579464,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "Anzhc Face seg 768 v2 y8n.pt",
+      "bytes": 6900842,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "Anzhc Breasts Seg v1 1024s.pt",
+      "bytes": 23971669,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "Anzhc Breasts Seg v1 1024m.pt",
+      "bytes": 54931149,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "Anzhcs ManFace v02 1024 y8n.pt",
+      "bytes": 6354855,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "Anzhcs Anime Score CLS v1.pt",
+      "bytes": 3234174,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "Anzhc Face seg 640 v2 y8n.pt",
+      "bytes": 6878186,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "Anzhc Manga Panels -seg.pt",
+      "bytes": 23863380,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    }
+  ],
+  "mismatches": []
+}

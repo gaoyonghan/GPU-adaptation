@@ -1,0 +1,35 @@
+{
+  "schema": "model-eval/classification-inventory/v1",
+  "scope": "Existing 59 classification models; model 93 is retrieval and excluded.",
+  "models": [
+    {
+      "sequence": 83,
+      "model_id": "small-models-for-glam/historical-illustration-detector",
+      "runner_family": "special",
+      "adapter": "imagein",
+      "state": "integrated",
+      "dataset": {
+        "id": "imagein",
+        "relation": null,
+        "split": null,
+        "note": "计划：ImageIN / ImageIn_annotations（来源数据）\n未评测，官方对应关系待核实"
+      },
+      "qualification": "existing_protocol_not_officially_verified",
+      "limitations": [
+        "Historical output may contain only Top-1. Missing Top-5 remains unavailable; never reconstruct ranking silently."
+      ],
+      "num_classes": 2,
+      "expected_images": 1896,
+      "categories": [
+        {
+          "id": 0,
+          "name": "not-illustrated"
+        },
+        {
+          "id": 1,
+          "name": "illustrated"
+        }
+      ]
+    }
+  ]
+}

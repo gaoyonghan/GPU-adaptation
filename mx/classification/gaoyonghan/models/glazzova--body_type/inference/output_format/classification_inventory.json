@@ -1,0 +1,57 @@
+{
+  "schema": "model-eval/classification-inventory/v1",
+  "scope": "Existing 59 classification models; model 93 is retrieval and excluded.",
+  "models": [
+    {
+      "sequence": 174,
+      "model_id": "glazzova/body_type",
+      "runner_family": "proxy174",
+      "adapter": "body_proxy",
+      "state": "integrated",
+      "dataset": {
+        "id": "proxy174",
+        "relation": "public_replacement",
+        "split": "36-image 3-class proxy",
+        "note": [],
+        "index_source": null,
+        "data_containers": []
+      },
+      "qualification": "selected_proxy_scope",
+      "limitations": [
+        "Complete the existing selected proxy protocol, not a full official validation dataset.",
+        "Historical output may contain only Top-1. Missing Top-5 remains unavailable; never reconstruct ranking silently."
+      ],
+      "num_classes": 4,
+      "categories": [
+        {
+          "id": 0,
+          "name": "skinny"
+        },
+        {
+          "id": 1,
+          "name": "ordinary"
+        },
+        {
+          "id": 2,
+          "name": "overweight"
+        },
+        {
+          "id": 3,
+          "name": "hulk"
+        }
+      ],
+      "expected_images": 36,
+      "existing_protocol": {
+        "id": "body_type_three_class_proxy36_v1",
+        "scope": "36张三类公开代理集；每类12张，保留模型四类输出",
+        "expected_inference_images": 36,
+        "expected_scored_images": 36,
+        "metrics_path": "full/metrics.json",
+        "official_reference_comparable": false,
+        "limitations": [
+          "没有hulk类别真实样本；预测为hulk仍按错误计分"
+        ]
+      }
+    }
+  ]
+}

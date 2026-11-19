@@ -1,0 +1,70 @@
+{
+  "sequence": 68,
+  "model_id": "omlab/omdet-turbo-swin-tiny-hf",
+  "task": "zero_shot_detection",
+  "task_name": "零样本检测",
+  "reported_result": "39.6969178828344",
+  "reference": "官方仓库/论文 AP42.50%\n完整评估入口未定位",
+  "model_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/model_index/omlab/omdet-turbo-swin-tiny-hf",
+  "model_exists_at_build": true,
+  "dataset": {
+    "id": "coco2017_val",
+    "relation": "reference_baseline",
+    "split": null,
+    "note": "COCO2017 · val · 5000 图\n官方原集（不代表全协议已对齐）"
+  },
+  "environment_id": "zero-shot",
+  "runner_family": "zero_shot",
+  "final_result_sources": [
+    {
+      "source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m068/metrics-0.json",
+      "sha256": "ed5a35e6ef4238dc60cf7dd766067e1a2cb674867e14af95ded075a325d0619f",
+      "selection": "workbook_score_match",
+      "data": {
+        "fidelity": "reference_baseline",
+        "metric_implementation": "pycocotools.COCOeval",
+        "metrics": {
+          "AP": 0.17137606260465274,
+          "AP50": 0.268188675747511,
+          "AP75": 0.17764275162100462,
+          "AP_large": 0.24869121050785095,
+          "AP_medium": 0.21358042479346265,
+          "AP_small": 0.10944468227010075,
+          "AR_1": 0.292222770719735,
+          "AR_10": 0.509944304164987,
+          "AR_100": 0.5434949921385115,
+          "AR_large": 0.7550774720051797,
+          "AR_medium": 0.6087073106732785,
+          "AR_small": 0.3307328499378947
+        },
+        "model_key": "omdet-turbo-swin-tiny",
+        "official_reference_comparison": {
+          "classification": "not_officially_comparable",
+          "reason": "官方未发布完整评估入口"
+        },
+        "protocol_fingerprint": "418c72b945be75f9b3e60bc5a0a0e37fa5cf6af672bc7e481a2b1f04f1b71400"
+      },
+      "source_original": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/zero_shot_omdet_protocol_v2/omdet-turbo-swin-tiny/metrics.json"
+    }
+  ],
+  "code": {
+    "source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/official_zero_shot_eval/run_model.py",
+    "sha256": "6b5c4102bc12ce6a9198c4e3055d3a6f6080dd62026df39af93db031843a0ad6",
+    "recorded_sha256": null,
+    "attestation": "current_code_unverified",
+    "status_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m068/status.json",
+    "selection": "current_shared_code",
+    "archive": "code_archive/6b5c4102bc12ce6a_run_model.py"
+  },
+  "support_files": [
+    "models.json",
+    "run_model.py",
+    "setup_env.sh",
+    "run_all.sh"
+  ],
+  "final_scorer": null,
+  "backend_package": "classification8_eval",
+  "readiness": "code_and_result_identified",
+  "launch_status": "configured",
+  "metadata_warning": null
+}

@@ -1,0 +1,22 @@
+{
+  "sequence": 19,
+  "model_id": "Aryn/deformable-detr-DocLayNet",
+  "source_archive_hash_matches": true,
+  "source_archive_sha256": "3997aa180d15fae9183aff7cc07cb07d5d48f58515b364651930455abb30a1c4",
+  "prepared_entry_source_sha256": "affa11fac7ecaf935d362efaa53577a491f71e2e4248812ba768ac226461dcff",
+  "local_entry_sha256": "45fcf1d73b9f60b7c3a5e43819c5631fdf00ccee509f99c1424ae32e87489e77",
+  "local_entry": "inference/native/run.py",
+  "central_dispatch_in_entry": false,
+  "unexpected_external_links": [],
+  "declared_dataset_links": [],
+  "broken_links": [],
+  "path_template_count": 414,
+  "state": "entrypoint_verified_full_run_pending",
+  "validation": {
+    "returncode": 0,
+    "python": "/home/ubuntu/gaoyonghan/miniconda3/envs/object-detection-hf-v2/bin/python",
+    "checked_at": "2026-11-10T15:38:17.893895+08:00",
+    "scope": "native help/import/path check only; not full inference"
+  },
+  "smoke_verification": null
+}

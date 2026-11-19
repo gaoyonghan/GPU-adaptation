@@ -1,0 +1,25 @@
+{
+  "sequence": 13,
+  "runner": "ultralytics_detection",
+  "selected_function": "run_generic",
+  "removed_functions": [
+    "run_delegate",
+    "run_rfdetr_webclick",
+    "run_table_structure",
+    "run_wilddet3d_official",
+    "run_yoloe_official"
+  ],
+  "selected_inference_call_ast_equal": true,
+  "original_template_sha256": "d46f45591fdf121e550ddcca97febd07bcda5efbe04f778c4ab4d2f62151ad51",
+  "specialized_template_sha256": "a55bf30a37aeda80e0ed7c8ae9cba1be62a73875bf0379bc3a27961f81427b30",
+  "predictor_refined": true,
+  "removed_predictors": [
+    "load_hf_predictor",
+    "load_onnx_detr_predictor",
+    "load_table_structure_predictor",
+    "load_tensorflow_retinanet_predictor",
+    "load_yolov10_predictor",
+    "load_yolov5_predictor"
+  ],
+  "refined_template_sha256": "45b7f9ffc3ba7e4687fc3b1c6f08e78aae53b7a0fa577c4662a3f6cea4bab8da"
+}

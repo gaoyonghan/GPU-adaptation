@@ -1,0 +1,234 @@
+{
+  "state": "complete",
+  "sequence": 48,
+  "dataset_images": 560,
+  "dataset_GT": 11520,
+  "native_classes": 10,
+  "default_result_dir": "__MODEL_ROOT__/resources/runtime/assets/workspace/results/remaining25_supplemental_20260905/m48-cached-val560-native10",
+  "diagnostic_result_dir": "__MODEL_ROOT__/resources/runtime/assets/workspace/results/remaining25_supplemental_20260905/m48-cached-val560-native10-raw-wrapper",
+  "default_metrics": {
+    "AP": 0.7067380938305386,
+    "AP50": 0.8163196179534254,
+    "AP75": 0.79071255131719,
+    "AP_small": 0.6883738509788704,
+    "AP_medium": 0.7056114281214216,
+    "AP_large": 0.8225042101999791,
+    "AR1": 0.4040606449796426,
+    "AR10": 0.7274914437753688,
+    "AR100": 0.7685921530696853,
+    "AR_small": 0.7499923925276027,
+    "AR_medium": 0.7630166869459544,
+    "AR_large": 0.8424382716049382,
+    "per_class": {
+      "chart_title": {
+        "AP": 0.8104792038048426,
+        "AR100": 0.913157894736842,
+        "model_card_AP_percent": 82.38,
+        "model_card_AR_percent": 93.16,
+        "AP_difference_percentage_points": -1.3320796195157385,
+        "AR_difference_percentage_points": -1.8442105263158055
+      },
+      "x_title": {
+        "AP": 0.8803948772406774,
+        "AR100": 0.9125858123569793,
+        "model_card_AP_percent": 88.77,
+        "model_card_AR_percent": 92.31,
+        "AP_difference_percentage_points": -0.7305122759322558,
+        "AR_difference_percentage_points": -1.0514187643020705
+      },
+      "y_title": {
+        "AP": 0.8856813942012528,
+        "AR100": 0.9144554455445544,
+        "model_card_AP_percent": 89.48,
+        "model_card_AR_percent": 92.32,
+        "AP_difference_percentage_points": -0.9118605798747268,
+        "AR_difference_percentage_points": -0.8744554455445552
+      },
+      "xlabel": {
+        "AP": 0.8338409879825676,
+        "AR100": 0.8728183818137374,
+        "model_card_AP_percent": 85.04,
+        "model_card_AR_percent": 88.93,
+        "AP_difference_percentage_points": -1.655901201743248,
+        "AR_difference_percentage_points": -1.6481618186262637
+      },
+      "ylabel": {
+        "AP": 0.8550034871030638,
+        "AR100": 0.8895283975659231,
+        "model_card_AP_percent": 86.22,
+        "model_card_AR_percent": 89.4,
+        "AP_difference_percentage_points": -0.7196512896936156,
+        "AR_difference_percentage_points": -0.4471602434076942
+      },
+      "other": {
+        "AP": 0.47844204311991656,
+        "AR100": 0.6213362068965517,
+        "model_card_AP_percent": 55.14,
+        "model_card_AR_percent": 79.48,
+        "AP_difference_percentage_points": -7.295795688008347,
+        "AR_difference_percentage_points": -17.346379310344837
+      },
+      "legend_label": {
+        "AP": 0.8342464521795766,
+        "AR100": 0.8724233983286908,
+        "model_card_AP_percent": 84.09,
+        "model_card_AR_percent": 88.07,
+        "AP_difference_percentage_points": -0.6653547820423427,
+        "AR_difference_percentage_points": -0.8276601671309152
+      },
+      "legend_title": {
+        "AP": 0.5098597359735972,
+        "AR100": 0.5526315789473685,
+        "model_card_AP_percent": 60.61,
+        "model_card_AR_percent": 68.42,
+        "AP_difference_percentage_points": -9.624026402640276,
+        "AR_difference_percentage_points": -13.156842105263152
+      },
+      "mark_label": {
+        "AP": 0.37217452173602367,
+        "AR100": 0.47899543378995435,
+        "model_card_AP_percent": 49.31,
+        "model_card_AR_percent": 73.61,
+        "AP_difference_percentage_points": -12.092547826397634,
+        "AR_difference_percentage_points": -25.710456621004568
+      },
+      "value_label": {
+        "AP": 0.6072582349638675,
+        "AR100": 0.6579889807162533,
+        "model_card_AP_percent": 62.66,
+        "model_card_AR_percent": 68.32,
+        "AP_difference_percentage_points": -1.9341765036132443,
+        "AR_difference_percentage_points": -2.5211019283746623
+      }
+    },
+    "per_class_AP": {
+      "chart_title": 0.8104792038048426,
+      "x_title": 0.8803948772406774,
+      "y_title": 0.8856813942012528,
+      "xlabel": 0.8338409879825676,
+      "ylabel": 0.8550034871030638,
+      "other": 0.47844204311991656,
+      "legend_label": 0.8342464521795766,
+      "legend_title": 0.5098597359735972,
+      "mark_label": 0.37217452173602367,
+      "value_label": 0.6072582349638675
+    }
+  },
+  "diagnostic_metrics": {
+    "AP": 0.7085983701073635,
+    "AP50": 0.8201606323298115,
+    "AP75": 0.7915491963825796,
+    "AP_small": 0.6897183168487125,
+    "AP_medium": 0.7073083365027718,
+    "AP_large": 0.8225042101999791,
+    "AR1": 0.4040606449796426,
+    "AR10": 0.7286225223786482,
+    "AR100": 0.7716184995515637,
+    "AR_small": 0.7530369435570643,
+    "AR_medium": 0.7657484903690984,
+    "AR_large": 0.8424382716049382,
+    "per_class": {
+      "chart_title": {
+        "AP": 0.8104792038048426,
+        "AR100": 0.913157894736842,
+        "model_card_AP_percent": 82.38,
+        "model_card_AR_percent": 93.16,
+        "AP_difference_percentage_points": -1.3320796195157385,
+        "AR_difference_percentage_points": -1.8442105263158055
+      },
+      "x_title": {
+        "AP": 0.8803948772406774,
+        "AR100": 0.9125858123569793,
+        "model_card_AP_percent": 88.77,
+        "model_card_AR_percent": 92.31,
+        "AP_difference_percentage_points": -0.7305122759322558,
+        "AR_difference_percentage_points": -1.0514187643020705
+      },
+      "y_title": {
+        "AP": 0.8856813942012528,
+        "AR100": 0.9144554455445544,
+        "model_card_AP_percent": 89.48,
+        "model_card_AR_percent": 92.32,
+        "AP_difference_percentage_points": -0.9118605798747268,
+        "AR_difference_percentage_points": -0.8744554455445552
+      },
+      "xlabel": {
+        "AP": 0.8348051203355793,
+        "AR100": 0.873331703739917,
+        "model_card_AP_percent": 85.04,
+        "model_card_AR_percent": 88.93,
+        "AP_difference_percentage_points": -1.5594879664420773,
+        "AR_difference_percentage_points": -1.596829626008315
+      },
+      "ylabel": {
+        "AP": 0.856960631553966,
+        "AR100": 0.8899847870182557,
+        "model_card_AP_percent": 86.22,
+        "model_card_AR_percent": 89.4,
+        "AP_difference_percentage_points": -0.5239368446033978,
+        "AR_difference_percentage_points": -0.40152129817444404
+      },
+      "other": {
+        "AP": 0.4867923055764542,
+        "AR100": 0.6420258620689656,
+        "model_card_AP_percent": 55.14,
+        "model_card_AR_percent": 79.48,
+        "AP_difference_percentage_points": -6.460769442354582,
+        "AR_difference_percentage_points": -15.277413793103449
+      },
+      "legend_label": {
+        "AP": 0.8342464521795766,
+        "AR100": 0.8724233983286908,
+        "model_card_AP_percent": 84.09,
+        "model_card_AR_percent": 88.07,
+        "AP_difference_percentage_points": -0.6653547820423427,
+        "AR_difference_percentage_points": -0.8276601671309152
+      },
+      "legend_title": {
+        "AP": 0.5098597359735972,
+        "AR100": 0.5526315789473685,
+        "model_card_AP_percent": 60.61,
+        "model_card_AR_percent": 68.42,
+        "AP_difference_percentage_points": -9.624026402640276,
+        "AR_difference_percentage_points": -13.156842105263152
+      },
+      "mark_label": {
+        "AP": 0.3750149902500832,
+        "AR100": 0.4840182648401826,
+        "model_card_AP_percent": 49.31,
+        "model_card_AR_percent": 73.61,
+        "AP_difference_percentage_points": -11.80850097499168,
+        "AR_difference_percentage_points": -25.208173515981734
+      },
+      "value_label": {
+        "AP": 0.611748989957605,
+        "AR100": 0.6615702479338842,
+        "model_card_AP_percent": 62.66,
+        "model_card_AR_percent": 68.32,
+        "AP_difference_percentage_points": -1.4851010042395032,
+        "AR_difference_percentage_points": -2.162975206611577
+      }
+    },
+    "per_class_AP": {
+      "chart_title": 0.8104792038048426,
+      "x_title": 0.8803948772406774,
+      "y_title": 0.8856813942012528,
+      "xlabel": 0.8348051203355793,
+      "ylabel": 0.856960631553966,
+      "other": 0.4867923055764542,
+      "legend_label": 0.8342464521795766,
+      "legend_title": 0.5098597359735972,
+      "mark_label": 0.3750149902500832,
+      "value_label": 0.611748989957605
+    }
+  },
+  "validation_passed": true,
+  "source_dataset_manifest": "__DATASET_ROOT__/supplemental_20260905/model48/source_manifest.json",
+  "code_sha256": {
+    "prepare.py": "77de8bc8d6a4644cb75864c17408d741d67b556b29efd74c401d9af5adf677d2",
+    "run.py": "70e3f059acedb208ace64f79f866a99d180e84d47bce5c17e0cebfc04b00e0b2",
+    "run_raw.py": "faf00b66f02318214eb37b617b484464978b2e3332cbe4ad29291156b0774255",
+    "verify.py": "21609e373543c98794d3bc6f98929bc18d4f8750e471701ef17edc9b2701d657",
+    "verify_raw.py": "9dcdbf731fd9b08af5e282b9403ca433b00d32e1024eeacce51f00e110db3fc1"
+  }
+}

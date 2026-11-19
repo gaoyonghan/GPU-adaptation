@@ -1,0 +1,27 @@
+{
+  "sequence": 53,
+  "model_id": "Xenova/detr-resnet-50",
+  "source_archive_hash_matches": true,
+  "source_archive_sha256": "eb619c65fdcd87433e55c96549cf9ebe58931b49a63630443c37014c5690db42",
+  "prepared_entry_source_sha256": "d966505652ed6ee4a9221ee90785eaa8a17fe84545d2874d13fd5eb806bce9c5",
+  "local_entry_sha256": "b15433958211ae978ff43127e2e58c3d7aedc45ddae166b944b0c2fba663d159",
+  "local_entry": "inference/native/run_model.py",
+  "central_dispatch_in_entry": false,
+  "unexpected_external_links": [],
+  "declared_dataset_links": [
+    {
+      "path": "resources/runtime/assets/workspace/official_sources/object_detection/WildDet3D/data/in_the_wild",
+      "target": "/data2/gaoyonghan/gpu/dataset/wilddet3d_val"
+    }
+  ],
+  "broken_links": [],
+  "path_template_count": 366,
+  "state": "entrypoint_verified_full_run_pending",
+  "validation": {
+    "returncode": 0,
+    "python": "/home/ubuntu/gaoyonghan/miniconda3/envs/object-detection-onnx-v2/bin/python",
+    "checked_at": "2026-11-10T15:53:41.073946+08:00",
+    "scope": "native help/import/path check only; not full inference"
+  },
+  "smoke_verification": null
+}

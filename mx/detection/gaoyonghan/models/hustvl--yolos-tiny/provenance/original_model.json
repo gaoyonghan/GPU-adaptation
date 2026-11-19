@@ -1,0 +1,90 @@
+{
+  "sequence": 5,
+  "model_id": "hustvl/yolos-tiny",
+  "task": "object_detection",
+  "task_name": "目标检测",
+  "reported_result": "28.7539156856073",
+  "reference": "28.7",
+  "model_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/model_index/hustvl/yolos-tiny",
+  "model_exists_at_build": true,
+  "dataset": {
+    "id": "coco2017_val",
+    "relation": "original_exact",
+    "split": "val2017",
+    "note": "COCO 2017 Detection · val2017 · 5000 图\n官方原集（不代表全协议已对齐）"
+  },
+  "environment_id": "detection-hf",
+  "runner_family": "official_detection",
+  "final_result_sources": [
+    {
+      "source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m005/metrics-0.json",
+      "sha256": "b80c2b0abcb212ad474db9da4d631bbabbe3cee6c340325c99f54749ce4c1723",
+      "selection": "workbook_score_match",
+      "data": {
+        "metrics": {
+          "AP": 0.2875391568560733,
+          "AP50": 0.4720034924118145,
+          "AP75": 0.28929098488594174,
+          "AP_small": 0.09492888525862814,
+          "AP_medium": 0.29445721195592245,
+          "AP_large": 0.45962190925303614,
+          "AR1": 0.2647471675720114,
+          "AR10": 0.42349799084704587,
+          "AR100": 0.46046087167759175,
+          "AR_small": 0.1798233687707809,
+          "AR_medium": 0.49083522241149,
+          "AR_large": 0.7202411865614777
+        },
+        "metrics_percent": {
+          "AP": 28.75391568560733,
+          "AP50": 47.20034924118145,
+          "AP75": 28.929098488594175,
+          "AP_small": 9.492888525862814,
+          "AP_medium": 29.445721195592245,
+          "AP_large": 45.96219092530362,
+          "AR1": 26.47471675720114,
+          "AR10": 42.349799084704586,
+          "AR100": 46.046087167759175,
+          "AR_small": 17.98233687707809,
+          "AR_medium": 49.083522241149005,
+          "AR_large": 72.02411865614778
+        },
+        "official_reference": {
+          "metric": "AP",
+          "value_percent": 28.7
+        },
+        "reference_check": {
+          "classification": "matches_reference",
+          "metric": "AP",
+          "actual_percent": 28.75391568560733,
+          "reference_percent": 28.7,
+          "difference_percent_points": 0.05391568560732907,
+          "tolerance_percent_points": 1.0
+        }
+      },
+      "source_original": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/object_detection_official_v2/m05-yolos-tiny/metrics.json"
+    }
+  ],
+  "code": {
+    "source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/object_detection_official_v2/_source_snapshot/run_model.py",
+    "sha256": "f2fb744cfeffd526f9088df0d3ee7e4b17ce65eeada64030fe37deb96dd485dc",
+    "recorded_sha256": null,
+    "attestation": "result_batch_snapshot",
+    "status_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m005/status.json",
+    "selection": "same_batch_snapshot",
+    "archive": "code_archive/f2fb744cfeffd526_run_model.py"
+  },
+  "support_files": [
+    "download_official_source.py",
+    "models.json",
+    "run_model.py",
+    "setup_env.sh",
+    "run_all.sh",
+    "check_environment.py"
+  ],
+  "final_scorer": null,
+  "backend_package": "remaining_detection_eval",
+  "readiness": "code_and_result_identified",
+  "launch_status": "configured",
+  "metadata_warning": null
+}

@@ -1,0 +1,41 @@
+{
+  "audited_on": "2026-09-05",
+  "total_detection_models": 62,
+  "existing_green_batch": 37,
+  "remaining_models": 25,
+  "scope_note": "37是已选入队列数，不是全量完成数。25按唯一model_id统计；任务/权重子记录不重复计数。",
+  "source_manifest": "__MODEL_ROOT__/resources/runtime/assets/workspace/official_object_detection_eval/models.json",
+  "source_sha256": "b45b4ecf6abc95ee7f2f542b2125dd8fcf4b013bed08cf81dc50c452ce023c00",
+  "primary_blocker_counts": {
+    "旧替代集类别不全，需核对任务覆盖": 4,
+    "私有数据且缺任务匹配的公开金标": 2,
+    "原协议/划分不明，现有数据可做参考评测": 8,
+    "数据已有，缺任务适配或多权重覆盖": 8,
+    "仅下载了说明/发布链接，实际权重缺失": 2,
+    "数据下载未完成，当前目录为空": 1
+  },
+  "models": [
+    {
+      "sequence": 34,
+      "excel_row": 35,
+      "model_id": "foduucom/plant-leaf-detection-and-classification",
+      "primary_blocker": "旧替代集类别不全，需核对任务覆盖",
+      "historical_reason": "P2-不合格｜作者46类叶片检测原数据/测试索引未公开，允许替代；但 PlantDoc只覆盖约13/46类，违反“替代集覆盖原评估类别”要求。只能作共有类附加实验，不能作为主评测集。依据：https://github.com/pratikkayal/PlantDoc-Object-Detection-Dataset",
+      "required_tasks": [
+        "bbox_detection_classification"
+      ],
+      "task_inventory_status": "model_card_and_prior_audit",
+      "weight_files_present": [
+        {
+          "file": "best.pt",
+          "bytes": 22520120
+        }
+      ],
+      "next_action": "PlantDoc同名物种/病害检测标签显式映射；按放宽条件报告共有类指标和覆盖缺口。",
+      "source_model_card": "https://huggingface.co/foduucom/plant-leaf-detection-and-classification",
+      "local_model_card": "__MODEL_ROOT__/weights/foduucom/plant-leaf-detection-and-classification/README.md",
+      "technical_complete": false,
+      "metrics": null
+    }
+  ]
+}

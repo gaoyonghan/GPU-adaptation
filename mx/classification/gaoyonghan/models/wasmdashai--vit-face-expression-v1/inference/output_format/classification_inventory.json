@@ -1,0 +1,55 @@
+{
+  "schema": "model-eval/classification-inventory/v1",
+  "scope": "Existing 59 classification models; model 93 is retrieval and excluded.",
+  "models": [
+    {
+      "sequence": 75,
+      "model_id": "wasmdashai/vit-face-expression-v1",
+      "runner_family": "special",
+      "adapter": "fer_csv",
+      "state": "integrated",
+      "dataset": {
+        "id": "fer2013",
+        "relation": "public_replacement_author_test_unverified",
+        "split": "PrivateTest",
+        "note": "最终记录：原始 FER2013 标签，PrivateTest 3589 图；CSV 位于 fer2013/deadskull7/fer2013.csv。"
+      },
+      "qualification": "public_replacement_author_test_unverified",
+      "limitations": [
+        "Historical output may contain only Top-1. Missing Top-5 remains unavailable; never reconstruct ranking silently."
+      ],
+      "num_classes": 7,
+      "categories": [
+        {
+          "id": 0,
+          "name": "angry"
+        },
+        {
+          "id": 1,
+          "name": "disgust"
+        },
+        {
+          "id": 2,
+          "name": "fear"
+        },
+        {
+          "id": 3,
+          "name": "happy"
+        },
+        {
+          "id": 4,
+          "name": "sad"
+        },
+        {
+          "id": 5,
+          "name": "surprise"
+        },
+        {
+          "id": 6,
+          "name": "neutral"
+        }
+      ],
+      "expected_images": 3589
+    }
+  ]
+}

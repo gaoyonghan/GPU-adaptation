@@ -1,0 +1,124 @@
+{
+  "sequence": 8,
+  "model_id": "Anzhc/Anzhcs_YOLOs",
+  "task": "object_detection",
+  "task_name": "目标检测",
+  "reported_result": "task1通用人脸：框 AP50：83.50%",
+  "reference": "task1：37.82%",
+  "model_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/model_index/Anzhc/Anzhcs_YOLOs",
+  "model_exists_at_build": true,
+  "dataset": {
+    "id": "lapa_test",
+    "relation": "public_replacement",
+    "split": "test",
+    "note": "最终选定结果使用 LaPa test 2000 图；非官方替代集。工作簿 83.50% 与该结果不一致，仍需核对。"
+  },
+  "environment_id": "detection-eval",
+  "runner_family": "remaining_detection",
+  "final_result_sources": [
+    {
+      "source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m008/metrics-0.json",
+      "sha256": "1c87574af180c3936956247f350a336b64e22bcb2d935381d94e746773fd15fb",
+      "selection": "requires_metric_review",
+      "data": {
+        "bbox": {
+          "AP": 0.19186254518077198,
+          "AP50": 0.37823381936618655,
+          "AP75": 0.15946618153239295,
+          "AP_small": null,
+          "AP_medium": 0.049811022978291694,
+          "AP_large": 0.2205937963591032,
+          "AR1": 0.27205,
+          "AR10": 0.34875,
+          "AR100": 0.3579,
+          "AR_small": null,
+          "AR_medium": 0.20232558139534884,
+          "AR_large": 0.36131834440470106
+        },
+        "segm": {
+          "AP": 0.1873059895605561,
+          "AP50": 0.37293231133018767,
+          "AP75": 0.16647105343137955,
+          "AP_small": null,
+          "AP_medium": 0.04887821934538047,
+          "AP_large": 0.21658091261551873,
+          "AR1": 0.25165000000000004,
+          "AR10": 0.30745,
+          "AR100": 0.3127,
+          "AR_small": null,
+          "AR_medium": 0.19534883720930232,
+          "AR_large": 0.315278487480838
+        },
+        "unit": "fraction_0_to_1",
+        "images": 2000,
+        "scope": "full_test",
+        "official_comparable": false,
+        "boundary_audit": "pending",
+        "all_model_tasks_complete": false
+      },
+      "source_original": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/m08_face_lapa_v1/full/metrics.json"
+    }
+  ],
+  "code": {
+    "source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/remaining_detection_eval/run_anzhc_lapa.py",
+    "sha256": "0cb7facbfa9f738bbaf4cfb43a25bb2b711d2de5b193e95ed5118d22d214bbb2",
+    "recorded_sha256": "0cb7facbfa9f738bbaf4cfb43a25bb2b711d2de5b193e95ed5118d22d214bbb2",
+    "attestation": "recorded_success_hash_match",
+    "status_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m008/status.json",
+    "selection": "recorded_success_script_recovered",
+    "archive": "code_archive/0cb7facbfa9f738b_run_anzhc_lapa.py"
+  },
+  "support_files": [
+    "download_official_source.py",
+    "models.json",
+    "run_model.py",
+    "m27_lingbot_config.json",
+    "run_m29_native.sh",
+    "run_m15_native_tight.sh",
+    "m27_native_config.py",
+    "run_m33x_native.py",
+    "run_m27_native.py",
+    "setup_env.sh",
+    "setup_repairs.sh",
+    "run_m33x_native.sh",
+    "audit_completed.py",
+    "repair_protocol.json",
+    "run_all.sh",
+    "run_m60_native.py",
+    "run_repairs.sh",
+    "retinanet_official.py",
+    "run_m24_native.py",
+    "run_m29_native.py",
+    "run_native_18_20_21.py",
+    "run_m24_native.sh",
+    "prepare_wilddet_weights.py",
+    "run_m07_native.py",
+    "run_m27_native.sh",
+    "run_m60_native.sh",
+    "check_environment.py",
+    "run_m07_native.sh",
+    "check_table_repair.py",
+    "run_native_18_20_21.sh",
+    "run_m15_native_tight.py",
+    "native_18_20_21.json"
+  ],
+  "final_scorer": null,
+  "backend_package": "remaining_detection_eval",
+  "readiness": "needs_metric_review",
+  "launch_status": "configured",
+  "metadata_warning": null,
+  "dataset_variants": [
+    {
+      "id": "omnidocbench_text_seg",
+      "relation": "public_replacement",
+      "split": "local 1651-page snapshot",
+      "note": "text_seg 分支使用 OmniDocBench 1651 页公开替代集。"
+    }
+  ],
+  "table_comparison_protocol_20261009": {
+    "reference_value_kind": "model_card_private_dataset",
+    "reference_AP50": 0.835,
+    "measured_dataset": "LaPa test 2000",
+    "comparison_allowed": false
+  }
+}

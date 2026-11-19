@@ -1,0 +1,122 @@
+{
+  "sequence": 95,
+  "model_id": "haywoodsloan/ai-image-detector-dev-deploy",
+  "task": "image_classification",
+  "task_name": "图像分类",
+  "reported_result": "生成器宏平均Accuracy 75.80%\n原始9:1总体Accuracy 66.83%（非同一汇总口径）",
+  "reference": "原测试split及对应指标未确认",
+  "model_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/model_index/haywoodsloan/ai-image-detector-dev-deploy",
+  "model_exists_at_build": true,
+  "dataset": {
+    "id": "synthraise",
+    "relation": "public_replacement",
+    "split": null,
+    "note": "Synthbuster 9×300 + RAISE300 · 3000 图\n非官方评测集：公开替代/原集在审核阶段"
+  },
+  "environment_id": "classification-shared",
+  "runner_family": "classification8",
+  "final_result_sources": [
+    {
+      "source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m095/metrics-0.json",
+      "sha256": "d36cffba734f37429c5459b734a58f7b0a9aabdac7b8f3a56df73c81d7a50454",
+      "selection": "workbook_score_match",
+      "data": {
+        "metrics": {
+          "top1_percent": 66.83333333333333,
+          "macro_f1": 0.5610753052144106,
+          "confusion_matrix": [
+            [
+              1744,
+              956
+            ],
+            [
+              39,
+              261
+            ]
+          ],
+          "auroc_artificial_positive": 0.8371728395061728,
+          "per_generator_balanced": {
+            "dalle2": {
+              "images": 600,
+              "accuracy_percent": 70.83333333333334,
+              "auroc": 0.8001666666666667
+            },
+            "dalle3": {
+              "images": 600,
+              "accuracy_percent": 93.5,
+              "auroc": 0.9997555555555556
+            },
+            "firefly": {
+              "images": 600,
+              "accuracy_percent": 59.66666666666667,
+              "auroc": 0.6669666666666667
+            },
+            "glide": {
+              "images": 600,
+              "accuracy_percent": 71.83333333333334,
+              "auroc": 0.8448111111111112
+            },
+            "midjourney-v5": {
+              "images": 600,
+              "accuracy_percent": 89.0,
+              "auroc": 0.9641333333333333
+            },
+            "stable-diffusion-1-3": {
+              "images": 600,
+              "accuracy_percent": 75.5,
+              "auroc": 0.8391777777777778
+            },
+            "stable-diffusion-1-4": {
+              "images": 600,
+              "accuracy_percent": 75.16666666666667,
+              "auroc": 0.8457888888888889
+            },
+            "stable-diffusion-2": {
+              "images": 600,
+              "accuracy_percent": 59.66666666666667,
+              "auroc": 0.6301222222222223
+            },
+            "stable-diffusion-xl": {
+              "images": 600,
+              "accuracy_percent": 87.0,
+              "auroc": 0.9436333333333333
+            }
+          },
+          "generator_macro_accuracy_percent": 75.79629629629629
+        },
+        "evaluation_images": 3000,
+        "dataset_relation": "public_replacement",
+        "fidelity": "reference_baseline",
+        "official_reference": {
+          "metric": null,
+          "value": null,
+          "comparison": "not_officially_comparable",
+          "notes": "未公开/未确认作者测试 split，不能与模型卡数字直接比较。"
+        },
+        "reference_check": "not_officially_comparable",
+        "run_fingerprint": "f68b624e30ae71fe68f9b998972dd79b20e7edcaddb94b7e65039bacfeee8c6e"
+      },
+      "source_original": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification8_v1/m95-ai-image-detector-dev-deploy/metrics.json"
+    }
+  ],
+  "code": {
+    "source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification8_v1/_source_snapshot/run_model.py",
+    "sha256": "46865be5eddebff4f08b138958aa7db8a749673f00879ce83cc1b2d02c9b5291",
+    "recorded_sha256": null,
+    "attestation": "result_batch_snapshot",
+    "status_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m095/status.json",
+    "selection": "same_batch_snapshot",
+    "archive": "code_archive/46865be5eddebff4_run_model.py"
+  },
+  "support_files": [
+    "models.json",
+    "run_model.py",
+    "setup_env.sh",
+    "run_all.sh"
+  ],
+  "final_scorer": null,
+  "backend_package": "classification8_eval",
+  "readiness": "code_and_result_identified",
+  "launch_status": "configured",
+  "metadata_warning": null
+}

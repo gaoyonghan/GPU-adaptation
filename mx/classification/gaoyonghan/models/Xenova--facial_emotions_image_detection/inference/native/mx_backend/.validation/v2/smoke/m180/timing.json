@@ -1,0 +1,28 @@
+{
+  "model_load_seconds_this_segment": 2.1813959209248424,
+  "warmup_seconds_this_segment": 0.42126297298818827,
+  "warmup_batches": 10,
+  "timed_images": 10,
+  "forward_seconds": 0.055473663806915284,
+  "inference_e2e_seconds": 1.2310248333960772,
+  "forward_amortized_ms_per_image": 5.547366380691528,
+  "forward_images_per_second": 180.26572095195579,
+  "e2e_images_per_second": 8.123312973640509,
+  "actual_batch_sizes": {
+    "1": 10
+  },
+  "forward_method": "CUDA events",
+  "e2e_scope": "Per batch image read/decode, native processor, transfer, forward, publisher postprocess, CPU prediction availability; excludes journal writes and metrics",
+  "resume_segments": 1,
+  "instrumentation_predictions_unchanged_this_segment": true,
+  "peak_allocated_bytes_this_segment": 387892736,
+  "run_wall_seconds_this_segment": 5.9862727308645844,
+  "gpu_at_end": "0, GPU-edb63bcd-7ac5-4284-b9ea-825830b8ebba, NVIDIA GeForce RTX 4090, 580.126.09, 785 MiB, 41 %\n1, GPU-a11f730c-a975-2bf0-b765-3c24d83b7104, NVIDIA GeForce RTX 4090, 580.126.09, 1029 MiB, 14 %",
+  "phase": "smoke",
+  "performance_comparison_valid": false,
+  "backend_flags": {
+    "cuda_matmul_allow_tf32": false,
+    "cudnn_allow_tf32": true,
+    "cudnn_benchmark": false
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "sequence": 28,
+  "model_id": "nickmuchi/yolos-small-finetuned-license-plate-detection",
+  "source_archive_hash_matches": true,
+  "source_archive_sha256": "166c80d5179b72ba36b3c6eef76833b0a97d0428e7556f46b346388e527a549d",
+  "prepared_entry_source_sha256": "87c8805a26a16d1a80ccdbefb62d51ccb830bb5671d7a679ee25c2e82d4279ad",
+  "local_entry_sha256": "b0e4f8b5e8d001c0f8fbbcde5e93960114a00a657ff2872fdd60e54733946b1f",
+  "local_entry": "inference/native/run_model.py",
+  "central_dispatch_in_entry": false,
+  "unexpected_external_links": [],
+  "declared_dataset_links": [],
+  "broken_links": [],
+  "path_template_count": 404,
+  "state": "entrypoint_verified_full_run_pending",
+  "validation": {
+    "returncode": 0,
+    "python": "/home/ubuntu/gaoyonghan/miniconda3/envs/object-detection-hf-v2/bin/python",
+    "checked_at": "2026-11-10T15:46:26.758598+08:00",
+    "scope": "native help/import/path check only; not full inference"
+  },
+  "smoke_verification": null
+}

@@ -1,0 +1,20 @@
+{
+  "data": "__MODEL_ROOT__/resources/runtime/assets/workspace/results/native_18_20_21_v1/m18/run_20260914_184422_569626/plate/data.yaml",
+  "weights": "__MODEL_ROOT__/weights/keremberke/yolov5m-license-plate/best.pt",
+  "batch_size": 16,
+  "imgsz": 640,
+  "conf_thres": 0.001,
+  "iou_thres": 0.6,
+  "max_det": 300,
+  "task": "val",
+  "device": "1",
+  "workers": 0,
+  "single_cls": false,
+  "augment": false,
+  "half": false,
+  "plots": false,
+  "save_json": false,
+  "project": "__MODEL_ROOT__/resources/runtime/assets/workspace/results/native_18_20_21_v1/m18",
+  "name": "run_20260914_184422_569626",
+  "exist_ok": true
+}

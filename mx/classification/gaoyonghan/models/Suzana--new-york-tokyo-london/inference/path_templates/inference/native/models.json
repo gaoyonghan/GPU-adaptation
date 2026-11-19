@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "sources": {},
+  "models": [
+    {
+      "sequence": 187,
+      "model_id": "Suzana/new-york-tokyo-london",
+      "model_path": "__MODEL_ROOT__/weights/Suzana/new-york-tokyo-london",
+      "revision": "94f338dd2a9912338fb64f316c4bbd91ab80c7af",
+      "task_type": "image-classification",
+      "status": "not_started",
+      "official_model_card": "https://huggingface.co/Suzana/new-york-tokyo-london",
+      "official_reference": {
+        "source": "https://huggingface.co/Suzana/new-york-tokyo-london",
+        "local_card_sha256": "3d372204fbabc3da1caa0450fbddcc614734f371e779acc65b1dec07cc57a65b",
+        "model_index": [
+          {
+            "name": "new-york-tokyo-london",
+            "results": [
+              {
+                "task": {
+                  "name": "Image Classification",
+                  "type": "image-classification"
+                },
+                "metrics": [
+                  {
+                    "name": "Accuracy",
+                    "type": "accuracy",
+                    "value": 0.9104477763175964
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "text_report_values": null,
+        "units": "fractions for extracted accuracy/F1; original model-index units as published",
+        "comparison": "Manual protocol review required; no automatic drop calculation",
+        "note": "Card reports retained as provenance, not proof that local data/split/framework exactly reproduces the reported run."
+      },
+      "reference_comparison": "manual_reference_required",
+      "known_differences": [
+        "Local checkpoint and publisher inference components retained. Offline file paths, eval mode, batching, timing observation and reference scoring are external orchestration."
+      ],
+      "config": {
+        "_name_or_path": "google/vit-base-patch16-224-in21k",
+        "architectures": [
+          "ViTForImageClassification"
+        ],
+        "attention_probs_dropout_prob": 0.0,
+        "hidden_act": "gelu",
+        "hidden_dropout_prob": 0.0,
+        "hidden_size": 768,
+        "id2label": {
+          "0": "London",
+          "1": "New York",
+          "2": "Tokyo"
+        },
+        "image_size": 224,
+        "initializer_range": 0.02,
+        "intermediate_size": 3072,
+        "label2id": {
+          "London": "0",
+          "New York": "1",
+          "Tokyo": "2"
+        },
+        "layer_norm_eps": 1e-12,
+        "model_type": "vit",
+        "num_attention_heads": 12,
+        "num_channels": 3,
+        "num_hidden_layers": 12,
+        "patch_size": 16,
+        "qkv_bias": true,
+        "torch_dtype": "float32",
+        "transformers_version": "4.15.0"
+      },
+      "preprocessing": {
+        "do_normalize": true,
+        "do_resize": true,
+        "feature_extractor_type": "ViTFeatureExtractor",
+        "image_mean": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "image_std": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "resample": 2,
+        "size": 224
+      },
+      "architecture": [
+        "ViTForImageClassification"
+      ],
+      "files": {
+        "pytorch_model.bin": {
+          "size": 343280113,
+          "sha256": "af38f18678fdec38a6c4e6cebee005ed1c5ec131ab68b8b4820cb4c369bc1079"
+        },
+        "config.json": {
+          "size": 698,
+          "sha256": "7a68f66ad9175f921beb7694de726899cd8c407920433adff41e5650c820e84b"
+        },
+        "preprocessor_config.json": {
+          "size": 228,
+          "sha256": "af4eb4d79cf61b47010fc0bc9352ee967579c417423b4917188d809b7e048948"
+        },
+        "README.md": {
+          "size": 799,
+          "sha256": "3d372204fbabc3da1caa0450fbddcc614734f371e779acc65b1dec07cc57a65b"
+        }
+      },
+      "weight": "pytorch_model.bin",
+      "backend": "hf_published",
+      "environment": "shared_hf",
+      "dataset_relation": "public_replacement",
+      "split": "accepted KartaView 1376, London/New York/Tokyo",
+      "excluded_source_labels": {},
+      "images": 1376,
+      "covered_target_classes": 3,
+      "num_output_classes": 3,
+      "label_mapping": {
+        "0": "London",
+        "1": "New York",
+        "2": "Tokyo"
+      },
+      "scoring": "reference",
+      "evaluator": "sklearn reference scoring",
+      "fidelity": "reference_baseline",
+      "case_type": "special",
+      "special_tags": [
+        "framework_numeric_difference",
+        "dataset_replacement",
+        "official_evaluator_missing"
+      ],
+      "inference_entry": "publisher_transformers_model_and_processor",
+      "default_batch_size": 1,
+      "dtype": "float32",
+      "warmup_batches": 10,
+      "index": "__MODEL_ROOT__/inference/native/indices/187.jsonl",
+      "index_sha256": "5823b1c33e4e22c8d123557c481b904ee9aa93847ab456e2cc048976570586a6",
+      "data_containers": {},
+      "protocol_fingerprint": "926631ce5094011621c4c61159c32043b0eea8b1b1d87d8f40e7518e57f54024"
+    }
+  ],
+  "runtime_defaults": {
+    "batch_size": 1,
+    "device": "cuda:0",
+    "warmup_batches": 10,
+    "workers": 2
+  },
+  "scope": "Each published model retained; 177 includes all five weights; no full GPU inference launched by preparation."
+}

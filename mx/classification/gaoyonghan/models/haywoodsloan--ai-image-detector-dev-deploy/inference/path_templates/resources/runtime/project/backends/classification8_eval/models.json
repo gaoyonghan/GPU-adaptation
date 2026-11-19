@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "scope": [
+    71,
+    74,
+    84,
+    87,
+    88,
+    89,
+    91,
+    95
+  ],
+  "model_root": "__MODEL_ROOT__/weights",
+  "dataset_root": "__DATASET_ROOT__",
+  "imagenet_zip": "__DATASET_ROOT__/ImageNet/imagenet-object-localization-challenge.zip",
+  "result_root": "__MODEL_ROOT__/resources/runtime/assets/workspace/results/classification8_v1",
+  "datasets": {
+    "synthraise": {
+      "images": 3000,
+      "classes": 2,
+      "split": "SHA256(member) first 300 per generator (9), plus all 300 RAISE",
+      "mapping": "artificial=0, real=1; replacement baseline"
+    }
+  },
+  "versions": {
+    "torch": "2.5.1+cu121",
+    "torchvision": "0.20.1+cu121",
+    "transformers": "4.50.0",
+    "timm": "1.0.15",
+    "numpy": "1.26.4",
+    "Pillow": "11.1.0",
+    "scipy": "1.12.0",
+    "scikit-learn": "1.5.2",
+    "onnxruntime": "1.20.1",
+    "safetensors": "0.5.3",
+    "huggingface-hub": "0.29.3"
+  },
+  "timm_source": {
+    "url": "https://raw.githubusercontent.com/huggingface/pytorch-image-models/v1.0.15/validate.py",
+    "sha256": "1b254648d0bff4655fb78d5a3923cd2faa79edf3407a06670f0a7416944658fb",
+    "version": "v1.0.15"
+  },
+  "models": [
+    {
+      "sequence": 95,
+      "model_id": "haywoodsloan/ai-image-detector-dev-deploy",
+      "weight_file": "model.safetensors",
+      "files": {
+        "model.safetensors": {
+          "size": 780886280,
+          "sha256": "3a4439d47a41dc62ef1b4ca5067f2954da0652e8c3ced36705820adc6c1abe31",
+          "hf_revision": "3824a1e5fb831d4347cb63dfcb3f2a752d987ef2"
+        },
+        "config.json": {
+          "size": 1162,
+          "sha256": "c589bc2ce35f5cda9e978939a3d6e77a0c1f5d83bcd69cf6006e74e8b84b971f",
+          "hf_revision": "3824a1e5fb831d4347cb63dfcb3f2a752d987ef2"
+        },
+        "README.md": {
+          "size": 720,
+          "sha256": "333f0b172fb487f31e42c67f9975bc96130535168fbfbe6250eb1dc62d299370",
+          "hf_revision": "3824a1e5fb831d4347cb63dfcb3f2a752d987ef2"
+        },
+        "preprocessor_config.json": {
+          "size": 363,
+          "sha256": "e6454a33e41423972799327db81ca10509ac30daf664123591a1dbd8ddf9e470",
+          "hf_revision": "3824a1e5fb831d4347cb63dfcb3f2a752d987ef2"
+        }
+      },
+      "config": {
+        "architectures": [
+          "Swinv2ForImageClassification"
+        ],
+        "image_size": 256,
+        "model_type": "swinv2"
+      },
+      "preprocessor": {
+        "do_convert_rgb": null,
+        "do_normalize": true,
+        "do_rescale": true,
+        "do_resize": true,
+        "image_mean": [
+          0.485,
+          0.456,
+          0.406
+        ],
+        "image_processor_type": "ViTImageProcessor",
+        "image_std": [
+          0.229,
+          0.224,
+          0.225
+        ],
+        "resample": 3,
+        "rescale_factor": 0.00392156862745098,
+        "size": {
+          "height": 256,
+          "width": 256
+        }
+      },
+      "model_key": "m95-ai-image-detector-dev-deploy",
+      "task_type": "image-classification",
+      "runner": "hf",
+      "dataset": "synthraise",
+      "dataset_relation": "public_replacement",
+      "fidelity": "reference_baseline",
+      "case_type": "special",
+      "special_tags": [
+        "replacement_dataset",
+        "label_mapping",
+        "official_split_unknown"
+      ],
+      "official_card": "https://huggingface.co/haywoodsloan/ai-image-detector-dev-deploy",
+      "official_reference": {
+        "metric": null,
+        "value": null,
+        "comparison": "not_officially_comparable",
+        "notes": "未公开/未确认作者测试 split，不能与模型卡数字直接比较。"
+      },
+      "batch_size": 8,
+      "dtype": "float32",
+      "evaluation": "发布者 Transformers processor/model；项目逐图适配循环，scikit-learn 指标",
+      "known_differences": [
+        "使用公开替代测试基线，不等同作者原测试数据。",
+        "冒烟使用 10 图子集；全量使用完整所声明 split。"
+      ],
+      "protocol_notes": "固定九生成器各 300 张加 RAISE 300 张；每个生成器对真实图的平衡准确率均值为主指标，整体 9:1 准确率单列。"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "sequence": 87,
+  "model_id": "timm/efficientnet_b0.ra_in1k",
+  "source_archive_hash_matches": true,
+  "source_archive_sha256": "46865be5eddebff4f08b138958aa7db8a749673f00879ce83cc1b2d02c9b5291",
+  "prepared_entry_source_sha256": "c7d87bf0dd2fce7c7323719b9c247fb6d62f7d6104e108ac5f31578747a9aae3",
+  "local_entry_sha256": "c7d87bf0dd2fce7c7323719b9c247fb6d62f7d6104e108ac5f31578747a9aae3",
+  "local_entry": "inference/native/run_model.py",
+  "central_dispatch_in_entry": false,
+  "unexpected_external_links": [],
+  "declared_dataset_links": [],
+  "broken_links": [],
+  "path_template_count": 319,
+  "state": "entrypoint_verified_full_run_pending",
+  "validation": {
+    "returncode": 0,
+    "python": "/home/ubuntu/gaoyonghan/gpu/classification8_eval/.venv/bin/python",
+    "checked_at": "2026-11-10T15:56:30.842577+08:00",
+    "scope": "native help/import/path check only; not full inference"
+  },
+  "smoke_verification": null
+}

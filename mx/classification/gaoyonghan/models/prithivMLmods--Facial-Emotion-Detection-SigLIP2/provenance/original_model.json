@@ -1,0 +1,93 @@
+{
+  "sequence": 178,
+  "model_id": "prithivMLmods/Facial-Emotion-Detection-SigLIP2",
+  "task": "image_classification",
+  "task_name": "图像分类",
+  "reported_result": [
+    {
+      "variant": null,
+      "inference_status": "complete",
+      "accuracy": 0.8664984145473371,
+      "forward_seconds": 74.95333706331239,
+      "inference_e2e_seconds": 199.4858323764056,
+      "metric_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/results_full.csv",
+      "timing_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/full/m178/timing.json"
+    }
+  ],
+  "reference": {
+    "source": "https://huggingface.co/prithivMLmods/Facial-Emotion-Detection-SigLIP2",
+    "local_card_sha256": "9ee55b40fa6a9837eb8b82bc425c9479ed54e62ee3020bcab9bececc3d289e5f",
+    "model_index": null,
+    "text_report_values": {
+      "accuracy": 0.8665,
+      "macro_f1": 0.8726,
+      "weighted_f1": 0.8663
+    },
+    "units": "fractions for extracted accuracy/F1; original model-index units as published",
+    "comparison": "Manual protocol review required; no automatic drop calculation",
+    "note": "Card reports retained as provenance, not proof that local data/split/framework exactly reproduces the reported run."
+  },
+  "model_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/model_index/prithivMLmods/Facial-Emotion-Detection-SigLIP2",
+  "model_exists_at_build": true,
+  "dataset": {
+    "id": "classification171_178",
+    "relation": "public_replacement",
+    "split": "all published OAHEGA images; no independent split",
+    "note": [
+      "Full-precision probabilities retained for metrics; publisher demo rounds probabilities to three decimals only for Gradio display. Display rounding is not used to rank classes.",
+      "Local checkpoint and publisher inference components retained. Offline file paths, eval mode, batching, timing observation and reference scoring are external orchestration."
+    ],
+    "index_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/classification171_200_eval/indices/178.jsonl",
+    "data_containers": [
+      "/data2/gaoyonghan/model inference for GPU adaptation/dataset/datasets_171_200/oahega/dataset.zip"
+    ]
+  },
+  "environment_id": "classification171-shared_hf",
+  "runner_family": "classification171",
+  "final_result_sources": [
+    {
+      "source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m178/metrics-0.json",
+      "sha256": "4ff94c60dba0fc7a2b859eae71fe6d3c8598048c11bb55d7265d65733aa0ccf4",
+      "selection": "final_171_200_registry",
+      "source_original": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/full/m178/metrics.json"
+    }
+  ],
+  "code": {
+    "source": "/home/ubuntu/Documents/Codex/2026-09-27/codex-threads-01a0de0e-9d72-7fc0-b485/work/reorg/historical171/run_model.py",
+    "sha256": "8b61859273a256a4401a98181b66a0b3a487793a85c3fcf7d1f84491e2e0d5c1",
+    "recorded_sha256": "8b61859273a256a4401a98181b66a0b3a487793a85c3fcf7d1f84491e2e0d5c1",
+    "attestation": "hash_exact",
+    "status_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m178/status.json",
+    "selection": "recovered_exact_code",
+    "archive": "code_archive/8b61859273a256a4_run_model.py"
+  },
+  "support_files": [
+    "run_model.py"
+  ],
+  "final_scorer": null,
+  "backend_package": "classification171_200_eval",
+  "readiness": "code_and_result_identified",
+  "launch_status": "configured",
+  "metadata_warning": null,
+  "final_weight_records": [
+    {
+      "variant": null,
+      "model_revision": "5a352c0bab8d6b94308ca60d196fc53fd1dd5f05",
+      "protocol_fingerprint": "40f0d8a066c34e15cfea42d6875b64945666af4515fac38b0e5bfab44c5a0a9c",
+      "inference_status": "complete",
+      "scoring_kind": "original_run",
+      "review_status": null,
+      "dataset_relation": "public_replacement",
+      "device": "cuda:1",
+      "scored_images": 15453,
+      "forward_seconds": 74.95333706331239,
+      "inference_e2e_seconds": 199.4858323764056,
+      "metric_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/results_full.csv",
+      "detailed_metrics_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/full/m178/metrics.json",
+      "timing_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/full/m178/timing.json",
+      "status_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/full/m178/status.json",
+      "prediction_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/full/m178/predictions.jsonl",
+      "note": null
+    }
+  ]
+}

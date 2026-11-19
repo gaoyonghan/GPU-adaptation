@@ -1,0 +1,54 @@
+{
+  "sequence": 190,
+  "files": [
+    {
+      "path": "pytorch_model.bin",
+      "bytes": 343301617,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "config.json",
+      "bytes": 942,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "preprocessor_config.json",
+      "bytes": 228,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "README.md",
+      "bytes": 640,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": ".gitattributes",
+      "bytes": 1175,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "weight_verification.json",
+      "bytes": 1461,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "runs/events.out.tfevents.1644528066.26ea017cc798.88.1",
+      "bytes": 21681,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "runs/events.out.tfevents.1644516087.26ea017cc798.88.0",
+      "bytes": 4609,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    }
+  ],
+  "mismatches": []
+}

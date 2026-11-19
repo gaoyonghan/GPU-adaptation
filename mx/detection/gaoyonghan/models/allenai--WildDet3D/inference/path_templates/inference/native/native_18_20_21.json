@@ -1,0 +1,85 @@
+{
+  "18": {
+    "model_id": "keremberke/yolov5m-license-plate",
+    "weight": "__MODEL_ROOT__/weights/keremberke/yolov5m-license-plate/best.pt",
+    "environment": "object-detection-yolov5-v2",
+    "package": "yolov5",
+    "version": "7.0.14",
+    "entrypoint": "yolov5.val.run",
+    "dataset": "Vehicle Registration Plates v1 validation",
+    "expected_images": 1765,
+    "expected_boxes": 1840,
+    "iou": 0.6,
+    "reference_metric": "AP50",
+    "reference_percent": 98.82982754936462,
+    "reference_url": "https://huggingface.co/keremberke/yolov5m-license-plate",
+    "accepted_baseline": {
+      "confirmed_on": "2026-09-14",
+      "run_directory": "__MODEL_ROOT__/resources/runtime/assets/workspace/results/native_18_20_21_v1/m18/run_20260914_184422_569626",
+      "metric_path": "native_metrics.AP50",
+      "value_percent": 99.01209921575114,
+      "use": "User-confirmed primary result for reporting and GPU adaptation; previous results retained as history."
+    },
+    "limitations": [
+      "Model card specifies yolov5 7.0.6; retained installed 7.0.14 for a controlled native-workflow comparison, not historical environment reproduction.",
+      "Model card demonstration parameters are not its published validation protocol. Use installed native val defaults conf=0.001, iou=0.6, max_det=300.",
+      "FP32 retained from previous evaluation; native val.run otherwise defaults to FP16.",
+      "Native COCO-to-YOLO conversion requires one-based source categories: map original category 0 to 1 only for conversion, producing YOLO class 0. Original COCO annotations remain unchanged."
+    ]
+  },
+  "20": {
+    "model_id": "kadirnar/Yolov10",
+    "weight": "__MODEL_ROOT__/weights/kadirnar/Yolov10/yolov10n.pt",
+    "environment": "object-detection-yolov10-v2",
+    "package": "ultralytics",
+    "version": "8.1.34",
+    "entrypoint": "ultralytics.YOLOv10.val",
+    "source": "__MODEL_ROOT__/resources/runtime/assets/workspace/official_sources/object_detection/yolov10",
+    "source_revision": "453c6e38a51e9d1d5a2aa5fb7f1014a711913397",
+    "dataset": "COCO val2017",
+    "expected_images": 5000,
+    "expected_boxes": 36781,
+    "iou": null,
+    "reference_metric": "AP",
+    "reference_percent": 38.5,
+    "reference_url": "https://github.com/THU-MIG/yolov10#validation",
+    "accepted_baseline": {
+      "confirmed_on": "2026-09-14",
+      "run_directory": "__MODEL_ROOT__/resources/runtime/assets/workspace/results/native_18_20_21_v1/m20/run_20260914_184546_498917",
+      "metric_path": "coco_metrics.AP",
+      "value_percent": 38.53195027484367,
+      "use": "User-confirmed primary result for reporting and GPU adaptation; previous results retained as history."
+    },
+    "limitations": [
+      "Official validation example uses batch=256; local batch defaults to 16 for memory use and is explicitly recorded. FP32 is retained.",
+      "Reference is upstream YOLOv10-N, not an independently published accuracy measurement by the HF mirror. Weight SHA256 is recorded; byte identity to upstream release is not certified.",
+      "End-to-end YOLOv10 native validator handles postprocessing; no additional NMS is added."
+    ]
+  },
+  "21": {
+    "model_id": "ultralyticsplus/yolov8s",
+    "weight": "__MODEL_ROOT__/weights/ultralyticsplus/yolov8s/yolov8s.pt",
+    "environment": "object-detection-yolo-v2",
+    "package": "ultralytics",
+    "version": "8.4.0",
+    "entrypoint": "ultralytics.YOLO.val",
+    "dataset": "COCO val2017",
+    "expected_images": 5000,
+    "expected_boxes": 36781,
+    "iou": 0.7,
+    "reference_metric": "AP",
+    "reference_percent": 44.9,
+    "reference_url": "https://huggingface.co/ultralyticsplus/yolov8s",
+    "accepted_baseline": {
+      "confirmed_on": "2026-09-14",
+      "run_directory": "__MODEL_ROOT__/resources/runtime/assets/workspace/results/native_18_20_21_v1/m21/run_20260914_185133_806340",
+      "metric_path": "coco_metrics.AP",
+      "value_percent": 44.97141430624547,
+      "use": "User-confirmed primary result for reporting and GPU adaptation; previous results retained as history."
+    },
+    "limitations": [
+      "Model card specifies ultralytics 8.0.4 and ultralyticsplus 0.0.14. Retained 8.4.0 with direct local checkpoint loading, as in the accepted M04/M07 controlled workflow comparisons.",
+      "Native val replaces per-image predict plus external scoring; not a complete historical environment reproduction."
+    ]
+  }
+}

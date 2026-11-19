@@ -1,0 +1,193 @@
+{
+  "sequence": 41,
+  "model_id": "qihoo360/360LayoutAnalysis",
+  "task": "object_detection",
+  "task_name": "目标检测",
+  "reported_result": " paper 论文/paper教材/report论文/report教材：35.77%/19.79%/39.67%/26.96%",
+  "reference": "无完整公开数值对照表，opendata做了复现 （数据仍然未公开）paper 论文/paper教材/report论文/report教材：37.7%/20.7%/35.1%/25.4%",
+  "model_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/model_index/qihoo360/360LayoutAnalysis",
+  "model_exists_at_build": true,
+  "dataset": {
+    "id": "omnidocbench_layout",
+    "relation": "public_replacement",
+    "split": "academic 215 + textbook 159",
+    "note": "最终四分支：paper/report 两套权重分别评测 academic 215 页和 textbook 159 页；从 OmniDocBench 1651 页快照按原类别筛选。"
+  },
+  "environment_id": "detection-yolo",
+  "runner_family": "remaining_detection",
+  "final_result_sources": [
+    {
+      "source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m041/metrics-0.json",
+      "sha256": "f186a4fe900651f1f88ceebaf1ea4f8a000b1150901836e3c84f2e02ae0c4ef3",
+      "selection": "final_four_branch_summary",
+      "data": {
+        "mAP_percent": 35.772574842088424,
+        "per_class_AP_percent": {
+          "title": 27.36883271170754,
+          "plain text": 55.90001238123248,
+          "abandon": 18.219530448606267,
+          "figure": 49.97498435861025,
+          "figure_caption": 19.101714896512412,
+          "table": 78.02811256270083,
+          "table_caption": 13.405448184822996,
+          "isolate_formula": 24.181963192514647
+        },
+        "images": 215,
+        "scored_classes": 8,
+        "smoke_only": false
+      },
+      "source_original": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/m41_omni_opendatalab_four/full_20260914_225925_070388/paper_on_academic/metrics.json"
+    },
+    {
+      "source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m041/metrics-1.json",
+      "sha256": "9d1541937b33175bb8541365d8b2d4e028f6a68cb8d41837baec87d8b9e3e247",
+      "selection": "final_four_branch_summary",
+      "data": {
+        "mAP_percent": 19.79133298923528,
+        "per_class_AP_percent": {
+          "title": 20.29624981933916,
+          "plain text": 27.664269718860997,
+          "abandon": 9.874769984453195,
+          "figure": 21.06980861636529,
+          "figure_caption": 5.419410883732116,
+          "table": 47.19460901024042,
+          "table_caption": 15.33263347124733,
+          "isolate_formula": 11.478912409643725
+        },
+        "images": 159,
+        "scored_classes": 8,
+        "smoke_only": false
+      },
+      "source_original": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/m41_omni_opendatalab_four/full_20260914_225925_070388/paper_on_textbook/metrics.json"
+    },
+    {
+      "source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m041/metrics-2.json",
+      "sha256": "5dddf6765a59b3746e502ae3c2b2d0a3e359ad1abdfaaec13a37e40cb18212be",
+      "selection": "final_four_branch_summary",
+      "data": {
+        "mAP_percent": 39.66986849318944,
+        "per_class_AP_percent": {
+          "title": 38.061947683113154,
+          "plain text": 57.62677439968728,
+          "abandon": 27.275825222712204,
+          "figure": 42.82775382776605,
+          "figure_caption": 0.6124802007025378,
+          "table": 87.3601099529425,
+          "table_caption": 23.92418816540232
+        },
+        "images": 215,
+        "scored_classes": 7,
+        "smoke_only": false
+      },
+      "source_original": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/m41_omni_opendatalab_four/full_20260914_225925_070388/report_on_academic/metrics.json"
+    },
+    {
+      "source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m041/metrics-3.json",
+      "sha256": "5cb659d2cbd4e17f8c9ca680fe52a34dd06b24dfb15a58501a8478379406a7b6",
+      "selection": "final_four_branch_summary",
+      "data": {
+        "mAP_percent": 26.964393689120016,
+        "per_class_AP_percent": {
+          "title": 29.489210484311272,
+          "plain text": 25.545892255326976,
+          "abandon": 14.516949979482785,
+          "figure": 17.024001958850413,
+          "figure_caption": 2.156381679150663,
+          "table": 72.18407771712074,
+          "table_caption": 27.834241749597265
+        },
+        "images": 159,
+        "scored_classes": 7,
+        "smoke_only": false
+      },
+      "source_original": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/m41_omni_opendatalab_four/full_20260914_225925_070388/report_on_textbook/metrics.json"
+    }
+  ],
+  "code": {
+    "source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/remaining_detection_eval/run_m41_omni_four.py",
+    "sha256": "b4d210e21ec016488ccafaed65bf52fe0c94e67ba77b7f0ac77ea30867d29230",
+    "recorded_sha256": "b4d210e21ec016488ccafaed65bf52fe0c94e67ba77b7f0ac77ea30867d29230",
+    "attestation": "hash_exact",
+    "status_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m041/status.json",
+    "selection": "final_four_branch_summary",
+    "archive": "code_archive/b4d210e21ec01648_run_m41_omni_four.py"
+  },
+  "support_files": [
+    "run_m37_native.sh",
+    "environment_versions.json",
+    "models.json",
+    "run_model.py",
+    "run_m37_native.py",
+    "run_m34_native.py",
+    "run_m34_native.sh",
+    "official_comparison.json",
+    "package_sha256.json",
+    "qualcomm_geometry.py",
+    "run_m46_native.sh",
+    "prepare_native_data.py",
+    "setup_env.sh",
+    "run_pp_layout.py",
+    "score_m38_omni_official.sh",
+    "run_m47_native.sh",
+    "run_m46_native.py",
+    "run_m41_omni_four.py",
+    "run_m39_omni.sh",
+    "run_m39_omni.py",
+    "prepare_sku110k.py",
+    "verification.json",
+    "progress.json",
+    "run_ready.sh",
+    "audit_m38_omni.py",
+    "run_adapted.sh",
+    "score_m38_omni_official.py",
+    "adapters.py",
+    "collect_versions.py",
+    "setup_m12_native.sh",
+    "score_pp_v3.py",
+    "run_widerface.py",
+    "summarize.py",
+    "run_anzhc_lapa.py",
+    "数据获取记录.json",
+    "qualcomm_inference.py",
+    "prepare_publaynet.py",
+    "run_m41_omni_four.sh",
+    "run_m38_omni.py",
+    "run_m48_native.sh",
+    "run_m38_omni.sh",
+    "run_qualcomm_coco.py",
+    "verify_results.py",
+    "run_m54_sku_official.sh",
+    "score_m39_omni_official.py",
+    "probe_private_weights.py",
+    "run_sku110k.py",
+    "run_m54_sku_official.py",
+    "run_m47_native.py",
+    "blocker_audit.json",
+    "apply_pp_patch.py",
+    "run_m12_native.py",
+    "run_anzhc_text.py",
+    "run_cmarkea.py",
+    "audit_summary.json",
+    "run_m48_native.py",
+    "build_audit.py"
+  ],
+  "final_scorer": null,
+  "backend_package": "remaining_detection_eval",
+  "readiness": "code_and_result_identified",
+  "launch_status": "configured",
+  "metadata_warning": null,
+  "dataset_variants": [
+    {
+      "id": "publaynet_val",
+      "relation": "original_protocol_incomplete",
+      "split": "validation",
+      "note": "PubLayNet 分支使用 validation 11245 图；同源原数据，官方协议未完全核实。"
+    }
+  ],
+  "dataset_from_initial_table": {
+    "id": "omnidocbench_layout",
+    "relation": "public_replacement",
+    "split": "local 1651-page snapshot",
+    "note": "general6、jiaocai、paper、report 分支使用 OmniDocBench 1651 页公开替代集。"
+  }
+}

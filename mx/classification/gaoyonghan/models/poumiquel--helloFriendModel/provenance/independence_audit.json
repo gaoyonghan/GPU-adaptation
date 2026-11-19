@@ -1,0 +1,22 @@
+{
+  "sequence": 79,
+  "model_id": "poumiquel/helloFriendModel",
+  "source_archive_hash_matches": true,
+  "source_archive_sha256": "5e6fa483695834fe9625a347656b4ebb896253ebca8fa04984726c5d52d6d727",
+  "prepared_entry_source_sha256": "94da5cd22f1cffa41829fb59ca0975529d8a031b0d04d82df3232667b4b62a05",
+  "local_entry_sha256": "94da5cd22f1cffa41829fb59ca0975529d8a031b0d04d82df3232667b4b62a05",
+  "local_entry": "inference/native/run_model.py",
+  "central_dispatch_in_entry": false,
+  "unexpected_external_links": [],
+  "declared_dataset_links": [],
+  "broken_links": [],
+  "path_template_count": 279,
+  "state": "entrypoint_verified_full_run_pending",
+  "validation": {
+    "returncode": 0,
+    "python": "/home/ubuntu/gaoyonghan/gpu/classification8_eval/.venv/bin/python",
+    "checked_at": "2026-11-10T15:55:53.912892+08:00",
+    "scope": "native help/import/path check only; not full inference"
+  },
+  "smoke_verification": null
+}

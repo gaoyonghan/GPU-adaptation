@@ -1,0 +1,48 @@
+{
+  "sequence": 177,
+  "files": [
+    {
+      "path": "Race-CLS-FairFace_yolov8n.pt",
+      "bytes": 3001302,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "Race-CLS-FairFace_yolo11l.pt",
+      "bytes": 25996919,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3604,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "Race-CLS-FairFace_yolov8m.pt",
+      "bytes": 31720706,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": ".gitattributes",
+      "bytes": 1519,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "Race-CLS-FairFace_yolov8s.pt",
+      "bytes": 10288578,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "Race-CLS-FairFace_yolo11x.pt",
+      "bytes": 57071287,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    }
+  ],
+  "mismatches": []
+}

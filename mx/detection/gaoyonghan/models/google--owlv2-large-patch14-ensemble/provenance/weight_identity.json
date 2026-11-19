@@ -1,0 +1,72 @@
+{
+  "sequence": 67,
+  "files": [
+    {
+      "path": "merges.txt",
+      "bytes": 524619,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "model.safetensors",
+      "bytes": 1750520144,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "pytorch_model.bin",
+      "bytes": 1750647637,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "config.json",
+      "bytes": 617,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "preprocessor_config.json",
+      "bytes": 427,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4840,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "vocab.json",
+      "bytes": 1059962,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "added_tokens.json",
+      "bytes": 67,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": ".gitattributes",
+      "bytes": 1519,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tokenizer_config.json",
+      "bytes": 1100,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "special_tokens_map.json",
+      "bytes": 121,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    }
+  ],
+  "mismatches": []
+}

@@ -1,0 +1,59 @@
+{
+  "date": "2026-09-07",
+  "scope": "m06,m15,m23,m27,m51,m53 only",
+  "source_snapshot": "v3_repairs/_source_snapshot for m23,m27,m51,m53; v4_tables/_source_snapshot for m06,m15",
+  "note": "Effective repair protocol supplement. Historical models.json is retained unchanged; fields below supersede its generic processor descriptions for this repair experiment. Existing 31 metrics remain untouched.",
+  "models": {
+    "m06-table-transformer-structure-recognition": {
+      "weights": "existing microsoft HF model.safetensors; no weight conversion or replacement",
+      "preprocess": "official table_datasets.get_structure_transform('val'): PIL resize longest edge 1000; official ToTensor/ImageNet normalize",
+      "postprocess_and_evaluator": "unmodified microsoft/table-transformer src/eval.py objects_to_cells, compute_metrics('grits'), compute_metrics_summary(..., 'grits'); copy input boxes before in-place postprocessing",
+      "repair_20260907": "Both v3 runs failed on test image 351, PMC2845586_table_1. Original XML boxes have positive area; official objects_to_cells mutates a row to y1=69.92976070528965 > y2=66.7579. grits-all then divides by zero in additional diagnostic RawLoc. Use author's existing standard grits mode (Top/Con/Loc/Acc_Con); omit RawLoc/DAR diagnostics for ALL samples, skip NONE; do not modify official sources or metric formulas. Raw detections are now preserved against postprocessing mutation.",
+      "new_output_root": "/data2/gaoyonghan/gpu_model_standalone_20261110/release/model/检测/PaddlePaddle--PP-DocLayoutV3_safetensors/resources/runtime/assets/workspace/results/object_detection_official_v4_tables",
+      "source_revision": "16d124f",
+      "effective_PyMuPDF": "1.21.1, official environment.yml version, isolated .runtime/table overlay",
+      "dataset": "PubTables-1M structure official test, 93834 images; supplied ground-truth word tokens",
+      "deviation": "HF model runtime and other HF dependencies retained; not a complete original training-environment recreation",
+      "validation": "check_table_repair.py reproduces sample351 failure and verifies standard metrics; --results verifies >=400 real images including sample351 and reports changes against old350"
+    },
+    "m15-table-transformer-structure-recognition-v1-1-all": {
+      "weights": "existing microsoft HF v1.1-all model.safetensors",
+      "preprocess_and_evaluator": "same official validation transform, standard grits mode, copied input boxes and PyMuPDF1.21.1 as m06; same v4 output root and sample351 regression",
+      "dataset": "PubTables-1M structure test, 93834 images; not FinTabNet evaluation",
+      "training_variant": "v1.1-all trained on PubTables-1M and FinTabNet.c; do not assign v1.0 paper numbers to this checkpoint",
+      "validation": "same >=400-image regression check as m06; old v3 outputs retained separately"
+    },
+    "m23-yoloe": {
+      "preprocess_and_inference": "existing official YOLOE prompt-free validator; batch1, rect=False, confidence0.001, max_det1000; frozen local checkpoint plus unfused vocabulary checkpoint",
+      "evaluator": "official eval_open_ended.py --fixed, MobileCLIP matching, eval_fixed_ap.py, max_dets=-1, top10000/category",
+      "environment_fix": "PYTHONPATH prepends official third_party/lvis-api and repository; child PATH uses same environment Python",
+      "metric_extraction": "named official copypaste AP/AP50/AP75 columns; no final AP means failure, not complete",
+      "smoke": "10-image prediction and separate full official evaluator chain passed; smoke score against full GT is not a benchmark result"
+    },
+    "m27-wilddet3d": {
+      "configuration": "unmodified configs/eval/in_the_wild/text.py, native Vis4D evaluation",
+      "environment_fix": "PYTHONPATH includes official repository",
+      "dataset": "InTheWild_v3_val, 2470 images; official text prompts and monocular-depth configuration",
+      "required_auxiliary_weights": "facebook/sam3 sam3.pt and robbyant/lingbot-depth-postrain-dc-vitl14 model.pt; revisions and SHA256 in prepare_wilddet_weights.py",
+      "state": "blocked pending SAM3 author authorization (403 verified); complete native pipeline not yet validated",
+      "warning": "legacy MAX_IMAGES>0 inference shortcut is not the official benchmark; do not use it as an official metric"
+    },
+    "m51-object-detection-retinanet": {
+      "weights": "existing keras-io SavedModel, raw box deltas +80 class logits",
+      "preprocess": "publisher prepare_image/resize_and_pad_image: short800, long<=1333, pad stride128 before ResNet preprocessing, jitter=None",
+      "postprocess": "publisher AnchorBox/DecodePredictions; confidence0.05, NMS0.5,100/class,100/image; output XYXY divided by resize ratio",
+      "source": "https://huggingface.co/spaces/keras-io/Object-Detection-Using-RetinaNet/blob/0798aa064c15a1f7ea87de4ededa529de28890ff/app.py",
+      "source_sha256": "8f0c7ba0543caba80e72852adc0fef5ca17002565511512e196d67eb4abd47f6",
+      "verification": "five copied definitions AST-identical to publisher source; 10 real-image inference passed",
+      "deviation": "0.05 is official decoder default, not demo visualization threshold0.5; COCOeval adapter remains ours; no independently published AP for this exact HF checkpoint"
+    },
+    "m53-detr-resnet-50": {
+      "weights": "existing Xenova FP32 ONNX",
+      "preprocess": "local HF image processor; pixel_values short800/long<=1333 retained; pixel_mask int64 all-ones[1,64,64] per publisher Transformers.js2.17.2",
+      "source": "https://github.com/huggingface/transformers.js/blob/2.17.2/src/processors.js",
+      "postprocess": "softmax, exclude no-object, normalized cxcywh to original-pixel xyxy; COCOeval bbox",
+      "deviation": "Python image decoding/resize is not proven bit-identical to Transformers.js; upstream DETR42.0 is an indirect reference, not a measured ONNX release score",
+      "smoke": "10 real-image GPU inference passed"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+--- original_inference.py
++++ inference/native/run_m41_omni_four.py
+@@ -17,8 +17,8 @@
+ from pycocotools.cocoeval import COCOeval
+ 
+ 
+-DATA = Path('/data2/gaoyonghan/gpu/dataset/omnidocbench_eval')
+-WEIGHTS = Path('/data2/gaoyonghan/gpu/model/qihoo360/360LayoutAnalysis')
++DATA = Path('/home/ubuntu/文档/ChatGPT/idea 2/outputs/launch_audit_20261005/migration_inputs/datasets/omnidocbench_eval')
++WEIGHTS = Path('/data2/gaoyonghan/gpu_model_standalone_20261110/release/model/检测/qihoo360--360LayoutAnalysis/resources/model_index/qihoo360/360LayoutAnalysis')
+ SOURCE = 'https://github.com/opendatalab/PDF-Extract-Kit/blob/release/0.1.1/assets/validation/README-zh_CN.md'
+ LABELS = ['title', 'plain text', 'abandon', 'figure', 'figure_caption',
+           'table', 'table_caption', 'isolate_formula']
+@@ -128,7 +128,7 @@
+             assert (DATA / 'images' / Path(page['page_info']['image_path']).name).is_file()
+         subsets[key] = selected[:2] if args.smoke else selected
+     mode = 'smoke' if args.smoke else 'full'
+-    output = Path(__file__).resolve().parent.parent / 'results' / 'm41_omni_opendatalab_four'
++    output = Path('/data2/gaoyonghan/gpu_model_standalone_20261110/release/model/检测/qihoo360--360LayoutAnalysis/results/run_001/m041')
+     output = output / f'{mode}_{datetime.now():%Y%m%d_%H%M%S_%f}'
+     output.mkdir(parents=True)
+     print(f'Output: {output}', flush=True)

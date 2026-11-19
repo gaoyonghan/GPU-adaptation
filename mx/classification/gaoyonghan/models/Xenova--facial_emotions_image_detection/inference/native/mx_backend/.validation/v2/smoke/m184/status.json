@@ -1,0 +1,156 @@
+{
+  "sequence": 184,
+  "model_id": "timm/csatv2.r512_in1k",
+  "variant": null,
+  "phase": "smoke",
+  "protocol_fingerprint": "ddef1a8dae3bc07c4ed8dd636a5996978bd4fa5edf2d99f1350ff9bcc36152e6",
+  "protocol": {
+    "model": "0209661df58c61b4be12ff72ad65f45f7bba577fafe8b9eb88aa14176aed7152",
+    "code": {
+      "run_model.py": "b9b7e34d4db126e9495d674a9fd24dea83a732fe2ad0a28cda953f4856831ec8",
+      "common.py": "87e119ea13cd713bb054693dae0e04b7064b4fd683c8479b7715fd9b3883d045",
+      "prepare.py": "bf5bd4e223b181dd89142dbf467f92fe7c09b88ab4c82b061346248019f4ad9b",
+      "dispatch.py": "5d421d08e4b36dc0ad02144dd8540c007b125f4e2c728c490e5e3270375e58cf",
+      "timing.py": "db23cf873121e5e9345f23488d02d7757560a25084f330a56e38d5969d448342",
+      "native_js.mjs": "7ce8d0c8d4119a2ce2a4a0b3b89ffaffea9e4028e1e4196b09d8cdbf922685b1"
+    },
+    "environment": {
+      "python": "3.11.16 (main, Aug 27 2026, 14:44:21) [GCC 14.3.0]",
+      "versions": {
+        "torch": "2.5.1+cu121",
+        "torchvision": "0.20.1+cu121",
+        "transformers": "4.50.0",
+        "timm": "1.0.15",
+        "Pillow": "11.1.0",
+        "numpy": "1.26.4",
+        "scikit-learn": "1.5.2",
+        "pyarrow": "19.0.1"
+      },
+      "cuda_runtime": "12.1",
+      "cuda_available": true
+    },
+    "device": "cuda:1",
+    "batch_size": 1,
+    "warmup": 10,
+    "workers": 2,
+    "variant": null
+  },
+  "model_manifest": {
+    "sequence": 184,
+    "model_id": "timm/csatv2.r512_in1k",
+    "model_path": "/project/classification/gaoyonghan/models/Xenova--facial_emotions_image_detection/weights/timm/csatv2.r512_in1k",
+    "revision": "1c4b606e8ceed8ced0bfb6f30b881bdbd8849d8a",
+    "task_type": "image-classification",
+    "status": "not_started",
+    "official_model_card": "https://huggingface.co/timm/csatv2.r512_in1k",
+    "official_reference": null,
+    "reference_comparison": "manual_reference_required",
+    "known_differences": [],
+    "config": {
+      "architecture": "csatv2",
+      "num_classes": 1000,
+      "num_features": 386,
+      "global_pool": "avg",
+      "pretrained_cfg": {
+        "custom_load": false,
+        "input_size": [
+          3,
+          512,
+          512
+        ],
+        "fixed_input_size": false,
+        "interpolation": "bilinear",
+        "crop_pct": 1.0,
+        "crop_mode": "center",
+        "mean": [
+          0.485,
+          0.456,
+          0.406
+        ],
+        "std": [
+          0.229,
+          0.224,
+          0.225
+        ],
+        "num_classes": 1000,
+        "pool_size": null,
+        "first_conv": [],
+        "classifier": "head.fc"
+      }
+    },
+    "preprocessing": {
+      "custom_load": false,
+      "input_size": [
+        3,
+        512,
+        512
+      ],
+      "fixed_input_size": false,
+      "interpolation": "bilinear",
+      "crop_pct": 1.0,
+      "crop_mode": "center",
+      "mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "std": [
+        0.229,
+        0.224,
+        0.225
+      ],
+      "num_classes": 1000,
+      "pool_size": null,
+      "first_conv": [],
+      "classifier": "head.fc"
+    },
+    "architecture": "csatv2",
+    "files": {
+      "model.safetensors": {
+        "size": 44451568,
+        "sha256": "45b1d4c50fc3e0d378f386b0cbd07f3f8685affd17db2e02489b2fd4c8bf43e2"
+      },
+      "config.json": {
+        "size": 537,
+        "sha256": "3dd69264ace1c55ae04d62c84c4d370fe674e4d0c6763ebf825633c04f744f60"
+      },
+      "README.md": {
+        "size": 6041,
+        "sha256": "e5f501d732e295565a677977d9ca576e6013f1f5bb40fcfeb632d7ffa54ce8ef"
+      }
+    },
+    "weight": "model.safetensors",
+    "backend": "timm_native",
+    "environment": "shared_hf",
+    "dataset_relation": "original_exact",
+    "split": "ImageNet-1K validation",
+    "excluded_source_labels": {},
+    "images": 50000,
+    "covered_target_classes": 1000,
+    "num_output_classes": 1000,
+    "label_mapping": {},
+    "scoring": "native",
+    "evaluator": "timm.validate",
+    "fidelity": "official_protocol_adapter",
+    "case_type": "special",
+    "special_tags": [
+      "framework_numeric_difference"
+    ],
+    "inference_entry": "publisher_transformers_model_and_processor",
+    "default_batch_size": 1,
+    "dtype": "float32",
+    "warmup_batches": 10,
+    "index": "/project/classification/gaoyonghan/models/Xenova--facial_emotions_image_detection/resources/runtime/assets/workspace/classification171_200_eval/indices/184.jsonl",
+    "index_sha256": "ae1b1bd72d9a7d3fa3bb5063a8e2dd4aa0c8d58e7dcaf9e46c2cab204498024a",
+    "data_containers": {},
+    "class_map": "/project/classification/gaoyonghan/models/Xenova--facial_emotions_image_detection/resources/runtime/assets/workspace/171-200/inference_code/pytorch-image-models/timm/data/_info/imagenet_synsets.txt",
+    "class_map_sha256": "70002b0ff5de60a3a17a82dbfcff291931f96225ddf941ad2e182fc39e183d15",
+    "protocol_fingerprint": "0209661df58c61b4be12ff72ad65f45f7bba577fafe8b9eb88aa14176aed7152"
+  },
+  "status": "partial_complete",
+  "gpu_at_start": "0, GPU-edb63bcd-7ac5-4284-b9ea-825830b8ebba, NVIDIA GeForce RTX 4090, 580.126.09, 785 MiB, 41 %\n1, GPU-a11f730c-a975-2bf0-b765-3c24d83b7104, NVIDIA GeForce RTX 4090, 580.126.09, 133 MiB, 11 %",
+  "full_evaluation": false,
+  "images": 10,
+  "timing_file": "/project/classification/gaoyonghan/models/Xenova--facial_emotions_image_detection/resources/runtime/assets/workspace/classification171_200_eval/.validation/v2/smoke/m184/timing.json",
+  "run_wall_seconds_this_segment": 4.5562354871071875
+}

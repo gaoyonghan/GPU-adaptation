@@ -1,0 +1,9 @@
+{
+  "python": "3.11.16",
+  "requirements": "environments/e09-eval/requirements.txt",
+  "expected": "environments/e09-eval/expected.json",
+  "local_packages": [],
+  "original_python": "/home/ubuntu/gaoyonghan/miniconda3/envs/object-detection-eval/bin/python",
+  "torch": "2.5.1+cu124",
+  "python_version_scope": "Pinned to original interpreter version"
+}

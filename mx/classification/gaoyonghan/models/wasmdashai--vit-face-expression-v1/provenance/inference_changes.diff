@@ -1,0 +1,24 @@
+--- original_inference.py
++++ inference/native/run_m75_fer2013.py
+@@ -11,9 +11,9 @@
+ 
+ FER_LABELS = ('angry', 'disgust', 'fear', 'happy', 'sad', 'surprise', 'neutral')
+ MODEL_LABELS = ('angry', 'disgust', 'fear', 'happy', 'neutral', 'sad', 'surprise')
+-MODEL = Path('/data2/gaoyonghan/gpu/model/wasmdashai/vit-face-expression-v1')
+-DATA = Path('/data2/gaoyonghan/gpu/dataset/fer2013/fer2013.csv')
+-OUTPUT = Path('/home/ubuntu/gaoyonghan/gpu/results/m75_fer2013_v1')
++MODEL = Path('/data2/gaoyonghan/gpu_model_standalone_20261110/release/model/分类/wasmdashai--vit-face-expression-v1/resources/model_index/wasmdashai/vit-face-expression-v1')
++DATA = Path('/home/ubuntu/文档/ChatGPT/idea 2/outputs/launch_audit_20261005/migration_inputs/datasets/fer2013/fer2013.csv')
++OUTPUT = Path('/data2/gaoyonghan/gpu_model_standalone_20261110/release/model/分类/wasmdashai--vit-face-expression-v1/results/run_001/m075')
+ EXPECTED_SPLITS = {'Training': 28709, 'PublicTest': 3589, 'PrivateTest': 3589}
+ 
+ 
+@@ -129,6 +129,8 @@
+     full = len(samples) == 3589
+     out = args.output_root / ('full' if full else 'smoke') / datetime.now().strftime('run_%Y%m%d_%H%M%S_%f')
+     out.mkdir(parents=True, exist_ok=False)
++    from classification_capture import snapshot_gt
++    snapshot_gt(out, [dict(id=f'fer{index:07d}', target=target) for index, target, pixels in samples])
+     for name in ('run_m75_fer2013.py', 'run_m75_fer2013.sh', 'README_m75.md'):
+         shutil.copy2(Path(__file__).with_name(name), out / name)
+     protocol = {

@@ -1,0 +1,15 @@
+--- original_inference.py
++++ inference/native/run_m47_native.py
+@@ -16,9 +16,9 @@
+ import numpy as np
+ 
+ HERE = Path(__file__).resolve().parent
+-DATA = Path('/data2/gaoyonghan/gpu/dataset/flir_adas_thermal_eval/images_thermal_val')
+-WEIGHT = Path('/data2/gaoyonghan/gpu/model/foduucom/thermal-image-object-detection/best.pt')
+-OUT = Path('/home/ubuntu/gaoyonghan/gpu/results/m47_native8043_flir8_v1')
++DATA = Path('/home/ubuntu/文档/ChatGPT/idea 2/outputs/launch_audit_20261005/migration_inputs/datasets/flir_adas_thermal_eval/images_thermal_val')
++WEIGHT = Path('/data2/gaoyonghan/gpu_model_standalone_20261110/release/model/检测/foduucom--thermal-image-object-detection/resources/model_index/foduucom/thermal-image-object-detection/best.pt')
++OUT = Path('/data2/gaoyonghan/gpu_model_standalone_20261110/release/model/检测/foduucom--thermal-image-object-detection/results/run_001/m047')
+ NAMES = dict(enumerate(['empty','person','bicycle','car','motorcycle','airplane','bus','train',
+                         'truck','boat','traffic light','fire hydrant','stop sign','parking meter']))
+ SOURCE_NAMES = {1:'person', 2:'bike', 3:'car', 4:'motor', 6:'bus', 8:'truck', 10:'light', 11:'hydrant'}

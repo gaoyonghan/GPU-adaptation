@@ -1,0 +1,111 @@
+{
+  "schema": "model-eval/classification-inventory/v1",
+  "scope": "Existing 59 classification models; model 93 is retrieval and excluded.",
+  "models": [
+    {
+      "sequence": 190,
+      "model_id": "ibombonato/vit-age-classifier",
+      "runner_family": "classification171",
+      "adapter": "qualified_age",
+      "state": "integrated",
+      "dataset": {
+        "id": "classification171_190",
+        "relation": "public_replacement",
+        "split": "FairFace 0.25 validation",
+        "note": [
+          "Age bins differ (FairFace 70+ vs three model bins, other boundary definitions undocumented). Predictions/timing only; no fabricated accuracy.",
+          "Local checkpoint and publisher inference components retained. Offline file paths, eval mode, batching, timing observation and reference scoring are external orchestration."
+        ],
+        "index_source": "__MODEL_ROOT__/inference/native/indices/190.jsonl",
+        "data_containers": [
+          "__DATASET_ROOT__/FairFace/0.25/validation-00000-of-00001-951dbd63c8724ee1.parquet"
+        ]
+      },
+      "qualification": "conditional_filtered_proxy",
+      "limitations": [
+        "Reuse the existing explicitly qualified filtering/mapping protocol; do not present as unqualified full-dataset accuracy.",
+        "Historical output may contain only Top-1. Missing Top-5 remains unavailable; never reconstruct ranking silently."
+      ],
+      "num_classes": 8,
+      "expected_images": 10954,
+      "category_reference": {
+        "file": "__MODEL_ROOT__/inference/native/models.json",
+        "sequence": 190,
+        "field": "label_mapping"
+      },
+      "gt_index": "__MODEL_ROOT__/inference/native/indices/190.jsonl",
+      "existing_protocol": {
+        "id": "fairface_filtered_age_proxy_v1",
+        "scope": "10954张预测；排除3-9与10-19后评分8417张",
+        "expected_inference_images": 10954,
+        "expected_scored_images": 8417,
+        "metrics_path": "comparison_metrics.json",
+        "official_reference_comparable": false,
+        "limitations": [
+          "沿用历史年龄映射并合并预测7/8/9为70+；年龄端点定义未获作者确认"
+        ],
+        "scoring_entry": "protocol_alignment/rescore_classification.py"
+      },
+      "gt_mapping": {
+        "0-2": 0,
+        "20-29": 2,
+        "30-39": 3,
+        "40-49": 4,
+        "50-59": 5,
+        "60-69": 6,
+        "more than 70": 7
+      },
+      "excluded_labels": [
+        "3-9",
+        "10-19"
+      ],
+      "expected_scored_images": 8417,
+      "prediction_mapping": {
+        "0": 0,
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "8": 7,
+        "9": 7
+      },
+      "categories": [
+        {
+          "id": 0,
+          "name": "0-10"
+        },
+        {
+          "id": 1,
+          "name": "10-20"
+        },
+        {
+          "id": 2,
+          "name": "20-30"
+        },
+        {
+          "id": 3,
+          "name": "30-40"
+        },
+        {
+          "id": 4,
+          "name": "40-50"
+        },
+        {
+          "id": 5,
+          "name": "50-60"
+        },
+        {
+          "id": 6,
+          "name": "60-70"
+        },
+        {
+          "id": 7,
+          "name": "70+"
+        }
+      ]
+    }
+  ]
+}

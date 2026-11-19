@@ -1,0 +1,22 @@
+{
+  "sequence": 63,
+  "model_id": "IDEA-Research/grounding-dino-base",
+  "source_archive_hash_matches": true,
+  "source_archive_sha256": "6b5c4102bc12ce6a9198c4e3055d3a6f6080dd62026df39af93db031843a0ad6",
+  "prepared_entry_source_sha256": "bfa7fd2b98ea7200a881b3bcb83d70c1030d0159b392c849f5974e450631360e",
+  "local_entry_sha256": "cb6129f0677dc16bba353decc31bc5edd2996125867e79ee2aff99c24e944cf7",
+  "local_entry": "inference/native/run_model.py",
+  "central_dispatch_in_entry": false,
+  "unexpected_external_links": [],
+  "declared_dataset_links": [],
+  "broken_links": [],
+  "path_template_count": 275,
+  "state": "entrypoint_verified_full_run_pending",
+  "validation": {
+    "returncode": 0,
+    "python": "/home/ubuntu/gaoyonghan/miniconda3/envs/zero-shot-eval/bin/python",
+    "checked_at": "2026-11-10T15:54:14.631839+08:00",
+    "scope": "native help/import/path check only; not full inference"
+  },
+  "smoke_verification": null
+}

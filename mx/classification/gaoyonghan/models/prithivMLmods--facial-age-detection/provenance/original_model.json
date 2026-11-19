@@ -1,0 +1,216 @@
+{
+  "sequence": 99,
+  "model_id": "prithivMLmods/facial-age-detection",
+  "task": "image_classification",
+  "task_name": "图像分类",
+  "reported_result": "acc 82.25% Marco F1 0.7971 Weighted-F1 0.8223",
+  "reference": "acc 82.25% Marco F1 0.7971 Weighted-F1 0.8223",
+  "model_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/model_index/prithivMLmods/facial-age-detection",
+  "model_exists_at_build": true,
+  "dataset": {
+    "id": "face_age",
+    "relation": null,
+    "split": null,
+    "note": "计划：Face-Age-10K（来源数据）\n未评测，官方对应关系待核实"
+  },
+  "environment_id": "classification-shared",
+  "runner_family": "special",
+  "final_result_sources": [
+    {
+      "source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m099/metrics-0.json",
+      "sha256": "7ab3ae64114f1327459bfc6f5b37e4a998cefff92253391f4ec0b978e6ed5791",
+      "selection": "workbook_score_match",
+      "data": {
+        "images": 9165,
+        "correct": 7538,
+        "accuracy": 0.8224768139661757,
+        "accuracy_percent": 82.24768139661757,
+        "macro_f1": 0.7971029306727347,
+        "weighted_f1": 0.8222558402426163,
+        "classification_report": {
+          "age 01-10": {
+            "precision": 0.9614147909967846,
+            "recall": 0.9668552950687146,
+            "f1-score": 0.9641273679967755,
+            "support": 2474.0
+          },
+          "age 11-20": {
+            "precision": 0.8417508417508418,
+            "recall": 0.8467400508044031,
+            "f1-score": 0.8442380751371887,
+            "support": 1181.0
+          },
+          "age 21-30": {
+            "precision": 0.8117797695262484,
+            "recall": 0.8325673013788575,
+            "f1-score": 0.8220421393841167,
+            "support": 1523.0
+          },
+          "age 31-40": {
+            "precision": 0.6937307297019527,
+            "recall": 0.6683168316831684,
+            "f1-score": 0.680786686838124,
+            "support": 1010.0
+          },
+          "age 41-55": {
+            "precision": 0.7106314948041567,
+            "recall": 0.7527519051651143,
+            "f1-score": 0.7310855263157895,
+            "support": 1181.0
+          },
+          "age 56-65": {
+            "precision": 0.6878238341968912,
+            "recall": 0.6645807259073843,
+            "f1-score": 0.6760025461489497,
+            "support": 799.0
+          },
+          "age 66-80": {
+            "precision": 0.7948717948717948,
+            "recall": 0.7595712098009189,
+            "f1-score": 0.7768206734534064,
+            "support": 653.0
+          },
+          "age 80 +": {
+            "precision": 0.9348534201954397,
+            "recall": 0.8343023255813954,
+            "f1-score": 0.8817204301075269,
+            "support": 344.0
+          },
+          "accuracy": 0.8224768139661757,
+          "macro avg": {
+            "precision": 0.8046070845055138,
+            "recall": 0.7907107056737446,
+            "f1-score": 0.7971029306727347,
+            "support": 9165.0
+          },
+          "weighted avg": {
+            "precision": 0.8225995046925015,
+            "recall": 0.8224768139661757,
+            "f1-score": 0.8222558402426163,
+            "support": 9165.0
+          }
+        },
+        "confusion_matrix": [
+          [
+            2392,
+            77,
+            2,
+            1,
+            1,
+            0,
+            1,
+            0
+          ],
+          [
+            89,
+            1000,
+            88,
+            3,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            5,
+            98,
+            1268,
+            134,
+            18,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            11,
+            182,
+            675,
+            135,
+            6,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            20,
+            148,
+            889,
+            116,
+            6,
+            0
+          ],
+          [
+            1,
+            0,
+            2,
+            12,
+            186,
+            531,
+            66,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            20,
+            118,
+            496,
+            19
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            55,
+            287
+          ]
+        ],
+        "author_rounding_top1_differences": 0,
+        "elapsed_s": 84.8084132319782,
+        "predictions_sha256": "c7788c2e271d8f736c5e7f21383a759bab1846a4628b5eeaae4774d528405ecc",
+        "model_number": 99,
+        "dataset": "prithivMLmods/Face-Age-10K",
+        "split": "train",
+        "independent_test": "unverified",
+        "fidelity": "official_inference_adapter",
+        "official_reference": {
+          "accuracy": 0.8225,
+          "macro_f1": 0.7971,
+          "weighted_f1": 0.8223
+        },
+        "official_exact_reproduction": false
+      },
+      "source_original": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/m99_author_source_v1/full/run_20260917_135730_504930/metrics.json"
+    }
+  ],
+  "code": {
+    "source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/m99_author_source_v1/full/run_20260917_135730_504930/run_m99.py",
+    "sha256": "b6a59ff0226b3d8904536bcc061398fd6c3ded6bdc401dbe5a124d018bf0934c",
+    "recorded_sha256": null,
+    "attestation": "result_batch_snapshot",
+    "status_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m099/status.json",
+    "selection": "same_run_snapshot",
+    "archive": "code_archive/b6a59ff0226b3d89_run_m99.py"
+  },
+  "support_files": [
+    "run_m99.sh",
+    "data_manifest.json",
+    "model_config.json",
+    "run_m99.py",
+    "protocol.json",
+    "models_m99.json",
+    "model_preprocessor_config.json"
+  ],
+  "final_scorer": null,
+  "backend_package": "classification8_eval",
+  "readiness": "code_and_result_identified",
+  "launch_status": "configured",
+  "metadata_warning": "数据集列仍写未评测；须按原始结果核对"
+}

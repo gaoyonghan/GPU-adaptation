@@ -1,0 +1,22 @@
+{
+  "sequence": 88,
+  "model_id": "google/efficientnet-b3",
+  "source_archive_hash_matches": true,
+  "source_archive_sha256": "b83c8cc8838262b7d2106e92dea281b95fc661bec60742957a26674cf91b1910",
+  "prepared_entry_source_sha256": "8d127ac846c5fc383fa5f2082e1272297f331de710201468e3aaf971ee4ec9d2",
+  "local_entry_sha256": "3b45ea1f0f55d0a30193208b54e04081fb03737658ac9613c4e20f1eb751d9ba",
+  "local_entry": "inference/native/run_m88_keras.py",
+  "central_dispatch_in_entry": false,
+  "unexpected_external_links": [],
+  "declared_dataset_links": [],
+  "broken_links": [],
+  "path_template_count": 321,
+  "state": "entrypoint_verified_full_run_pending",
+  "validation": {
+    "returncode": 0,
+    "python": "/home/ubuntu/gaoyonghan/miniconda3/envs/object-detection-tensorflow-v2/bin/python",
+    "checked_at": "2026-11-10T15:56:37.191059+08:00",
+    "scope": "native help/import/path check only; not full inference"
+  },
+  "smoke_verification": null
+}

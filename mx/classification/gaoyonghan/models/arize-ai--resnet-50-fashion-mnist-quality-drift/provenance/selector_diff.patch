@@ -1,0 +1,21 @@
+--- before_selector.py
++++ inference/native/run_model.py
+@@ -447,7 +447,6 @@
+ 
+ def main():
+     parser=argparse.ArgumentParser()
+-    parser.add_argument('--model',type=int,required=True)
+     parser.add_argument('--phase',choices=['preflight','smoke','full'],default='preflight')
+     parser.add_argument('--describe',action='store_true')
+     parser.add_argument('--output-root',type=Path,default=Path('__MODEL_ROOT__/resources/runtime/assets/workspace/results/classification171_200_v1'))
+@@ -459,7 +458,9 @@
+     args=parser.parse_args()
+     if args.batch_size<1 or args.warmup<1 or args.workers<1: parser.error('batch-size, warmup and workers must be positive')
+     manifest=json.loads((HERE/'models.json').read_text())
+-    spec=next(s for s in manifest['models'] if s['sequence']==args.model)
++    if len(manifest['models']) != 1:
++        raise ValueError('Expected one model in this folder')
++    spec=manifest['models'][0]
+     if args.describe: print(json.dumps(spec,ensure_ascii=False,indent=2));return 0
+     if spec.get('variants') and args.variant not in spec['variants']: parser.error('Choose one of the frozen --variant weight filenames, or use run_all.sh')
+     return run_one(args,spec,manifest)

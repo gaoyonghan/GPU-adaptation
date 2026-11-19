@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "suite": "top100-zero-shot-object-detection-official-protocol",
+  "fidelity_levels": {
+    "exact_official": "官方代码、官方原生权重和官方环境直接运行。",
+    "official_protocol_adapter": "本地权重是官方发布/转换的另一种格式；适配层逐项复刻官方数据、提示词、预处理、后处理和指标。",
+    "reference_baseline": "官方没有发布与报告表格完全对应的端到端评估入口；只能使用官方组件构造可复现基线，不能宣称复现官方值。"
+  },
+  "datasets": {
+    "lvis_v1_val": {
+      "name": "LVIS v1.0",
+      "split": "val",
+      "images": 19809,
+      "categories": 1203,
+      "annotation_archive": "lvis_v1_val/lvis_v1_val.json.zip",
+      "annotation_member": "lvis_v1_val.json",
+      "image_archives": [
+        "COCO2017/train2017.zip",
+        "COCO2017/val2017.zip"
+      ],
+      "metric": "official lvis-api LVISEval bbox AP, max_dets=300",
+      "official_url": "https://www.lvisdataset.org/dataset"
+    }
+  },
+  "models": [
+    {
+      "sequence": 67,
+      "key": "owlv2-large-patch14-ensemble",
+      "repo_id": "google/owlv2-large-patch14-ensemble",
+      "hf_revision": "95e26936e865f87db1742128404b3c035d47d89d",
+      "family": "owl",
+      "runner": "scenic_owl_lvis",
+      "dataset": "lvis_v1_val",
+      "fidelity": "official_protocol_adapter",
+      "weight_format": "Hugging Face PyTorch conversion of a Scenic OWLv2 weight-ensemble checkpoint",
+      "official_source": {
+        "repository": "https://github.com/google-research/scenic/tree/main/scenic/projects/owl_vit",
+        "revision": "a179cefc7fd0a48676c15aa45b31c469e0dfc07d",
+        "inference_script": "scenic/projects/owl_vit/evaluator.py",
+        "config": "scenic/projects/owl_vit/configs/owl_v2_clip_l14.py",
+        "native_checkpoint": "owl2-l14-1008-st-ngrams-ft-lvisbase-ens-cold-weight-04_8ca674c"
+      },
+      "protocol": {
+        "queries": "1203 LVIS class names, canonicalized; seven CLIP_BEST_PROMPT_TEMPLATES",
+        "prompt_ensemble": "average class logits across seven templates, then sigmoid",
+        "image_preprocess": "Scenic ResizeWithPad to 1008x1008 with black padding, CLIP normalization",
+        "selection": "global top 300 box-class pairs; classes are non-exclusive; unpad boxes; mirror evaluator's label-index-0 skip",
+        "metric": "LVIS v1 bbox AP and APr"
+      },
+      "official_reference": {
+        "scope": "weight-ensemble checkpoint identified by official config; consult paper Figure A1",
+        "metrics_percent": {},
+        "source": "https://github.com/google-research/scenic/blob/main/scenic/projects/owl_vit/configs/owl_v2_clip_l14.py"
+      },
+      "known_differences": [
+        "所固定 Scenic evaluator 会丢弃 label index 0；适配器逐字义复刻该行为并在运行记录中保留。",
+        "本适配器显式关闭 HF 默认灰色补边，改用所固定 Scenic evaluator 的黑色 pad_value=0.0。",
+        "模型名中的 ensemble 是权重集成，和评估时七提示词集成不是同一件事。"
+      ],
+      "legacy_result": {
+        "AP_percent": 3.4,
+        "classification": "invalid_protocol_single_prompt_boxes_not_unpadded"
+      }
+    }
+  ]
+}

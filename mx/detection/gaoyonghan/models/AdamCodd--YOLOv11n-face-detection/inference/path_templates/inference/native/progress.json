@@ -1,0 +1,73 @@
+{
+  "generated_at": "2026-09-05T10:58:31.409026+00:00",
+  "total_detection_models": 62,
+  "existing_green_queue": 37,
+  "current_scope_unique_models": 25,
+  "initial_primary_blocker_counts": {
+    "旧替代集类别不全，需核对任务覆盖": 4,
+    "私有数据且缺任务匹配的公开金标": 2,
+    "原协议/划分不明，现有数据可做参考评测": 8,
+    "数据已有，缺任务适配或多权重覆盖": 8,
+    "仅下载了说明/发布链接，实际权重缺失": 2,
+    "数据下载未完成，当前目录为空": 1
+  },
+  "current_state_counts": {
+    "complete": 21,
+    "partial_complete": 3,
+    "blocked": 1
+  },
+  "counting_rule": "Unique model IDs; all required tasks must have complete frozen benchmark metrics. PubTables means the model-blind 1000-image benchmark, not the original 93834-image test. Invalid cmarkea and all superseded Qualcomm v1/v2 results excluded.",
+  "fidelity_counts": {
+    "reference_baseline": 25
+  },
+  "comparison_counts": {
+    "not_officially_comparable": 25
+  },
+  "case_type_counts": {
+    "special": 25
+  },
+  "models": [
+    {
+      "sequence": 26,
+      "model_id": "AdamCodd/YOLOv11n-face-detection",
+      "state": "complete",
+      "all_tasks_complete": true,
+      "required_tasks": [
+        "bbox_detection_classification"
+      ],
+      "results": [
+        {
+          "status": "failed",
+          "task": "widerface",
+          "valid_complete": false,
+          "images": null,
+          "result_directory": "__MODEL_ROOT__/resources/runtime/assets/workspace/results/remaining25_wider_v1/YOLOv11n-face-detection",
+          "metrics": null,
+          "coverage": null,
+          "error": "KeyError('image_id')"
+        },
+        {
+          "status": "complete",
+          "task": "widerface",
+          "valid_complete": true,
+          "images": 3226,
+          "result_directory": "__MODEL_ROOT__/resources/runtime/assets/workspace/results/remaining25_wider_v2/YOLOv11n-face-detection",
+          "metrics": {
+            "easy_AP": 0.9427578719708345,
+            "medium_AP": 0.9231180377978823,
+            "hard_AP": 0.8127450099952556,
+            "unit": "fraction_0_to_1",
+            "evaluation_images": 3226,
+            "protocol_fingerprint": "a3c9a163ac2240b248408aae1678d2a8dbbb92a0aa5d04c151a716f972eb4ca0",
+            "reference_check": "same benchmark; author inference settings incompletely specified"
+          },
+          "coverage": null,
+          "error": null
+        }
+      ],
+      "next_action": "接入WIDER FACE三档真实难度标签及官方评估流程。"
+    }
+  ],
+  "supplemental_updated_at": "2026-09-05T15:25:21.596769+00:00",
+  "supplemental_summary": "supplemental_20260905/summary.json"
+}

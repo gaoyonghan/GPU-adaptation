@@ -6,6 +6,8 @@
 | --- | --- | --- |
 | A100 | [分类](a100/classification/) | [分类模型与环境](a100/classification/gaoyonghan/environment/README.md) |
 | A100 | [检测](a100/detection/) | [检测模型与环境](a100/detection/gaoyonghan/environment/README.md) |
+| MX | [分类](mx/classification/) | [分类模型与环境](mx/classification/gaoyonghan/environment/README.md) |
+| MX | [检测](mx/detection/) | [检测模型与环境](mx/detection/gaoyonghan/environment/README.md) |
 
 使用 A100 时，从仓库根目录进入 `a100/`。根据环境对照表激活环境，在模型目录运行 `python inference.py`，再按模型 README 的命令运行任务目录的 `evaluate.py`。
 

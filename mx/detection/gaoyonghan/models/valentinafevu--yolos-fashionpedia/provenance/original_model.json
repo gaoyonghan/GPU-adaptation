@@ -1,0 +1,82 @@
+{
+  "sequence": 10,
+  "model_id": "valentinafevu/yolos-fashionpedia",
+  "task": "object_detection",
+  "task_name": "目标检测",
+  "reported_result": "11.2233023081101",
+  "reference": "未找到该 Fashionpedia 权重的对应指标",
+  "model_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/model_index/valentinafevu/yolos-fashionpedia",
+  "model_exists_at_build": true,
+  "dataset": {
+    "id": "fashionpedia_val",
+    "relation": "original_exact",
+    "split": "validation",
+    "note": "Fashionpedia · validation · 1158 图\n官方原集（不代表全协议已对齐）"
+  },
+  "environment_id": "detection-hf",
+  "runner_family": "official_detection",
+  "final_result_sources": [
+    {
+      "source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m010/metrics-0.json",
+      "sha256": "a64b43e441ddc2089267419d1aae17074ddba8d20394c7feb5a4745e2053b0f7",
+      "selection": "workbook_score_match",
+      "data": {
+        "metrics": {
+          "AP": 0.11223302308110114,
+          "AP50": 0.21187433250760138,
+          "AP75": 0.10717703345795221,
+          "AP_small": 0.020369697180061926,
+          "AP_medium": 0.0717068678281519,
+          "AP_large": 0.14624615872118127,
+          "AR1": 0.17310523194029276,
+          "AR10": 0.22666794229337037,
+          "AR100": 0.22925315130108104,
+          "AR_small": 0.03383594434122959,
+          "AR_medium": 0.16571418393081777,
+          "AR_large": 0.34080538848252245
+        },
+        "metrics_percent": {
+          "AP": 11.223302308110114,
+          "AP50": 21.187433250760137,
+          "AP75": 10.71770334579522,
+          "AP_small": 2.0369697180061928,
+          "AP_medium": 7.17068678281519,
+          "AP_large": 14.624615872118127,
+          "AR1": 17.310523194029276,
+          "AR10": 22.666794229337036,
+          "AR100": 22.925315130108103,
+          "AR_small": 3.3835944341229593,
+          "AR_medium": 16.571418393081778,
+          "AR_large": 34.080538848252246
+        },
+        "official_reference": null,
+        "reference_check": {
+          "classification": "manual_reference_required"
+        }
+      },
+      "source_original": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/object_detection_official_v2/m10-yolos-fashionpedia/metrics.json"
+    }
+  ],
+  "code": {
+    "source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/object_detection_official_v2/_source_snapshot/run_model.py",
+    "sha256": "f2fb744cfeffd526f9088df0d3ee7e4b17ce65eeada64030fe37deb96dd485dc",
+    "recorded_sha256": null,
+    "attestation": "result_batch_snapshot",
+    "status_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m010/status.json",
+    "selection": "same_batch_snapshot",
+    "archive": "code_archive/f2fb744cfeffd526_run_model.py"
+  },
+  "support_files": [
+    "download_official_source.py",
+    "models.json",
+    "run_model.py",
+    "setup_env.sh",
+    "run_all.sh",
+    "check_environment.py"
+  ],
+  "final_scorer": null,
+  "backend_package": "remaining_detection_eval",
+  "readiness": "code_and_result_identified",
+  "launch_status": "configured",
+  "metadata_warning": null
+}

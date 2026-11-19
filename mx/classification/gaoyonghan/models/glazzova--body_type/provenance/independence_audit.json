@@ -1,0 +1,22 @@
+{
+  "sequence": 174,
+  "model_id": "glazzova/body_type",
+  "source_archive_hash_matches": true,
+  "source_archive_sha256": "660597244bca043260e76f3c3cb289e6abc1cfba6f8a413f55e52fbf3890e484",
+  "prepared_entry_source_sha256": "b02e507128f0aca77bed05f878c97f24b059d1267d3caf59dccc06869b25e799",
+  "local_entry_sha256": "b02e507128f0aca77bed05f878c97f24b059d1267d3caf59dccc06869b25e799",
+  "local_entry": "inference/native/run_proxy_174.py",
+  "central_dispatch_in_entry": false,
+  "unexpected_external_links": [],
+  "declared_dataset_links": [],
+  "broken_links": [],
+  "path_template_count": 250,
+  "state": "entrypoint_verified_full_run_pending",
+  "validation": {
+    "returncode": 0,
+    "python": "/home/ubuntu/gaoyonghan/gpu/classification8_eval/.venv/bin/python",
+    "checked_at": "2026-11-10T15:57:39.849848+08:00",
+    "scope": "native help/import/path check only; not full inference"
+  },
+  "smoke_verification": null
+}

@@ -1,0 +1,22 @@
+{
+  "sequence": 54,
+  "model_id": "foduucom/product-detection-in-shelf-yolov8",
+  "source_archive_hash_matches": true,
+  "source_archive_sha256": "0b54e22a943dcb3be5f3e9ea42505264064d741b82491709bb2f3a831d48b97b",
+  "prepared_entry_source_sha256": "8cc54aaf513bea986c50e9bc489f4798aed967ab4938100d48db7f9d310ca11c",
+  "local_entry_sha256": "55cb53b22176054acdff53b6c1a304294f4f4c1d355fd366c21ac3cacffb0416",
+  "local_entry": "inference/native/run_m54_sku_official.py",
+  "central_dispatch_in_entry": false,
+  "unexpected_external_links": [],
+  "declared_dataset_links": [],
+  "broken_links": [],
+  "path_template_count": 404,
+  "state": "entrypoint_verified_full_run_pending",
+  "validation": {
+    "returncode": 0,
+    "python": "/home/ubuntu/gaoyonghan/gpu/.venv-m12-ultralytics8043/bin/python",
+    "checked_at": "2026-11-10T15:53:43.819453+08:00",
+    "scope": "native help/import/path check only; not full inference"
+  },
+  "smoke_verification": null
+}

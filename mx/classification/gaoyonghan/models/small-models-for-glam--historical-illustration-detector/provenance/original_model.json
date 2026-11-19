@@ -1,0 +1,78 @@
+{
+  "sequence": 83,
+  "model_id": "small-models-for-glam/historical-illustration-detector",
+  "task": "image_classification",
+  "task_name": "图像分类",
+  "reported_result": "acc 94.41%  F1 0.89",
+  "reference": "无明确划分模型卡 95.09% 0.92",
+  "model_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/model_index/small-models-for-glam/historical-illustration-detector",
+  "model_exists_at_build": true,
+  "dataset": {
+    "id": "imagein",
+    "relation": null,
+    "split": null,
+    "note": "计划：ImageIN / ImageIn_annotations（来源数据）\n未评测，官方对应关系待核实"
+  },
+  "environment_id": "classification-shared",
+  "runner_family": "special",
+  "final_result_sources": [
+    {
+      "source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m083/metrics-0.json",
+      "sha256": "c4897949c8da121fb88ac1f914b1e52012b286f35029e9bd75c3e9843cf73c61",
+      "selection": "workbook_score_match",
+      "data": {
+        "accuracy": 0.9440928270042194,
+        "accuracy_percent": 94.40928270042194,
+        "f1_illustrated": 0.8855291576673866,
+        "f1_illustrated_percent": 88.55291576673866,
+        "correct": 1790,
+        "images": 1896,
+        "confusion_matrix": [
+          [
+            1380,
+            50
+          ],
+          [
+            56,
+            410
+          ]
+        ],
+        "confusion_matrix_label_order": [
+          "not-illustrated",
+          "illustrated"
+        ],
+        "state": "source_evaluation_complete",
+        "dataset_relation": "original_protocol_incomplete",
+        "independent_test": false,
+        "training_eval_overlap": "Unknown exact membership, possible substantial overlap; author used this source but did not publish held-out indices. Newly splitting these rows does not establish independence.",
+        "official_reference_comparable": false,
+        "protocol_fingerprint": "aa1ada92a7757ec5cc69dcfd0c7a71689bc6966f81b43c834e29a05bb96e923f",
+        "predictions_sha256": "6956c384792f61304bdb93364dfc85b3a39a7b15f7dd18e08a64e91ef978287a"
+      },
+      "source_original": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/m83_imagein_source_v1/full/run_20260915_174735_834308/metrics.json"
+    }
+  ],
+  "code": {
+    "source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/m83_imagein_source_v1/full/run_20260915_174735_834308/run_m83_imagein.py",
+    "sha256": "1014bcd40e15ab7324bfecad5adf404d4601c55db8d90bb4a201dc727cd134cc",
+    "recorded_sha256": null,
+    "attestation": "result_batch_snapshot",
+    "status_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m083/status.json",
+    "selection": "same_run_snapshot",
+    "archive": "code_archive/1014bcd40e15ab73_run_m83_imagein.py"
+  },
+  "support_files": [
+    "run_m83_imagein.sh",
+    "setup_m83_env.sh",
+    "model_config.json",
+    "protocol.json",
+    "model_preprocessor_config.json",
+    "models_m83.json",
+    "run_m83_imagein.py"
+  ],
+  "final_scorer": null,
+  "backend_package": "classification8_eval",
+  "readiness": "code_and_result_identified",
+  "launch_status": "configured",
+  "metadata_warning": "数据集列仍写未评测；须按原始结果核对"
+}

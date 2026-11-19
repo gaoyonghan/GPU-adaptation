@@ -1,0 +1,116 @@
+{
+  "sequence": 81,
+  "model_id": "Tanneru/Facial-Emotion-Detection-FER-RAFDB-AffectNet-BEIT-Large",
+  "model_path": "__MODEL_ROOT__/weights/Tanneru/Facial-Emotion-Detection-FER-RAFDB-AffectNet-BEIT-Large",
+  "hf_revision": "68cbe4de6a93da0ec70267ab792b539311ad3d3f",
+  "model_card": "https://huggingface.co/Tanneru/Facial-Emotion-Detection-FER-RAFDB-AffectNet-BEIT-Large/blob/68cbe4de6a93da0ec70267ab792b539311ad3d3f/README.md",
+  "files_sha256": {
+    "model.safetensors": "43091aa1c7fff15d120eb663f121d8e48a94335201d51415a6206af1e0f0e84a",
+    "config.json": "e10ee100f8c35c3283173efdfc73eeff2ac52ebaa396b5a7b840e0142b06c6da",
+    "preprocessor_config.json": "4f4874cabe6039d4d6550dbd4cf3c12560b226ea88fa2b138c4a0e48b98a5cf9",
+    "README.md": "77ff854e1bba58c68e0f8ef5c13d26b3a1f703921f08f1e237e91f7fe6a04d4c",
+    "confusion_matrix.png": "dabe55c91ea971de0bec270ca23a223e62596976818dc8d05bc962c9f9fae5a2",
+    "classification_report.png": "8136f52d54819451a2f6b01835f297d7e59ab31ae2fb83c30a5f4467c269d910"
+  },
+  "task_type": "image-classification/facial-expression-7class",
+  "dataset": "FER2013",
+  "dataset_relation": "public_replacement",
+  "dataset_note": "FER2013 is one of the author's data sources; this standalone PrivateTest replaces the unspecified combined evaluation split.",
+  "csv_path": "__DATASET_ROOT__/fer2013/deadskull7/fer2013.csv",
+  "csv_sha256": "3b8d9617d1017f34733c8f2474d7784c563ce86c40a86ac12c2d37cc968f871b",
+  "dataset_source": "https://www.kaggle.com/datasets/deadskull7/fer2013",
+  "download_provenance": "Third-party republication with original Usage field; byte equivalence to competition download unverified.",
+  "split": "PrivateTest",
+  "images": 3589,
+  "fer_id_to_name": [
+    "angry",
+    "disgust",
+    "fear",
+    "happy",
+    "sad",
+    "surprise",
+    "neutral"
+  ],
+  "verified_model_id_to_name": null,
+  "candidate_model_id_to_name": [
+    "anger",
+    "disgust",
+    "fear",
+    "happy",
+    "neutral",
+    "sad",
+    "surprise"
+  ],
+  "candidate_model_to_fer": [
+    0,
+    1,
+    2,
+    3,
+    6,
+    4,
+    5
+  ],
+  "label_mapping_status": "unverified_inference_from_author_report_order",
+  "label_mapping_evidence": "README class list and both report axes share this order, but generic LABEL_0..6 in config does not prove index semantics. No training label encoder published/found. Never optimize permutation using test labels.",
+  "preprocess": "Published BeitImageProcessor: RGB, 224x224 bilinear resize, rescale 1/255, mean/std 0.5, no center crop or augmentation",
+  "inference": "Published BeitForImageClassification, FP32, eval/inference_mode, eager attention, batch 8, logits argmax; no extra face detection or TTA",
+  "metric": "Top-1 accuracy = correct/total; sklearn.metrics.accuracy_score, independent count cross-check",
+  "metric_protocol_source": "https://arxiv.org/html/1307.0414",
+  "official_evaluator": null,
+  "code_boundary": "Our FER CSV/batch/provenance wrapper reuses M75 data/scoring helpers; author's Transformers model and processor classes; no Kaggle server scoring source obtained.",
+  "official_references": {
+    "model_index_accuracy": 0.7357,
+    "body_final_accuracy_approx": 0.762,
+    "confusion_matrix_accuracy": 0.7663821463501378,
+    "confusion_matrix_images": 22494,
+    "selected_reference": null,
+    "directly_comparable": false
+  },
+  "training_test_overlap": "Unknown: author used FER2013 but did not publish exact training sample membership. PrivateTest cannot be claimed unseen by this checkpoint.",
+  "fidelity": "reference_baseline",
+  "case_type": "special",
+  "special_tags": [
+    "dataset_replacement",
+    "split_uncertain",
+    "label_mapping_required",
+    "official_evaluator_missing",
+    "framework_numeric_difference"
+  ],
+  "known_differences": [
+    "Standalone FER2013 instead of author mixed dataset",
+    "Output label mapping provisional",
+    "Training/test overlap unknown",
+    "Shared transformers 4.50.0 vs saved config 4.54.1; CPU strict loading passes, numerical equivalence unverified",
+    "Evaluation batch 8 vs author training config eval batch 32; FP32 inference, no inference dtype specified by author"
+  ],
+  "versions": {
+    "torch": "2.5.1+cu121",
+    "transformers": "4.50.0",
+    "numpy": "1.26.4",
+    "Pillow": "11.1.0",
+    "scikit-learn": "1.5.2",
+    "safetensors": "0.5.3"
+  },
+  "status": "prepared_pending_label_mapping_confirmation",
+  "next_action": "Confirm output-index semantics with author; optionally run explicitly acknowledged provisional evaluation, never count it as accepted formal result.",
+  "device": "cuda:0",
+  "source_sha256": {
+    "run_m81_fer2013.py": "330393608509aac1dce6f2bd47ff8addf8c777ebd33fc3992244b5b36932f11c",
+    "run_m81_fer2013.sh": "9de42d6e3a78c3d8146e9f345757fcb79256056e20bdfd13b7009f1020487643",
+    "models_m81.json": "927560d1c6f04c5faa1d7ac38393a6e1976c2c0cbb6f3d67b0d36a5e67f99801",
+    "README_m81.md": "aa1e7fe97a6ee44b7660879b65034a6eb1447b1c866224fee3ae9e3b11eace0c",
+    "run_m75_fer2013.py": "b9e184191792ecbccb77d930718fe340d33bc0ec840ac3061e950c37b5f5871f"
+  },
+  "unverified_labels_explicitly_allowed": true,
+  "protocol_fingerprint": "1a38423d03548378684a098178da1ccdeecbbf891c6f3e7194e80d86894c559a",
+  "selected_images": 3589,
+  "full_test_class_counts": {
+    "angry": 491,
+    "disgust": 55,
+    "fear": 528,
+    "happy": 879,
+    "sad": 594,
+    "surprise": 416,
+    "neutral": 626
+  }
+}

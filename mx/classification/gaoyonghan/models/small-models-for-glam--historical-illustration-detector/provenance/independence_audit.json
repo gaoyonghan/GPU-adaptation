@@ -1,0 +1,22 @@
+{
+  "sequence": 83,
+  "model_id": "small-models-for-glam/historical-illustration-detector",
+  "source_archive_hash_matches": true,
+  "source_archive_sha256": "1014bcd40e15ab7324bfecad5adf404d4601c55db8d90bb4a201dc727cd134cc",
+  "prepared_entry_source_sha256": "09078c55bef92974960f2c7af28e1d568fd4db4c14e944d2103997bb6bd2c136",
+  "local_entry_sha256": "fee9ff6b6060c16c91e3da7e4e8940504a3c1e8d63c2e785df70b303f5cf2e55",
+  "local_entry": "inference/native/run_m83_imagein.py",
+  "central_dispatch_in_entry": false,
+  "unexpected_external_links": [],
+  "declared_dataset_links": [],
+  "broken_links": [],
+  "path_template_count": 320,
+  "state": "entrypoint_verified_full_run_pending",
+  "validation": {
+    "returncode": 0,
+    "python": "/home/ubuntu/gaoyonghan/gpu/classification8_eval/.venv-m83-optimum/bin/python",
+    "checked_at": "2026-11-10T15:56:05.938343+08:00",
+    "scope": "native help/import/path check only; not full inference"
+  },
+  "smoke_verification": null
+}

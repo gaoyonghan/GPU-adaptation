@@ -1,0 +1,161 @@
+{
+  "sequence": 192,
+  "model_id": "osanseviero/llama-alpaca-guanaco-vicuna",
+  "variant": null,
+  "phase": "smoke",
+  "protocol_fingerprint": "4fd0b2e9ddc43e6fd8bbbe5aa9770a1c6ff11704f6ec6c72cf0c5c5a93a0e825",
+  "protocol": {
+    "model": "dd7350045914872dbbc724f607c5157e844c2fac990ad213e4960476deeb439d",
+    "code": {
+      "run_model.py": "b9c7db394c4a020f84fb8cc4515d9d7a020943b011fdea3b1303e192ab84dee3",
+      "common.py": "87e119ea13cd713bb054693dae0e04b7064b4fd683c8479b7715fd9b3883d045",
+      "prepare.py": "bf5bd4e223b181dd89142dbf467f92fe7c09b88ab4c82b061346248019f4ad9b",
+      "dispatch.py": "37a15fb15281dd6658bc87da9ad72f44de99c6f0161d4323c96d22dad3268ffb",
+      "timing.py": "db23cf873121e5e9345f23488d02d7757560a25084f330a56e38d5969d448342",
+      "native_js.mjs": "7ce8d0c8d4119a2ce2a4a0b3b89ffaffea9e4028e1e4196b09d8cdbf922685b1"
+    },
+    "environment": {
+      "python": "3.11.16 (main, Aug 27 2026, 14:44:21) [GCC 14.3.0]",
+      "versions": {
+        "torch": "2.5.1+cu121",
+        "torchvision": "0.20.1+cu121",
+        "transformers": "4.50.0",
+        "timm": "1.0.15",
+        "Pillow": "11.1.0",
+        "numpy": "1.26.4",
+        "scikit-learn": "1.5.2",
+        "pyarrow": "19.0.1"
+      },
+      "cuda_runtime": "12.1",
+      "cuda_available": true
+    },
+    "device": "cuda:1",
+    "batch_size": 1,
+    "warmup": 10,
+    "workers": 2,
+    "variant": null
+  },
+  "model_manifest": {
+    "sequence": 192,
+    "model_id": "osanseviero/llama-alpaca-guanaco-vicuna",
+    "model_path": "/project/classification/gaoyonghan/models/Xenova--facial_emotions_image_detection/weights/osanseviero/llama-alpaca-guanaco-vicuna",
+    "revision": "a59f6456120751715015be9a8bf5d45981ddccf6",
+    "task_type": "image-classification",
+    "status": "not_started",
+    "official_model_card": "https://huggingface.co/osanseviero/llama-alpaca-guanaco-vicuna",
+    "official_reference": null,
+    "reference_comparison": "manual_reference_required",
+    "known_differences": [
+      "Keep full model output head. Not an independent original model test set.",
+      "800 records, 793 unique hashes; original within-class duplicates retained; four conflicting files excluded."
+    ],
+    "config": {
+      "_name_or_path": "google/vit-base-patch16-224-in21k",
+      "architectures": [
+        "ViTForImageClassification"
+      ],
+      "attention_probs_dropout_prob": 0.0,
+      "hidden_act": "gelu",
+      "hidden_dropout_prob": 0.0,
+      "hidden_size": 768,
+      "id2label": {
+        "0": "alpaca",
+        "1": "guanaco",
+        "2": "llama",
+        "3": "vicuna"
+      },
+      "image_size": 224,
+      "initializer_range": 0.02,
+      "intermediate_size": 3072,
+      "label2id": {
+        "alpaca": "0",
+        "guanaco": "1",
+        "llama": "2",
+        "vicuna": "3"
+      },
+      "layer_norm_eps": 1e-12,
+      "model_type": "vit",
+      "num_attention_heads": 12,
+      "num_channels": 3,
+      "num_hidden_layers": 12,
+      "patch_size": 16,
+      "transformers_version": "4.8.2"
+    },
+    "preprocessing": {
+      "do_normalize": true,
+      "do_resize": true,
+      "feature_extractor_type": "ViTFeatureExtractor",
+      "image_mean": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "image_std": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "resample": 2,
+      "size": 224
+    },
+    "architecture": [
+      "ViTForImageClassification"
+    ],
+    "files": {
+      "pytorch_model.bin": {
+        "size": 343283185,
+        "sha256": "b5cc70c016a8554631c4ead35157274dac9869c76eeec47bf9f9eb1b5a75e4c1"
+      },
+      "config.json": {
+        "size": 685,
+        "sha256": "0907242811eb28033be85326e9bf03344d6952117d94171cf619cea9255cf537"
+      },
+      "preprocessor_config.json": {
+        "size": 228,
+        "sha256": "af4eb4d79cf61b47010fc0bc9352ee967579c417423b4917188d809b7e048948"
+      },
+      "README.md": {
+        "size": 822,
+        "sha256": "951e83dfddcf1a153fe53e1dbd537a8729bc90e62245265d2837b7480d97cc80"
+      }
+    },
+    "weight": "pytorch_model.bin",
+    "backend": "hf_published",
+    "environment": "shared_hf",
+    "dataset_relation": "public_replacement",
+    "split": "accepted external reference set",
+    "excluded_source_labels": {},
+    "images": 800,
+    "covered_target_classes": 4,
+    "num_output_classes": 4,
+    "label_mapping": {
+      "0": "alpaca",
+      "1": "guanaco",
+      "2": "llama",
+      "3": "vicuna"
+    },
+    "scoring": "reference",
+    "evaluator": "sklearn reference scoring",
+    "fidelity": "reference_baseline",
+    "case_type": "special",
+    "special_tags": [
+      "framework_numeric_difference",
+      "dataset_replacement",
+      "official_evaluator_missing"
+    ],
+    "inference_entry": "publisher_transformers_model_and_processor",
+    "default_batch_size": 1,
+    "dtype": "float32",
+    "warmup_batches": 10,
+    "index": "/project/classification/gaoyonghan/models/Xenova--facial_emotions_image_detection/resources/runtime/assets/workspace/classification171_200_eval/indices/192.jsonl",
+    "index_sha256": "469a6aea65eb514f704c83d17f3d0ee24ff34be712c1636c304cc701b166a1ae",
+    "data_containers": {},
+    "protocol_fingerprint": "dd7350045914872dbbc724f607c5157e844c2fac990ad213e4960476deeb439d"
+  },
+  "status": "partial_complete",
+  "gpu_at_start": "0, GPU-edb63bcd-7ac5-4284-b9ea-825830b8ebba, NVIDIA GeForce RTX 4090, 580.126.09, 778 MiB, 40 %\n1, GPU-a11f730c-a975-2bf0-b765-3c24d83b7104, NVIDIA GeForce RTX 4090, 580.126.09, 133 MiB, 27 %",
+  "full_evaluation": false,
+  "images": 10,
+  "timing_file": "/project/classification/gaoyonghan/models/Xenova--facial_emotions_image_detection/resources/runtime/assets/workspace/classification171_200_eval/.validation/v1/smoke/m192/timing.json",
+  "run_wall_seconds_this_segment": 5.882069668266922
+}

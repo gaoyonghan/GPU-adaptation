@@ -1,0 +1,67 @@
+{
+  "sequence": 54,
+  "model_id": "foduucom/product-detection-in-shelf-yolov8",
+  "task": "object_detection",
+  "task_name": "目标检测",
+  "reported_result": "AP 9.81%；AP50 25.91%\n仅1/2类，密集检测协议待核实",
+  "reference": "91",
+  "model_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/model_index/foduucom/product-detection-in-shelf-yolov8",
+  "model_exists_at_build": true,
+  "dataset": {
+    "id": "sku110k_test",
+    "relation": "public_replacement",
+    "split": "test",
+    "note": "SKU-110K · test · 2936 图\n非官方评测集：公开替代"
+  },
+  "environment_id": "detection-yolo",
+  "runner_family": "remaining_detection",
+  "final_result_sources": [
+    {
+      "source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m054/metrics-0.json",
+      "sha256": "3c8b0e8da0561486b3a7016eb168a878872d7871651905ddd0efe2b6bdf005cf",
+      "selection": "workbook_score_match",
+      "data": {
+        "metrics": {
+          "AP": 0.09806786420587806,
+          "AP50": 0.2590811346806409,
+          "AP75": 0.05116529736402845
+        },
+        "unit": "fraction_0_to_1",
+        "evaluation_images": 2936,
+        "GT_instances": 431546,
+        "detections": 478257,
+        "evaluator": "Unmodified CVPR2020 Retail-Vision densely_packed_eval_2020-02-06",
+        "dataset": "SKU110K_fixed public test, not hidden CVPR2020 competition test",
+        "coverage": {
+          "scored": [
+            "product"
+          ],
+          "not_scored": [
+            "empty"
+          ]
+        },
+        "model_card_comparable": false,
+        "model_card_AP50_reference": 0.91
+      },
+      "source_original": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/m54_sku_official_v1/full/run_20260915_133014_982153/metrics.json"
+    }
+  ],
+  "code": {
+    "source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/m54_sku_official_v1/full/run_20260915_133014_982153/source_snapshot/run_m54_sku_official.py",
+    "sha256": "0b54e22a943dcb3be5f3e9ea42505264064d741b82491709bb2f3a831d48b97b",
+    "recorded_sha256": null,
+    "attestation": "result_batch_snapshot",
+    "status_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m054/status.json",
+    "selection": "same_run_snapshot",
+    "archive": "code_archive/0b54e22a943dcb3b_run_m54_sku_official.py"
+  },
+  "support_files": [
+    "run_m54_sku_official.sh",
+    "run_m54_sku_official.py"
+  ],
+  "final_scorer": null,
+  "backend_package": "remaining_detection_eval",
+  "readiness": "code_and_result_identified",
+  "launch_status": "configured",
+  "metadata_warning": null
+}

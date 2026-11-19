@@ -1,0 +1,192 @@
+{
+  "sequence": 194,
+  "model_id": "mrm8488/convnext-tiny-finetuned-eurosat",
+  "variant": null,
+  "phase": "smoke",
+  "protocol_fingerprint": "d47588d417b001a2c091190bc00fb22856ce00decb0729a0d2830cf4d19c0aea",
+  "protocol": {
+    "model": "4a4475cba54db14668c1e38127da28f5788e1ca19881f0e120f63a3a5eee2187",
+    "code": {
+      "run_model.py": "b9b7e34d4db126e9495d674a9fd24dea83a732fe2ad0a28cda953f4856831ec8",
+      "common.py": "87e119ea13cd713bb054693dae0e04b7064b4fd683c8479b7715fd9b3883d045",
+      "prepare.py": "bf5bd4e223b181dd89142dbf467f92fe7c09b88ab4c82b061346248019f4ad9b",
+      "dispatch.py": "5d421d08e4b36dc0ad02144dd8540c007b125f4e2c728c490e5e3270375e58cf",
+      "timing.py": "db23cf873121e5e9345f23488d02d7757560a25084f330a56e38d5969d448342",
+      "native_js.mjs": "7ce8d0c8d4119a2ce2a4a0b3b89ffaffea9e4028e1e4196b09d8cdbf922685b1"
+    },
+    "environment": {
+      "python": "3.11.16 (main, Aug 27 2026, 14:44:21) [GCC 14.3.0]",
+      "versions": {
+        "torch": "2.5.1+cu121",
+        "torchvision": "0.20.1+cu121",
+        "transformers": "4.50.0",
+        "timm": "1.0.15",
+        "Pillow": "11.1.0",
+        "numpy": "1.26.4",
+        "scikit-learn": "1.5.2",
+        "pyarrow": "19.0.1"
+      },
+      "cuda_runtime": "12.1",
+      "cuda_available": true
+    },
+    "device": "cuda:1",
+    "batch_size": 1,
+    "warmup": 10,
+    "workers": 2,
+    "variant": null
+  },
+  "model_manifest": {
+    "sequence": 194,
+    "model_id": "mrm8488/convnext-tiny-finetuned-eurosat",
+    "model_path": "/project/classification/gaoyonghan/models/Xenova--facial_emotions_image_detection/weights/mrm8488/convnext-tiny-finetuned-eurosat",
+    "revision": "9f1b3fb7a672ce1e393e95626217571df208775f",
+    "task_type": "image-classification",
+    "status": "not_started",
+    "official_model_card": "https://huggingface.co/mrm8488/convnext-tiny-finetuned-eurosat",
+    "official_reference": null,
+    "reference_comparison": "manual_reference_required",
+    "known_differences": [],
+    "config": {
+      "_name_or_path": "facebook/convnext-tiny-224",
+      "architectures": [
+        "ConvNextForImageClassification"
+      ],
+      "depths": [
+        3,
+        3,
+        9,
+        3
+      ],
+      "drop_path_rate": 0.0,
+      "hidden_act": "gelu",
+      "hidden_sizes": [
+        96,
+        192,
+        384,
+        768
+      ],
+      "id2label": {
+        "0": "AnnualCrop",
+        "1": "Forest",
+        "2": "HerbaceousVegetation",
+        "3": "Highway",
+        "4": "Industrial",
+        "5": "Pasture",
+        "6": "PermanentCrop",
+        "7": "Residential",
+        "8": "River",
+        "9": "SeaLake"
+      },
+      "image_size": 224,
+      "initializer_range": 0.02,
+      "label2id": {
+        "AnnualCrop": 0,
+        "Forest": 1,
+        "HerbaceousVegetation": 2,
+        "Highway": 3,
+        "Industrial": 4,
+        "Pasture": 5,
+        "PermanentCrop": 6,
+        "Residential": 7,
+        "River": 8,
+        "SeaLake": 9
+      },
+      "layer_norm_eps": 1e-12,
+      "layer_scale_init_value": 1e-06,
+      "model_type": "convnext",
+      "num_channels": 3,
+      "num_stages": 4,
+      "patch_size": 4,
+      "problem_type": "single_label_classification",
+      "torch_dtype": "float32",
+      "transformers_version": "4.18.0"
+    },
+    "preprocessing": {
+      "crop_pct": null,
+      "do_normalize": true,
+      "do_resize": "facebook/convnext-tiny-224",
+      "feature_extractor_type": "ConvNextFeatureExtractor",
+      "image_mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "image_std": [
+        0.229,
+        0.224,
+        0.225
+      ],
+      "resample": 3,
+      "size": 224
+    },
+    "architecture": [
+      "ConvNextForImageClassification"
+    ],
+    "files": {
+      "model.safetensors": {
+        "size": 111332550,
+        "sha256": "3b929c0757ae094ede0c0ad4c73d0b7ed4de3b8643e25d9d9bbc7b3f4168cb1e"
+      },
+      "config.json": {
+        "size": 1053,
+        "sha256": "219e4e0d27f7ce8f23a00a00eba5485d12a12203339f22e5e339741e667743c6"
+      },
+      "preprocessor_config.json": {
+        "size": 289,
+        "sha256": "e326cc29288677f6446bb40b8b6fc4ce767bca1b0d25eec00f474f3c802292b5"
+      },
+      "README.md": {
+        "size": 3339,
+        "sha256": "2f44722feda8c10f1ab2bbee9e7ededb48519e60c1a437c6d290b9c57ffab3e3"
+      }
+    },
+    "weight": "model.safetensors",
+    "backend": "hf_published",
+    "environment": "shared_hf",
+    "dataset_relation": "original_protocol_incomplete",
+    "split": "EuroSAT demo entire train, 27000; author held-out split unknown",
+    "excluded_source_labels": {},
+    "images": 27000,
+    "covered_target_classes": 10,
+    "num_output_classes": 10,
+    "label_mapping": {
+      "0": "AnnualCrop",
+      "1": "Forest",
+      "2": "HerbaceousVegetation",
+      "3": "Highway",
+      "4": "Industrial",
+      "5": "Pasture",
+      "6": "PermanentCrop",
+      "7": "Residential",
+      "8": "River",
+      "9": "SeaLake"
+    },
+    "scoring": "reference",
+    "evaluator": "sklearn reference scoring",
+    "fidelity": "reference_baseline",
+    "case_type": "special",
+    "special_tags": [
+      "framework_numeric_difference",
+      "official_evaluator_missing"
+    ],
+    "inference_entry": "publisher_transformers_model_and_processor",
+    "default_batch_size": 1,
+    "dtype": "float32",
+    "warmup_batches": 10,
+    "index": "/project/classification/gaoyonghan/models/Xenova--facial_emotions_image_detection/resources/runtime/assets/workspace/classification171_200_eval/indices/194.jsonl",
+    "index_sha256": "b547dd837343c2576ad50068048968bfc16897968c8d62775618c3f1603b2687",
+    "data_containers": {
+      "/project/dataset/datasets_171_200/eurosat/raw/data/train-00000-of-00001.parquet": {
+        "size": 88441801,
+        "mtime_ns": 1790019680818146061
+      }
+    },
+    "protocol_fingerprint": "4a4475cba54db14668c1e38127da28f5788e1ca19881f0e120f63a3a5eee2187"
+  },
+  "status": "partial_complete",
+  "gpu_at_start": "0, GPU-edb63bcd-7ac5-4284-b9ea-825830b8ebba, NVIDIA GeForce RTX 4090, 580.126.09, 776 MiB, 22 %\n1, GPU-a11f730c-a975-2bf0-b765-3c24d83b7104, NVIDIA GeForce RTX 4090, 580.126.09, 133 MiB, 13 %",
+  "full_evaluation": false,
+  "images": 10,
+  "timing_file": "/project/classification/gaoyonghan/models/Xenova--facial_emotions_image_detection/resources/runtime/assets/workspace/classification171_200_eval/.validation/v2/smoke/m194/timing.json",
+  "run_wall_seconds_this_segment": 4.51166478311643
+}

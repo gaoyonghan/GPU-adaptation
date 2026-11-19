@@ -1,0 +1,84 @@
+{
+  "sequence": 26,
+  "files": [
+    {
+      "path": "model.onnx",
+      "bytes": 10583429,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "Precision-confidence.png",
+      "bytes": 138182,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "confusion-matrix.png",
+      "bytes": 187598,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "model_gpu.onnx",
+      "bytes": 10508803,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "Recall-confidence.png",
+      "bytes": 93967,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "config.json",
+      "bytes": 1014,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1324,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "Precision-recall.png",
+      "bytes": 143793,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "model_nms.onnx",
+      "bytes": 10608674,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": ".gitattributes",
+      "bytes": 1519,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "model_fp16.onnx",
+      "bytes": 5355781,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "result.png",
+      "bytes": 326064,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "model.pt",
+      "bytes": 5469715,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    }
+  ],
+  "mismatches": []
+}

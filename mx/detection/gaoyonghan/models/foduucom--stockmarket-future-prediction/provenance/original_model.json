@@ -1,0 +1,91 @@
+{
+  "sequence": 9,
+  "model_id": "foduucom/stockmarket-future-prediction",
+  "task": "object_detection",
+  "task_name": "目标检测",
+  "reported_result": "AP 0.113%；AP50 0.275%\n金标框粒度不匹配，不宜主精度评测",
+  "reference": "64.9",
+  "model_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/model_index/foduucom/stockmarket-future-prediction",
+  "model_exists_at_build": true,
+  "dataset": {
+    "id": "stock_future_build_chart",
+    "relation": "public_replacement",
+    "split": "test",
+    "note": "Roboflow build_chart v1 public replacement · test · 249 图\n非官方评测集：公开替代"
+  },
+  "environment_id": "detection-yolo",
+  "runner_family": "remaining_detection",
+  "final_result_sources": [
+    {
+      "source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m009/metrics-0.json",
+      "sha256": "73c75fe65fee4a33b903c77ac497ba76927a1b3019fc4fb19fb1f134180d98db",
+      "selection": "workbook_score_match",
+      "data": {
+        "metrics": {
+          "AP": 0.0011300342480882386,
+          "AP50": 0.0027512617766432697,
+          "AP75": 4.701932377502242e-05,
+          "AP_small": null,
+          "AP_medium": null,
+          "AP_large": 0.0017034595099530224,
+          "AR1": 0.0038461538461538464,
+          "AR10": 0.02251177394034537,
+          "AR100": 0.09814364207221352,
+          "AR_small": null,
+          "AR_medium": null,
+          "AR_large": 0.09814364207221352,
+          "per_class_AP": {
+            "DOWN": 0.0018386903977080078,
+            "UP": 0.0004213780984684688
+          }
+        },
+        "unit": "fraction_0_to_1",
+        "coverage": {
+          "model_labels": {
+            "0": "down",
+            "1": "up"
+          },
+          "mapping": {
+            "0": 1,
+            "1": 2
+          },
+          "covered_labels": [
+            "down",
+            "up"
+          ],
+          "missing_labels": [],
+          "covered_count": 2,
+          "total_model_classes": 2,
+          "gt_instances_per_class": {
+            "DOWN": 130,
+            "UP": 196
+          }
+        },
+        "evaluation_images": 249,
+        "annotation_sha256": "6054ce20de8a4274e37db136fa47c6b6e2895949a75ee5441617e79d7e9e274f",
+        "protocol_fingerprint": "4b92c5e8385ea9912773e45374f5bfbe2b631e9eb1b25721fc7aa06e90e0e93a",
+        "reference_check": "not_officially_comparable"
+      },
+      "source_original": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/remaining25_v2/m09-stockmarket-future-prediction/bbox/metrics.json"
+    }
+  ],
+  "code": {
+    "source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/remaining25_v2/_source_snapshot/run_model.py",
+    "sha256": "166c80d5179b72ba36b3c6eef76833b0a97d0428e7556f46b346388e527a549d",
+    "recorded_sha256": null,
+    "attestation": "result_batch_snapshot",
+    "status_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m009/status.json",
+    "selection": "same_batch_snapshot",
+    "archive": "code_archive/166c80d5179b72ba_run_model.py"
+  },
+  "support_files": [
+    "models.json",
+    "run_model.py",
+    "run_ready.sh"
+  ],
+  "final_scorer": null,
+  "backend_package": "remaining_detection_eval",
+  "readiness": "code_and_result_identified",
+  "launch_status": "configured",
+  "metadata_warning": null
+}

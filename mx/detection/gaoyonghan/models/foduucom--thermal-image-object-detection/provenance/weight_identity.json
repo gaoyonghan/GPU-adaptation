@@ -1,0 +1,42 @@
+{
+  "sequence": 47,
+  "files": [
+    {
+      "path": "best.pt",
+      "bytes": 6234040,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "config.json",
+      "bytes": 161,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "events.out.tfevents.1691842091.pcai-B450M-DS3H-V2.133597.2",
+      "bytes": 3856836,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "README.md",
+      "bytes": 6772,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": ".gitattributes",
+      "bytes": 1519,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "image.jpg",
+      "bytes": 660633,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    }
+  ],
+  "mismatches": []
+}

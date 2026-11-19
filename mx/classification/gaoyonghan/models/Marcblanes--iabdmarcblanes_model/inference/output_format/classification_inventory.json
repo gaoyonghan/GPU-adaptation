@@ -1,0 +1,35 @@
+{
+  "schema": "model-eval/classification-inventory/v1",
+  "scope": "Existing 59 classification models; model 93 is retrieval and excluded.",
+  "models": [
+    {
+      "sequence": 78,
+      "model_id": "Marcblanes/iabdmarcblanes_model",
+      "runner_family": "classification7",
+      "adapter": "native_labels",
+      "state": "integrated",
+      "dataset": {
+        "id": "oxford_pets",
+        "relation": "public_replacement",
+        "split": null,
+        "note": "Oxford-IIIT Pet · test · 3669 图\n非官方评测集：公开替代"
+      },
+      "qualification": "public_replacement",
+      "limitations": [
+        "Historical output may contain only Top-1. Missing Top-5 remains unavailable; never reconstruct ranking silently."
+      ],
+      "num_classes": 2,
+      "expected_images": 3669,
+      "categories": [
+        {
+          "id": 0,
+          "name": "cat"
+        },
+        {
+          "id": 1,
+          "name": "dog"
+        }
+      ]
+    }
+  ]
+}

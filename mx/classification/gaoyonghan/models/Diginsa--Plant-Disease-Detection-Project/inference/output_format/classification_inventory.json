@@ -1,0 +1,177 @@
+{
+  "schema": "model-eval/classification-inventory/v1",
+  "scope": "Existing 59 classification models; model 93 is retrieval and excluded.",
+  "models": [
+    {
+      "sequence": 71,
+      "model_id": "Diginsa/Plant-Disease-Detection-Project",
+      "runner_family": "classification8",
+      "adapter": "native_labels",
+      "state": "integrated",
+      "dataset": {
+        "id": "plantvillage",
+        "relation": "public_replacement",
+        "split": null,
+        "note": "PlantVillage color_test · 10709 图\n非官方评测集：公开替代"
+      },
+      "qualification": "public_replacement",
+      "limitations": [],
+      "num_classes": 38,
+      "categories": [
+        {
+          "id": 0,
+          "name": "Apple Apple scab"
+        },
+        {
+          "id": 1,
+          "name": "Apple Black rot"
+        },
+        {
+          "id": 2,
+          "name": "Apple Cedar apple rust"
+        },
+        {
+          "id": 3,
+          "name": "Apple healthy"
+        },
+        {
+          "id": 4,
+          "name": "Blueberry healthy"
+        },
+        {
+          "id": 5,
+          "name": "Cherry (including sour) Powdery mildew"
+        },
+        {
+          "id": 6,
+          "name": "Cherry (including sour) healthy"
+        },
+        {
+          "id": 7,
+          "name": "Corn (maize) Cercospora leaf spot Gray leaf spot"
+        },
+        {
+          "id": 8,
+          "name": "Corn (maize) Common rust "
+        },
+        {
+          "id": 9,
+          "name": "Corn (maize) Northern Leaf Blight"
+        },
+        {
+          "id": 10,
+          "name": "Corn (maize) healthy"
+        },
+        {
+          "id": 11,
+          "name": "Grape Black rot"
+        },
+        {
+          "id": 12,
+          "name": "Grape Esca (Black Measles)"
+        },
+        {
+          "id": 13,
+          "name": "Grape Leaf blight (Isariopsis Leaf Spot)"
+        },
+        {
+          "id": 14,
+          "name": "Grape healthy"
+        },
+        {
+          "id": 15,
+          "name": "Orange Haunglongbing (Citrus greening)"
+        },
+        {
+          "id": 16,
+          "name": "Peach Bacterial spot"
+        },
+        {
+          "id": 17,
+          "name": "Peach healthy"
+        },
+        {
+          "id": 18,
+          "name": "Pepper, bell Bacterial spot"
+        },
+        {
+          "id": 19,
+          "name": "Pepper, bell healthy"
+        },
+        {
+          "id": 20,
+          "name": "Potato Early blight"
+        },
+        {
+          "id": 21,
+          "name": "Potato Late blight"
+        },
+        {
+          "id": 22,
+          "name": "Potato healthy"
+        },
+        {
+          "id": 23,
+          "name": "Raspberry healthy"
+        },
+        {
+          "id": 24,
+          "name": "Soybean healthy"
+        },
+        {
+          "id": 25,
+          "name": "Squash Powdery mildew"
+        },
+        {
+          "id": 26,
+          "name": "Strawberry Leaf scorch"
+        },
+        {
+          "id": 27,
+          "name": "Strawberry healthy"
+        },
+        {
+          "id": 28,
+          "name": "Tomato Bacterial spot"
+        },
+        {
+          "id": 29,
+          "name": "Tomato Early blight"
+        },
+        {
+          "id": 30,
+          "name": "Tomato Late blight"
+        },
+        {
+          "id": 31,
+          "name": "Tomato Leaf Mold"
+        },
+        {
+          "id": 32,
+          "name": "Tomato Septoria leaf spot"
+        },
+        {
+          "id": 33,
+          "name": "Tomato Spider mites Two-spotted spider mite"
+        },
+        {
+          "id": 34,
+          "name": "Tomato Target Spot"
+        },
+        {
+          "id": 35,
+          "name": "Tomato Tomato Yellow Leaf Curl Virus"
+        },
+        {
+          "id": 36,
+          "name": "Tomato Tomato mosaic virus"
+        },
+        {
+          "id": 37,
+          "name": "Tomato healthy"
+        }
+      ],
+      "expected_images": 10709
+    }
+  ]
+}

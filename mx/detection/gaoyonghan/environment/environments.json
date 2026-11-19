@@ -1,0 +1,228 @@
+{
+  "e24": {
+    "path": "/opt/model-envs/e24",
+    "model_sequences": [
+      20,
+      29,
+      49
+    ],
+    "image": "mx-model-envs:20261118",
+    "hardware": "MetaX C500 / MACA",
+    "verification": "passed_smoke_gpu",
+    "image_id": "sha256:c19629cdfd550849dabddcb1b5a0a69ca30703d153c602ba230b5319dac732cf",
+    "dependencies": "e24.txt",
+    "activation": "source /opt/model-envs/e24/bin/activate",
+    "gpu_verified_model_sequences": [
+      20,
+      29,
+      49
+    ]
+  },
+  "e26": {
+    "path": "/opt/model-envs/e26",
+    "model_sequences": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      16,
+      17,
+      18,
+      19,
+      21,
+      22,
+      26,
+      28,
+      30,
+      33,
+      36,
+      37,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      48,
+      50,
+      52,
+      55,
+      56,
+      57,
+      58,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70
+    ],
+    "image": "mx-model-envs:20261118",
+    "hardware": "MetaX C500 / MACA",
+    "verification": "passed_smoke_gpu",
+    "image_id": "sha256:c19629cdfd550849dabddcb1b5a0a69ca30703d153c602ba230b5319dac732cf",
+    "dependencies": "e26.txt",
+    "activation": "source /opt/model-envs/e26/bin/activate",
+    "gpu_verified_model_sequences": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      16,
+      17,
+      18,
+      19,
+      21,
+      22,
+      26,
+      28,
+      30,
+      33,
+      36,
+      37,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      48,
+      50,
+      52,
+      55,
+      56,
+      57,
+      58,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70
+    ]
+  },
+  "e27": {
+    "path": "/opt/model-envs/e27",
+    "model_sequences": [
+      34,
+      47,
+      54,
+      60
+    ],
+    "image": "mx-model-envs:20261118",
+    "hardware": "MetaX C500 / MACA",
+    "verification": "passed_smoke_gpu",
+    "image_id": "sha256:c19629cdfd550849dabddcb1b5a0a69ca30703d153c602ba230b5319dac732cf",
+    "dependencies": "e27.txt",
+    "activation": "source /opt/model-envs/e27/bin/activate",
+    "gpu_verified_model_sequences": [
+      34,
+      47,
+      54,
+      60
+    ]
+  },
+  "e28": {
+    "path": "/opt/model-envs/e28",
+    "model_sequences": [
+      59
+    ],
+    "image": "mx-model-envs:20261118",
+    "hardware": "MetaX C500 / MACA",
+    "verification": "passed_smoke_gpu",
+    "image_id": "sha256:c19629cdfd550849dabddcb1b5a0a69ca30703d153c602ba230b5319dac732cf",
+    "dependencies": "e28.txt",
+    "activation": "source /opt/model-envs/e28/bin/activate",
+    "gpu_verified_model_sequences": [
+      59
+    ]
+  },
+  "e29": {
+    "path": "/opt/model-envs/e29",
+    "model_sequences": [
+      23
+    ],
+    "image": "mx-model-envs:20261118",
+    "hardware": "MetaX C500 / MACA",
+    "verification": "passed_smoke_gpu",
+    "image_id": "sha256:c19629cdfd550849dabddcb1b5a0a69ca30703d153c602ba230b5319dac732cf",
+    "dependencies": "e29.txt",
+    "activation": "source /opt/model-envs/e29/bin/activate",
+    "gpu_verified_model_sequences": [
+      23
+    ]
+  },
+  "e30": {
+    "path": "/opt/model-envs/e30",
+    "model_sequences": [
+      27
+    ],
+    "image": "mx-model-envs:20261118",
+    "hardware": "MetaX C500 / MACA",
+    "verification": "passed_smoke_gpu",
+    "image_id": "sha256:c19629cdfd550849dabddcb1b5a0a69ca30703d153c602ba230b5319dac732cf",
+    "dependencies": "e30.txt",
+    "activation": "source /opt/model-envs/e30/bin/activate",
+    "gpu_verified_model_sequences": [
+      27
+    ]
+  },
+  "e31": {
+    "path": "/opt/model-envs/e31",
+    "model_sequences": [
+      53
+    ],
+    "image": "mx-model-envs:20261118",
+    "hardware": "MetaX C500 / MACA",
+    "verification": "passed_smoke_gpu",
+    "image_id": "sha256:c19629cdfd550849dabddcb1b5a0a69ca30703d153c602ba230b5319dac732cf",
+    "dependencies": "e31.txt",
+    "activation": "source /opt/model-envs/e31/bin/activate",
+    "gpu_verified_model_sequences": [
+      53
+    ]
+  },
+  "e32": {
+    "path": "/opt/model-envs/e32",
+    "model_sequences": [
+      39
+    ],
+    "image": "mx-model-envs:20261118",
+    "hardware": "MetaX C500 / MACA",
+    "verification": "passed_smoke_gpu",
+    "image_id": "sha256:c19629cdfd550849dabddcb1b5a0a69ca30703d153c602ba230b5319dac732cf",
+    "dependencies": "e32.txt",
+    "activation": "source /opt/model-envs/e32/bin/activate",
+    "gpu_verified_model_sequences": [
+      39
+    ]
+  }
+}

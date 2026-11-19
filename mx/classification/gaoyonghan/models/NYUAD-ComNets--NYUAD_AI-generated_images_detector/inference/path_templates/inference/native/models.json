@@ -1,0 +1,105 @@
+{
+  "sequence": 72,
+  "model_id": "NYUAD-ComNets/NYUAD_AI-generated_images_detector",
+  "model_key": "72-nyuad-ai-detector",
+  "task_type": "image-classification",
+  "model_directory": "__MODEL_ROOT__/weights/NYUAD-ComNets/NYUAD_AI-generated_images_detector",
+  "hf_revision": "b0a2e665f6e40164436cae6c0c95e7e4386f7684",
+  "model_card": "https://huggingface.co/NYUAD-ComNets/NYUAD_AI-generated_images_detector",
+  "paper": "https://ssrn.com/abstract=5029893",
+  "official_code": "模型卡的 transformers.pipeline('image-classification') 示例；未定位可复用的原始验证集清单和端到端 evaluator。",
+  "weight_relationship": "直接加载作者发布的 ViTForImageClassification safetensors，未转换或替换权重。",
+  "files": {
+    "model.safetensors": "b0eb0ba578897f59d009b4eaa7a308eb5ca56a6c27e7d51a32d4eafcbe4a223a",
+    "config.json": "0a6b8fc9f9770c8d20b00d8dd71adc691f0cb6af44a7482f7945b780c33af6e9",
+    "preprocessor_config.json": "5e6895a8a80efa00a98656b6c24d202d7582614ceea87aa122f861120dc833c0",
+    "README.md": "d8e5cf11cebf012ba34404d3934a9aac18ded7fe1fccae49d8641aaaada56aac"
+  },
+  "labels": [
+    "dalle",
+    "real",
+    "sd"
+  ],
+  "dataset": {
+    "name": "Synthbuster DALL-E 3 + SDXL / RAISE-TIFF x300",
+    "dataset_relation": "public_replacement",
+    "split": "固定三类平衡子集，900 图；不等同于完整 Synthbuster 或 RAISE-1k",
+    "images": 900,
+    "class_counts": {
+      "dalle": 300,
+      "real": 300,
+      "sd": 300
+    },
+    "group_order": [
+      "dalle3",
+      "real",
+      "stable-diffusion-xl"
+    ],
+    "mapping": {
+      "dalle3": 0,
+      "real": 1,
+      "stable-diffusion-xl": 2
+    },
+    "selection": "每组按 SHA256(ZIP member UTF-8) 升序取前 300；按 dalle/real/sd 轮流排列。真实归档实际有 300 张可读图（不是清单旧备注的 303 张），全部使用。",
+    "selection_reason": "采用论文提到的 DALL-E 3 与 SDXL 生成器家族，但图片、划分和真实图来源均不同；其他生成器不混入本轮三分类。",
+    "selected_index_sha256": "52d98c459c497f9769a6c41b1be00005afc559a9dbb9dbe063d5f7f8840250c2",
+    "archives": {
+      "synthbuster": {
+        "path": "__DATASET_ROOT__/synthbuster_eval/synthbuster.zip",
+        "size": 12388378400
+      },
+      "raise": {
+        "path": "__DATASET_ROOT__/raise_tiff_x300_kaggle/raise_tiff_x300_kaggle.zip",
+        "size": 6809399059
+      }
+    },
+    "source_urls": [
+      "https://doi.org/10.5281/zenodo.10066460",
+      "https://loki.disi.unitn.it/RAISE/download.html"
+    ],
+    "license_note": "沿用下载清单的非商业科研/教育限制；不打包分发图片。"
+  },
+  "preprocess": "直接读取作者 preprocessor_config.json：RGB，双线性 resize 224×224，乘 1/255，mean/std 各 [0.5,0.5,0.5]；无额外裁剪或增强；use_fast=False。",
+  "inference": {
+    "dtype": "float32",
+    "batch_size": 1,
+    "device": "CUDA",
+    "attention": "eager",
+    "tf32": false,
+    "postprocess": "官方 image-classification pipeline softmax；按 config.id2label 映射；argmax 三分类，不自行设真假阈值。"
+  },
+  "evaluator": "scikit-learn 1.5.2 accuracy_score, f1_score, roc_auc_score(ovr,macro), confusion_matrix；由适配器汇总，不声称作者原始 evaluator。",
+  "official_reference": {
+    "accuracy_percent": 97.36,
+    "loss": 0.0987,
+    "split": "作者未提供可复用测试清单的原验证集",
+    "comparison": "not_officially_comparable",
+    "delta": null
+  },
+  "fidelity": "reference_baseline",
+  "dataset_relation": "public_replacement",
+  "case_type": "special",
+  "special_tags": [
+    "dataset_replacement",
+    "label_mapping_required",
+    "official_evaluator_missing",
+    "framework_numeric_difference"
+  ],
+  "known_differences": [
+    "采用公开替代集，不复现官方 97.36%。",
+    "模型 config 记录 Transformers 4.39.3；本地复用已配置的 4.50.0，显式 eager attention、FP32 和慢图像处理器。",
+    "原生三分类保持不变；不能套用 95 号模型的真假二分类指标。"
+  ],
+  "environment": {
+    "torch": "2.5.1+cu121",
+    "torchvision": "0.20.1+cu121",
+    "transformers": "4.50.0",
+    "numpy": "1.26.4",
+    "Pillow": "11.1.0",
+    "scikit-learn": "1.5.2",
+    "safetensors": "0.5.3",
+    "huggingface-hub": "0.29.3"
+  },
+  "status": "not_started",
+  "next_action": "10 图验证后，由用户一键运行固定 900 图替代评测集。"
+}

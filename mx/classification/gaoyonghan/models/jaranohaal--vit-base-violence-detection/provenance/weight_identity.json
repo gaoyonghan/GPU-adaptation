@@ -1,0 +1,42 @@
+{
+  "sequence": 94,
+  "files": [
+    {
+      "path": "model.safetensors",
+      "bytes": 343214896,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "pytorch_model.bin",
+      "bytes": 343259818,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "config.json",
+      "bytes": 523,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "preprocessor_config.json",
+      "bytes": 580,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1736,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": ".gitattributes",
+      "bytes": 1519,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    }
+  ],
+  "mismatches": []
+}

@@ -1,0 +1,57 @@
+--- original_inference.py
++++ inference/native/run_batch8.py
+@@ -12,10 +12,10 @@
+ from pathlib import Path
+ 
+ HERE = Path(__file__).resolve().parent
+-sys.path.insert(0, str(HERE / '_deps'))
+-DATA = Path('/data2/gaoyonghan/gpu/dataset/supplemental_20260905/model30/test-00000-of-00001.parquet')
+-WEIGHTS = Path('/data2/gaoyonghan/gpu/model/yainage90/fashion-object-detection')
+-OUTPUT = Path('/home/ubuntu/gaoyonghan/gpu/results/remaining25_supplemental_20260905/m30-author-test5544-author-batch8')
++sys.path.insert(0, str(HERE / '_m30_deps'))
++DATA = Path('/home/ubuntu/文档/ChatGPT/idea 2/outputs/launch_audit_20261005/migration_inputs/datasets/supplemental_20260905/model30/test-00000-of-00001.parquet')
++WEIGHTS = Path('/data2/gaoyonghan/gpu_model_standalone_20261110/release/model/检测/yainage90--fashion-object-detection/resources/model_index/yainage90/fashion-object-detection')
++OUTPUT = Path('/data2/gaoyonghan/gpu_model_standalone_20261110/release/model/检测/yainage90--fashion-object-detection/results/run_001/m030')
+ LABELS = ['bag', 'bottom', 'dress', 'hat', 'outer', 'shoes', 'top']
+ 
+ 
+@@ -66,7 +66,7 @@
+                 'dataset_path': str(DATA), 'dataset_sha256': sha(DATA), 'weight_sha256': sha(WEIGHTS / 'model.safetensors'),
+                 'source_commit': '76c1dcd166ebae50bd1cad5ed1bbf3417e2fcc7c', 'runner_sha256': sha(__file__),
+                 'labels': LABELS, 'confidence_threshold': 0.0, 'nms': None, 'num_queries': 300, 'processor_top_k': 100, 'prediction_limit': 100,
+-                'device': 'cuda:1', 'dtype': 'float32', 'batch_size': 8, 'versions': versions,
++                'device': 'cuda:0', 'dtype': 'float32', 'batch_size': 8, 'versions': versions,
+                 'validation_transform': 'Albumentations1.4.18 Compose([NoOp()], BboxParams(format=coco,label_fields=category,clip=True))',
+                 'target_processing': 'author processor labels normalized cxcywh -> center_to_corners_format -> original width/height; area from restored bbox',
+                 'pixel_mask': 'removed as in author train_model.ipynb', 'batch_order': 'Parquet row order, consecutive groups of8, all final rows retained', 'evaluation_coordinate_frame': 'Both predicted and target normalized boxes on padded canvas restored with each original H/W exactly as author; may differ from physical original-image pixels', 'evaluator': 'Torchmetrics1.4.1 MeanAveragePrecision(xyxy,class_metrics=True)',
+@@ -116,8 +116,8 @@
+         model, loading = AutoModelForObjectDetection.from_pretrained(WEIGHTS, config=config, local_files_only=True, output_loading_info=True)
+         assert not any(loading.get(k) for k in ['missing_keys', 'unexpected_keys', 'mismatched_keys', 'error_msgs']), loading
+         assert [model.config.id2label[i] for i in range(7)] == LABELS
+-        model.eval().to(device='cuda:1', dtype=torch.float32)
+-        torch.cuda.reset_peak_memory_stats('cuda:1')
++        model.eval().to(device='cuda:0', dtype=torch.float32)
++        torch.cuda.reset_peak_memory_stats('cuda:0')
+         write(OUTPUT / 'loading_info.json', loading)
+         validation = A.Compose([A.NoOp()], bbox_params=A.BboxParams(format='coco', label_fields=['category'], clip=True))
+         pred_path = OUTPUT / 'predictions.jsonl'
+@@ -147,8 +147,8 @@
+                 inputs.pop('pixel_mask', None)
+                 padded_shape = list(inputs['pixel_values'].shape)
+                 with torch.inference_mode():
+-                    outputs = model(**{k: v.to('cuda:1') for k, v in inputs.items()})
+-                results = processor.post_process_object_detection(outputs, threshold=0.0, target_sizes=torch.tensor([[row['height'], row['width']] for row in batch_rows], device='cuda:1'))
++                    outputs = model(**{k: v.to('cuda:0') for k, v in inputs.items()})
++                results = processor.post_process_object_detection(outputs, threshold=0.0, target_sizes=torch.tensor([[row['height'], row['width']] for row in batch_rows], device='cuda:0'))
+                 for image_id, row, target, result in zip(batch_ids, batch_rows, targets, results):
+                     if image_id in existing:
+                         continue
+@@ -200,7 +200,7 @@
+         finite(scores)
+         write(OUTPUT / 'metrics.json', scores)
+         status.update(state='complete' if max_images == 0 else 'smoke_complete', smoke_passed=True, completed_images=len(records),
+-                      elapsed_seconds=time.time()-began, peak_gpu_memory_bytes=torch.cuda.max_memory_allocated('cuda:1'),
++                      elapsed_seconds=time.time()-began, peak_gpu_memory_bytes=torch.cuda.max_memory_allocated('cuda:0'),
+                       predictions_sha256=sha(pred_path), metrics=scores)
+         write(status_path, status)
+         print('FINISHED', status['state'], scores['map'], flush=True)

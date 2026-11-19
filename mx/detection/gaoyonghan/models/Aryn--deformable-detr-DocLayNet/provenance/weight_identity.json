@@ -1,0 +1,54 @@
+{
+  "sequence": 19,
+  "files": [
+    {
+      "path": "model.safetensors",
+      "bytes": 164653696,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "config.json",
+      "bytes": 1822,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "preprocessor_config.json",
+      "bytes": 300,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4551,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": ".gitattributes",
+      "bytes": 1519,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "examples/doclaynet_example_1.png",
+      "bytes": 403143,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "examples/doclaynet_example_3.png",
+      "bytes": 527247,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "examples/doclaynet_example_2.png",
+      "bytes": 187660,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    }
+  ],
+  "mismatches": []
+}

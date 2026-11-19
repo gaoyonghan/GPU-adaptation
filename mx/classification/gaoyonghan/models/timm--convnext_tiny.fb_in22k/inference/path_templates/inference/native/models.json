@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "sources": {
+    "timm": {
+      "path": "__MODEL_ROOT__/resources/runtime/assets/workspace/171-200/inference_code/pytorch-image-models",
+      "commit": "986e7215e187d850d6bc975b13056675a9fa7885"
+    }
+  },
+  "models": [
+    {
+      "sequence": 200,
+      "model_id": "timm/convnext_tiny.fb_in22k",
+      "model_path": "__MODEL_ROOT__/weights/timm/convnext_tiny.fb_in22k",
+      "revision": "342f2588bb2ea79d793d0712c9be16ec6ae0149a",
+      "task_type": "image-classification",
+      "status": "not_started",
+      "official_model_card": "https://huggingface.co/timm/convnext_tiny.fb_in22k",
+      "official_reference": {
+        "source": "https://huggingface.co/timm/convnext_tiny.fb_in22k",
+        "local_card_sha256": "b0b9b0c7e83802c03318f1870977a9f8de9b9b831db3af214c88eb74a1e95b29",
+        "model_index": null,
+        "text_report_values": null,
+        "units": "fractions for extracted accuracy/F1; original model-index units as published",
+        "comparison": "Manual protocol review required; no automatic drop calculation",
+        "note": "No unambiguous numeric reference for this exact checkpoint was extracted from the frozen card."
+      },
+      "reference_comparison": "manual_reference_required",
+      "known_differences": [
+        "Keep full model output head. Not an independent original model test set.",
+        "Native publisher evaluator retained; historical author environment/complete reporting protocol not established, so exact_official is not claimed.",
+        "Local checkpoint and publisher inference components retained. Offline file paths, eval mode, batching, timing observation and reference scoring are external orchestration."
+      ],
+      "config": {
+        "architecture": "convnext_tiny",
+        "num_classes": 21841,
+        "num_features": 768,
+        "pretrained_cfg": {
+          "tag": "fb_in22k",
+          "custom_load": false,
+          "input_size": [
+            3,
+            224,
+            224
+          ],
+          "fixed_input_size": false,
+          "interpolation": "bicubic",
+          "crop_pct": 0.875,
+          "crop_mode": "center",
+          "mean": [
+            0.485,
+            0.456,
+            0.406
+          ],
+          "std": [
+            0.229,
+            0.224,
+            0.225
+          ],
+          "num_classes": 21841,
+          "pool_size": [
+            7,
+            7
+          ],
+          "first_conv": "stem.0",
+          "classifier": "head.fc"
+        }
+      },
+      "preprocessing": {
+        "tag": "fb_in22k",
+        "custom_load": false,
+        "input_size": [
+          3,
+          224,
+          224
+        ],
+        "fixed_input_size": false,
+        "interpolation": "bicubic",
+        "crop_pct": 0.875,
+        "crop_mode": "center",
+        "mean": [
+          0.485,
+          0.456,
+          0.406
+        ],
+        "std": [
+          0.229,
+          0.224,
+          0.225
+        ],
+        "num_classes": 21841,
+        "pool_size": [
+          7,
+          7
+        ],
+        "first_conv": "stem.0",
+        "classifier": "head.fc"
+      },
+      "architecture": "convnext_tiny",
+      "files": {
+        "model.safetensors": {
+          "size": 178481432,
+          "sha256": "2b40f8d53b566a8c08c0c75f93ff5ac6fa33bd213afb27ee40766af7ffe5943b"
+        },
+        "config.json": {
+          "size": 572,
+          "sha256": "0c8956c39cfa27a4d63584ebae906e30639804f99092e4afb1467c7c06e65184"
+        },
+        "README.md": {
+          "size": 15612,
+          "sha256": "b0b9b0c7e83802c03318f1870977a9f8de9b9b831db3af214c88eb74a1e95b29"
+        }
+      },
+      "weight": "model.safetensors",
+      "backend": "timm_native",
+      "environment": "shared_hf",
+      "dataset_relation": "public_replacement",
+      "split": "ImageNet-1K val overlap 999 classes",
+      "excluded_source_labels": {},
+      "images": 49950,
+      "covered_target_classes": 999,
+      "num_output_classes": 21841,
+      "label_mapping": {},
+      "scoring": "native",
+      "evaluator": "timm.validate",
+      "fidelity": "reference_baseline",
+      "case_type": "special",
+      "special_tags": [
+        "framework_numeric_difference",
+        "dataset_replacement"
+      ],
+      "inference_entry": "publisher_transformers_model_and_processor",
+      "default_batch_size": 1,
+      "dtype": "float32",
+      "warmup_batches": 10,
+      "index": "__MODEL_ROOT__/inference/native/indices/200.jsonl",
+      "index_sha256": "edf486de0019292d53244b2fdc241746b79b77f1765c29dee4f0eabb07828938",
+      "data_containers": {},
+      "class_map": "__DATASET_ROOT__/datasets_171_200/imagenet_overlap_200/native_class_map.txt",
+      "class_map_sha256": "0ae24538751973797b29d8dec412b2bdc61bc4ec3ecd081eba0735804236bbd2",
+      "protocol_fingerprint": "e65b8d1d2c14a1f3006107cd1c1ad1f477e7fcaea6cdcabdc9ed8dd675fad0ba"
+    }
+  ],
+  "runtime_defaults": {
+    "batch_size": 1,
+    "device": "cuda:0",
+    "warmup_batches": 10,
+    "workers": 2
+  },
+  "scope": "Each published model retained; 177 includes all five weights; no full GPU inference launched by preparation."
+}

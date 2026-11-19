@@ -1,0 +1,139 @@
+{
+  "sequence": 90,
+  "model_id": "touchtech/fashion-images-gender-age-vit-large-patch16-224-in21k-v2",
+  "task": "image_classification",
+  "task_name": "图像分类",
+  "reported_result": "Accuracy：38.00%（五类各10张）\n女成人/女童/男成人/男童：0/40/30/30%；pack：90%\nCPU前向 12.37 秒；总 17.83 秒",
+  "reference": "未核实对应模型卡指标",
+  "model_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/model_index/touchtech/fashion-images-gender-age-vit-large-patch16-224-in21k-v2",
+  "model_exists_at_build": true,
+  "dataset": {
+    "id": "fashion_age_proxy",
+    "relation": null,
+    "split": null,
+    "note": "PA-100K test（监控图，四个人物类别各10张）\nImageNet-1k val（无人物服饰10张，pack）\n替代集，非官方可比"
+  },
+  "environment_id": "detection-hf",
+  "runner_family": "special",
+  "final_result_sources": [
+    {
+      "source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m090/metrics-0.json",
+      "sha256": "f2393b7d4ed0381a23e20b0d0d4f6c1227acd5a212207fa17c9a2de23ed53494",
+      "selection": "latest_replacement_run",
+      "data": {
+        "model_number": 90,
+        "model_id": "touchtech/fashion-images-gender-age-vit-large-patch16-224-in21k-v2",
+        "dataset": "PA-100K test + manually selected ImageNet-1k val garment-only images",
+        "images": 50,
+        "per_class": {
+          "model-female-adult": {
+            "n": 10,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "model-female-child": {
+            "n": 10,
+            "correct": 4,
+            "accuracy": 0.4
+          },
+          "model-male-adult": {
+            "n": 10,
+            "correct": 3,
+            "accuracy": 0.3
+          },
+          "model-male-child": {
+            "n": 10,
+            "correct": 3,
+            "accuracy": 0.3
+          },
+          "pack": {
+            "n": 10,
+            "correct": 9,
+            "accuracy": 0.9
+          }
+        },
+        "accuracy": 0.38,
+        "confusion_matrix": [
+          [
+            0,
+            2,
+            0,
+            1,
+            7
+          ],
+          [
+            0,
+            4,
+            0,
+            3,
+            3
+          ],
+          [
+            0,
+            0,
+            3,
+            0,
+            7
+          ],
+          [
+            0,
+            0,
+            0,
+            3,
+            7
+          ],
+          [
+            1,
+            0,
+            0,
+            0,
+            9
+          ]
+        ],
+        "device": "cpu",
+        "load_seconds": 5.295990801998414,
+        "forward_seconds": 12.366446016996633,
+        "data_preprocess_seconds": 0.16296176200557966,
+        "total_seconds": 17.82799582000007,
+        "scope": "50-image balanced diagnostic proxy; surveillance person images vs studio-fashion model; pack uses selected isolated garment images",
+        "officially_comparable": false,
+        "manifest_sha256": "a0f198d106fda55fc9d741994c3be40e9475a6c47dc3b8715b5593c3b397aab9",
+        "predictions_sha256": "1e8034c0ba4220c3bb6182edc552eddf784afb1e7316fcd30735de73aa2d19d8"
+      },
+      "source_original": "/home/ubuntu/Documents/Codex/2026-09-27/codex-threads-01a0de0e-9d72-7fc0-b485/work/m90_proxy/metrics.json"
+    }
+  ],
+  "code": {
+    "source": "/home/ubuntu/Documents/Codex/2026-09-27/codex-threads-01a0de0e-9d72-7fc0-b485/work/eval_m90_proxy.py",
+    "sha256": "7d5d31a44b605fefd36fa19df3cc43cfa65e297f13e7cce0929ba1762b5c2432",
+    "recorded_sha256": null,
+    "attestation": "current_code_unverified",
+    "status_source": null,
+    "selection": "latest_local_replacement_code",
+    "archive": "code_archive/7d5d31a44b605fef_eval_m90_proxy.py"
+  },
+  "support_files": [
+    "build_100_model_results.mjs",
+    "eval_imagenet1k_to_22k.py",
+    "preview_workbook.mjs",
+    "audit_workbook.py",
+    "eval_m76_local.py",
+    "eval_m90_proxy.py"
+  ],
+  "final_scorer": null,
+  "backend_package": "classification8_eval",
+  "readiness": "code_and_result_identified",
+  "launch_status": "configured",
+  "metadata_warning": null,
+  "evaluation_protocol": {
+    "id": "fashion_age_balanced_proxy50_v1",
+    "scope": "PA-100K人物图与ImageNet服饰图组成的五类各10张代理集",
+    "expected_inference_images": 50,
+    "expected_scored_images": 50,
+    "metrics_path": "metrics.json",
+    "official_reference_comparable": false,
+    "limitations": [
+      "监控人物图与服饰模型存在域差异；不是作者正式测试集"
+    ]
+  }
+}

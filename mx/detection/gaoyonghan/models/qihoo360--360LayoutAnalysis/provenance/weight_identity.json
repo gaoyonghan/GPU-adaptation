@@ -1,0 +1,126 @@
+{
+  "sequence": 41,
+  "files": [
+    {
+      "path": "LICENSE.txt",
+      "bytes": 9185,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "jiaocai-8n.pt",
+      "bytes": 6246105,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "config.json",
+      "bytes": 0,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "README.md",
+      "bytes": 8225,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "paper-8n.pt",
+      "bytes": 6232494,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": ".gitattributes",
+      "bytes": 1627,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "360LayoutAnalysis开源模型许可证.txt",
+      "bytes": 5820,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "README_EN.md",
+      "bytes": 6404,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "general6-8n.pt",
+      "bytes": 6232750,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "publaynet-8n.pt",
+      "bytes": 6234670,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "report-8n.pt",
+      "bytes": 6232174,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "weights/paper-8n.pt",
+      "bytes": 6232494,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "weights/report-8n.pt",
+      "bytes": 6232174,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "case/publaynet/case2.jpg",
+      "bytes": 70617,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "case/publaynet/case1.jpg",
+      "bytes": 68341,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "case/publaynet/.gitignore",
+      "bytes": 0,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "case/paper/1.jpg",
+      "bytes": 641206,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "case/paper/2.jpg",
+      "bytes": 520807,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "case/report/1.jpg",
+      "bytes": 2851106,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "case/report/2.jpg",
+      "bytes": 2874195,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    }
+  ],
+  "mismatches": []
+}

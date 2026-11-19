@@ -1,0 +1,22 @@
+{
+  "sequence": 197,
+  "model_id": "arize-ai/resnet-50-fashion-mnist-quality-drift",
+  "source_archive_hash_matches": true,
+  "source_archive_sha256": "8b61859273a256a4401a98181b66a0b3a487793a85c3fcf7d1f84491e2e0d5c1",
+  "prepared_entry_source_sha256": "cec9cca663bdfa14db07efd7a9d89bdd49a0cb8fa759d4ac9476f1aeeee25a2c",
+  "local_entry_sha256": "33524a897ec84791dc9c68ec18092cab3094ceee6776f8562ef306fb539b6a22",
+  "local_entry": "inference/native/run_model.py",
+  "central_dispatch_in_entry": false,
+  "unexpected_external_links": [],
+  "declared_dataset_links": [],
+  "broken_links": [],
+  "path_template_count": 212,
+  "state": "entrypoint_verified_full_run_pending",
+  "validation": {
+    "returncode": 0,
+    "python": "/home/ubuntu/gaoyonghan/gpu/classification8_eval/.venv/bin/python",
+    "checked_at": "2026-11-10T15:57:54.989098+08:00",
+    "scope": "native help/import/path check only; not full inference"
+  },
+  "smoke_verification": null
+}

@@ -1,0 +1,89 @@
+{
+  "sequence": 17,
+  "model_id": "TahaDouaji/detr-doc-table-detection",
+  "task": "object_detection",
+  "task_name": "目标检测",
+  "reported_result": "65.6480456673587",
+  "reference": "未给该微调权重的对应指标",
+  "model_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/model_index/TahaDouaji/detr-doc-table-detection",
+  "model_exists_at_build": true,
+  "dataset": {
+    "id": "ctdar_tracka_test",
+    "relation": "original_protocol_incomplete",
+    "split": "official test",
+    "note": "ICDAR2019 cTDaR Track A · test · 439 图\n同源数据：官方评测划分待核实"
+  },
+  "environment_id": "detection-hf",
+  "runner_family": "remaining_detection",
+  "final_result_sources": [
+    {
+      "source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m017/metrics-0.json",
+      "sha256": "64bfba105a0284cb22ef716b02555275e975c4af7a85054baaade78d61466a4b",
+      "selection": "workbook_score_match",
+      "data": {
+        "metrics": {
+          "AP": 0.6564804566735873,
+          "AP50": 0.7941992297524701,
+          "AP75": 0.737680819669807,
+          "AP_small": null,
+          "AP_medium": 0.0,
+          "AP_large": 0.6613215872275734,
+          "AR1": 0.4777622377622378,
+          "AR10": 0.7650349650349649,
+          "AR100": 0.8180419580419581,
+          "AR_small": null,
+          "AR_medium": 0.0,
+          "AR_large": 0.8238028169014084,
+          "per_class_AP": {
+            "table": 0.6564804566735873
+          }
+        },
+        "unit": "fraction_0_to_1",
+        "coverage": {
+          "model_labels": {
+            "0": "table",
+            "1": "table"
+          },
+          "mapping": {
+            "0": 1,
+            "1": 1
+          },
+          "covered_labels": [
+            "table"
+          ],
+          "missing_labels": [],
+          "covered_count": 1,
+          "total_model_classes": 1,
+          "gt_instances_per_class": {
+            "table": 715
+          }
+        },
+        "evaluation_images": 439,
+        "annotation_sha256": "775737347a769fe2833031fdbb3c0e3d01b0b66831085b02664695418bdc8f0c",
+        "protocol_fingerprint": "39d6f11e76694b25034eeec5a5cf9dbb2813d634cca9fb54ec6ea7d38b896f96",
+        "reference_check": "not_officially_comparable"
+      },
+      "source_original": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/remaining25_v3/m17-detr-doc-table-detection/ctdar/metrics.json"
+    }
+  ],
+  "code": {
+    "source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/remaining25_v3/_source_snapshot/run_model.py",
+    "sha256": "79a11b48aadcd2cf5a4d733f752e1dcee2c260e778b9de2a0c787628cbe0c744",
+    "recorded_sha256": null,
+    "attestation": "result_batch_snapshot",
+    "status_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m017/status.json",
+    "selection": "same_batch_snapshot",
+    "archive": "code_archive/79a11b48aadcd2cf_run_model.py"
+  },
+  "support_files": [
+    "models.json",
+    "run_model.py",
+    "run_adapted.sh",
+    "adapters.py"
+  ],
+  "final_scorer": null,
+  "backend_package": "remaining_detection_eval",
+  "readiness": "code_and_result_identified",
+  "launch_status": "configured",
+  "metadata_warning": null
+}

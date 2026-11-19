@@ -1,0 +1,87 @@
+{
+  "sequence": 100,
+  "model_id": "facebook/convnext-base-224-22k",
+  "task": "image_classification",
+  "task_name": "图像分类",
+  "reported_result": "22k全类别 Top-1：57.38%\n限定映射999类 Top-1：83.76%\nCPU前向 435.94 秒；总 518.94 秒",
+  "reference": "未核实对应模型卡指标",
+  "model_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/model_index/facebook/convnext-base-224-22k",
+  "model_exists_at_build": true,
+  "dataset": {
+    "id": "imagenet1k_to22k",
+    "relation": null,
+    "split": null,
+    "note": "ImageNet-1k val → ImageNet-22k\n999类×5张＝4995张；替代集，非官方可比"
+  },
+  "environment_id": "detection-hf",
+  "runner_family": "special",
+  "final_result_sources": [
+    {
+      "source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m100/metrics-0.json",
+      "sha256": "0d73bc5ce89a5b516432660b389dbbf51e1dee7f5286b3456b187db711d30d48",
+      "selection": "latest_replacement_run",
+      "data": {
+        "model_number": 100,
+        "model_id": "facebook/convnext-base-224-22k",
+        "dataset": "ILSVRC2012 val",
+        "source_zip": "/data2/gaoyonghan/model inference for GPU adaptation/dataset/ImageNet/imagenet-object-localization-challenge.zip",
+        "scope": "ImageNet-1k mapped to ImageNet-22k head",
+        "total_1k_classes": 1000,
+        "mapped_classes": 999,
+        "unmapped_synsets": [
+          "n04399382"
+        ],
+        "images": 4995,
+        "per_class_limit": 5,
+        "global_top1": 0.5737737737737738,
+        "restricted_top1": 0.8376376376376377,
+        "global_top5": 0.8498498498498499,
+        "restricted_top5": 0.9711711711711711,
+        "device": "cpu",
+        "load_seconds": 0.9361331310064998,
+        "forward_seconds": 435.9411670380796,
+        "data_preprocess_seconds": 66.75529787683627,
+        "total_seconds": 518.9363321199926,
+        "model_file_size": null,
+        "predictions_sha256": "3a7a0dfd7d98db4f6a60aef87961a419bce6cd257eca8e9ab534f707f36e56da",
+        "officially_comparable": false
+      },
+      "source_original": "/home/ubuntu/Documents/Codex/2026-09-27/codex-threads-01a0de0e-9d72-7fc0-b485/work/m100_imagenet1k_proxy_5/metrics.json"
+    }
+  ],
+  "code": {
+    "source": "/home/ubuntu/Documents/Codex/2026-09-27/codex-threads-01a0de0e-9d72-7fc0-b485/work/eval_imagenet1k_to_22k.py",
+    "sha256": "775bd9641379a8ab12cd5d794d69758d40af269098cde6f132f2bf7384c41eda",
+    "recorded_sha256": null,
+    "attestation": "current_code_unverified",
+    "status_source": null,
+    "selection": "latest_local_replacement_code",
+    "archive": "code_archive/775bd9641379a8ab_eval_imagenet1k_to_22k.py"
+  },
+  "support_files": [
+    "build_100_model_results.mjs",
+    "eval_imagenet1k_to_22k.py",
+    "preview_workbook.mjs",
+    "audit_workbook.py",
+    "eval_m76_local.py",
+    "eval_m90_proxy.py"
+  ],
+  "final_scorer": null,
+  "backend_package": "classification8_eval",
+  "readiness": "code_and_result_identified",
+  "launch_status": "configured",
+  "metadata_warning": null,
+  "evaluation_protocol": {
+    "id": "imagenet1k_to22k_999x5_v1",
+    "scope": "ImageNet-1k验证集映射到22K输出；999类×5张",
+    "expected_inference_images": 4995,
+    "expected_scored_images": 4995,
+    "metrics_path": "metrics.json",
+    "official_reference_comparable": false,
+    "limitations": [
+      "分别记录全输出类别与受限999类Top1/Top5；不是完整ImageNet-22K评测",
+      "未映射的n04399382不参与评分"
+    ],
+    "per_class_limit": 5
+  }
+}

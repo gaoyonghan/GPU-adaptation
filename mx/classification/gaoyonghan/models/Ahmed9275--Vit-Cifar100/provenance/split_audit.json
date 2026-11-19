@@ -1,0 +1,24 @@
+{
+  "model": "Ahmed9275/Vit-Cifar100",
+  "prior_preserved_runner_sha256": "e4beb974a824f0bc5b466f5ef7d0a482cab7aa725c4b31f4db0972573941e9a7",
+  "single_model_runner_sha256": "ac45e502bf8e04f463481e7fe447755ce11301a1113fb91e3bb198fbfad7607c",
+  "removed_functions": [
+    "js_run",
+    "native_timm",
+    "native_yolo"
+  ],
+  "retained_functions": [
+    "environment",
+    "gpu_snapshot",
+    "check",
+    "score",
+    "journal_records",
+    "hf_run",
+    "run_one",
+    "main"
+  ],
+  "original_infer_body_ast_equal": true,
+  "original_post_load_inference_and_scoring_ast_equal": true,
+  "original_model_card_script": false,
+  "source": "Our historically verified multi-model runner, specialized for model 195"
+}

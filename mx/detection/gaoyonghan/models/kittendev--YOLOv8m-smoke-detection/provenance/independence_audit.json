@@ -1,0 +1,22 @@
+{
+  "sequence": 58,
+  "model_id": "kittendev/YOLOv8m-smoke-detection",
+  "source_archive_hash_matches": true,
+  "source_archive_sha256": "166c80d5179b72ba36b3c6eef76833b0a97d0428e7556f46b346388e527a549d",
+  "prepared_entry_source_sha256": "87c8805a26a16d1a80ccdbefb62d51ccb830bb5671d7a679ee25c2e82d4279ad",
+  "local_entry_sha256": "9e337114dae2375f33fbf52d7f5b6534d318d408aaa5194d098b1c369816f476",
+  "local_entry": "inference/native/run_model.py",
+  "central_dispatch_in_entry": false,
+  "unexpected_external_links": [],
+  "declared_dataset_links": [],
+  "broken_links": [],
+  "path_template_count": 404,
+  "state": "entrypoint_verified_full_run_pending",
+  "validation": {
+    "returncode": 0,
+    "python": "/home/ubuntu/文档/ChatGPT/idea 2/outputs/launch_audit_20261005/.venv-cu124/bin/python",
+    "checked_at": "2026-11-10T15:53:54.795965+08:00",
+    "scope": "native help/import/path check only; not full inference"
+  },
+  "smoke_verification": null
+}

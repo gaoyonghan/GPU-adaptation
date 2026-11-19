@@ -1,0 +1,581 @@
+{
+  "171": {
+    "source": "https://huggingface.co/dima806/closed_eyes_image_detection",
+    "local_card_sha256": "42db62e59efbfece54ac814152b2cd767641eb3fa82196b0874702d9e3be296e",
+    "model_index": null,
+    "text_report_values": {
+      "accuracy": 0.9905,
+      "macro_f1": 0.9905,
+      "weighted_f1": 0.9905
+    },
+    "units": "fractions for extracted accuracy/F1; original model-index units as published",
+    "comparison": "Manual protocol review required; no automatic drop calculation",
+    "note": "Card reports retained as provenance, not proof that local data/split/framework exactly reproduces the reported run."
+  },
+  "172": {
+    "source": "https://huggingface.co/tonyassi/vogue-fashion-collection-15",
+    "local_card_sha256": "bf21bf0a907d62976cf65a10efd476f6de00cbfe553aaa81d5e68db5efe846b4",
+    "model_index": [
+      {
+        "name": "vogue-fashion-collection-15",
+        "results": []
+      }
+    ],
+    "text_report_values": {
+      "accuracy": 0.9454,
+      "loss": 0.1795
+    },
+    "units": "fractions for extracted accuracy/F1; original model-index units as published",
+    "comparison": "Manual protocol review required; no automatic drop calculation",
+    "note": "Card reports retained as provenance, not proof that local data/split/framework exactly reproduces the reported run."
+  },
+  "173": {
+    "source": "https://huggingface.co/Xenova/facial_emotions_image_detection",
+    "local_card_sha256": "afb3345ad968a2af892eeec8d0899331adc876efa77e6ff1b83fd5160beca5fb",
+    "model_index": null,
+    "text_report_values": null,
+    "units": "fractions for extracted accuracy/F1; original model-index units as published",
+    "comparison": "Manual protocol review required; no automatic drop calculation",
+    "note": "No unambiguous numeric reference for this exact checkpoint was extracted from the frozen card."
+  },
+  "175": {
+    "source": "https://huggingface.co/gerhardien/face-emotion",
+    "local_card_sha256": "2230d0a21d3dde4c1e58a6b827b249ed23a4a0e0808206704022fc54e6283326",
+    "model_index": null,
+    "text_report_values": {
+      "training_accuracy": 0.8327,
+      "validation_accuracy": 0.7652
+    },
+    "units": "fractions for extracted accuracy/F1; original model-index units as published",
+    "comparison": "Manual protocol review required; no automatic drop calculation",
+    "note": "Card reports retained as provenance, not proof that local data/split/framework exactly reproduces the reported run."
+  },
+  "176": {
+    "source": "https://huggingface.co/avazquez2/helloWorld",
+    "local_card_sha256": "51de18ac88d806f80bb203d76fabe30efd098d5dc93ad5de201c1bfd9feb0cfd",
+    "model_index": null,
+    "text_report_values": null,
+    "units": "fractions for extracted accuracy/F1; original model-index units as published",
+    "comparison": "Manual protocol review required; no automatic drop calculation",
+    "note": "No unambiguous numeric reference for this exact checkpoint was extracted from the frozen card."
+  },
+  "177": {
+    "source": "https://huggingface.co/Anzhc/Race-Classification-FairFace-YOLOv8",
+    "local_card_sha256": "46359d1190f1f0b9ca3d634b037fe96ea5799b2954bd219e68d28938b75d5b56",
+    "model_index": [
+      {
+        "name": "v8n",
+        "results": [
+          {
+            "task": {
+              "type": "Image Classification"
+            },
+            "dataset": {
+              "name": "FairFace",
+              "type": "FairFace"
+            },
+            "metrics": [
+              {
+                "name": "top1_acc",
+                "type": "top1_acc",
+                "value": 0.717
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "v8s",
+        "results": [
+          {
+            "task": {
+              "type": "Image Classification"
+            },
+            "dataset": {
+              "name": "FairFace",
+              "type": "FairFace"
+            },
+            "metrics": [
+              {
+                "name": "top1_acc",
+                "type": "top1_acc",
+                "value": 0.721
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "v8m",
+        "results": [
+          {
+            "task": {
+              "type": "Image Classification"
+            },
+            "dataset": {
+              "name": "FairFace",
+              "type": "FairFace"
+            },
+            "metrics": [
+              {
+                "name": "top1_acc",
+                "type": "top1_acc",
+                "value": 0.725
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "11l",
+        "results": [
+          {
+            "task": {
+              "type": "Image Classification"
+            },
+            "dataset": {
+              "name": "FairFace",
+              "type": "FairFace"
+            },
+            "metrics": [
+              {
+                "name": "top1_acc",
+                "type": "top1_acc",
+                "value": 0.733
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "11x",
+        "results": [
+          {
+            "task": {
+              "type": "Image Classification"
+            },
+            "dataset": {
+              "name": "FairFace",
+              "type": "FairFace"
+            },
+            "metrics": [
+              {
+                "name": "top1_acc",
+                "type": "top1_acc",
+                "value": 0.735
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "text_report_values": null,
+    "units": "fractions for extracted accuracy/F1; original model-index units as published",
+    "comparison": "Manual protocol review required; no automatic drop calculation",
+    "note": "Card reports retained as provenance, not proof that local data/split/framework exactly reproduces the reported run."
+  },
+  "178": {
+    "source": "https://huggingface.co/prithivMLmods/Facial-Emotion-Detection-SigLIP2",
+    "local_card_sha256": "9ee55b40fa6a9837eb8b82bc425c9479ed54e62ee3020bcab9bececc3d289e5f",
+    "model_index": null,
+    "text_report_values": {
+      "accuracy": 0.8665,
+      "macro_f1": 0.8726,
+      "weighted_f1": 0.8663
+    },
+    "units": "fractions for extracted accuracy/F1; original model-index units as published",
+    "comparison": "Manual protocol review required; no automatic drop calculation",
+    "note": "Card reports retained as provenance, not proof that local data/split/framework exactly reproduces the reported run."
+  },
+  "179": {
+    "source": "https://huggingface.co/nvidia/MambaVision-B-21K",
+    "local_card_sha256": "51e0a1e6bd5cabf93b27983bfdefa2011494c534fa1dc91bd73f70bc5feafb31",
+    "model_index": null,
+    "text_report_values": {
+      "accuracy": 0.849,
+      "top5_accuracy": 0.975
+    },
+    "units": "fractions for extracted accuracy/F1; original model-index units as published",
+    "comparison": "Manual protocol review required; no automatic drop calculation",
+    "note": "Card reports retained as provenance, not proof that local data/split/framework exactly reproduces the reported run."
+  },
+  "180": {
+    "source": "https://huggingface.co/prithivMLmods/Realistic-Gender-Classification",
+    "local_card_sha256": "262d996247dc7c3e7da112ff98016a2894f974b7c311619c6ebb11c640d4ef9f",
+    "model_index": null,
+    "text_report_values": {
+      "accuracy": 0.9706,
+      "macro_f1": 0.9706,
+      "weighted_f1": 0.9706
+    },
+    "units": "fractions for extracted accuracy/F1; original model-index units as published",
+    "comparison": "Manual protocol review required; no automatic drop calculation",
+    "note": "Card reports retained as provenance, not proof that local data/split/framework exactly reproduces the reported run."
+  },
+  "181": {
+    "source": "https://huggingface.co/Modotte/AIRealNet",
+    "local_card_sha256": "4be2bbb03eb9b22c0bd7d456a0c503f81caedb1be97b381a8114eb4a31efb7a9",
+    "model_index": null,
+    "text_report_values": null,
+    "units": "fractions for extracted accuracy/F1; original model-index units as published",
+    "comparison": "Manual protocol review required; no automatic drop calculation",
+    "note": "Model card metrics are embedded as a remote image; numeric values not verified. Accuracy and reference loss are recorded without inventing the reference."
+  },
+  "183": {
+    "source": "https://huggingface.co/prithivMLmods/MetaCLIP-2-Age-Range-Estimator",
+    "local_card_sha256": "4b5b2cc7b5a640789b711ac04d350dd4c6476c27e3938b9ba22c1e0b98569370",
+    "model_index": null,
+    "text_report_values": {
+      "accuracy": 0.9559,
+      "macro_f1": 0.9451,
+      "weighted_f1": 0.9556
+    },
+    "units": "fractions for extracted accuracy/F1; original model-index units as published",
+    "comparison": "Manual protocol review required; no automatic drop calculation",
+    "note": "Card reports retained as provenance, not proof that local data/split/framework exactly reproduces the reported run."
+  },
+  "184": {
+    "source": "https://huggingface.co/timm/csatv2.r512_in1k",
+    "local_card_sha256": "e5f501d732e295565a677977d9ca576e6013f1f5bb40fcfeb632d7ffa54ce8ef",
+    "model_index": null,
+    "text_report_values": {
+      "accuracy": 0.8002
+    },
+    "units": "fractions for extracted accuracy/F1; original model-index units as published",
+    "comparison": "Manual protocol review required; no automatic drop calculation",
+    "note": "Card reports retained as provenance, not proof that local data/split/framework exactly reproduces the reported run."
+  },
+  "185": {
+    "source": "https://huggingface.co/LishaV01/agriculture-crop-disease-detection",
+    "local_card_sha256": "0df231bcd8832baf36c805cdfb22b038cc7720dca7e9d41138c03d3c578978ff",
+    "model_index": null,
+    "text_report_values": null,
+    "units": "fractions for extracted accuracy/F1; original model-index units as published",
+    "comparison": "Manual protocol review required; no automatic drop calculation",
+    "note": "No unambiguous numeric reference for this exact checkpoint was extracted from the frozen card."
+  },
+  "186": {
+    "source": "https://huggingface.co/HHousen/household-rooms",
+    "local_card_sha256": "1a1f275370bf6832d0833518479edd892af72dbecae602aec505648033203198",
+    "model_index": [
+      {
+        "name": "household-rooms",
+        "results": [
+          {
+            "task": {
+              "name": "Image Classification",
+              "type": "image-classification"
+            },
+            "metrics": [
+              {
+                "name": "Accuracy",
+                "type": "accuracy",
+                "value": 0.8482142686843872
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "text_report_values": null,
+    "units": "fractions for extracted accuracy/F1; original model-index units as published",
+    "comparison": "Manual protocol review required; no automatic drop calculation",
+    "note": "Card reports retained as provenance, not proof that local data/split/framework exactly reproduces the reported run."
+  },
+  "187": {
+    "source": "https://huggingface.co/Suzana/new-york-tokyo-london",
+    "local_card_sha256": "3d372204fbabc3da1caa0450fbddcc614734f371e779acc65b1dec07cc57a65b",
+    "model_index": [
+      {
+        "name": "new-york-tokyo-london",
+        "results": [
+          {
+            "task": {
+              "name": "Image Classification",
+              "type": "image-classification"
+            },
+            "metrics": [
+              {
+                "name": "Accuracy",
+                "type": "accuracy",
+                "value": 0.9104477763175964
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "text_report_values": null,
+    "units": "fractions for extracted accuracy/F1; original model-index units as published",
+    "comparison": "Manual protocol review required; no automatic drop calculation",
+    "note": "Card reports retained as provenance, not proof that local data/split/framework exactly reproduces the reported run."
+  },
+  "188": {
+    "source": "https://huggingface.co/deepmind/vision-perceiver-conv",
+    "local_card_sha256": "574f7c8e1f95c37fce3c18697508ee5a8d47d9569a3d9f01c15c2e4068c7c247",
+    "model_index": null,
+    "text_report_values": {
+      "accuracy": 0.821
+    },
+    "units": "fractions for extracted accuracy/F1; original model-index units as published",
+    "comparison": "Manual protocol review required; no automatic drop calculation",
+    "note": "Card reports retained as provenance, not proof that local data/split/framework exactly reproduces the reported run."
+  },
+  "189": {
+    "source": "https://huggingface.co/gatecitypreservation/architectural_styles",
+    "local_card_sha256": "721f60562f7fd166319f393f44f51c98df914e1e6cd9fe597d61bdb0d6694cdc",
+    "model_index": [
+      {
+        "name": "architectural_styles",
+        "results": [
+          {
+            "task": {
+              "name": "Image Classification",
+              "type": "image-classification"
+            },
+            "metrics": [
+              {
+                "name": "Accuracy",
+                "type": "accuracy",
+                "value": 0.7796609997749329
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "text_report_values": null,
+    "units": "fractions for extracted accuracy/F1; original model-index units as published",
+    "comparison": "Manual protocol review required; no automatic drop calculation",
+    "note": "Card reports retained as provenance, not proof that local data/split/framework exactly reproduces the reported run."
+  },
+  "190": {
+    "source": "https://huggingface.co/ibombonato/vit-age-classifier",
+    "local_card_sha256": "e6c322e3eadce809632e5bcf3713ab71a8a1bfc0a0fe02041e85f7744b09b9bd",
+    "model_index": [
+      {
+        "name": "vit-age-classifier",
+        "results": [
+          {
+            "task": {
+              "name": "Image Classification",
+              "type": "image-classification"
+            },
+            "metrics": [
+              {
+                "name": "Accuracy",
+                "type": "accuracy",
+                "value": 0.8364999890327454
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "text_report_values": null,
+    "units": "fractions for extracted accuracy/F1; original model-index units as published",
+    "comparison": "Manual protocol review required; no automatic drop calculation",
+    "note": "Card reports retained as provenance, not proof that local data/split/framework exactly reproduces the reported run."
+  },
+  "191": {
+    "source": "https://huggingface.co/microsoft/beit-large-patch16-224-pt22k-ft22k",
+    "local_card_sha256": "ea2a91e3c15fbefd3e63a782177698ef97f8d76e5be150b0e70fbcbb8eb285a8",
+    "model_index": null,
+    "text_report_values": null,
+    "units": "fractions for extracted accuracy/F1; original model-index units as published",
+    "comparison": "Manual protocol review required; no automatic drop calculation",
+    "note": "No unambiguous numeric reference for this exact checkpoint was extracted from the frozen card."
+  },
+  "192": {
+    "source": "https://huggingface.co/osanseviero/llama-alpaca-guanaco-vicuna",
+    "local_card_sha256": "951e83dfddcf1a153fe53e1dbd537a8729bc90e62245265d2837b7480d97cc80",
+    "model_index": [
+      {
+        "name": "llamastic",
+        "results": [
+          {
+            "task": {
+              "name": "Image Classification",
+              "type": "image-classification"
+            },
+            "metrics": [
+              {
+                "name": "Accuracy",
+                "type": "accuracy",
+                "value": 0.39772728085517883
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "text_report_values": null,
+    "units": "fractions for extracted accuracy/F1; original model-index units as published",
+    "comparison": "Manual protocol review required; no automatic drop calculation",
+    "note": "Card reports retained as provenance, not proof that local data/split/framework exactly reproduces the reported run."
+  },
+  "193": {
+    "source": "https://huggingface.co/sgugger/resnet50d",
+    "local_card_sha256": "d8467c7a0217aabdd59831db5fd63a8b1b0ecae5d279e3638125beddbfd8f505",
+    "model_index": null,
+    "text_report_values": {
+      "accuracy": 0.8053,
+      "top5_accuracy": 0.9516
+    },
+    "units": "fractions for extracted accuracy/F1; original model-index units as published",
+    "comparison": "Manual protocol review required; no automatic drop calculation",
+    "note": "Card reports retained as provenance, not proof that local data/split/framework exactly reproduces the reported run."
+  },
+  "194": {
+    "source": "https://huggingface.co/mrm8488/convnext-tiny-finetuned-eurosat",
+    "local_card_sha256": "2f44722feda8c10f1ab2bbee9e7ededb48519e60c1a437c6d290b9c57ffab3e3",
+    "model_index": [
+      {
+        "name": "convnext-tiny-finetuned-eurosat",
+        "results": [
+          {
+            "task": {
+              "name": "Image Classification",
+              "type": "image-classification"
+            },
+            "dataset": {
+              "name": "image_folder",
+              "type": "image_folder",
+              "args": "default"
+            },
+            "metrics": [
+              {
+                "name": "Accuracy",
+                "type": "accuracy",
+                "value": 0.9804938271604938
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "text_report_values": {
+      "accuracy": 0.9805,
+      "loss": 0.0549
+    },
+    "units": "fractions for extracted accuracy/F1; original model-index units as published",
+    "comparison": "Manual protocol review required; no automatic drop calculation",
+    "note": "Card reports retained as provenance, not proof that local data/split/framework exactly reproduces the reported run."
+  },
+  "195": {
+    "source": "https://huggingface.co/Ahmed9275/Vit-Cifar100",
+    "local_card_sha256": "9bd82a7a44f2f5b9b3f3d6652c90c9f2be59d9d3d8caa5f7085bc02efb1a669c",
+    "model_index": [
+      {
+        "name": "vit-base-beans-demo-v5",
+        "results": [
+          {
+            "task": {
+              "name": "Image Classification",
+              "type": "image-classification"
+            },
+            "dataset": {
+              "name": "Cifar100",
+              "type": "cifar100",
+              "args": "cifar100"
+            },
+            "metrics": [
+              {
+                "name": "Accuracy",
+                "type": "accuracy",
+                "value": 0.8985
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "text_report_values": {
+      "accuracy": 0.8985,
+      "loss": 0.442
+    },
+    "units": "fractions for extracted accuracy/F1; original model-index units as published",
+    "comparison": "Manual protocol review required; no automatic drop calculation",
+    "note": "Card reports retained as provenance, not proof that local data/split/framework exactly reproduces the reported run."
+  },
+  "196": {
+    "source": "https://huggingface.co/microsoft/swinv2-base-patch4-window16-256",
+    "local_card_sha256": "ad7f9bb6079ba1205321206089bbf71f7df8ba2349aea910010efb44221ba846",
+    "model_index": null,
+    "text_report_values": null,
+    "units": "fractions for extracted accuracy/F1; original model-index units as published",
+    "comparison": "Manual protocol review required; no automatic drop calculation",
+    "note": "No unambiguous numeric reference for this exact checkpoint was extracted from the frozen card."
+  },
+  "197": {
+    "source": "https://huggingface.co/arize-ai/resnet-50-fashion-mnist-quality-drift",
+    "local_card_sha256": "b93a61ca6bdf1b1a5c196fdbd98c68862009049ccc887a93a9f3a9445585c787",
+    "model_index": [
+      {
+        "name": "resnet-50-fashion-mnist-quality-drift",
+        "results": [
+          {
+            "task": {
+              "name": "Image Classification",
+              "type": "image-classification"
+            },
+            "dataset": {
+              "name": "fashion_mnist_quality_drift",
+              "type": "fashion_mnist_quality_drift",
+              "config": "default",
+              "split": "training",
+              "args": "default"
+            },
+            "metrics": [
+              {
+                "name": "Accuracy",
+                "type": "accuracy",
+                "value": 0.73
+              },
+              {
+                "name": "F1",
+                "type": "f1",
+                "value": 0.7289360255705818
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "text_report_values": {
+      "accuracy": 0.73,
+      "f1_average_unspecified": 0.7289360255705818,
+      "loss": 0.7473
+    },
+    "units": "fractions for extracted accuracy/F1; original model-index units as published",
+    "comparison": "Manual protocol review required; no automatic drop calculation",
+    "note": "Card F1 averaging is unspecified; record macro/micro/weighted separately. Standard Fashion-MNIST differs from author quality_drift."
+  },
+  "198": {
+    "source": "https://huggingface.co/google/vit-hybrid-base-bit-384",
+    "local_card_sha256": null,
+    "model_index": null,
+    "text_report_values": null,
+    "units": "fractions for extracted accuracy/F1; original model-index units as published",
+    "comparison": "Manual protocol review required; no automatic drop calculation",
+    "note": "No unambiguous numeric reference for this exact checkpoint was extracted from the frozen card."
+  },
+  "199": {
+    "source": "https://huggingface.co/timm/tf_efficientnetv2_s.in21k",
+    "local_card_sha256": "ad115a02000edfad76579f52ac077ac9a33dfb97e00f498ca25967725e14dffe",
+    "model_index": null,
+    "text_report_values": null,
+    "units": "fractions for extracted accuracy/F1; original model-index units as published",
+    "comparison": "Manual protocol review required; no automatic drop calculation",
+    "note": "No unambiguous numeric reference for this exact checkpoint was extracted from the frozen card."
+  },
+  "200": {
+    "source": "https://huggingface.co/timm/convnext_tiny.fb_in22k",
+    "local_card_sha256": "b0b9b0c7e83802c03318f1870977a9f8de9b9b831db3af214c88eb74a1e95b29",
+    "model_index": null,
+    "text_report_values": null,
+    "units": "fractions for extracted accuracy/F1; original model-index units as published",
+    "comparison": "Manual protocol review required; no automatic drop calculation",
+    "note": "No unambiguous numeric reference for this exact checkpoint was extracted from the frozen card."
+  }
+}

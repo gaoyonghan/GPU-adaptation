@@ -1,0 +1,1680 @@
+{
+  "phase": "smoke",
+  "models": {
+    "183": "partial_complete",
+    "184": "failed",
+    "192": "partial_complete",
+    "193": "failed",
+    "195": "partial_complete",
+    "197": "partial_complete",
+    "199": "failed",
+    "200": "failed"
+  },
+  "counts_by_unique_model": {
+    "partial_complete": 4,
+    "failed": 4
+  },
+  "variant_results": [
+    {
+      "sequence": 183,
+      "model_id": "prithivMLmods/MetaCLIP-2-Age-Range-Estimator",
+      "variant": null,
+      "phase": "smoke",
+      "protocol_fingerprint": "478e57968ab128164170c7707a244d1a07b1adcfb074ded182ad44fd8aaad190",
+      "protocol": {
+        "model": "f16b086c209ac00f8cdc31cb00d41a2f490e9ca642b4a8b782b4dcfd5cd0c6bf",
+        "code": {
+          "run_model.py": "b9c7db394c4a020f84fb8cc4515d9d7a020943b011fdea3b1303e192ab84dee3",
+          "common.py": "87e119ea13cd713bb054693dae0e04b7064b4fd683c8479b7715fd9b3883d045",
+          "prepare.py": "bf5bd4e223b181dd89142dbf467f92fe7c09b88ab4c82b061346248019f4ad9b",
+          "dispatch.py": "37a15fb15281dd6658bc87da9ad72f44de99c6f0161d4323c96d22dad3268ffb",
+          "timing.py": "db23cf873121e5e9345f23488d02d7757560a25084f330a56e38d5969d448342",
+          "native_js.mjs": "7ce8d0c8d4119a2ce2a4a0b3b89ffaffea9e4028e1e4196b09d8cdbf922685b1"
+        },
+        "environment": {
+          "python": "3.11.16 (main, Aug 27 2026, 14:44:21) [GCC 14.3.0]",
+          "versions": {
+            "torch": "2.5.1+cu121",
+            "torchvision": "0.20.1+cu121",
+            "transformers": "5.18.0.dev0",
+            "timm": "1.0.15",
+            "Pillow": "11.1.0",
+            "numpy": "1.26.4",
+            "pyarrow": "19.0.1"
+          },
+          "cuda_runtime": "12.1",
+          "cuda_available": true
+        },
+        "device": "cuda:1",
+        "batch_size": 1,
+        "warmup": 10,
+        "workers": 2,
+        "variant": null
+      },
+      "model_manifest": {
+        "sequence": 183,
+        "model_id": "prithivMLmods/MetaCLIP-2-Age-Range-Estimator",
+        "model_path": "__MODEL_ROOT__/weights/prithivMLmods/MetaCLIP-2-Age-Range-Estimator",
+        "revision": "7b80ac7d3bce892d6507496d2f6e89ef02b1d30a",
+        "task_type": "image-classification",
+        "status": "not_started",
+        "official_model_card": "https://huggingface.co/prithivMLmods/MetaCLIP-2-Age-Range-Estimator",
+        "official_reference": null,
+        "reference_comparison": "manual_reference_required",
+        "known_differences": [],
+        "config": {
+          "architectures": [
+            "MetaClip2ForImageClassification"
+          ],
+          "dtype": "float32",
+          "id2label": {
+            "0": "Child 0-12",
+            "1": "Teenager 13-20",
+            "2": "Adult 21-44",
+            "3": "Middle Age 45-64",
+            "4": "Aged 65+"
+          },
+          "initializer_factor": 1.0,
+          "label2id": {
+            "Adult 21-44": 2,
+            "Aged 65+": 4,
+            "Child 0-12": 0,
+            "Middle Age 45-64": 3,
+            "Teenager 13-20": 1
+          },
+          "logit_scale_init_value": 2.6592,
+          "model_type": "metaclip_2",
+          "problem_type": "single_label_classification",
+          "projection_dim": 384,
+          "text_config": {
+            "attention_dropout": 0.0,
+            "dtype": "float32",
+            "eos_token_id": 2,
+            "hidden_act": "gelu",
+            "hidden_size": 384,
+            "initializer_factor": 1.0,
+            "initializer_range": 0.02,
+            "intermediate_size": 1536,
+            "layer_norm_eps": 1e-05,
+            "max_position_embeddings": 77,
+            "model_type": "metaclip_2_text_model",
+            "num_attention_heads": 6,
+            "num_hidden_layers": 12,
+            "projection_dim": 384,
+            "vocab_size": 901629
+          },
+          "transformers_version": "4.57.1",
+          "vision_config": {
+            "attention_dropout": 0.0,
+            "dtype": "float32",
+            "hidden_act": "gelu",
+            "hidden_size": 384,
+            "image_size": 224,
+            "initializer_factor": 1.0,
+            "initializer_range": 0.02,
+            "intermediate_size": 1536,
+            "layer_norm_eps": 1e-05,
+            "model_type": "metaclip_2_vision_model",
+            "num_attention_heads": 6,
+            "num_channels": 3,
+            "num_hidden_layers": 12,
+            "patch_size": 16,
+            "projection_dim": 384
+          }
+        },
+        "preprocessing": {
+          "crop_size": {
+            "height": 224,
+            "width": 224
+          },
+          "do_center_crop": true,
+          "do_convert_rgb": true,
+          "do_normalize": true,
+          "do_rescale": true,
+          "do_resize": true,
+          "image_mean": [
+            0.48145466,
+            0.4578275,
+            0.40821073
+          ],
+          "image_processor_type": "CLIPImageProcessor",
+          "image_std": [
+            0.26862954,
+            0.26130258,
+            0.27577711
+          ],
+          "processor_class": "CLIPProcessor",
+          "resample": 3,
+          "rescale_factor": 0.00392156862745098,
+          "size": {
+            "height": 224,
+            "width": 224
+          }
+        },
+        "architecture": [
+          "MetaClip2ForImageClassification"
+        ],
+        "files": {
+          "model.safetensors": {
+            "size": 86695548,
+            "sha256": "ff8636d6e9ceb085bddd789514fd5d76530eca6981e91ec63c07e9e9c0a3f1c6"
+          },
+          "config.json": {
+            "size": 1484,
+            "sha256": "886c693c4eff7a7d15e783aac273d099582f53e046659bc1aba80bafb8efb959"
+          },
+          "preprocessor_config.json": {
+            "size": 515,
+            "sha256": "6286f896bf2960c7baea6cf589a0a2ddae0059283b3af33b5dde37bd54b6a87a"
+          },
+          "README.md": {
+            "size": 4723,
+            "sha256": "4b5b2cc7b5a640789b711ac04d350dd4c6476c27e3938b9ba22c1e0b98569370"
+          }
+        },
+        "weight": "model.safetensors",
+        "backend": "hf_published",
+        "environment": "new_hf",
+        "dataset_relation": "original_protocol_incomplete",
+        "split": "published train; no independent test",
+        "excluded_source_labels": {},
+        "images": 19016,
+        "covered_target_classes": 5,
+        "num_output_classes": 5,
+        "label_mapping": {
+          "0": "Child 0-12",
+          "1": "Teenager 13-20",
+          "2": "Adult 21-44",
+          "3": "Middle Age 45-64",
+          "4": "Aged 65+"
+        },
+        "scoring": "reference",
+        "evaluator": "sklearn reference scoring",
+        "fidelity": "reference_baseline",
+        "case_type": "special",
+        "special_tags": [
+          "framework_numeric_difference",
+          "official_evaluator_missing"
+        ],
+        "inference_entry": "publisher_transformers_model_and_processor",
+        "default_batch_size": 1,
+        "dtype": "float32",
+        "warmup_batches": 10,
+        "index": "__MODEL_ROOT__/resources/runtime/assets/workspace/classification171_200_eval/indices/183.jsonl",
+        "index_sha256": "25776174409f7175b31a4f239c7ac1326c834678e3b87bc4e93f179f45a80dc2",
+        "data_containers": {
+          "__DATASET_ROOT__/datasets_171_200/age_classification/raw/0000.parquet": {
+            "size": 502182522,
+            "mtime_ns": 1790055972980239409
+          },
+          "__DATASET_ROOT__/datasets_171_200/age_classification/raw/0001.parquet": {
+            "size": 106689306,
+            "mtime_ns": 1790055844572967490
+          }
+        },
+        "protocol_fingerprint": "f16b086c209ac00f8cdc31cb00d41a2f490e9ca642b4a8b782b4dcfd5cd0c6bf"
+      },
+      "status": "partial_complete",
+      "gpu_at_start": "0, GPU-edb63bcd-7ac5-4284-b9ea-825830b8ebba, NVIDIA GeForce RTX 4090, 580.126.09, 786 MiB, 22 %\n1, GPU-a11f730c-a975-2bf0-b765-3c24d83b7104, NVIDIA GeForce RTX 4090, 580.126.09, 133 MiB, 13 %",
+      "full_evaluation": false,
+      "images": 10,
+      "timing_file": "__MODEL_ROOT__/resources/runtime/assets/workspace/classification171_200_eval/.validation/v1/smoke/m183/timing.json",
+      "run_wall_seconds_this_segment": 4.756946359761059
+    },
+    {
+      "sequence": 184,
+      "model_id": "timm/csatv2.r512_in1k",
+      "variant": null,
+      "phase": "smoke",
+      "protocol_fingerprint": "0c215135144007a4a6dfe24f037c572c8a003129726161199515f0566d608893",
+      "protocol": {
+        "model": "0209661df58c61b4be12ff72ad65f45f7bba577fafe8b9eb88aa14176aed7152",
+        "code": {
+          "run_model.py": "b9c7db394c4a020f84fb8cc4515d9d7a020943b011fdea3b1303e192ab84dee3",
+          "common.py": "87e119ea13cd713bb054693dae0e04b7064b4fd683c8479b7715fd9b3883d045",
+          "prepare.py": "bf5bd4e223b181dd89142dbf467f92fe7c09b88ab4c82b061346248019f4ad9b",
+          "dispatch.py": "37a15fb15281dd6658bc87da9ad72f44de99c6f0161d4323c96d22dad3268ffb",
+          "timing.py": "db23cf873121e5e9345f23488d02d7757560a25084f330a56e38d5969d448342",
+          "native_js.mjs": "7ce8d0c8d4119a2ce2a4a0b3b89ffaffea9e4028e1e4196b09d8cdbf922685b1"
+        },
+        "environment": {
+          "python": "3.11.16 (main, Aug 27 2026, 14:44:21) [GCC 14.3.0]",
+          "versions": {
+            "torch": "2.5.1+cu121",
+            "torchvision": "0.20.1+cu121",
+            "transformers": "4.50.0",
+            "timm": "1.0.15",
+            "Pillow": "11.1.0",
+            "numpy": "1.26.4",
+            "scikit-learn": "1.5.2",
+            "pyarrow": "19.0.1"
+          },
+          "cuda_runtime": "12.1",
+          "cuda_available": true
+        },
+        "device": "cuda:1",
+        "batch_size": 1,
+        "warmup": 10,
+        "workers": 2,
+        "variant": null
+      },
+      "model_manifest": {
+        "sequence": 184,
+        "model_id": "timm/csatv2.r512_in1k",
+        "model_path": "__MODEL_ROOT__/weights/timm/csatv2.r512_in1k",
+        "revision": "1c4b606e8ceed8ced0bfb6f30b881bdbd8849d8a",
+        "task_type": "image-classification",
+        "status": "not_started",
+        "official_model_card": "https://huggingface.co/timm/csatv2.r512_in1k",
+        "official_reference": null,
+        "reference_comparison": "manual_reference_required",
+        "known_differences": [],
+        "config": {
+          "architecture": "csatv2",
+          "num_classes": 1000,
+          "num_features": 386,
+          "global_pool": "avg",
+          "pretrained_cfg": {
+            "custom_load": false,
+            "input_size": [
+              3,
+              512,
+              512
+            ],
+            "fixed_input_size": false,
+            "interpolation": "bilinear",
+            "crop_pct": 1.0,
+            "crop_mode": "center",
+            "mean": [
+              0.485,
+              0.456,
+              0.406
+            ],
+            "std": [
+              0.229,
+              0.224,
+              0.225
+            ],
+            "num_classes": 1000,
+            "pool_size": null,
+            "first_conv": [],
+            "classifier": "head.fc"
+          }
+        },
+        "preprocessing": {
+          "custom_load": false,
+          "input_size": [
+            3,
+            512,
+            512
+          ],
+          "fixed_input_size": false,
+          "interpolation": "bilinear",
+          "crop_pct": 1.0,
+          "crop_mode": "center",
+          "mean": [
+            0.485,
+            0.456,
+            0.406
+          ],
+          "std": [
+            0.229,
+            0.224,
+            0.225
+          ],
+          "num_classes": 1000,
+          "pool_size": null,
+          "first_conv": [],
+          "classifier": "head.fc"
+        },
+        "architecture": "csatv2",
+        "files": {
+          "model.safetensors": {
+            "size": 44451568,
+            "sha256": "45b1d4c50fc3e0d378f386b0cbd07f3f8685affd17db2e02489b2fd4c8bf43e2"
+          },
+          "config.json": {
+            "size": 537,
+            "sha256": "3dd69264ace1c55ae04d62c84c4d370fe674e4d0c6763ebf825633c04f744f60"
+          },
+          "README.md": {
+            "size": 6041,
+            "sha256": "e5f501d732e295565a677977d9ca576e6013f1f5bb40fcfeb632d7ffa54ce8ef"
+          }
+        },
+        "weight": "model.safetensors",
+        "backend": "timm_native",
+        "environment": "shared_hf",
+        "dataset_relation": "original_exact",
+        "split": "ImageNet-1K validation",
+        "excluded_source_labels": {},
+        "images": 50000,
+        "covered_target_classes": 1000,
+        "num_output_classes": 1000,
+        "label_mapping": {},
+        "scoring": "native",
+        "evaluator": "timm.validate",
+        "fidelity": "official_protocol_adapter",
+        "case_type": "special",
+        "special_tags": [
+          "framework_numeric_difference"
+        ],
+        "inference_entry": "publisher_transformers_model_and_processor",
+        "default_batch_size": 1,
+        "dtype": "float32",
+        "warmup_batches": 10,
+        "index": "__MODEL_ROOT__/resources/runtime/assets/workspace/classification171_200_eval/indices/184.jsonl",
+        "index_sha256": "ae1b1bd72d9a7d3fa3bb5063a8e2dd4aa0c8d58e7dcaf9e46c2cab204498024a",
+        "data_containers": {},
+        "class_map": "__MODEL_ROOT__/resources/runtime/assets/workspace/171-200/inference_code/pytorch-image-models/timm/data/_info/imagenet_synsets.txt",
+        "class_map_sha256": "70002b0ff5de60a3a17a82dbfcff291931f96225ddf941ad2e182fc39e183d15",
+        "protocol_fingerprint": "0209661df58c61b4be12ff72ad65f45f7bba577fafe8b9eb88aa14176aed7152"
+      },
+      "status": "failed",
+      "gpu_at_start": "0, GPU-edb63bcd-7ac5-4284-b9ea-825830b8ebba, NVIDIA GeForce RTX 4090, 580.126.09, 777 MiB, 41 %\n1, GPU-a11f730c-a975-2bf0-b765-3c24d83b7104, NVIDIA GeForce RTX 4090, 580.126.09, 133 MiB, 21 %",
+      "full_evaluation": false,
+      "error_type": "RuntimeError",
+      "error": "Invalid device argument \u0001: did you call init?",
+      "traceback": "Traceback (most recent call last):\n  File \"__MODEL_ROOT__/resources/runtime/assets/workspace/classification171_200_eval/run_model.py\", line 374, in run_one\n    if spec['backend']=='timm_native': timing,metrics=native_timm(spec,rows,args,out)\n                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"__MODEL_ROOT__/resources/runtime/assets/workspace/classification171_200_eval/run_model.py\", line 281, in native_timm\n    if str(args.device).startswith('cuda'): torch.cuda.reset_peak_memory_stats(args.device)\n                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/gaoyonghan/miniconda3/envs/object-detection-hf-v2/lib/python3.11/site-packages/torch/cuda/memory.py\", line 344, in reset_peak_memory_stats\n    return torch._C._cuda_resetPeakMemoryStats(device)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: Invalid device argument \u0001: did you call init?\n"
+    },
+    {
+      "sequence": 192,
+      "model_id": "osanseviero/llama-alpaca-guanaco-vicuna",
+      "variant": null,
+      "phase": "smoke",
+      "protocol_fingerprint": "4fd0b2e9ddc43e6fd8bbbe5aa9770a1c6ff11704f6ec6c72cf0c5c5a93a0e825",
+      "protocol": {
+        "model": "dd7350045914872dbbc724f607c5157e844c2fac990ad213e4960476deeb439d",
+        "code": {
+          "run_model.py": "b9c7db394c4a020f84fb8cc4515d9d7a020943b011fdea3b1303e192ab84dee3",
+          "common.py": "87e119ea13cd713bb054693dae0e04b7064b4fd683c8479b7715fd9b3883d045",
+          "prepare.py": "bf5bd4e223b181dd89142dbf467f92fe7c09b88ab4c82b061346248019f4ad9b",
+          "dispatch.py": "37a15fb15281dd6658bc87da9ad72f44de99c6f0161d4323c96d22dad3268ffb",
+          "timing.py": "db23cf873121e5e9345f23488d02d7757560a25084f330a56e38d5969d448342",
+          "native_js.mjs": "7ce8d0c8d4119a2ce2a4a0b3b89ffaffea9e4028e1e4196b09d8cdbf922685b1"
+        },
+        "environment": {
+          "python": "3.11.16 (main, Aug 27 2026, 14:44:21) [GCC 14.3.0]",
+          "versions": {
+            "torch": "2.5.1+cu121",
+            "torchvision": "0.20.1+cu121",
+            "transformers": "4.50.0",
+            "timm": "1.0.15",
+            "Pillow": "11.1.0",
+            "numpy": "1.26.4",
+            "scikit-learn": "1.5.2",
+            "pyarrow": "19.0.1"
+          },
+          "cuda_runtime": "12.1",
+          "cuda_available": true
+        },
+        "device": "cuda:1",
+        "batch_size": 1,
+        "warmup": 10,
+        "workers": 2,
+        "variant": null
+      },
+      "model_manifest": {
+        "sequence": 192,
+        "model_id": "osanseviero/llama-alpaca-guanaco-vicuna",
+        "model_path": "__MODEL_ROOT__/weights/osanseviero/llama-alpaca-guanaco-vicuna",
+        "revision": "a59f6456120751715015be9a8bf5d45981ddccf6",
+        "task_type": "image-classification",
+        "status": "not_started",
+        "official_model_card": "https://huggingface.co/osanseviero/llama-alpaca-guanaco-vicuna",
+        "official_reference": null,
+        "reference_comparison": "manual_reference_required",
+        "known_differences": [
+          "Keep full model output head. Not an independent original model test set.",
+          "800 records, 793 unique hashes; original within-class duplicates retained; four conflicting files excluded."
+        ],
+        "config": {
+          "_name_or_path": "google/vit-base-patch16-224-in21k",
+          "architectures": [
+            "ViTForImageClassification"
+          ],
+          "attention_probs_dropout_prob": 0.0,
+          "hidden_act": "gelu",
+          "hidden_dropout_prob": 0.0,
+          "hidden_size": 768,
+          "id2label": {
+            "0": "alpaca",
+            "1": "guanaco",
+            "2": "llama",
+            "3": "vicuna"
+          },
+          "image_size": 224,
+          "initializer_range": 0.02,
+          "intermediate_size": 3072,
+          "label2id": {
+            "alpaca": "0",
+            "guanaco": "1",
+            "llama": "2",
+            "vicuna": "3"
+          },
+          "layer_norm_eps": 1e-12,
+          "model_type": "vit",
+          "num_attention_heads": 12,
+          "num_channels": 3,
+          "num_hidden_layers": 12,
+          "patch_size": 16,
+          "transformers_version": "4.8.2"
+        },
+        "preprocessing": {
+          "do_normalize": true,
+          "do_resize": true,
+          "feature_extractor_type": "ViTFeatureExtractor",
+          "image_mean": [
+            0.5,
+            0.5,
+            0.5
+          ],
+          "image_std": [
+            0.5,
+            0.5,
+            0.5
+          ],
+          "resample": 2,
+          "size": 224
+        },
+        "architecture": [
+          "ViTForImageClassification"
+        ],
+        "files": {
+          "pytorch_model.bin": {
+            "size": 343283185,
+            "sha256": "b5cc70c016a8554631c4ead35157274dac9869c76eeec47bf9f9eb1b5a75e4c1"
+          },
+          "config.json": {
+            "size": 685,
+            "sha256": "0907242811eb28033be85326e9bf03344d6952117d94171cf619cea9255cf537"
+          },
+          "preprocessor_config.json": {
+            "size": 228,
+            "sha256": "af4eb4d79cf61b47010fc0bc9352ee967579c417423b4917188d809b7e048948"
+          },
+          "README.md": {
+            "size": 822,
+            "sha256": "951e83dfddcf1a153fe53e1dbd537a8729bc90e62245265d2837b7480d97cc80"
+          }
+        },
+        "weight": "pytorch_model.bin",
+        "backend": "hf_published",
+        "environment": "shared_hf",
+        "dataset_relation": "public_replacement",
+        "split": "accepted external reference set",
+        "excluded_source_labels": {},
+        "images": 800,
+        "covered_target_classes": 4,
+        "num_output_classes": 4,
+        "label_mapping": {
+          "0": "alpaca",
+          "1": "guanaco",
+          "2": "llama",
+          "3": "vicuna"
+        },
+        "scoring": "reference",
+        "evaluator": "sklearn reference scoring",
+        "fidelity": "reference_baseline",
+        "case_type": "special",
+        "special_tags": [
+          "framework_numeric_difference",
+          "dataset_replacement",
+          "official_evaluator_missing"
+        ],
+        "inference_entry": "publisher_transformers_model_and_processor",
+        "default_batch_size": 1,
+        "dtype": "float32",
+        "warmup_batches": 10,
+        "index": "__MODEL_ROOT__/resources/runtime/assets/workspace/classification171_200_eval/indices/192.jsonl",
+        "index_sha256": "469a6aea65eb514f704c83d17f3d0ee24ff34be712c1636c304cc701b166a1ae",
+        "data_containers": {},
+        "protocol_fingerprint": "dd7350045914872dbbc724f607c5157e844c2fac990ad213e4960476deeb439d"
+      },
+      "status": "partial_complete",
+      "gpu_at_start": "0, GPU-edb63bcd-7ac5-4284-b9ea-825830b8ebba, NVIDIA GeForce RTX 4090, 580.126.09, 778 MiB, 40 %\n1, GPU-a11f730c-a975-2bf0-b765-3c24d83b7104, NVIDIA GeForce RTX 4090, 580.126.09, 133 MiB, 27 %",
+      "full_evaluation": false,
+      "images": 10,
+      "timing_file": "__MODEL_ROOT__/resources/runtime/assets/workspace/classification171_200_eval/.validation/v1/smoke/m192/timing.json",
+      "run_wall_seconds_this_segment": 5.882069668266922
+    },
+    {
+      "sequence": 193,
+      "model_id": "sgugger/resnet50d",
+      "variant": null,
+      "phase": "smoke",
+      "protocol_fingerprint": "86389fdcb14f6fd6a99795f61e88eb805c375915f6a1e8c1bb7f712708a35273",
+      "protocol": {
+        "model": "7298ef05d0e6646d747e3dfae40fdf897c3c5ef0032532bec30c053265b5f809",
+        "code": {
+          "run_model.py": "b9c7db394c4a020f84fb8cc4515d9d7a020943b011fdea3b1303e192ab84dee3",
+          "common.py": "87e119ea13cd713bb054693dae0e04b7064b4fd683c8479b7715fd9b3883d045",
+          "prepare.py": "bf5bd4e223b181dd89142dbf467f92fe7c09b88ab4c82b061346248019f4ad9b",
+          "dispatch.py": "37a15fb15281dd6658bc87da9ad72f44de99c6f0161d4323c96d22dad3268ffb",
+          "timing.py": "db23cf873121e5e9345f23488d02d7757560a25084f330a56e38d5969d448342",
+          "native_js.mjs": "7ce8d0c8d4119a2ce2a4a0b3b89ffaffea9e4028e1e4196b09d8cdbf922685b1"
+        },
+        "environment": {
+          "python": "3.11.16 (main, Aug 27 2026, 14:44:21) [GCC 14.3.0]",
+          "versions": {
+            "torch": "2.5.1+cu121",
+            "torchvision": "0.20.1+cu121",
+            "transformers": "4.50.0",
+            "timm": "1.0.15",
+            "Pillow": "11.1.0",
+            "numpy": "1.26.4",
+            "scikit-learn": "1.5.2",
+            "pyarrow": "19.0.1"
+          },
+          "cuda_runtime": "12.1",
+          "cuda_available": true
+        },
+        "device": "cuda:1",
+        "batch_size": 1,
+        "warmup": 10,
+        "workers": 2,
+        "variant": null
+      },
+      "model_manifest": {
+        "sequence": 193,
+        "model_id": "sgugger/resnet50d",
+        "model_path": "__MODEL_ROOT__/weights/sgugger/resnet50d",
+        "revision": "4b32487424f0f5f2f17ffb60d578b8e5ac7ddc35",
+        "task_type": "image-classification",
+        "status": "not_started",
+        "official_model_card": "https://huggingface.co/sgugger/resnet50d",
+        "official_reference": null,
+        "reference_comparison": "manual_reference_required",
+        "known_differences": [],
+        "config": {
+          "architecture": "resnet50d",
+          "classifier": "fc",
+          "crop_pct": 0.875,
+          "first_conv": "conv1.0",
+          "input_size": [
+            3,
+            224,
+            224
+          ],
+          "interpolation": "bicubic",
+          "mean": [
+            0.485,
+            0.456,
+            0.406
+          ],
+          "num_classes": 1000,
+          "pool_size": [
+            7,
+            7
+          ],
+          "std": [
+            0.229,
+            0.224,
+            0.225
+          ]
+        },
+        "preprocessing": {
+          "architecture": "resnet50d",
+          "classifier": "fc",
+          "crop_pct": 0.875,
+          "first_conv": "conv1.0",
+          "input_size": [
+            3,
+            224,
+            224
+          ],
+          "interpolation": "bicubic",
+          "mean": [
+            0.485,
+            0.456,
+            0.406
+          ],
+          "num_classes": 1000,
+          "pool_size": [
+            7,
+            7
+          ],
+          "std": [
+            0.229,
+            0.224,
+            0.225
+          ]
+        },
+        "architecture": "resnet50d",
+        "files": {
+          "pytorch_model.bin": {
+            "size": 102630875,
+            "sha256": "eba2e1de92fa640fccf0ad56acfd41031b034ef29bdf46e9dcbebb16f713b6e2"
+          },
+          "config.json": {
+            "size": 336,
+            "sha256": "1e76ba4b35cadd9d9a69b43f5e905dd60e364450e988035c7380a9424dfddf56"
+          },
+          "README.md": {
+            "size": 4073,
+            "sha256": "d8467c7a0217aabdd59831db5fd63a8b1b0ecae5d279e3638125beddbfd8f505"
+          }
+        },
+        "weight": "pytorch_model.bin",
+        "backend": "timm_native",
+        "environment": "shared_hf",
+        "dataset_relation": "original_exact",
+        "split": "ImageNet-1K validation",
+        "excluded_source_labels": {},
+        "images": 50000,
+        "covered_target_classes": 1000,
+        "num_output_classes": 1000,
+        "label_mapping": {},
+        "scoring": "native",
+        "evaluator": "timm.validate",
+        "fidelity": "official_protocol_adapter",
+        "case_type": "special",
+        "special_tags": [
+          "framework_numeric_difference"
+        ],
+        "inference_entry": "publisher_transformers_model_and_processor",
+        "default_batch_size": 1,
+        "dtype": "float32",
+        "warmup_batches": 10,
+        "index": "__MODEL_ROOT__/resources/runtime/assets/workspace/classification171_200_eval/indices/193.jsonl",
+        "index_sha256": "ae1b1bd72d9a7d3fa3bb5063a8e2dd4aa0c8d58e7dcaf9e46c2cab204498024a",
+        "data_containers": {},
+        "class_map": "__MODEL_ROOT__/resources/runtime/assets/workspace/171-200/inference_code/pytorch-image-models/timm/data/_info/imagenet_synsets.txt",
+        "class_map_sha256": "70002b0ff5de60a3a17a82dbfcff291931f96225ddf941ad2e182fc39e183d15",
+        "protocol_fingerprint": "7298ef05d0e6646d747e3dfae40fdf897c3c5ef0032532bec30c053265b5f809"
+      },
+      "status": "failed",
+      "gpu_at_start": "0, GPU-edb63bcd-7ac5-4284-b9ea-825830b8ebba, NVIDIA GeForce RTX 4090, 580.126.09, 777 MiB, 41 %\n1, GPU-a11f730c-a975-2bf0-b765-3c24d83b7104, NVIDIA GeForce RTX 4090, 580.126.09, 133 MiB, 27 %",
+      "full_evaluation": false,
+      "error_type": "RuntimeError",
+      "error": "Invalid device argument \u0001: did you call init?",
+      "traceback": "Traceback (most recent call last):\n  File \"__MODEL_ROOT__/resources/runtime/assets/workspace/classification171_200_eval/run_model.py\", line 374, in run_one\n    if spec['backend']=='timm_native': timing,metrics=native_timm(spec,rows,args,out)\n                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"__MODEL_ROOT__/resources/runtime/assets/workspace/classification171_200_eval/run_model.py\", line 281, in native_timm\n    if str(args.device).startswith('cuda'): torch.cuda.reset_peak_memory_stats(args.device)\n                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/gaoyonghan/miniconda3/envs/object-detection-hf-v2/lib/python3.11/site-packages/torch/cuda/memory.py\", line 344, in reset_peak_memory_stats\n    return torch._C._cuda_resetPeakMemoryStats(device)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: Invalid device argument \u0001: did you call init?\n"
+    },
+    {
+      "sequence": 195,
+      "model_id": "Ahmed9275/Vit-Cifar100",
+      "variant": null,
+      "phase": "smoke",
+      "protocol_fingerprint": "a5f00dc8d7839c5b4a23dae17b76a252a7a8975ac84e29f1727a7be9d5ae6e9c",
+      "protocol": {
+        "model": "96fc4601b8d3c80cfc3e4adbda1ea1da9cb0a01869ebda209a16e2f04326db45",
+        "code": {
+          "run_model.py": "b9c7db394c4a020f84fb8cc4515d9d7a020943b011fdea3b1303e192ab84dee3",
+          "common.py": "87e119ea13cd713bb054693dae0e04b7064b4fd683c8479b7715fd9b3883d045",
+          "prepare.py": "bf5bd4e223b181dd89142dbf467f92fe7c09b88ab4c82b061346248019f4ad9b",
+          "dispatch.py": "37a15fb15281dd6658bc87da9ad72f44de99c6f0161d4323c96d22dad3268ffb",
+          "timing.py": "db23cf873121e5e9345f23488d02d7757560a25084f330a56e38d5969d448342",
+          "native_js.mjs": "7ce8d0c8d4119a2ce2a4a0b3b89ffaffea9e4028e1e4196b09d8cdbf922685b1"
+        },
+        "environment": {
+          "python": "3.11.16 (main, Aug 27 2026, 14:44:21) [GCC 14.3.0]",
+          "versions": {
+            "torch": "2.5.1+cu121",
+            "torchvision": "0.20.1+cu121",
+            "transformers": "4.50.0",
+            "timm": "1.0.15",
+            "Pillow": "11.1.0",
+            "numpy": "1.26.4",
+            "scikit-learn": "1.5.2",
+            "pyarrow": "19.0.1"
+          },
+          "cuda_runtime": "12.1",
+          "cuda_available": true
+        },
+        "device": "cuda:1",
+        "batch_size": 1,
+        "warmup": 10,
+        "workers": 2,
+        "variant": null
+      },
+      "model_manifest": {
+        "sequence": 195,
+        "model_id": "Ahmed9275/Vit-Cifar100",
+        "model_path": "__MODEL_ROOT__/weights/Ahmed9275/Vit-Cifar100",
+        "revision": "33677f4f54c5cf3b0057dd374e6de24dafdd67df",
+        "task_type": "image-classification",
+        "status": "not_started",
+        "official_model_card": "https://huggingface.co/Ahmed9275/Vit-Cifar100",
+        "official_reference": null,
+        "reference_comparison": "manual_reference_required",
+        "known_differences": [],
+        "config": {
+          "_name_or_path": "google/vit-base-patch16-224-in21k",
+          "architectures": [
+            "ViTForImageClassification"
+          ],
+          "attention_probs_dropout_prob": 0.0,
+          "encoder_stride": 16,
+          "hidden_act": "gelu",
+          "hidden_dropout_prob": 0.0,
+          "hidden_size": 768,
+          "id2label": {
+            "0": "apple",
+            "1": "aquarium_fish",
+            "10": "bowl",
+            "11": "boy",
+            "12": "bridge",
+            "13": "bus",
+            "14": "butterfly",
+            "15": "camel",
+            "16": "can",
+            "17": "castle",
+            "18": "caterpillar",
+            "19": "cattle",
+            "2": "baby",
+            "20": "chair",
+            "21": "chimpanzee",
+            "22": "clock",
+            "23": "cloud",
+            "24": "cockroach",
+            "25": "couch",
+            "26": "cra",
+            "27": "crocodile",
+            "28": "cup",
+            "29": "dinosaur",
+            "3": "bear",
+            "30": "dolphin",
+            "31": "elephant",
+            "32": "flatfish",
+            "33": "forest",
+            "34": "fox",
+            "35": "girl",
+            "36": "hamster",
+            "37": "house",
+            "38": "kangaroo",
+            "39": "keyboard",
+            "4": "beaver",
+            "40": "lamp",
+            "41": "lawn_mower",
+            "42": "leopard",
+            "43": "lion",
+            "44": "lizard",
+            "45": "lobster",
+            "46": "man",
+            "47": "maple_tree",
+            "48": "motorcycle",
+            "49": "mountain",
+            "5": "bed",
+            "50": "mouse",
+            "51": "mushroom",
+            "52": "oak_tree",
+            "53": "orange",
+            "54": "orchid",
+            "55": "otter",
+            "56": "palm_tree",
+            "57": "pear",
+            "58": "pickup_truck",
+            "59": "pine_tree",
+            "6": "bee",
+            "60": "plain",
+            "61": "plate",
+            "62": "poppy",
+            "63": "porcupine",
+            "64": "possum",
+            "65": "rabbit",
+            "66": "raccoon",
+            "67": "ray",
+            "68": "road",
+            "69": "rocket",
+            "7": "beetle",
+            "70": "rose",
+            "71": "sea",
+            "72": "seal",
+            "73": "shark",
+            "74": "shrew",
+            "75": "skunk",
+            "76": "skyscraper",
+            "77": "snail",
+            "78": "snake",
+            "79": "spider",
+            "8": "bicycle",
+            "80": "squirrel",
+            "81": "streetcar",
+            "82": "sunflower",
+            "83": "sweet_pepper",
+            "84": "table",
+            "85": "tank",
+            "86": "telephone",
+            "87": "television",
+            "88": "tiger",
+            "89": "tractor",
+            "9": "bottle",
+            "90": "train",
+            "91": "trout",
+            "92": "tulip",
+            "93": "turtle",
+            "94": "wardrobe",
+            "95": "whale",
+            "96": "willow_tree",
+            "97": "wolf",
+            "98": "woman",
+            "99": "worm"
+          },
+          "image_size": 224,
+          "initializer_range": 0.02,
+          "intermediate_size": 3072,
+          "label2id": {
+            "apple": "0",
+            "aquarium_fish": "1",
+            "baby": "2",
+            "bear": "3",
+            "beaver": "4",
+            "bed": "5",
+            "bee": "6",
+            "beetle": "7",
+            "bicycle": "8",
+            "bottle": "9",
+            "bowl": "10",
+            "boy": "11",
+            "bridge": "12",
+            "bus": "13",
+            "butterfly": "14",
+            "camel": "15",
+            "can": "16",
+            "castle": "17",
+            "caterpillar": "18",
+            "cattle": "19",
+            "chair": "20",
+            "chimpanzee": "21",
+            "clock": "22",
+            "cloud": "23",
+            "cockroach": "24",
+            "couch": "25",
+            "cra": "26",
+            "crocodile": "27",
+            "cup": "28",
+            "dinosaur": "29",
+            "dolphin": "30",
+            "elephant": "31",
+            "flatfish": "32",
+            "forest": "33",
+            "fox": "34",
+            "girl": "35",
+            "hamster": "36",
+            "house": "37",
+            "kangaroo": "38",
+            "keyboard": "39",
+            "lamp": "40",
+            "lawn_mower": "41",
+            "leopard": "42",
+            "lion": "43",
+            "lizard": "44",
+            "lobster": "45",
+            "man": "46",
+            "maple_tree": "47",
+            "motorcycle": "48",
+            "mountain": "49",
+            "mouse": "50",
+            "mushroom": "51",
+            "oak_tree": "52",
+            "orange": "53",
+            "orchid": "54",
+            "otter": "55",
+            "palm_tree": "56",
+            "pear": "57",
+            "pickup_truck": "58",
+            "pine_tree": "59",
+            "plain": "60",
+            "plate": "61",
+            "poppy": "62",
+            "porcupine": "63",
+            "possum": "64",
+            "rabbit": "65",
+            "raccoon": "66",
+            "ray": "67",
+            "road": "68",
+            "rocket": "69",
+            "rose": "70",
+            "sea": "71",
+            "seal": "72",
+            "shark": "73",
+            "shrew": "74",
+            "skunk": "75",
+            "skyscraper": "76",
+            "snail": "77",
+            "snake": "78",
+            "spider": "79",
+            "squirrel": "80",
+            "streetcar": "81",
+            "sunflower": "82",
+            "sweet_pepper": "83",
+            "table": "84",
+            "tank": "85",
+            "telephone": "86",
+            "television": "87",
+            "tiger": "88",
+            "tractor": "89",
+            "train": "90",
+            "trout": "91",
+            "tulip": "92",
+            "turtle": "93",
+            "wardrobe": "94",
+            "whale": "95",
+            "willow_tree": "96",
+            "wolf": "97",
+            "woman": "98",
+            "worm": "99"
+          },
+          "layer_norm_eps": 1e-12,
+          "model_type": "vit",
+          "num_attention_heads": 12,
+          "num_channels": 3,
+          "num_hidden_layers": 12,
+          "patch_size": 16,
+          "problem_type": "single_label_classification",
+          "qkv_bias": true,
+          "torch_dtype": "float32",
+          "transformers_version": "4.19.2"
+        },
+        "preprocessing": {
+          "do_normalize": true,
+          "do_resize": true,
+          "feature_extractor_type": "ViTFeatureExtractor",
+          "image_mean": [
+            0.5,
+            0.5,
+            0.5
+          ],
+          "image_std": [
+            0.5,
+            0.5,
+            0.5
+          ],
+          "resample": 2,
+          "size": 224
+        },
+        "architecture": [
+          "ViTForImageClassification"
+        ],
+        "files": {
+          "pytorch_model.bin": {
+            "size": 343568433,
+            "sha256": "54c46d0ba2771f074f9809f6af604d49c22dcaff4e833285a4508fb851bd11f8"
+          },
+          "config.json": {
+            "size": 4683,
+            "sha256": "71a4b22c27c379924a30f3ecd05215d075477a3262240f74e5bc9375c3242a77"
+          },
+          "preprocessor_config.json": {
+            "size": 228,
+            "sha256": "af4eb4d79cf61b47010fc0bc9352ee967579c417423b4917188d809b7e048948"
+          },
+          "README.md": {
+            "size": 1871,
+            "sha256": "9bd82a7a44f2f5b9b3f3d6652c90c9f2be59d9d3d8caa5f7085bc02efb1a669c"
+          }
+        },
+        "weight": "pytorch_model.bin",
+        "backend": "hf_published",
+        "environment": "shared_hf",
+        "dataset_relation": "original_exact",
+        "split": "CIFAR100 test, 10000",
+        "excluded_source_labels": {},
+        "images": 10000,
+        "covered_target_classes": 100,
+        "num_output_classes": 100,
+        "label_mapping": {
+          "0": "apple",
+          "1": "aquarium_fish",
+          "10": "bowl",
+          "11": "boy",
+          "12": "bridge",
+          "13": "bus",
+          "14": "butterfly",
+          "15": "camel",
+          "16": "can",
+          "17": "castle",
+          "18": "caterpillar",
+          "19": "cattle",
+          "2": "baby",
+          "20": "chair",
+          "21": "chimpanzee",
+          "22": "clock",
+          "23": "cloud",
+          "24": "cockroach",
+          "25": "couch",
+          "26": "cra",
+          "27": "crocodile",
+          "28": "cup",
+          "29": "dinosaur",
+          "3": "bear",
+          "30": "dolphin",
+          "31": "elephant",
+          "32": "flatfish",
+          "33": "forest",
+          "34": "fox",
+          "35": "girl",
+          "36": "hamster",
+          "37": "house",
+          "38": "kangaroo",
+          "39": "keyboard",
+          "4": "beaver",
+          "40": "lamp",
+          "41": "lawn_mower",
+          "42": "leopard",
+          "43": "lion",
+          "44": "lizard",
+          "45": "lobster",
+          "46": "man",
+          "47": "maple_tree",
+          "48": "motorcycle",
+          "49": "mountain",
+          "5": "bed",
+          "50": "mouse",
+          "51": "mushroom",
+          "52": "oak_tree",
+          "53": "orange",
+          "54": "orchid",
+          "55": "otter",
+          "56": "palm_tree",
+          "57": "pear",
+          "58": "pickup_truck",
+          "59": "pine_tree",
+          "6": "bee",
+          "60": "plain",
+          "61": "plate",
+          "62": "poppy",
+          "63": "porcupine",
+          "64": "possum",
+          "65": "rabbit",
+          "66": "raccoon",
+          "67": "ray",
+          "68": "road",
+          "69": "rocket",
+          "7": "beetle",
+          "70": "rose",
+          "71": "sea",
+          "72": "seal",
+          "73": "shark",
+          "74": "shrew",
+          "75": "skunk",
+          "76": "skyscraper",
+          "77": "snail",
+          "78": "snake",
+          "79": "spider",
+          "8": "bicycle",
+          "80": "squirrel",
+          "81": "streetcar",
+          "82": "sunflower",
+          "83": "sweet_pepper",
+          "84": "table",
+          "85": "tank",
+          "86": "telephone",
+          "87": "television",
+          "88": "tiger",
+          "89": "tractor",
+          "9": "bottle",
+          "90": "train",
+          "91": "trout",
+          "92": "tulip",
+          "93": "turtle",
+          "94": "wardrobe",
+          "95": "whale",
+          "96": "willow_tree",
+          "97": "wolf",
+          "98": "woman",
+          "99": "worm"
+        },
+        "scoring": "reference",
+        "evaluator": "sklearn reference scoring",
+        "fidelity": "reference_baseline",
+        "case_type": "special",
+        "special_tags": [
+          "framework_numeric_difference",
+          "official_evaluator_missing"
+        ],
+        "inference_entry": "publisher_transformers_model_and_processor",
+        "default_batch_size": 1,
+        "dtype": "float32",
+        "warmup_batches": 10,
+        "index": "__MODEL_ROOT__/resources/runtime/assets/workspace/classification171_200_eval/indices/195.jsonl",
+        "index_sha256": "40d6a13e6598a65da157ee013ae6fb1f88efc3ad75a5fe4afcbd2d16b0dc47c3",
+        "data_containers": {
+          "__DATASET_ROOT__/datasets_171_200/cifar100/raw/cifar100/test-00000-of-00001.parquet": {
+            "size": 23772751,
+            "mtime_ns": 1790019692676357897
+          }
+        },
+        "protocol_fingerprint": "96fc4601b8d3c80cfc3e4adbda1ea1da9cb0a01869ebda209a16e2f04326db45"
+      },
+      "status": "partial_complete",
+      "gpu_at_start": "0, GPU-edb63bcd-7ac5-4284-b9ea-825830b8ebba, NVIDIA GeForce RTX 4090, 580.126.09, 778 MiB, 22 %\n1, GPU-a11f730c-a975-2bf0-b765-3c24d83b7104, NVIDIA GeForce RTX 4090, 580.126.09, 133 MiB, 13 %",
+      "full_evaluation": false,
+      "images": 10,
+      "timing_file": "__MODEL_ROOT__/resources/runtime/assets/workspace/classification171_200_eval/.validation/v1/smoke/m195/timing.json",
+      "run_wall_seconds_this_segment": 4.234544143080711
+    },
+    {
+      "sequence": 197,
+      "model_id": "arize-ai/resnet-50-fashion-mnist-quality-drift",
+      "variant": null,
+      "phase": "smoke",
+      "protocol_fingerprint": "d67f2cb711711024b67a3f66c7ddddfb867e9a7bd8ccc79ad84dc1425750dfdd",
+      "protocol": {
+        "model": "5442a706e83483baf59f2528372ffecdb7a78df757dca78fbcef81b0f98744f1",
+        "code": {
+          "run_model.py": "b9c7db394c4a020f84fb8cc4515d9d7a020943b011fdea3b1303e192ab84dee3",
+          "common.py": "87e119ea13cd713bb054693dae0e04b7064b4fd683c8479b7715fd9b3883d045",
+          "prepare.py": "bf5bd4e223b181dd89142dbf467f92fe7c09b88ab4c82b061346248019f4ad9b",
+          "dispatch.py": "37a15fb15281dd6658bc87da9ad72f44de99c6f0161d4323c96d22dad3268ffb",
+          "timing.py": "db23cf873121e5e9345f23488d02d7757560a25084f330a56e38d5969d448342",
+          "native_js.mjs": "7ce8d0c8d4119a2ce2a4a0b3b89ffaffea9e4028e1e4196b09d8cdbf922685b1"
+        },
+        "environment": {
+          "python": "3.11.16 (main, Aug 27 2026, 14:44:21) [GCC 14.3.0]",
+          "versions": {
+            "torch": "2.5.1+cu121",
+            "torchvision": "0.20.1+cu121",
+            "transformers": "4.50.0",
+            "timm": "1.0.15",
+            "Pillow": "11.1.0",
+            "numpy": "1.26.4",
+            "scikit-learn": "1.5.2",
+            "pyarrow": "19.0.1"
+          },
+          "cuda_runtime": "12.1",
+          "cuda_available": true
+        },
+        "device": "cuda:1",
+        "batch_size": 1,
+        "warmup": 10,
+        "workers": 2,
+        "variant": null
+      },
+      "model_manifest": {
+        "sequence": 197,
+        "model_id": "arize-ai/resnet-50-fashion-mnist-quality-drift",
+        "model_path": "__MODEL_ROOT__/weights/arize-ai/resnet-50-fashion-mnist-quality-drift",
+        "revision": "104610943e0d62797b614bf6f72b5a2ecbf8f8f9",
+        "task_type": "image-classification",
+        "status": "not_started",
+        "official_model_card": "https://huggingface.co/arize-ai/resnet-50-fashion-mnist-quality-drift",
+        "official_reference": null,
+        "reference_comparison": "manual_reference_required",
+        "known_differences": [],
+        "config": {
+          "_name_or_path": "microsoft/resnet-50",
+          "architectures": [
+            "ResNetForImageClassification"
+          ],
+          "depths": [
+            3,
+            4,
+            6,
+            3
+          ],
+          "downsample_in_first_stage": false,
+          "embedding_size": 64,
+          "hidden_act": "relu",
+          "hidden_sizes": [
+            256,
+            512,
+            1024,
+            2048
+          ],
+          "id2label": {
+            "0": "T-shirt",
+            "1": "Trouser",
+            "2": "Pullover",
+            "3": "Dress",
+            "4": "Coat",
+            "5": "Sandal",
+            "6": "Shirt",
+            "7": "Sneaker",
+            "8": "Bag",
+            "9": "Ankle-boot"
+          },
+          "label2id": {
+            "Ankle-boot": 9,
+            "Bag": 8,
+            "Coat": 4,
+            "Dress": 3,
+            "Pullover": 2,
+            "Sandal": 5,
+            "Shirt": 6,
+            "Sneaker": 7,
+            "T-shirt": 0,
+            "Trouser": 1
+          },
+          "layer_type": "bottleneck",
+          "model_type": "resnet",
+          "num_channels": 3,
+          "output_hidden_states": true,
+          "problem_type": "single_label_classification",
+          "torch_dtype": "float32",
+          "transformers_version": "4.21.0"
+        },
+        "preprocessing": {
+          "crop_pct": 0.875,
+          "do_normalize": true,
+          "do_resize": true,
+          "feature_extractor_type": "ConvNextFeatureExtractor",
+          "image_mean": [
+            0.485,
+            0.456,
+            0.406
+          ],
+          "image_std": [
+            0.229,
+            0.224,
+            0.225
+          ],
+          "resample": 3,
+          "size": 224
+        },
+        "architecture": [
+          "ResNetForImageClassification"
+        ],
+        "files": {
+          "pytorch_model.bin": {
+            "size": 94438209,
+            "sha256": "b7da8f840e12240cb7d147d1b1ee173f5c48ae25aab6d6c2c6763921ee836a1b"
+          },
+          "config.json": {
+            "size": 926,
+            "sha256": "005666311718a6f8aa0ba9f7a2cf2b67d00d650a39c96b33d0fc23a725e151da"
+          },
+          "preprocessor_config.json": {
+            "size": 266,
+            "sha256": "fd575b890da5a949493e1d1e7a70bfcb9e4b99fe444004d2dbfa253add254741"
+          },
+          "README.md": {
+            "size": 2021,
+            "sha256": "b93a61ca6bdf1b1a5c196fdbd98c68862009049ccc887a93a9f3a9445585c787"
+          }
+        },
+        "weight": "pytorch_model.bin",
+        "backend": "hf_published",
+        "environment": "shared_hf",
+        "dataset_relation": "public_replacement",
+        "split": "standard Fashion-MNIST test, not quality_drift variant",
+        "excluded_source_labels": {},
+        "images": 10000,
+        "covered_target_classes": 10,
+        "num_output_classes": 10,
+        "label_mapping": {
+          "0": "T-shirt",
+          "1": "Trouser",
+          "2": "Pullover",
+          "3": "Dress",
+          "4": "Coat",
+          "5": "Sandal",
+          "6": "Shirt",
+          "7": "Sneaker",
+          "8": "Bag",
+          "9": "Ankle-boot"
+        },
+        "scoring": "reference",
+        "evaluator": "sklearn reference scoring",
+        "fidelity": "reference_baseline",
+        "case_type": "special",
+        "special_tags": [
+          "framework_numeric_difference",
+          "dataset_replacement",
+          "official_evaluator_missing"
+        ],
+        "inference_entry": "publisher_transformers_model_and_processor",
+        "default_batch_size": 1,
+        "dtype": "float32",
+        "warmup_batches": 10,
+        "index": "__MODEL_ROOT__/resources/runtime/assets/workspace/classification171_200_eval/indices/197.jsonl",
+        "index_sha256": "59b56c7382cf928579dfb72d10a8a39afc2ea89533bba849d27e78ab4bc7e6cc",
+        "data_containers": {
+          "__DATASET_ROOT__/fashion_mnist/raw/t10k-images-idx3-ubyte.gz": {
+            "size": 4422102,
+            "mtime_ns": 1789978522935301253
+          }
+        },
+        "protocol_fingerprint": "5442a706e83483baf59f2528372ffecdb7a78df757dca78fbcef81b0f98744f1"
+      },
+      "status": "partial_complete",
+      "gpu_at_start": "0, GPU-edb63bcd-7ac5-4284-b9ea-825830b8ebba, NVIDIA GeForce RTX 4090, 580.126.09, 788 MiB, 42 %\n1, GPU-a11f730c-a975-2bf0-b765-3c24d83b7104, NVIDIA GeForce RTX 4090, 580.126.09, 133 MiB, 13 %",
+      "full_evaluation": false,
+      "images": 10,
+      "timing_file": "__MODEL_ROOT__/resources/runtime/assets/workspace/classification171_200_eval/.validation/v1/smoke/m197/timing.json",
+      "run_wall_seconds_this_segment": 3.7113275439478457
+    },
+    {
+      "sequence": 199,
+      "model_id": "timm/tf_efficientnetv2_s.in21k",
+      "variant": null,
+      "phase": "smoke",
+      "protocol_fingerprint": "14d24f5663bb2470be34e0dc207f04bba435c6252fb73c3989dd952ebc00bd0e",
+      "protocol": {
+        "model": "69d274bf7def1dabef722c2a83955f06898bd80063f5deb2538d2809a81e4bcc",
+        "code": {
+          "run_model.py": "b9c7db394c4a020f84fb8cc4515d9d7a020943b011fdea3b1303e192ab84dee3",
+          "common.py": "87e119ea13cd713bb054693dae0e04b7064b4fd683c8479b7715fd9b3883d045",
+          "prepare.py": "bf5bd4e223b181dd89142dbf467f92fe7c09b88ab4c82b061346248019f4ad9b",
+          "dispatch.py": "37a15fb15281dd6658bc87da9ad72f44de99c6f0161d4323c96d22dad3268ffb",
+          "timing.py": "db23cf873121e5e9345f23488d02d7757560a25084f330a56e38d5969d448342",
+          "native_js.mjs": "7ce8d0c8d4119a2ce2a4a0b3b89ffaffea9e4028e1e4196b09d8cdbf922685b1"
+        },
+        "environment": {
+          "python": "3.11.16 (main, Aug 27 2026, 14:44:21) [GCC 14.3.0]",
+          "versions": {
+            "torch": "2.5.1+cu121",
+            "torchvision": "0.20.1+cu121",
+            "transformers": "4.50.0",
+            "timm": "1.0.15",
+            "Pillow": "11.1.0",
+            "numpy": "1.26.4",
+            "scikit-learn": "1.5.2",
+            "pyarrow": "19.0.1"
+          },
+          "cuda_runtime": "12.1",
+          "cuda_available": true
+        },
+        "device": "cuda:1",
+        "batch_size": 1,
+        "warmup": 10,
+        "workers": 2,
+        "variant": null
+      },
+      "model_manifest": {
+        "sequence": 199,
+        "model_id": "timm/tf_efficientnetv2_s.in21k",
+        "model_path": "__MODEL_ROOT__/weights/timm/tf_efficientnetv2_s.in21k",
+        "revision": "91e43067637cfaf6f3d55d927a7d6a96a481ff8c",
+        "task_type": "image-classification",
+        "status": "not_started",
+        "official_model_card": "https://huggingface.co/timm/tf_efficientnetv2_s.in21k",
+        "official_reference": null,
+        "reference_comparison": "manual_reference_required",
+        "known_differences": [
+          "Keep full model output head. Not an independent original model test set."
+        ],
+        "config": {
+          "architecture": "tf_efficientnetv2_s",
+          "num_classes": 21843,
+          "num_features": 1280,
+          "pretrained_cfg": {
+            "tag": "in21k",
+            "custom_load": false,
+            "input_size": [
+              3,
+              300,
+              300
+            ],
+            "test_input_size": [
+              3,
+              384,
+              384
+            ],
+            "fixed_input_size": false,
+            "interpolation": "bicubic",
+            "crop_pct": 1.0,
+            "crop_mode": "center",
+            "mean": [
+              0.5,
+              0.5,
+              0.5
+            ],
+            "std": [
+              0.5,
+              0.5,
+              0.5
+            ],
+            "num_classes": 21843,
+            "pool_size": [
+              10,
+              10
+            ],
+            "first_conv": "conv_stem",
+            "classifier": "classifier"
+          }
+        },
+        "preprocessing": {
+          "tag": "in21k",
+          "custom_load": false,
+          "input_size": [
+            3,
+            300,
+            300
+          ],
+          "test_input_size": [
+            3,
+            384,
+            384
+          ],
+          "fixed_input_size": false,
+          "interpolation": "bicubic",
+          "crop_pct": 1.0,
+          "crop_mode": "center",
+          "mean": [
+            0.5,
+            0.5,
+            0.5
+          ],
+          "std": [
+            0.5,
+            0.5,
+            0.5
+          ],
+          "num_classes": 21843,
+          "pool_size": [
+            10,
+            10
+          ],
+          "first_conv": "conv_stem",
+          "classifier": "classifier"
+        },
+        "architecture": "tf_efficientnetv2_s",
+        "files": {
+          "model.safetensors": {
+            "size": 193322802,
+            "sha256": "c72d0066f2aedcafbfb6474d47a290dec817041d64f5d878555bcf5a703b2b25"
+          },
+          "config.json": {
+            "size": 632,
+            "sha256": "a1386bdc9c57192d18f46a8ea6fed2ba938bf15d60e78f082ec78ce895a9f037"
+          },
+          "README.md": {
+            "size": 4091,
+            "sha256": "ad115a02000edfad76579f52ac077ac9a33dfb97e00f498ca25967725e14dffe"
+          }
+        },
+        "weight": "model.safetensors",
+        "backend": "timm_native",
+        "environment": "shared_hf",
+        "dataset_relation": "public_replacement",
+        "split": "ImageNet-1K val overlap 999 classes",
+        "excluded_source_labels": {},
+        "images": 49950,
+        "covered_target_classes": 999,
+        "num_output_classes": 21843,
+        "label_mapping": {},
+        "scoring": "native",
+        "evaluator": "timm.validate",
+        "fidelity": "official_protocol_adapter",
+        "case_type": "special",
+        "special_tags": [
+          "framework_numeric_difference",
+          "dataset_replacement"
+        ],
+        "inference_entry": "publisher_transformers_model_and_processor",
+        "default_batch_size": 1,
+        "dtype": "float32",
+        "warmup_batches": 10,
+        "index": "__MODEL_ROOT__/resources/runtime/assets/workspace/classification171_200_eval/indices/199.jsonl",
+        "index_sha256": "802e24aa30cd79e7ed9f1891bc7aaa71696ffa53302151df6f39dcbee7fb619f",
+        "data_containers": {},
+        "class_map": "__DATASET_ROOT__/datasets_171_200/imagenet_overlap_199/native_class_map.txt",
+        "class_map_sha256": "66362bdedf36d933382edca5493fc562dcc17128ce36403c9e730a75f48cb2f2",
+        "protocol_fingerprint": "69d274bf7def1dabef722c2a83955f06898bd80063f5deb2538d2809a81e4bcc"
+      },
+      "status": "failed",
+      "gpu_at_start": "0, GPU-edb63bcd-7ac5-4284-b9ea-825830b8ebba, NVIDIA GeForce RTX 4090, 580.126.09, 778 MiB, 39 %\n1, GPU-a11f730c-a975-2bf0-b765-3c24d83b7104, NVIDIA GeForce RTX 4090, 580.126.09, 133 MiB, 27 %",
+      "full_evaluation": false,
+      "error_type": "RuntimeError",
+      "error": "Invalid device argument \u0001: did you call init?",
+      "traceback": "Traceback (most recent call last):\n  File \"__MODEL_ROOT__/resources/runtime/assets/workspace/classification171_200_eval/run_model.py\", line 374, in run_one\n    if spec['backend']=='timm_native': timing,metrics=native_timm(spec,rows,args,out)\n                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"__MODEL_ROOT__/resources/runtime/assets/workspace/classification171_200_eval/run_model.py\", line 281, in native_timm\n    if str(args.device).startswith('cuda'): torch.cuda.reset_peak_memory_stats(args.device)\n                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/gaoyonghan/miniconda3/envs/object-detection-hf-v2/lib/python3.11/site-packages/torch/cuda/memory.py\", line 344, in reset_peak_memory_stats\n    return torch._C._cuda_resetPeakMemoryStats(device)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: Invalid device argument \u0001: did you call init?\n"
+    },
+    {
+      "sequence": 200,
+      "model_id": "timm/convnext_tiny.fb_in22k",
+      "variant": null,
+      "phase": "smoke",
+      "protocol_fingerprint": "496e14516f3f7f95691c4829bbda9bdaf2661d26703a9db250131015baa59df0",
+      "protocol": {
+        "model": "c11073169c3d07b0e7a1b295aeac425c6daba95094bbd2ec246115ffdeddaca1",
+        "code": {
+          "run_model.py": "b9c7db394c4a020f84fb8cc4515d9d7a020943b011fdea3b1303e192ab84dee3",
+          "common.py": "87e119ea13cd713bb054693dae0e04b7064b4fd683c8479b7715fd9b3883d045",
+          "prepare.py": "bf5bd4e223b181dd89142dbf467f92fe7c09b88ab4c82b061346248019f4ad9b",
+          "dispatch.py": "37a15fb15281dd6658bc87da9ad72f44de99c6f0161d4323c96d22dad3268ffb",
+          "timing.py": "db23cf873121e5e9345f23488d02d7757560a25084f330a56e38d5969d448342",
+          "native_js.mjs": "7ce8d0c8d4119a2ce2a4a0b3b89ffaffea9e4028e1e4196b09d8cdbf922685b1"
+        },
+        "environment": {
+          "python": "3.11.16 (main, Aug 27 2026, 14:44:21) [GCC 14.3.0]",
+          "versions": {
+            "torch": "2.5.1+cu121",
+            "torchvision": "0.20.1+cu121",
+            "transformers": "4.50.0",
+            "timm": "1.0.15",
+            "Pillow": "11.1.0",
+            "numpy": "1.26.4",
+            "scikit-learn": "1.5.2",
+            "pyarrow": "19.0.1"
+          },
+          "cuda_runtime": "12.1",
+          "cuda_available": true
+        },
+        "device": "cuda:1",
+        "batch_size": 1,
+        "warmup": 10,
+        "workers": 2,
+        "variant": null
+      },
+      "model_manifest": {
+        "sequence": 200,
+        "model_id": "timm/convnext_tiny.fb_in22k",
+        "model_path": "__MODEL_ROOT__/weights/timm/convnext_tiny.fb_in22k",
+        "revision": "342f2588bb2ea79d793d0712c9be16ec6ae0149a",
+        "task_type": "image-classification",
+        "status": "not_started",
+        "official_model_card": "https://huggingface.co/timm/convnext_tiny.fb_in22k",
+        "official_reference": null,
+        "reference_comparison": "manual_reference_required",
+        "known_differences": [
+          "Keep full model output head. Not an independent original model test set."
+        ],
+        "config": {
+          "architecture": "convnext_tiny",
+          "num_classes": 21841,
+          "num_features": 768,
+          "pretrained_cfg": {
+            "tag": "fb_in22k",
+            "custom_load": false,
+            "input_size": [
+              3,
+              224,
+              224
+            ],
+            "fixed_input_size": false,
+            "interpolation": "bicubic",
+            "crop_pct": 0.875,
+            "crop_mode": "center",
+            "mean": [
+              0.485,
+              0.456,
+              0.406
+            ],
+            "std": [
+              0.229,
+              0.224,
+              0.225
+            ],
+            "num_classes": 21841,
+            "pool_size": [
+              7,
+              7
+            ],
+            "first_conv": "stem.0",
+            "classifier": "head.fc"
+          }
+        },
+        "preprocessing": {
+          "tag": "fb_in22k",
+          "custom_load": false,
+          "input_size": [
+            3,
+            224,
+            224
+          ],
+          "fixed_input_size": false,
+          "interpolation": "bicubic",
+          "crop_pct": 0.875,
+          "crop_mode": "center",
+          "mean": [
+            0.485,
+            0.456,
+            0.406
+          ],
+          "std": [
+            0.229,
+            0.224,
+            0.225
+          ],
+          "num_classes": 21841,
+          "pool_size": [
+            7,
+            7
+          ],
+          "first_conv": "stem.0",
+          "classifier": "head.fc"
+        },
+        "architecture": "convnext_tiny",
+        "files": {
+          "model.safetensors": {
+            "size": 178481432,
+            "sha256": "2b40f8d53b566a8c08c0c75f93ff5ac6fa33bd213afb27ee40766af7ffe5943b"
+          },
+          "config.json": {
+            "size": 572,
+            "sha256": "0c8956c39cfa27a4d63584ebae906e30639804f99092e4afb1467c7c06e65184"
+          },
+          "README.md": {
+            "size": 15612,
+            "sha256": "b0b9b0c7e83802c03318f1870977a9f8de9b9b831db3af214c88eb74a1e95b29"
+          }
+        },
+        "weight": "model.safetensors",
+        "backend": "timm_native",
+        "environment": "shared_hf",
+        "dataset_relation": "public_replacement",
+        "split": "ImageNet-1K val overlap 999 classes",
+        "excluded_source_labels": {},
+        "images": 49950,
+        "covered_target_classes": 999,
+        "num_output_classes": 21841,
+        "label_mapping": {},
+        "scoring": "native",
+        "evaluator": "timm.validate",
+        "fidelity": "official_protocol_adapter",
+        "case_type": "special",
+        "special_tags": [
+          "framework_numeric_difference",
+          "dataset_replacement"
+        ],
+        "inference_entry": "publisher_transformers_model_and_processor",
+        "default_batch_size": 1,
+        "dtype": "float32",
+        "warmup_batches": 10,
+        "index": "__MODEL_ROOT__/resources/runtime/assets/workspace/classification171_200_eval/indices/200.jsonl",
+        "index_sha256": "a7b5bceae56a6a139fd409e6f67a8b7fd41e3a41d62dc81d4fc52c9de38e0ef4",
+        "data_containers": {},
+        "class_map": "__DATASET_ROOT__/datasets_171_200/imagenet_overlap_200/native_class_map.txt",
+        "class_map_sha256": "0ae24538751973797b29d8dec412b2bdc61bc4ec3ecd081eba0735804236bbd2",
+        "protocol_fingerprint": "c11073169c3d07b0e7a1b295aeac425c6daba95094bbd2ec246115ffdeddaca1"
+      },
+      "status": "failed",
+      "gpu_at_start": "0, GPU-edb63bcd-7ac5-4284-b9ea-825830b8ebba, NVIDIA GeForce RTX 4090, 580.126.09, 790 MiB, 41 %\n1, GPU-a11f730c-a975-2bf0-b765-3c24d83b7104, NVIDIA GeForce RTX 4090, 580.126.09, 133 MiB, 27 %",
+      "full_evaluation": false,
+      "error_type": "RuntimeError",
+      "error": "Invalid device argument \u0001: did you call init?",
+      "traceback": "Traceback (most recent call last):\n  File \"__MODEL_ROOT__/resources/runtime/assets/workspace/classification171_200_eval/run_model.py\", line 374, in run_one\n    if spec['backend']=='timm_native': timing,metrics=native_timm(spec,rows,args,out)\n                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"__MODEL_ROOT__/resources/runtime/assets/workspace/classification171_200_eval/run_model.py\", line 281, in native_timm\n    if str(args.device).startswith('cuda'): torch.cuda.reset_peak_memory_stats(args.device)\n                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/gaoyonghan/miniconda3/envs/object-detection-hf-v2/lib/python3.11/site-packages/torch/cuda/memory.py\", line 344, in reset_peak_memory_stats\n    return torch._C._cuda_resetPeakMemoryStats(device)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: Invalid device argument \u0001: did you call init?\n"
+    }
+  ]
+}

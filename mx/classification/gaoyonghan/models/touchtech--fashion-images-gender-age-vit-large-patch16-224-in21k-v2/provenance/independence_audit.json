@@ -1,0 +1,22 @@
+{
+  "sequence": 90,
+  "model_id": "touchtech/fashion-images-gender-age-vit-large-patch16-224-in21k-v2",
+  "source_archive_hash_matches": true,
+  "source_archive_sha256": "7d5d31a44b605fefd36fa19df3cc43cfa65e297f13e7cce0929ba1762b5c2432",
+  "prepared_entry_source_sha256": "75456002df99122504e6a48270eff5ae3e617e0ea68f5019e6ad8ac1322541b7",
+  "local_entry_sha256": "eec1427473ea530a8e639142dc04dc83532354157776fab42d6caf9fd74d5bb6",
+  "local_entry": "inference/native/eval_m90_proxy.py",
+  "central_dispatch_in_entry": false,
+  "unexpected_external_links": [],
+  "declared_dataset_links": [],
+  "broken_links": [],
+  "path_template_count": 326,
+  "state": "entrypoint_verified_full_run_pending",
+  "validation": {
+    "returncode": 0,
+    "python": "/home/ubuntu/gaoyonghan/miniconda3/envs/object-detection-hf-v2/bin/python",
+    "checked_at": "2026-11-10T15:56:49.059604+08:00",
+    "scope": "native help/import/path check only; not full inference"
+  },
+  "smoke_verification": null
+}

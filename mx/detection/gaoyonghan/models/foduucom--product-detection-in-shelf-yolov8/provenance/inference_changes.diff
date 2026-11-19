@@ -1,0 +1,15 @@
+--- original_inference.py
++++ inference/native/run_m54_sku_official.py
+@@ -18,9 +18,9 @@
+ from PIL import Image, ImageFile
+ 
+ HERE = Path(__file__).resolve().parent
+-DATA = Path('/home/ubuntu/gaoyonghan/gpu/results/remaining25_prepared/sku110k_test')
+-WEIGHT = Path('/data2/gaoyonghan/gpu/model/foduucom/product-detection-in-shelf-yolov8/best.pt')
+-OUT = Path('/home/ubuntu/gaoyonghan/gpu/results/m54_sku_official_v1')
++DATA = Path('/data2/gaoyonghan/gpu_model_standalone_20261110/release/model/检测/foduucom--product-detection-in-shelf-yolov8/resources/runtime/assets/workspace/results/remaining25_prepared/sku110k_test')
++WEIGHT = Path('/data2/gaoyonghan/gpu_model_standalone_20261110/release/model/检测/foduucom--product-detection-in-shelf-yolov8/resources/model_index/foduucom/product-detection-in-shelf-yolov8/best.pt')
++OUT = Path('/data2/gaoyonghan/gpu_model_standalone_20261110/release/model/检测/foduucom--product-detection-in-shelf-yolov8/results/run_001/m054')
+ REV = '9303b450077244fb8c7729717b67c2da6c807819'
+ URL = f'https://raw.githubusercontent.com/retailvisionworkshop/retailvisionworkshop.github.io/{REV}/_data/densely_packed_eval_2020-02-06.zip'
+ ZIP_SHA = '2db06f173154650e8a182ad9a905a7e3b7b8e21fd9c829f2367d946fa77a603f'

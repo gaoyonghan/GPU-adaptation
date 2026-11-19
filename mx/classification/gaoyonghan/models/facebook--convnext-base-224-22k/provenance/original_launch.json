@@ -1,0 +1,33 @@
+[
+  {
+    "command": [
+      "/home/ubuntu/gaoyonghan/miniconda3/envs/object-detection-hf-v2/bin/python",
+      "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/project/results/runtime/m100/eval_imagenet1k_to_22k.py",
+      "--model",
+      "100",
+      "--out",
+      "/data2/gaoyonghan/gpu_model_standalone_20261110/build_results/m100",
+      "--per-class",
+      "5",
+      "--max-images",
+      "0"
+    ],
+    "cwd": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/project/results/runtime/m100",
+    "environment": {
+      "PATH": "/home/ubuntu/.local/bin:/home/ubuntu/bin:/home/ubuntu/.codex/tmp/arg0/codex-arg0CXlF7D:/home/ubuntu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override:/home/ubuntu/.local/bin:/home/ubuntu/bin:/home/ubuntu/.local/bin:/home/ubuntu/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/ubuntu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback:/usr/lib/chatgpt/resources",
+      "PYTHONNOUSERSITE": "1",
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "HF_HUB_OFFLINE": "1",
+      "TRANSFORMERS_OFFLINE": "1",
+      "YOLO_AUTOINSTALL": "false",
+      "CUDA_VISIBLE_DEVICES": "0",
+      "PYTHONPATH": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/project/timing_runtime:/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/project/results/runtime/m100:",
+      "CODEX_TIMING_OUTPUT_DIR": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_results/m100/timing/full",
+      "CODEX_TIMING_DEVICE": "cuda:0",
+      "CODEX_TIMING_FRAMEWORK": "torch"
+    },
+    "output": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_results/m100",
+    "index": 1,
+    "phase": "full"
+  }
+]

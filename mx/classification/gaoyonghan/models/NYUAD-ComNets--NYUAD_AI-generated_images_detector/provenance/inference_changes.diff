@@ -1,0 +1,11 @@
+--- original_inference.py
++++ inference/native/run_model.py
+@@ -231,7 +231,7 @@
+     parser.add_argument("--check-environment", action="store_true")
+     parser.add_argument("--self-test", action="store_true")
+     parser.add_argument("--max-images", type=int, default=0)
+-    parser.add_argument("--output-root", default="/home/ubuntu/gaoyonghan/gpu/results/nyuad72_v1")
++    parser.add_argument("--output-root", default="/data2/gaoyonghan/gpu_model_standalone_20261110/release/model/分类/NYUAD-ComNets--NYUAD_AI-generated_images_detector/resources/runtime/assets/workspace/results/nyuad72_v1")
+     args = parser.parse_args()
+     if args.describe:
+         print(json.dumps(SPEC, ensure_ascii=False, indent=2))

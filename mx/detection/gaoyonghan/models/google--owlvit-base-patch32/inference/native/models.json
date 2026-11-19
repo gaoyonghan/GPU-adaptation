@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "suite": "top100-zero-shot-object-detection-official-protocol",
+  "fidelity_levels": {
+    "exact_official": "官方代码、官方原生权重和官方环境直接运行。",
+    "official_protocol_adapter": "本地权重是官方发布/转换的另一种格式；适配层逐项复刻官方数据、提示词、预处理、后处理和指标。",
+    "reference_baseline": "官方没有发布与报告表格完全对应的端到端评估入口；只能使用官方组件构造可复现基线，不能宣称复现官方值。"
+  },
+  "datasets": {
+    "lvis_v1_val": {
+      "name": "LVIS v1.0",
+      "split": "val",
+      "images": 19809,
+      "categories": 1203,
+      "annotation_archive": "lvis_v1_val/lvis_v1_val.json.zip",
+      "annotation_member": "lvis_v1_val.json",
+      "image_archives": [
+        "COCO2017/train2017.zip",
+        "COCO2017/val2017.zip"
+      ],
+      "metric": "official lvis-api LVISEval bbox AP, max_dets=300",
+      "official_url": "https://www.lvisdataset.org/dataset"
+    }
+  },
+  "models": [
+    {
+      "sequence": 64,
+      "key": "owlvit-base-patch32",
+      "repo_id": "google/owlvit-base-patch32",
+      "hf_revision": "cbc355fb364588351c5d51c7f74465e8e7ec6f72",
+      "family": "owl",
+      "runner": "scenic_owl_lvis",
+      "dataset": "lvis_v1_val",
+      "fidelity": "official_protocol_adapter",
+      "weight_format": "Hugging Face PyTorch conversion of the official Scenic Flax checkpoint",
+      "official_source": {
+        "repository": "https://github.com/google-research/scenic/tree/main/scenic/projects/owl_vit",
+        "revision": "a179cefc7fd0a48676c15aa45b31c469e0dfc07d",
+        "inference_script": "scenic/projects/owl_vit/evaluator.py",
+        "config": "scenic/projects/owl_vit/configs/clip_b32.py",
+        "native_checkpoint": "clip_vit_b32_b0203fc",
+        "conversion_script": "https://github.com/huggingface/transformers/blob/main/src/transformers/models/owlvit/convert_owlvit_original_flax_to_hf.py"
+      },
+      "protocol": {
+        "queries": "1203 LVIS class names, canonicalized; seven CLIP_BEST_PROMPT_TEMPLATES",
+        "prompt_ensemble": "average class logits across seven templates, then sigmoid",
+        "image_preprocess": "ResizeWithPad to 768x768, black padding, CLIP normalization",
+        "selection": "global top 300 box-class pairs; classes are non-exclusive; unpad boxes; mirror evaluator's label-index-0 skip",
+        "metric": "LVIS v1 bbox AP and APr"
+      },
+      "official_reference": {
+        "scope": "canonical Scenic checkpoint/config",
+        "metrics_percent": {
+          "AP": 20.9,
+          "APr": 16.9
+        },
+        "source": "https://github.com/google-research/scenic/blob/main/scenic/projects/owl_vit/configs/clip_b32.py"
+      },
+      "known_differences": [
+        "所固定 Scenic evaluator 会丢弃 label index 0；适配器逐字义复刻该行为并在运行记录中保留。",
+        "用 PyTorch 转换权重执行 Scenic 协议，而不是 JAX/Flax 原始 evaluator；数值应接近但不保证逐位相同。"
+      ],
+      "legacy_result": {
+        "AP_percent": 18.4302,
+        "classification": "invalid_protocol_single_prompt_no_pad"
+      }
+    }
+  ]
+}

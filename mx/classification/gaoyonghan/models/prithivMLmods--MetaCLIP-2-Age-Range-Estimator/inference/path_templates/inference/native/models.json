@@ -1,0 +1,196 @@
+{
+  "schema_version": 1,
+  "sources": {
+    "transformers": {
+      "path": "__MODEL_ROOT__/resources/runtime/assets/workspace/171-200/inference_code/transformers",
+      "commit": "4618eba18322b19e162b0eb7b33464a4d6a50ddd"
+    }
+  },
+  "models": [
+    {
+      "sequence": 183,
+      "model_id": "prithivMLmods/MetaCLIP-2-Age-Range-Estimator",
+      "model_path": "__MODEL_ROOT__/weights/prithivMLmods/MetaCLIP-2-Age-Range-Estimator",
+      "revision": "7b80ac7d3bce892d6507496d2f6e89ef02b1d30a",
+      "task_type": "image-classification",
+      "status": "not_started",
+      "official_model_card": "https://huggingface.co/prithivMLmods/MetaCLIP-2-Age-Range-Estimator",
+      "official_reference": {
+        "source": "https://huggingface.co/prithivMLmods/MetaCLIP-2-Age-Range-Estimator",
+        "local_card_sha256": "4b5b2cc7b5a640789b711ac04d350dd4c6476c27e3938b9ba22c1e0b98569370",
+        "model_index": null,
+        "text_report_values": {
+          "accuracy": 0.9559,
+          "macro_f1": 0.9451,
+          "weighted_f1": 0.9556
+        },
+        "units": "fractions for extracted accuracy/F1; original model-index units as published",
+        "comparison": "Manual protocol review required; no automatic drop calculation",
+        "note": "Card reports retained as provenance, not proof that local data/split/framework exactly reproduces the reported run."
+      },
+      "reference_comparison": "manual_reference_required",
+      "known_differences": [
+        "Full-precision probabilities retained for metrics; publisher demo rounds probabilities to three decimals only for Gradio display. Display rounding is not used to rank classes.",
+        "Local checkpoint and publisher inference components retained. Offline file paths, eval mode, batching, timing observation and reference scoring are external orchestration."
+      ],
+      "config": {
+        "architectures": [
+          "MetaClip2ForImageClassification"
+        ],
+        "dtype": "float32",
+        "id2label": {
+          "0": "Child 0-12",
+          "1": "Teenager 13-20",
+          "2": "Adult 21-44",
+          "3": "Middle Age 45-64",
+          "4": "Aged 65+"
+        },
+        "initializer_factor": 1.0,
+        "label2id": {
+          "Adult 21-44": 2,
+          "Aged 65+": 4,
+          "Child 0-12": 0,
+          "Middle Age 45-64": 3,
+          "Teenager 13-20": 1
+        },
+        "logit_scale_init_value": 2.6592,
+        "model_type": "metaclip_2",
+        "problem_type": "single_label_classification",
+        "projection_dim": 384,
+        "text_config": {
+          "attention_dropout": 0.0,
+          "dtype": "float32",
+          "eos_token_id": 2,
+          "hidden_act": "gelu",
+          "hidden_size": 384,
+          "initializer_factor": 1.0,
+          "initializer_range": 0.02,
+          "intermediate_size": 1536,
+          "layer_norm_eps": 1e-05,
+          "max_position_embeddings": 77,
+          "model_type": "metaclip_2_text_model",
+          "num_attention_heads": 6,
+          "num_hidden_layers": 12,
+          "projection_dim": 384,
+          "vocab_size": 901629
+        },
+        "transformers_version": "4.57.1",
+        "vision_config": {
+          "attention_dropout": 0.0,
+          "dtype": "float32",
+          "hidden_act": "gelu",
+          "hidden_size": 384,
+          "image_size": 224,
+          "initializer_factor": 1.0,
+          "initializer_range": 0.02,
+          "intermediate_size": 1536,
+          "layer_norm_eps": 1e-05,
+          "model_type": "metaclip_2_vision_model",
+          "num_attention_heads": 6,
+          "num_channels": 3,
+          "num_hidden_layers": 12,
+          "patch_size": 16,
+          "projection_dim": 384
+        }
+      },
+      "preprocessing": {
+        "crop_size": {
+          "height": 224,
+          "width": 224
+        },
+        "do_center_crop": true,
+        "do_convert_rgb": true,
+        "do_normalize": true,
+        "do_rescale": true,
+        "do_resize": true,
+        "image_mean": [
+          0.48145466,
+          0.4578275,
+          0.40821073
+        ],
+        "image_processor_type": "CLIPImageProcessor",
+        "image_std": [
+          0.26862954,
+          0.26130258,
+          0.27577711
+        ],
+        "processor_class": "CLIPProcessor",
+        "resample": 3,
+        "rescale_factor": 0.00392156862745098,
+        "size": {
+          "height": 224,
+          "width": 224
+        }
+      },
+      "architecture": [
+        "MetaClip2ForImageClassification"
+      ],
+      "files": {
+        "model.safetensors": {
+          "size": 86695548,
+          "sha256": "ff8636d6e9ceb085bddd789514fd5d76530eca6981e91ec63c07e9e9c0a3f1c6"
+        },
+        "config.json": {
+          "size": 1484,
+          "sha256": "886c693c4eff7a7d15e783aac273d099582f53e046659bc1aba80bafb8efb959"
+        },
+        "preprocessor_config.json": {
+          "size": 515,
+          "sha256": "6286f896bf2960c7baea6cf589a0a2ddae0059283b3af33b5dde37bd54b6a87a"
+        },
+        "README.md": {
+          "size": 4723,
+          "sha256": "4b5b2cc7b5a640789b711ac04d350dd4c6476c27e3938b9ba22c1e0b98569370"
+        }
+      },
+      "weight": "model.safetensors",
+      "backend": "hf_published",
+      "environment": "new_hf",
+      "dataset_relation": "original_protocol_incomplete",
+      "split": "published train; no independent test",
+      "excluded_source_labels": {},
+      "images": 19016,
+      "covered_target_classes": 5,
+      "num_output_classes": 5,
+      "label_mapping": {
+        "0": "Child 0-12",
+        "1": "Teenager 13-20",
+        "2": "Adult 21-44",
+        "3": "Middle Age 45-64",
+        "4": "Aged 65+"
+      },
+      "scoring": "reference",
+      "evaluator": "sklearn reference scoring",
+      "fidelity": "reference_baseline",
+      "case_type": "special",
+      "special_tags": [
+        "framework_numeric_difference",
+        "official_evaluator_missing"
+      ],
+      "inference_entry": "publisher_transformers_model_and_processor",
+      "default_batch_size": 1,
+      "dtype": "float32",
+      "warmup_batches": 10,
+      "index": "__MODEL_ROOT__/inference/native/indices/183.jsonl",
+      "index_sha256": "3aa659bdf692914fd208a9e4aca7694653167a1b46213d91fc697a594edb5c3c",
+      "data_containers": {
+        "__DATASET_ROOT__/datasets_171_200/age_classification/raw/0000.parquet": {
+          "size": 502182522,
+          "mtime_ns": 1790055972980239409
+        },
+        "__DATASET_ROOT__/datasets_171_200/age_classification/raw/0001.parquet": {
+          "size": 106689306,
+          "mtime_ns": 1790055844572967490
+        }
+      },
+      "protocol_fingerprint": "16248bf0b1c6fe3b33b612d45e9d41e71bf96d14fadbdc4fb397a3126a8579b4"
+    }
+  ],
+  "runtime_defaults": {
+    "batch_size": 1,
+    "device": "cuda:0",
+    "warmup_batches": 10,
+    "workers": 2
+  },
+  "scope": "Each published model retained; 177 includes all five weights; no full GPU inference launched by preparation."
+}

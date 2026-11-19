@@ -1,0 +1,89 @@
+{
+  "sequence": 176,
+  "model_id": "avazquez2/helloWorld",
+  "task": "image_classification",
+  "task_name": "图像分类",
+  "reported_result": [
+    {
+      "variant": null,
+      "inference_status": "complete",
+      "accuracy": 0.98592,
+      "forward_seconds": 131.09897236347186,
+      "inference_e2e_seconds": 229.74115617806092,
+      "metric_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/results_full.csv",
+      "timing_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/full/m176/timing.json"
+    }
+  ],
+  "reference": {
+    "source": "https://huggingface.co/avazquez2/helloWorld",
+    "local_card_sha256": "51de18ac88d806f80bb203d76fabe30efd098d5dc93ad5de201c1bfd9feb0cfd",
+    "model_index": null,
+    "text_report_values": null,
+    "units": "fractions for extracted accuracy/F1; original model-index units as published",
+    "comparison": "Manual protocol review required; no automatic drop calculation",
+    "note": "No unambiguous numeric reference for this exact checkpoint was extracted from the frozen card."
+  },
+  "model_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/model_index/avazquez2/helloWorld",
+  "model_exists_at_build": true,
+  "dataset": {
+    "id": "classification171_176",
+    "relation": "public_replacement",
+    "split": "labelled competition train; test ground truth unavailable",
+    "note": [
+      "Train/reference scoring; not a Kaggle leaderboard reproduction. Record binary log loss as reference.",
+      "Local checkpoint and publisher inference components retained. Offline file paths, eval mode, batching, timing observation and reference scoring are external orchestration."
+    ],
+    "index_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/classification171_200_eval/indices/176.jsonl",
+    "data_containers": [
+      "/data2/gaoyonghan/model inference for GPU adaptation/dataset/datasets_171_200/cats_dogs_redux/raw/dogs-vs-cats-redux-kernels-edition.zip"
+    ]
+  },
+  "environment_id": "classification171-shared_hf",
+  "runner_family": "classification171",
+  "final_result_sources": [
+    {
+      "source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m176/metrics-0.json",
+      "sha256": "585239cb7b715d88d916a65b20c7c6f562386b1175b236185ca4de369d21d068",
+      "selection": "final_171_200_registry",
+      "source_original": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/full/m176/metrics.json"
+    }
+  ],
+  "code": {
+    "source": "/home/ubuntu/Documents/Codex/2026-09-27/codex-threads-01a0de0e-9d72-7fc0-b485/work/reorg/historical171/run_model.py",
+    "sha256": "8b61859273a256a4401a98181b66a0b3a487793a85c3fcf7d1f84491e2e0d5c1",
+    "recorded_sha256": "8b61859273a256a4401a98181b66a0b3a487793a85c3fcf7d1f84491e2e0d5c1",
+    "attestation": "hash_exact",
+    "status_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m176/status.json",
+    "selection": "recovered_exact_code",
+    "archive": "code_archive/8b61859273a256a4_run_model.py"
+  },
+  "support_files": [
+    "run_model.py"
+  ],
+  "final_scorer": null,
+  "backend_package": "classification171_200_eval",
+  "readiness": "code_and_result_identified",
+  "launch_status": "configured",
+  "metadata_warning": null,
+  "final_weight_records": [
+    {
+      "variant": null,
+      "model_revision": "ec7f94f0b02d6632fecbe103928afb68f19631ce",
+      "protocol_fingerprint": "09b9389b70c4986ff2cd1f341fda028d2336ce6a60f921834e7acea099420c66",
+      "inference_status": "complete",
+      "scoring_kind": "original_run",
+      "review_status": null,
+      "dataset_relation": "public_replacement",
+      "device": "cuda:1",
+      "scored_images": 25000,
+      "forward_seconds": 131.09897236347186,
+      "inference_e2e_seconds": 229.74115617806092,
+      "metric_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/results_full.csv",
+      "detailed_metrics_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/full/m176/metrics.json",
+      "timing_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/full/m176/timing.json",
+      "status_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/full/m176/status.json",
+      "prediction_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/full/m176/predictions.jsonl",
+      "note": null
+    }
+  ]
+}

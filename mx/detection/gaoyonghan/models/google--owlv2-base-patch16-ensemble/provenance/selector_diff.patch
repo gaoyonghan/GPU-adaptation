@@ -1,0 +1,21 @@
+--- before_selector.py
++++ inference/native/run_model.py
+@@ -807,7 +807,6 @@
+ 
+ def build_parser():
+     parser = argparse.ArgumentParser(description=__doc__)
+-    parser.add_argument("--models", default="all")
+     parser.add_argument("--model-root", type=Path, default=Path("__MODEL_ROOT__/weights"))
+     parser.add_argument("--dataset-root", type=Path, default=Path("__DATASET_ROOT__"))
+     parser.add_argument("--output-root", type=Path, default=Path("__MODEL_ROOT__/resources/runtime/assets/workspace/results/zero_shot_official"))
+@@ -856,7 +855,9 @@
+         raise ValueError("本评估包固定官方 max_detections=300，不允许改写")
+ 
+     failures = 0
+-    for spec in selected_models(args.models, data):
++    if len(data["models"]) != 1:
++        raise ValueError("Expected one model in this folder")
++    for spec in data["models"]:
+         try:
+             run_one(spec, data, args)
+         except Exception as exc:

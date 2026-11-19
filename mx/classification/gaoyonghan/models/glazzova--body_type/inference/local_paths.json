@@ -1,0 +1,225 @@
+{
+  "text_templates": [
+    {
+      "source": "inference/path_templates/inference/native/README.md",
+      "destination": "inference/native/README.md"
+    },
+    {
+      "source": "inference/path_templates/inference/native/VALIDATION.md",
+      "destination": "inference/native/VALIDATION.md"
+    },
+    {
+      "source": "inference/path_templates/inference/native/common.py",
+      "destination": "inference/native/common.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/indices/171.jsonl",
+      "destination": "inference/native/indices/171.jsonl"
+    },
+    {
+      "source": "inference/path_templates/inference/native/indices/173.jsonl",
+      "destination": "inference/native/indices/173.jsonl"
+    },
+    {
+      "source": "inference/path_templates/inference/native/indices/175.jsonl",
+      "destination": "inference/native/indices/175.jsonl"
+    },
+    {
+      "source": "inference/path_templates/inference/native/indices/176.jsonl",
+      "destination": "inference/native/indices/176.jsonl"
+    },
+    {
+      "source": "inference/path_templates/inference/native/indices/177.jsonl",
+      "destination": "inference/native/indices/177.jsonl"
+    },
+    {
+      "source": "inference/path_templates/inference/native/indices/178.jsonl",
+      "destination": "inference/native/indices/178.jsonl"
+    },
+    {
+      "source": "inference/path_templates/inference/native/indices/180.jsonl",
+      "destination": "inference/native/indices/180.jsonl"
+    },
+    {
+      "source": "inference/path_templates/inference/native/indices/181.jsonl",
+      "destination": "inference/native/indices/181.jsonl"
+    },
+    {
+      "source": "inference/path_templates/inference/native/indices/183.jsonl",
+      "destination": "inference/native/indices/183.jsonl"
+    },
+    {
+      "source": "inference/path_templates/inference/native/indices/185.jsonl",
+      "destination": "inference/native/indices/185.jsonl"
+    },
+    {
+      "source": "inference/path_templates/inference/native/indices/186.jsonl",
+      "destination": "inference/native/indices/186.jsonl"
+    },
+    {
+      "source": "inference/path_templates/inference/native/indices/187.jsonl",
+      "destination": "inference/native/indices/187.jsonl"
+    },
+    {
+      "source": "inference/path_templates/inference/native/indices/189.jsonl",
+      "destination": "inference/native/indices/189.jsonl"
+    },
+    {
+      "source": "inference/path_templates/inference/native/indices/190.jsonl",
+      "destination": "inference/native/indices/190.jsonl"
+    },
+    {
+      "source": "inference/path_templates/inference/native/indices/192.jsonl",
+      "destination": "inference/native/indices/192.jsonl"
+    },
+    {
+      "source": "inference/path_templates/inference/native/indices/194.jsonl",
+      "destination": "inference/native/indices/194.jsonl"
+    },
+    {
+      "source": "inference/path_templates/inference/native/indices/195.jsonl",
+      "destination": "inference/native/indices/195.jsonl"
+    },
+    {
+      "source": "inference/path_templates/inference/native/indices/197.jsonl",
+      "destination": "inference/native/indices/197.jsonl"
+    },
+    {
+      "source": "inference/path_templates/inference/native/models.json",
+      "destination": "inference/native/models.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/prepare.py",
+      "destination": "inference/native/prepare.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/release.json",
+      "destination": "inference/native/release.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/run_model.py",
+      "destination": "inference/native/run_model.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/setup_env.sh",
+      "destination": "inference/native/setup_env.sh"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification171_200_eval/README.md",
+      "destination": "resources/runtime/project/backends/classification171_200_eval/README.md"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification171_200_eval/VALIDATION.md",
+      "destination": "resources/runtime/project/backends/classification171_200_eval/VALIDATION.md"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification171_200_eval/common.py",
+      "destination": "resources/runtime/project/backends/classification171_200_eval/common.py"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification171_200_eval/dispatch.py",
+      "destination": "resources/runtime/project/backends/classification171_200_eval/dispatch.py"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification171_200_eval/indices/171.jsonl",
+      "destination": "resources/runtime/project/backends/classification171_200_eval/indices/171.jsonl"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification171_200_eval/indices/173.jsonl",
+      "destination": "resources/runtime/project/backends/classification171_200_eval/indices/173.jsonl"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification171_200_eval/indices/175.jsonl",
+      "destination": "resources/runtime/project/backends/classification171_200_eval/indices/175.jsonl"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification171_200_eval/indices/176.jsonl",
+      "destination": "resources/runtime/project/backends/classification171_200_eval/indices/176.jsonl"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification171_200_eval/indices/177.jsonl",
+      "destination": "resources/runtime/project/backends/classification171_200_eval/indices/177.jsonl"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification171_200_eval/indices/178.jsonl",
+      "destination": "resources/runtime/project/backends/classification171_200_eval/indices/178.jsonl"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification171_200_eval/indices/180.jsonl",
+      "destination": "resources/runtime/project/backends/classification171_200_eval/indices/180.jsonl"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification171_200_eval/indices/181.jsonl",
+      "destination": "resources/runtime/project/backends/classification171_200_eval/indices/181.jsonl"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification171_200_eval/indices/183.jsonl",
+      "destination": "resources/runtime/project/backends/classification171_200_eval/indices/183.jsonl"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification171_200_eval/indices/185.jsonl",
+      "destination": "resources/runtime/project/backends/classification171_200_eval/indices/185.jsonl"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification171_200_eval/indices/186.jsonl",
+      "destination": "resources/runtime/project/backends/classification171_200_eval/indices/186.jsonl"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification171_200_eval/indices/187.jsonl",
+      "destination": "resources/runtime/project/backends/classification171_200_eval/indices/187.jsonl"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification171_200_eval/indices/189.jsonl",
+      "destination": "resources/runtime/project/backends/classification171_200_eval/indices/189.jsonl"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification171_200_eval/indices/190.jsonl",
+      "destination": "resources/runtime/project/backends/classification171_200_eval/indices/190.jsonl"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification171_200_eval/indices/192.jsonl",
+      "destination": "resources/runtime/project/backends/classification171_200_eval/indices/192.jsonl"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification171_200_eval/indices/194.jsonl",
+      "destination": "resources/runtime/project/backends/classification171_200_eval/indices/194.jsonl"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification171_200_eval/indices/195.jsonl",
+      "destination": "resources/runtime/project/backends/classification171_200_eval/indices/195.jsonl"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification171_200_eval/indices/197.jsonl",
+      "destination": "resources/runtime/project/backends/classification171_200_eval/indices/197.jsonl"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification171_200_eval/models.json",
+      "destination": "resources/runtime/project/backends/classification171_200_eval/models.json"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification171_200_eval/prepare.py",
+      "destination": "resources/runtime/project/backends/classification171_200_eval/prepare.py"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification171_200_eval/release.json",
+      "destination": "resources/runtime/project/backends/classification171_200_eval/release.json"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification171_200_eval/run_all.sh",
+      "destination": "resources/runtime/project/backends/classification171_200_eval/run_all.sh"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification171_200_eval/run_model.py",
+      "destination": "resources/runtime/project/backends/classification171_200_eval/run_model.py"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification171_200_eval/setup_env.sh",
+      "destination": "resources/runtime/project/backends/classification171_200_eval/setup_env.sh"
+    }
+  ],
+  "links": [],
+  "classification_manifests": [
+    "resources/runtime/project/backends/classification171_200_eval/models.json"
+  ],
+  "pet_indices": []
+}

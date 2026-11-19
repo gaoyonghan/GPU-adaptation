@@ -1,0 +1,59 @@
+{
+  "schema": "model-eval/classification-inventory/v1",
+  "scope": "Existing 59 classification models; model 93 is retrieval and excluded.",
+  "models": [
+    {
+      "sequence": 99,
+      "model_id": "prithivMLmods/facial-age-detection",
+      "runner_family": "special",
+      "adapter": "native_labels",
+      "state": "integrated",
+      "dataset": {
+        "id": "face_age",
+        "relation": null,
+        "split": null,
+        "note": "计划：Face-Age-10K（来源数据）\n未评测，官方对应关系待核实"
+      },
+      "qualification": "existing_protocol_not_officially_verified",
+      "limitations": [
+        "Historical output may contain only Top-1. Missing Top-5 remains unavailable; never reconstruct ranking silently."
+      ],
+      "num_classes": 8,
+      "expected_images": 9165,
+      "categories": [
+        {
+          "id": 0,
+          "name": "age 01-10"
+        },
+        {
+          "id": 1,
+          "name": "age 11-20"
+        },
+        {
+          "id": 2,
+          "name": "age 21-30"
+        },
+        {
+          "id": 3,
+          "name": "age 31-40"
+        },
+        {
+          "id": 4,
+          "name": "age 41-55"
+        },
+        {
+          "id": 5,
+          "name": "age 56-65"
+        },
+        {
+          "id": 6,
+          "name": "age 66-80"
+        },
+        {
+          "id": 7,
+          "name": "age 80 +"
+        }
+      ]
+    }
+  ]
+}

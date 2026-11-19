@@ -1,0 +1,22 @@
+{
+  "sequence": 70,
+  "model_id": "google/owlvit-large-patch14",
+  "source_archive_hash_matches": true,
+  "source_archive_sha256": "94154a56a3f2d7c5afa1091975c7de07e4d74e6670c1a084f1d2d80018db2035",
+  "prepared_entry_source_sha256": "94154a56a3f2d7c5afa1091975c7de07e4d74e6670c1a084f1d2d80018db2035",
+  "local_entry_sha256": "94154a56a3f2d7c5afa1091975c7de07e4d74e6670c1a084f1d2d80018db2035",
+  "local_entry": "inference/native/run_model.py",
+  "central_dispatch_in_entry": false,
+  "unexpected_external_links": [],
+  "declared_dataset_links": [],
+  "broken_links": [],
+  "path_template_count": 219,
+  "state": "entrypoint_verified_full_run_pending",
+  "validation": {
+    "returncode": 0,
+    "python": "/home/ubuntu/gaoyonghan/miniconda3/envs/owlvit-scenic-native/bin/python",
+    "checked_at": "2026-11-10T15:54:33.707835+08:00",
+    "scope": "native help/import/path check only; not full inference"
+  },
+  "smoke_verification": null
+}

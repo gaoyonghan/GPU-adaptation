@@ -1,0 +1,590 @@
+{
+  "text_templates": [
+    {
+      "source": "inference/path_templates/inference/native/README.md",
+      "destination": "inference/native/README.md"
+    },
+    {
+      "source": "inference/path_templates/inference/native/VALIDATION.md",
+      "destination": "inference/native/VALIDATION.md"
+    },
+    {
+      "source": "inference/path_templates/inference/native/common.py",
+      "destination": "inference/native/common.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/indices/173.jsonl",
+      "destination": "inference/native/indices/173.jsonl"
+    },
+    {
+      "source": "inference/path_templates/inference/native/models.json",
+      "destination": "inference/native/models.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/prepare.py",
+      "destination": "inference/native/prepare.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/release.json",
+      "destination": "inference/native/release.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/run_model.py",
+      "destination": "inference/native/run_model.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/setup_env.sh",
+      "destination": "inference/native/setup_env.sh"
+    },
+    {
+      "source": "inference/path_templates/inference/output_format/classification_inventory.json",
+      "destination": "inference/output_format/classification_inventory.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/release.json",
+      "destination": "inference/native/mx_backend/release.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/common.py",
+      "destination": "inference/native/mx_backend/common.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/timing.py",
+      "destination": "inference/native/mx_backend/timing.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/dispatch.py",
+      "destination": "inference/native/mx_backend/dispatch.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/prepare_somaset_174.py",
+      "destination": "inference/native/mx_backend/prepare_somaset_174.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/run_model.py",
+      "destination": "inference/native/mx_backend/run_model.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/models.json",
+      "destination": "inference/native/mx_backend/models.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/run_somaset_174_prediction.py",
+      "destination": "inference/native/mx_backend/run_somaset_174_prediction.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/model_card_references.json",
+      "destination": "inference/native/mx_backend/model_card_references.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/package.json",
+      "destination": "inference/native/mx_backend/package.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/package-lock.json",
+      "destination": "inference/native/mx_backend/package-lock.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/prepare.py",
+      "destination": "inference/native/mx_backend/prepare.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/models.development.json",
+      "destination": "inference/native/mx_backend/.validation/models.development.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v1/audit_summary_smoke.json",
+      "destination": "inference/native/mx_backend/.validation/v1/audit_summary_smoke.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v1/smoke/m199/failure-1790074726937922500.json",
+      "destination": "inference/native/mx_backend/.validation/v1/smoke/m199/failure-1790074726937922500.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v1/smoke/m199/status.json",
+      "destination": "inference/native/mx_backend/.validation/v1/smoke/m199/status.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v1/smoke/m197/status.json",
+      "destination": "inference/native/mx_backend/.validation/v1/smoke/m197/status.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v1/smoke/m197/timing.json",
+      "destination": "inference/native/mx_backend/.validation/v1/smoke/m197/timing.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v1/smoke/m200/status.json",
+      "destination": "inference/native/mx_backend/.validation/v1/smoke/m200/status.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v1/smoke/m200/failure-1790074739522853895.json",
+      "destination": "inference/native/mx_backend/.validation/v1/smoke/m200/failure-1790074739522853895.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v1/smoke/m183/status.json",
+      "destination": "inference/native/mx_backend/.validation/v1/smoke/m183/status.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v1/smoke/m183/timing.json",
+      "destination": "inference/native/mx_backend/.validation/v1/smoke/m183/timing.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v1/smoke/m192/status.json",
+      "destination": "inference/native/mx_backend/.validation/v1/smoke/m192/status.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v1/smoke/m192/timing.json",
+      "destination": "inference/native/mx_backend/.validation/v1/smoke/m192/timing.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v1/smoke/m184/failure-1790074710948652401.json",
+      "destination": "inference/native/mx_backend/.validation/v1/smoke/m184/failure-1790074710948652401.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v1/smoke/m184/status.json",
+      "destination": "inference/native/mx_backend/.validation/v1/smoke/m184/status.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v1/smoke/m193/failure-1790074716153079008.json",
+      "destination": "inference/native/mx_backend/.validation/v1/smoke/m193/failure-1790074716153079008.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v1/smoke/m193/status.json",
+      "destination": "inference/native/mx_backend/.validation/v1/smoke/m193/status.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v1/smoke/m195/status.json",
+      "destination": "inference/native/mx_backend/.validation/v1/smoke/m195/status.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v1/smoke/m195/timing.json",
+      "destination": "inference/native/mx_backend/.validation/v1/smoke/m195/timing.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v6/audit_summary_smoke.json",
+      "destination": "inference/native/mx_backend/.validation/v6/audit_summary_smoke.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v6/smoke/m179/status.json",
+      "destination": "inference/native/mx_backend/.validation/v6/smoke/m179/status.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v6/smoke/m179/timing.json",
+      "destination": "inference/native/mx_backend/.validation/v6/smoke/m179/timing.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v3/audit_summary_smoke.json",
+      "destination": "inference/native/mx_backend/.validation/v3/audit_summary_smoke.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v3/smoke/m177-Race-CLS-FairFace_yolov8m/failure-1790075161006965732.json",
+      "destination": "inference/native/mx_backend/.validation/v3/smoke/m177-Race-CLS-FairFace_yolov8m/failure-1790075161006965732.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v3/smoke/m177-Race-CLS-FairFace_yolov8m/status.json",
+      "destination": "inference/native/mx_backend/.validation/v3/smoke/m177-Race-CLS-FairFace_yolov8m/status.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v3/smoke/m198/status.json",
+      "destination": "inference/native/mx_backend/.validation/v3/smoke/m198/status.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v3/smoke/m198/timing.json",
+      "destination": "inference/native/mx_backend/.validation/v3/smoke/m198/timing.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v3/smoke/m177-Race-CLS-FairFace_yolov8n/failure-1790075164969993192.json",
+      "destination": "inference/native/mx_backend/.validation/v3/smoke/m177-Race-CLS-FairFace_yolov8n/failure-1790075164969993192.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v3/smoke/m177-Race-CLS-FairFace_yolov8n/status.json",
+      "destination": "inference/native/mx_backend/.validation/v3/smoke/m177-Race-CLS-FairFace_yolov8n/status.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v3/smoke/m177-Race-CLS-FairFace_yolo11x/failure-1790075156950008565.json",
+      "destination": "inference/native/mx_backend/.validation/v3/smoke/m177-Race-CLS-FairFace_yolo11x/failure-1790075156950008565.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v3/smoke/m177-Race-CLS-FairFace_yolo11x/status.json",
+      "destination": "inference/native/mx_backend/.validation/v3/smoke/m177-Race-CLS-FairFace_yolo11x/status.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v3/smoke/m177-Race-CLS-FairFace_yolov8s/failure-1790075169150648367.json",
+      "destination": "inference/native/mx_backend/.validation/v3/smoke/m177-Race-CLS-FairFace_yolov8s/failure-1790075169150648367.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v3/smoke/m177-Race-CLS-FairFace_yolov8s/status.json",
+      "destination": "inference/native/mx_backend/.validation/v3/smoke/m177-Race-CLS-FairFace_yolov8s/status.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v3/smoke/m177-Race-CLS-FairFace_yolo11l/failure-1790075152716509296.json",
+      "destination": "inference/native/mx_backend/.validation/v3/smoke/m177-Race-CLS-FairFace_yolo11l/failure-1790075152716509296.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v3/smoke/m177-Race-CLS-FairFace_yolo11l/status.json",
+      "destination": "inference/native/mx_backend/.validation/v3/smoke/m177-Race-CLS-FairFace_yolo11l/status.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v2/audit_summary_smoke.json",
+      "destination": "inference/native/mx_backend/.validation/v2/audit_summary_smoke.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v2/smoke/m188/status.json",
+      "destination": "inference/native/mx_backend/.validation/v2/smoke/m188/status.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v2/smoke/m188/timing.json",
+      "destination": "inference/native/mx_backend/.validation/v2/smoke/m188/timing.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v2/smoke/m199/status.json",
+      "destination": "inference/native/mx_backend/.validation/v2/smoke/m199/status.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v2/smoke/m199/timing.json",
+      "destination": "inference/native/mx_backend/.validation/v2/smoke/m199/timing.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v2/smoke/m171/status.json",
+      "destination": "inference/native/mx_backend/.validation/v2/smoke/m171/status.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v2/smoke/m171/timing.json",
+      "destination": "inference/native/mx_backend/.validation/v2/smoke/m171/timing.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v2/smoke/m197/status.json",
+      "destination": "inference/native/mx_backend/.validation/v2/smoke/m197/status.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v2/smoke/m197/timing.json",
+      "destination": "inference/native/mx_backend/.validation/v2/smoke/m197/timing.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v2/smoke/m196/status.json",
+      "destination": "inference/native/mx_backend/.validation/v2/smoke/m196/status.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v2/smoke/m196/timing.json",
+      "destination": "inference/native/mx_backend/.validation/v2/smoke/m196/timing.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v2/smoke/m178/status.json",
+      "destination": "inference/native/mx_backend/.validation/v2/smoke/m178/status.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v2/smoke/m178/timing.json",
+      "destination": "inference/native/mx_backend/.validation/v2/smoke/m178/timing.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v2/smoke/m180/status.json",
+      "destination": "inference/native/mx_backend/.validation/v2/smoke/m180/status.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v2/smoke/m180/timing.json",
+      "destination": "inference/native/mx_backend/.validation/v2/smoke/m180/timing.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v2/smoke/m200/status.json",
+      "destination": "inference/native/mx_backend/.validation/v2/smoke/m200/status.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v2/smoke/m200/timing.json",
+      "destination": "inference/native/mx_backend/.validation/v2/smoke/m200/timing.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v2/smoke/m194/status.json",
+      "destination": "inference/native/mx_backend/.validation/v2/smoke/m194/status.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v2/smoke/m194/timing.json",
+      "destination": "inference/native/mx_backend/.validation/v2/smoke/m194/timing.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v2/smoke/m172/status.json",
+      "destination": "inference/native/mx_backend/.validation/v2/smoke/m172/status.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v2/smoke/m172/timing.json",
+      "destination": "inference/native/mx_backend/.validation/v2/smoke/m172/timing.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v2/smoke/m183/status.json",
+      "destination": "inference/native/mx_backend/.validation/v2/smoke/m183/status.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v2/smoke/m183/timing.json",
+      "destination": "inference/native/mx_backend/.validation/v2/smoke/m183/timing.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v2/smoke/m198/failure-1790074993788628205.json",
+      "destination": "inference/native/mx_backend/.validation/v2/smoke/m198/failure-1790074993788628205.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v2/smoke/m198/status.json",
+      "destination": "inference/native/mx_backend/.validation/v2/smoke/m198/status.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v2/smoke/m190/status.json",
+      "destination": "inference/native/mx_backend/.validation/v2/smoke/m190/status.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v2/smoke/m190/timing.json",
+      "destination": "inference/native/mx_backend/.validation/v2/smoke/m190/timing.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v2/smoke/m192/status.json",
+      "destination": "inference/native/mx_backend/.validation/v2/smoke/m192/status.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v2/smoke/m192/timing.json",
+      "destination": "inference/native/mx_backend/.validation/v2/smoke/m192/timing.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v2/smoke/m185/status.json",
+      "destination": "inference/native/mx_backend/.validation/v2/smoke/m185/status.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v2/smoke/m185/timing.json",
+      "destination": "inference/native/mx_backend/.validation/v2/smoke/m185/timing.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v2/smoke/m184/status.json",
+      "destination": "inference/native/mx_backend/.validation/v2/smoke/m184/status.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v2/smoke/m184/timing.json",
+      "destination": "inference/native/mx_backend/.validation/v2/smoke/m184/timing.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v2/smoke/m176/status.json",
+      "destination": "inference/native/mx_backend/.validation/v2/smoke/m176/status.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v2/smoke/m176/timing.json",
+      "destination": "inference/native/mx_backend/.validation/v2/smoke/m176/timing.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v2/smoke/m193/status.json",
+      "destination": "inference/native/mx_backend/.validation/v2/smoke/m193/status.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v2/smoke/m193/timing.json",
+      "destination": "inference/native/mx_backend/.validation/v2/smoke/m193/timing.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v2/smoke/m191/status.json",
+      "destination": "inference/native/mx_backend/.validation/v2/smoke/m191/status.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v2/smoke/m191/timing.json",
+      "destination": "inference/native/mx_backend/.validation/v2/smoke/m191/timing.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v2/smoke/m195/status.json",
+      "destination": "inference/native/mx_backend/.validation/v2/smoke/m195/status.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v2/smoke/m195/timing.json",
+      "destination": "inference/native/mx_backend/.validation/v2/smoke/m195/timing.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v2/smoke/m181/status.json",
+      "destination": "inference/native/mx_backend/.validation/v2/smoke/m181/status.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v2/smoke/m181/timing.json",
+      "destination": "inference/native/mx_backend/.validation/v2/smoke/m181/timing.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v2/smoke/m175/status.json",
+      "destination": "inference/native/mx_backend/.validation/v2/smoke/m175/status.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v2/smoke/m175/timing.json",
+      "destination": "inference/native/mx_backend/.validation/v2/smoke/m175/timing.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v2/smoke/m189/status.json",
+      "destination": "inference/native/mx_backend/.validation/v2/smoke/m189/status.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v2/smoke/m189/timing.json",
+      "destination": "inference/native/mx_backend/.validation/v2/smoke/m189/timing.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v2/smoke/m186/status.json",
+      "destination": "inference/native/mx_backend/.validation/v2/smoke/m186/status.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v2/smoke/m186/timing.json",
+      "destination": "inference/native/mx_backend/.validation/v2/smoke/m186/timing.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v2/smoke/m187/status.json",
+      "destination": "inference/native/mx_backend/.validation/v2/smoke/m187/status.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v2/smoke/m187/timing.json",
+      "destination": "inference/native/mx_backend/.validation/v2/smoke/m187/timing.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v4/audit_summary_smoke.json",
+      "destination": "inference/native/mx_backend/.validation/v4/audit_summary_smoke.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v4/smoke/m177-Race-CLS-FairFace_yolov8m/status.json",
+      "destination": "inference/native/mx_backend/.validation/v4/smoke/m177-Race-CLS-FairFace_yolov8m/status.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v4/smoke/m177-Race-CLS-FairFace_yolov8m/timing.json",
+      "destination": "inference/native/mx_backend/.validation/v4/smoke/m177-Race-CLS-FairFace_yolov8m/timing.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v4/smoke/m177-Race-CLS-FairFace_yolov8n/status.json",
+      "destination": "inference/native/mx_backend/.validation/v4/smoke/m177-Race-CLS-FairFace_yolov8n/status.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v4/smoke/m177-Race-CLS-FairFace_yolov8n/timing.json",
+      "destination": "inference/native/mx_backend/.validation/v4/smoke/m177-Race-CLS-FairFace_yolov8n/timing.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v4/smoke/m177-Race-CLS-FairFace_yolo11x/status.json",
+      "destination": "inference/native/mx_backend/.validation/v4/smoke/m177-Race-CLS-FairFace_yolo11x/status.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v4/smoke/m177-Race-CLS-FairFace_yolo11x/timing.json",
+      "destination": "inference/native/mx_backend/.validation/v4/smoke/m177-Race-CLS-FairFace_yolo11x/timing.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v4/smoke/m177-Race-CLS-FairFace_yolov8s/status.json",
+      "destination": "inference/native/mx_backend/.validation/v4/smoke/m177-Race-CLS-FairFace_yolov8s/status.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v4/smoke/m177-Race-CLS-FairFace_yolov8s/timing.json",
+      "destination": "inference/native/mx_backend/.validation/v4/smoke/m177-Race-CLS-FairFace_yolov8s/timing.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v4/smoke/m177-Race-CLS-FairFace_yolo11l/status.json",
+      "destination": "inference/native/mx_backend/.validation/v4/smoke/m177-Race-CLS-FairFace_yolo11l/status.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v4/smoke/m177-Race-CLS-FairFace_yolo11l/timing.json",
+      "destination": "inference/native/mx_backend/.validation/v4/smoke/m177-Race-CLS-FairFace_yolo11l/timing.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v5/audit_summary_smoke.json",
+      "destination": "inference/native/mx_backend/.validation/v5/audit_summary_smoke.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v5/smoke/m173/js_request.json",
+      "destination": "inference/native/mx_backend/.validation/v5/smoke/m173/js_request.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v5/smoke/m173/js_timing.json",
+      "destination": "inference/native/mx_backend/.validation/v5/smoke/m173/js_timing.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v5/smoke/m173/status.json",
+      "destination": "inference/native/mx_backend/.validation/v5/smoke/m173/status.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/.validation/v5/smoke/m173/timing.json",
+      "destination": "inference/native/mx_backend/.validation/v5/smoke/m173/timing.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/indices/192.jsonl",
+      "destination": "inference/native/mx_backend/indices/192.jsonl"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/indices/183.jsonl",
+      "destination": "inference/native/mx_backend/indices/183.jsonl"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/indices/197.jsonl",
+      "destination": "inference/native/mx_backend/indices/197.jsonl"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/indices/190.jsonl",
+      "destination": "inference/native/mx_backend/indices/190.jsonl"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/indices/176.jsonl",
+      "destination": "inference/native/mx_backend/indices/176.jsonl"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/indices/185.jsonl",
+      "destination": "inference/native/mx_backend/indices/185.jsonl"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/indices/171.jsonl",
+      "destination": "inference/native/mx_backend/indices/171.jsonl"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/indices/194.jsonl",
+      "destination": "inference/native/mx_backend/indices/194.jsonl"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/indices/181.jsonl",
+      "destination": "inference/native/mx_backend/indices/181.jsonl"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/indices/189.jsonl",
+      "destination": "inference/native/mx_backend/indices/189.jsonl"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/indices/195.jsonl",
+      "destination": "inference/native/mx_backend/indices/195.jsonl"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/indices/173.jsonl",
+      "destination": "inference/native/mx_backend/indices/173.jsonl"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/indices/186.jsonl",
+      "destination": "inference/native/mx_backend/indices/186.jsonl"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/indices/174_somaset_600.jsonl",
+      "destination": "inference/native/mx_backend/indices/174_somaset_600.jsonl"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/indices/187.jsonl",
+      "destination": "inference/native/mx_backend/indices/187.jsonl"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/indices/175.jsonl",
+      "destination": "inference/native/mx_backend/indices/175.jsonl"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/indices/178.jsonl",
+      "destination": "inference/native/mx_backend/indices/178.jsonl"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/indices/180.jsonl",
+      "destination": "inference/native/mx_backend/indices/180.jsonl"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/indices/177.jsonl",
+      "destination": "inference/native/mx_backend/indices/177.jsonl"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/indices/174_somaset_600.metadata.json",
+      "destination": "inference/native/mx_backend/indices/174_somaset_600.metadata.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_variant_config.json",
+      "destination": "inference/native/mx_variant_config.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_variant_definition.json",
+      "destination": "inference/native/mx_variant_definition.json"
+    }
+  ],
+  "links": [],
+  "classification_manifests": [
+    "inference/native/models.json"
+  ],
+  "pet_indices": [],
+  "prepared_data_revision": "20261115-frozen-index-relocation"
+}

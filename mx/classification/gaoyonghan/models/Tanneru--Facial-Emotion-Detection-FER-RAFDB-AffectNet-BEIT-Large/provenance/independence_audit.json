@@ -1,0 +1,22 @@
+{
+  "sequence": 81,
+  "model_id": "Tanneru/Facial-Emotion-Detection-FER-RAFDB-AffectNet-BEIT-Large",
+  "source_archive_hash_matches": true,
+  "source_archive_sha256": "330393608509aac1dce6f2bd47ff8addf8c777ebd33fc3992244b5b36932f11c",
+  "prepared_entry_source_sha256": "136f93826f681995fb00bcd653394bc4b4264602faeadeca50618afd01c0cfa0",
+  "local_entry_sha256": "bc200065d07038551adfea9a0c8067aef317e5fa3c7b9940cfad6d4fbde8dfbc",
+  "local_entry": "inference/native/run_m81_fer2013.py",
+  "central_dispatch_in_entry": false,
+  "unexpected_external_links": [],
+  "declared_dataset_links": [],
+  "broken_links": [],
+  "path_template_count": 320,
+  "state": "entrypoint_verified_full_run_pending",
+  "validation": {
+    "returncode": 0,
+    "python": "/home/ubuntu/gaoyonghan/gpu/classification8_eval/.venv/bin/python",
+    "checked_at": "2026-11-10T15:56:03.237598+08:00",
+    "scope": "native help/import/path check only; not full inference"
+  },
+  "smoke_verification": null
+}

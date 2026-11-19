@@ -1,0 +1,166 @@
+{
+  "sequence": 200,
+  "model_id": "timm/convnext_tiny.fb_in22k",
+  "variant": null,
+  "phase": "smoke",
+  "protocol_fingerprint": "496e14516f3f7f95691c4829bbda9bdaf2661d26703a9db250131015baa59df0",
+  "protocol": {
+    "model": "c11073169c3d07b0e7a1b295aeac425c6daba95094bbd2ec246115ffdeddaca1",
+    "code": {
+      "run_model.py": "b9c7db394c4a020f84fb8cc4515d9d7a020943b011fdea3b1303e192ab84dee3",
+      "common.py": "87e119ea13cd713bb054693dae0e04b7064b4fd683c8479b7715fd9b3883d045",
+      "prepare.py": "bf5bd4e223b181dd89142dbf467f92fe7c09b88ab4c82b061346248019f4ad9b",
+      "dispatch.py": "37a15fb15281dd6658bc87da9ad72f44de99c6f0161d4323c96d22dad3268ffb",
+      "timing.py": "db23cf873121e5e9345f23488d02d7757560a25084f330a56e38d5969d448342",
+      "native_js.mjs": "7ce8d0c8d4119a2ce2a4a0b3b89ffaffea9e4028e1e4196b09d8cdbf922685b1"
+    },
+    "environment": {
+      "python": "3.11.16 (main, Aug 27 2026, 14:44:21) [GCC 14.3.0]",
+      "versions": {
+        "torch": "2.5.1+cu121",
+        "torchvision": "0.20.1+cu121",
+        "transformers": "4.50.0",
+        "timm": "1.0.15",
+        "Pillow": "11.1.0",
+        "numpy": "1.26.4",
+        "scikit-learn": "1.5.2",
+        "pyarrow": "19.0.1"
+      },
+      "cuda_runtime": "12.1",
+      "cuda_available": true
+    },
+    "device": "cuda:1",
+    "batch_size": 1,
+    "warmup": 10,
+    "workers": 2,
+    "variant": null
+  },
+  "model_manifest": {
+    "sequence": 200,
+    "model_id": "timm/convnext_tiny.fb_in22k",
+    "model_path": "/project/classification/gaoyonghan/models/Xenova--facial_emotions_image_detection/weights/timm/convnext_tiny.fb_in22k",
+    "revision": "342f2588bb2ea79d793d0712c9be16ec6ae0149a",
+    "task_type": "image-classification",
+    "status": "not_started",
+    "official_model_card": "https://huggingface.co/timm/convnext_tiny.fb_in22k",
+    "official_reference": null,
+    "reference_comparison": "manual_reference_required",
+    "known_differences": [
+      "Keep full model output head. Not an independent original model test set."
+    ],
+    "config": {
+      "architecture": "convnext_tiny",
+      "num_classes": 21841,
+      "num_features": 768,
+      "pretrained_cfg": {
+        "tag": "fb_in22k",
+        "custom_load": false,
+        "input_size": [
+          3,
+          224,
+          224
+        ],
+        "fixed_input_size": false,
+        "interpolation": "bicubic",
+        "crop_pct": 0.875,
+        "crop_mode": "center",
+        "mean": [
+          0.485,
+          0.456,
+          0.406
+        ],
+        "std": [
+          0.229,
+          0.224,
+          0.225
+        ],
+        "num_classes": 21841,
+        "pool_size": [
+          7,
+          7
+        ],
+        "first_conv": "stem.0",
+        "classifier": "head.fc"
+      }
+    },
+    "preprocessing": {
+      "tag": "fb_in22k",
+      "custom_load": false,
+      "input_size": [
+        3,
+        224,
+        224
+      ],
+      "fixed_input_size": false,
+      "interpolation": "bicubic",
+      "crop_pct": 0.875,
+      "crop_mode": "center",
+      "mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "std": [
+        0.229,
+        0.224,
+        0.225
+      ],
+      "num_classes": 21841,
+      "pool_size": [
+        7,
+        7
+      ],
+      "first_conv": "stem.0",
+      "classifier": "head.fc"
+    },
+    "architecture": "convnext_tiny",
+    "files": {
+      "model.safetensors": {
+        "size": 178481432,
+        "sha256": "2b40f8d53b566a8c08c0c75f93ff5ac6fa33bd213afb27ee40766af7ffe5943b"
+      },
+      "config.json": {
+        "size": 572,
+        "sha256": "0c8956c39cfa27a4d63584ebae906e30639804f99092e4afb1467c7c06e65184"
+      },
+      "README.md": {
+        "size": 15612,
+        "sha256": "b0b9b0c7e83802c03318f1870977a9f8de9b9b831db3af214c88eb74a1e95b29"
+      }
+    },
+    "weight": "model.safetensors",
+    "backend": "timm_native",
+    "environment": "shared_hf",
+    "dataset_relation": "public_replacement",
+    "split": "ImageNet-1K val overlap 999 classes",
+    "excluded_source_labels": {},
+    "images": 49950,
+    "covered_target_classes": 999,
+    "num_output_classes": 21841,
+    "label_mapping": {},
+    "scoring": "native",
+    "evaluator": "timm.validate",
+    "fidelity": "official_protocol_adapter",
+    "case_type": "special",
+    "special_tags": [
+      "framework_numeric_difference",
+      "dataset_replacement"
+    ],
+    "inference_entry": "publisher_transformers_model_and_processor",
+    "default_batch_size": 1,
+    "dtype": "float32",
+    "warmup_batches": 10,
+    "index": "/project/classification/gaoyonghan/models/Xenova--facial_emotions_image_detection/resources/runtime/assets/workspace/classification171_200_eval/indices/200.jsonl",
+    "index_sha256": "a7b5bceae56a6a139fd409e6f67a8b7fd41e3a41d62dc81d4fc52c9de38e0ef4",
+    "data_containers": {},
+    "class_map": "/project/dataset/datasets_171_200/imagenet_overlap_200/native_class_map.txt",
+    "class_map_sha256": "0ae24538751973797b29d8dec412b2bdc61bc4ec3ecd081eba0735804236bbd2",
+    "protocol_fingerprint": "c11073169c3d07b0e7a1b295aeac425c6daba95094bbd2ec246115ffdeddaca1"
+  },
+  "status": "failed",
+  "gpu_at_start": "0, GPU-edb63bcd-7ac5-4284-b9ea-825830b8ebba, NVIDIA GeForce RTX 4090, 580.126.09, 790 MiB, 41 %\n1, GPU-a11f730c-a975-2bf0-b765-3c24d83b7104, NVIDIA GeForce RTX 4090, 580.126.09, 133 MiB, 27 %",
+  "full_evaluation": false,
+  "error_type": "RuntimeError",
+  "error": "Invalid device argument \u0001: did you call init?",
+  "traceback": "Traceback (most recent call last):\n  File \"/project/classification/gaoyonghan/models/Xenova--facial_emotions_image_detection/resources/runtime/assets/workspace/classification171_200_eval/run_model.py\", line 374, in run_one\n    if spec['backend']=='timm_native': timing,metrics=native_timm(spec,rows,args,out)\n                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/project/classification/gaoyonghan/models/Xenova--facial_emotions_image_detection/resources/runtime/assets/workspace/classification171_200_eval/run_model.py\", line 281, in native_timm\n    if str(args.device).startswith('cuda'): torch.cuda.reset_peak_memory_stats(args.device)\n                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/gaoyonghan/miniconda3/envs/object-detection-hf-v2/lib/python3.11/site-packages/torch/cuda/memory.py\", line 344, in reset_peak_memory_stats\n    return torch._C._cuda_resetPeakMemoryStats(device)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: Invalid device argument \u0001: did you call init?\n"
+}

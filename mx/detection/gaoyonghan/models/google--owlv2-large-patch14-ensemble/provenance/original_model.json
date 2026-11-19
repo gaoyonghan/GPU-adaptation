@@ -1,0 +1,84 @@
+{
+  "sequence": 67,
+  "model_id": "google/owlv2-large-patch14-ensemble",
+  "task": "zero_shot_detection",
+  "task_name": "零样本检测",
+  "reported_result": "AP 45.09% / APr 42.98%",
+  "reference": "官方仓库 AP 44.60% / APr 42.60%",
+  "model_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/model_index/google/owlv2-large-patch14-ensemble",
+  "model_exists_at_build": true,
+  "dataset": {
+    "id": "lvis_v1_val",
+    "relation": "official_protocol_adapter",
+    "split": null,
+    "note": "LVIS v1 · val · 19809 图\n官方原集（不代表全协议已对齐）"
+  },
+  "environment_id": "zero-shot",
+  "runner_family": "zero_shot",
+  "final_result_sources": [
+    {
+      "source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m067/metrics-0.json",
+      "sha256": "f8fd0e2e40fd4600296edf2a44efb2e23875642003bb0a18af5699e8a4ec3cc4",
+      "selection": "workbook_score_match",
+      "data": {
+        "fidelity": "official_protocol_adapter",
+        "metric_implementation": "lvis-api LVISEval",
+        "metrics": {
+          "AP": 0.45093088647417495,
+          "AP50": 0.6182264158606141,
+          "AP75": 0.497292783084458,
+          "APc": 0.4571710362364365,
+          "APf": 0.45326351638544937,
+          "APl": 0.6549616851985153,
+          "APm": 0.5585837968015727,
+          "APr": 0.4297777246392955,
+          "APs": 0.35142475473600876,
+          "AR@300": 0.5938307589128758,
+          "ARl@300": 0.8209960983861164,
+          "ARm@300": 0.7035866023986328,
+          "ARs@300": 0.4360105022328478
+        },
+        "model_key": "owlv2-large-patch14-ensemble",
+        "official_reference_comparison": {
+          "classification": "matches_reference",
+          "delta_points": {
+            "AP": 0.49308864741749403,
+            "APr": 0.37777246392954567
+          },
+          "reference": {
+            "mapping_basis": "Google HF L/14 ensemble 后缀对应 Scenic ST/FT ens；架构、1008 输入和实测指标一致",
+            "metrics_percent": {
+              "AP": 44.6,
+              "APr": 42.6
+            },
+            "scope": "OWLv2 CLIP L/14 ST/FT weight ensemble",
+            "source": "https://github.com/google-research/scenic/blob/a179cefc7fd0a48676c15aa45b31c469e0dfc07d/scenic/projects/owl_vit/README.md"
+          },
+          "tolerance_absolute_points": 1.0
+        },
+        "protocol_fingerprint": "a0ddd558e41ae58d3e1be94999b695c565c657ab9e387873cbceafa7923b1d81"
+      },
+      "source_original": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/zero_shot_official/owlv2-large-patch14-ensemble/metrics.json"
+    }
+  ],
+  "code": {
+    "source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/official_zero_shot_eval/run_model.py",
+    "sha256": "6b5c4102bc12ce6a9198c4e3055d3a6f6080dd62026df39af93db031843a0ad6",
+    "recorded_sha256": null,
+    "attestation": "current_code_unverified",
+    "status_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m067/status.json",
+    "selection": "current_shared_code",
+    "archive": "code_archive/6b5c4102bc12ce6a_run_model.py"
+  },
+  "support_files": [
+    "models.json",
+    "run_model.py",
+    "setup_env.sh",
+    "run_all.sh"
+  ],
+  "final_scorer": null,
+  "backend_package": "classification8_eval",
+  "readiness": "code_and_result_identified",
+  "launch_status": "configured",
+  "metadata_warning": null
+}

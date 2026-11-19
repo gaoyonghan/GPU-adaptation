@@ -1,0 +1,9 @@
+{
+  "python": "3.11.16",
+  "requirements": "environments/e07/requirements.txt",
+  "expected": "environments/e07/expected.json",
+  "local_packages": [],
+  "original_python": "/home/ubuntu/gaoyonghan/gpu/classification8_eval/.venv/bin/python",
+  "torch": "2.5.1+cu121",
+  "python_version_scope": "Pinned to original interpreter version"
+}
