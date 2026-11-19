@@ -48,8 +48,6 @@
 - [`PekingU--rtdetr_r50vd`](../models/PekingU--rtdetr_r50vd/)
 - [`PekingU--rtdetr_v2_r50vd`](../models/PekingU--rtdetr_v2_r50vd/)
 - [`qihoo360--360LayoutAnalysis`](../models/qihoo360--360LayoutAnalysis/)
-- [`qualcomm--MediaPipe-Face-Detection`](../models/qualcomm--MediaPipe-Face-Detection/)
-- [`qualcomm--MediaPipe-Hand-Detection`](../models/qualcomm--MediaPipe-Hand-Detection/)
 - [`SenseTime--deformable-detr`](../models/SenseTime--deformable-detr/)
 - [`TahaDouaji--detr-doc-table-detection`](../models/TahaDouaji--detr-doc-table-detection/)
 - [`tech4humans--yolov8s-signature-detector`](../models/tech4humans--yolov8s-signature-detector/)
