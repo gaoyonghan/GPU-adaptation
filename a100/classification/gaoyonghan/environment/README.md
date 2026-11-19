@@ -2,7 +2,11 @@
 
 环境路径为 `/opt/model-envs/<环境名称>`。激活对应环境后，运行模型的 `inference.py`，再运行任务的 `evaluate.py`。
 
+版本文件记录 A100 上已安装的依赖，包含基础镜像和本地编译的包。镜像内使用 `source /opt/model-envs/<环境名称>/bin/activate` 激活环境。
+
 ## e07
+
+Python 3.12.3 · [依赖版本](e07.txt)
 
 - [`Ahmed9275--Vit-Cifar100`](../models/Ahmed9275--Vit-Cifar100/)
 - [`Anzhc--Race-Classification-FairFace-YOLOv8`](../models/Anzhc--Race-Classification-FairFace-YOLOv8/)
@@ -57,6 +61,8 @@
 - [`Xenova--facial_emotions_image_detection`](../models/Xenova--facial_emotions_image_detection/)
 
 ## e24
+
+Python 3.12.3 · [依赖版本](e24.txt)
 
 - [`prithivMLmods--MetaCLIP-2-Age-Range-Estimator`](../models/prithivMLmods--MetaCLIP-2-Age-Range-Estimator/)
 - [`sgugger--resnet50d`](../models/sgugger--resnet50d/)
