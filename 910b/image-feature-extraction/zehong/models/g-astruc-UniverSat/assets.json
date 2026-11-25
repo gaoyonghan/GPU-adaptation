@@ -1,0 +1,114 @@
+{
+  "schema": "model-assets/v1",
+  "model": "g-astruc-UniverSat",
+  "platform": "910B",
+  "sources": [
+    {
+      "repo_id": "g-astruc/UniverSat",
+      "evidence": "inference/model.py"
+    }
+  ],
+  "revision": "177d1ef81948002d114874deae3884a96fb779cd",
+  "revision_status": "recorded_in_source",
+  "assets": [
+    {
+      "argument": "--weights",
+      "path": "weights",
+      "required": true,
+      "role": "model_or_cache"
+    },
+    {
+      "argument": "--bundle",
+      "path": "../../../../dataset/pastis_spot_bundle_1000",
+      "required": true,
+      "role": "dataset"
+    }
+  ],
+  "weights_contents": [
+    {
+      "path": "weights/config.json",
+      "kind": "file",
+      "bytes": 47
+    },
+    {
+      "path": "weights/model.safetensors",
+      "kind": "file",
+      "bytes": 804264576
+    }
+  ],
+  "data_kind": "prepared_bundle",
+  "prepared_data": [
+    {
+      "path": "../../../../dataset/pastis_spot_bundle_1000",
+      "samples": 1000,
+      "manifest": "input_manifest.jsonl",
+      "manifest_sha256": "723018e901fdf0161a1c6079548db9c051d3dd3706741028ccc71a0f05168775",
+      "format_fields": [
+        "sample_id",
+        "relative_path",
+        "image_sha256",
+        "source_patch_id",
+        "source_fold",
+        "source_sha256",
+        "window_xywh"
+      ],
+      "bundled_description": [
+        "inference/data_description/normalization.json"
+      ],
+      "sampling_recipe": "见随包dataset_manifest及上述说明；未记录的采样细节不得推定为官方标准"
+    }
+  ],
+  "nested_load_calls": [
+    {
+      "file": "inference/model.py",
+      "line": 74,
+      "call": "model = UniverSat.from_pretrained(str(snapshot), compile=False)"
+    },
+    {
+      "file": "inference/upstream/UniverSat/hubconf.py",
+      "line": 10,
+      "call": "model = UniverSat.from_pretrained(\"g-astruc/UniverSat\").eval()"
+    },
+    {
+      "file": "inference/upstream/UniverSat/hubconf.py",
+      "line": 14,
+      "call": "model = torch.hub.load(\"gastruc/UniverSat\", \"universat\", pretrained=True).eval()"
+    },
+    {
+      "file": "inference/upstream/UniverSat/hubconf.py",
+      "line": 416,
+      "call": "model = UniverSat.from_pretrained(\"g-astruc/UniverSat\").eval()"
+    },
+    {
+      "file": "inference/upstream/UniverSat/hubconf.py",
+      "line": 456,
+      "call": "return from_pretrained("
+    },
+    {
+      "file": "inference/upstream/UniverSat/hubconf.py",
+      "line": 469,
+      "call": "def from_pretrained(repo_id: str = _HF_REPO_ID, **kwargs):"
+    },
+    {
+      "file": "inference/upstream/UniverSat/hubconf.py",
+      "line": 475,
+      "call": "model = torch.hub.load(\"gastruc/UniverSat\", \"from_pretrained\").eval()"
+    },
+    {
+      "file": "inference/upstream/UniverSat/hubconf.py",
+      "line": 485,
+      "call": "return UniverSat.from_pretrained(repo_id, **kwargs)"
+    },
+    {
+      "file": "inference/upstream/UniverSat/src/LP_eval.py",
+      "line": 740,
+      "call": "model = hubconf.UniverSat.from_pretrained(repo_id).model"
+    },
+    {
+      "file": "inference/upstream/UniverSat/src/LP_eval_conv.py",
+      "line": 731,
+      "call": "model = hubconf.UniverSat.from_pretrained(repo_id).model"
+    }
+  ],
+  "environment_manifest": "../../environment/manifests/songjie/shared/m05-feature4/requirements-install.txt"
+}

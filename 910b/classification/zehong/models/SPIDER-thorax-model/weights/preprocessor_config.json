@@ -1,0 +1,29 @@
+{
+  "crop_size": {
+    "height": 1120,
+    "width": 1120
+  },
+  "default_to_square": true,
+  "do_center_crop": true,
+  "do_convert_rgb": true,
+  "do_normalize": true,
+  "do_rescale": true,
+  "do_resize": false,
+  "image_mean": [
+    0.7068,
+    0.5755,
+    0.722
+  ],
+  "image_processor_type": "ViTImageProcessorFast",
+  "image_std": [
+    0.195,
+    0.2316,
+    0.1816
+  ],
+  "resample": 2,
+  "rescale_factor": 0.00392156862745098,
+  "size": {
+    "height": 224,
+    "width": 224
+  }
+}

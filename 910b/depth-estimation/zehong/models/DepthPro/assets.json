@@ -1,0 +1,59 @@
+{
+  "schema": "model-assets/v1",
+  "model": "DepthPro",
+  "platform": "910B",
+  "sources": [],
+  "revision": null,
+  "revision_status": "未在入口明确固定；发布前需核对原权重来源，不使用main冒充固定版本",
+  "assets": [
+    {
+      "argument": "--weights",
+      "path": "weights",
+      "required": true,
+      "role": "model_or_cache"
+    },
+    {
+      "argument": "--dataset-root",
+      "path": "../../../../dataset",
+      "required": true,
+      "role": "dataset"
+    }
+  ],
+  "weights_contents": [
+    {
+      "path": "weights/depth_pro.pt",
+      "kind": "file",
+      "bytes": 1904446787
+    }
+  ],
+  "data_kind": "native_dataset",
+  "prepared_data": [],
+  "nested_load_calls": [
+    {
+      "file": "inference/upstream/timm/models/_hub.py",
+      "line": 150,
+      "call": "return hf_hub_download("
+    },
+    {
+      "file": "inference/upstream/timm/models/_hub.py",
+      "line": 226,
+      "call": "cached_safe_file = hf_hub_download("
+    },
+    {
+      "file": "inference/upstream/timm/models/_hub.py",
+      "line": 238,
+      "call": "cached_safe_file = hf_hub_download("
+    },
+    {
+      "file": "inference/upstream/timm/models/_hub.py",
+      "line": 252,
+      "call": "cached_file = hf_hub_download("
+    },
+    {
+      "file": "inference/upstream/timm/models/_hub.py",
+      "line": 320,
+      "call": "cached_file = hf_hub_download("
+    }
+  ],
+  "environment_manifest": "../../environment/manifests/JinPeng/shared/m03-depth/requirements-install.txt"
+}

@@ -1,0 +1,24 @@
+{
+  "modality": "spot",
+  "mean": [
+    92.5317080399924,
+    104.93363422201692,
+    73.57445383101303
+  ],
+  "std": [
+    42.918628284634,
+    32.03924849303241,
+    38.76599017329893
+  ],
+  "std_min": 1e-06,
+  "statistics": "population, all pixels, no nodata exclusion",
+  "normalization_folds": [
+    2,
+    3,
+    4,
+    5
+  ],
+  "num_source_images": 1946,
+  "dataset_revision": "094ef818db3e826ac5ed611cd2ca11106fac7ed3",
+  "metadata_sha256": "be94205b3bfbdb439b26fb2fd68705691fbfc308901807bf474018eda0e0c748"
+}

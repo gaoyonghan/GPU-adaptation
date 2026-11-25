@@ -1,0 +1,35 @@
+{
+  "architectures": [
+    "M3DCLIP"
+  ],
+  "auto_map": {
+    "AutoConfig": "configuration_m3d_clip.M3DCLIPConfig",
+    "AutoModel": "modeling_m3d_clip.M3DCLIP"
+  },
+  "dropout_rate": 0,
+  "gather_loss": true,
+  "hidden_size": 768,
+  "img_size": [
+    32,
+    256,
+    256
+  ],
+  "in_channels": 1,
+  "language_model_name_or_path": "bert-base-uncased",
+  "local_loss": false,
+  "max_text_len": 128,
+  "mlp_dim": 3072,
+  "model_type": "m3d_clip",
+  "num_heads": 12,
+  "num_layers": 12,
+  "patch_size": [
+    4,
+    16,
+    16
+  ],
+  "pos_embed": "perceptron",
+  "spatial_dims": 3,
+  "torch_dtype": "float32",
+  "transformers_version": "4.40.1",
+  "vocab_size": 30522
+}

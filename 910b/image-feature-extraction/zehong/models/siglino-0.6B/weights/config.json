@@ -1,0 +1,54 @@
+{
+  "activation": "silu",
+  "architectures": [
+    "SigLinoModel"
+  ],
+  "auto_map": {
+    "AutoConfig": "configuration_siglino.SigLinoConfig",
+    "AutoImageProcessor": "image_processing_siglino.SigLinoImageProcessor",
+    "AutoModel": "modeling_siglino.SigLinoModel"
+  },
+  "channel_size": 3,
+  "dim": 1280,
+  "dtype": "float32",
+  "enable_3d_rope": true,
+  "ffn_dim": 5120,
+  "first_n_layers_dense": 18,
+  "head_dim": 80,
+  "max_seq_len": 8192,
+  "model_type": "siglino",
+  "moe_args": {
+    "activation": "relu2",
+    "num_experts": 28,
+    "num_shared_experts": 0,
+    "route_norm": true,
+    "route_scale": 0.8633,
+    "score_before_experts": false,
+    "score_func": "sigmoid",
+    "top_k": 6
+  },
+  "moe_dim": 384,
+  "n_heads": 16,
+  "n_kv_heads": 16,
+  "n_layers": 18,
+  "n_storage_tokens": 4,
+  "norm_eps": 1e-05,
+  "parameterized_norm": true,
+  "rope_max_freqs": 20.0,
+  "rope_min_freqs": 1.0,
+  "rope_theta": 100000.0,
+  "spatial_patch_size": 16,
+  "teachers": [
+    "siglip2",
+    "dinov3"
+  ],
+  "teachers_dim": [
+    1152,
+    1024
+  ],
+  "temporal_patch_size": 1,
+  "transformers_version": "4.57.1",
+  "use_flex_attn": true,
+  "use_qk_norm": true,
+  "use_tok_norm": true
+}

@@ -1,0 +1,23 @@
+{
+    "architecture": "vit_huge_patch14_224_in21k",
+    "num_classes": 21843,
+    "input_size": [
+        3,
+        224,
+        224
+    ],
+    "crop_pct": 0.9,
+    "interpolation": "bicubic",
+    "mean": [
+        0.5,
+        0.5,
+        0.5
+    ],
+    "std": [
+        0.5,
+        0.5,
+        0.5
+    ],
+    "first_conv": "patch_embed.proj",
+    "classifier": "head"
+}

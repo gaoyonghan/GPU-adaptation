@@ -1,0 +1,142 @@
+{
+  "schema": "model-assets/v1",
+  "model": "MingTok-Vision",
+  "platform": "910B",
+  "sources": [
+    {
+      "repo_id": "inclusionAI/MingTok-Vision",
+      "evidence": "inference/model.py"
+    }
+  ],
+  "revision": "02e95176615badf4bf30757c99c52a8c7f06a92f",
+  "revision_status": "recorded_in_source",
+  "assets": [
+    {
+      "argument": "--weights",
+      "path": "weights",
+      "required": true,
+      "role": "model_or_cache"
+    },
+    {
+      "argument": "--bundle",
+      "path": "../../../../dataset/aimv2_features/imagenet_validation_1000",
+      "required": true,
+      "role": "dataset"
+    }
+  ],
+  "weights_contents": [
+    {
+      "path": "weights/config.json",
+      "kind": "file",
+      "bytes": 876
+    },
+    {
+      "path": "weights/model.safetensors",
+      "kind": "file",
+      "bytes": 2790962104
+    }
+  ],
+  "data_kind": "prepared_bundle",
+  "prepared_data": [
+    {
+      "path": "../../../../dataset/aimv2_features/imagenet_validation_1000",
+      "samples": 1000,
+      "manifest": "input_manifest.jsonl",
+      "manifest_sha256": "0bb6256649fa206dcb5608112f025b21c62a8d8c515fe9b627968a5bceb41db5",
+      "format_fields": [
+        "source_image_id",
+        "image_sha256",
+        "label",
+        "sample_id",
+        "relative_path"
+      ],
+      "bundled_description": [
+        "inference/data_description/dataset_manifest.json"
+      ],
+      "sampling_recipe": "见随包dataset_manifest及上述说明；未记录的采样细节不得推定为官方标准"
+    }
+  ],
+  "nested_load_calls": [
+    {
+      "file": "inference/model.py",
+      "line": 49,
+      "call": "model = MingTok.from_pretrained(snapshot)"
+    },
+    {
+      "file": "inference/model.py",
+      "line": 80,
+      "call": "def hf_hub_download(repo_id=None,filename=None,**kwargs):"
+    },
+    {
+      "file": "inference/Ming-UniVision/ming_sdk/ming.py",
+      "line": 29,
+      "call": "self.processor = AutoProcessor.from_pretrained("
+    },
+    {
+      "file": "inference/Ming-UniVision/ming_sdk/ming.py",
+      "line": 388,
+      "call": "BailingTalkerForConditionalGeneration.from_pretrained(talker_path)"
+    },
+    {
+      "file": "inference/Ming-UniVision/ming_sdk/ming.py",
+      "line": 646,
+      "call": "model_diffusion = BailingMMNativeForConditionalGeneration.from_pretrained("
+    },
+    {
+      "file": "inference/Ming-UniVision/mingunivision/mingunivisioninfer.py",
+      "line": 43,
+      "call": "tokenizer = AutoTokenizer.from_pretrained(\"./mingunivision\", trust_remote_code=True)"
+    },
+    {
+      "file": "inference/Ming-UniVision/mingunivision/mingunivisioninfer.py",
+      "line": 44,
+      "call": "processor = AutoProcessor.from_pretrained(\"./mingunivision\", trust_remote_code=True)"
+    },
+    {
+      "file": "inference/Ming-UniVision/mingunivision/mingunivisioninfer.py",
+      "line": 53,
+      "call": "model = MingUniVisionForConditionalGeneration.from_pretrained("
+    },
+    {
+      "file": "inference/Ming-UniVision/mingunivision/mingunivisioninfer.py",
+      "line": 63,
+      "call": "model = MingUniVisionForConditionalGeneration.from_pretrained("
+    },
+    {
+      "file": "inference/Ming-UniVision/mingunivision/mingunivisioninfer.py",
+      "line": 72,
+      "call": "model = MingUniVisionForConditionalGeneration.from_pretrained("
+    },
+    {
+      "file": "inference/Ming-UniVision/mingunivision/modeling_bailing_talker.py",
+      "line": 53,
+      "call": "self.tokenizer = AutoTokenizer.from_pretrained(self.config._name_or_path)"
+    },
+    {
+      "file": "inference/Ming-UniVision/mingunivision/modeling_bailing_talker.py",
+      "line": 58,
+      "call": "self.model_config = Qwen2Config.from_pretrained(self.config._name_or_path)"
+    },
+    {
+      "file": "inference/Ming-UniVision/mingunivision/modeling_bailingmm.py",
+      "line": 102,
+      "call": "self.vision = MingTok.from_pretrained(\"./models/MingTok-Vision\")"
+    },
+    {
+      "file": "inference/Ming-UniVision/mingunivision/test_infer_recon_image.py",
+      "line": 11,
+      "call": "mingtok_model = MingTok.from_pretrained(\"inclusionAI/MingTok-Vision\")"
+    },
+    {
+      "file": "inference/Ming-UniVision/talker/async_vllm_infer.py",
+      "line": 45,
+      "call": "tokenizer = AutoTokenizer.from_pretrained("
+    },
+    {
+      "file": "inference/Ming-UniVision/talker/vllm_infer.py",
+      "line": 45,
+      "call": "tokenizer = AutoTokenizer.from_pretrained("
+    }
+  ],
+  "environment_manifest": "../../environment/manifests/JinPeng/shared/m05-feature4/requirements-install.txt"
+}

@@ -1,0 +1,1 @@
+-r ../../environment/manifests/jingzhi/shared/m07-classification/requirements-install.txt
