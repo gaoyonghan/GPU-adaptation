@@ -29,7 +29,7 @@ Activate the model environment and prepare assets before running these commands 
 
 ```bash
 python zehong/models/GenView-vit-small/inference.py --output-root result/run_001
-python evaluate.py /path/to/910b/run /path/to/candidate/run --output-root /path/to/comparison_001
+python evaluate.py /path/to/a100/run /path/to/candidate/run --output-root /path/to/comparison_001
 ```
 
 evaluate.py compares saved features for the same samples and reports cosine similarity, absolute errors and relative L2. Use matching checkpoints, original samples and feature definitions. The metrics describe cross-device output consistency.
@@ -59,6 +59,8 @@ python evaluate.py /workspace/feature_compare/a100_run /workspace/feature_compar
 Order determines comparison direction. Relative L2 uses the norm of the first, baseline feature as its denominator. --output-root selects a new comparison directory containing comparison_summary.json and image_similarity.csv. The output directory must not already exist. Scoring reads saved features and needs no inference connection to the other device.
 
 --strict-inputs optionally requires matching recorded preprocessing configurations. Sample sets and original-image contents are always checked. Processor-file and input-tensor hash differences are reported without blocking comparison. Output differences may include numerical differences introduced by preprocessing. See python evaluate.py --help for thresholds and optional arguments. Model READMEs and assets.json describe their inputs, feature semantics and output scope.
+
+The measured status indicates that metrics were computed. Use --min-cosine to specify an acceptance threshold.
 
 ## Paths and completion
 

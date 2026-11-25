@@ -62,6 +62,8 @@ python evaluate.py /workspace/feature_compare/a100_run /workspace/feature_compar
 
 结果格式、输入清单和特征布局保留各模型已有输出契约。--strict-inputs 可选，仅要求记录的预处理配置一致。原图内容与样本集合始终检查；processor 文件和输入张量的哈希差异只记录，不阻止评分。输出差异可能包含预处理数值差异。阈值和可选参数见 python evaluate.py --help。各模型的输入要求、特征定义和输出范围见模型 README 与 assets.json。
 
+报告状态 measured 表示已计算指标。验收阈值可通过 --min-cosine 指定。
+
 ## 路径与结果
 
 默认路径依据脚本位置解析，模型参数可指定权重、数据和输出。模型相对输入输出以模型目录为准。默认输出为 result/run_001，重复运行请选择新目录。评分示例使用绝对结果路径。

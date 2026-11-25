@@ -37,3 +37,5 @@ python ../../../evaluate.py /path/to/910b/run /path/to/candidate/run --strict-in
 ```
 
 公共评分器比较同一样本的特征，指标含余弦相似度和数值误差。准备的数据包与模型特征语义见 assets.json 和 inference/ 中的实现。
+
+本入口比较模型的多波段遥感输入对应输出。biomass、canopyheight、land-surface-temperature 比较回归输出，uki 比较分割输出。公共特征评分器报告跨设备数值差异，任务准确率需要对应真实标注和独立评测协议。

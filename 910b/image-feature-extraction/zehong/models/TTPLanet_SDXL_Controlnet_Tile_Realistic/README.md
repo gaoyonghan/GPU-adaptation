@@ -37,3 +37,5 @@ python ../../../evaluate.py /path/to/910b/run /path/to/candidate/run --strict-in
 ```
 
 公共评分器比较同一样本的特征，指标含余弦相似度和数值误差。准备的数据包与模型特征语义见 assets.json 和 inference/ 中的实现。
+
+本入口比较固定零 latent、零文本条件和 timestep 0 下的 mid_block_res_sample。合成条件在前向计时外构建，所得数值指标用于该条件下的跨设备输出比较。生成图像质量需要完整生成流程及相应评测协议。
