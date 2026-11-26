@@ -1,0 +1,12 @@
+{
+  "source": "caichengrui/models/Bombek1--ai-image-detector-siglip-dinov2/weights",
+  "delivery_path": "weights/Bombek1/ai-image-detector-siglip-dinov2",
+  "method": "directory relocation",
+  "files": [
+    "README.md",
+    "config.json",
+    "pytorch_model.pt",
+    "siglip2_config/config.json",
+    "siglip2_config/preprocessor_config.json"
+  ]
+}

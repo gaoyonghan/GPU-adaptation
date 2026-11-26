@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "sources": {},
+  "models": [
+    {
+      "sequence": 144,
+      "model_id": "angusleung100/bad-anatomy-realism-classifier",
+      "runner_family": "native_script",
+      "adapter": "native_labels",
+      "state": "recording_enabled",
+      "dataset": {
+        "id": "anatomy-classifier",
+        "split": "full_local_dataset",
+        "note": "anatomy-classifier\n本地全部 200 张，4 类\n无独立 test"
+      },
+      "qualification": "native_registered_scope",
+      "limitations": [
+        "Capture-ready is a code integration state, not a claim that inference has passed.",
+        "Unobserved native Top-5 is unavailable; aggregate scores are not predictions."
+      ],
+      "num_classes": 4,
+      "expected_images": 200,
+      "native_script": {
+        "script": "inference/native/run_model.py",
+        "script_sha256": "68d093fbd234e1d9b01fec9460946ba3258a549298713e73785ce8ef3adf60ee",
+        "loop_lineno": 195,
+        "labels": "targets",
+        "prediction": "predictions",
+        "ranking": null,
+        "classes": "logits.shape[-1]",
+        "loader_kind": "torch",
+        "label_position": 1,
+        "framework": "torch",
+        "original_script_sha256": "f17dddaaee9808a273fabb708845174ce96e8887aca39eee65ed5453699634b5",
+        "original_loop_lineno": 184,
+        "source_original_path": "code/bad-anatomy-realism-classifier-anatomy-classifier-test.py"
+      },
+      "output_relative_path": "result/run_001/full/m144",
+      "supports_max_samples": false,
+      "runtime_defaults": {
+        "batch_size": 16,
+        "workers": 0,
+        "warmup": 3
+      },
+      "capabilities": {
+        "gpu_only": false,
+        "worker_processes": true,
+        "limited_samples": false,
+        "device": [
+          "auto",
+          "cuda",
+          "cuda:N",
+          "cpu"
+        ]
+      },
+      "required_inputs": {
+        "weights": [
+          "config.json",
+          "README.md",
+          "model.safetensors"
+        ],
+        "dataset_paths": [
+          "anatomy-classifier"
+        ]
+      }
+    }
+  ]
+}

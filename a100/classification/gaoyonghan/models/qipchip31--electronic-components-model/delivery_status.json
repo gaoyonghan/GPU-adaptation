@@ -1,0 +1,29 @@
+{
+  "sequence": 121,
+  "source_contributor": "caichengrui",
+  "state": "a100_gpu_forward_verified",
+  "native_entries": [
+    "run_model.py"
+  ],
+  "native_sha256": "3f7e9e1d5c48b11e13e446519f04ae1074eb3aa518b13f52f6ea49c3f98aa505",
+  "resource_paths": [
+    "project/timing_runtime"
+  ],
+  "path_templates": 1,
+  "environment": "/opt/model-envs/e07",
+  "new_project_full_inference_executed": false,
+  "a100_validation": {
+    "model": "m121",
+    "directory": "qipchip31--electronic-components-model",
+    "preflight": "passed",
+    "weights": 3,
+    "native_sha256": "3f7e9e1d5c48b11e13e446519f04ae1074eb3aa518b13f52f6ea49c3f98aa505",
+    "used_local_dataset_cache": false,
+    "gpu_forward": "passed",
+    "gpu": "NVIDIA A100-SXM4-40GB",
+    "predictions": 1,
+    "seconds": 13.9,
+    "log": "result/ccr_alignment_20261120/m121-gpu.log",
+    "data_source": "default shared dataset"
+  }
+}

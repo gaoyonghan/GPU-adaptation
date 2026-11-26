@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "sources": {},
+  "models": [
+    {
+      "sequence": 109,
+      "model_id": "facebook/convnextv2-base-22k-224",
+      "runner_family": "native_script",
+      "adapter": "native_labels",
+      "state": "recording_enabled",
+      "dataset": {
+        "id": "ImageNet-1K val",
+        "split": null,
+        "note": "ImageNet-1K val\n50,000 张"
+      },
+      "qualification": "native_registered_scope",
+      "limitations": [
+        "Capture-ready is a code integration state, not a claim that inference has passed.",
+        "Unobserved native Top-5 is unavailable; aggregate scores are not predictions."
+      ],
+      "num_classes": 1000,
+      "expected_images": 50000,
+      "native_script": {
+        "script": "inference/run_model.py",
+        "script_sha256": "5f7b799d5d435028c2c388dc05509d67fa908e35abb589184a366710034fa4ee",
+        "loop_lineno": 180,
+        "labels": "labels",
+        "prediction": "predictions",
+        "ranking": "top5_indices",
+        "classes": "logits.shape[-1]",
+        "loader_kind": "torch",
+        "label_position": 1,
+        "framework": "torch",
+        "original_script_sha256": "a0398e7923c3d4887c36932120c9ea2c57e4980f46cb7173899178ef0e130f81",
+        "original_loop_lineno": 168,
+        "source_original_path": "code/convnextv2-base-22k-224.py"
+      },
+      "output_relative_path": "result/run_001/full/m109",
+      "supports_max_samples": false,
+      "runtime_defaults": {
+        "batch_size": 64,
+        "workers": 8,
+        "warmup": 10
+      },
+      "capabilities": {
+        "gpu_only": false,
+        "worker_processes": true,
+        "limited_samples": false,
+        "device": [
+          "auto",
+          "cuda",
+          "cuda:N",
+          "cpu"
+        ]
+      },
+      "required_inputs": {
+        "weights": [
+          "config.json",
+          "preprocessor_config.json",
+          "model.safetensors"
+        ],
+        "dataset_paths": [
+          "ImageNet-1K"
+        ]
+      }
+    }
+  ]
+}

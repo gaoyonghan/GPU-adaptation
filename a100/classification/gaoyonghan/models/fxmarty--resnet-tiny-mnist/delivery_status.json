@@ -1,0 +1,33 @@
+{
+  "sequence": 159,
+  "source_contributor": "caichengrui",
+  "state": "a100_gpu_forward_verified",
+  "native_entries": [
+    "run_model.py"
+  ],
+  "native_sha256": "3e75dc2b6cbaa82a672bcf2085b5a7a75e93c079e8c3884e856bde75c1432309",
+  "resource_paths": [
+    "project/timing_runtime"
+  ],
+  "path_templates": 1,
+  "environment": "/opt/model-envs/e07",
+  "new_project_full_inference_executed": false,
+  "original_native_sha256": "cbd4a632744408f3c01bcd9efc5db4a7ea305d366b244a3a5a1817584f9b03db",
+  "native_changes": [
+    "Use the configured local Hugging Face datasets cache for Parquet loading."
+  ],
+  "a100_validation": {
+    "model": "m159",
+    "directory": "fxmarty--resnet-tiny-mnist",
+    "preflight": "passed",
+    "weights": 4,
+    "native_sha256": "3e75dc2b6cbaa82a672bcf2085b5a7a75e93c079e8c3884e856bde75c1432309",
+    "used_local_dataset_cache": true,
+    "gpu_forward": "passed",
+    "gpu": "NVIDIA A100-SXM4-40GB",
+    "predictions": 1,
+    "seconds": 11.2,
+    "log": "result/ccr_alignment_20261120_cache_retry/m159-gpu.log",
+    "data_source": "default shared dataset"
+  }
+}

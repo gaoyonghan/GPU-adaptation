@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "sources": {},
+  "models": [
+    {
+      "sequence": 112,
+      "model_id": "aalonso-developer/vit-base-patch16-224-in21k-clothing-classifier",
+      "runner_family": "native_script",
+      "adapter": "native_labels",
+      "state": "recording_enabled",
+      "dataset": {
+        "id": "DeepFashion Category and Attribute Prediction Benchmark",
+        "split": "official test",
+        "note": "DeepFashion Category and Attribute Prediction Benchmark\n官方 test 的匹配 14 类子集\n32,692 张"
+      },
+      "qualification": "native_registered_scope",
+      "limitations": [
+        "Capture-ready is a code integration state, not a claim that inference has passed.",
+        "Unobserved native Top-5 is unavailable; aggregate scores are not predictions."
+      ],
+      "num_classes": 14,
+      "expected_images": 32692,
+      "native_script": {
+        "script": "inference/run_model.py",
+        "script_sha256": "07db90e1c853d25e654c618ef16a3d9c524758216d8d41940bf94b658916aef0",
+        "loop_lineno": 279,
+        "labels": "targets",
+        "prediction": "predictions",
+        "ranking": "top3",
+        "classes": "logits.shape[-1]",
+        "loader_kind": "torch",
+        "label_position": 1,
+        "framework": "torch",
+        "original_script_sha256": "6b860f91df3980a7c26089535341ddc0b20a3a0177853102b86c0de151ca51b9",
+        "original_loop_lineno": 274,
+        "source_original_path": "code/vit-base-patch16-224-in21k-clothing-classifier-deepfashion-test.py"
+      },
+      "output_relative_path": "result/run_001/full/m112",
+      "supports_max_samples": true,
+      "runtime_defaults": {
+        "batch_size": 64,
+        "workers": 4,
+        "warmup": 3
+      },
+      "capabilities": {
+        "gpu_only": true,
+        "worker_processes": true,
+        "limited_samples": true,
+        "device": [
+          "auto",
+          "cuda",
+          "cuda:N"
+        ]
+      },
+      "required_inputs": {
+        "weights": [
+          "config.json",
+          "preprocessor_config.json",
+          "README.md",
+          "tf_model.h5"
+        ],
+        "dataset_paths": [
+          "DeepFashion-Category-and-Attribute-Prediction-Benchmark"
+        ]
+      }
+    }
+  ]
+}

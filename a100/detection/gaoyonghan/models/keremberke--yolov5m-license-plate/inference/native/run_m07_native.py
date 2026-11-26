@@ -17,7 +17,7 @@ import zipfile
 
 SOURCE = Path('/mnt/aoss/model inference for GPU adaptation/dataset/COCO2017')
 WEIGHT = Path('/mnt/aoss/model inference for GPU adaptation/detection/gaoyonghan/models/keremberke--yolov5m-license-plate/weights/Ultralytics/YOLO11/yolo11n.pt')
-OUT = Path('/mnt/aoss/model inference for GPU adaptation/detection/gaoyonghan/models/keremberke--yolov5m-license-plate/result/a100_delivery_audit_retry_20261117/m018/shared_preparation')
+OUT = Path('/mnt/aoss/model inference for GPU adaptation/detection/gaoyonghan/models/keremberke--yolov5m-license-plate/result/full_20261121_092030_2cb937/m018/shared_preparation')
 
 
 def sha(path):

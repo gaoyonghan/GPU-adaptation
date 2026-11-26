@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "sources": {},
+  "models": [
+    {
+      "sequence": 159,
+      "model_id": "fxmarty/resnet-tiny-mnist",
+      "runner_family": "native_script",
+      "adapter": "native_labels",
+      "state": "recording_enabled",
+      "dataset": {
+        "id": "MNIST",
+        "split": "test",
+        "note": "MNIST test\n10,000 张"
+      },
+      "qualification": "native_registered_scope",
+      "limitations": [
+        "Capture-ready is a code integration state, not a claim that inference has passed.",
+        "Unobserved native Top-5 is unavailable; aggregate scores are not predictions."
+      ],
+      "num_classes": 10,
+      "expected_images": 10000,
+      "native_script": {
+        "script": "inference/run_model.py",
+        "script_sha256": "cbd4a632744408f3c01bcd9efc5db4a7ea305d366b244a3a5a1817584f9b03db",
+        "loop_lineno": 131,
+        "labels": "labels",
+        "prediction": "top5[:, 0]",
+        "ranking": "top5",
+        "classes": "logits.shape[-1]",
+        "loader_kind": "torch",
+        "label_position": 1,
+        "framework": "torch",
+        "original_script_sha256": "36cf29e5c7c0ce2658674186328b58e36d871dfc2fc3c6539754aab0f26ca00a",
+        "original_loop_lineno": 119,
+        "source_original_path": "code/resnet-tiny-mnist-test.py"
+      },
+      "output_relative_path": "result/run_001/full/m159",
+      "supports_max_samples": false,
+      "runtime_defaults": {
+        "batch_size": 256,
+        "workers": 4,
+        "warmup": 10
+      },
+      "capabilities": {
+        "gpu_only": false,
+        "worker_processes": true,
+        "limited_samples": false,
+        "device": [
+          "auto",
+          "cuda",
+          "cuda:N",
+          "cpu"
+        ]
+      },
+      "required_inputs": {
+        "weights": [
+          "config.json",
+          "preprocessor_config.json",
+          "README.md",
+          "pytorch_model.bin"
+        ],
+        "dataset_paths": [
+          "mnist"
+        ]
+      }
+    }
+  ]
+}

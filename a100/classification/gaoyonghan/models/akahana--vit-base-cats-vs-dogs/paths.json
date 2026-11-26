@@ -1,0 +1,4 @@
+{
+  "dataset_root": "../../../../dataset",
+  "weights_root": "weights/akahana/vit-base-cats-vs-dogs"
+}

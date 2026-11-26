@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "sources": {},
+  "models": [
+    {
+      "sequence": 117,
+      "model_id": "tonyassi/celebrity-classifier",
+      "runner_family": "native_script",
+      "adapter": "native_labels",
+      "state": "recording_enabled",
+      "dataset": {
+        "id": "celebrity-1000",
+        "split": null,
+        "note": "celebrity-1000\ntrain 分层抽取 20%，seed=42\n3,637 张，非官方 test"
+      },
+      "qualification": "native_registered_scope",
+      "limitations": [
+        "Capture-ready is a code integration state, not a claim that inference has passed.",
+        "Unobserved native Top-5 is unavailable; aggregate scores are not predictions."
+      ],
+      "num_classes": 997,
+      "expected_images": 3637,
+      "native_script": {
+        "script": "inference/native/run_model.py",
+        "script_sha256": "847b2277e99f08344c14eb66afc2b53e4d8cea409e6cb827fbd3a2e1e7192df6",
+        "loop_lineno": 257,
+        "labels": "batch_labels",
+        "prediction": "batch_predictions",
+        "ranking": "batch_top5",
+        "classes": "logits.shape[-1]",
+        "loader_kind": "torch",
+        "label_position": 1,
+        "framework": "torch",
+        "original_script_sha256": "5e8918f46f893a63e83bf6e95608e907486ceadb61843384fd4f67867cb1423e",
+        "original_loop_lineno": 247,
+        "source_original_path": "code/celebrity-classifier-celebrity-1000-test.py"
+      },
+      "output_relative_path": "result/run_001/full/m117",
+      "supports_max_samples": false,
+      "runtime_defaults": {
+        "batch_size": 64,
+        "workers": 0,
+        "warmup": 3
+      },
+      "capabilities": {
+        "gpu_only": false,
+        "worker_processes": true,
+        "limited_samples": false,
+        "device": [
+          "auto",
+          "cuda",
+          "cuda:N",
+          "cpu"
+        ]
+      },
+      "required_inputs": {
+        "weights": [
+          "config.json",
+          "preprocessor_config.json",
+          "README.md",
+          "model.safetensors"
+        ],
+        "dataset_paths": [
+          "celebrity-1000"
+        ]
+      }
+    }
+  ]
+}

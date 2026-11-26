@@ -15,7 +15,7 @@ import tempfile
 import zipfile
 
 HERE = Path(__file__).resolve().parent
-OUT = Path('/mnt/aoss/model inference for GPU adaptation/detection/gaoyonghan/models/keremberke--yolov5n-construction-safety/result/a100_delivery_framework_20261117/m060')
+OUT = Path('/mnt/aoss/model inference for GPU adaptation/detection/gaoyonghan/models/keremberke--yolov5n-construction-safety/result/full_20261121_092030_2cb937/m060')
 ARCHIVE = Path('/mnt/aoss/model inference for GPU adaptation/dataset/construction_safety_v1_valid/data/valid.zip')
 WEIGHT = Path('/mnt/aoss/model inference for GPU adaptation/detection/gaoyonghan/models/keremberke--yolov5n-construction-safety/weights/keremberke/yolov5n-construction-safety/best.pt')
 PACKAGES = {

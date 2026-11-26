@@ -1,0 +1,4 @@
+{
+  "dataset_root": "../../../../dataset",
+  "weights_root": "weights/aalonso-developer/vit-base-patch16-224-in21k-clothing-classifier"
+}

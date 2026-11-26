@@ -1,0 +1,33 @@
+{
+  "sequence": 107,
+  "source_contributor": "caichengrui",
+  "state": "a100_gpu_forward_verified",
+  "native_entries": [
+    "run_model.py"
+  ],
+  "native_sha256": "f484db0fe8a7b64a83290e38195ad07737d7aa3bc678d229f5365681d8c1cd5b",
+  "resource_paths": [
+    "project/timing_runtime"
+  ],
+  "path_templates": 1,
+  "environment": "/opt/model-envs/e07",
+  "new_project_full_inference_executed": false,
+  "original_native_sha256": "3a09183fdc45991123f5dff295df0a1cd89f49cc8c55846ec028e9209bc7f3a3",
+  "native_changes": [
+    "Use the configured local Hugging Face datasets cache for Parquet loading."
+  ],
+  "a100_validation": {
+    "model": "m107",
+    "directory": "skyau--dog-breed-classifier-vit",
+    "preflight": "passed",
+    "weights": 3,
+    "native_sha256": "f484db0fe8a7b64a83290e38195ad07737d7aa3bc678d229f5365681d8c1cd5b",
+    "used_local_dataset_cache": true,
+    "gpu_forward": "passed",
+    "gpu": "NVIDIA A100-SXM4-40GB",
+    "predictions": 1,
+    "seconds": 21.7,
+    "log": "result/ccr_alignment_20261120_cache_retry/m107-gpu.log",
+    "data_source": "default shared dataset"
+  }
+}

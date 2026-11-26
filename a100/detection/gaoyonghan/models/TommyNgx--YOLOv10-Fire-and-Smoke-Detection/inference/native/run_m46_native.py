@@ -19,7 +19,7 @@ import yaml
 HERE = Path(__file__).resolve().parent
 WEIGHT = Path('/mnt/aoss/model inference for GPU adaptation/detection/gaoyonghan/models/TommyNgx--YOLOv10-Fire-and-Smoke-Detection/weights/TommyNgx/YOLOv10-Fire-and-Smoke-Detection/best.pt')
 ARCHIVE = Path('/mnt/aoss/model inference for GPU adaptation/dataset/dfire_test_replacement_isfire4/Dataset.zip')
-OUT = Path('/mnt/aoss/model inference for GPU adaptation/detection/gaoyonghan/models/TommyNgx--YOLOv10-Fire-and-Smoke-Detection/result/a100_clean_environment_20261117/m046')
+OUT = Path('/mnt/aoss/model inference for GPU adaptation/detection/gaoyonghan/models/TommyNgx--YOLOv10-Fire-and-Smoke-Detection/result/full_20261121_092030_2cb937/m046')
 NAMES = {0: 'Fire', 1: 'Smoke'}
 MAPPING = {0: 1, 1: 0, 2: 1, 3: 0}
 

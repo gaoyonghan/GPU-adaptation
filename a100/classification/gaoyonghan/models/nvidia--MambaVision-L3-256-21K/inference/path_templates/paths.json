@@ -1,0 +1,4 @@
+{
+  "dataset_root": "../../../../dataset",
+  "weights_root": "weights/nvidia/MambaVision-L3-256-21K"
+}

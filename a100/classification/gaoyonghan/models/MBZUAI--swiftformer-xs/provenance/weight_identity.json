@@ -1,0 +1,11 @@
+{
+  "source": "caichengrui/models/MBZUAI--swiftformer-xs/weights",
+  "delivery_path": "weights/MBZUAI/swiftformer-xs",
+  "method": "directory relocation",
+  "files": [
+    "README.md",
+    "config.json",
+    "model.safetensors",
+    "preprocessor_config.json"
+  ]
+}

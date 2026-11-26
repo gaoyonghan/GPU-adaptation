@@ -1,0 +1,10 @@
+{
+  "source": "caichengrui/models/timm--eva02_base_patch14_448.mim_in22k_ft_in22k_in1k/weights",
+  "delivery_path": "weights/timm/eva02_base_patch14_448.mim_in22k_ft_in22k_in1k",
+  "method": "directory relocation",
+  "files": [
+    "README.md",
+    "config.json",
+    "model.safetensors"
+  ]
+}

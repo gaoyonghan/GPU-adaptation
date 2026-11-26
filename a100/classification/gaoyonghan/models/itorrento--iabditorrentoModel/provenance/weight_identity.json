@@ -1,0 +1,11 @@
+{
+  "source": "caichengrui/models/itorrento--iabditorrentoModel/weights",
+  "delivery_path": "weights/itorrento/iabditorrentoModel",
+  "method": "directory relocation",
+  "files": [
+    "README.md",
+    "config.json",
+    "preprocessor_config.json",
+    "pytorch_model.bin"
+  ]
+}

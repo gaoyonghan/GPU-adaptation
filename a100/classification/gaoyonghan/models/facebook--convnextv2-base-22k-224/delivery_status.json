@@ -1,0 +1,29 @@
+{
+  "sequence": 109,
+  "source_contributor": "caichengrui",
+  "state": "a100_gpu_forward_verified",
+  "native_entries": [
+    "run_model.py"
+  ],
+  "native_sha256": "5f7b799d5d435028c2c388dc05509d67fa908e35abb589184a366710034fa4ee",
+  "resource_paths": [
+    "project/timing_runtime"
+  ],
+  "path_templates": 1,
+  "environment": "/opt/model-envs/e07",
+  "new_project_full_inference_executed": false,
+  "a100_validation": {
+    "model": "m109",
+    "directory": "facebook--convnextv2-base-22k-224",
+    "preflight": "passed",
+    "weights": 3,
+    "native_sha256": "5f7b799d5d435028c2c388dc05509d67fa908e35abb589184a366710034fa4ee",
+    "used_local_dataset_cache": false,
+    "gpu_forward": "passed",
+    "gpu": "NVIDIA A100-SXM4-40GB",
+    "predictions": 1,
+    "seconds": 12.5,
+    "log": "result/ccr_alignment_20261120/m109-gpu.log",
+    "data_source": "default shared dataset"
+  }
+}

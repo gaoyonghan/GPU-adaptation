@@ -1,0 +1,4 @@
+{
+  "dataset_root": "../../../../dataset",
+  "weights_root": "weights/dima806/attractive_faces_celebs_detection"
+}

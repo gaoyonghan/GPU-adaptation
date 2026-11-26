@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "sources": {},
+  "models": [
+    {
+      "sequence": 120,
+      "model_id": "StephanAkkerman/chart-recognizer",
+      "runner_family": "native_script",
+      "adapter": "native_labels",
+      "state": "recording_enabled",
+      "dataset": {
+        "id": "HVPD Chart Identification Subset (CIS)",
+        "split": null,
+        "note": "HVPD Chart Identification Subset (CIS)\n全部 58,501 张\n无独立 test"
+      },
+      "qualification": "native_registered_scope",
+      "limitations": [
+        "Capture-ready is a code integration state, not a claim that inference has passed.",
+        "Unobserved native Top-5 is unavailable; aggregate scores are not predictions."
+      ],
+      "num_classes": 2,
+      "expected_images": 58501,
+      "native_script": {
+        "script": "inference/native/run_model.py",
+        "script_sha256": "bc70ec6aeb8f81e78dba8e95c1963abca2cf83c2a3d843d4368291660c98e10c",
+        "loop_lineno": 223,
+        "labels": "labels",
+        "prediction": "predictions",
+        "ranking": null,
+        "classes": "logits.shape[-1]",
+        "loader_kind": "torch",
+        "label_position": 1,
+        "framework": "torch",
+        "original_script_sha256": "7a51cdcb105c8a615292c0eee791cd35b4e68a2015a5a39bf476852bbd1242d6",
+        "original_loop_lineno": 211,
+        "source_original_path": "code/chart-recognizer-hvpd-cis-test.py"
+      },
+      "output_relative_path": "result/run_001/full/m120",
+      "supports_max_samples": false,
+      "runtime_defaults": {
+        "batch_size": 256,
+        "workers": 4,
+        "warmup": 5
+      },
+      "capabilities": {
+        "gpu_only": false,
+        "worker_processes": true,
+        "limited_samples": false,
+        "device": [
+          "auto",
+          "cuda",
+          "cuda:N",
+          "cpu"
+        ]
+      },
+      "required_inputs": {
+        "weights": [
+          "config.json",
+          "README.md",
+          "model.safetensors"
+        ],
+        "dataset_paths": [
+          "HVPD/CIS.zip"
+        ]
+      }
+    }
+  ]
+}

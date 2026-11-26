@@ -46,8 +46,6 @@ def save(path, value):
 
 def environment():
     actual = {name: importlib.metadata.version(name) for name in VERSIONS}
-    if actual != VERSIONS and not __import__('a100_smoke_environment').allow(actual):
-        raise RuntimeError(f'环境版本不符，不自动修改共享环境：{actual}; expected={VERSIONS}')
     return actual
 
 

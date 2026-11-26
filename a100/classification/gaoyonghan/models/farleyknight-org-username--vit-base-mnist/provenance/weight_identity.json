@@ -1,0 +1,11 @@
+{
+  "source": "caichengrui/models/farleyknight-org-username--vit-base-mnist/weights",
+  "delivery_path": "weights/farleyknight-org-username/vit-base-mnist",
+  "method": "directory relocation",
+  "files": [
+    "README.md",
+    "config.json",
+    "preprocessor_config.json",
+    "pytorch_model.bin"
+  ]
+}

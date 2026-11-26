@@ -1,0 +1,11 @@
+{
+  "source": "caichengrui/models/facebook--convnext-base-224-22k-1k/weights",
+  "delivery_path": "weights/facebook/convnext-base-224-22k-1k",
+  "method": "directory relocation",
+  "files": [
+    "README.md",
+    "config.json",
+    "model.safetensors",
+    "preprocessor_config.json"
+  ]
+}

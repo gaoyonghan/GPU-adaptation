@@ -1,0 +1,10 @@
+{
+  "source": "caichengrui/models/PriyamSheta--EmotionClassModel/weights",
+  "delivery_path": "weights/PriyamSheta/EmotionClassModel",
+  "method": "directory relocation",
+  "files": [
+    "config.json",
+    "preprocessor_config.json",
+    "pytorch_model.bin"
+  ]
+}

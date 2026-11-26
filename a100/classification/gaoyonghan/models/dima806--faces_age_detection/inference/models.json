@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "sources": {},
+  "models": [
+    {
+      "sequence": 116,
+      "model_id": "dima806/faces_age_detection",
+      "runner_family": "native_script",
+      "adapter": "native_labels",
+      "state": "recording_enabled",
+      "dataset": {
+        "id": "FairFace",
+        "split": "validation",
+        "note": "FairFace validation\n10,954 张\n年龄映射 0-29 / 30-59 / 60+"
+      },
+      "qualification": "native_registered_scope",
+      "limitations": [
+        "Capture-ready is a code integration state, not a claim that inference has passed.",
+        "Unobserved native Top-5 is unavailable; aggregate scores are not predictions."
+      ],
+      "num_classes": 3,
+      "expected_images": 10954,
+      "native_script": {
+        "script": "inference/native/run_model.py",
+        "script_sha256": "b505fa7ae5e347a9b7bc49f8908ed840e8d50f2d754a9150611836ab325bde00",
+        "loop_lineno": 244,
+        "labels": "batch_labels",
+        "prediction": "batch_predictions",
+        "ranking": null,
+        "classes": "logits.shape[-1]",
+        "loader_kind": "torch",
+        "label_position": 1,
+        "framework": "torch",
+        "original_script_sha256": "1bab06a71d8ea3a191c36bf1242ccc64597303fa4066bb196b264bc2dce0e292",
+        "original_loop_lineno": 234,
+        "source_original_path": "code/faces-age-detection-fairface-test.py"
+      },
+      "output_relative_path": "result/run_001/full/m116",
+      "supports_max_samples": false,
+      "runtime_defaults": {
+        "batch_size": 64,
+        "workers": 0,
+        "warmup": 3
+      },
+      "capabilities": {
+        "gpu_only": false,
+        "worker_processes": true,
+        "limited_samples": false,
+        "device": [
+          "auto",
+          "cuda",
+          "cuda:N",
+          "cpu"
+        ]
+      },
+      "required_inputs": {
+        "weights": [
+          "config.json",
+          "preprocessor_config.json",
+          "README.md",
+          "model.safetensors"
+        ],
+        "dataset_paths": [
+          "FairFace"
+        ]
+      }
+    }
+  ]
+}

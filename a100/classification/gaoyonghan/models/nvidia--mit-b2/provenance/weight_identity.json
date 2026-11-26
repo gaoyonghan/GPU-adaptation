@@ -1,0 +1,11 @@
+{
+  "source": "caichengrui/models/nvidia--mit-b2/weights",
+  "delivery_path": "weights/nvidia/mit-b2",
+  "method": "directory relocation",
+  "files": [
+    "README.md",
+    "config.json",
+    "preprocessor_config.json",
+    "pytorch_model.bin"
+  ]
+}

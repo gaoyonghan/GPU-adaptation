@@ -1,0 +1,10 @@
+{
+  "source": "caichengrui/models/facebook--deit-tiny-distilled-patch16-224/weights",
+  "delivery_path": "weights/facebook/deit-tiny-distilled-patch16-224",
+  "method": "directory relocation",
+  "files": [
+    "config.json",
+    "model.safetensors",
+    "preprocessor_config.json"
+  ]
+}

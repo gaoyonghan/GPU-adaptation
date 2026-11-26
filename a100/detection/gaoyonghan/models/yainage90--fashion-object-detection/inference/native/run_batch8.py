@@ -15,7 +15,7 @@ HERE = Path(__file__).resolve().parent
 # Third-party dependencies are installed in the selected Python environment.
 DATA = Path('/mnt/aoss/model inference for GPU adaptation/dataset/supplemental_20260905/model30/test-00000-of-00001.parquet')
 WEIGHTS = Path('/mnt/aoss/model inference for GPU adaptation/detection/gaoyonghan/models/yainage90--fashion-object-detection/weights/yainage90/fashion-object-detection')
-OUTPUT = Path('/mnt/aoss/model inference for GPU adaptation/detection/gaoyonghan/models/yainage90--fashion-object-detection/result/a100_clean_environment_m030_v2_20261117/m030')
+OUTPUT = Path('/mnt/aoss/model inference for GPU adaptation/detection/gaoyonghan/models/yainage90--fashion-object-detection/result/full_20261121_092030_2cb937/m030')
 LABELS = ['bag', 'bottom', 'dress', 'hat', 'outer', 'shoes', 'top']
 
 

@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "sources": {},
+  "models": [
+    {
+      "sequence": 139,
+      "model_id": "PriyamSheta/EmotionClassModel",
+      "runner_family": "native_script",
+      "adapter": "native_labels",
+      "state": "recording_enabled",
+      "dataset": {
+        "id": "FER2013",
+        "split": null,
+        "note": "FER2013 PrivateTest\nHappy / Sad 两类子集\n1,473 / 3,589 张"
+      },
+      "qualification": "native_registered_scope",
+      "limitations": [
+        "Capture-ready is a code integration state, not a claim that inference has passed.",
+        "Unobserved native Top-5 is unavailable; aggregate scores are not predictions."
+      ],
+      "num_classes": 2,
+      "expected_images": 1473,
+      "native_script": {
+        "script": "inference/run_model.py",
+        "script_sha256": "282f58d6e0b36f5c4dc62cc6105101f87d65c778bc125a35eb8d0b452acffefc",
+        "loop_lineno": 250,
+        "labels": "batch_labels",
+        "prediction": "batch_predictions",
+        "ranking": null,
+        "classes": "logits.shape[-1]",
+        "loader_kind": "torch",
+        "label_position": 1,
+        "framework": "torch",
+        "original_script_sha256": "de70ff2757495f4bc6614203583b87e6b12569b31737b3201cdef07e8aafe52c",
+        "original_loop_lineno": 240,
+        "source_original_path": "code/emotion-class-model-fer2013-test.py"
+      },
+      "output_relative_path": "result/run_001/full/m139",
+      "supports_max_samples": false,
+      "runtime_defaults": {
+        "batch_size": 64,
+        "workers": 0,
+        "warmup": 3
+      },
+      "capabilities": {
+        "gpu_only": false,
+        "worker_processes": true,
+        "limited_samples": false,
+        "device": [
+          "auto",
+          "cuda",
+          "cuda:N",
+          "cpu"
+        ]
+      },
+      "required_inputs": {
+        "weights": [
+          "config.json",
+          "preprocessor_config.json",
+          "pytorch_model.bin"
+        ],
+        "dataset_paths": [
+          "fer2013"
+        ]
+      }
+    }
+  ]
+}

@@ -825,13 +825,31 @@ def prepare_yoloe_dataset(dataset: dict[str, Any], dataset_root: Path, cache_roo
     selected = lines if max_images == 0 else lines[:max_images]
     with zipfile.ZipFile(dataset_root / dataset["labels_zip"]) as labels, zipfile.ZipFile(dataset_root / dataset["coco_images_zip"]) as images:
         label_names = set(labels.namelist())
+        confirmed_empty = None
         for rel in selected:
             rel = Path(rel)
             image_path = lvis_root / rel
             label_path = lvis_root / str(rel).replace('images/', 'labels/').replace('.jpg', '.txt')
             member = 'lvis/' + str(label_path.relative_to(lvis_root))
-            if member not in label_names:raise FileNotFoundError(member)
-            for path, archive, key in [(image_path,images,'val2017/'+rel.name),(label_path,labels,member)]:
+            files = [(image_path, images, 'val2017/'+rel.name)]
+            if member in label_names:
+                files.append((label_path, labels, member))
+            else:
+                # The segment archive omits images with no annotated instances.
+                # Confirm against the original LVIS split before emitting an empty label.
+                if confirmed_empty is None:
+                    with zipfile.ZipFile(dataset_root / dataset['lvis_annotation_zip']) as ground_truth:
+                        annotation = json.loads(ground_truth.read('lvis_v1_val.json'))
+                    confirmed_empty = {im['id'] for im in annotation['images']} - {a['image_id'] for a in annotation['annotations']}
+                    del annotation
+                if int(rel.stem) not in confirmed_empty:
+                    raise FileNotFoundError(f"Missing label without verified empty ground truth: {member}")
+                if label_path.exists() and label_path.read_bytes().strip():
+                    raise ValueError(f"Cached label contradicts LVIS ground truth: {label_path}")
+                if not label_path.exists():
+                    label_path.parent.mkdir(parents=True, exist_ok=True)
+                    label_path.write_bytes(b'')
+            for path, archive, key in files:
                 if not path.is_file():
                     path.parent.mkdir(parents=True,exist_ok=True);path.write_bytes(archive.read(key))
     selected_file = lvis_root / ('minival.txt' if not max_images else f'minival.smoke_{max_images}.txt')
@@ -965,8 +983,9 @@ def run_yoloe_official(
     atomic_json(predictions_path.with_suffix('.mt.json'), mapped)
     with zipfile.ZipFile(dataset_root / dataset['lvis_annotation_zip']) as archive:
         annotation = json.loads(archive.read('lvis_v1_val.json'))
-    annotation['images'] = [x for x in annotation['images'] if x['id'] in set(actual_ids)]
-    annotation['annotations'] = [x for x in annotation['annotations'] if x['image_id'] in set(actual_ids)]
+    selected_id_set = set(actual_ids)
+    annotation['images'] = [x for x in annotation['images'] if x['id'] in selected_id_set]
+    annotation['annotations'] = [x for x in annotation['annotations'] if x['image_id'] in selected_id_set]
     atomic_json(predictions_path.parent / 'annotations.coco.json', annotation)
     completed = len(actual_ids)
     result: dict[str, Any] = {

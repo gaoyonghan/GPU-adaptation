@@ -1,0 +1,10 @@
+{
+  "source": "caichengrui/models/timm--davit_base.msft_in1k/weights",
+  "delivery_path": "weights/timm/davit_base.msft_in1k",
+  "method": "directory relocation",
+  "files": [
+    "README.md",
+    "config.json",
+    "model.safetensors"
+  ]
+}

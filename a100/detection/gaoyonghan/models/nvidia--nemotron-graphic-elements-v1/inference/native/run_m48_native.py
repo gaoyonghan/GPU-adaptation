@@ -20,7 +20,7 @@ from pycocotools.cocoeval import COCOeval
 from supplemental_20260905.model48.run import CARD_AP, CARD_AR, DATA, MODEL, sha, write
 
 HERE = Path(__file__).resolve().parent
-OUT = Path('/mnt/aoss/model inference for GPU adaptation/detection/gaoyonghan/models/nvidia--nemotron-graphic-elements-v1/result/a100_two_step_smoke_20261117/m048')
+OUT = Path('/mnt/aoss/model inference for GPU adaptation/detection/gaoyonghan/models/nvidia--nemotron-graphic-elements-v1/result/full_20261121_092030_2cb937/m048')
 REV = '4a76546bb1bb4cbab3401361c91cf01706321805'
 
 

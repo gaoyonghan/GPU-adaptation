@@ -1,0 +1,4 @@
+{
+  "dataset_root": "../../../../dataset",
+  "weights_root": "weights/facebook/convnext-base-224-22k-1k"
+}

@@ -1,0 +1,29 @@
+{
+  "sequence": 145,
+  "source_contributor": "caichengrui",
+  "state": "a100_gpu_forward_verified",
+  "native_entries": [
+    "run_model.py"
+  ],
+  "native_sha256": "4c2fd5330d0b5cea87197936bc9760e5a48a55510b61286fcf6baae17840426f",
+  "resource_paths": [
+    "project/timing_runtime"
+  ],
+  "path_templates": 1,
+  "environment": "/opt/model-envs/e07",
+  "new_project_full_inference_executed": false,
+  "a100_validation": {
+    "model": "m145",
+    "directory": "ozair23--mobilenet_v2_1.0_224-finetuned-plantdisease",
+    "preflight": "passed",
+    "weights": 4,
+    "native_sha256": "4c2fd5330d0b5cea87197936bc9760e5a48a55510b61286fcf6baae17840426f",
+    "used_local_dataset_cache": false,
+    "gpu_forward": "passed",
+    "gpu": "NVIDIA A100-SXM4-40GB",
+    "predictions": 1,
+    "seconds": 10.2,
+    "log": "result/ccr_alignment_20261120/m145-gpu.log",
+    "data_source": "default shared dataset"
+  }
+}

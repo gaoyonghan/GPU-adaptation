@@ -648,12 +648,14 @@ def run_one(spec, data, args):
             "versions": package_versions(),
         }
         atomic_json(status_path, status)
-        print(f"[{spec['key']}] {spec['fidelity']}，加载 {model_path}", flush=True)
-        processor, model = load_model(spec, model_path, dtype, args.device)
-        owl_queries = None
-        if spec["runner"] == "scenic_owl_lvis":
-            print(f"[{spec['key']}] 预计算 Scenic 七模板 × {len(dataset.categories)} 类文本嵌入", flush=True)
-            owl_queries = prepare_owl_queries(processor, model, dataset.categories, args.device)
+        processor = model = owl_queries = None
+        if pending:
+            print(f"[{spec['key']}] {spec['fidelity']}，加载 {model_path}", flush=True)
+            processor, model = load_model(spec, model_path, dtype, args.device)
+            owl_queries = None
+            if spec["runner"] == "scenic_owl_lvis":
+                print(f"[{spec['key']}] 预计算 Scenic 七模板 × {len(dataset.categories)} 类文本嵌入", flush=True)
+                owl_queries = prepare_owl_queries(processor, model, dataset.categories, args.device)
         if args.device.startswith("cuda"):
             torch.cuda.reset_peak_memory_stats()
 
@@ -697,7 +699,10 @@ def run_one(spec, data, args):
         prediction_count, image_count, duplicates = flatten_predictions(jsonl_path, prediction_path)
         partial = bool(args.max_images and args.max_images < len(dataset.images))
         metrics = None
-        if not partial:
+        if not partial and (processed != len(selected_ids) or image_count != len(selected_ids) or duplicates):
+            raise ValueError("Full prediction journal does not cover the selected images exactly once")
+        # Project inference publishes predictions; evaluate.py calculates COCO AP.
+        if not partial and os.environ.get("BENCH_UNIFIED_SCORING") != "1":
             metrics = evaluate(dataset, prediction_path)
             metrics.update({
                 "model_key": spec["key"],

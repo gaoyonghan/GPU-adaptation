@@ -1,0 +1,29 @@
+{
+  "sequence": 132,
+  "source_contributor": "caichengrui",
+  "state": "a100_gpu_forward_verified",
+  "native_entries": [
+    "run_model.py"
+  ],
+  "native_sha256": "90bdee4c46587a9610ee64e5591442e304132fda3ae9add56c94d183841644e3",
+  "resource_paths": [
+    "project/timing_runtime"
+  ],
+  "path_templates": 1,
+  "environment": "/opt/model-envs/e07",
+  "new_project_full_inference_executed": false,
+  "a100_validation": {
+    "model": "m132",
+    "directory": "nvidia--mit-b3",
+    "preflight": "passed",
+    "weights": 4,
+    "native_sha256": "90bdee4c46587a9610ee64e5591442e304132fda3ae9add56c94d183841644e3",
+    "used_local_dataset_cache": false,
+    "gpu_forward": "passed",
+    "gpu": "NVIDIA A100-SXM4-40GB",
+    "predictions": 1,
+    "seconds": 13.7,
+    "log": "result/ccr_alignment_20261120/m132-gpu.log",
+    "data_source": "default shared dataset"
+  }
+}

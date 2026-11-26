@@ -1,0 +1,11 @@
+{
+  "source": "caichengrui/models/microsoft--swinv2-base-patch4-window8-256/weights",
+  "delivery_path": "weights/microsoft/swinv2-base-patch4-window8-256",
+  "method": "directory relocation",
+  "files": [
+    "README.md",
+    "config.json",
+    "preprocessor_config.json",
+    "pytorch_model.bin"
+  ]
+}

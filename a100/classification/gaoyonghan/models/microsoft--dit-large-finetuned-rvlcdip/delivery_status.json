@@ -1,0 +1,29 @@
+{
+  "sequence": 104,
+  "source_contributor": "caichengrui",
+  "state": "a100_gpu_forward_verified",
+  "native_entries": [
+    "run_model.py"
+  ],
+  "native_sha256": "29928ea7d70af0c7148b5b639173bc9938f43b04d09436b9c344ac1b8f610a78",
+  "resource_paths": [
+    "project/timing_runtime"
+  ],
+  "path_templates": 1,
+  "environment": "/opt/model-envs/e07",
+  "new_project_full_inference_executed": false,
+  "a100_validation": {
+    "model": "m104",
+    "directory": "microsoft--dit-large-finetuned-rvlcdip",
+    "preflight": "passed",
+    "weights": 3,
+    "native_sha256": "29928ea7d70af0c7148b5b639173bc9938f43b04d09436b9c344ac1b8f610a78",
+    "used_local_dataset_cache": false,
+    "gpu_forward": "passed",
+    "gpu": "NVIDIA A100-SXM4-40GB",
+    "predictions": 1,
+    "seconds": 33.5,
+    "log": "result/ccr_alignment_20261120/m104-gpu.log",
+    "data_source": "default shared dataset"
+  }
+}

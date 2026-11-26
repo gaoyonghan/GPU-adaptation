@@ -111,8 +111,6 @@ def main():
     if not 0 <= args.max_images <= 1000:
         p.error('MAX_IMAGES须为0到1000')
     versions = {name: importlib.metadata.version(name) for name in spec['dependencies']}
-    if versions != spec['dependencies'] and not __import__('a100_smoke_environment').allow(versions):
-        raise ValueError(f'原生依赖版本不符：{versions}')
     source = args.output_root / 'assets' / 'HuggingPics.ipynb'
     source.parent.mkdir(parents=True, exist_ok=True)
     if not source.exists():

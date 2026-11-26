@@ -1,0 +1,33 @@
+{
+  "sequence": 114,
+  "source_contributor": "caichengrui",
+  "state": "a100_gpu_forward_verified",
+  "native_entries": [
+    "run_model.py"
+  ],
+  "native_sha256": "4d512be4be25a452c8489fe4633f7ec376663e3d2e25228022a015b335c99a43",
+  "resource_paths": [
+    "project/timing_runtime"
+  ],
+  "path_templates": 1,
+  "environment": "/opt/model-envs/e07",
+  "new_project_full_inference_executed": false,
+  "original_native_sha256": "36894315dcee43c18b0e0f68af534097c16fe6f0e4f967c901088cd68087fa97",
+  "native_changes": [
+    "Use the configured local Hugging Face datasets cache for Parquet loading."
+  ],
+  "a100_validation": {
+    "model": "m114",
+    "directory": "wesleyacheng--dog-breeds-multiclass-image-classification-with-vit",
+    "preflight": "passed",
+    "weights": 4,
+    "native_sha256": "4d512be4be25a452c8489fe4633f7ec376663e3d2e25228022a015b335c99a43",
+    "used_local_dataset_cache": true,
+    "gpu_forward": "passed",
+    "gpu": "NVIDIA A100-SXM4-40GB",
+    "predictions": 1,
+    "seconds": 21.6,
+    "log": "result/ccr_alignment_20261120_cache_retry/m114-gpu.log",
+    "data_source": "default shared dataset"
+  }
+}

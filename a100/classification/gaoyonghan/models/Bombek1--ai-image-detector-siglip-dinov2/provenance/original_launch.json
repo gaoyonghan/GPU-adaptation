@@ -1,0 +1,50 @@
+{
+  "sequence": 151,
+  "model_id": "Bombek1/ai-image-detector-siglip-dinov2",
+  "task": "classification",
+  "single_model_sample": true,
+  "commands": [
+    {
+      "arguments": [
+        "__PYTHON__",
+        "-B",
+        "__MODEL_ROOT__/inference/run_model.py",
+        "--phase",
+        "__PHASE__",
+        "--output-root",
+        "__OUTPUT_ROOT__"
+      ],
+      "environment": {}
+    }
+  ],
+  "state": "full_test_passed_rtx4090",
+  "accepts_max_images": false,
+  "accepts_smoke_flag": false,
+  "smoke_commands": [],
+  "capabilities": {
+    "gpu_only": false,
+    "worker_processes": true,
+    "limited_samples": false,
+    "device": [
+      "auto",
+      "cuda",
+      "cuda:N",
+      "cpu"
+    ]
+  },
+  "runtime_defaults": {
+    "batch_size": 256,
+    "workers": 4,
+    "warmup": 3
+  },
+  "validation_state": "full_inference_and_example_public_evaluator_passed_rtx4090",
+  "accepts_preflight": true,
+  "latest_full_test": {
+    "run_dir": "result/run_001",
+    "state": "completed",
+    "hardware": "NVIDIA GeForce RTX 4090",
+    "physical_gpu_index": "1",
+    "samples": 152598,
+    "scoring_branches": 1
+  }
+}

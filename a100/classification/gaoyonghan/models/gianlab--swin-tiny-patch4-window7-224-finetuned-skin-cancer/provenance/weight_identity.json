@@ -1,0 +1,11 @@
+{
+  "source": "caichengrui/models/gianlab--swin-tiny-patch4-window7-224-finetuned-skin-cancer/weights",
+  "delivery_path": "weights/gianlab/swin-tiny-patch4-window7-224-finetuned-skin-cancer",
+  "method": "directory relocation",
+  "files": [
+    "README.md",
+    "config.json",
+    "preprocessor_config.json",
+    "pytorch_model.bin"
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "sources": {},
+  "models": [
+    {
+      "sequence": 142,
+      "model_id": "RickyIG/emotion_face_image_classification_v3",
+      "runner_family": "native_script",
+      "adapter": "native_labels",
+      "state": "recording_enabled",
+      "dataset": {
+        "id": "FER+",
+        "split": null,
+        "note": "FER+ PrivateTest\n多数票标签筛选\n3,153 / 3,589 张"
+      },
+      "qualification": "native_registered_scope",
+      "limitations": [
+        "Capture-ready is a code integration state, not a claim that inference has passed.",
+        "Unobserved native Top-5 is unavailable; aggregate scores are not predictions."
+      ],
+      "num_classes": 8,
+      "expected_images": 3153,
+      "native_script": {
+        "script": "inference/native/run_model.py",
+        "script_sha256": "068ad0b4e001eb4eecfa8e6cbf92b36342275af8215871fe56804d0615bd4ab6",
+        "loop_lineno": 316,
+        "labels": "batch_labels",
+        "prediction": "batch_predictions",
+        "ranking": "batch_top3",
+        "classes": "logits.shape[-1]",
+        "loader_kind": "torch",
+        "label_position": 1,
+        "framework": "torch",
+        "original_script_sha256": "0a2d34b19d52ec9aea188289a2fe6e3b85dd5149baa0952202d2229744cfcee7",
+        "original_loop_lineno": 308,
+        "source_original_path": "code/emotion-face-image-classification-v3-ferplus-test.py"
+      },
+      "output_relative_path": "result/run_001/full/m142",
+      "supports_max_samples": false,
+      "runtime_defaults": {
+        "batch_size": 64,
+        "workers": 0,
+        "warmup": 3
+      },
+      "capabilities": {
+        "gpu_only": false,
+        "worker_processes": true,
+        "limited_samples": false,
+        "device": [
+          "auto",
+          "cuda",
+          "cuda:N",
+          "cpu"
+        ]
+      },
+      "required_inputs": {
+        "weights": [
+          "config.json",
+          "preprocessor_config.json",
+          "pytorch_model.bin"
+        ],
+        "dataset_paths": [
+          "FERPlus",
+          "fer2013"
+        ]
+      }
+    }
+  ]
+}

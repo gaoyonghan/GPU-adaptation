@@ -1,0 +1,11 @@
+{
+  "source": "caichengrui/models/akahana--vit-base-cats-vs-dogs/weights",
+  "delivery_path": "weights/akahana/vit-base-cats-vs-dogs",
+  "method": "directory relocation",
+  "files": [
+    "README.md",
+    "config.json",
+    "model.safetensors",
+    "preprocessor_config.json"
+  ]
+}

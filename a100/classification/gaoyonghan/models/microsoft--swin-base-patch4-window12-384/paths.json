@@ -1,0 +1,4 @@
+{
+  "dataset_root": "../../../../dataset",
+  "weights_root": "weights/microsoft/swin-base-patch4-window12-384"
+}

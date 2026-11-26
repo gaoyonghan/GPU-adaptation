@@ -1,0 +1,29 @@
+{
+  "sequence": 144,
+  "source_contributor": "caichengrui",
+  "state": "a100_gpu_forward_verified",
+  "native_entries": [
+    "run_model.py"
+  ],
+  "native_sha256": "68d093fbd234e1d9b01fec9460946ba3258a549298713e73785ce8ef3adf60ee",
+  "resource_paths": [
+    "project/timing_runtime"
+  ],
+  "path_templates": 1,
+  "environment": "/opt/model-envs/e07",
+  "new_project_full_inference_executed": false,
+  "a100_validation": {
+    "model": "m144",
+    "directory": "angusleung100--bad-anatomy-realism-classifier",
+    "preflight": "passed",
+    "weights": 3,
+    "native_sha256": "68d093fbd234e1d9b01fec9460946ba3258a549298713e73785ce8ef3adf60ee",
+    "used_local_dataset_cache": false,
+    "gpu_forward": "passed",
+    "gpu": "NVIDIA A100-SXM4-40GB",
+    "predictions": 1,
+    "seconds": 14.6,
+    "log": "result/ccr_alignment_20261120/m144-gpu.log",
+    "data_source": "default shared dataset"
+  }
+}

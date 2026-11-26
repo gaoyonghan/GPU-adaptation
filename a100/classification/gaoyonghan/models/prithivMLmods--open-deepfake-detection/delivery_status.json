@@ -1,0 +1,29 @@
+{
+  "sequence": 148,
+  "source_contributor": "caichengrui",
+  "state": "a100_gpu_forward_verified",
+  "native_entries": [
+    "run_model.py"
+  ],
+  "native_sha256": "f14de4c3f891d593380d0ce154af06e0a6584ed8e2210acd1392cba093b4979a",
+  "resource_paths": [
+    "project/timing_runtime"
+  ],
+  "path_templates": 1,
+  "environment": "/opt/model-envs/e07",
+  "new_project_full_inference_executed": false,
+  "a100_validation": {
+    "model": "m148",
+    "directory": "prithivMLmods--open-deepfake-detection",
+    "preflight": "passed",
+    "weights": 4,
+    "native_sha256": "f14de4c3f891d593380d0ce154af06e0a6584ed8e2210acd1392cba093b4979a",
+    "used_local_dataset_cache": false,
+    "gpu_forward": "passed",
+    "gpu": "NVIDIA A100-SXM4-40GB",
+    "predictions": 1,
+    "seconds": 10.4,
+    "log": "result/ccr_alignment_20261120_subset/m148-gpu.log",
+    "data_source": "local subset copied from the shared AIGCDetectionBenchmark test set"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "sequence": 146,
+  "source_contributor": "caichengrui",
+  "state": "a100_gpu_forward_verified",
+  "native_entries": [
+    "run_model.py"
+  ],
+  "native_sha256": "332f29fd0ed6722c7aa4c8c7b51fda2e5a7d69ff07ceb601b4b7facc91089b18",
+  "resource_paths": [
+    "project/timing_runtime"
+  ],
+  "path_templates": 1,
+  "environment": "/opt/model-envs/e07",
+  "new_project_full_inference_executed": false,
+  "a100_validation": {
+    "model": "m146",
+    "directory": "histai--SPIDER-colorectal-model",
+    "preflight": "passed",
+    "weights": 6,
+    "native_sha256": "332f29fd0ed6722c7aa4c8c7b51fda2e5a7d69ff07ceb601b4b7facc91089b18",
+    "used_local_dataset_cache": false,
+    "gpu_forward": "passed",
+    "gpu": "NVIDIA A100-SXM4-40GB",
+    "predictions": 1,
+    "seconds": 21.6,
+    "log": "result/ccr_alignment_20261120/m146-gpu.log",
+    "data_source": "default shared dataset"
+  }
+}

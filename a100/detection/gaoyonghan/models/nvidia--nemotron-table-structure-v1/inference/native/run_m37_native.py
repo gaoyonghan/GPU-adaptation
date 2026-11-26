@@ -19,7 +19,7 @@ from run_model import core, digest, file_hash, metrics
 HERE = Path(__file__).resolve().parent
 MODEL = Path('/mnt/aoss/model inference for GPU adaptation/detection/gaoyonghan/models/nvidia--nemotron-table-structure-v1/weights/nvidia/nemotron-table-structure-v1')
 DATA = Path('/mnt/aoss/model inference for GPU adaptation/dataset/prepared/pubtables_structure_1000')
-OUT = Path('/mnt/aoss/model inference for GPU adaptation/detection/gaoyonghan/models/nvidia--nemotron-table-structure-v1/result/a100_two_step_smoke_v2_20261117/m037')
+OUT = Path('/mnt/aoss/model inference for GPU adaptation/detection/gaoyonghan/models/nvidia--nemotron-table-structure-v1/result/full_20261121_092030_2cb937/m037')
 WEIGHT = MODEL / 'nemotron_table_structure_v1/weights.pth'
 
 

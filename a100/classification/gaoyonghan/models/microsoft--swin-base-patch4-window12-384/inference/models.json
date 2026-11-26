@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "sources": {},
+  "models": [
+    {
+      "sequence": 130,
+      "model_id": "microsoft/swin-base-patch4-window12-384",
+      "runner_family": "native_script",
+      "adapter": "native_labels",
+      "state": "recording_enabled",
+      "dataset": {
+        "id": "ImageNet-1K val",
+        "split": null,
+        "note": "ImageNet-1K val\n50,000 张"
+      },
+      "qualification": "native_registered_scope",
+      "limitations": [
+        "Capture-ready is a code integration state, not a claim that inference has passed.",
+        "Unobserved native Top-5 is unavailable; aggregate scores are not predictions."
+      ],
+      "num_classes": 1000,
+      "expected_images": 50000,
+      "native_script": {
+        "script": "inference/native/run_model.py",
+        "script_sha256": "1a8ed7b5ba08a8097b5bc5bc605c61c27f8e62334af4aa1233f77696f798a2e4",
+        "loop_lineno": 256,
+        "labels": "labels",
+        "prediction": "top5_indices[:, 0]",
+        "ranking": "top5_indices",
+        "classes": "logits.shape[-1]",
+        "loader_kind": "torch",
+        "label_position": 1,
+        "framework": "torch",
+        "original_script_sha256": "672f2cffea2d4f5ce8cce26f002f7f8436829a05b783d75fd38c9b7471d41fc0",
+        "original_loop_lineno": 246,
+        "source_original_path": "code/swin-base-patch4-window12-384.py"
+      },
+      "output_relative_path": "result/run_001/full/m130",
+      "supports_max_samples": false,
+      "runtime_defaults": {
+        "batch_size": 64,
+        "workers": 8,
+        "warmup": 10
+      },
+      "capabilities": {
+        "gpu_only": false,
+        "worker_processes": true,
+        "limited_samples": false,
+        "device": [
+          "auto",
+          "cuda",
+          "cuda:N",
+          "cpu"
+        ]
+      },
+      "required_inputs": {
+        "weights": [
+          "config.json",
+          "preprocessor_config.json",
+          "README.md",
+          "pytorch_model.bin"
+        ],
+        "dataset_paths": [
+          "ImageNet-1K"
+        ]
+      }
+    }
+  ]
+}

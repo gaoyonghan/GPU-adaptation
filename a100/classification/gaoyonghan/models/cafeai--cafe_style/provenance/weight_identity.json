@@ -1,0 +1,11 @@
+{
+  "source": "caichengrui/models/cafeai--cafe_style/weights",
+  "delivery_path": "weights/cafeai/cafe_style",
+  "method": "directory relocation",
+  "files": [
+    "README.md",
+    "config.json",
+    "preprocessor_config.json",
+    "pytorch_model.bin"
+  ]
+}

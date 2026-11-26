@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "sources": {},
+  "models": [
+    {
+      "sequence": 107,
+      "model_id": "skyau/dog-breed-classifier-vit",
+      "runner_family": "native_script",
+      "adapter": "native_labels",
+      "state": "recording_enabled",
+      "dataset": {
+        "id": "Stanford Dogs",
+        "split": "test",
+        "note": "Stanford Dogs test\n8,580 张"
+      },
+      "qualification": "native_registered_scope",
+      "limitations": [
+        "Capture-ready is a code integration state, not a claim that inference has passed.",
+        "Unobserved native Top-5 is unavailable; aggregate scores are not predictions."
+      ],
+      "num_classes": 120,
+      "expected_images": 8580,
+      "native_script": {
+        "script": "inference/native/run_model.py",
+        "script_sha256": "f484db0fe8a7b64a83290e38195ad07737d7aa3bc678d229f5365681d8c1cd5b",
+        "loop_lineno": 195,
+        "labels": "labels",
+        "prediction": "top5[:, 0]",
+        "ranking": "top5",
+        "classes": "logits.shape[-1]",
+        "loader_kind": "torch",
+        "label_position": 1,
+        "framework": "torch",
+        "original_script_sha256": "3a09183fdc45991123f5dff295df0a1cd89f49cc8c55846ec028e9209bc7f3a3",
+        "original_loop_lineno": 183,
+        "source_original_path": "code/dog-breed-classifier-vit.py"
+      },
+      "output_relative_path": "result/run_001/full/m107",
+      "supports_max_samples": false,
+      "runtime_defaults": {
+        "batch_size": 128,
+        "workers": 4,
+        "warmup": 10
+      },
+      "capabilities": {
+        "gpu_only": false,
+        "worker_processes": true,
+        "limited_samples": false,
+        "device": [
+          "auto",
+          "cuda",
+          "cuda:N",
+          "cpu"
+        ]
+      },
+      "required_inputs": {
+        "weights": [
+          "config.json",
+          "preprocessor_config.json",
+          "pytorch_model.bin"
+        ],
+        "dataset_paths": [
+          "stanford-dogs"
+        ]
+      }
+    }
+  ]
+}

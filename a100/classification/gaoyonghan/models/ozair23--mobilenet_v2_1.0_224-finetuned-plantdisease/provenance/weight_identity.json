@@ -1,0 +1,11 @@
+{
+  "source": "caichengrui/models/ozair23--mobilenet_v2_1.0_224-finetuned-plantdisease/weights",
+  "delivery_path": "weights/ozair23/mobilenet_v2_1.0_224-finetuned-plantdisease",
+  "method": "directory relocation",
+  "files": [
+    "README.md",
+    "config.json",
+    "model.safetensors",
+    "preprocessor_config.json"
+  ]
+}

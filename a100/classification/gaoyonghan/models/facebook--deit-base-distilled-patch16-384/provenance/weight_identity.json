@@ -1,0 +1,11 @@
+{
+  "source": "caichengrui/models/facebook--deit-base-distilled-patch16-384/weights",
+  "delivery_path": "weights/facebook/deit-base-distilled-patch16-384",
+  "method": "directory relocation",
+  "files": [
+    "README.md",
+    "config.json",
+    "model.safetensors",
+    "preprocessor_config.json"
+  ]
+}

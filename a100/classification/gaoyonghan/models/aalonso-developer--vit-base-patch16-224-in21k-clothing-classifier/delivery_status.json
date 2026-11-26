@@ -1,0 +1,31 @@
+{
+  "sequence": 112,
+  "source_contributor": "caichengrui",
+  "state": "a100_gpu_forward_verified",
+  "native_entries": [
+    "run_model.py"
+  ],
+  "native_sha256": "07db90e1c853d25e654c618ef16a3d9c524758216d8d41940bf94b658916aef0",
+  "resource_paths": [
+    "project/timing_runtime"
+  ],
+  "path_templates": 1,
+  "environment": "/opt/model-envs/e07",
+  "new_project_full_inference_executed": false,
+  "a100_validation": {
+    "model": "m112",
+    "directory": "aalonso-developer--vit-base-patch16-224-in21k-clothing-classifier",
+    "preflight": "passed",
+    "weights": 4,
+    "native_sha256": "07db90e1c853d25e654c618ef16a3d9c524758216d8d41940bf94b658916aef0",
+    "used_local_dataset_cache": false,
+    "gpu_forward": "passed",
+    "gpu": "NVIDIA A100-SXM4-40GB",
+    "predictions": 1,
+    "seconds": 82.4,
+    "log": "result/ccr_alignment_20261120/m112-gpu.log",
+    "data_source": "default shared dataset",
+    "smoke_inference_and_evaluation": "passed",
+    "run_dir": "models/aalonso-developer--vit-base-patch16-224-in21k-clothing-classifier/result/ccr_alignment_20261120_e2e_verified"
+  }
+}

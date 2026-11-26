@@ -17,7 +17,7 @@ import zipfile
 
 SOURCE = Path('/mnt/aoss/model inference for GPU adaptation/dataset/COCO2017')
 WEIGHT = Path('/mnt/aoss/model inference for GPU adaptation/detection/gaoyonghan/models/ultralyticsplus--yolov8s/weights/Ultralytics/YOLO11/yolo11n.pt')
-OUT = Path('/mnt/aoss/model inference for GPU adaptation/detection/gaoyonghan/models/ultralyticsplus--yolov8s/result/a100_coco_v3_20261117/m021/shared_preparation')
+OUT = Path('/mnt/aoss/model inference for GPU adaptation/detection/gaoyonghan/models/ultralyticsplus--yolov8s/result/full_20261121_092030_2cb937/m021/shared_preparation')
 
 
 def prepared_root(name):

@@ -1,0 +1,48 @@
+{
+  "sequence": 146,
+  "model_id": "histai/SPIDER-colorectal-model",
+  "task": "classification",
+  "single_model_sample": true,
+  "commands": [
+    {
+      "arguments": [
+        "__PYTHON__",
+        "-B",
+        "__MODEL_ROOT__/inference/run_model.py",
+        "--phase",
+        "__PHASE__",
+        "--output-root",
+        "__OUTPUT_ROOT__"
+      ],
+      "environment": {}
+    }
+  ],
+  "state": "full_test_passed_rtx4090",
+  "accepts_max_images": true,
+  "accepts_smoke_flag": false,
+  "smoke_commands": [],
+  "capabilities": {
+    "gpu_only": true,
+    "worker_processes": false,
+    "limited_samples": true,
+    "device": [
+      "auto",
+      "cuda",
+      "cuda:N"
+    ]
+  },
+  "runtime_defaults": {
+    "batch_size": 2,
+    "warmup": 3
+  },
+  "validation_state": "full_inference_and_example_public_evaluator_passed_rtx4090",
+  "accepts_preflight": true,
+  "latest_full_test": {
+    "run_dir": "result/run_001",
+    "state": "completed",
+    "hardware": "NVIDIA GeForce RTX 4090",
+    "physical_gpu_index": "0",
+    "samples": 13193,
+    "scoring_branches": 1
+  }
+}

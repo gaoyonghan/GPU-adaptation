@@ -1,0 +1,10 @@
+{
+  "source": "caichengrui/models/facebook--convnextv2-base-22k-224/weights",
+  "delivery_path": "weights/facebook/convnextv2-base-22k-224",
+  "method": "directory relocation",
+  "files": [
+    "config.json",
+    "model.safetensors",
+    "preprocessor_config.json"
+  ]
+}

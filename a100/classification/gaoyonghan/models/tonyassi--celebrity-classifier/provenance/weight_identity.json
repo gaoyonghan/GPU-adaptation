@@ -1,0 +1,11 @@
+{
+  "source": "caichengrui/models/tonyassi--celebrity-classifier/weights",
+  "delivery_path": "weights/tonyassi/celebrity-classifier",
+  "method": "directory relocation",
+  "files": [
+    "README.md",
+    "config.json",
+    "model.safetensors",
+    "preprocessor_config.json"
+  ]
+}

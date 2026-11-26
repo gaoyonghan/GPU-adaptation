@@ -20,7 +20,7 @@ SOURCE_ROOT = Path('/mnt/aoss/model inference for GPU adaptation/detection/gaoyo
 SOURCE = SOURCE_ROOT / 'WildDet3D'
 DATA = Path('/mnt/aoss/model inference for GPU adaptation/dataset/wilddet3d_val')
 WEIGHT = Path('/mnt/aoss/model inference for GPU adaptation/detection/gaoyonghan/models/allenai--WildDet3D/weights/allenai/WildDet3D/wilddet3d_alldata_all_prompt_v1.0.pt')
-OUT = Path('/mnt/aoss/model inference for GPU adaptation/detection/gaoyonghan/models/allenai--WildDet3D/result/a100_four_smoke_v4_20261117/m027')
+OUT = Path('/mnt/aoss/model inference for GPU adaptation/detection/gaoyonghan/models/allenai--WildDet3D/result/full_20261121_092030_2cb937/m027')
 
 
 def write(path, value):

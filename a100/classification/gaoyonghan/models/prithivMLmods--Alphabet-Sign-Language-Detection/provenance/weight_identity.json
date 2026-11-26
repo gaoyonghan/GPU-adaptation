@@ -1,0 +1,11 @@
+{
+  "source": "caichengrui/models/prithivMLmods--Alphabet-Sign-Language-Detection/weights",
+  "delivery_path": "weights/prithivMLmods/Alphabet-Sign-Language-Detection",
+  "method": "directory relocation",
+  "files": [
+    "README.md",
+    "config.json",
+    "model.safetensors",
+    "preprocessor_config.json"
+  ]
+}

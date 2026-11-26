@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "sources": {},
+  "models": [
+    {
+      "sequence": 135,
+      "model_id": "gianlab/swin-tiny-patch4-window7-224-finetuned-skin-cancer",
+      "runner_family": "native_script",
+      "adapter": "native_labels",
+      "state": "recording_enabled",
+      "dataset": {
+        "id": "HAM10000",
+        "split": null,
+        "note": "HAM10000\ntrain 分层抽取 20%，seed=42\n2,003 张，非官方 test"
+      },
+      "qualification": "native_registered_scope",
+      "limitations": [
+        "Capture-ready is a code integration state, not a claim that inference has passed.",
+        "Unobserved native Top-5 is unavailable; aggregate scores are not predictions."
+      ],
+      "num_classes": 7,
+      "expected_images": 2003,
+      "native_script": {
+        "script": "inference/run_model.py",
+        "script_sha256": "0cab53db3989385e1908099f54037caed490796a48d317316239e668d2f9ec1a",
+        "loop_lineno": 283,
+        "labels": "batch_labels",
+        "prediction": "batch_predictions",
+        "ranking": "batch_top5",
+        "classes": "logits.shape[-1]",
+        "loader_kind": "torch",
+        "label_position": 1,
+        "framework": "torch",
+        "original_script_sha256": "e2248034c807aa6c7c3c7b9280677aa32f5f3c085f4918809975023450002c53",
+        "original_loop_lineno": 275,
+        "source_original_path": "code/swin-tiny-patch4-window7-224-finetuned-skin-cancer-ham10000-test.py"
+      },
+      "output_relative_path": "result/run_001/full/m135",
+      "supports_max_samples": false,
+      "runtime_defaults": {
+        "batch_size": 64,
+        "workers": 0,
+        "warmup": 3
+      },
+      "capabilities": {
+        "gpu_only": false,
+        "worker_processes": true,
+        "limited_samples": false,
+        "device": [
+          "auto",
+          "cuda",
+          "cuda:N",
+          "cpu"
+        ]
+      },
+      "required_inputs": {
+        "weights": [
+          "config.json",
+          "preprocessor_config.json",
+          "README.md",
+          "pytorch_model.bin"
+        ],
+        "dataset_paths": [
+          "HAM10000"
+        ]
+      }
+    }
+  ]
+}

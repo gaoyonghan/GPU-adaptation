@@ -248,6 +248,13 @@ def hf_run(spec, rows, args, out):
 
 
 def native_timm(spec, rows, args, out):
+    # Only the input view is temporary; predictions and metrics stay in out.
+    import tempfile
+    with tempfile.TemporaryDirectory(prefix='csatv2-images-', dir='/tmp') as staging:
+        return _native_timm(spec, rows, args, out, Path(staging))
+
+
+def _native_timm(spec, rows, args, out, folder):
     import torch
     import timm
     assert Path(timm.__file__).resolve().is_relative_to(Path(sys.prefix).resolve()), 'timm must be installed in the selected environment'
@@ -257,7 +264,6 @@ def native_timm(spec, rows, args, out):
     native=importlib.util.module_from_spec(module_spec);module_spec.loader.exec_module(native)
     native.utils.setup_default_logging()
     # A class-map preserves original output indices even for a 10-image smoke subset.
-    folder=out/'native_images'
     for row in rows:
         image=folder/row['synset']/Path(row['path']).name
         image.parent.mkdir(parents=True,exist_ok=True)

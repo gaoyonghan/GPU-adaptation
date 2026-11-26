@@ -1,0 +1,4 @@
+{
+  "dataset_root": "../../../../dataset",
+  "weights_root": "weights/facebook/deit-base-distilled-patch16-384"
+}

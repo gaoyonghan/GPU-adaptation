@@ -1,0 +1,4 @@
+{
+  "dataset_root": "../../../../dataset",
+  "weights_root": "weights/wesleyacheng/dog-breeds-multiclass-image-classification-with-vit"
+}

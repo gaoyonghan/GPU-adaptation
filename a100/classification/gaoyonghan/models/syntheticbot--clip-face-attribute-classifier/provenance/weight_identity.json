@@ -1,0 +1,11 @@
+{
+  "source": "caichengrui/models/syntheticbot--clip-face-attribute-classifier/weights",
+  "delivery_path": "weights/syntheticbot/clip-face-attribute-classifier",
+  "method": "directory relocation",
+  "files": [
+    "README.md",
+    "config.json",
+    "model.safetensors",
+    "preprocessor_config.json"
+  ]
+}

@@ -20,7 +20,7 @@ from PIL import Image, ImageFile
 HERE = Path(__file__).resolve().parent
 DATA = Path('/mnt/aoss/model inference for GPU adaptation/dataset/prepared/sku110k_test')
 WEIGHT = Path('/mnt/aoss/model inference for GPU adaptation/detection/gaoyonghan/models/foduucom--product-detection-in-shelf-yolov8/weights/foduucom/product-detection-in-shelf-yolov8/best.pt')
-OUT = Path('/mnt/aoss/model inference for GPU adaptation/detection/gaoyonghan/models/foduucom--product-detection-in-shelf-yolov8/result/a100_clean_environment_20261117/m054')
+OUT = Path('/mnt/aoss/model inference for GPU adaptation/detection/gaoyonghan/models/foduucom--product-detection-in-shelf-yolov8/result/full_20261121_092030_2cb937/m054')
 REV = '9303b450077244fb8c7729717b67c2da6c807819'
 URL = f'https://raw.githubusercontent.com/retailvisionworkshop/retailvisionworkshop.github.io/{REV}/_data/densely_packed_eval_2020-02-06.zip'
 ZIP_SHA = '2db06f173154650e8a182ad9a905a7e3b7b8e21fd9c829f2367d946fa77a603f'

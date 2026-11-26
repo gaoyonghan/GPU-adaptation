@@ -1,0 +1,33 @@
+{
+  "sequence": 117,
+  "source_contributor": "caichengrui",
+  "state": "a100_gpu_forward_verified",
+  "native_entries": [
+    "run_model.py"
+  ],
+  "native_sha256": "847b2277e99f08344c14eb66afc2b53e4d8cea409e6cb827fbd3a2e1e7192df6",
+  "resource_paths": [
+    "project/timing_runtime"
+  ],
+  "path_templates": 1,
+  "environment": "/opt/model-envs/e07",
+  "new_project_full_inference_executed": false,
+  "original_native_sha256": "5e8918f46f893a63e83bf6e95608e907486ceadb61843384fd4f67867cb1423e",
+  "native_changes": [
+    "Use the configured local Hugging Face datasets cache for Parquet loading."
+  ],
+  "a100_validation": {
+    "model": "m117",
+    "directory": "tonyassi--celebrity-classifier",
+    "preflight": "passed",
+    "weights": 4,
+    "native_sha256": "847b2277e99f08344c14eb66afc2b53e4d8cea409e6cb827fbd3a2e1e7192df6",
+    "used_local_dataset_cache": true,
+    "gpu_forward": "passed",
+    "gpu": "NVIDIA A100-SXM4-40GB",
+    "predictions": 1,
+    "seconds": 17.9,
+    "log": "result/ccr_alignment_20261120_cache_retry/m117-gpu.log",
+    "data_source": "default shared dataset"
+  }
+}

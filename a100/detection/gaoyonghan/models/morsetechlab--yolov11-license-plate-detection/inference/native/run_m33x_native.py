@@ -23,7 +23,7 @@ import tempfile
 from run_m07_native import sha, write
 
 HERE = Path(__file__).resolve().parent
-OUT = Path('/mnt/aoss/model inference for GPU adaptation/detection/gaoyonghan/models/morsetechlab--yolov11-license-plate-detection/result/a100_delivery_verification_20261117/m033')
+OUT = Path('/mnt/aoss/model inference for GPU adaptation/detection/gaoyonghan/models/morsetechlab--yolov11-license-plate-detection/result/full_20261121_092030_2cb937/m033')
 DATA = Path('/mnt/aoss/model inference for GPU adaptation/dataset/roboflow_licenseplates_v11_test/test')
 WEIGHT = Path('/mnt/aoss/model inference for GPU adaptation/detection/gaoyonghan/models/morsetechlab--yolov11-license-plate-detection/weights/morsetechlab/yolov11-license-plate-detection/license-plate-finetune-v1x.pt')
 WEIGHT_SHA = 'bf87430a3b2d0d0511a153a58eb73e97da6212861d258016cbad65a105068a14'

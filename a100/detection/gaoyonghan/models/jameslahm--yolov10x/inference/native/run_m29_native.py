@@ -17,7 +17,7 @@ HERE = Path(__file__).resolve().parent
 SOURCE = Path('/mnt/aoss/model inference for GPU adaptation/detection/gaoyonghan/models/jameslahm--yolov10x/resources/runtime/assets/workspace/official_sources/object_detection/yolov10')
 REVISION = '453c6e38a51e9d1d5a2aa5fb7f1014a711913397'
 MODEL = Path('/mnt/aoss/model inference for GPU adaptation/detection/gaoyonghan/models/jameslahm--yolov10x/weights/jameslahm/yolov10x')
-OUT = Path('/mnt/aoss/model inference for GPU adaptation/detection/gaoyonghan/models/jameslahm--yolov10x/result/a100_delivery_framework_20261117/m029')
+OUT = Path('/mnt/aoss/model inference for GPU adaptation/detection/gaoyonghan/models/jameslahm--yolov10x/result/full_20261121_092030_2cb937/m029')
 REFERENCE = 'https://github.com/THU-MIG/yolov10#validation'
 
 

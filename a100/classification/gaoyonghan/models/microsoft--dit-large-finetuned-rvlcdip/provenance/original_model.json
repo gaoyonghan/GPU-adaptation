@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "sources": {},
+  "models": [
+    {
+      "sequence": 104,
+      "model_id": "microsoft/dit-large-finetuned-rvlcdip",
+      "runner_family": "native_script",
+      "adapter": "native_labels",
+      "state": "recording_enabled",
+      "dataset": {
+        "id": "RVL-CDIP",
+        "split": "test",
+        "note": "RVL-CDIP test\n39,999 张，跳过 1 张损坏图"
+      },
+      "qualification": "native_registered_scope",
+      "limitations": [
+        "Capture-ready is a code integration state, not a claim that inference has passed.",
+        "Unobserved native Top-5 is unavailable; aggregate scores are not predictions."
+      ],
+      "num_classes": 16,
+      "expected_images": 39999,
+      "native_script": {
+        "script": "inference/run_model.py",
+        "script_sha256": "29928ea7d70af0c7148b5b639173bc9938f43b04d09436b9c344ac1b8f610a78",
+        "loop_lineno": 230,
+        "labels": "labels",
+        "prediction": "predictions",
+        "ranking": null,
+        "classes": "logits.shape[-1]",
+        "loader_kind": "torch",
+        "label_position": 1,
+        "framework": "torch",
+        "original_script_sha256": "d8081a7b30d1dedf6253f2c54875a9bb86d632cd27ab4a6ba0c24ecbee2e56a8",
+        "original_loop_lineno": 220,
+        "source_original_path": "code/dit-large-finetuned-rvlcdip.py"
+      },
+      "output_relative_path": "result/run_001/full/m104",
+      "supports_max_samples": false,
+      "runtime_defaults": {
+        "batch_size": 64,
+        "workers": 8,
+        "warmup": 10
+      },
+      "capabilities": {
+        "gpu_only": false,
+        "worker_processes": true,
+        "limited_samples": false,
+        "device": [
+          "auto",
+          "cuda",
+          "cuda:N",
+          "cpu"
+        ]
+      },
+      "required_inputs": {
+        "weights": [
+          "config.json",
+          "preprocessor_config.json",
+          "pytorch_model.bin"
+        ],
+        "dataset_paths": [
+          "RVL-CDIP"
+        ]
+      }
+    }
+  ]
+}
