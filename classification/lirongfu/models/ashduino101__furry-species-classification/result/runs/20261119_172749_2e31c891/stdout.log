@@ -1,0 +1,162 @@
+/opt/venvs/classification-eval/lib/python3.10/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+2026-11-19 17:28:08.417152: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2026-11-19 17:28:08.417202: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2026-11-19 17:28:08.521037: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+/opt/venvs/classification-eval/lib/python3.10/site-packages/transformers/models/vit/feature_extraction_vit.py:30: FutureWarning: The class ViTFeatureExtractor is deprecated and will be removed in version 5 of Transformers. Please use ViTImageProcessor instead.
+  warnings.warn(
+ashduino101__furry-species-classification:   0%|          | 0/1417 [00:00<?, ?image/s]ashduino101__furry-species-classification:   5%|▍         | 64/1417 [00:14<05:08,  4.38image/s]ashduino101__furry-species-classification:   9%|▉         | 128/1417 [00:19<03:03,  7.01image/s]ashduino101__furry-species-classification:  14%|█▎        | 192/1417 [00:22<01:55, 10.63image/s]ashduino101__furry-species-classification:  18%|█▊        | 256/1417 [00:26<01:35, 12.19image/s]ashduino101__furry-species-classification:  23%|██▎       | 320/1417 [00:30<01:22, 13.22image/s]ashduino101__furry-species-classification:  27%|██▋       | 384/1417 [00:34<01:13, 14.07image/s]ashduino101__furry-species-classification:  32%|███▏      | 448/1417 [00:43<01:31, 10.53image/s]ashduino101__furry-species-classification:  36%|███▌      | 512/1417 [00:46<01:12, 12.49image/s]ashduino101__furry-species-classification:  41%|████      | 576/1417 [00:54<01:17, 10.81image/s]ashduino101__furry-species-classification:  45%|████▌     | 640/1417 [00:57<01:02, 12.35image/s]ashduino101__furry-species-classification:  50%|████▉     | 704/1417 [01:02<00:55, 12.86image/s]ashduino101__furry-species-classification:  54%|█████▍    | 768/1417 [01:05<00:45, 14.33image/s]ashduino101__furry-species-classification:  59%|█████▊    | 832/1417 [01:10<00:40, 14.34image/s]ashduino101__furry-species-classification:  63%|██████▎   | 896/1417 [01:12<00:32, 16.13image/s]ashduino101__furry-species-classification:  68%|██████▊   | 960/1417 [01:17<00:30, 14.99image/s]ashduino101__furry-species-classification:  72%|███████▏  | 1024/1417 [01:23<00:29, 13.49image/s]ashduino101__furry-species-classification:  77%|███████▋  | 1088/1417 [01:28<00:23, 13.77image/s]ashduino101__furry-species-classification:  81%|████████▏ | 1152/1417 [01:37<00:24, 10.70image/s]ashduino101__furry-species-classification:  81%|████████▏ | 1152/1417 [01:50<00:24, 10.70image/s]ashduino101__furry-species-classification:  86%|████████▌ | 1216/1417 [01:52<00:27,  7.39image/s]ashduino101__furry-species-classification:  90%|█████████ | 1280/1417 [02:03<00:20,  6.67image/s]ashduino101__furry-species-classification:  95%|█████████▍| 1344/1417 [02:11<00:10,  7.18image/s]ashduino101__furry-species-classification:  99%|█████████▉| 1408/1417 [02:15<00:01,  8.49image/s]ashduino101__furry-species-classification: 100%|██████████| 1417/1417 [02:18<00:00,  7.86image/s]ashduino101__furry-species-classification: 100%|██████████| 1417/1417 [02:18<00:00, 10.25image/s]
+Forward timing saved: /data/lirongfu/image-classification/classification/lirongfu/models/ashduino101__furry-species-classification/result/inference_time.json [ashduino101__furry-species-classification]
+{
+  "schema": "model-eval/metrics/v1",
+  "task": "image_classification",
+  "protocol": "model-eval/score-classification/v1",
+  "model": "ashduino101__furry-species-classification",
+  "dataset": [
+    "animal15"
+  ],
+  "metric_unit": "fraction",
+  "metrics": {
+    "accuracy": 0.589273112208892,
+    "top1_accuracy": 0.589273112208892,
+    "top5_accuracy": 0.8045165843330981,
+    "balanced_accuracy": 0.5876615459402896,
+    "macro_precision_over_evaluated_target_classes": 0.8023700799671584,
+    "macro_recall_over_evaluated_target_classes": 0.5876615459402896,
+    "macro_f1_over_evaluated_target_classes": 0.6392481431795315,
+    "weighted_f1": 0.6414200226438069
+  },
+  "metric_status": {
+    "top5_accuracy": "computed"
+  },
+  "per_class": [
+    {
+      "category_id": 8,
+      "support": 127,
+      "precision": 0.8292682926829268,
+      "recall": 0.8031496062992126,
+      "f1": 0.816
+    },
+    {
+      "category_id": 11,
+      "support": 129,
+      "precision": 1.0,
+      "recall": 0.627906976744186,
+      "f1": 0.7714285714285715
+    },
+    {
+      "category_id": 18,
+      "support": 123,
+      "precision": 0.6178343949044586,
+      "recall": 0.7886178861788617,
+      "f1": 0.6928571428571428
+    },
+    {
+      "category_id": 26,
+      "support": 129,
+      "precision": 1.0,
+      "recall": 0.4108527131782946,
+      "f1": 0.5824175824175825
+    },
+    {
+      "category_id": 32,
+      "support": 130,
+      "precision": 0.6666666666666666,
+      "recall": 0.6,
+      "f1": 0.631578947368421
+    },
+    {
+      "category_id": 41,
+      "support": 126,
+      "precision": 0.8615384615384616,
+      "recall": 0.4444444444444444,
+      "f1": 0.5863874345549738
+    },
+    {
+      "category_id": 44,
+      "support": 131,
+      "precision": 0.603448275862069,
+      "recall": 0.8015267175572519,
+      "f1": 0.6885245901639344
+    },
+    {
+      "category_id": 56,
+      "support": 125,
+      "precision": 0.4,
+      "recall": 0.016,
+      "f1": 0.03076923076923077
+    },
+    {
+      "category_id": 67,
+      "support": 137,
+      "precision": 0.8879310344827587,
+      "recall": 0.7518248175182481,
+      "f1": 0.8142292490118577
+    },
+    {
+      "category_id": 74,
+      "support": 129,
+      "precision": 0.9831932773109243,
+      "recall": 0.9069767441860465,
+      "f1": 0.9435483870967742
+    },
+    {
+      "category_id": 85,
+      "support": 131,
+      "precision": 0.9761904761904762,
+      "recall": 0.31297709923664124,
+      "f1": 0.47398843930635837
+    }
+  ],
+  "scope": {
+    "images": 1417,
+    "completed_images": 1417,
+    "categories": 86
+  },
+  "evaluation": {
+    "task": "single_label_classification",
+    "top_k": [
+      1,
+      5
+    ],
+    "top5_when_classes_below_five": "not_applicable",
+    "top5_when_ranking_missing": "unavailable",
+    "ranking": "preserve_native_order_no_new_tie_break",
+    "macro_labels": "observed_ground_truth_classes",
+    "zero_division": 0,
+    "unit": "fraction",
+    "sample_weight": "uniform"
+  },
+  "qualification": {
+    "kind": "original_configured_dataset",
+    "data_kind": "hf_disk",
+    "pred_label_map": {},
+    "ignore_pred_label": null,
+    "excluded_samples": 0,
+    "image_layout": "shared images with ImageNet-style image/label manifests"
+  },
+  "native_execution": [
+    "existing native top1 retained; available native class rankings exported"
+  ],
+  "limitations": [
+    "Top-5 is unavailable when native output provides only a final label."
+  ],
+  "evaluator": {
+    "name": "scikit-learn.metrics",
+    "version": "1.7.1",
+    "functions": [
+      "accuracy_score",
+      "precision_recall_fscore_support"
+    ],
+    "top5": "accuracy_score of GT membership in native ordered top5",
+    "source_sha256": "1f7be1029f426e7fbb26e4c6a334be3301a83a511c7757c72a63f4a2ad19d946",
+    "reference": "https://scikit-learn.org/stable/modules/model_evaluation.html"
+  },
+  "input_sha256": {
+    "annotations.json": "e9dd44cdaba2bf064a82b899cf6fdcd896d52ca4e58d77b8fdbe4d9351d77512",
+    "predictions.json": "8c6e2d7b369cf96efafe5592edf9fad2764b1c95fb103019f5fbb9e082cfa7c3"
+  },
+  "protocol_sha256": "f6abcecfe0383fe8b7e822db61198a021af22543de2cdf75c813ecd99527086b",
+  "inference_executed": false
+}

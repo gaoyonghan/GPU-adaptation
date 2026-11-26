@@ -1,0 +1,1 @@
+{"model":"onnx-community__age-gender-prediction-ONNX","dataset":"utkface","bundle":"../../../../../dataset/utkface_onnx-community__age-gender-prediction-ONNX_imagenet/runs/20261120_032037_81964365","schema":"model-eval/score-classification/v1","complete":true}

@@ -1,0 +1,29 @@
+{
+  "state": "passed",
+  "model": "asyafalni__arabichar-v3",
+  "command": [
+    "python",
+    "classification/lirongfu/models/asyafalni__arabichar-v3/inference.py",
+    "--device",
+    "cuda",
+    "--batch-size",
+    "64"
+  ],
+  "environment": {
+    "name": "classification-eval",
+    "python_version": "3.10.12"
+  },
+  "input_scope": {
+    "selection": "configured dataset",
+    "max_images": 0,
+    "image": null,
+    "inference_images": 3360,
+    "evaluated_images": 3360
+  },
+  "output_directory": "classification/lirongfu/models/asyafalni__arabichar-v3/result/runs/20261119_173850_c44d63b2",
+  "dataset_root": "dataset",
+  "weights": "classification/lirongfu/models/asyafalni__arabichar-v3/weights/best_model.pth",
+  "log": "stdout.log",
+  "exit_code": 0,
+  "evaluation_bundle": "dataset/ahcd_asyafalni__arabichar-v3_imagenet/runs/20261119_173850_c44d63b2"
+}

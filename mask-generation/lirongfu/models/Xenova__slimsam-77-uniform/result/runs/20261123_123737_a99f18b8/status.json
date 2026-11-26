@@ -1,0 +1,26 @@
+{
+  "state": "running",
+  "model": "Xenova__slimsam-77-uniform",
+  "started_at": "2026-11-23T12:37:37.658940+00:00",
+  "command": [
+    "python",
+    "mask-generation/lirongfu/models/Xenova__slimsam-77-uniform/inference.py",
+    "--device",
+    "cuda"
+  ],
+  "environment": {
+    "name": "mask-eval",
+    "python_version": "3.10.12"
+  },
+  "input_scope": {
+    "dataset": "SA-1B-val",
+    "sample_limit": 0
+  },
+  "batch_policy": "project_prompt_batch",
+  "requested_batch_override": null,
+  "configured_prompt_batch_size": 24,
+  "dataset_root": "dataset",
+  "weights": "mask-generation/lirongfu/models/Xenova__slimsam-77-uniform/weights/best_model.pth",
+  "output_directory": "mask-generation/lirongfu/models/Xenova__slimsam-77-uniform/result/runs/20261123_123737_a99f18b8",
+  "log": "stdout.log"
+}

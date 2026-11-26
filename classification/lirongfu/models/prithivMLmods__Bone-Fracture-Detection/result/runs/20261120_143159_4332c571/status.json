@@ -1,0 +1,29 @@
+{
+  "state": "passed",
+  "model": "prithivMLmods__Bone-Fracture-Detection",
+  "command": [
+    "python",
+    "classification/lirongfu/models/prithivMLmods__Bone-Fracture-Detection/inference.py",
+    "--device",
+    "cuda",
+    "--batch-size",
+    "64"
+  ],
+  "environment": {
+    "name": "classification-eval",
+    "python_version": "3.10.12"
+  },
+  "input_scope": {
+    "selection": "configured dataset",
+    "max_images": 0,
+    "image": null,
+    "inference_images": 8863,
+    "evaluated_images": 8863
+  },
+  "output_directory": "classification/lirongfu/models/prithivMLmods__Bone-Fracture-Detection/result/runs/20261120_143159_4332c571",
+  "dataset_root": "dataset",
+  "weights": "classification/lirongfu/models/prithivMLmods__Bone-Fracture-Detection/weights/best_model.pth",
+  "log": "stdout.log",
+  "exit_code": 0,
+  "evaluation_bundle": "dataset/bone_fracture_prithivMLmods__Bone-Fracture-Detection_imagenet/runs/20261120_143159_4332c571"
+}

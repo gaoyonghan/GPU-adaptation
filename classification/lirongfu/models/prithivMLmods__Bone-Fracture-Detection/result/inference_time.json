@@ -1,0 +1,7 @@
+{
+  "prithivMLmods__Bone-Fracture-Detection": {
+    "total_latency_s": 23.701184533536434,
+    "sample_count": 8863,
+    "avg_latency_ms": 2.674171785347674
+  }
+}

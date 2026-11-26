@@ -1,0 +1,7 @@
+{
+  "boluobobo__ItsNotAI-ai-detector-v2": {
+    "total_latency_s": 1336.2487106118351,
+    "sample_count": 19996,
+    "avg_latency_ms": 66.8258006907299
+  }
+}

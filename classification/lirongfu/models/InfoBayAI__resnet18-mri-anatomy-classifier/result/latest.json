@@ -1,0 +1,1 @@
+{"model":"InfoBayAI__resnet18-mri-anatomy-classifier","dataset":"infobay_mri","bundle":"../../../../../dataset/infobay_mri_InfoBayAI__resnet18-mri-anatomy-classifier_imagenet/runs/20261119_172243_4e1a800d","schema":"model-eval/score-classification/v1","complete":true}

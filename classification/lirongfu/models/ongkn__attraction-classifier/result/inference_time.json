@@ -1,0 +1,7 @@
+{
+  "ongkn__attraction-classifier": {
+    "total_latency_s": 5.799742078408599,
+    "sample_count": 2200,
+    "avg_latency_ms": 2.636246399276636
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "state": "passed",
+  "model": "timm__vit_mediumd_patch16_reg4_gap_384.sbb2_e200_in12k_ft_in1k",
+  "command": [
+    "python",
+    "classification/lirongfu/models/timm__vit_mediumd_patch16_reg4_gap_384.sbb2_e200_in12k_ft_in1k/inference.py",
+    "--device",
+    "cuda",
+    "--batch-size",
+    "64"
+  ],
+  "environment": {
+    "name": "classification-eval",
+    "python_version": "3.10.12"
+  },
+  "input_scope": {
+    "selection": "configured dataset",
+    "max_images": 0,
+    "image": null,
+    "inference_images": 50000,
+    "evaluated_images": 50000
+  },
+  "output_directory": "classification/lirongfu/models/timm__vit_mediumd_patch16_reg4_gap_384.sbb2_e200_in12k_ft_in1k/result/runs/20261122_161754_4559b31b",
+  "dataset_root": "dataset",
+  "weights": "classification/lirongfu/models/timm__vit_mediumd_patch16_reg4_gap_384.sbb2_e200_in12k_ft_in1k/weights/best_model.pth",
+  "log": "stdout.log",
+  "exit_code": 0,
+  "evaluation_bundle": "dataset/imagenet_1k_val_timm__vit_mediumd_patch16_reg4_gap_384.sbb2_e200_in12k_ft_in1k_imagenet/runs/20261122_161754_4559b31b"
+}

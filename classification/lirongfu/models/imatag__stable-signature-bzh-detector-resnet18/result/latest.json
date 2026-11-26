@@ -1,0 +1,1 @@
+{"model":"imatag__stable-signature-bzh-detector-resnet18","dataset":"cifake","bundle":"../../../../../dataset/cifake_imatag__stable-signature-bzh-detector-resnet18_imagenet/runs/20261120_003715_7f64e619","schema":"model-eval/score-classification/v1","complete":true}

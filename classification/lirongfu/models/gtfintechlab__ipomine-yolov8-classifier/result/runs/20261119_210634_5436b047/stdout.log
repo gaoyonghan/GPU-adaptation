@@ -1,0 +1,115 @@
+Creating new Ultralytics Settings v0.0.6 file ✅ 
+View Ultralytics Settings with 'yolo settings' or at '/tmp/classification-runtime-ffi4m2_x/_runtime_cache/ultralytics/Ultralytics/settings.json'
+Update Settings with 'yolo settings key=value', i.e. 'yolo settings runs_dir=path/to/dir'. For help see https://docs.ultralytics.com/quickstart/#ultralytics-settings.
+gtfintechlab__ipomine-yolov8-classifier:   0%|          | 0/5000 [00:00<?, ?image/s]gtfintechlab__ipomine-yolov8-classifier:   1%|▏         | 64/5000 [00:51<1:05:38,  1.25image/s]gtfintechlab__ipomine-yolov8-classifier:   3%|▎         | 128/5000 [01:24<51:23,  1.58image/s] gtfintechlab__ipomine-yolov8-classifier:   4%|▍         | 192/5000 [02:01<48:40,  1.65image/s]gtfintechlab__ipomine-yolov8-classifier:   5%|▌         | 256/5000 [02:35<45:44,  1.73image/s]gtfintechlab__ipomine-yolov8-classifier:   6%|▋         | 320/5000 [03:13<45:27,  1.72image/s]gtfintechlab__ipomine-yolov8-classifier:   8%|▊         | 384/5000 [03:32<37:29,  2.05image/s]gtfintechlab__ipomine-yolov8-classifier:   9%|▉         | 448/5000 [04:03<36:46,  2.06image/s]gtfintechlab__ipomine-yolov8-classifier:  10%|█         | 512/5000 [04:39<38:13,  1.96image/s]gtfintechlab__ipomine-yolov8-classifier:  12%|█▏        | 576/5000 [05:17<39:28,  1.87image/s]gtfintechlab__ipomine-yolov8-classifier:  13%|█▎        | 640/5000 [05:43<36:13,  2.01image/s]gtfintechlab__ipomine-yolov8-classifier:  14%|█▍        | 704/5000 [06:20<37:26,  1.91image/s]gtfintechlab__ipomine-yolov8-classifier:  15%|█▌        | 768/5000 [06:47<34:29,  2.05image/s]gtfintechlab__ipomine-yolov8-classifier:  17%|█▋        | 832/5000 [07:12<31:58,  2.17image/s]gtfintechlab__ipomine-yolov8-classifier:  18%|█▊        | 896/5000 [07:37<30:14,  2.26image/s]gtfintechlab__ipomine-yolov8-classifier:  19%|█▉        | 960/5000 [08:16<33:04,  2.04image/s]gtfintechlab__ipomine-yolov8-classifier:  20%|██        | 1024/5000 [08:55<34:51,  1.90image/s]gtfintechlab__ipomine-yolov8-classifier:  22%|██▏       | 1088/5000 [09:33<35:34,  1.83image/s]gtfintechlab__ipomine-yolov8-classifier:  23%|██▎       | 1152/5000 [09:41<27:00,  2.37image/s]gtfintechlab__ipomine-yolov8-classifier:  24%|██▍       | 1216/5000 [10:11<27:25,  2.30image/s]gtfintechlab__ipomine-yolov8-classifier:  26%|██▌       | 1280/5000 [10:22<22:08,  2.80image/s]gtfintechlab__ipomine-yolov8-classifier:  27%|██▋       | 1344/5000 [10:48<22:32,  2.70image/s]gtfintechlab__ipomine-yolov8-classifier:  28%|██▊       | 1408/5000 [11:23<25:25,  2.35image/s]gtfintechlab__ipomine-yolov8-classifier:  29%|██▉       | 1472/5000 [11:56<26:32,  2.22image/s]gtfintechlab__ipomine-yolov8-classifier:  31%|███       | 1536/5000 [12:23<25:24,  2.27image/s]gtfintechlab__ipomine-yolov8-classifier:  32%|███▏      | 1600/5000 [12:52<25:13,  2.25image/s]gtfintechlab__ipomine-yolov8-classifier:  33%|███▎      | 1664/5000 [13:16<23:44,  2.34image/s]gtfintechlab__ipomine-yolov8-classifier:  35%|███▍      | 1728/5000 [13:19<16:52,  3.23image/s]gtfintechlab__ipomine-yolov8-classifier:  36%|███▌      | 1792/5000 [13:21<12:06,  4.42image/s]gtfintechlab__ipomine-yolov8-classifier:  37%|███▋      | 1856/5000 [13:23<08:53,  5.89image/s]gtfintechlab__ipomine-yolov8-classifier:  38%|███▊      | 1920/5000 [13:25<06:38,  7.73image/s]gtfintechlab__ipomine-yolov8-classifier:  40%|███▉      | 1984/5000 [13:28<05:05,  9.86image/s]gtfintechlab__ipomine-yolov8-classifier:  41%|████      | 2048/5000 [13:40<06:12,  7.93image/s]gtfintechlab__ipomine-yolov8-classifier:  42%|████▏     | 2112/5000 [13:58<08:24,  5.72image/s]gtfintechlab__ipomine-yolov8-classifier:  44%|████▎     | 2176/5000 [14:25<11:36,  4.05image/s]gtfintechlab__ipomine-yolov8-classifier:  45%|████▍     | 2240/5000 [14:44<12:13,  3.77image/s]gtfintechlab__ipomine-yolov8-classifier:  46%|████▌     | 2304/5000 [14:48<09:05,  4.95image/s]gtfintechlab__ipomine-yolov8-classifier:  47%|████▋     | 2368/5000 [14:51<06:56,  6.31image/s]gtfintechlab__ipomine-yolov8-classifier:  49%|████▊     | 2432/5000 [14:58<06:00,  7.13image/s]gtfintechlab__ipomine-yolov8-classifier:  49%|████▊     | 2432/5000 [15:10<06:00,  7.13image/s]gtfintechlab__ipomine-yolov8-classifier:  50%|████▉     | 2496/5000 [15:15<07:29,  5.58image/s]gtfintechlab__ipomine-yolov8-classifier:  51%|█████     | 2560/5000 [15:27<07:20,  5.54image/s]gtfintechlab__ipomine-yolov8-classifier:  52%|█████▏    | 2624/5000 [15:33<06:10,  6.41image/s]gtfintechlab__ipomine-yolov8-classifier:  54%|█████▍    | 2688/5000 [15:36<04:45,  8.11image/s]gtfintechlab__ipomine-yolov8-classifier:  54%|█████▍    | 2688/5000 [15:50<04:45,  8.11image/s]gtfintechlab__ipomine-yolov8-classifier:  55%|█████▌    | 2752/5000 [16:04<08:10,  4.58image/s]gtfintechlab__ipomine-yolov8-classifier:  56%|█████▋    | 2816/5000 [16:42<12:02,  3.02image/s]gtfintechlab__ipomine-yolov8-classifier:  58%|█████▊    | 2880/5000 [16:58<10:44,  3.29image/s]gtfintechlab__ipomine-yolov8-classifier:  59%|█████▉    | 2944/5000 [17:09<09:03,  3.78image/s]gtfintechlab__ipomine-yolov8-classifier:  60%|██████    | 3008/5000 [17:47<12:09,  2.73image/s]gtfintechlab__ipomine-yolov8-classifier:  61%|██████▏   | 3072/5000 [18:20<13:13,  2.43image/s]gtfintechlab__ipomine-yolov8-classifier:  63%|██████▎   | 3136/5000 [18:29<10:12,  3.04image/s]gtfintechlab__ipomine-yolov8-classifier:  63%|██████▎   | 3136/5000 [18:40<10:12,  3.04image/s]gtfintechlab__ipomine-yolov8-classifier:  64%|██████▍   | 3200/5000 [18:56<10:37,  2.82image/s]gtfintechlab__ipomine-yolov8-classifier:  65%|██████▌   | 3264/5000 [19:11<09:14,  3.13image/s]gtfintechlab__ipomine-yolov8-classifier:  67%|██████▋   | 3328/5000 [19:37<09:35,  2.91image/s]gtfintechlab__ipomine-yolov8-classifier:  68%|██████▊   | 3392/5000 [19:53<08:29,  3.16image/s]gtfintechlab__ipomine-yolov8-classifier:  69%|██████▉   | 3456/5000 [20:14<08:15,  3.12image/s]gtfintechlab__ipomine-yolov8-classifier:  70%|███████   | 3520/5000 [20:28<07:11,  3.43image/s]gtfintechlab__ipomine-yolov8-classifier:  72%|███████▏  | 3584/5000 [20:43<06:29,  3.64image/s]gtfintechlab__ipomine-yolov8-classifier:  73%|███████▎  | 3648/5000 [20:57<05:46,  3.90image/s]gtfintechlab__ipomine-yolov8-classifier:  74%|███████▍  | 3712/5000 [21:20<06:11,  3.46image/s]gtfintechlab__ipomine-yolov8-classifier:  76%|███████▌  | 3776/5000 [21:26<04:42,  4.33image/s]gtfintechlab__ipomine-yolov8-classifier:  77%|███████▋  | 3840/5000 [21:34<03:50,  5.03image/s]gtfintechlab__ipomine-yolov8-classifier:  77%|███████▋  | 3840/5000 [21:50<03:50,  5.03image/s]gtfintechlab__ipomine-yolov8-classifier:  78%|███████▊  | 3904/5000 [22:07<05:20,  3.42image/s]gtfintechlab__ipomine-yolov8-classifier:  79%|███████▉  | 3968/5000 [22:46<06:40,  2.57image/s]gtfintechlab__ipomine-yolov8-classifier:  81%|████████  | 4032/5000 [23:19<06:52,  2.35image/s]gtfintechlab__ipomine-yolov8-classifier:  82%|████████▏ | 4096/5000 [23:55<07:01,  2.15image/s]gtfintechlab__ipomine-yolov8-classifier:  83%|████████▎ | 4160/5000 [24:35<07:12,  1.94image/s]gtfintechlab__ipomine-yolov8-classifier:  84%|████████▍ | 4224/5000 [25:02<06:19,  2.05image/s]gtfintechlab__ipomine-yolov8-classifier:  86%|████████▌ | 4288/5000 [25:43<06:19,  1.88image/s]gtfintechlab__ipomine-yolov8-classifier:  87%|████████▋ | 4352/5000 [26:19<05:51,  1.84image/s]gtfintechlab__ipomine-yolov8-classifier:  88%|████████▊ | 4416/5000 [27:10<06:01,  1.61image/s]gtfintechlab__ipomine-yolov8-classifier:  90%|████████▉ | 4480/5000 [27:46<05:13,  1.66image/s]gtfintechlab__ipomine-yolov8-classifier:  91%|█████████ | 4544/5000 [28:17<04:18,  1.76image/s]gtfintechlab__ipomine-yolov8-classifier:  92%|█████████▏| 4608/5000 [29:04<04:00,  1.63image/s]gtfintechlab__ipomine-yolov8-classifier:  93%|█████████▎| 4672/5000 [29:45<03:24,  1.60image/s]gtfintechlab__ipomine-yolov8-classifier:  95%|█████████▍| 4736/5000 [30:19<02:37,  1.68image/s]gtfintechlab__ipomine-yolov8-classifier:  96%|█████████▌| 4800/5000 [30:57<01:58,  1.68image/s]gtfintechlab__ipomine-yolov8-classifier:  97%|█████████▋| 4864/5000 [31:25<01:14,  1.83image/s]gtfintechlab__ipomine-yolov8-classifier:  99%|█████████▊| 4928/5000 [32:11<00:43,  1.67image/s]gtfintechlab__ipomine-yolov8-classifier: 100%|█████████▉| 4992/5000 [32:48<00:04,  1.69image/s]gtfintechlab__ipomine-yolov8-classifier: 100%|██████████| 5000/5000 [32:49<00:00,  1.76image/s]gtfintechlab__ipomine-yolov8-classifier: 100%|██████████| 5000/5000 [32:49<00:00,  2.54image/s]
+Forward timing saved: /data/lirongfu/image-classification/classification/lirongfu/models/gtfintechlab__ipomine-yolov8-classifier/result/inference_time.json [gtfintechlab__ipomine-yolov8-classifier]
+{
+  "schema": "model-eval/metrics/v1",
+  "task": "image_classification",
+  "protocol": "model-eval/score-classification/v1",
+  "model": "gtfintechlab__ipomine-yolov8-classifier",
+  "dataset": [
+    "ipo_images_v2"
+  ],
+  "metric_unit": "fraction",
+  "metrics": {
+    "accuracy": 0.9278,
+    "top1_accuracy": 0.9278,
+    "top5_accuracy": 1.0,
+    "balanced_accuracy": 0.9476650037836487,
+    "macro_precision_over_evaluated_target_classes": 0.9056079631624929,
+    "macro_recall_over_evaluated_target_classes": 0.9476650037836487,
+    "macro_f1_over_evaluated_target_classes": 0.919060513937904,
+    "weighted_f1": 0.9251286495167462
+  },
+  "metric_status": {
+    "top5_accuracy": "computed"
+  },
+  "per_class": [
+    {
+      "category_id": 0,
+      "support": 659,
+      "precision": 0.9127423822714681,
+      "recall": 1.0,
+      "f1": 0.9543808834178131
+    },
+    {
+      "category_id": 1,
+      "support": 1125,
+      "precision": 0.8537699923838538,
+      "recall": 0.9964444444444445,
+      "f1": 0.9196062346185397
+    },
+    {
+      "category_id": 2,
+      "support": 1606,
+      "precision": 0.975669099756691,
+      "recall": 0.9987546699875467,
+      "f1": 0.9870769230769231
+    },
+    {
+      "category_id": 3,
+      "support": 228,
+      "precision": 0.7916666666666666,
+      "recall": 1.0,
+      "f1": 0.8837209302325582
+    },
+    {
+      "category_id": 4,
+      "support": 1382,
+      "precision": 0.9941916747337851,
+      "recall": 0.7431259044862518,
+      "f1": 0.8505175983436853
+    }
+  ],
+  "scope": {
+    "images": 5000,
+    "completed_images": 5000,
+    "categories": 5
+  },
+  "evaluation": {
+    "task": "single_label_classification",
+    "top_k": [
+      1,
+      5
+    ],
+    "top5_when_classes_below_five": "not_applicable",
+    "top5_when_ranking_missing": "unavailable",
+    "ranking": "preserve_native_order_no_new_tie_break",
+    "macro_labels": "observed_ground_truth_classes",
+    "zero_division": 0,
+    "unit": "fraction",
+    "sample_weight": "uniform"
+  },
+  "qualification": {
+    "kind": "original_configured_dataset",
+    "data_kind": "hf_disk",
+    "pred_label_map": {},
+    "ignore_pred_label": null,
+    "excluded_samples": 0,
+    "image_layout": "shared images with ImageNet-style image/label manifests"
+  },
+  "native_execution": [
+    "existing native top1 retained; available native class rankings exported"
+  ],
+  "limitations": [
+    "Top-5 is unavailable when native output provides only a final label."
+  ],
+  "evaluator": {
+    "name": "scikit-learn.metrics",
+    "version": "1.7.1",
+    "functions": [
+      "accuracy_score",
+      "precision_recall_fscore_support"
+    ],
+    "top5": "accuracy_score of GT membership in native ordered top5",
+    "source_sha256": "1f7be1029f426e7fbb26e4c6a334be3301a83a511c7757c72a63f4a2ad19d946",
+    "reference": "https://scikit-learn.org/stable/modules/model_evaluation.html"
+  },
+  "input_sha256": {
+    "annotations.json": "1b4669af708e8f0c3e35ba9359948b105b28ac14cda2b1101fb22d60cb868613",
+    "predictions.json": "fc4dd00b78f1d2f203f7219754493b24986515d098873f6c4fdcbb418510448a"
+  },
+  "protocol_sha256": "928baeb9fc0ad50de282731e4fdecf1677c87290da00093bbd7445855c088fa1",
+  "inference_executed": false
+}

@@ -1,0 +1,7 @@
+{
+  "timm__mobilenetv4_conv_aa_large.e230_r448_in12k_ft_in1k": {
+    "total_latency_s": 123.93856162205338,
+    "sample_count": 50000,
+    "avg_latency_ms": 2.478771232441068
+  }
+}

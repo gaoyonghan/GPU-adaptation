@@ -1,0 +1,104 @@
+/opt/venvs/classification-eval/lib/python3.10/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+2026-11-20 13:03:37.230215: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2026-11-20 13:03:37.230278: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2026-11-20 13:03:37.231274: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+prithivMLmods__Augmented-Waste-Classifier-SigLIP2:   0%|          | 0/3000 [00:00<?, ?image/s]prithivMLmods__Augmented-Waste-Classifier-SigLIP2:   2%|▏         | 64/3000 [01:19<1:00:28,  1.24s/image]prithivMLmods__Augmented-Waste-Classifier-SigLIP2:   4%|▍         | 128/3000 [02:22<52:17,  1.09s/image] prithivMLmods__Augmented-Waste-Classifier-SigLIP2:   6%|▋         | 192/3000 [03:31<50:57,  1.09s/image]prithivMLmods__Augmented-Waste-Classifier-SigLIP2:   9%|▊         | 256/3000 [04:41<49:38,  1.09s/image]prithivMLmods__Augmented-Waste-Classifier-SigLIP2:  11%|█         | 320/3000 [05:43<46:48,  1.05s/image]prithivMLmods__Augmented-Waste-Classifier-SigLIP2:  13%|█▎        | 384/3000 [06:49<45:15,  1.04s/image]prithivMLmods__Augmented-Waste-Classifier-SigLIP2:  15%|█▍        | 448/3000 [07:44<41:38,  1.02image/s]prithivMLmods__Augmented-Waste-Classifier-SigLIP2:  17%|█▋        | 512/3000 [08:46<40:28,  1.02image/s]prithivMLmods__Augmented-Waste-Classifier-SigLIP2:  19%|█▉        | 576/3000 [09:54<40:37,  1.01s/image]prithivMLmods__Augmented-Waste-Classifier-SigLIP2:  21%|██▏       | 640/3000 [11:01<39:59,  1.02s/image]prithivMLmods__Augmented-Waste-Classifier-SigLIP2:  23%|██▎       | 704/3000 [12:10<39:37,  1.04s/image]prithivMLmods__Augmented-Waste-Classifier-SigLIP2:  26%|██▌       | 768/3000 [13:12<37:50,  1.02s/image]prithivMLmods__Augmented-Waste-Classifier-SigLIP2:  28%|██▊       | 832/3000 [14:23<37:48,  1.05s/image]prithivMLmods__Augmented-Waste-Classifier-SigLIP2:  30%|██▉       | 896/3000 [15:33<37:11,  1.06s/image]prithivMLmods__Augmented-Waste-Classifier-SigLIP2:  32%|███▏      | 960/3000 [16:50<37:29,  1.10s/image]prithivMLmods__Augmented-Waste-Classifier-SigLIP2:  34%|███▍      | 1024/3000 [17:50<34:37,  1.05s/image]prithivMLmods__Augmented-Waste-Classifier-SigLIP2:  36%|███▋      | 1088/3000 [18:59<33:42,  1.06s/image]prithivMLmods__Augmented-Waste-Classifier-SigLIP2:  38%|███▊      | 1152/3000 [19:56<31:03,  1.01s/image]prithivMLmods__Augmented-Waste-Classifier-SigLIP2:  41%|████      | 1216/3000 [20:52<28:49,  1.03image/s]prithivMLmods__Augmented-Waste-Classifier-SigLIP2:  43%|████▎     | 1280/3000 [21:55<27:52,  1.03image/s]prithivMLmods__Augmented-Waste-Classifier-SigLIP2:  45%|████▍     | 1344/3000 [22:56<26:39,  1.04image/s]prithivMLmods__Augmented-Waste-Classifier-SigLIP2:  47%|████▋     | 1408/3000 [23:48<24:31,  1.08image/s]prithivMLmods__Augmented-Waste-Classifier-SigLIP2:  49%|████▉     | 1472/3000 [24:59<24:52,  1.02image/s]prithivMLmods__Augmented-Waste-Classifier-SigLIP2:  51%|█████     | 1536/3000 [26:05<24:18,  1.00image/s]prithivMLmods__Augmented-Waste-Classifier-SigLIP2:  53%|█████▎    | 1600/3000 [27:00<22:14,  1.05image/s]prithivMLmods__Augmented-Waste-Classifier-SigLIP2:  55%|█████▌    | 1664/3000 [27:48<19:53,  1.12image/s]prithivMLmods__Augmented-Waste-Classifier-SigLIP2:  58%|█████▊    | 1728/3000 [28:35<17:56,  1.18image/s]prithivMLmods__Augmented-Waste-Classifier-SigLIP2:  60%|█████▉    | 1792/3000 [29:34<17:29,  1.15image/s]prithivMLmods__Augmented-Waste-Classifier-SigLIP2:  62%|██████▏   | 1856/3000 [30:43<17:40,  1.08image/s]prithivMLmods__Augmented-Waste-Classifier-SigLIP2:  64%|██████▍   | 1920/3000 [31:41<16:37,  1.08image/s]prithivMLmods__Augmented-Waste-Classifier-SigLIP2:  66%|██████▌   | 1984/3000 [32:43<15:52,  1.07image/s]prithivMLmods__Augmented-Waste-Classifier-SigLIP2:  68%|██████▊   | 2048/3000 [33:52<15:30,  1.02image/s]prithivMLmods__Augmented-Waste-Classifier-SigLIP2:  70%|███████   | 2112/3000 [35:02<14:58,  1.01s/image]prithivMLmods__Augmented-Waste-Classifier-SigLIP2:  73%|███████▎  | 2176/3000 [36:11<14:12,  1.03s/image]prithivMLmods__Augmented-Waste-Classifier-SigLIP2:  75%|███████▍  | 2240/3000 [37:13<12:49,  1.01s/image]prithivMLmods__Augmented-Waste-Classifier-SigLIP2:  77%|███████▋  | 2304/3000 [38:21<11:56,  1.03s/image]prithivMLmods__Augmented-Waste-Classifier-SigLIP2:  79%|███████▉  | 2368/3000 [39:31<11:03,  1.05s/image]prithivMLmods__Augmented-Waste-Classifier-SigLIP2:  81%|████████  | 2432/3000 [40:38<09:54,  1.05s/image]prithivMLmods__Augmented-Waste-Classifier-SigLIP2:  83%|████████▎ | 2496/3000 [41:40<08:37,  1.03s/image]prithivMLmods__Augmented-Waste-Classifier-SigLIP2:  85%|████████▌ | 2560/3000 [42:34<07:06,  1.03image/s]prithivMLmods__Augmented-Waste-Classifier-SigLIP2:  87%|████████▋ | 2624/3000 [43:39<06:09,  1.02image/s]prithivMLmods__Augmented-Waste-Classifier-SigLIP2:  90%|████████▉ | 2688/3000 [44:43<05:08,  1.01image/s]prithivMLmods__Augmented-Waste-Classifier-SigLIP2:  92%|█████████▏| 2752/3000 [45:46<04:05,  1.01image/s]prithivMLmods__Augmented-Waste-Classifier-SigLIP2:  94%|█████████▍| 2816/3000 [46:49<03:01,  1.01image/s]prithivMLmods__Augmented-Waste-Classifier-SigLIP2:  96%|█████████▌| 2880/3000 [47:47<01:55,  1.04image/s]prithivMLmods__Augmented-Waste-Classifier-SigLIP2:  98%|█████████▊| 2944/3000 [48:52<00:54,  1.02image/s]prithivMLmods__Augmented-Waste-Classifier-SigLIP2: 100%|██████████| 3000/3000 [49:45<00:00,  1.03image/s]prithivMLmods__Augmented-Waste-Classifier-SigLIP2: 100%|██████████| 3000/3000 [49:45<00:00,  1.00image/s]
+Forward timing saved: /data/lirongfu/image-classification/classification/lirongfu/models/prithivMLmods__Augmented-Waste-Classifier-SigLIP2/result/inference_time.json [prithivMLmods__Augmented-Waste-Classifier-SigLIP2]
+{
+  "schema": "model-eval/metrics/v1",
+  "task": "image_classification",
+  "protocol": "model-eval/score-classification/v1",
+  "model": "prithivMLmods__Augmented-Waste-Classifier-SigLIP2",
+  "dataset": [
+    "waste10"
+  ],
+  "metric_unit": "fraction",
+  "metrics": {
+    "accuracy": 0.8246666666666667,
+    "top1_accuracy": 0.8246666666666667,
+    "top5_accuracy": 0.9913333333333333,
+    "balanced_accuracy": 0.834162571714011,
+    "macro_precision_over_evaluated_target_classes": 0.9958724177237886,
+    "macro_recall_over_evaluated_target_classes": 0.834162571714011,
+    "macro_f1_over_evaluated_target_classes": 0.8897428726256832,
+    "weighted_f1": 0.8834441853129391
+  },
+  "metric_status": {
+    "top5_accuracy": "computed"
+  },
+  "per_class": [
+    {
+      "category_id": 0,
+      "support": 944,
+      "precision": 0.9989395546129375,
+      "recall": 0.9978813559322034,
+      "f1": 0.9984101748807631
+    },
+    {
+      "category_id": 1,
+      "support": 997,
+      "precision": 0.9959636730575177,
+      "recall": 0.9899699097291875,
+      "f1": 0.9929577464788732
+    },
+    {
+      "category_id": 2,
+      "support": 1059,
+      "precision": 0.9927140255009107,
+      "recall": 0.5146364494806421,
+      "f1": 0.677860696517413
+    }
+  ],
+  "scope": {
+    "images": 3000,
+    "completed_images": 3000,
+    "categories": 10
+  },
+  "evaluation": {
+    "task": "single_label_classification",
+    "top_k": [
+      1,
+      5
+    ],
+    "top5_when_classes_below_five": "not_applicable",
+    "top5_when_ranking_missing": "unavailable",
+    "ranking": "preserve_native_order_no_new_tie_break",
+    "macro_labels": "observed_ground_truth_classes",
+    "zero_division": 0,
+    "unit": "fraction",
+    "sample_weight": "uniform"
+  },
+  "qualification": {
+    "kind": "original_configured_dataset",
+    "data_kind": "hf_disk",
+    "pred_label_map": {},
+    "ignore_pred_label": null,
+    "excluded_samples": 0,
+    "image_layout": "shared images with ImageNet-style image/label manifests"
+  },
+  "native_execution": [
+    "existing native top1 retained; available native class rankings exported"
+  ],
+  "limitations": [
+    "Top-5 is unavailable when native output provides only a final label."
+  ],
+  "evaluator": {
+    "name": "scikit-learn.metrics",
+    "version": "1.7.1",
+    "functions": [
+      "accuracy_score",
+      "precision_recall_fscore_support"
+    ],
+    "top5": "accuracy_score of GT membership in native ordered top5",
+    "source_sha256": "1f7be1029f426e7fbb26e4c6a334be3301a83a511c7757c72a63f4a2ad19d946",
+    "reference": "https://scikit-learn.org/stable/modules/model_evaluation.html"
+  },
+  "input_sha256": {
+    "annotations.json": "3560f9ae95719e18f1f64813aab7e33eb7fbfa2459fd82c1b0d519889340fef7",
+    "predictions.json": "4bd4caa2ddeba98f61564745b346c1465ee2047646956113dcc5dbf87dd57bea"
+  },
+  "protocol_sha256": "2a6f65a270ae048f88aa869eea9ad3b0df15466e05a2ef0c2792540174c26796",
+  "inference_executed": false
+}

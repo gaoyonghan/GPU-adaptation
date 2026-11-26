@@ -1,0 +1,7 @@
+{
+  "capcheck__ai-image-detection": {
+    "total_latency_s": 70.90658333152533,
+    "sample_count": 19996,
+    "avg_latency_ms": 3.5460383742511166
+  }
+}

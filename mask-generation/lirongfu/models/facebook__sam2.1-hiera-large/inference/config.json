@@ -1,0 +1,8 @@
+{
+  "model": "facebook__sam2.1-hiera-large",
+  "backend": "video",
+  "dataset": "DAVIS-2017",
+  "batch_policy": "native_runner_default",
+  "prompt_batch_size": null,
+  "batch_note": "保留原生入口的逐图、逐帧或引擎批量设置，不由总入口覆盖"
+}

@@ -1,0 +1,202 @@
+/opt/venvs/classification-eval/lib/python3.10/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+2026-11-23 07:39:01.226135: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2026-11-23 07:39:01.226259: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2026-11-23 07:39:01.227615: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+Ganesh-KSV__vit-face-recognition-1:   0%|          | 0/360 [00:00<?, ?image/s]Ganesh-KSV__vit-face-recognition-1:  18%|█▊        | 64/360 [00:05<00:24, 11.88image/s]Ganesh-KSV__vit-face-recognition-1:  36%|███▌      | 128/360 [00:06<00:11, 21.03image/s]Ganesh-KSV__vit-face-recognition-1:  53%|█████▎    | 192/360 [00:09<00:08, 20.86image/s]Ganesh-KSV__vit-face-recognition-1:  71%|███████   | 256/360 [00:10<00:03, 28.41image/s]Ganesh-KSV__vit-face-recognition-1:  89%|████████▉ | 320/360 [00:12<00:01, 33.59image/s]Ganesh-KSV__vit-face-recognition-1: 100%|██████████| 360/360 [00:13<00:00, 34.75image/s]Ganesh-KSV__vit-face-recognition-1: 100%|██████████| 360/360 [00:13<00:00, 27.26image/s]
+Forward timing saved: /data/lirongfu/image-classification/classification/lirongfu_recovered/models/Ganesh-KSV__vit-face-recognition-1/result/inference_time.json [Ganesh-KSV__vit-face-recognition-1]
+{
+  "schema": "model-eval/metrics/v1",
+  "task": "image_classification",
+  "protocol": "model-eval/score-classification/v1",
+  "model": "Ganesh-KSV__vit-face-recognition-1",
+  "dataset": [
+    "kaggle_celebrity_face"
+  ],
+  "metric_unit": "fraction",
+  "metrics": {
+    "accuracy": 0.7361111111111112,
+    "top1_accuracy": 0.7361111111111112,
+    "top5_accuracy": 0.9722222222222222,
+    "balanced_accuracy": 0.7264705882352942,
+    "macro_precision_over_evaluated_target_classes": 0.7797359621162208,
+    "macro_recall_over_evaluated_target_classes": 0.7264705882352942,
+    "macro_f1_over_evaluated_target_classes": 0.7250196805526623,
+    "weighted_f1": 0.7268460725687423
+  },
+  "metric_status": {
+    "top5_accuracy": "computed"
+  },
+  "per_class": [
+    {
+      "category_id": 0,
+      "support": 20,
+      "precision": 0.4722222222222222,
+      "recall": 0.85,
+      "f1": 0.6071428571428571
+    },
+    {
+      "category_id": 1,
+      "support": 20,
+      "precision": 0.9166666666666666,
+      "recall": 0.55,
+      "f1": 0.6875
+    },
+    {
+      "category_id": 4,
+      "support": 20,
+      "precision": 0.9375,
+      "recall": 0.75,
+      "f1": 0.8333333333333334
+    },
+    {
+      "category_id": 5,
+      "support": 20,
+      "precision": 0.9333333333333333,
+      "recall": 0.7,
+      "f1": 0.8
+    },
+    {
+      "category_id": 6,
+      "support": 20,
+      "precision": 0.6071428571428571,
+      "recall": 0.85,
+      "f1": 0.7083333333333334
+    },
+    {
+      "category_id": 7,
+      "support": 20,
+      "precision": 1.0,
+      "recall": 0.8,
+      "f1": 0.8888888888888888
+    },
+    {
+      "category_id": 8,
+      "support": 20,
+      "precision": 0.8461538461538461,
+      "recall": 0.55,
+      "f1": 0.6666666666666666
+    },
+    {
+      "category_id": 9,
+      "support": 20,
+      "precision": 0.625,
+      "recall": 0.75,
+      "f1": 0.6818181818181818
+    },
+    {
+      "category_id": 10,
+      "support": 20,
+      "precision": 0.7037037037037037,
+      "recall": 0.95,
+      "f1": 0.8085106382978723
+    },
+    {
+      "category_id": 11,
+      "support": 20,
+      "precision": 0.5,
+      "recall": 0.05,
+      "f1": 0.09090909090909091
+    },
+    {
+      "category_id": 12,
+      "support": 20,
+      "precision": 0.9375,
+      "recall": 0.75,
+      "f1": 0.8333333333333334
+    },
+    {
+      "category_id": 13,
+      "support": 20,
+      "precision": 0.9411764705882353,
+      "recall": 0.8,
+      "f1": 0.8648648648648649
+    },
+    {
+      "category_id": 14,
+      "support": 20,
+      "precision": 0.7692307692307693,
+      "recall": 0.5,
+      "f1": 0.6060606060606061
+    },
+    {
+      "category_id": 15,
+      "support": 40,
+      "precision": 0.6545454545454545,
+      "recall": 0.9,
+      "f1": 0.7578947368421053
+    },
+    {
+      "category_id": 16,
+      "support": 20,
+      "precision": 0.8421052631578947,
+      "recall": 0.8,
+      "f1": 0.8205128205128205
+    },
+    {
+      "category_id": 17,
+      "support": 20,
+      "precision": 0.7692307692307693,
+      "recall": 1.0,
+      "f1": 0.8695652173913043
+    },
+    {
+      "category_id": 18,
+      "support": 20,
+      "precision": 0.8,
+      "recall": 0.8,
+      "f1": 0.8
+    }
+  ],
+  "scope": {
+    "images": 360,
+    "completed_images": 360,
+    "categories": 19
+  },
+  "evaluation": {
+    "task": "single_label_classification",
+    "top_k": [
+      1,
+      5
+    ],
+    "top5_when_classes_below_five": "not_applicable",
+    "top5_when_ranking_missing": "unavailable",
+    "ranking": "preserve_native_order_no_new_tie_break",
+    "macro_labels": "observed_ground_truth_classes",
+    "zero_division": 0,
+    "unit": "fraction",
+    "sample_weight": "uniform"
+  },
+  "qualification": {
+    "kind": "original_configured_dataset",
+    "data_kind": "image_paths",
+    "pred_label_map": {},
+    "ignore_pred_label": null,
+    "excluded_samples": 0,
+    "image_layout": "shared images with ImageNet-style image/label manifests"
+  },
+  "native_execution": [
+    "existing native top1 retained; available native class rankings exported"
+  ],
+  "limitations": [
+    "Top-5 is unavailable when native output provides only a final label."
+  ],
+  "evaluator": {
+    "name": "scikit-learn.metrics",
+    "version": "1.7.1",
+    "functions": [
+      "accuracy_score",
+      "precision_recall_fscore_support"
+    ],
+    "top5": "accuracy_score of GT membership in native ordered top5",
+    "source_sha256": "1f7be1029f426e7fbb26e4c6a334be3301a83a511c7757c72a63f4a2ad19d946",
+    "reference": "https://scikit-learn.org/stable/modules/model_evaluation.html"
+  },
+  "input_sha256": {
+    "annotations.json": "80d75b42eeee679565041d67f866d51b2986c5fa9528ed9fe2b43ca14aa4f458",
+    "predictions.json": "f745070fda267432d1e7540ad3d72e3fa5f71330efd1572df78f4477373294d4"
+  },
+  "protocol_sha256": "e37fe5c53990b099f52163df3b573e8dd9f8b6a88cbffc0192c6369d2fbe7ea1",
+  "inference_executed": false
+}

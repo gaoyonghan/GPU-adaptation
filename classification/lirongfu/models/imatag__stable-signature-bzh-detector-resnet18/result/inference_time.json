@@ -1,0 +1,7 @@
+{
+  "imatag__stable-signature-bzh-detector-resnet18": {
+    "total_latency_s": 11.901806302368641,
+    "sample_count": 19996,
+    "avg_latency_ms": 0.59520935698983
+  }
+}

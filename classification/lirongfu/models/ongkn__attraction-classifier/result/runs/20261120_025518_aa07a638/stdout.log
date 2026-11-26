@@ -1,0 +1,97 @@
+/opt/venvs/classification-eval/lib/python3.10/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+2026-11-20 02:55:24.528592: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2026-11-20 02:55:24.528650: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2026-11-20 02:55:24.529654: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+ongkn__attraction-classifier:   0%|          | 0/2200 [00:00<?, ?image/s]ongkn__attraction-classifier:   3%|▎         | 64/2200 [00:56<31:24,  1.13image/s]ongkn__attraction-classifier:   6%|▌         | 128/2200 [01:32<24:00,  1.44image/s]ongkn__attraction-classifier:   9%|▊         | 192/2200 [02:06<20:51,  1.60image/s]ongkn__attraction-classifier:  12%|█▏        | 256/2200 [02:55<21:59,  1.47image/s]ongkn__attraction-classifier:  15%|█▍        | 320/2200 [03:35<20:35,  1.52image/s]ongkn__attraction-classifier:  17%|█▋        | 384/2200 [04:08<18:24,  1.64image/s]ongkn__attraction-classifier:  20%|██        | 448/2200 [04:45<17:31,  1.67image/s]ongkn__attraction-classifier:  23%|██▎       | 512/2200 [05:29<17:39,  1.59image/s]ongkn__attraction-classifier:  26%|██▌       | 576/2200 [06:09<17:00,  1.59image/s]ongkn__attraction-classifier:  29%|██▉       | 640/2200 [06:55<17:01,  1.53image/s]ongkn__attraction-classifier:  32%|███▏      | 704/2200 [07:38<16:29,  1.51image/s]ongkn__attraction-classifier:  35%|███▍      | 768/2200 [08:12<14:45,  1.62image/s]ongkn__attraction-classifier:  38%|███▊      | 832/2200 [08:43<13:14,  1.72image/s]ongkn__attraction-classifier:  41%|████      | 896/2200 [09:17<12:14,  1.77image/s]ongkn__attraction-classifier:  44%|████▎     | 960/2200 [09:54<11:45,  1.76image/s]ongkn__attraction-classifier:  47%|████▋     | 1024/2200 [10:43<12:19,  1.59image/s]ongkn__attraction-classifier:  49%|████▉     | 1088/2200 [11:33<12:30,  1.48image/s]ongkn__attraction-classifier:  52%|█████▏    | 1152/2200 [12:16<11:45,  1.49image/s]ongkn__attraction-classifier:  55%|█████▌    | 1216/2200 [13:00<11:04,  1.48image/s]ongkn__attraction-classifier:  58%|█████▊    | 1280/2200 [13:42<10:19,  1.49image/s]ongkn__attraction-classifier:  61%|██████    | 1344/2200 [14:27<09:43,  1.47image/s]ongkn__attraction-classifier:  64%|██████▍   | 1408/2200 [15:33<10:21,  1.27image/s]ongkn__attraction-classifier:  67%|██████▋   | 1472/2200 [16:19<09:17,  1.31image/s]ongkn__attraction-classifier:  70%|██████▉   | 1536/2200 [16:59<07:59,  1.39image/s]ongkn__attraction-classifier:  73%|███████▎  | 1600/2200 [17:38<06:53,  1.45image/s]ongkn__attraction-classifier:  76%|███████▌  | 1664/2200 [18:28<06:24,  1.40image/s]ongkn__attraction-classifier:  79%|███████▊  | 1728/2200 [19:11<05:33,  1.42image/s]ongkn__attraction-classifier:  81%|████████▏ | 1792/2200 [20:11<05:16,  1.29image/s]ongkn__attraction-classifier:  84%|████████▍ | 1856/2200 [21:01<04:26,  1.29image/s]ongkn__attraction-classifier:  87%|████████▋ | 1920/2200 [21:49<03:35,  1.30image/s]ongkn__attraction-classifier:  90%|█████████ | 1984/2200 [22:33<02:40,  1.35image/s]ongkn__attraction-classifier:  93%|█████████▎| 2048/2200 [23:17<01:50,  1.37image/s]ongkn__attraction-classifier:  96%|█████████▌| 2112/2200 [23:56<01:00,  1.44image/s]ongkn__attraction-classifier:  99%|█████████▉| 2176/2200 [24:31<00:15,  1.55image/s]ongkn__attraction-classifier: 100%|██████████| 2200/2200 [24:51<00:00,  1.48image/s]ongkn__attraction-classifier: 100%|██████████| 2200/2200 [24:51<00:00,  1.47image/s]
+Forward timing saved: /data/lirongfu/image-classification/classification/lirongfu/models/ongkn__attraction-classifier/result/inference_time.json [ongkn__attraction-classifier]
+{
+  "schema": "model-eval/metrics/v1",
+  "task": "image_classification",
+  "protocol": "model-eval/score-classification/v1",
+  "model": "ongkn__attraction-classifier",
+  "dataset": [
+    "scut_fbp5500"
+  ],
+  "metric_unit": "fraction",
+  "metrics": {
+    "accuracy": 0.7031818181818181,
+    "top1_accuracy": 0.7031818181818181,
+    "top5_accuracy": null,
+    "balanced_accuracy": 0.6390946812007011,
+    "macro_precision_over_evaluated_target_classes": 0.799562589514314,
+    "macro_recall_over_evaluated_target_classes": 0.6390946812007011,
+    "macro_f1_over_evaluated_target_classes": 0.6217043632501825,
+    "weighted_f1": 0.6542634245744797
+  },
+  "metric_status": {
+    "top5_accuracy": "not_applicable_fewer_than_five_classes"
+  },
+  "per_class": [
+    {
+      "category_id": 0,
+      "support": 1304,
+      "precision": 0.6697965571205008,
+      "recall": 0.9846625766871165,
+      "f1": 0.7972679292145296
+    },
+    {
+      "category_id": 1,
+      "support": 896,
+      "precision": 0.9293286219081273,
+      "recall": 0.2935267857142857,
+      "f1": 0.44614079728583544
+    }
+  ],
+  "scope": {
+    "images": 2200,
+    "completed_images": 2200,
+    "categories": 2
+  },
+  "evaluation": {
+    "task": "single_label_classification",
+    "top_k": [
+      1,
+      5
+    ],
+    "top5_when_classes_below_five": "not_applicable",
+    "top5_when_ranking_missing": "unavailable",
+    "ranking": "preserve_native_order_no_new_tie_break",
+    "macro_labels": "observed_ground_truth_classes",
+    "zero_division": 0,
+    "unit": "fraction",
+    "sample_weight": "uniform"
+  },
+  "qualification": {
+    "kind": "original_configured_dataset",
+    "data_kind": "hf_disk",
+    "pred_label_map": {},
+    "ignore_pred_label": null,
+    "excluded_samples": 0,
+    "image_layout": "shared images with ImageNet-style image/label manifests"
+  },
+  "native_execution": [
+    "existing native top1 retained; available native class rankings exported"
+  ],
+  "limitations": [
+    "Top-5 is unavailable when native output provides only a final label."
+  ],
+  "evaluator": {
+    "name": "scikit-learn.metrics",
+    "version": "1.7.1",
+    "functions": [
+      "accuracy_score",
+      "precision_recall_fscore_support"
+    ],
+    "top5": "accuracy_score of GT membership in native ordered top5",
+    "source_sha256": "1f7be1029f426e7fbb26e4c6a334be3301a83a511c7757c72a63f4a2ad19d946",
+    "reference": "https://scikit-learn.org/stable/modules/model_evaluation.html"
+  },
+  "input_sha256": {
+    "annotations.json": "b05aa34cc087bf1f1cb17d2b6040ae66be14fa8ad891187e5e97231d2f985978",
+    "predictions.json": "646718576c07f17dc1f2a6652d55e7524e7bc30d3cf378f5b32d83a2e6e5f70f"
+  },
+  "protocol_sha256": "e516f71f3110b5e4b29ef86751e59b75a034378026b5ad77085463eb4d943b45",
+  "inference_executed": false
+}

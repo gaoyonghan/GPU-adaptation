@@ -1,0 +1,7 @@
+{
+  "ashish-001__deepfake-detection-using-ViT": {
+    "total_latency_s": 34.95424581505358,
+    "sample_count": 10905,
+    "avg_latency_ms": 3.2053412026642443
+  }
+}

@@ -1,0 +1,97 @@
+/opt/venvs/classification-eval/lib/python3.10/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+2026-11-20 14:32:05.106358: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2026-11-20 14:32:05.106424: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2026-11-20 14:32:05.107770: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+prithivMLmods__Bone-Fracture-Detection:   0%|          | 0/8863 [00:00<?, ?image/s]prithivMLmods__Bone-Fracture-Detection:   1%|          | 64/8863 [00:58<2:13:37,  1.10image/s]prithivMLmods__Bone-Fracture-Detection:   1%|▏         | 128/8863 [01:48<2:02:11,  1.19image/s]prithivMLmods__Bone-Fracture-Detection:   2%|▏         | 192/8863 [02:34<1:53:20,  1.28image/s]prithivMLmods__Bone-Fracture-Detection:   3%|▎         | 256/8863 [03:25<1:53:02,  1.27image/s]prithivMLmods__Bone-Fracture-Detection:   4%|▎         | 320/8863 [04:24<1:58:42,  1.20image/s]prithivMLmods__Bone-Fracture-Detection:   4%|▍         | 384/8863 [05:25<2:04:04,  1.14image/s]prithivMLmods__Bone-Fracture-Detection:   5%|▌         | 448/8863 [06:24<2:04:59,  1.12image/s]prithivMLmods__Bone-Fracture-Detection:   6%|▌         | 512/8863 [07:24<2:06:10,  1.10image/s]prithivMLmods__Bone-Fracture-Detection:   6%|▋         | 576/8863 [08:30<2:10:15,  1.06image/s]prithivMLmods__Bone-Fracture-Detection:   7%|▋         | 640/8863 [09:23<2:04:39,  1.10image/s]prithivMLmods__Bone-Fracture-Detection:   8%|▊         | 704/8863 [10:17<2:01:06,  1.12image/s]prithivMLmods__Bone-Fracture-Detection:   9%|▊         | 768/8863 [11:14<1:59:52,  1.13image/s]prithivMLmods__Bone-Fracture-Detection:   9%|▉         | 832/8863 [12:18<2:03:36,  1.08image/s]prithivMLmods__Bone-Fracture-Detection:  10%|█         | 896/8863 [13:16<2:01:33,  1.09image/s]prithivMLmods__Bone-Fracture-Detection:  11%|█         | 960/8863 [14:06<1:55:47,  1.14image/s]prithivMLmods__Bone-Fracture-Detection:  12%|█▏        | 1024/8863 [14:56<1:50:32,  1.18image/s]prithivMLmods__Bone-Fracture-Detection:  12%|█▏        | 1088/8863 [15:54<1:52:07,  1.16image/s]prithivMLmods__Bone-Fracture-Detection:  13%|█▎        | 1152/8863 [16:56<1:55:05,  1.12image/s]prithivMLmods__Bone-Fracture-Detection:  14%|█▎        | 1216/8863 [17:54<1:54:40,  1.11image/s]prithivMLmods__Bone-Fracture-Detection:  14%|█▍        | 1280/8863 [18:52<1:54:07,  1.11image/s]prithivMLmods__Bone-Fracture-Detection:  15%|█▌        | 1344/8863 [19:50<1:53:15,  1.11image/s]prithivMLmods__Bone-Fracture-Detection:  16%|█▌        | 1408/8863 [21:01<1:59:32,  1.04image/s]prithivMLmods__Bone-Fracture-Detection:  17%|█▋        | 1472/8863 [21:57<1:55:21,  1.07image/s]prithivMLmods__Bone-Fracture-Detection:  17%|█▋        | 1536/8863 [22:47<1:48:56,  1.12image/s]prithivMLmods__Bone-Fracture-Detection:  18%|█▊        | 1600/8863 [24:01<1:57:44,  1.03image/s]prithivMLmods__Bone-Fracture-Detection:  19%|█▉        | 1664/8863 [24:54<1:51:23,  1.08image/s]prithivMLmods__Bone-Fracture-Detection:  19%|█▉        | 1728/8863 [25:53<1:50:02,  1.08image/s]prithivMLmods__Bone-Fracture-Detection:  20%|██        | 1792/8863 [26:47<1:46:01,  1.11image/s]prithivMLmods__Bone-Fracture-Detection:  21%|██        | 1856/8863 [27:42<1:43:34,  1.13image/s]prithivMLmods__Bone-Fracture-Detection:  22%|██▏       | 1920/8863 [28:41<1:44:10,  1.11image/s]prithivMLmods__Bone-Fracture-Detection:  22%|██▏       | 1984/8863 [29:58<1:53:46,  1.01image/s]prithivMLmods__Bone-Fracture-Detection:  23%|██▎       | 2048/8863 [30:48<1:45:20,  1.08image/s]prithivMLmods__Bone-Fracture-Detection:  24%|██▍       | 2112/8863 [31:39<1:39:39,  1.13image/s]prithivMLmods__Bone-Fracture-Detection:  25%|██▍       | 2176/8863 [32:29<1:35:17,  1.17image/s]prithivMLmods__Bone-Fracture-Detection:  25%|██▌       | 2240/8863 [33:23<1:34:04,  1.17image/s]prithivMLmods__Bone-Fracture-Detection:  26%|██▌       | 2304/8863 [34:13<1:31:09,  1.20image/s]prithivMLmods__Bone-Fracture-Detection:  27%|██▋       | 2368/8863 [35:02<1:27:50,  1.23image/s]prithivMLmods__Bone-Fracture-Detection:  27%|██▋       | 2432/8863 [35:51<1:25:17,  1.26image/s]prithivMLmods__Bone-Fracture-Detection:  28%|██▊       | 2496/8863 [36:40<1:23:41,  1.27image/s]prithivMLmods__Bone-Fracture-Detection:  29%|██▉       | 2560/8863 [37:27<1:21:08,  1.29image/s]prithivMLmods__Bone-Fracture-Detection:  30%|██▉       | 2624/8863 [38:21<1:22:34,  1.26image/s]prithivMLmods__Bone-Fracture-Detection:  30%|███       | 2688/8863 [39:07<1:19:31,  1.29image/s]prithivMLmods__Bone-Fracture-Detection:  31%|███       | 2752/8863 [40:04<1:22:20,  1.24image/s]prithivMLmods__Bone-Fracture-Detection:  32%|███▏      | 2816/8863 [40:53<1:20:03,  1.26image/s]prithivMLmods__Bone-Fracture-Detection:  32%|███▏      | 2880/8863 [41:43<1:18:50,  1.26image/s]prithivMLmods__Bone-Fracture-Detection:  33%|███▎      | 2944/8863 [42:32<1:17:18,  1.28image/s]prithivMLmods__Bone-Fracture-Detection:  34%|███▍      | 3008/8863 [43:25<1:17:43,  1.26image/s]prithivMLmods__Bone-Fracture-Detection:  35%|███▍      | 3072/8863 [44:23<1:19:59,  1.21image/s]prithivMLmods__Bone-Fracture-Detection:  35%|███▌      | 3136/8863 [45:14<1:18:11,  1.22image/s]prithivMLmods__Bone-Fracture-Detection:  36%|███▌      | 3200/8863 [46:07<1:17:43,  1.21image/s]prithivMLmods__Bone-Fracture-Detection:  37%|███▋      | 3264/8863 [47:00<1:16:37,  1.22image/s]prithivMLmods__Bone-Fracture-Detection:  38%|███▊      | 3328/8863 [47:50<1:14:48,  1.23image/s]prithivMLmods__Bone-Fracture-Detection:  38%|███▊      | 3392/8863 [48:46<1:15:48,  1.20image/s]prithivMLmods__Bone-Fracture-Detection:  39%|███▉      | 3456/8863 [49:39<1:14:54,  1.20image/s]prithivMLmods__Bone-Fracture-Detection:  40%|███▉      | 3520/8863 [50:25<1:10:59,  1.25image/s]prithivMLmods__Bone-Fracture-Detection:  40%|████      | 3584/8863 [51:17<1:10:32,  1.25image/s]prithivMLmods__Bone-Fracture-Detection:  41%|████      | 3648/8863 [52:14<1:12:03,  1.21image/s]prithivMLmods__Bone-Fracture-Detection:  42%|████▏     | 3712/8863 [53:13<1:13:24,  1.17image/s]prithivMLmods__Bone-Fracture-Detection:  43%|████▎     | 3776/8863 [54:07<1:12:18,  1.17image/s]prithivMLmods__Bone-Fracture-Detection:  43%|████▎     | 3840/8863 [54:56<1:08:53,  1.22image/s]prithivMLmods__Bone-Fracture-Detection:  44%|████▍     | 3904/8863 [55:50<1:08:33,  1.21image/s]prithivMLmods__Bone-Fracture-Detection:  45%|████▍     | 3968/8863 [57:11<1:18:31,  1.04image/s]prithivMLmods__Bone-Fracture-Detection:  45%|████▌     | 4032/8863 [58:11<1:16:54,  1.05image/s]prithivMLmods__Bone-Fracture-Detection:  46%|████▌     | 4096/8863 [59:09<1:14:36,  1.06image/s]prithivMLmods__Bone-Fracture-Detection:  47%|████▋     | 4160/8863 [59:56<1:08:41,  1.14image/s]prithivMLmods__Bone-Fracture-Detection:  48%|████▊     | 4224/8863 [1:00:45<1:05:20,  1.18image/s]prithivMLmods__Bone-Fracture-Detection:  48%|████▊     | 4288/8863 [1:01:46<1:06:56,  1.14image/s]prithivMLmods__Bone-Fracture-Detection:  49%|████▉     | 4352/8863 [1:03:18<1:18:31,  1.04s/image]prithivMLmods__Bone-Fracture-Detection:  50%|████▉     | 4416/8863 [1:08:34<2:44:01,  2.21s/image]prithivMLmods__Bone-Fracture-Detection:  51%|█████     | 4480/8863 [1:16:27<4:35:14,  3.77s/image]prithivMLmods__Bone-Fracture-Detection:  51%|█████▏    | 4544/8863 [1:18:17<3:46:58,  3.15s/image]prithivMLmods__Bone-Fracture-Detection:  52%|█████▏    | 4608/8863 [1:19:01<2:51:10,  2.41s/image]prithivMLmods__Bone-Fracture-Detection:  53%|█████▎    | 4672/8863 [1:19:57<2:16:10,  1.95s/image]prithivMLmods__Bone-Fracture-Detection:  53%|█████▎    | 4736/8863 [1:20:46<1:49:41,  1.59s/image]prithivMLmods__Bone-Fracture-Detection:  54%|█████▍    | 4800/8863 [1:21:31<1:29:56,  1.33s/image]prithivMLmods__Bone-Fracture-Detection:  55%|█████▍    | 4864/8863 [1:22:24<1:18:27,  1.18s/image]prithivMLmods__Bone-Fracture-Detection:  56%|█████▌    | 4928/8863 [1:23:15<1:09:49,  1.06s/image]prithivMLmods__Bone-Fracture-Detection:  56%|█████▋    | 4992/8863 [1:24:07<1:03:36,  1.01image/s]prithivMLmods__Bone-Fracture-Detection:  57%|█████▋    | 5056/8863 [1:25:01<1:00:00,  1.06image/s]prithivMLmods__Bone-Fracture-Detection:  58%|█████▊    | 5120/8863 [1:25:53<56:28,  1.10image/s]  prithivMLmods__Bone-Fracture-Detection:  58%|█████▊    | 5184/8863 [1:26:45<53:40,  1.14image/s]prithivMLmods__Bone-Fracture-Detection:  59%|█████▉    | 5248/8863 [1:27:37<51:46,  1.16image/s]prithivMLmods__Bone-Fracture-Detection:  60%|█████▉    | 5312/8863 [1:28:37<52:09,  1.13image/s]prithivMLmods__Bone-Fracture-Detection:  61%|██████    | 5376/8863 [1:29:31<50:43,  1.15image/s]prithivMLmods__Bone-Fracture-Detection:  61%|██████▏   | 5440/8863 [1:30:19<47:42,  1.20image/s]prithivMLmods__Bone-Fracture-Detection:  62%|██████▏   | 5504/8863 [1:31:11<46:11,  1.21image/s]prithivMLmods__Bone-Fracture-Detection:  63%|██████▎   | 5568/8863 [1:32:11<47:12,  1.16image/s]prithivMLmods__Bone-Fracture-Detection:  64%|██████▎   | 5632/8863 [1:32:58<44:19,  1.21image/s]prithivMLmods__Bone-Fracture-Detection:  64%|██████▍   | 5696/8863 [1:33:48<42:53,  1.23image/s]prithivMLmods__Bone-Fracture-Detection:  65%|██████▍   | 5760/8863 [1:34:45<43:12,  1.20image/s]prithivMLmods__Bone-Fracture-Detection:  66%|██████▌   | 5824/8863 [1:35:44<43:37,  1.16image/s]prithivMLmods__Bone-Fracture-Detection:  66%|██████▋   | 5888/8863 [1:36:41<43:01,  1.15image/s]prithivMLmods__Bone-Fracture-Detection:  67%|██████▋   | 5952/8863 [1:37:32<41:13,  1.18image/s]prithivMLmods__Bone-Fracture-Detection:  68%|██████▊   | 6016/8863 [1:38:25<39:48,  1.19image/s]prithivMLmods__Bone-Fracture-Detection:  69%|██████▊   | 6080/8863 [1:39:18<38:57,  1.19image/s]prithivMLmods__Bone-Fracture-Detection:  69%|██████▉   | 6144/8863 [1:40:11<37:53,  1.20image/s]prithivMLmods__Bone-Fracture-Detection:  70%|███████   | 6208/8863 [1:41:06<37:07,  1.19image/s]prithivMLmods__Bone-Fracture-Detection:  71%|███████   | 6272/8863 [1:42:00<36:24,  1.19image/s]prithivMLmods__Bone-Fracture-Detection:  71%|███████▏  | 6336/8863 [1:43:02<37:02,  1.14image/s]prithivMLmods__Bone-Fracture-Detection:  72%|███████▏  | 6400/8863 [1:44:03<37:01,  1.11image/s]prithivMLmods__Bone-Fracture-Detection:  73%|███████▎  | 6464/8863 [1:45:03<36:34,  1.09image/s]prithivMLmods__Bone-Fracture-Detection:  74%|███████▎  | 6528/8863 [1:45:54<34:09,  1.14image/s]prithivMLmods__Bone-Fracture-Detection:  74%|███████▍  | 6592/8863 [1:46:48<32:52,  1.15image/s]prithivMLmods__Bone-Fracture-Detection:  75%|███████▌  | 6656/8863 [1:47:46<32:23,  1.14image/s]prithivMLmods__Bone-Fracture-Detection:  76%|███████▌  | 6720/8863 [1:48:41<31:11,  1.15image/s]prithivMLmods__Bone-Fracture-Detection:  77%|███████▋  | 6784/8863 [1:49:36<30:00,  1.15image/s]prithivMLmods__Bone-Fracture-Detection:  77%|███████▋  | 6848/8863 [1:50:37<29:59,  1.12image/s]prithivMLmods__Bone-Fracture-Detection:  78%|███████▊  | 6912/8863 [1:51:35<29:16,  1.11image/s]prithivMLmods__Bone-Fracture-Detection:  79%|███████▊  | 6976/8863 [1:52:31<28:03,  1.12image/s]prithivMLmods__Bone-Fracture-Detection:  79%|███████▉  | 7040/8863 [1:53:27<26:53,  1.13image/s]prithivMLmods__Bone-Fracture-Detection:  80%|████████  | 7104/8863 [1:54:22<25:47,  1.14image/s]prithivMLmods__Bone-Fracture-Detection:  81%|████████  | 7168/8863 [1:55:11<23:50,  1.19image/s]prithivMLmods__Bone-Fracture-Detection:  82%|████████▏ | 7232/8863 [1:56:09<23:29,  1.16image/s]prithivMLmods__Bone-Fracture-Detection:  82%|████████▏ | 7296/8863 [1:57:04<22:27,  1.16image/s]prithivMLmods__Bone-Fracture-Detection:  83%|████████▎ | 7360/8863 [1:58:03<21:59,  1.14image/s]prithivMLmods__Bone-Fracture-Detection:  84%|████████▍ | 7424/8863 [1:58:53<20:22,  1.18image/s]prithivMLmods__Bone-Fracture-Detection:  84%|████████▍ | 7488/8863 [1:59:45<19:16,  1.19image/s]prithivMLmods__Bone-Fracture-Detection:  85%|████████▌ | 7552/8863 [2:00:44<18:54,  1.16image/s]prithivMLmods__Bone-Fracture-Detection:  86%|████████▌ | 7616/8863 [2:01:38<17:47,  1.17image/s]prithivMLmods__Bone-Fracture-Detection:  87%|████████▋ | 7680/8863 [2:02:33<16:57,  1.16image/s]prithivMLmods__Bone-Fracture-Detection:  87%|████████▋ | 7744/8863 [2:03:25<15:45,  1.18image/s]prithivMLmods__Bone-Fracture-Detection:  88%|████████▊ | 7808/8863 [2:04:20<14:52,  1.18image/s]prithivMLmods__Bone-Fracture-Detection:  89%|████████▉ | 7872/8863 [2:05:23<14:39,  1.13image/s]prithivMLmods__Bone-Fracture-Detection:  90%|████████▉ | 7936/8863 [2:06:21<13:49,  1.12image/s]prithivMLmods__Bone-Fracture-Detection:  90%|█████████ | 8000/8863 [2:07:20<12:59,  1.11image/s]prithivMLmods__Bone-Fracture-Detection:  91%|█████████ | 8064/8863 [2:08:10<11:32,  1.15image/s]prithivMLmods__Bone-Fracture-Detection:  92%|█████████▏| 8128/8863 [2:09:04<10:31,  1.16image/s]prithivMLmods__Bone-Fracture-Detection:  92%|█████████▏| 8192/8863 [2:10:03<09:49,  1.14image/s]prithivMLmods__Bone-Fracture-Detection:  93%|█████████▎| 8256/8863 [2:10:52<08:32,  1.18image/s]prithivMLmods__Bone-Fracture-Detection:  94%|█████████▍| 8320/8863 [2:11:52<07:52,  1.15image/s]prithivMLmods__Bone-Fracture-Detection:  95%|█████████▍| 8384/8863 [2:12:51<07:06,  1.12image/s]prithivMLmods__Bone-Fracture-Detection:  95%|█████████▌| 8448/8863 [2:13:58<06:28,  1.07image/s]prithivMLmods__Bone-Fracture-Detection:  96%|█████████▌| 8512/8863 [2:14:51<05:17,  1.11image/s]prithivMLmods__Bone-Fracture-Detection:  97%|█████████▋| 8576/8863 [2:15:42<04:09,  1.15image/s]prithivMLmods__Bone-Fracture-Detection:  97%|█████████▋| 8640/8863 [2:16:29<03:04,  1.21image/s]prithivMLmods__Bone-Fracture-Detection:  98%|█████████▊| 8704/8863 [2:17:18<02:09,  1.23image/s]prithivMLmods__Bone-Fracture-Detection:  99%|█████████▉| 8768/8863 [2:18:09<01:16,  1.24image/s]prithivMLmods__Bone-Fracture-Detection: 100%|█████████▉| 8832/8863 [2:19:02<00:25,  1.23image/s]prithivMLmods__Bone-Fracture-Detection: 100%|██████████| 8863/8863 [2:19:33<00:00,  1.18image/s]prithivMLmods__Bone-Fracture-Detection: 100%|██████████| 8863/8863 [2:19:33<00:00,  1.06image/s]
+Forward timing saved: /data/lirongfu/image-classification/classification/lirongfu/models/prithivMLmods__Bone-Fracture-Detection/result/inference_time.json [prithivMLmods__Bone-Fracture-Detection]
+{
+  "schema": "model-eval/metrics/v1",
+  "task": "image_classification",
+  "protocol": "model-eval/score-classification/v1",
+  "model": "prithivMLmods__Bone-Fracture-Detection",
+  "dataset": [
+    "bone_fracture"
+  ],
+  "metric_unit": "fraction",
+  "metrics": {
+    "accuracy": 0.8303057655421415,
+    "top1_accuracy": 0.8303057655421415,
+    "top5_accuracy": null,
+    "balanced_accuracy": 0.8307596721097747,
+    "macro_precision_over_evaluated_target_classes": 0.8326265700388085,
+    "macro_recall_over_evaluated_target_classes": 0.8307596721097747,
+    "macro_f1_over_evaluated_target_classes": 0.8301276404860941,
+    "weighted_f1": 0.8300674379410189
+  },
+  "metric_status": {
+    "top5_accuracy": "not_applicable_fewer_than_five_classes"
+  },
+  "per_class": [
+    {
+      "category_id": 0,
+      "support": 4480,
+      "precision": 0.86328125,
+      "recall": 0.7892857142857143,
+      "f1": 0.8246268656716418
+    },
+    {
+      "category_id": 1,
+      "support": 4383,
+      "precision": 0.8019718900776169,
+      "recall": 0.8722336299338352,
+      "f1": 0.8356284153005464
+    }
+  ],
+  "scope": {
+    "images": 8863,
+    "completed_images": 8863,
+    "categories": 2
+  },
+  "evaluation": {
+    "task": "single_label_classification",
+    "top_k": [
+      1,
+      5
+    ],
+    "top5_when_classes_below_five": "not_applicable",
+    "top5_when_ranking_missing": "unavailable",
+    "ranking": "preserve_native_order_no_new_tie_break",
+    "macro_labels": "observed_ground_truth_classes",
+    "zero_division": 0,
+    "unit": "fraction",
+    "sample_weight": "uniform"
+  },
+  "qualification": {
+    "kind": "original_configured_dataset",
+    "data_kind": "parquet",
+    "pred_label_map": {},
+    "ignore_pred_label": null,
+    "excluded_samples": 0,
+    "image_layout": "shared images with ImageNet-style image/label manifests"
+  },
+  "native_execution": [
+    "existing native top1 retained; available native class rankings exported"
+  ],
+  "limitations": [
+    "Top-5 is unavailable when native output provides only a final label."
+  ],
+  "evaluator": {
+    "name": "scikit-learn.metrics",
+    "version": "1.7.1",
+    "functions": [
+      "accuracy_score",
+      "precision_recall_fscore_support"
+    ],
+    "top5": "accuracy_score of GT membership in native ordered top5",
+    "source_sha256": "1f7be1029f426e7fbb26e4c6a334be3301a83a511c7757c72a63f4a2ad19d946",
+    "reference": "https://scikit-learn.org/stable/modules/model_evaluation.html"
+  },
+  "input_sha256": {
+    "annotations.json": "4bf11620f701bff9c42ea4d05190e37675df53300f0282934f801be1fe1a084b",
+    "predictions.json": "2ee20a2a4c2c3833d7540e4027436a6311988272ce4eea8cd73406182dee5445"
+  },
+  "protocol_sha256": "50bdfabb1bde4c6e91056afbc7bf9412adcedd05368a79a712a0372dcec46f6f",
+  "inference_executed": false
+}

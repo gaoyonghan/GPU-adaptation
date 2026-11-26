@@ -1,0 +1,6 @@
+{
+  "complete": true,
+  "verification_report": "inference_logs/migration_20261123/rename_verification.json",
+  "verification_report_sha256": "0412ec978b90bfc1489426d74e869061e6ffb1603f5347614aa11c509639ae1f",
+  "method": "all dataset paths and sizes; representative data SHA256; previously SHA256-verified weights checked for size/readability; all deployed code SHA256"
+}

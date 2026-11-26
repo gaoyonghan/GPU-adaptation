@@ -1,0 +1,7 @@
+{
+  "dima806__smoker_image_classification": {
+    "total_latency_s": 0.9815145526081324,
+    "sample_count": 224,
+    "avg_latency_ms": 4.38176139557202
+  }
+}

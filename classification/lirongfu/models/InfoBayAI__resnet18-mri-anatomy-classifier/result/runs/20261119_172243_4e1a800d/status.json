@@ -1,0 +1,29 @@
+{
+  "state": "passed",
+  "model": "InfoBayAI__resnet18-mri-anatomy-classifier",
+  "command": [
+    "python",
+    "classification/lirongfu/models/InfoBayAI__resnet18-mri-anatomy-classifier/inference.py",
+    "--device",
+    "cuda",
+    "--batch-size",
+    "64"
+  ],
+  "environment": {
+    "name": "classification-eval",
+    "python_version": "3.10.12"
+  },
+  "input_scope": {
+    "selection": "configured dataset",
+    "max_images": 0,
+    "image": null,
+    "inference_images": 21,
+    "evaluated_images": 21
+  },
+  "output_directory": "classification/lirongfu/models/InfoBayAI__resnet18-mri-anatomy-classifier/result/runs/20261119_172243_4e1a800d",
+  "dataset_root": "dataset",
+  "weights": "classification/lirongfu/models/InfoBayAI__resnet18-mri-anatomy-classifier/weights/best_model.pth",
+  "log": "stdout.log",
+  "exit_code": 0,
+  "evaluation_bundle": "dataset/infobay_mri_InfoBayAI__resnet18-mri-anatomy-classifier_imagenet/runs/20261119_172243_4e1a800d"
+}

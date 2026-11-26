@@ -1,0 +1,7 @@
+{
+  "timm__vit_mediumd_patch16_reg4_gap_384.sbb2_e200_in12k_ft_in1k": {
+    "total_latency_s": 287.9361245930195,
+    "sample_count": 50000,
+    "avg_latency_ms": 5.758722491860389
+  }
+}

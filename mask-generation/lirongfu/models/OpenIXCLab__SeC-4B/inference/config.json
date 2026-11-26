@@ -1,0 +1,8 @@
+{
+  "model": "OpenIXCLab__SeC-4B",
+  "backend": "sec",
+  "dataset": "SeCVOS",
+  "batch_policy": "native_runner_default",
+  "prompt_batch_size": null,
+  "batch_note": "保留原生入口的逐图、逐帧或引擎批量设置，不由总入口覆盖"
+}

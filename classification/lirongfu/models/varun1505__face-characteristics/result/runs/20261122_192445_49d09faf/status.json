@@ -1,0 +1,29 @@
+{
+  "state": "passed",
+  "model": "varun1505__face-characteristics",
+  "command": [
+    "python",
+    "classification/lirongfu/models/varun1505__face-characteristics/inference.py",
+    "--device",
+    "cuda",
+    "--batch-size",
+    "64"
+  ],
+  "environment": {
+    "name": "classification-eval",
+    "python_version": "3.10.12"
+  },
+  "input_scope": {
+    "selection": "configured dataset",
+    "max_images": 0,
+    "image": null,
+    "inference_images": 30,
+    "evaluated_images": 30
+  },
+  "output_directory": "classification/lirongfu/models/varun1505__face-characteristics/result/runs/20261122_192445_49d09faf",
+  "dataset_root": "dataset",
+  "weights": "classification/lirongfu/models/varun1505__face-characteristics/weights/best_model.pth",
+  "log": "stdout.log",
+  "exit_code": 0,
+  "evaluation_bundle": "dataset/facial_skin_conditions_v2_varun1505__face-characteristics_imagenet/runs/20261122_192445_49d09faf"
+}

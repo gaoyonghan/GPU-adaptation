@@ -1,0 +1,29 @@
+{
+  "state": "passed",
+  "model": "imatag__stable-signature-bzh-detector-resnet18",
+  "command": [
+    "python",
+    "classification/lirongfu/models/imatag__stable-signature-bzh-detector-resnet18/inference.py",
+    "--device",
+    "cuda",
+    "--batch-size",
+    "64"
+  ],
+  "environment": {
+    "name": "classification-eval",
+    "python_version": "3.10.12"
+  },
+  "input_scope": {
+    "selection": "configured dataset",
+    "max_images": 0,
+    "image": null,
+    "inference_images": 19996,
+    "evaluated_images": 19996
+  },
+  "output_directory": "classification/lirongfu/models/imatag__stable-signature-bzh-detector-resnet18/result/runs/20261120_003715_7f64e619",
+  "dataset_root": "dataset",
+  "weights": "classification/lirongfu/models/imatag__stable-signature-bzh-detector-resnet18/weights/best_model.pth",
+  "log": "stdout.log",
+  "exit_code": 0,
+  "evaluation_bundle": "dataset/cifake_imatag__stable-signature-bzh-detector-resnet18_imagenet/runs/20261120_003715_7f64e619"
+}

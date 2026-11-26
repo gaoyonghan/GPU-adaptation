@@ -1,0 +1,7 @@
+{
+  "Vishaltiwari2019__food_classifier_one": {
+    "total_latency_s": 292.9994594026357,
+    "sample_count": 941,
+    "avg_latency_ms": 311.3703075479657
+  }
+}

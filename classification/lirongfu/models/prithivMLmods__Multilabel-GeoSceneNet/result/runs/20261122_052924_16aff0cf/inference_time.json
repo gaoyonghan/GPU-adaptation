@@ -1,0 +1,7 @@
+{
+  "prithivMLmods__Multilabel-GeoSceneNet": {
+    "total_latency_s": 42.73413207754493,
+    "sample_count": 16033,
+    "avg_latency_ms": 2.6653858964351604
+  }
+}

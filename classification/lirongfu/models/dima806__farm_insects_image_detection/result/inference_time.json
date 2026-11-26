@@ -1,0 +1,7 @@
+{
+  "dima806__farm_insects_image_detection": {
+    "total_latency_s": 2.4279909431934357,
+    "sample_count": 714,
+    "avg_latency_ms": 3.4005475394866047
+  }
+}

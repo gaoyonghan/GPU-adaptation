@@ -1,0 +1,7 @@
+{
+  "ashduino101__furry-species-classification": {
+    "total_latency_s": 5.208941603079438,
+    "sample_count": 1417,
+    "avg_latency_ms": 3.676035005701791
+  }
+}

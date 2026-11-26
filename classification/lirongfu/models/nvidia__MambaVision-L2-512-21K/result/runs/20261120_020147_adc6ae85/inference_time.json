@@ -1,0 +1,7 @@
+{
+  "nvidia__MambaVision-L2-512-21K": {
+    "total_latency_s": 1085.1772191021591,
+    "sample_count": 50000,
+    "avg_latency_ms": 21.703544382043184
+  }
+}

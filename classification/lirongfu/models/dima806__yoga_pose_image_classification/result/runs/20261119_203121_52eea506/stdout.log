@@ -1,0 +1,147 @@
+/opt/venvs/classification-eval/lib/python3.10/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+2026-11-19 20:31:29.958333: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2026-11-19 20:31:29.958397: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2026-11-19 20:31:29.960202: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+dima806__yoga_pose_image_classification:   0%|          | 0/1203 [00:00<?, ?image/s]/opt/venvs/classification-eval/lib/python3.10/site-packages/PIL/Image.py:1047: UserWarning: Palette images with Transparency expressed in bytes should be converted to RGBA images
+  warnings.warn(
+dima806__yoga_pose_image_classification:   5%|▌         | 64/1203 [00:06<02:04,  9.16image/s]dima806__yoga_pose_image_classification:  11%|█         | 128/1203 [00:10<01:24, 12.68image/s]dima806__yoga_pose_image_classification:  16%|█▌        | 192/1203 [00:13<01:04, 15.69image/s]dima806__yoga_pose_image_classification:  21%|██▏       | 256/1203 [00:18<01:03, 14.80image/s]dima806__yoga_pose_image_classification:  27%|██▋       | 320/1203 [00:21<00:54, 16.18image/s]dima806__yoga_pose_image_classification:  32%|███▏      | 384/1203 [00:23<00:42, 19.06image/s]dima806__yoga_pose_image_classification:  37%|███▋      | 448/1203 [00:27<00:42, 17.94image/s]dima806__yoga_pose_image_classification:  43%|████▎     | 512/1203 [00:31<00:39, 17.42image/s]dima806__yoga_pose_image_classification:  48%|████▊     | 576/1203 [00:34<00:33, 18.65image/s]dima806__yoga_pose_image_classification:  53%|█████▎    | 640/1203 [00:37<00:29, 18.87image/s]dima806__yoga_pose_image_classification:  59%|█████▊    | 704/1203 [00:41<00:27, 18.04image/s]dima806__yoga_pose_image_classification:  64%|██████▍   | 768/1203 [00:46<00:25, 16.83image/s]dima806__yoga_pose_image_classification:  69%|██████▉   | 832/1203 [00:49<00:21, 17.09image/s]dima806__yoga_pose_image_classification:  74%|███████▍  | 896/1203 [00:51<00:15, 20.27image/s]dima806__yoga_pose_image_classification:  80%|███████▉  | 960/1203 [00:55<00:12, 18.93image/s]dima806__yoga_pose_image_classification:  85%|████████▌ | 1024/1203 [01:00<00:10, 16.93image/s]dima806__yoga_pose_image_classification:  90%|█████████ | 1088/1203 [01:04<00:07, 15.90image/s]dima806__yoga_pose_image_classification:  96%|█████████▌| 1152/1203 [01:07<00:02, 18.25image/s]dima806__yoga_pose_image_classification: 100%|██████████| 1203/1203 [01:09<00:00, 19.30image/s]dima806__yoga_pose_image_classification: 100%|██████████| 1203/1203 [01:09<00:00, 17.36image/s]
+Forward timing saved: /data/lirongfu/image-classification/classification/lirongfu/models/dima806__yoga_pose_image_classification/result/inference_time.json [dima806__yoga_pose_image_classification]
+{
+  "schema": "model-eval/metrics/v1",
+  "task": "image_classification",
+  "protocol": "model-eval/score-classification/v1",
+  "model": "dima806__yoga_pose_image_classification",
+  "dataset": [
+    "yoga_pose"
+  ],
+  "metric_unit": "fraction",
+  "metrics": {
+    "accuracy": 0.9600997506234414,
+    "top1_accuracy": 0.9600997506234414,
+    "top5_accuracy": 0.9900249376558603,
+    "balanced_accuracy": 0.9600680806493845,
+    "macro_precision_over_evaluated_target_classes": 0.9616241684607838,
+    "macro_recall_over_evaluated_target_classes": 0.9600680806493845,
+    "macro_f1_over_evaluated_target_classes": 0.9604235800673098,
+    "weighted_f1": 0.9604583128692339
+  },
+  "metric_status": {
+    "top5_accuracy": "computed"
+  },
+  "per_class": [
+    {
+      "category_id": 0,
+      "support": 133,
+      "precision": 0.9770992366412213,
+      "recall": 0.9624060150375939,
+      "f1": 0.9696969696969697
+    },
+    {
+      "category_id": 1,
+      "support": 134,
+      "precision": 0.9847328244274809,
+      "recall": 0.9626865671641791,
+      "f1": 0.9735849056603774
+    },
+    {
+      "category_id": 2,
+      "support": 134,
+      "precision": 0.9624060150375939,
+      "recall": 0.9552238805970149,
+      "f1": 0.9588014981273408
+    },
+    {
+      "category_id": 3,
+      "support": 134,
+      "precision": 0.9924242424242424,
+      "recall": 0.9776119402985075,
+      "f1": 0.9849624060150376
+    },
+    {
+      "category_id": 4,
+      "support": 134,
+      "precision": 0.9923664122137404,
+      "recall": 0.9701492537313433,
+      "f1": 0.9811320754716981
+    },
+    {
+      "category_id": 5,
+      "support": 133,
+      "precision": 0.8943661971830986,
+      "recall": 0.9548872180451128,
+      "f1": 0.9236363636363636
+    },
+    {
+      "category_id": 6,
+      "support": 133,
+      "precision": 0.968503937007874,
+      "recall": 0.924812030075188,
+      "f1": 0.9461538461538461
+    },
+    {
+      "category_id": 7,
+      "support": 134,
+      "precision": 0.8904109589041096,
+      "recall": 0.9701492537313433,
+      "f1": 0.9285714285714286
+    },
+    {
+      "category_id": 8,
+      "support": 134,
+      "precision": 0.9923076923076923,
+      "recall": 0.9626865671641791,
+      "f1": 0.9772727272727273
+    }
+  ],
+  "scope": {
+    "images": 1203,
+    "completed_images": 1203,
+    "categories": 9
+  },
+  "evaluation": {
+    "task": "single_label_classification",
+    "top_k": [
+      1,
+      5
+    ],
+    "top5_when_classes_below_five": "not_applicable",
+    "top5_when_ranking_missing": "unavailable",
+    "ranking": "preserve_native_order_no_new_tie_break",
+    "macro_labels": "observed_ground_truth_classes",
+    "zero_division": 0,
+    "unit": "fraction",
+    "sample_weight": "uniform"
+  },
+  "qualification": {
+    "kind": "original_configured_dataset",
+    "data_kind": "image_paths",
+    "pred_label_map": {},
+    "ignore_pred_label": null,
+    "excluded_samples": 0,
+    "image_layout": "shared images with ImageNet-style image/label manifests"
+  },
+  "native_execution": [
+    "existing native top1 retained; available native class rankings exported"
+  ],
+  "limitations": [
+    "Top-5 is unavailable when native output provides only a final label."
+  ],
+  "evaluator": {
+    "name": "scikit-learn.metrics",
+    "version": "1.7.1",
+    "functions": [
+      "accuracy_score",
+      "precision_recall_fscore_support"
+    ],
+    "top5": "accuracy_score of GT membership in native ordered top5",
+    "source_sha256": "1f7be1029f426e7fbb26e4c6a334be3301a83a511c7757c72a63f4a2ad19d946",
+    "reference": "https://scikit-learn.org/stable/modules/model_evaluation.html"
+  },
+  "input_sha256": {
+    "annotations.json": "4356277dbb24f0e6dd9b38f3d41615c621405b0fd7f136db919dd271faf82f95",
+    "predictions.json": "d630796bd60c8d23a5cd81dc831da878cf48dea93d441598c995adad7d85452c"
+  },
+  "protocol_sha256": "97ce7d4c5fb464a27841b2e7f42241737a1a41492e41d89b4c9ec0068b8a16eb",
+  "inference_executed": false
+}
