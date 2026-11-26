@@ -60,8 +60,6 @@ Python 3.12.3 · [依赖版本](e07.txt)
 - [`wasmdashai--vit-face-expression-v1`](../models/wasmdashai--vit-face-expression-v1/)
 - [`Xenova--facial_emotions_image_detection`](../models/Xenova--facial_emotions_image_detection/)
 
-以下模型也使用 e07，依赖版本见 [2026-11-20 的环境清单](e07-a100-20261120.txt)。
-
 - [`aalonso-developer--vit-base-patch16-224-in21k-clothing-classifier`](../models/aalonso-developer--vit-base-patch16-224-in21k-clothing-classifier/)
 - [`akahana--vit-base-cats-vs-dogs`](../models/akahana--vit-base-cats-vs-dogs/)
 - [`angusleung100--bad-anatomy-realism-classifier`](../models/angusleung100--bad-anatomy-realism-classifier/)
