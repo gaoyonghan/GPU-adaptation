@@ -1,0 +1,38 @@
+--- original_inference.py
++++ inference/native/run_m88_keras.py
+@@ -1,3 +1,4 @@
++from imagenet_input import ImageNetInput
+ """M88: native Keras weights/model/metrics + Google's unchanged eval preprocessing.
+ 
+ Project-owned code only coordinates assets, ImageNet labels, batching and reports.
+@@ -18,9 +19,9 @@
+ import zlib
+ 
+ HERE = Path(__file__).resolve().parent
+-IMAGE_ROOT = Path('/home/ubuntu/gaoyonghan/gpu/classification8_eval/.runtime/data/imagenet/val')
+-ARCHIVE = Path('/data2/gaoyonghan/dataset/ImageNet/imagenet-object-localization-challenge.zip')
+-OLD_RESULT = '/home/ubuntu/gaoyonghan/gpu/results/classification8_v1/m88-efficientnet-b3'
++IMAGE_ROOT = Path('/data2/gaoyonghan/gpu_model_standalone_20261110/release/model/分类/google--efficientnet-b3/resources/runtime/assets/workspace/classification8_eval/.runtime/data/imagenet/val')
++ARCHIVE = Path('/home/ubuntu/文档/ChatGPT/idea 2/outputs/launch_audit_20261005/migration_inputs/datasets/ImageNet/imagenet-object-localization-challenge.zip')
++OLD_RESULT = '/data2/gaoyonghan/gpu_model_standalone_20261110/release/model/分类/google--efficientnet-b3/resources/runtime/assets/workspace/results/classification8_v1/m88-efficientnet-b3'
+ VERSIONS = {'tensorflow': '2.15.1', 'keras': '2.15.0', 'numpy': '1.26.4', 'h5py': '3.16.0'}
+ CHECKSUMS = {
+     'preprocessing.py': ('sha256', '8bd9f09079a59af79bb3533892aa14feae9539d7aee121945f5a33dcb3395f9b'),
+@@ -69,7 +70,7 @@
+     index = json.loads((assets / 'imagenet_class_index.json').read_text())
+     classes = [index[str(i)][0] for i in range(1000)]
+     assert len(set(classes)) == 1000 and classes == sorted(classes)
+-    with zipfile.ZipFile(ARCHIVE) as archive:
++    with ImageNetInput(ARCHIVE) as archive:
+         raw = archive.read('LOC_val_solution.csv')
+         annotations = ground_truth(raw, classes)
+         members = sorted((x for x in archive.infolist()
+@@ -168,6 +169,8 @@
+     for name in ['run_m88_keras.py', 'run_m88_keras.sh', 'README_m88.md']:
+         shutil.copy2(HERE / name, run / name)
+     save(run / 'protocol.json', protocol)
++    from classification_capture import snapshot_gt
++    snapshot_gt(run, selected)
+     status = {'state': 'running', 'requested_images': args.max_images, 'total_images': len(selected), 'completed_images': 0}
+     save(run / 'status.json', status)
+     start = time.monotonic()

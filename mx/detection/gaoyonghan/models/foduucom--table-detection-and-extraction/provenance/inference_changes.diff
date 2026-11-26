@@ -1,0 +1,17 @@
+--- original_inference.py
++++ inference/native/run_m12_native.py
+@@ -13,10 +13,10 @@
+ from pathlib import Path
+ import zipfile
+ 
+-MODEL = Path('/data2/gaoyonghan/gpu/model/foduucom/table-detection-and-extraction')
+-TEST = Path('/data2/gaoyonghan/gpu/dataset/tablebordernet_test/test')
+-VALID_ZIP = Path('/data2/gaoyonghan/gpu/dataset/tablebordernet_valid/data/valid.zip')
+-OUT = Path('/home/ubuntu/gaoyonghan/gpu/results/m12_native8043_v1')
++MODEL = Path('/data2/gaoyonghan/gpu_model_standalone_20261110/release/model/检测/foduucom--table-detection-and-extraction/resources/model_index/foduucom/table-detection-and-extraction')
++TEST = Path('/home/ubuntu/文档/ChatGPT/idea 2/outputs/launch_audit_20261005/migration_inputs/datasets/tablebordernet_test/test')
++VALID_ZIP = Path('/home/ubuntu/文档/ChatGPT/idea 2/outputs/launch_audit_20261005/migration_inputs/datasets/tablebordernet_valid/data/valid.zip')
++OUT = Path('/data2/gaoyonghan/gpu_model_standalone_20261110/release/model/检测/foduucom--table-detection-and-extraction/results/run_001/m012')
+ WEIGHT_SHA = '60f9c0d863af2c53c6f8c041bf7c4b7cf80dfb3e0383f03224c3f94b6f939c75'
+ 
+ 

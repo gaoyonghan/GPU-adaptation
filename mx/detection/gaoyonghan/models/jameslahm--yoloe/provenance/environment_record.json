@@ -1,0 +1,34 @@
+{
+  "python": "3.10.21",
+  "requirements": "environments/e16-yoloe-v2/requirements.txt",
+  "expected": "environments/e16-yoloe-v2/expected.json",
+  "local_packages": [
+    {
+      "name": "mobileclip",
+      "version": "0.1.0",
+      "path": "assets/workspace/official_sources/object_detection/yoloe/third_party/ml-mobileclip",
+      "editable": true
+    },
+    {
+      "name": "clip",
+      "version": "1.0",
+      "path": "assets/workspace/official_sources/object_detection/yoloe/third_party/CLIP",
+      "editable": true
+    },
+    {
+      "name": "lvis",
+      "version": "0.5.3",
+      "path": "assets/workspace/official_sources/object_detection/yoloe/third_party/lvis-api",
+      "editable": true
+    },
+    {
+      "name": "ultralytics",
+      "version": "8.3.39",
+      "path": "assets/workspace/official_sources/object_detection/yoloe",
+      "editable": true
+    }
+  ],
+  "original_python": "/home/ubuntu/gaoyonghan/miniconda3/envs/object-detection-yoloe-v2/bin/python",
+  "torch": "2.5.1+cu121",
+  "python_version_scope": "Pinned to original interpreter version"
+}

@@ -1,0 +1,36 @@
+{
+  "schema": "model-eval/classification-inventory/v1",
+  "scope": "Existing 59 classification models; model 93 is retrieval and excluded.",
+  "models": [
+    {
+      "sequence": 176,
+      "model_id": "avazquez2/helloWorld",
+      "runner_family": "classification171",
+      "adapter": "native_labels",
+      "state": "integrated",
+      "dataset": {
+        "id": "classification171_176",
+        "relation": "public_replacement",
+        "split": "labelled competition train; test ground truth unavailable",
+        "note": [
+          "Train/reference scoring; not a Kaggle leaderboard reproduction. Record binary log loss as reference.",
+          "Local checkpoint and publisher inference components retained. Offline file paths, eval mode, batching, timing observation and reference scoring are external orchestration."
+        ],
+        "index_source": "__MODEL_ROOT__/inference/native/indices/176.jsonl",
+        "data_containers": [
+          "__DATASET_ROOT__/datasets_171_200/cats_dogs_redux/raw/dogs-vs-cats-redux-kernels-edition.zip"
+        ]
+      },
+      "qualification": "public_replacement",
+      "limitations": [],
+      "num_classes": 2,
+      "expected_images": 25000,
+      "category_reference": {
+        "file": "__MODEL_ROOT__/inference/native/models.json",
+        "sequence": 176,
+        "field": "label_mapping"
+      },
+      "gt_index": "__MODEL_ROOT__/inference/native/indices/176.jsonl"
+    }
+  ]
+}

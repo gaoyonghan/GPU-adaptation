@@ -1,0 +1,108 @@
+{
+  "sequence": 91,
+  "files": [
+    {
+      "path": "measure_mac.py",
+      "bytes": 1326,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "config.json",
+      "bytes": 24,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "utils.py",
+      "bytes": 6277,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2036,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "test.py",
+      "bytes": 5266,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": ".gitattributes",
+      "bytes": 1519,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 115,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "MobileNetV2/MobileNetV2-ENOT-x1_6.onnx",
+      "bytes": 11999284,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "MobileNetV2/MobileNetV2-ENOT-x1_6.pth",
+      "bytes": 23278781,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "MobileNetV2/MobileNetV2-ENOT-x2_1.onnx",
+      "bytes": 10682115,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "MobileNetV2/MobileNetV2-ENOT-x2_1.pth",
+      "bytes": 32641690,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "ViT-B-32/ViT-B-32-ENOT-x9.onnx",
+      "bytes": 39430730,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "ViT-B-32/ViT-B-32-ENOT-x4_8.onnx",
+      "bytes": 72211694,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "ResNet-50/ResNet50-ENOT-x4.onnx",
+      "bytes": 20850032,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "ResNet-50/ResNet50-ENOT-x2.pth",
+      "bytes": 101839301,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "ResNet-50/ResNet50-ENOT-x4.pth",
+      "bytes": 62177349,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "ResNet-50/ResNet50-ENOT-x2.onnx",
+      "bytes": 50666788,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    }
+  ],
+  "mismatches": []
+}

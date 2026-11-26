@@ -1,0 +1,22 @@
+{
+  "sequence": 26,
+  "model_id": "AdamCodd/YOLOv11n-face-detection",
+  "source_archive_hash_matches": true,
+  "source_archive_sha256": "2feebcb79542d548d44ebd797d474399ec212ed3d2d151f9e7e40d546a820dab",
+  "prepared_entry_source_sha256": "dd52048d2437ce62b85b3c653f10b2c65316c5f01043f7908116431ba1e817b5",
+  "local_entry_sha256": "c3b28c1c27f2b1883fee56a2c75e53b4ec288b49e2427c47e48b6b82f8361bc0",
+  "local_entry": "inference/native/run_widerface.py",
+  "central_dispatch_in_entry": false,
+  "unexpected_external_links": [],
+  "declared_dataset_links": [],
+  "broken_links": [],
+  "path_template_count": 473,
+  "state": "entrypoint_verified_full_run_pending",
+  "validation": {
+    "returncode": 0,
+    "python": "/home/ubuntu/文档/ChatGPT/idea 2/outputs/launch_audit_20261005/.venv-cu124/bin/python",
+    "checked_at": "2026-11-10T15:38:43.908238+08:00",
+    "scope": "native help/import/path check only; not full inference"
+  },
+  "smoke_verification": null
+}

@@ -1,0 +1,22 @@
+{
+  "sequence": 76,
+  "model_id": "legekka/AI-Anime-Image-Detector-ViT",
+  "source_archive_hash_matches": true,
+  "source_archive_sha256": "436e3789f7a10f9d9136908f6cf911b127b174275194391115bfee6b582495f6",
+  "prepared_entry_source_sha256": "7bcd8e8ff691d3b7cdb84a1880bd06ff99e13a1c8e300fa9451c07f47062fc19",
+  "local_entry_sha256": "7bcd8e8ff691d3b7cdb84a1880bd06ff99e13a1c8e300fa9451c07f47062fc19",
+  "local_entry": "resources/runtime/project/protocol_alignment/m076_fixed.py",
+  "central_dispatch_in_entry": false,
+  "unexpected_external_links": [],
+  "declared_dataset_links": [],
+  "broken_links": [],
+  "path_template_count": 274,
+  "state": "native_import_verified_data_preflight_pending",
+  "validation": {
+    "returncode": 0,
+    "scope": "native module import only; original help path hashes 3000 images before parsing help",
+    "checked_at": "2026-11-10T15:59:51.891773+08:00",
+    "python": "/home/ubuntu/gaoyonghan/miniconda3/envs/object-detection-hf-v2/bin/python"
+  },
+  "smoke_verification": null
+}

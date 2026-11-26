@@ -1,0 +1,32 @@
+{
+  "sequence": 167,
+  "dataset": {
+    "name": "interior_3cls",
+    "path": "/projectdataset/interior_3cls",
+    "layout": "parquet",
+    "images": 1047,
+    "files": [
+      {
+        "name": "interior_3cls.parquet",
+        "rows": 1047,
+        "size": 12866302,
+        "sha256": "c74bcd6b0a6c0d95bdc46712545e3eaa95109e18827605c20f0f2e5aa0dc6274"
+      }
+    ],
+    "label_column": "label",
+    "classes_observed": 3,
+    "label_distribution": {
+      "1": 317,
+      "2": 345,
+      "4": 385
+    }
+  },
+  "expected_images": 1047,
+  "observed_images": 1047,
+  "match": true,
+  "label_handling": {
+    "align": "furniture_167_map.json",
+    "note": "模型 id2label 顺序与数据集 ClassLabel 顺序不一致，通过 labels/ 映射表在 topk 之前对齐（engine.scoring_space），predictions 里的 prediction/target 始终在同一标签空间。"
+  },
+  "verified_at": "2026-11-19T13:26:47.431903+00:00"
+}

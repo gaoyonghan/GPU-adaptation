@@ -1,0 +1,27 @@
+{
+  "sequence": 168,
+  "model_id": "WT-MM/vit-base-blur",
+  "dirname": "WT-MM__vit-base-blur",
+  "loader": "transformers",
+  "timm_name": null,
+  "num_classes": 2,
+  "dataset": "sd21_blur",
+  "dataset_sub": "blur_sd21",
+  "dataset_source": "按作者公开方法自建：SD2.1 30 步跑完(clean) / 30 步调度只跑前 10 步(blurry)，512×512",
+  "transform": "tv_short:224",
+  "align": null,
+  "expected_images": 900,
+  "reported_top1": 1.0,
+  "reported_top5": null,
+  "reported_note": "作者报 Accuracy 1.0 / Loss 0.0008。仓库自带完整训练产物（trainer_state.json / all_results.json / runs 下两个 tfevents），可精确还原：最终那次 run 为 12 epoch × 98 步/epoch × bs16 = 1176 步 → 训练集 1568 张；11 次 eval 的 eval_samples_per_second × eval_runtime 全部恰为 173 → 评测集 173 张（≈90/10 留出，并非「评训练集」）；accuracy 自 step100 起恒为 1.0，eval_loss 0.010712→0.000782；best_metric=0.0007819964、best_model_checkpoint=checkpoint-1100（上传的是 step1100 而非最终 1176 的权重）。另有一次早期平行 run（Jul05：440 步=10 epoch、评测集 77 张、step100 acc=0.987 随后转 1.0）。『10 步 blurry』的真实含义经实测确认＝在 30 步的调度里【只跑前 10 步就解码】出半成品 latent（作者原话 unfinished/insufficient passes，且模型卡把负类叫 noisy 而非模糊）：若误解为 num_inference_steps=10（10 步调度跑完整），模型毫无判别力（900 张仅 48.22%，判定率与真实类别无关）；改用截半步后模型 24/24 全判对且置信度均 0.999。本表按此机制重建 450 对（同 prompt 同 seed，75 条 prompt × 6 seed）。预处理 tv_short:224 对 512×512 方图与作者 ViTFeatureExtractor 的压扁口径等价（resample 均为双线性）",
+  "prepare": {
+    "args": [
+      "--row",
+      "168",
+      "--n-prompts",
+      "75",
+      "--seeds-per-prompt",
+      "6"
+    ]
+  }
+}

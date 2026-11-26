@@ -1,0 +1,224 @@
+{
+  "models": [
+    {
+      "sequence": 170,
+      "model_id": "dima806/medicinal_plants_image_detection",
+      "runner_family": "metax_c500_161_170",
+      "adapter": "native_labels",
+      "state": "integrated",
+      "dataset": {
+        "id": "indian_medicinal",
+        "relation": "same_domain_sample",
+        "split": "dataset/indian_170 · med.zip 中 46 个可对应类目录, 每簇 ≤80 张 (3680 images)",
+        "note": [
+          "sydney31/Indian_Medicinal_Plants_and_Leaf_Dataset_Large 的 med.zip（13.28GB）流式读取"
+        ],
+        "index_source": null,
+        "data_containers": []
+      },
+      "qualification": "selected_proxy_scope",
+      "limitations": [
+        "模型为 52 类输出，其中 6 对同物异名（Curry/Curry_Leaf、Pappaya/Papaya、Doddpathre/Doddapatre、Tulsi/Tulasi、Gauva/Guava、Bhrami/Brahmi）合并为 46 簇；prediction 是簇内 logsumexp 后的簇号，不是原生 52 类索引。",
+        "评测集自建：从 med.zip 的 169 个类目录中取模型能对上的 46 个，每簇抽样不超过 80 张，与训练集同源、可能重叠，高分属合理范围。",
+        "作者 99.62% 为 Kaggle 私有切分（6012 张），公开 zip 无法还原，不作复现判定。",
+        "只有 Top-1；Top-5 未保存。"
+      ],
+      "num_classes": 46,
+      "expected_images": 3680,
+      "existing_protocol": {
+        "id": "metax_c500_m170_v1",
+        "scope": "3680 images; original inference and alignment done by run_inference.py, this inventory entry only registers the conversion/scoring scope",
+        "expected_inference_images": 3680,
+        "expected_scored_images": 3680,
+        "metrics_path": "m170/metrics.json",
+        "official_reference_comparable": false
+      },
+      "categories": [
+        {
+          "id": 0,
+          "name": "Amla"
+        },
+        {
+          "id": 1,
+          "name": "Curry / Curry_Leaf"
+        },
+        {
+          "id": 2,
+          "name": "Betel"
+        },
+        {
+          "id": 3,
+          "name": "Bamboo"
+        },
+        {
+          "id": 4,
+          "name": "Palak(Spinach)"
+        },
+        {
+          "id": 5,
+          "name": "Coriender"
+        },
+        {
+          "id": 6,
+          "name": "Ashoka"
+        },
+        {
+          "id": 7,
+          "name": "Seethapala"
+        },
+        {
+          "id": 8,
+          "name": "Lemon_grass"
+        },
+        {
+          "id": 9,
+          "name": "Pappaya / Papaya"
+        },
+        {
+          "id": 10,
+          "name": "Lemon"
+        },
+        {
+          "id": 11,
+          "name": "Nooni"
+        },
+        {
+          "id": 12,
+          "name": "Henna"
+        },
+        {
+          "id": 13,
+          "name": "Mango"
+        },
+        {
+          "id": 14,
+          "name": "Doddpathre / Doddapatre"
+        },
+        {
+          "id": 15,
+          "name": "Amruta_Balli"
+        },
+        {
+          "id": 16,
+          "name": "Betel_Nut"
+        },
+        {
+          "id": 17,
+          "name": "Tulsi / Tulasi"
+        },
+        {
+          "id": 18,
+          "name": "Pomegranate"
+        },
+        {
+          "id": 19,
+          "name": "Castor"
+        },
+        {
+          "id": 20,
+          "name": "Jackfruit"
+        },
+        {
+          "id": 21,
+          "name": "Insulin"
+        },
+        {
+          "id": 22,
+          "name": "Pepper"
+        },
+        {
+          "id": 23,
+          "name": "Raktachandini"
+        },
+        {
+          "id": 24,
+          "name": "Aloevera"
+        },
+        {
+          "id": 25,
+          "name": "Jasmine"
+        },
+        {
+          "id": 26,
+          "name": "Neem"
+        },
+        {
+          "id": 27,
+          "name": "Geranium"
+        },
+        {
+          "id": 28,
+          "name": "Rose"
+        },
+        {
+          "id": 29,
+          "name": "Gauva / Guava"
+        },
+        {
+          "id": 30,
+          "name": "Hibiscus"
+        },
+        {
+          "id": 31,
+          "name": "Nithyapushpa"
+        },
+        {
+          "id": 32,
+          "name": "Wood_sorel"
+        },
+        {
+          "id": 33,
+          "name": "Tamarind"
+        },
+        {
+          "id": 34,
+          "name": "Bhrami / Brahmi"
+        },
+        {
+          "id": 35,
+          "name": "Sapota"
+        },
+        {
+          "id": 36,
+          "name": "Basale"
+        },
+        {
+          "id": 37,
+          "name": "Avacado"
+        },
+        {
+          "id": 38,
+          "name": "Ashwagandha"
+        },
+        {
+          "id": 39,
+          "name": "Nagadali"
+        },
+        {
+          "id": 40,
+          "name": "Arali"
+        },
+        {
+          "id": 41,
+          "name": "Ekka"
+        },
+        {
+          "id": 42,
+          "name": "Ganike"
+        },
+        {
+          "id": 43,
+          "name": "Honge"
+        },
+        {
+          "id": 44,
+          "name": "Mint"
+        },
+        {
+          "id": 45,
+          "name": "Catharanthus"
+        }
+      ]
+    }
+  ]
+}

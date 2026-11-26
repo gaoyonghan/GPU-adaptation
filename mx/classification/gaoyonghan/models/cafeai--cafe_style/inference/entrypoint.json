@@ -1,0 +1,38 @@
+{
+  "sequence": 137,
+  "model_id": "cafeai/cafe_style",
+  "task": "classification",
+  "commands": [
+    {
+      "arguments": [
+        "__PYTHON__",
+        "__MODEL_ROOT__/inference/native/run_model.py",
+        "--phase",
+        "full",
+        "--output-root",
+        "__OUTPUT_ROOT__",
+        "--device",
+        "cuda:0",
+        "--batch-size",
+        "16",
+        "--warmup",
+        "3",
+        "--workers",
+        "0"
+      ],
+      "environment": {
+        "PYTHONNOUSERSITE": "1",
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "HF_HUB_OFFLINE": "1",
+        "TRANSFORMERS_OFFLINE": "1",
+        "PYTHONPATH": "__MODEL_ROOT__/inference/native:__MODEL_ROOT__/inference"
+      }
+    }
+  ],
+  "single_model_sample": false,
+  "smoke_commands": [],
+  "state": "runnable",
+  "accepts_max_images": false,
+  "accepts_smoke_flag": false,
+  "platform": "metax"
+}

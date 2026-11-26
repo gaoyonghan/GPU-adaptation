@@ -1,0 +1,459 @@
+--- before_run_model.py
++++ inference/native/run_model.py
+@@ -1,5 +1,5 @@
+ #!/usr/bin/env python3
+-"""Offline, resumable dispatcher for the first 62 object-detection models."""
++"""Offline, resumable inference for Xenova/detr-resnet-50."""
+ 
+ from __future__ import annotations
+ 
+@@ -1101,104 +1101,6 @@
+     return module
+ 
+ 
+-def run_table_structure(
+-    spec: dict[str, Any], dataset: dict[str, Any], model_root: Path, dataset_root: Path,
+-    source_root: Path, output_dir: Path, max_images: int, device: str, dtype: str,
+-) -> dict[str, Any]:
+-    official = load_table_official_eval(source_root)
+-    import fitz
+-    if fitz.VersionBind != "1.21.1":
+-        raise RuntimeError("GriTS requires author's PyMuPDF==1.21.1; run setup_repairs.sh")
+-    prepared = prepare_dataset(dataset, dataset_root, output_dir.parent / "_prepared_datasets")
+-    try:
+-        images = list(prepared.annotation["images"])
+-        selected = images if max_images == 0 else images[:max_images]
+-        expected = dataset.get("expected_images")
+-        if expected is not None and len(images) != expected:
+-            raise RuntimeError(f"PubTables 图像数不符: {len(images)} != {expected}")
+-        extras = prepared.extras or {}
+-        annotations_by_image: dict[int, list[dict[str, Any]]] = {}
+-        for annotation in prepared.annotation["annotations"]:
+-            annotations_by_image.setdefault(int(annotation["image_id"]), []).append(annotation)
+-        predictions_path = output_dir / "predictions.jsonl"
+-        records = read_jsonl(predictions_path)
+-        existing = {int(record["image_id"]) for record in records}
+-        predictor = load_table_structure_predictor(model_root / spec["model_id"], device, dtype)
+-        names = {index: name for index, name in enumerate(dataset["class_names"])}
+-        mapping = {index: index + 1 for index in names}
+-        class_names = official.structure_class_names
+-        thresholds = official.structure_class_thresholds
+-        class_map = official.structure_class_map
+-
+-        for position, info in enumerate(selected, 1):
+-            image_id = int(info["id"])
+-            if image_id in existing:
+-                continue
+-            image = prepared.read_image(info)
+-            predicted = predictor(image)
+-            pred_boxes = [box for box, _, _ in predicted]
+-            pred_scores = [score for _, score, _ in predicted]
+-            pred_labels = [label for _, _, label in predicted]
+-            true_boxes = []
+-            true_labels = []
+-            for annotation in annotations_by_image.get(image_id, []):
+-                x, y, width, height = annotation["bbox"]
+-                true_boxes.append([x, y, x + width, y + height])
+-                true_labels.append(int(annotation["category_id"]) - 1)
+-            true_scores = [1.0] * len(true_labels)
+-            tokens = json.loads(Path(extras[image_id]["words_path"]).read_text(encoding="utf-8"))
+-            true_structure, true_cells, _ = official.objects_to_cells(
+-                true_boxes, true_labels, true_scores, tokens, class_names, thresholds, class_map,
+-            )
+-            _, pred_cells, _ = official.objects_to_cells(
+-                pred_boxes, pred_labels, pred_scores, tokens, class_names, thresholds, class_map,
+-            )
+-            sample_metrics = official.compute_metrics(
+-                "grits-all", true_boxes, true_labels, true_scores, true_cells,
+-                pred_boxes, pred_labels, pred_scores, pred_cells,
+-            )
+-            sample_metrics.update(official.compute_statistics(true_structure, true_cells))
+-            sample_metrics = {key: float(value) if hasattr(value, "item") or isinstance(value, float) else value for key, value in sample_metrics.items()}
+-            detections = []
+-            for box, score, label in predicted:
+-                if label not in mapping:
+-                    continue
+-                x1, y1, x2, y2 = box
+-                detections.append({"image_id": image_id, "category_id": mapping[label], "bbox": [x1, y1, max(0.0, x2 - x1), max(0.0, y2 - y1)], "score": score})
+-            append_jsonl(predictions_path, {"image_id": image_id, "detections": detections, "grits": sample_metrics})
+-            if position == 1 or position % 25 == 0 or position == len(selected):
+-                print(f"[{spec['model_key']}] {position}/{len(selected)}", flush=True)
+-
+-        records = read_jsonl(predictions_path)
+-        selected_ids = {int(info["id"]) for info in selected}
+-        completed = sum(int(record["image_id"]) in selected_ids for record in records)
+-        result = {
+-            "state": "partial_complete", "completed_images": completed, "total_images": len(images),
+-            "class_mapping": {str(key): value for key, value in mapping.items()},
+-            "dataset_snapshot": {
+-                "images": len(images), "annotations": len(prepared.annotation["annotations"]),
+-                "categories": len(prepared.annotation["categories"]),
+-                "annotation_sha256": hashlib.sha256(json.dumps(prepared.annotation, sort_keys=True, separators=(",", ":")).encode()).hexdigest(),
+-            },
+-        }
+-        if max_images == 0:
+-            if len(records) != len(images):
+-                raise RuntimeError(f"全量 GriTS 覆盖不完整: {len(records)}/{len(images)}")
+-            detections = [item for record in records for item in record["detections"]]
+-            atomic_json(output_dir / "predictions.json", detections)
+-            summary = official.compute_metrics_summary([record["grits"] for record in records], "grits-all")
+-            serializable = {group: {key: float(value) if hasattr(value, "item") else value for key, value in values.items()} for group, values in summary.items()}
+-            metrics_document = {
+-                "metrics": serializable,
+-                "official_evaluator": "microsoft/table-transformer src/eval.py",
+-                "official_reference": spec["protocol"]["official_reference"],
+-                "reference_check": {"classification": "manual_reference_required"},
+-            }
+-            atomic_json(output_dir / "metrics.json", metrics_document)
+-            result.update({"state": "complete", "completed_images": len(images), "metrics": metrics_document})
+-        return result
+-    finally:
+-        prepared.close()
+ 
+ 
+ def box_iou_xyxy(first: list[float], second: list[float]) -> float:
+@@ -1211,84 +1113,6 @@
+     return intersection / union if union > 0 else 0.0
+ 
+ 
+-def run_rfdetr_webclick(
+-    spec: dict[str, Any], dataset: dict[str, Any], model_root: Path, dataset_root: Path,
+-    output_dir: Path, max_images: int, dtype: str,
+-) -> dict[str, Any]:
+-    if dtype != "float32":
+-        raise RuntimeError("UI-DETR-1 模型卡链路冻结为 float32")
+-    import numpy as np
+-    import pyarrow.parquet as parquet
+-    from rfdetr.detr import RFDETRMedium
+-
+-    rows: list[dict[str, Any]] = []
+-    for relative in dataset["paths"]:
+-        rows.extend(parquet.read_table(dataset_root / relative).to_pylist())
+-    expected = dataset.get("expected_images")
+-    if expected is not None and len(rows) != expected:
+-        raise RuntimeError(f"WebClick 样本数不符: {len(rows)} != {expected}")
+-    selected = rows if max_images == 0 else rows[:max_images]
+-    predictions_path = output_dir / "predictions.jsonl"
+-    records = read_jsonl(predictions_path)
+-    existing = {int(record["image_id"]) for record in records}
+-    model = RFDETRMedium(
+-        pretrain_weights=str(model_root / spec["model_id"] / spec["model"]["weight_file"]),
+-        resolution=int(spec["protocol"]["input_size"]),
+-    )
+-    threshold = float(spec["protocol"]["score_threshold"])
+-    for index, row in enumerate(selected):
+-        image_id = index + 1
+-        if image_id in existing:
+-            continue
+-        with Image.open(io.BytesIO(row["image"])) as opened:
+-            image = opened.convert("RGB")
+-        width, height = image.size
+-        detections = model.predict(np.asarray(image), threshold=threshold)
+-        boxes = [[float(value) for value in box] for box in detections.xyxy]
+-        confidence = getattr(detections, "confidence", None)
+-        scores = [float(value) for value in confidence] if confidence is not None else [1.0] * len(boxes)
+-        relative = [float(value) for value in row["bbox"]]
+-        target = [relative[0] * width, relative[1] * height, relative[2] * width, relative[3] * height]
+-        center_x, center_y = (target[0] + target[2]) / 2, (target[1] + target[3]) / 2
+-        center_covered = any(box[0] <= center_x <= box[2] and box[1] <= center_y <= box[3] for box in boxes)
+-        maximum_iou = max((box_iou_xyxy(box, target) for box in boxes), default=0.0)
+-        append_jsonl(predictions_path, {
+-            "image_id": image_id, "instruction": row["instruction"], "bucket": row["bucket"],
+-            "target_bbox_relative_xyxy": relative, "target_bbox_pixel_xyxy": target,
+-            "detections": [{"bbox_xyxy": box, "score": score} for box, score in zip(boxes, scores)],
+-            "oracle_target_center_covered": center_covered, "oracle_max_iou": maximum_iou,
+-        })
+-        position = index + 1
+-        if position == 1 or position % 25 == 0 or position == len(selected):
+-            print(f"[{spec['model_key']}] {position}/{len(selected)}", flush=True)
+-    records = read_jsonl(predictions_path)
+-    selected_ids = set(range(1, len(selected) + 1))
+-    completed = sum(int(record["image_id"]) in selected_ids for record in records)
+-    result = {"state": "partial_complete", "completed_images": completed, "total_images": len(rows)}
+-    if max_images == 0:
+-        if len(records) != len(rows):
+-            raise RuntimeError(f"WebClick 全量覆盖不完整: {len(records)}/{len(rows)}")
+-        overall = sum(bool(record["oracle_target_center_covered"]) for record in records) / len(records)
+-        iou50 = sum(float(record["oracle_max_iou"]) >= 0.5 for record in records) / len(records)
+-        buckets = {}
+-        for bucket in sorted({str(record["bucket"]) for record in records}):
+-            subset = [record for record in records if str(record["bucket"]) == bucket]
+-            buckets[bucket] = {
+-                "samples": len(subset),
+-                "oracle_target_center_coverage": sum(bool(record["oracle_target_center_covered"]) for record in subset) / len(subset),
+-            }
+-        metrics_document = {
+-            "metrics": {"oracle_target_center_coverage": overall, "oracle_iou50_coverage": iou50},
+-            "by_bucket": buckets,
+-            "official_reference": spec["protocol"]["official_reference"],
+-            "reference_check": {
+-                "classification": "not_officially_comparable",
+-                "reason": "模型卡 70.8% 还包含 Gemini 2.5 Pro 根据编号框和文本指令选择点击目标；本地只评估检测框覆盖能力。",
+-            },
+-        }
+-        atomic_json(output_dir / "metrics.json", metrics_document)
+-        result.update({"state": "complete", "completed_images": len(rows), "metrics": metrics_document})
+-    return result
+ 
+ 
+ def safe_extract_zip(archive_path: Path, target: Path) -> None:
+@@ -1365,97 +1189,6 @@
+     return metrics
+ 
+ 
+-def run_yoloe_official(
+-    spec: dict[str, Any], dataset: dict[str, Any], model_root: Path, dataset_root: Path,
+-    source_root: Path, output_dir: Path, max_images: int, device: str, dtype: str,
+-) -> dict[str, Any]:
+-    import yaml
+-    from ultralytics import YOLOE
+-    from ultralytics.models.yolo.yoloe.val_pe_free import YOLOEPEFreeDetectValidator
+-    from ultralytics.nn.modules.head import YOLOEDetect
+-
+-    repository = source_root / "yoloe"
+-    if not (repository / "val_pe_free.py").is_file():
+-        raise FileNotFoundError(f"缺少 YOLOE 官方源码；请先运行 setup_env.sh: {repository}")
+-    lvis_root, selected_file, total_images = prepare_yoloe_dataset(
+-        dataset, dataset_root, output_dir.parent / "_prepared_datasets", max_images,
+-    )
+-    data = yaml.safe_load((repository / "ultralytics/cfg/datasets/lvis.yaml").read_text(encoding="utf-8"))
+-    data["path"] = str(lvis_root)
+-    data["minival"] = str(selected_file)
+-    run_name = "full" if max_images == 0 else f"smoke_{max_images}"
+-    data_yaml = output_dir / f"lvis.{run_name}.yaml"
+-    data_yaml.write_text(yaml.safe_dump(data, allow_unicode=True, sort_keys=False), encoding="utf-8")
+-    model_dir = model_root / spec["model_id"]
+-    prompt_free_weight = model_dir / spec["model"]["weight_file"]
+-    unfused_weight = model_dir / spec["model"]["auxiliary_weight_files"][0]
+-    ultra_device = device.split(":", 1)[1] if device.startswith("cuda:") else device
+-    if ultra_device == "cpu":
+-        raise RuntimeError("YOLOE 官方 prompt-free vocab/Fixed AP 链路需要 CUDA")
+-    native_root = output_dir / "native"
+-    with working_directory(repository):
+-        unfused = YOLOE(str(unfused_weight))
+-        unfused.eval()
+-        unfused.to(device)
+-        names = [line.strip() for line in (repository / "tools/ram_tag_list.txt").read_text(encoding="utf-8").splitlines() if line.strip()]
+-        vocab = unfused.get_vocab(names)
+-        model = YOLOE(str(prompt_free_weight)).to(device)
+-        model.set_vocab(vocab, names=names)
+-        head = model.model.model[-1]
+-        head.is_fused = True
+-        head.conf = float(spec["protocol"]["score_threshold"])
+-        head.max_det = int(spec["protocol"]["max_detections"])
+-        head.__class__ = YOLOEDetect
+-        validation = model.val(
+-            data=str(data_yaml), batch=1, split="minival", rect=False,
+-            max_det=int(spec["protocol"]["max_detections"]), single_cls=False,
+-            validator=YOLOEPEFreeDetectValidator, project=str(native_root), name=run_name,
+-            exist_ok=True, save_json=True, device=ultra_device, half=dtype == "float16",
+-        )
+-    save_dir = Path(getattr(validation, "save_dir", native_root / run_name))
+-    prediction_candidates = [save_dir / "predictions.json", native_root / run_name / "predictions.json"]
+-    predictions_path = next((path for path in prediction_candidates if path.is_file()), None)
+-    if predictions_path is None:
+-        found = list(native_root.rglob("predictions.json"))
+-        predictions_path = found[-1] if found else None
+-    if predictions_path is None:
+-        raise FileNotFoundError(f"YOLOE 官方 validator 未生成 predictions.json: {native_root}")
+-    completed = total_images if max_images == 0 else min(max_images, total_images)
+-    result: dict[str, Any] = {
+-        "state": "partial_complete", "completed_images": completed, "total_images": total_images,
+-        "native_predictions": str(predictions_path),
+-    }
+-    if max_images == 0:
+-        annotation = lvis_root / "annotations/lvis_v1_minival.json"
+-        command = [
+-            sys.executable, str(repository / "tools/eval_open_ended.py"), "--json", str(annotation),
+-            "--pred", str(predictions_path), "--names", str(repository / "tools/ram_tag_list.txt"),
+-            "--devices", "0", "--fixed",
+-        ]
+-        environment = dict(os.environ)
+-        environment["PYTHONPATH"] = os.pathsep.join([str(repository / "third_party/lvis-api"), str(repository), environment.get("PYTHONPATH", "")])
+-        # The official open-ended script starts eval_fixed_ap.py via `python`.
+-        environment["PATH"] = str(Path(sys.executable).parent) + os.pathsep + environment.get("PATH", "")
+-        with working_directory(repository):
+-            evaluated = subprocess.run(command, capture_output=True, text=True, env=environment)
+-        log = evaluated.stdout + ("\nSTDERR:\n" + evaluated.stderr if evaluated.stderr else "")
+-        (output_dir / "official_evaluator.log").write_text(log, encoding="utf-8")
+-        print(log, flush=True)
+-        if evaluated.returncode != 0:
+-            raise RuntimeError(f"YOLOE 官方 LVIS evaluator 失败，退出码 {evaluated.returncode}")
+-        metrics = parse_metric_log(log)
+-        if "AP" not in metrics:
+-            raise RuntimeError("YOLOE evaluator returned without an AP; inspect official_evaluator.log (nested evaluator may have failed)")
+-        metrics_document = {
+-            "metrics": metrics,
+-            "metrics_percent": {key: value * 100.0 for key, value in metrics.items()},
+-            "official_reference": spec["protocol"]["official_reference"],
+-            "reference_check": reference_result(spec, metrics),
+-            "official_command": command,
+-        }
+-        atomic_json(output_dir / "metrics.json", metrics_document)
+-        result.update({"state": "complete", "metrics": metrics_document})
+-    return result
+ 
+ 
+ def to_jsonable(value: Any) -> Any:
+@@ -1468,128 +1201,8 @@
+     return value
+ 
+ 
+-def run_wilddet3d_official(
+-    spec: dict[str, Any], dataset: dict[str, Any], model_root: Path, dataset_root: Path,
+-    source_root: Path, output_dir: Path, max_images: int, device: str,
+-) -> dict[str, Any]:
+-    repository = source_root / "WildDet3D"
+-    if not (repository / "configs/eval/in_the_wild/text.py").is_file():
+-        raise FileNotFoundError(f"缺少 WildDet3D 官方源码；请先运行 setup_env.sh: {repository}")
+-    dataset_dir = dataset_root / dataset["path"]
+-    annotation_path = dataset_dir / dataset["annotation"]
+-    annotation = json.loads(annotation_path.read_text(encoding="utf-8"))
+-    if len(annotation["images"]) != int(dataset["expected_images"]):
+-        raise RuntimeError(f"WildDet3D 图像数不符: {len(annotation['images'])} != {dataset['expected_images']}")
+-    checkpoint = model_root / spec["model_id"] / spec["model"]["weight_file"]
+-    if max_images == 0:
+-        required = [repository / "pretrained/sam3/sam3_detector.pt", repository / "pretrained/lingbot-depth/postrain-dc-vitl14/model.pt"]
+-        missing = [str(path) for path in required if not path.is_file()]
+-        if missing:
+-            raise FileNotFoundError(f"Official WildDet3D auxiliary weights missing: {missing}; run prepare_wilddet_weights.py after obtaining SAM3 access")
+-    if max_images != 0:
+-        import numpy as np
+-        import torch
+-
+-        sys.path.insert(0, str(repository))
+-        with working_directory(repository):
+-            from wilddet3d import build_model, preprocess
+-            model = build_model(checkpoint=str(checkpoint), score_threshold=float(spec["protocol"]["score_threshold"]), skip_pretrained=True)
+-            model.eval()
+-            model.to(device)
+-            annotations_by_image: dict[int, list[str]] = {}
+-            for item in annotation["annotations"]:
+-                annotations_by_image.setdefault(int(item["image_id"]), []).append(str(item["category_name"]))
+-            selected = annotation["images"][:max_images]
+-            predictions_path = output_dir / "predictions.jsonl"
+-            records = read_jsonl(predictions_path)
+-            existing = {int(record["image_id"]) for record in records}
+-            for position, info in enumerate(selected, 1):
+-                image_id = int(info["id"])
+-                if image_id in existing:
+-                    continue
+-                image_path = dataset_dir / info["file_path"]
+-                with Image.open(image_path) as opened:
+-                    image = np.asarray(opened.convert("RGB"), dtype=np.float32)
+-                prepared = preprocess(image, np.asarray(info["K"], dtype=np.float32))
+-                names = list(dict.fromkeys(annotations_by_image.get(image_id, [])))[:50]
+-                with torch.inference_mode():
+-                    results = model(
+-                        images=prepared["images"].to(device),
+-                        intrinsics=prepared["intrinsics"].to(device)[None],
+-                        input_hw=[prepared["input_hw"]], original_hw=[prepared["original_hw"]],
+-                        padding=[prepared["padding"]], input_texts=names,
+-                    )
+-                append_jsonl(predictions_path, {"image_id": image_id, "input_texts": names, "outputs": to_jsonable(results)})
+-                print(f"[{spec['model_key']}] {position}/{len(selected)}", flush=True)
+-        return {"state": "partial_complete", "completed_images": len(selected), "total_images": len(annotation["images"])}
+-
+-    data_parent = repository / "data"
+-    data_parent.mkdir(parents=True, exist_ok=True)
+-    link = data_parent / "in_the_wild"
+-    if link.is_symlink():
+-        if link.resolve() != dataset_dir.resolve():
+-            raise RuntimeError(f"WildDet3D 数据链接指向其他目录: {link} -> {link.resolve()}")
+-    elif link.exists():
+-        if link.resolve() != dataset_dir.resolve():
+-            raise RuntimeError(f"WildDet3D 官方源码的 data/in_the_wild 已存在且不是本数据集: {link}")
+-    else:
+-        link.symlink_to(dataset_dir, target_is_directory=True)
+-    vis4d = Path(sys.executable).parent / "vis4d"
+-    command = [str(vis4d), "test", "--config", "configs/eval/in_the_wild/text.py", "--gpus", "1", "--ckpt", str(checkpoint)]
+-    environment = dict(os.environ)
+-    environment["VIS4D_WORKSPACE"] = str(output_dir / "native")
+-    environment["PYTHONPATH"] = os.pathsep.join([str(repository), environment.get("PYTHONPATH", "")])
+-    with working_directory(repository):
+-        evaluated = subprocess.run(command, capture_output=True, text=True, env=environment)
+-    log = evaluated.stdout + ("\nSTDERR:\n" + evaluated.stderr if evaluated.stderr else "")
+-    (output_dir / "official_evaluator.log").write_text(log, encoding="utf-8")
+-    print(log, flush=True)
+-    if evaluated.returncode != 0:
+-        raise RuntimeError(f"WildDet3D 官方 Vis4D evaluator 失败，退出码 {evaluated.returncode}")
+-    metrics = parse_metric_log(log)
+-    if "AP" not in metrics:
+-        raise RuntimeError("WildDet3D evaluator returned without an AP; inspect official_evaluator.log")
+-    metrics_document = {
+-        "metrics": metrics,
+-        "metrics_percent": {key: value * 100.0 if value <= 1.0 else value for key, value in metrics.items()},
+-        "official_reference": spec["protocol"]["official_reference"],
+-        "reference_check": reference_result(spec, {key: value if value <= 1.0 else value / 100.0 for key, value in metrics.items()}),
+-        "official_command": command,
+-    }
+-    atomic_json(output_dir / "metrics.json", metrics_document)
+-    return {"state": "complete", "completed_images": len(annotation["images"]), "total_images": len(annotation["images"]), "metrics": metrics_document}
+-
+-
+-def run_delegate(spec: dict[str, Any], output_dir: Path, max_images: int, device: str) -> dict[str, Any]:
+-    package = Path("__MODEL_ROOT__/resources/runtime/assets/workspace/document_layout_table_eval")
+-    if not (package / "run_model.py").is_file():
+-        raise FileNotFoundError(package / "run_model.py")
+-    keys = ["taha-ctdar-tracka"] if spec["sequence"] == 17 else ["aryn-doclaynet-val", "aryn-doclaynet-test"]
+-    statuses = {}
+-    for key in keys:
+-        command = [
+-            sys.executable, str(package / "run_model.py"), "--model", key,
+-            "--max-images", str(max_images), "--device", device,
+-            "--output-root", str(output_dir / "delegate"),
+-        ]
+-        subprocess.run(command, check=True)
+-        status = json.loads((output_dir / "delegate" / key / "status.json").read_text(encoding="utf-8"))
+-        statuses[key] = status
+-    states = {status["state"] for status in statuses.values()}
+-    state = "complete" if max_images == 0 and states == {"complete"} else "partial_complete"
+-    metrics = {}
+-    for key in keys:
+-        path = output_dir / "delegate" / key / "metrics.json"
+-        if path.is_file():
+-            metrics[key] = json.loads(path.read_text(encoding="utf-8"))
+-    if metrics:
+-        atomic_json(output_dir / "metrics.json", {"splits": metrics, "reference_check": {"classification": "manual_reference_required"}})
+-    return {
+-        "state": state,
+-        "completed_images": sum(int(status.get("completed_images", 0)) for status in statuses.values()),
+-        "total_images": sum(int(status.get("total_images", 0)) for status in statuses.values()),
+-        "delegated_statuses": statuses,
+-    }
++
++
+ 
+ 
+ def blocked_status(spec: dict[str, Any], output_root: Path, reason: str | None = None, blocker_type: str | None = None) -> dict[str, Any]:
+@@ -1681,29 +1294,7 @@
+         try:
+             runner = spec["protocol"]["runner"]
+             dataset = manifest["datasets"][spec["dataset"]["id"]]
+-            if runner == "document_layout_delegate":
+-                result = run_delegate(spec, output_dir, args.max_images, device)
+-            elif runner == "table_structure_grits":
+-                result = run_table_structure(
+-                    spec, dataset, args.model_root, args.dataset_root, args.source_root,
+-                    output_dir, args.max_images, device, args.dtype,
+-                )
+-            elif runner == "rfdetr_webclick":
+-                result = run_rfdetr_webclick(
+-                    spec, dataset, args.model_root, args.dataset_root, output_dir, args.max_images, args.dtype,
+-                )
+-            elif runner == "yoloe_official":
+-                result = run_yoloe_official(
+-                    spec, dataset, args.model_root, args.dataset_root, args.source_root,
+-                    output_dir, args.max_images, device, args.dtype,
+-                )
+-            elif runner == "wilddet3d_official":
+-                result = run_wilddet3d_official(
+-                    spec, dataset, args.model_root, args.dataset_root, args.source_root,
+-                    output_dir, args.max_images, device,
+-                )
+-            else:
+-                result = run_generic(spec, dataset, args.model_root, args.dataset_root, output_dir, args.max_images, device, args.dtype)
++            result = run_generic(spec, dataset, args.model_root, args.dataset_root, output_dir, args.max_images, device, args.dtype)
+             status.update(result)
+             status["elapsed_seconds"] = time.time() - started
+             atomic_json(status_path, status)

@@ -1,0 +1,66 @@
+{
+  "schema": "model-eval/classification-inventory/v1",
+  "scope": "One independent MX GPU classification model",
+  "models": [
+    {
+      "sequence": 104,
+      "model_id": "microsoft/dit-large-finetuned-rvlcdip",
+      "dataset": {
+        "id": "RVL-CDIP",
+        "split": "test",
+        "note": [
+          "RVL-CDIP test\n39,999 张，跳过 1 张损坏图"
+        ],
+        "native_scope": {
+          "id": "aharley/rvl_cdip",
+          "name": "RVL-CDIP",
+          "split": "test",
+          "image_count": 39999,
+          "skipped_corrupt_images": 1,
+          "expected_image_count": 40000,
+          "class_count": 16,
+          "class_names": [
+            "letter",
+            "form",
+            "email",
+            "handwritten",
+            "advertisement",
+            "scientific report",
+            "scientific publication",
+            "specification",
+            "file folder",
+            "news article",
+            "budget",
+            "invoice",
+            "presentation",
+            "questionnaire",
+            "resume",
+            "memo"
+          ]
+        },
+        "relation": "native_e07_registered_scope",
+        "index_source": "native loader GT, materialized as classification_annotations.json in the native phase directory",
+        "data_containers": [
+          "dataset/RVL-CDIP/cache/aharley___rvl_cdip/default/1.0.0/b9e57261da1599f0f1a4a03abe42d47bfa600a4fd3d3297cd0d0d45309085b23/rvl_cdip-test-00000-of-00010.arrow",
+          "dataset/RVL-CDIP/cache/aharley___rvl_cdip/default/1.0.0/b9e57261da1599f0f1a4a03abe42d47bfa600a4fd3d3297cd0d0d45309085b23/rvl_cdip-test-00001-of-00010.arrow",
+          "dataset/RVL-CDIP/cache/aharley___rvl_cdip/default/1.0.0/b9e57261da1599f0f1a4a03abe42d47bfa600a4fd3d3297cd0d0d45309085b23/rvl_cdip-test-00002-of-00010.arrow",
+          "dataset/RVL-CDIP/cache/aharley___rvl_cdip/default/1.0.0/b9e57261da1599f0f1a4a03abe42d47bfa600a4fd3d3297cd0d0d45309085b23/rvl_cdip-test-00003-of-00010.arrow",
+          "dataset/RVL-CDIP/cache/aharley___rvl_cdip/default/1.0.0/b9e57261da1599f0f1a4a03abe42d47bfa600a4fd3d3297cd0d0d45309085b23/rvl_cdip-test-00004-of-00010.arrow",
+          "dataset/RVL-CDIP/cache/aharley___rvl_cdip/default/1.0.0/b9e57261da1599f0f1a4a03abe42d47bfa600a4fd3d3297cd0d0d45309085b23/rvl_cdip-test-00005-of-00010.arrow",
+          "dataset/RVL-CDIP/cache/aharley___rvl_cdip/default/1.0.0/b9e57261da1599f0f1a4a03abe42d47bfa600a4fd3d3297cd0d0d45309085b23/rvl_cdip-test-00006-of-00010.arrow",
+          "dataset/RVL-CDIP/cache/aharley___rvl_cdip/default/1.0.0/b9e57261da1599f0f1a4a03abe42d47bfa600a4fd3d3297cd0d0d45309085b23/rvl_cdip-test-00007-of-00010.arrow",
+          "dataset/RVL-CDIP/cache/aharley___rvl_cdip/default/1.0.0/b9e57261da1599f0f1a4a03abe42d47bfa600a4fd3d3297cd0d0d45309085b23/rvl_cdip-test-00008-of-00010.arrow",
+          "dataset/RVL-CDIP/cache/aharley___rvl_cdip/default/1.0.0/b9e57261da1599f0f1a4a03abe42d47bfa600a4fd3d3297cd0d0d45309085b23/rvl_cdip-test-00009-of-00010.arrow"
+        ]
+      },
+      "qualification": "native_registered_scope",
+      "limitations": [
+        "Capture-ready is a code integration state, not a claim that inference has passed.",
+        "Unobserved native Top-5 is unavailable; aggregate scores are not predictions."
+      ],
+      "num_classes": 16,
+      "expected_images": 39999,
+      "adapter": "native_labels"
+    }
+  ]
+}

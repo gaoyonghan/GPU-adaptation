@@ -1,0 +1,21 @@
+--- original_inference.py
++++ inference/native/run_cmarkea.py
+@@ -13,15 +13,15 @@
+ 
+ from run_model import core, digest, file_hash, metrics
+ 
+-MODEL = Path('/data2/gaoyonghan/gpu/model/cmarkea/detr-layout-detection')
+-DATA = Path('/data2/gaoyonghan/gpu/dataset')
++MODEL = Path('/data2/gaoyonghan/gpu_model_standalone_20261110/release/model/检测/cmarkea--detr-layout-detection/resources/model_index/cmarkea/detr-layout-detection')
++DATA = Path('/home/ubuntu/文档/ChatGPT/idea 2/outputs/launch_audit_20261005/migration_inputs/datasets')
+ 
+ 
+ def main():
+     parser = argparse.ArgumentParser()
+     parser.add_argument('--max-images', type=int, default=10)
+     parser.add_argument('--device', default='cuda:0')
+-    parser.add_argument('--output-root', type=Path, default=Path('/home/ubuntu/gaoyonghan/gpu/results/remaining25_cmarkea_v1'))
++    parser.add_argument('--output-root', type=Path, default=Path('/data2/gaoyonghan/gpu_model_standalone_20261110/release/model/检测/cmarkea--detr-layout-detection/resources/runtime/assets/workspace/results/remaining25_cmarkea_v1'))
+     args = parser.parse_args()
+     out = args.output_root
+     out.mkdir(parents=True, exist_ok=True)

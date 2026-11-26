@@ -1,0 +1,22 @@
+{
+  "sequence": 72,
+  "model_id": "NYUAD-ComNets/NYUAD_AI-generated_images_detector",
+  "source_archive_hash_matches": true,
+  "source_archive_sha256": "d382bf5fc759cb26f4c25000f4226ff80b2b910572c65d19b7c5de4cf13ad849",
+  "prepared_entry_source_sha256": "46b6bd9fd65c2cf8935eed293a160514a20697e633add5e5c50aea4925cb073e",
+  "local_entry_sha256": "440a79218c0466f88159755310014b66d361cc7f044c312c207a3d47a06c9d46",
+  "local_entry": "inference/native/run_model.py",
+  "central_dispatch_in_entry": false,
+  "unexpected_external_links": [],
+  "declared_dataset_links": [],
+  "broken_links": [],
+  "path_template_count": 275,
+  "state": "entrypoint_verified_full_run_pending",
+  "validation": {
+    "returncode": 0,
+    "python": "/home/ubuntu/gaoyonghan/gpu/classification8_eval/.venv/bin/python",
+    "checked_at": "2026-11-10T15:54:40.015802+08:00",
+    "scope": "native help/import/path check only; not full inference"
+  },
+  "smoke_verification": null
+}

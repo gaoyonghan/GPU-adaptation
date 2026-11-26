@@ -1,0 +1,30 @@
+{
+  "text_templates": [
+    {
+      "source": "inference/path_templates/inference/native/run_model.py",
+      "destination": "inference/native/run_model.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/common.py",
+      "destination": "inference/native/common.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/timing.py",
+      "destination": "inference/native/timing.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/models.json",
+      "destination": "inference/native/models.json"
+    },
+    {
+      "source": "inference/path_templates/inference/output_format/classification_inventory.json",
+      "destination": "inference/output_format/classification_inventory.json"
+    }
+  ],
+  "links": [],
+  "classification_manifests": [
+    "inference/native/models.json"
+  ],
+  "pet_indices": [],
+  "prepared_data_revision": "mx-layout-20261121"
+}

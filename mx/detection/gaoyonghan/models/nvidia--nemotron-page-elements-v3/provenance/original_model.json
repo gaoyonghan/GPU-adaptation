@@ -1,0 +1,107 @@
+{
+  "sequence": 22,
+  "model_id": "nvidia/nemotron-page-elements-v3",
+  "task": "object_detection",
+  "task_name": "目标检测",
+  "reported_result": "DocLayNet AP 16.78%\nInfoDet AP 46.72%\n分别覆盖4/6类、2/6类",
+  "reference": "按六类分别报告 AP/AR\n无可直接对应本次两套替代集的汇总值",
+  "model_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/model_index/nvidia/nemotron-page-elements-v3",
+  "model_exists_at_build": true,
+  "dataset": {
+    "id": "nemotron_public_composite",
+    "relation": "public_replacement",
+    "split": "composite public test",
+    "note": "DocLayNet test4999 + InfoDet test432\n非官方评测集：公开替代"
+  },
+  "environment_id": "detection-hf",
+  "runner_family": "remaining_detection",
+  "final_result_sources": [
+    {
+      "source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m022/metrics-0.json",
+      "sha256": "b37523f0f06ef8bc9f234f9863e06727ef5e2411f127a454c2f8fb92ee0ea486",
+      "selection": "workbook_score_match",
+      "data": {
+        "metrics": {
+          "AP": 0.16775784016388715,
+          "AP50": 0.32664847412983017,
+          "AP75": 0.14424971222280236,
+          "AP_small": 0.06091615972172728,
+          "AP_medium": 0.08573736053948847,
+          "AP_large": 0.14430565222513458,
+          "AR1": 0.14022531966995716,
+          "AR10": 0.2569631806448937,
+          "AR100": 0.2580394296623916,
+          "AR_small": 0.09704087667802748,
+          "AR_medium": 0.1449216011782522,
+          "AR_large": 0.24396864460398587,
+          "per_class_AP": {
+            "text": 0.035730192969360856,
+            "header_footer": 0.09999505203867784,
+            "title": 0.11446343468080784,
+            "table": 0.420842680966702
+          }
+        },
+        "unit": "fraction_0_to_1",
+        "coverage": {
+          "model_labels": {
+            "0": "table",
+            "1": "chart",
+            "2": "title",
+            "3": "infographic",
+            "4": "text",
+            "5": "header_footer"
+          },
+          "mapping": {
+            "0": 6,
+            "2": 5,
+            "4": 1,
+            "5": 3
+          },
+          "covered_labels": [
+            "table",
+            "title",
+            "text",
+            "header_footer"
+          ],
+          "missing_labels": [
+            "chart",
+            "infographic"
+          ],
+          "covered_count": 4,
+          "total_model_classes": 6,
+          "gt_instances_per_class": {
+            "text": 42392,
+            "header_footer": 7360,
+            "title": 8885,
+            "table": 2394
+          }
+        },
+        "evaluation_images": 4999,
+        "annotation_sha256": "8ccd18cefdeaf7b70eb8ee5fd159b8d898e3bddb2e132f5554819b33daaf601d",
+        "protocol_fingerprint": "3004868697e49e1c29304a414163019203dbf84d42dbfd5fe2d2cd1d219347e7",
+        "reference_check": "not_officially_comparable"
+      },
+      "source_original": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/remaining25_v3/m22-nemotron-page-elements-v3/doclaynet/metrics.json"
+    }
+  ],
+  "code": {
+    "source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/remaining25_v3/_source_snapshot/run_model.py",
+    "sha256": "79a11b48aadcd2cf5a4d733f752e1dcee2c260e778b9de2a0c787628cbe0c744",
+    "recorded_sha256": null,
+    "attestation": "result_batch_snapshot",
+    "status_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m022/status.json",
+    "selection": "same_batch_snapshot",
+    "archive": "code_archive/79a11b48aadcd2cf_run_model.py"
+  },
+  "support_files": [
+    "models.json",
+    "run_model.py",
+    "run_adapted.sh",
+    "adapters.py"
+  ],
+  "final_scorer": null,
+  "backend_package": "remaining_detection_eval",
+  "readiness": "code_and_result_identified",
+  "launch_status": "configured",
+  "metadata_warning": null
+}

@@ -1,0 +1,34 @@
+{
+  "schema": "model-eval/classification-inventory/v1",
+  "scope": "Existing 59 classification models; model 93 is retrieval and excluded.",
+  "models": [
+    {
+      "sequence": 191,
+      "model_id": "microsoft/beit-large-patch16-224-pt22k-ft22k",
+      "runner_family": "classification171",
+      "adapter": "native_labels",
+      "state": "integrated",
+      "dataset": {
+        "id": "classification171_191",
+        "relation": "public_replacement",
+        "split": "ImageNet-1K val overlap 999 classes",
+        "note": [
+          "Keep full model output head. Not an independent original model test set.",
+          "Local checkpoint and publisher inference components retained. Offline file paths, eval mode, batching, timing observation and reference scoring are external orchestration."
+        ],
+        "index_source": "__MODEL_ROOT__/inference/native/indices/191.jsonl",
+        "data_containers": []
+      },
+      "qualification": "public_replacement",
+      "limitations": [],
+      "num_classes": 21841,
+      "expected_images": 49950,
+      "category_reference": {
+        "file": "__MODEL_ROOT__/inference/native/models.json",
+        "sequence": 191,
+        "field": "label_mapping"
+      },
+      "gt_index": "__MODEL_ROOT__/inference/native/indices/191.jsonl"
+    }
+  ]
+}

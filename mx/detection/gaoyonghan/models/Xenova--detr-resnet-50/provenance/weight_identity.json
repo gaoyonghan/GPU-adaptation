@@ -1,0 +1,72 @@
+{
+  "sequence": 53,
+  "files": [
+    {
+      "path": "config.json",
+      "bytes": 4812,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "preprocessor_config.json",
+      "bytes": 455,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1811,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": ".gitattributes",
+      "bytes": 1477,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "onnx/model.onnx",
+      "bytes": 166789212,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "onnx/model_quantized.onnx",
+      "bytes": 43102531,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "onnx/model_q4f16.onnx",
+      "bytes": 58545965,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "onnx/model_uint8.onnx",
+      "bytes": 42680347,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "onnx/model_bnb4.onnx",
+      "bytes": 106776417,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "onnx/model_q4.onnx",
+      "bytes": 107866715,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "onnx/model_fp16.onnx",
+      "bytes": 83812437,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    }
+  ],
+  "mismatches": []
+}

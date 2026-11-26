@@ -1,0 +1,43 @@
+{
+  "audited_on": "2026-09-05",
+  "total_detection_models": 62,
+  "existing_green_batch": 37,
+  "remaining_models": 25,
+  "scope_note": "37是已选入队列数，不是全量完成数。25按唯一model_id统计；任务/权重子记录不重复计数。",
+  "source_manifest": "__MODEL_ROOT__/resources/runtime/assets/workspace/official_object_detection_eval/models.json",
+  "source_sha256": "b45b4ecf6abc95ee7f2f542b2125dd8fcf4b013bed08cf81dc50c452ce023c00",
+  "primary_blocker_counts": {
+    "旧替代集类别不全，需核对任务覆盖": 4,
+    "私有数据且缺任务匹配的公开金标": 2,
+    "原协议/划分不明，现有数据可做参考评测": 8,
+    "数据已有，缺任务适配或多权重覆盖": 8,
+    "仅下载了说明/发布链接，实际权重缺失": 2,
+    "数据下载未完成，当前目录为空": 1
+  },
+  "models": [
+    {
+      "sequence": 42,
+      "excel_row": 43,
+      "model_id": "cmarkea/detr-layout-detection",
+      "primary_blocker": "数据已有，缺任务适配或多权重覆盖",
+      "historical_reason": "P1-协议待确认｜作者明确使用 DocLayNet 500页PDF，但精确页ID与渲染设置未公开；当前完整官方test可作同源候选，不可宣称复现模型卡F1/GIoU。优先向作者取得500页清单。依据：https://huggingface.co/datasets/docling-project/DocLayNet",
+      "required_tasks": [
+        "bbox_detection_classification",
+        "semantic_segmentation"
+      ],
+      "task_inventory_status": "model_card_and_prior_audit",
+      "weight_files_present": [
+        {
+          "file": "model.safetensors",
+          "bytes": 171845444
+        }
+      ],
+      "next_action": "完整DocLayNet test为同源参考集，核对本模型标签空间后跑AP，不冒充500页官方F1。",
+      "source_model_card": "https://huggingface.co/cmarkea/detr-layout-detection",
+      "local_model_card": "__MODEL_ROOT__/weights/cmarkea/detr-layout-detection/README.md",
+      "technical_complete": false,
+      "metrics": null,
+      "new_finding": "模型卡明确同时输出mask和box；旧文档遗漏mask。必须用DetrForSegmentation。"
+    }
+  ]
+}

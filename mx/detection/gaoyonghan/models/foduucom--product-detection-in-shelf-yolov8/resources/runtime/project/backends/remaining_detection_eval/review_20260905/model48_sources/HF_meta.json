@@ -1,0 +1,129 @@
+{
+  "_id": "68f2503ccf93514423ee20a3",
+  "id": "nvidia/nemotron-graphic-elements-v1",
+  "private": false,
+  "pipeline_tag": "object-detection",
+  "tags": [
+    "image",
+    "detection",
+    "pdf",
+    "ingestion",
+    "yolox",
+    "object-detection",
+    "en",
+    "arxiv:2107.08430",
+    "arxiv:2305.04151",
+    "license:other",
+    "region:us"
+  ],
+  "downloads": 5,
+  "likes": 22,
+  "modelId": "nvidia/nemotron-graphic-elements-v1",
+  "author": "nvidia",
+  "sha": "4a76546bb1bb4cbab3401361c91cf01706321805",
+  "lastModified": "2026-03-11T15:53:27.000Z",
+  "gated": false,
+  "disabled": false,
+  "model-index": null,
+  "config": {},
+  "cardData": {
+    "license": "other",
+    "license_name": "nvidia-open-model-license",
+    "license_link": "https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-open-model-license/",
+    "language": [
+      "en"
+    ],
+    "pipeline_tag": "object-detection",
+    "arxiv": "None",
+    "tags": [
+      "image",
+      "detection",
+      "pdf",
+      "ingestion",
+      "yolox"
+    ]
+  },
+  "siblings": [
+    {
+      "rfilename": ".gitattributes"
+    },
+    {
+      "rfilename": ".gitignore"
+    },
+    {
+      "rfilename": "Demo.ipynb"
+    },
+    {
+      "rfilename": "LICENSE"
+    },
+    {
+      "rfilename": "MANIFEST.in"
+    },
+    {
+      "rfilename": "README.md"
+    },
+    {
+      "rfilename": "THIRD_PARTY_NOTICES.md"
+    },
+    {
+      "rfilename": "example.png"
+    },
+    {
+      "rfilename": "nemotron_graphic_elements_v1/__init__.py"
+    },
+    {
+      "rfilename": "nemotron_graphic_elements_v1/config.json"
+    },
+    {
+      "rfilename": "nemotron_graphic_elements_v1/graphic_element_v1.py"
+    },
+    {
+      "rfilename": "nemotron_graphic_elements_v1/model.py"
+    },
+    {
+      "rfilename": "nemotron_graphic_elements_v1/post_processing/graphic_elt_pp.py"
+    },
+    {
+      "rfilename": "nemotron_graphic_elements_v1/utils.py"
+    },
+    {
+      "rfilename": "nemotron_graphic_elements_v1/weights.pth"
+    },
+    {
+      "rfilename": "nemotron_graphic_elements_v1/yolox/__init__.py"
+    },
+    {
+      "rfilename": "nemotron_graphic_elements_v1/yolox/boxes.py"
+    },
+    {
+      "rfilename": "nemotron_graphic_elements_v1/yolox/darknet.py"
+    },
+    {
+      "rfilename": "nemotron_graphic_elements_v1/yolox/network_blocks.py"
+    },
+    {
+      "rfilename": "nemotron_graphic_elements_v1/yolox/yolo_fpn.py"
+    },
+    {
+      "rfilename": "nemotron_graphic_elements_v1/yolox/yolo_head.py"
+    },
+    {
+      "rfilename": "nemotron_graphic_elements_v1/yolox/yolo_pafpn.py"
+    },
+    {
+      "rfilename": "nemotron_graphic_elements_v1/yolox/yolox.py"
+    },
+    {
+      "rfilename": "pyproject.toml"
+    },
+    {
+      "rfilename": "setup.py"
+    },
+    {
+      "rfilename": "viz.png"
+    }
+  ],
+  "spaces": [],
+  "createdAt": "2025-10-17T14:18:36.000Z",
+  "usedStorage": 437199189
+}

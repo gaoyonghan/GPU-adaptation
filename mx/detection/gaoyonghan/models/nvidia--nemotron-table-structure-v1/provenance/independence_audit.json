@@ -1,0 +1,22 @@
+{
+  "sequence": 37,
+  "model_id": "nvidia/nemotron-table-structure-v1",
+  "source_archive_hash_matches": true,
+  "source_archive_sha256": "f248993c444ff2c83806f0576c035d31aee1b5b4ad763a42c7967a11ac9ab922",
+  "prepared_entry_source_sha256": "6095b8613cfe29d1c5d154f92e2000ab33264348d2068a8184f9ec829ad5d6b5",
+  "local_entry_sha256": "2e468640f999a46745ee1a399b191fb274b6be6fbcf561694810c7631b0ec05f",
+  "local_entry": "inference/native/run_m37_native.py",
+  "central_dispatch_in_entry": false,
+  "unexpected_external_links": [],
+  "declared_dataset_links": [],
+  "broken_links": [],
+  "path_template_count": 434,
+  "state": "entrypoint_verified_full_run_pending",
+  "validation": {
+    "returncode": 0,
+    "python": "/home/ubuntu/gaoyonghan/miniconda3/envs/object-detection-eval/bin/python",
+    "checked_at": "2026-11-10T15:48:00.195450+08:00",
+    "scope": "native help/import/path check only; not full inference"
+  },
+  "smoke_verification": null
+}

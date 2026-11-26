@@ -1,0 +1,72 @@
+{
+  "sequence": 55,
+  "files": [
+    {
+      "path": "configuration_yolo.py",
+      "bytes": 898,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "model.safetensors",
+      "bytes": 136486204,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "config.json",
+      "bytes": 488,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5083,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": ".gitattributes",
+      "bytes": 1689,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "modeling_yolo.py",
+      "bytes": 10128,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 62,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 17,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "yolov8x_person_face.pt",
+      "bytes": 136716488,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "images/image.png",
+      "bytes": 900871,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "images/output.mp4",
+      "bytes": 17398399,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    }
+  ],
+  "mismatches": []
+}

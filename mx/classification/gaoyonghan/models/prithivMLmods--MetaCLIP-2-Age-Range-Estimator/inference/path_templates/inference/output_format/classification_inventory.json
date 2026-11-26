@@ -1,0 +1,37 @@
+{
+  "schema": "model-eval/classification-inventory/v1",
+  "scope": "Existing 59 classification models; model 93 is retrieval and excluded.",
+  "models": [
+    {
+      "sequence": 183,
+      "model_id": "prithivMLmods/MetaCLIP-2-Age-Range-Estimator",
+      "runner_family": "classification171",
+      "adapter": "native_labels",
+      "state": "integrated",
+      "dataset": {
+        "id": "classification171_183",
+        "relation": "original_protocol_incomplete",
+        "split": "published train; no independent test",
+        "note": [
+          "Full-precision probabilities retained for metrics; publisher demo rounds probabilities to three decimals only for Gradio display. Display rounding is not used to rank classes.",
+          "Local checkpoint and publisher inference components retained. Offline file paths, eval mode, batching, timing observation and reference scoring are external orchestration."
+        ],
+        "index_source": "__MODEL_ROOT__/inference/native/indices/183.jsonl",
+        "data_containers": [
+          "__DATASET_ROOT__/datasets_171_200/age_classification/raw/0000.parquet",
+          "__DATASET_ROOT__/datasets_171_200/age_classification/raw/0001.parquet"
+        ]
+      },
+      "qualification": "original_protocol_incomplete",
+      "limitations": [],
+      "num_classes": 5,
+      "expected_images": 19016,
+      "category_reference": {
+        "file": "__MODEL_ROOT__/inference/native/models.json",
+        "sequence": 183,
+        "field": "label_mapping"
+      },
+      "gt_index": "__MODEL_ROOT__/inference/native/indices/183.jsonl"
+    }
+  ]
+}

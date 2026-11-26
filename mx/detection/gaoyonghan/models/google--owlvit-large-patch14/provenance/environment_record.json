@@ -1,0 +1,17 @@
+{
+  "python": "3.10.21",
+  "requirements": "environments/e27-owlvit-scenic-native/requirements.txt",
+  "expected": "environments/e27-owlvit-scenic-native/expected.json",
+  "local_packages": [
+    {
+      "name": "scenic",
+      "path": "assets/workspace/official_sources/scenic-08ee9dc4",
+      "editable": true
+    }
+  ],
+  "original_python": "/home/ubuntu/gaoyonghan/miniconda3/envs/owlvit-scenic-native/bin/python",
+  "torch": "2.1.2+cpu",
+  "post_install": "project/backends/owlvit_scenic_native/patch_lvis.py",
+  "python_version_scope": "Pinned to reused native interpreter version",
+  "framework": "JAX/Flax; CPU Torch is only a tokenizer/conversion dependency"
+}

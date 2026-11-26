@@ -1,0 +1,154 @@
+{
+  "sequence": 92,
+  "source_revision": "8b39429eaf39750d913bcc5368be395bb4d41b12",
+  "source_url": "https://raw.githubusercontent.com/nateraw/huggingpics/8b39429eaf39750d913bcc5368be395bb4d41b12/HuggingPics.ipynb",
+  "source_sha256": "15b4efd2537388978b439599bd2ce22f95073a26fd16a7bb4aeb59c22b56770c",
+  "native_classes": [
+    "ImageClassificationCollator",
+    "Classifier"
+  ],
+  "dependencies": {
+    "pytorch-lightning": "2.1.2",
+    "torchmetrics": "1.2.0",
+    "lightning-utilities": "0.10.0"
+  },
+  "evaluator": "未修改HuggingPics Classifier.validation_step + Lightning Trainer.validate + TorchMetrics Accuracy",
+  "metric": "native_val_acc_percent",
+  "precision": "16-mixed",
+  "batch_size": 8,
+  "num_workers": 0,
+  "seed": 42,
+  "fidelity": "reference_baseline",
+  "dataset_relation": "public_replacement",
+  "officially_comparable": false,
+  "baseline": "__MODEL_ROOT__/resources/runtime/assets/workspace/results/m92_faceshape_v1/full/run_20260916_113236_197929",
+  "baseline_predictions_sha256": "a6f92d3f5c95f2be0987649fbaf5fae26f109b888d01fb253dbba43cac548af7",
+  "known_differences": [
+    "复用模型卡链接的HuggingPics原生类，但不能确认此提交及依赖版本就是发布者当年所用版本。",
+    "直接验证已发布权重，不重新训练、不重新随机划分。固定替代集testing_set 1000张，原85.31%对应的验证图未知。",
+    "原笔记本使用precision=16；在Lightning 2.1.2中显式使用等价16-mixed。模型参数FP32、验证前向AMP，与旧pipeline FP32结果有差异。",
+    "ZIP图片读取模拟ImageFolder的PIL RGB读取，不使用pipeline的EXIF自动转正；不裁脸或增强。",
+    "num_workers由原笔记本2改为0，避免ZIP句柄跨进程；仅关闭日志、checkpoint和模型摘要等训练附属功能。",
+    "Transformers仍为4.50.0/eager，模型配置记录4.35.2；历史完整软件栈未知。",
+    "替代集尚未找到官方evaluator，用户批准改用模型关联工具的验证流程；不宣称数据集官方或原成绩复现。"
+  ],
+  "model_and_data": {
+    "sequence": 92,
+    "model_id": "metadome/face_shape_classification",
+    "model_key": "m92-face-shape",
+    "task_type": "image-classification",
+    "model_path": "__MODEL_ROOT__/weights/metadome/face_shape_classification",
+    "hf_revision": "f4d28b03f39ff77f1feb5bb8094e32a23c730cff",
+    "official_card": "https://huggingface.co/metadome/face_shape_classification",
+    "official_repository": "https://github.com/nateraw/huggingpics",
+    "official_repository_note": "模型卡链接的通用训练工具，不是该权重专属的完整评测协议；未执行该工具或重新训练。",
+    "paper": null,
+    "files_sha256": {
+      "model.safetensors": "dbd571a8f58d7ada79d676cb5db3ee37f5fda9f2dc0338f92858ff818f4c30b4",
+      "config.json": "d7b4b5271d1bc7005c1df70d7ea970abff75c6f38a2ab9cab70b5492a1149a8f",
+      "preprocessor_config.json": "b09d2030f83f2a59d12c717d41a9135a3f0c1ba0a2a5df694dbc40f77735daed",
+      "README.md": "622ad13f56e7387c63f4c59977f6b13537ef961256a5365a443b15fbdd8398e6"
+    },
+    "weight_relationship": "直接使用发布者Transformers ViT权重，无转换、无替换分类头、无重新训练。",
+    "zip_path": "__DATASET_ROOT__/face_shape_test/face-shape-dataset.zip",
+    "zip_sha256": "4b0c3f42f8f02ac0dda5d7b332394240d50ae9d440fea424ce953681dd025efe",
+    "dataset": "Kaggle niten19/face-shape-dataset",
+    "dataset_url": "https://www.kaggle.com/datasets/niten19/face-shape-dataset",
+    "dataset_relation": "public_replacement",
+    "dataset_version": "本地ZIP的SHA256冻结；未确认Kaggle数字版本",
+    "split": "FaceShape Dataset/testing_set",
+    "images": 1000,
+    "class_counts": {
+      "Heart": 200,
+      "Oblong": 200,
+      "Oval": 200,
+      "Round": 200,
+      "Square": 200
+    },
+    "labels": [
+      "Heart",
+      "Oblong",
+      "Oval",
+      "Round",
+      "Square"
+    ],
+    "label_mapping": "文件夹名称严格对应config.id2label，模型ID依次0..4",
+    "coverage": "五类标签全部覆盖；数据为女性名人照片，不代表全部人群。作者训练重叠、人物身份跨划分重叠未知。",
+    "preprocessing": "发布者ViTImageProcessor；224x224双线性Resize；1/255缩放；mean/std均为[0.5,0.5,0.5]。原生pipeline执行EXIF转正和RGB转换。不额外检测、裁脸、对齐或增强。",
+    "inference": {
+      "dtype": "float32",
+      "batch_size": 8,
+      "amp": false,
+      "tf32": false,
+      "attention": "eager",
+      "postprocess": "官方pipeline softmax，返回全部5类，取最高分"
+    },
+    "evaluator": "Transformers 4.50.0 ImageClassificationPipeline原生批量推理；scikit-learn 1.5.2 accuracy_score、classification_report、confusion_matrix",
+    "metric": "top1_accuracy_percent",
+    "official_reference": {
+      "metric": "accuracy",
+      "value": 0.8530884981155396,
+      "percent": 85.30884981155396,
+      "split": null,
+      "directly_comparable": false
+    },
+    "fidelity": "reference_baseline",
+    "case_type": "special",
+    "special_tags": [
+      "dataset_replacement",
+      "split_uncertain",
+      "official_evaluator_missing",
+      "framework_numeric_difference"
+    ],
+    "known_differences": [
+      "未找到作者原测试集和完整专属evaluator；不宣称复现官方值。",
+      "config记录Transformers 4.35.2；本地共享环境4.50.0，使用eager注意力。",
+      "批量推理直接用官方pipeline；项目代码负责ZIP读取、样本审计、标准库计分和归档。"
+    ],
+    "data_audit": {
+      "test_decode_failures": 0,
+      "test_exact_duplicate_groups": 0,
+      "train_test_exact_duplicate_groups": 0,
+      "train_only_duplicate_groups": 4,
+      "train_decode_failures_not_evaluated": [
+        "FaceShape Dataset/training_set/Heart/heart (633).jpg",
+        "FaceShape Dataset/training_set/Square/square (84).jpg"
+      ]
+    },
+    "versions": {
+      "torch": "2.5.1+cu121",
+      "torchvision": "0.20.1+cu121",
+      "transformers": "4.50.0",
+      "Pillow": "11.1.0",
+      "numpy": "1.26.4",
+      "scikit-learn": "1.5.2",
+      "safetensors": "0.5.3"
+    },
+    "status": "data_audited_inference_not_started"
+  },
+  "versions": {
+    "torch": "2.5.1+cu121",
+    "torchvision": "0.20.1+cu121",
+    "transformers": "4.50.0",
+    "Pillow": "11.1.0",
+    "numpy": "1.26.4",
+    "safetensors": "0.5.3",
+    "pytorch-lightning": "2.1.2",
+    "torchmetrics": "1.2.0",
+    "lightning-utilities": "0.10.0"
+  },
+  "tf32": false,
+  "device": "NVIDIA GeForce RTX 4090",
+  "torch_cuda": "12.1",
+  "preprocessing": "HuggingPics collator + local ViTFeatureExtractor; ImageFolder-compatible RGB without EXIF transpose",
+  "snapshot_sha256": {
+    "models_m92.json": "0c4f6031f5504aa3031d86de8d3df596a8b7582a5171068266c7de3d0e34329e",
+    "README_m92.md": "9cf623a7170b319eef4f0fa405ad6281177b8bfdfad146839f964b0241138d62",
+    "run_m92.py": "7d530fef4b5a090afe544ff811985326ccffcd0a9fcc6a46d22ba618c6396911",
+    "run_m92_native.py": "e1396ad28e7dbd834039b5392b1d8459dcd7ce17a13a9e610f59dbbcf61cf180",
+    "HuggingPics.ipynb": "15b4efd2537388978b439599bd2ce22f95073a26fd16a7bb4aeb59c22b56770c",
+    "models_m92_native.json": "1bf0887b81373033db46cbd768abf33918aa4917ae0e932afc6ce0a7bf0f2665",
+    "run_m92_native.sh": "a44377946cf3de1c0e4bdf63c9354bab11be935d58b3145a4554cffb57d346c7"
+  },
+  "protocol_fingerprint": "7ca593b7088055bd93bd4199e0bac8cf08a69775406fe692161d58ae91ee4753"
+}

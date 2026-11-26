@@ -1,0 +1,101 @@
+{
+  "sequence": 23,
+  "model_id": "jameslahm/yoloe",
+  "task": "object_detection",
+  "task_name": "目标检测",
+  "reported_result": "20.55",
+  "reference": "20.6",
+  "model_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/model_index/jameslahm/yoloe",
+  "model_exists_at_build": true,
+  "dataset": {
+    "id": "yoloe_lvis_minival",
+    "relation": "original_exact",
+    "split": "author minival",
+    "note": "LVIS v1 minival · 4809 图\n官方原集（不代表全协议已对齐）"
+  },
+  "environment_id": "detection-yoloe",
+  "runner_family": "official_detection",
+  "final_result_sources": [
+    {
+      "source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m023/metrics-0.json",
+      "sha256": "c3c83d9859e7f46721a51f388bd3824215ce62acda7e336ca0ffe83270c927ef",
+      "selection": "workbook_score_match",
+      "data": {
+        "metrics": {
+          "AP": 0.20550000000000002,
+          "AP50": 0.2781,
+          "AP75": 0.2227,
+          "APs": 0.1359,
+          "APm": 0.2862,
+          "APl": 0.38780000000000003,
+          "APr": 0.1841,
+          "APc": 0.20170000000000002,
+          "APf": 0.21289999999999998
+        },
+        "metrics_percent": {
+          "AP": 20.55,
+          "AP50": 27.810000000000002,
+          "AP75": 22.27,
+          "APs": 13.59,
+          "APm": 28.62,
+          "APl": 38.78,
+          "APr": 18.41,
+          "APc": 20.17,
+          "APf": 21.29
+        },
+        "official_reference": {
+          "metric": "AP",
+          "value_percent": 20.6
+        },
+        "reference_check": {
+          "classification": "matches_reference",
+          "metric": "AP",
+          "actual_percent": 20.55,
+          "reference_percent": 20.6,
+          "difference_percent_points": -0.05000000000000071,
+          "tolerance_percent_points": 1.0
+        },
+        "official_command": [
+          "/home/ubuntu/gaoyonghan/miniconda3/envs/object-detection-yoloe-v2/bin/python",
+          "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/official_sources/object_detection/yoloe/tools/eval_open_ended.py",
+          "--json",
+          "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/object_detection_official_v3_repairs/_prepared_datasets/yoloe_lvis_minival/lvis/annotations/lvis_v1_minival.json",
+          "--pred",
+          "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/object_detection_official_v3_repairs/m23-yoloe/native/full/predictions.json",
+          "--names",
+          "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/official_sources/object_detection/yoloe/tools/ram_tag_list.txt",
+          "--devices",
+          "0",
+          "--fixed"
+        ]
+      },
+      "source_original": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/object_detection_official_v3_repairs/m23-yoloe/metrics.json"
+    }
+  ],
+  "code": {
+    "source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/object_detection_official_v3_repairs/_source_snapshot/run_model.py",
+    "sha256": "eb619c65fdcd87433e55c96549cf9ebe58931b49a63630443c37014c5690db42",
+    "recorded_sha256": null,
+    "attestation": "result_batch_snapshot",
+    "status_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m023/status.json",
+    "selection": "same_batch_snapshot",
+    "archive": "code_archive/eb619c65fdcd8743_run_model.py"
+  },
+  "support_files": [
+    "download_official_source.py",
+    "models.json",
+    "run_model.py",
+    "setup_repairs.sh",
+    "run_repairs.sh",
+    "retinanet_official.py",
+    "prepare_wilddet_weights.py"
+  ],
+  "final_scorer": null,
+  "backend_package": "remaining_detection_eval",
+  "readiness": "code_and_result_identified",
+  "launch_status": "configured",
+  "metadata_warning": null,
+  "scoring_recovery_20261009": {
+    "repair": "Use one shared prepared-cache owner; remove conflicting per-model cache assertion"
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "sequence": 38,
+  "model": "PaddlePaddle/PP-DocLayoutV2",
+  "images": 1651,
+  "source_repository": "https://github.com/opendatalab/OmniDocBench",
+  "source_revision": "85f760aa60e5f9f087e3f582109f55277937a565",
+  "source_files_sha256": {
+    "LICENSE": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "configs/layout_detection.yaml": "3d95f07eecdf1f84a1fa3d4b40c11e0c083532b8b33d25489769fdf33d996579",
+    "dataset/detection_dataset.py": "8086867def28aa06d6125682614fa3426e088acdf3a6b7764545e1af66b02f46",
+    "task/detection_eval.py": "f9d9d9b91e25d80d8cacedbaf83613811af07ed8fa7ad7e924041de0b7a81e72",
+    "registry/__init__.py": "d4bfc74e66fbb0b7aa822c28f2abef88bfddafc98686de3ad26e9ffcbdd46d6b",
+    "registry/registry.py": "27eab97e0c3719af1c4990408301efb3dccec65a68341e2d67576effdc742345",
+    "utils/ocr_utils.py": "c3b17012008a7dee5e17d7b75ac9ba5b273c41943958e3fdb7d82e5334e79f2d"
+  },
+  "software": {
+    "mmeval": "0.2.1",
+    "pycocotools": "2.0.7",
+    "numpy": "1.24.4",
+    "PyYAML": "6.0.2"
+  },
+  "dataset_sha256": "a45cd84b04ad8b793e775089640e6b681209abea33ead54c1828ddca35fae496",
+  "input_predictions_sha256": "733e43146d1c6dc8dd3d17d68ce6a1135396b5127ac466ec2e4bd61a9de706f9",
+  "input_protocol_sha256": "091a1fc73a72caf7949aad5a45e6d9b6691e5ea4819e2fed78c40f3bcd9863ec",
+  "input_result_directory": "/data2/gaoyonghan/env/model_eval_portable_v4/results/m038/native",
+  "converted_predictions_sha256": "4dced21f0eb49125564783c94fdcb0c06bb7b6932993445fa54b2b8aac532ab6",
+  "scoring_config_sha256": "53e4f3cd1985512f3bcb8c73afbab65fe2da4798f662c5d2fb9b9be49ed06bb9",
+  "runner_sha256": "873b701384dafb979c8c5cfc8a930a1e30d740e0da7214983c80fd3eac423d50",
+  "shell_sha256": "1702b7c7b82b005d9f8be94122d5b374b09356e11cf22450d99850eff9da63c0",
+  "classes": [
+    "title",
+    "text",
+    "abandon",
+    "figure",
+    "table",
+    "isolate_formula",
+    "formula_caption"
+  ],
+  "native_prediction_mapping": {
+    "doc_title": "title",
+    "paragraph_title": "title",
+    "text": "text",
+    "abstract": "text",
+    "aside_text": "text",
+    "content": "text",
+    "vertical_text": "text",
+    "header": "abandon",
+    "footer": "abandon",
+    "number": "abandon",
+    "footnote": "abandon",
+    "header_image": "abandon",
+    "footer_image": "abandon",
+    "image": "figure",
+    "chart": "figure",
+    "table": "table",
+    "display_formula": "isolate_formula",
+    "formula_number": "formula_caption"
+  },
+  "excluded_prediction_counts": {
+    "figure_title": 1044,
+    "vision_footnote": 629,
+    "inline_formula": 35,
+    "seal": 36,
+    "algorithm": 28,
+    "reference_content": 267
+  },
+  "original_official_classes": [
+    "title",
+    "text",
+    "abandon",
+    "figure",
+    "figure_caption",
+    "table",
+    "table_caption",
+    "table_footnote",
+    "isolate_formula",
+    "formula_caption"
+  ],
+  "excluded_official_classes": [
+    "figure_caption",
+    "table_caption",
+    "table_footnote"
+  ],
+  "scope": "Official Omni layout detection, configurable 7-category subset; NOT previous native 7 classes or Paddle 25-class reproduction.",
+  "code_path": "Unmodified DetectionDataset -> unmodified DetectionEval -> its original MMEval COCODetection. Project bootstrap imports only detection modules; no pdf_validation.py global OCR/formula imports.",
+  "adjustments": "Change input paths, select 7 official categories, configure native prediction mapping, use official detection_dataset instead of simple-format loader. No GT mapping or scorer code edits.",
+  "known_upstream_behavior": [
+    "Official sample config misspells refernece; actual reference GT is excluded. Keep upstream config unchanged and exclude native reference/reference_content as well.",
+    "abandon is a scored class including headers/footers/page numbers/footnotes, NOT a global ignore region as in previous project scorer.",
+    "Upstream loader ignores item.ignore and excludes unmapped masks; it does NOT create project crowd regions. Behavior preserved, not silently patched.",
+    "Upstream poly2bbox uses selected polygon corners, not project min/max; preserved.",
+    "No inline formula or reading-order score in this layout-only configuration.",
+    "Omni default figure GT also includes code_txt; no reliable native code label, so those samples may be missed. Native image/chart are mapped to figure; algorithm/seal are not guessed into figure.",
+    "Figure captions/table captions/table footnotes excluded: native outputs cannot reliably separate these three official categories."
+  ],
+  "official_comparable": false,
+  "gpu_inference_executed": false,
+  "inference_unchanged": {
+    "batch_size": 1,
+    "threshold": 0.001,
+    "layout_nms": true,
+    "layout_shape_mode": "rect",
+    "filter_overlap_boxes": true
+  },
+  "metric_source_sha256": {
+    "/home/ubuntu/gaoyonghan/miniconda3/envs/omnidocbench/lib/python3.10/site-packages/mmeval/metrics/coco_detection.py": "5000cdd55052186c57a4822f4ab3ff906920b9b6af007ac08c54f45cb602e4f6",
+    "/home/ubuntu/gaoyonghan/miniconda3/envs/omnidocbench/lib/python3.10/site-packages/pycocotools/cocoeval.py": "988485f79624cd42ceed9335d284df4cdcdf7b3d583e052fcbed2dd6bccf0267"
+  }
+}

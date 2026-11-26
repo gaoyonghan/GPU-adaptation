@@ -1,0 +1,39 @@
+{
+  "schema": "model-eval/classification-inventory/v1",
+  "scope": "One independent MX GPU classification model",
+  "models": [
+    {
+      "sequence": 113,
+      "model_id": "Xenova/quickdraw-mobilevit-small",
+      "dataset": {
+        "id": "quickdraw-small",
+        "split": "test",
+        "note": [
+          "quickdraw-small test\n250,000 张"
+        ],
+        "native_scope": {
+          "name": "quickdraw-small",
+          "source": "Xenova/quickdraw-small",
+          "split": "test",
+          "image_count": 250000,
+          "num_classes": 345,
+          "image_mode": "grayscale (L)",
+          "split_note": "Uses the published 250,000-image test parquet; no local random split is created."
+        },
+        "relation": "native_e07_registered_scope",
+        "index_source": "native loader GT, materialized as classification_annotations.json in the native phase directory",
+        "data_containers": [
+          "dataset/quickdraw-small/data/test-00000-of-00001-83a464798a1a0e1d.parquet"
+        ]
+      },
+      "qualification": "native_registered_scope",
+      "limitations": [
+        "Capture-ready is a code integration state, not a claim that inference has passed.",
+        "Unobserved native Top-5 is unavailable; aggregate scores are not predictions."
+      ],
+      "num_classes": 345,
+      "expected_images": 250000,
+      "adapter": "native_labels"
+    }
+  ]
+}

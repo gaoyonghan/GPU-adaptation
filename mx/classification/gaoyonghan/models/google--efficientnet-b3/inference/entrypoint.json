@@ -1,0 +1,46 @@
+{
+  "sequence": 88,
+  "model_id": "google/efficientnet-b3",
+  "task": "classification",
+  "commands": [
+    {
+      "arguments": [
+        "__PYTHON__",
+        "__MODEL_ROOT__/inference/native/mx_variant.py",
+        "--phase",
+        "full",
+        "--device",
+        "cuda:0",
+        "--output-root",
+        "__OUTPUT_ROOT__/m088/pytorch_fp32"
+      ],
+      "environment": {
+        "PYTHONNOUSERSITE": "1",
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "HF_HUB_OFFLINE": "1",
+        "TRANSFORMERS_OFFLINE": "1",
+        "YOLO_AUTOINSTALL": "false",
+        "KERAS_HOME": "__MODEL_ROOT__/resources/runtime/assets/workspace/classification8_eval/.runtime/m88_keras",
+        "TF_CPP_MIN_LOG_LEVEL": "2",
+        "TF_FORCE_GPU_ALLOW_GROWTH": "true",
+        "TF_ENABLE_ONEDNN_OPTS": "0",
+        "TF_NUM_INTRAOP_THREADS": "2",
+        "TF_NUM_INTEROP_THREADS": "2",
+        "OMP_NUM_THREADS": "2",
+        "CODEX_TIMING_OUTPUT_DIR": "__OUTPUT_ROOT__/m088/timing/full",
+        "CODEX_TIMING_DEVICE": "cuda:0",
+        "CODEX_TIMING_FRAMEWORK": "torch",
+        "PYTHONPATH": "__MODEL_ROOT__/inference/native:__MODEL_ROOT__/inference/output_format:__MODEL_ROOT__/resources/runtime/project/timing_runtime:__MODEL_ROOT__/resources/runtime/project/backends",
+        "AUTO_SETUP": "0",
+        "BENCH_PROBE_NO_INSTALL": "1"
+      }
+    }
+  ],
+  "single_model_sample": false,
+  "smoke_commands": [],
+  "state": "runnable",
+  "accepts_max_images": false,
+  "accepts_smoke_flag": false,
+  "mx_weight_variant": "pytorch_fp32",
+  "platform": "metax"
+}

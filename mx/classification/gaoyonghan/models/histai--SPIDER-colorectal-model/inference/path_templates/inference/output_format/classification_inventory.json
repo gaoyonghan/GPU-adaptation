@@ -1,0 +1,39 @@
+{
+  "schema": "model-eval/classification-inventory/v1",
+  "scope": "One independent MX GPU classification model",
+  "models": [
+    {
+      "sequence": 146,
+      "model_id": "histai/SPIDER-colorectal-model",
+      "dataset": {
+        "id": "histai/SPIDER-colorectal-model",
+        "split": "official slide-level test",
+        "note": [
+          "histai/SPIDER-colorectal\n官方 slide-level test\n13,193 张，5x5 上下文"
+        ],
+        "native_scope": {
+          "id": "histai/SPIDER-colorectal",
+          "split": "official slide-level test",
+          "image_count": 13193,
+          "class_count": 13,
+          "input_patch_count_per_sample": 25,
+          "central_patch_size": "224x224",
+          "composite_size": "1120x1120"
+        },
+        "relation": "native_e07_registered_scope",
+        "index_source": "native loader GT, materialized as classification_annotations.json in the native phase directory",
+        "data_containers": [
+          "dataset/SPIDER-colorectal/SPIDER-colorectal/test-images.zip"
+        ]
+      },
+      "qualification": "native_registered_scope",
+      "limitations": [
+        "Capture-ready is a code integration state, not a claim that inference has passed.",
+        "Unobserved native Top-5 is unavailable; aggregate scores are not predictions."
+      ],
+      "num_classes": 13,
+      "expected_images": 13193,
+      "adapter": "native_labels"
+    }
+  ]
+}

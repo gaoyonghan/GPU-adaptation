@@ -1,0 +1,53 @@
+{
+  "models": [
+    {
+      "sequence": 167,
+      "model_id": "playrobin/furniture-styles",
+      "runner_family": "metax_c500_161_170",
+      "adapter": "native_labels",
+      "state": "integrated",
+      "dataset": {
+        "id": "interior_3cls",
+        "relation": "public_replacement",
+        "split": "dataset/interior_3cls · tonijhanel/my_interior_design_dataset test 中 3 个可对应类 (1047 images)",
+        "note": [
+          "tonijhanel/my_interior_design_dataset 官方 test split（4182 张）中的 3 个可对应子类"
+        ],
+        "index_source": null,
+        "data_containers": []
+      },
+      "qualification": "public_replacement",
+      "limitations": [
+        "模型为 5 类输出，评测集只覆盖可对应的 3 类（模型 class id 1/2/4）；prediction 是在这 3 类内 argmax 的结果，不是原生 5 类 Top-1。",
+        "模型 5 类输出中实际只激活 2 类：原生 argmax 为 modern(4) 960 张、Scandinavian(0) 87 张，bohemian(1)/coastal(2)/glamor(3) 从未胜出；被判为 Scandinavian 的 87 张在 3 个 GT 类上为 31/27/29，与按先验随机的期望 26.3/28.7/32.0 一致（±1.2 倍内），该分支无判别信息。",
+        "因评测集只覆盖模型 id 1/2/4，被判为 id 0 的 87 张在 3 类筛选后全部落入 id 4，故 prediction 全为 4；accuracy 36.77% 等于 id 4 的样本占比，balanced accuracy 33.33% 恰等于三类随机水平。该行不能作为模型有效性证据，只能作为「评测集与模型类别空间不匹配」的记录。",
+        "作者 52.4% 是 21 张验证集准确率（float32(11/21)），无统计意义，不作复现判定。",
+        "只有 Top-1；未保存 Top-5（3 类亦不适用）。"
+      ],
+      "num_classes": 3,
+      "expected_images": 1047,
+      "existing_protocol": {
+        "id": "metax_c500_m167_v1",
+        "scope": "1047 images; original inference and alignment done by run_inference.py, this inventory entry only registers the conversion/scoring scope",
+        "expected_inference_images": 1047,
+        "expected_scored_images": 1047,
+        "metrics_path": "m167/metrics.json",
+        "official_reference_comparable": true
+      },
+      "categories": [
+        {
+          "id": 1,
+          "name": "Bohemian"
+        },
+        {
+          "id": 2,
+          "name": "Coastal"
+        },
+        {
+          "id": 4,
+          "name": "Mid-Century Modern"
+        }
+      ]
+    }
+  ]
+}

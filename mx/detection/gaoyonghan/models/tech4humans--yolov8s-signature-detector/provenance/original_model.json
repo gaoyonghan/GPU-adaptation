@@ -1,0 +1,91 @@
+{
+  "sequence": 16,
+  "model_id": "tech4humans/yolov8s-signature-detector",
+  "task": "object_detection",
+  "task_name": "目标检测",
+  "reported_result": "62.8666867635081",
+  "reference": "67.35",
+  "model_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/model_index/tech4humans/yolov8s-signature-detector",
+  "model_exists_at_build": true,
+  "dataset": {
+    "id": "signature_test",
+    "relation": "original_exact",
+    "split": "test",
+    "note": "Signature Detection · test · 419 图\n官方原集（不代表全协议已对齐）"
+  },
+  "environment_id": "detection-yolo",
+  "runner_family": "official_detection",
+  "final_result_sources": [
+    {
+      "source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m016/metrics-0.json",
+      "sha256": "254d0f72c528a3d48c371150a7887c3c09f58e757fc13743dbe54f87f9e85dcd",
+      "selection": "workbook_score_match",
+      "data": {
+        "metrics": {
+          "AP": 0.6286668676350806,
+          "AP50": 0.9313654298257061,
+          "AP75": 0.7274438361778092,
+          "AP_small": 0.6326732673267327,
+          "AP_medium": 0.6255254105069945,
+          "AP_large": 0.6702103180731508,
+          "AR1": 0.5884368308351178,
+          "AR10": 0.6978586723768736,
+          "AR100": 0.6997858672376873,
+          "AR_small": 0.6333333333333333,
+          "AR_medium": 0.6937965260545905,
+          "AR_large": 0.7426229508196721
+        },
+        "metrics_percent": {
+          "AP": 62.86668676350806,
+          "AP50": 93.13654298257062,
+          "AP75": 72.74438361778091,
+          "AP_small": 63.26732673267327,
+          "AP_medium": 62.55254105069945,
+          "AP_large": 67.02103180731508,
+          "AR1": 58.84368308351178,
+          "AR10": 69.78586723768736,
+          "AR100": 69.97858672376873,
+          "AR_small": 63.33333333333333,
+          "AR_medium": 69.37965260545906,
+          "AR_large": 74.26229508196721
+        },
+        "official_reference": {
+          "metric": "AP",
+          "value_percent": 67.35,
+          "note": "model card test mAP@0.5:0.95"
+        },
+        "reference_check": {
+          "classification": "does_not_match_reference",
+          "metric": "AP",
+          "actual_percent": 62.86668676350806,
+          "reference_percent": 67.35,
+          "difference_percent_points": -4.483313236491931,
+          "tolerance_percent_points": 1.5
+        }
+      },
+      "source_original": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/object_detection_official_v2/m16-yolov8s-signature-detector/metrics.json"
+    }
+  ],
+  "code": {
+    "source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/object_detection_official_v2/_source_snapshot/run_model.py",
+    "sha256": "f2fb744cfeffd526f9088df0d3ee7e4b17ce65eeada64030fe37deb96dd485dc",
+    "recorded_sha256": null,
+    "attestation": "result_batch_snapshot",
+    "status_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m016/status.json",
+    "selection": "same_batch_snapshot",
+    "archive": "code_archive/f2fb744cfeffd526_run_model.py"
+  },
+  "support_files": [
+    "download_official_source.py",
+    "models.json",
+    "run_model.py",
+    "setup_env.sh",
+    "run_all.sh",
+    "check_environment.py"
+  ],
+  "final_scorer": null,
+  "backend_package": "remaining_detection_eval",
+  "readiness": "code_and_result_identified",
+  "launch_status": "configured",
+  "metadata_warning": null
+}

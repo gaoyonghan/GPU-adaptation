@@ -1,0 +1,81 @@
+{
+  "sequence": 94,
+  "model_id": "jaranohaal/vit-base-violence-detection",
+  "task": "image_classification",
+  "task_name": "图像分类",
+  "reported_result": "acc 98.8%",
+  "reference": "acc 98.8%",
+  "model_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/model_index/jaranohaal/vit-base-violence-detection",
+  "model_exists_at_build": true,
+  "dataset": {
+    "id": "violence",
+    "relation": null,
+    "split": null,
+    "note": "计划：Real Life Violence Situations Dataset（来源视频）\n未评测，官方对应关系待核实"
+  },
+  "environment_id": "classification-native",
+  "runner_family": "special",
+  "final_result_sources": [
+    {
+      "source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m094/metrics-0.json",
+      "sha256": "88315771a3be2a57de90931487a9f694c490f4a106e7b74f90fd29c8a5ff0001",
+      "selection": "workbook_score_match",
+      "data": {
+        "images": 1660,
+        "correct": 1640,
+        "native_accuracy_percent": 98.79518151283264,
+        "exact_accuracy_percent": 98.79518072289156,
+        "elapsed_inference_s": 7.182395641924813,
+        "predictions_sha256": "ec559e5f458bac48e92b1fe369ec19127ea2f5e8eecd1036b8f06d5a23be785d",
+        "model_number": 94,
+        "dataset": "Kaggle abdulmananraja/real-life-violence-situations (11K images)",
+        "dataset_relation": "original_protocol_incomplete",
+        "fidelity": "reference_baseline",
+        "protocol_fingerprint": "f7d559e99d864ffb21156898142f6e3711ad9339a339b9a0ba3c9a2f40d3a845",
+        "official_references": {
+          "model_card_accuracy_percent": 98.8,
+          "notebook_vit_base_accuracy_percent": 98.49,
+          "checkpoint_reference_mapping_verified": false,
+          "note": "两个官方数字不同，未取得笔记本vit1.pth与发布权重的对应证明，不择一当作已确认基准。笔记本Loss为最后一个batch的平滑交叉熵，不当作全集平均loss。"
+        },
+        "officially_comparable": false,
+        "official_difference_pp": null,
+        "data_audit": {
+          "decode_failures": 0,
+          "exact_duplicate_groups": 108,
+          "cross_split_duplicate_groups": 44,
+          "train_test_duplicate_groups": 23,
+          "test_images_matching_train": 26,
+          "conflicting_label_duplicate_groups": 7,
+          "policy": "保留作者划分和标签，披露问题，不静默去重或重标"
+        }
+      },
+      "source_original": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/m94_native_v1/full/run_20260916_124607_387689/metrics.json"
+    }
+  ],
+  "code": {
+    "source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/m94_native_v1/full/run_20260916_124607_387689/run_m94.py",
+    "sha256": "885909a2299c1da677e224163723aed8e83002b66d71c3cea8ffeddeb61e3341",
+    "recorded_sha256": null,
+    "attestation": "result_batch_snapshot",
+    "status_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m094/status.json",
+    "selection": "same_run_snapshot",
+    "archive": "code_archive/885909a2299c1da6_run_m94.py"
+  },
+  "support_files": [
+    "split_indices.json",
+    "duplicate_audit.json",
+    "models_m94.json",
+    "run_m94.sh",
+    "full_data_manifest.json",
+    "protocol.json",
+    "test_manifest.json",
+    "audit_summary.json",
+    "run_m94.py"
+  ],
+  "final_scorer": null,
+  "backend_package": "classification8_eval",
+  "readiness": "code_and_result_identified",
+  "launch_status": "configured",
+  "metadata_warning": "数据集列仍写未评测；须按原始结果核对"
+}

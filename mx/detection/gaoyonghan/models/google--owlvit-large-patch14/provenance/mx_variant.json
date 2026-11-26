@@ -1,0 +1,54 @@
+{
+  "sequence": 70,
+  "definition": {
+    "repository": "google/owlvit-large-patch14",
+    "revision": "faf39bb4c1f3ff75544daacd5fd327e9101ecff7",
+    "directory": "google/owlvit-large-patch14",
+    "weight": "pytorch_model.bin",
+    "weight_sha256": "9be842266b5eae392bd07454c249c0213bfd3fc2fe8b8748cc5a5bea9a273c07",
+    "files": {
+      ".gitattributes": {
+        "size": 1173,
+        "sha256": "983f034a5d3898b49e1c02cf4941beaf38849e8f01912ad6d8697e96270ee997"
+      },
+      "README.md": {
+        "size": 5148,
+        "sha256": "f315074c06e92d69d281b69a0fb6744fad43da2eef7e1527f2c28f4abbcf6c1d"
+      },
+      "config.json": {
+        "size": 4421,
+        "sha256": "9a32246cb3be571436f7efb259fee76cea032dcc674fa105b11a3f4faafbfb82"
+      },
+      "merges.txt": {
+        "size": 524619,
+        "sha256": "9fd691f7c8039210e0fced15865466c65820d09b63988b0174bfe25de299051a"
+      },
+      "preprocessor_config.json": {
+        "size": 392,
+        "sha256": "0f4cf07940ed1eccd279e48803aada9d8c5dacb5cd3fee546a955e89c08f3909"
+      },
+      "pytorch_model.bin": {
+        "size": 1735754597,
+        "sha256": "9be842266b5eae392bd07454c249c0213bfd3fc2fe8b8748cc5a5bea9a273c07"
+      },
+      "special_tokens_map.json": {
+        "size": 460,
+        "sha256": "f118ab3a983206e4f32583448de6bd6aae4ee21869135cef1f5848a753cdaab6"
+      },
+      "tokenizer_config.json": {
+        "size": 775,
+        "sha256": "da35aceebeda2adf44094a5867940b09379323b9390fa9197b57044e106bfb6e"
+      },
+      "vocab.json": {
+        "size": 1059962,
+        "sha256": "e089ad92ba36837a0d31433e555c8f45fe601ab5c221d4f607ded32d9f7a4349"
+      }
+    },
+    "dtype": "float32",
+    "nv_rerun_required": true,
+    "change": "HF PyTorch adapter replacing Scenic JAX execution; preprocessing and numeric equivalence not assumed"
+  },
+  "source": "/mnt/data/shuaige/metax_full_suite_20261013_01/retries/02/groups/e26-cu124/detection_single_container_20261114_01/lane1/runtime/project/bin/pytorch_variants.py",
+  "change": "Extracted this model runner; inference function preserved; paths relocated; model selection is fixed.",
+  "new_inference_run": false
+}

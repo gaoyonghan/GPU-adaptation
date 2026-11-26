@@ -1,0 +1,51 @@
+--- original_inference.py
++++ inference/native/run_model.py
+@@ -34,10 +34,10 @@
+ os.environ.setdefault("TRANSFORMERS_OFFLINE", "1")
+ 
+ SCRIPT_DIR = Path(__file__).resolve().parent
+-DEFAULT_MODEL_ROOT = Path("/data2/gaoyonghan/gpu/model")
+-DEFAULT_DATASET_ROOT = Path("/data2/gaoyonghan/gpu/dataset")
+-DEFAULT_OUTPUT_ROOT = Path("/home/ubuntu/gaoyonghan/gpu/results/object_detection_official_v2")
+-DEFAULT_SOURCE_ROOT = Path("/home/ubuntu/gaoyonghan/gpu/official_sources/object_detection")
++DEFAULT_MODEL_ROOT = Path("/data2/gaoyonghan/gpu_model_standalone_20261110/release/model/检测/jameslahm--yoloe/resources/model_index")
++DEFAULT_DATASET_ROOT = Path("/home/ubuntu/文档/ChatGPT/idea 2/outputs/launch_audit_20261005/migration_inputs/datasets")
++DEFAULT_OUTPUT_ROOT = Path("/data2/gaoyonghan/gpu_model_standalone_20261110/release/model/检测/jameslahm--yoloe/resources/runtime/assets/workspace/results/object_detection_official_v2")
++DEFAULT_SOURCE_ROOT = Path("/data2/gaoyonghan/gpu_model_standalone_20261110/release/model/检测/jameslahm--yoloe/resources/runtime/assets/workspace/official_sources/object_detection")
+ IMAGE_SUFFIXES = {".jpg", ".jpeg", ".png", ".bmp", ".tif", ".tiff", ".webp"}
+ COCO80_NAMES = [
+     "person", "bicycle", "car", "motorcycle", "airplane", "bus", "train", "truck", "boat", "traffic light",
+@@ -131,10 +131,8 @@
+         return spec.get("official_sources", {}).get("fixed_revision")
+     if (directory / MARKER).is_file():
+         return verify_bundle(source_root)[0]["commit"]
+-    if not (directory / ".git").is_dir():
+-        return None
+-    result = subprocess.run(["git", "-C", str(directory), "rev-parse", "HEAD"], capture_output=True, text=True)
+-    return result.stdout.strip() if result.returncode == 0 else None
++    from portable_source_revision import verified_source_revision
++    return verified_source_revision(directory)
+ 
+ 
+ def source_revision_matches(actual: str | None, expected: str | None) -> bool:
+@@ -1384,6 +1382,11 @@
+     data["path"] = str(lvis_root)
+     data["minival"] = str(selected_file)
+     run_name = "full" if max_images == 0 else f"smoke_{max_images}"
++    atomic_json(output_dir / 'detection_scope.json', {
++        'image_ids': [int(Path(x).stem) for x in selected_file.read_text().splitlines() if x.strip()],
++        'scope': 'selected_inputs_not_proof_of_completed_inference',
++        'selected_file_sha256': hashlib.sha256(selected_file.read_bytes()).hexdigest(),
++    })
+     data_yaml = output_dir / f"lvis.{run_name}.yaml"
+     data_yaml.write_text(yaml.safe_dump(data, allow_unicode=True, sort_keys=False), encoding="utf-8")
+     model_dir = model_root / spec["model_id"]
+@@ -1561,7 +1564,7 @@
+ 
+ 
+ def run_delegate(spec: dict[str, Any], output_dir: Path, max_images: int, device: str) -> dict[str, Any]:
+-    package = Path("/home/ubuntu/gaoyonghan/gpu/document_layout_table_eval")
++    package = Path("/data2/gaoyonghan/gpu_model_standalone_20261110/release/model/检测/jameslahm--yoloe/resources/runtime/assets/workspace/document_layout_table_eval")
+     if not (package / "run_model.py").is_file():
+         raise FileNotFoundError(package / "run_model.py")
+     keys = ["taha-ctdar-tracka"] if spec["sequence"] == 17 else ["aryn-doclaynet-val", "aryn-doclaynet-test"]

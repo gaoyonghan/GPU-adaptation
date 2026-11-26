@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "sources": {},
+  "models": [
+    {
+      "sequence": 110,
+      "model_id": "edadaltocg/resnet18_cifar10",
+      "runner_family": "native_script",
+      "adapter": "native_labels",
+      "state": "full_inference_and_public_scoring_verified",
+      "dataset": {
+        "id": "CIFAR-10",
+        "split": "test",
+        "note": [
+          "CIFAR-10 test\n10,000 张"
+        ],
+        "native_scope": {
+          "name": "CIFAR-10",
+          "split": "test",
+          "image_count": 10000,
+          "class_count": 10,
+          "class_names": [
+            "airplane",
+            "automobile",
+            "bird",
+            "cat",
+            "deer",
+            "dog",
+            "frog",
+            "horse",
+            "ship",
+            "truck"
+          ]
+        },
+        "relation": "native_e07_registered_scope",
+        "index_source": "native loader GT, materialized as classification_annotations.json in the native phase directory",
+        "data_containers": [
+          "dataset/CIFAR-10"
+        ]
+      },
+      "qualification": "native_registered_scope",
+      "limitations": [
+        "Capture-ready is a code integration state, not a claim that inference has passed.",
+        "Unobserved native Top-5 is unavailable; aggregate scores are not predictions."
+      ],
+      "num_classes": 10,
+      "expected_images": 10000,
+      "native_script": {
+        "script": "inference/native/run_model.py",
+        "script_sha256": "578273e35942fd13564662952e3563b20e10cef3b107f6ad8749bb1e591a7618",
+        "loop_lineno": 160,
+        "labels": "batch_labels",
+        "prediction": "predictions",
+        "ranking": "top5",
+        "classes": "logits.shape[-1]",
+        "loader_kind": "torch",
+        "label_position": 1,
+        "framework": "torch",
+        "original_script_sha256": "5dd92b4d926c025a804b481ea5e78765f2551e7bd1a5ef70fac10c07e6716b1d",
+        "original_loop_lineno": 149,
+        "original_path": "code/resnet18-cifar10.py",
+        "ported_script_sha256": "158615f844fb8566324d7519225cdfe721cd5413f7bf1f4fc91296596cefd2c0"
+      },
+      "output_relative_path": "result/run_001/full/m110",
+      "supports_max_samples": false,
+      "runtime": {
+        "batch_size": 256,
+        "workers": 4,
+        "warmup": 10
+      },
+      "weights_files": [
+        {
+          "path": "config.json",
+          "size": 879,
+          "sha256": "f17795744f63dfde51d259011d1edcf31ba817f0c7444fcba196934d93bf09b8"
+        },
+        {
+          "path": "hyperparameters.json",
+          "size": 547,
+          "sha256": "d7eb7a9d57e62e8c8e4e3ae80f057f0bff2f135287dd39b01edb266aa32821be"
+        },
+        {
+          "path": "pytorch_model.bin",
+          "size": 44774261,
+          "sha256": "f656242526b567dbd46857276acbcfcb4ee74a7f8a7ae5e56557b7e8fa5d914a"
+        }
+      ],
+      "dataset_files": [
+        "CIFAR-10/batches.meta",
+        "CIFAR-10/test_batch"
+      ],
+      "environment": "e07.txt",
+      "native_precision": "FP32",
+      "backend": "torchvision_resnet18",
+      "timing_alignment": {
+        "forward": "Same event/current-stream/synchronize semantics; wrapper preserves exactly one native call. MX runtime differs.",
+        "e2e": "Native DataLoader fetch to CPU prediction availability; worker-prefetch boundary differs from Example. Does not include subsequent metrics or record writes.",
+        "worker_prefetch": true,
+        "starts_after_spider_composition": false,
+        "native_metric_operations_before_prediction_readiness": [],
+        "model_load": "Sum of measured native construction/load/placement blocks, not Example contiguous block.",
+        "warmup": "Native repeated preprocessed first batch; native count retained; synchronized before/after. Unlike Example, preprocessing/transfer/softmax-to-CPU are outside the warmup interval.",
+        "evaluation": "Native aggregate evaluation not measured separately; evaluation_seconds=null. Public scoring duration is outside native timing.",
+        "resume": "No resume; repeated native phase archives previous output; resume_segments=1.",
+        "comparison_valid": false
+      },
+      "label_mapping": [
+        {
+          "id": 0,
+          "name": "airplane"
+        },
+        {
+          "id": 1,
+          "name": "automobile"
+        },
+        {
+          "id": 2,
+          "name": "bird"
+        },
+        {
+          "id": 3,
+          "name": "cat"
+        },
+        {
+          "id": 4,
+          "name": "deer"
+        },
+        {
+          "id": 5,
+          "name": "dog"
+        },
+        {
+          "id": 6,
+          "name": "frog"
+        },
+        {
+          "id": 7,
+          "name": "horse"
+        },
+        {
+          "id": 8,
+          "name": "ship"
+        },
+        {
+          "id": 9,
+          "name": "truck"
+        }
+      ],
+      "layout_reference": {
+        "branch": "gaoyonghan/mx",
+        "commit": "208733e1562fca75b7128772ca2cd587943d9012",
+        "platform": "mx"
+      }
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "schema": "model-eval/provenance/validation/v1",
+  "model_id": "timm/mobilenetv4_hybrid_medium.ix_e550_r384_in1k",
+  "sequence": 220,
+  "status": "post-run",
+  "checks": [
+    {
+      "name": "weights_sha256_match_source",
+      "status": "pass",
+      "evidence": "weights/weight_verification.json — 复制前后逐文件 sha256 相等，已断言。"
+    },
+    {
+      "name": "safetensors_header_parse",
+      "status": "pass",
+      "evidence": "解析 safetensors 头部成功，张量表完整可读。"
+    },
+    {
+      "name": "entrypoint_expansion",
+      "status": "pass",
+      "evidence": "`python inference.py --show-command` 四个占位符全部展开，smoke 时 --max-images 自动替换为 10。"
+    },
+    {
+      "name": "registry_entry_resolves",
+      "status": "pass",
+      "evidence": "模型本地 classification_inventory.json 中 sequence=220 可被 prepare_classification.registry() 读取。"
+    },
+    {
+      "name": "cross_platform_consistency",
+      "status": "pass",
+      "evidence": "A100 与 C500 的 Top-1 相差 2 张图（0.8297 对 0.8296），属跨平台图像解码/插值边界翻转，非评测口径差异。"
+    },
+    {
+      "name": "full_run_on_metax_c500",
+      "status": "pass",
+      "evidence": "e07 上 --phase full 跑完 50000/50000（耗时 2m48s），顶层 evaluate.py 输出 scored_bundles=1, state=completed。"
+    },
+    {
+      "name": "score_matches_reference",
+      "status": "pass_with_note",
+      "evidence": "本次 Top-1=0.8296（41480/50000），参考值 0.82962（41481/50000），相差 1 张图；Top-5 完全一致 0.96474。差异属图像解码/插值边界翻转，与 A100↔C500 之间已记录的 2 张图差异同性质。"
+    }
+  ],
+  "reference_result": {
+    "source": "unified_eval/bundles/c500_221_pq",
+    "platform": "MetaX C500 (unified-scoring rerun, pre-delivery)",
+    "top1_accuracy": 0.82962,
+    "top5_accuracy": 0.96474,
+    "balanced_accuracy": 0.8296199999999999,
+    "macro_f1": 0.8271822276839916,
+    "infer_latency_ms": 0.725,
+    "infer_throughput_per_s": 1379.89
+  },
+  "expected_after_full_run": "本次 e07 运行的 Top-1 应与 reference_result.top1_accuracy 一致（同一权重、同一数据集、同一评分器）；若不一致须先定位原因再交付。",
+  "created": "2026-11-25",
+  "measured_at": "2026-11-25",
+  "measured_result": {
+    "environment": "e07 / MetaX C500",
+    "run_dir": "result/run_001",
+    "images": 50000,
+    "top1_accuracy": 0.8296,
+    "top5_accuracy": 0.96474,
+    "balanced_accuracy": 0.8296,
+    "macro_f1": 0.8271583863428906,
+    "wall_clock_seconds": 152.5,
+    "peak_gpu_memory_mib": 1647.1,
+    "batch_size": 64,
+    "precision": "fp32",
+    "forward_latency_ms_per_image": 0.7117,
+    "forward_images_per_second": 1405.03,
+    "forward_method": "CUDA events, warmup 5 batches excluded",
+    "peak_gpu_memory_bytes": 1727150592,
+    "timing_source": "result/run_001/native/timing.json"
+  }
+}

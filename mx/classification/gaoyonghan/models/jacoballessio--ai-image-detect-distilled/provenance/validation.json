@@ -1,0 +1,74 @@
+{
+  "schema": "model-eval/provenance/validation/v1",
+  "model_id": "jacoballessio/ai-image-detect-distilled",
+  "sequence": 221,
+  "status": "post-run",
+  "checks": [
+    {
+      "name": "weights_sha256_match_source",
+      "status": "pass",
+      "evidence": "weights/weight_verification.json — 复制前后逐文件 sha256 相等，已断言。"
+    },
+    {
+      "name": "safetensors_header_parse",
+      "status": "pass",
+      "evidence": "解析 safetensors 头部成功，张量表完整可读。"
+    },
+    {
+      "name": "entrypoint_expansion",
+      "status": "pass",
+      "evidence": "`python inference.py --show-command` 四个占位符全部展开，smoke 时 --max-images 自动替换为 10。"
+    },
+    {
+      "name": "registry_entry_resolves",
+      "status": "pass",
+      "evidence": "模型本地 classification_inventory.json 中 sequence=221 可被 prepare_classification.registry() 读取。"
+    },
+    {
+      "name": "cross_platform_consistency",
+      "status": "pass",
+      "evidence": "A100 与 C500 六项指标逐位零差（Accuracy 均为 0.166578…）。"
+    },
+    {
+      "name": "full_run_on_metax_c500",
+      "status": "pass",
+      "evidence": "e07 上 --phase full 跑完 5625/5625（45.42 s），顶层 evaluate.py 输出 scored_bundles=1, state=completed。"
+    },
+    {
+      "name": "score_matches_reference",
+      "status": "pass",
+      "evidence": "本次 Top-1=0.16657777777777777 与参考值 0.16657777777777777 完全一致；同一权重、同一数据集、同一评分器下逐位复现。"
+    }
+  ],
+  "reference_result": {
+    "source": "unified_eval/bundles/c500_222",
+    "platform": "MetaX C500 (unified-scoring rerun, pre-delivery)",
+    "top1_accuracy": 0.16657777777777777,
+    "top5_accuracy": null,
+    "balanced_accuracy": 0.49957303736054,
+    "macro_f1": 0.14289614644547297,
+    "infer_latency_ms": 0.311,
+    "infer_throughput_per_s": 3211.2
+  },
+  "expected_after_full_run": "本次 e07 运行的 Top-1 应与 reference_result.top1_accuracy 一致（同一权重、同一数据集、同一评分器）；若不一致须先定位原因再交付。",
+  "created": "2026-11-25",
+  "measured_at": "2026-11-25",
+  "measured_result": {
+    "environment": "e07 / MetaX C500",
+    "run_dir": "result/run_001",
+    "images": 5625,
+    "top1_accuracy": 0.16657777777777777,
+    "top5_accuracy": null,
+    "balanced_accuracy": 0.49957303736054,
+    "macro_f1": 0.14289614644547297,
+    "wall_clock_seconds": 28.2,
+    "peak_gpu_memory_mib": 533.9,
+    "batch_size": 64,
+    "precision": "fp32",
+    "forward_latency_ms_per_image": 0.2877,
+    "forward_images_per_second": 3476.35,
+    "forward_method": "CUDA events, warmup 5 batches excluded",
+    "peak_gpu_memory_bytes": 559805440,
+    "timing_source": "result/run_001/native/timing.json"
+  }
+}

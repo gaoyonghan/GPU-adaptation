@@ -1,0 +1,286 @@
+--- before_run_model.py
++++ inference/run_model.py
+@@ -3,7 +3,6 @@
+ import argparse
+ from collections import Counter
+ import importlib.metadata
+-import importlib.util
+ import json
+ import math
+ import os
+@@ -12,16 +11,14 @@
+ import sys
+ import time
+ import traceback
+-import zlib
+-
+-from common import HERE, SOURCE, Images, digest, fingerprint, locked, read_index, save, smoke_rows
++
++from common import HERE, Images, digest, fingerprint, locked, read_index, save, smoke_rows
+ from timing import ForwardTimer, synchronize
+ 
+ for key in ['HF_HUB_OFFLINE', 'TRANSFORMERS_OFFLINE', 'HF_DATASETS_OFFLINE']:
+     os.environ[key] = '1'
+ os.environ.setdefault('TOKENIZERS_PARALLELISM', 'false')
+ os.environ.setdefault('HF_MODULES_CACHE', str(HERE/'.runtime/hf_modules'))
+-os.environ.setdefault('YOLO_CONFIG_DIR', str(HERE/'.runtime/yolo_config'))
+ os.environ.setdefault('MPLCONFIGDIR', str(HERE/'.runtime/matplotlib'))
+ 
+ 
+@@ -54,20 +51,6 @@
+         stat=Path(p).stat()
+         if stat.st_size!=item['size'] or stat.st_mtime_ns!=item['mtime_ns']:
+             raise ValueError(f'Data container changed: {p}')
+-    for key in ['class_map','corrected_label_config']:
+-        if key in spec:
+-            p=spec[key] if key=='class_map' else spec[key]['path']
+-            expected=spec['class_map_sha256'] if key=='class_map' else spec[key]['sha256']
+-            if digest(p)!=expected:
+-                raise ValueError(f'Label mapping changed: {p}')
+-    backend=spec['backend']
+-    source_key='timm' if backend=='timm_native' else 'ultralytics' if backend=='ultralytics_native' else None
+-    if source_key:
+-        source=manifest['sources'][source_key]
+-        commit=subprocess.check_output(['git','-C',source['path'],'rev-parse','HEAD'],text=True).strip()
+-        if commit!=source['commit']:
+-            raise ValueError(f'Official source revision changed: {source_key}')
+-        subprocess.run(['git','-C',source['path'],'diff','--quiet','HEAD','--'],check=True)
+     rows=read_index(spec)
+     for row in rows:
+         if 'path' in row:
+@@ -137,43 +120,15 @@
+     import transformers
+     start=time.perf_counter()
+     kwargs={'local_files_only':True,'output_loading_info':True}
+-    if spec['sequence']==191:
+-        kwargs['config']=transformers.AutoConfig.from_pretrained(spec['corrected_label_config']['path'],local_files_only=True)
+-    if spec['sequence']==179:
+-        kwargs['trust_remote_code']=True
+-    # The publisher's ViTHybrid example names the explicit class; its historical
+-    # config uses "vit-hybrid", which is not an AutoConfig registry key.
+-    model_class=transformers.ViTHybridForImageClassification if spec['sequence']==198 else transformers.AutoModelForImageClassification
++    model_class=transformers.AutoModelForImageClassification
+     model,loading=model_class.from_pretrained(spec['model_path'],**kwargs)
+     if loading.get('missing_keys') or loading.get('unexpected_keys') or loading.get('mismatched_keys'):
+         raise ValueError(f'Checkpoint does not load exactly into publisher model: {loading}')
+     model=model.to(args.device).eval()
+-    if spec['sequence']==179:
+-        from timm.data.transforms_factory import create_transform
+-        processor=create_transform(input_size=(3,224,224),is_training=False,mean=model.config.mean,
+-                                   std=model.config.std,crop_mode=model.config.crop_mode,crop_pct=model.config.crop_pct)
+-        def infer(images):
+-            tensor=torch.stack([processor(image) for image in images]).to(args.device)
+-            return model(tensor)['logits'].softmax(dim=-1).float().cpu().numpy()
+-    else:
+-        processor_class=transformers.ViTHybridImageProcessor if spec['sequence']==198 else transformers.AutoImageProcessor
+-        processor=processor_class.from_pretrained(spec['model_path'],local_files_only=True,use_fast=False)
+-        if spec['inference_entry']=='pipeline':
+-            pipe=transformers.pipeline('image-classification',model=model,image_processor=processor,device=args.device)
+-            reverse={v:int(k) for k,v in model.config.id2label.items()}
+-            if len(reverse)!=spec['num_output_classes']:
+-                raise ValueError('Publisher pipeline labels are not unique')
+-            def infer(images):
+-                result=pipe(images,batch_size=args.batch_size,top_k=spec['num_output_classes'])
+-                probs=np.zeros((len(images),spec['num_output_classes']),dtype=np.float64)
+-                for i,entries in enumerate(result):
+-                    for entry in entries:
+-                        probs[i,reverse[entry['label']]]=entry['score']
+-                return probs
+-        else:
+-            def infer(images):
+-                inputs=processor(images=images,return_tensors='pt').to(args.device)
+-                return model(**inputs).logits.softmax(dim=-1).float().cpu().numpy()
++    processor=transformers.AutoImageProcessor.from_pretrained(spec['model_path'],local_files_only=True,use_fast=False)
++    def infer(images):
++        inputs=processor(images=images,return_tensors='pt').to(args.device)
++        return model(**inputs).logits.softmax(dim=-1).float().cpu().numpy()
+     synchronize(args.device)
+     load_seconds=time.perf_counter()-start
+     image_reader=Images()
+@@ -247,109 +202,6 @@
+     return timing,metrics
+ 
+ 
+-def native_timm(spec, rows, args, out):
+-    import torch
+-    sys.path.insert(0,str(SOURCE/'pytorch-image-models'))
+-    import timm
+-    path=SOURCE/'pytorch-image-models/validate.py'
+-    module_spec=importlib.util.spec_from_file_location('published_timm_validate',path)
+-    native=importlib.util.module_from_spec(module_spec);module_spec.loader.exec_module(native)
+-    native.utils.setup_default_logging()
+-    # A class-map preserves original output indices even for a 10-image smoke subset.
+-    folder=out/'native_images'
+-    for row in rows:
+-        image=folder/row['synset']/Path(row['path']).name
+-        image.parent.mkdir(parents=True,exist_ok=True)
+-        if not image.exists():
+-            image.symlink_to(row['path'])
+-    assert sum(1 for p in folder.glob('*/*') if p.is_file())==len(rows)
+-    command=['--data-dir',str(folder),'--model','local-dir:'+spec['model_path'],'--checkpoint',str(Path(spec['model_path'])/spec['weight']),
+-             '--class-map',spec['class_map'],'--num-classes',str(spec['num_output_classes']),
+-             '--device',args.device,'--batch-size',str(args.batch_size),'--workers',str(args.workers)]
+-    native_args=native.parser.parse_args(command)
+-    captured={}
+-    create_model=native.create_model
+-    def observed_create(*a,**kw):
+-        start=time.perf_counter();model=create_model(*a,**kw)
+-        captured['construction_seconds']=time.perf_counter()-start
+-        captured['timer']=ForwardTimer(model,args.device);captured['timer'].active=True
+-        return model
+-    native.create_model=observed_create
+-    create_loader=native.create_loader
+-    class ObservedLoader:
+-        def __init__(self,loader): self.loader=loader
+-        def __len__(self): return len(self.loader)
+-        def __iter__(self):
+-            synchronize(args.device);start=time.perf_counter()
+-            try:
+-                yield from self.loader
+-            finally:
+-                synchronize(args.device);captured['evaluation_loop_seconds']=time.perf_counter()-start
+-    def observed_loader(*a,**kw): return ObservedLoader(create_loader(*a,**kw))
+-    native.create_loader=observed_loader
+-    load_checkpoint=native.load_checkpoint
+-    def observed_load(*a,**kw):
+-        start=time.perf_counter();result=load_checkpoint(*a,**kw)
+-        captured['checkpoint_load_seconds']=time.perf_counter()-start
+-        return result
+-    native.load_checkpoint=observed_load
+-    if str(args.device).startswith('cuda'): torch.cuda.reset_peak_memory_stats(args.device)
+-    try:
+-        result=native.validate(native_args)
+-        timing=captured['timer'].summary(skip=1)  # exclude the evaluator's one native random-input warmup
+-        assert timing['timed_images']==len(rows)
+-        warmup=captured['timer'].summary()['batch_forward_seconds'][0]
+-        timing.update(warmup_batches=1,warmup_forward_seconds=warmup,
+-                      warmup_policy='Unmodified official validate.py random-input warmup',
+-                      model_load_seconds=captured['construction_seconds']+captured['checkpoint_load_seconds'],
+-                      evaluation_loop_seconds=captured['evaluation_loop_seconds'],inference_e2e_seconds=None,
+-                      e2e_unavailable_reason='Official evaluator interleaves loss and accuracy; preserve its loop without reimplementing it',
+-                      peak_allocated_bytes=torch.cuda.max_memory_allocated(args.device) if str(args.device).startswith('cuda') else None,
+-                      timm_version=timm.__version__,evaluator_sha256=digest(path),native_arguments=command)
+-        result.update(scoring_source='Unmodified pinned timm.validate',units='top1/top5 in percent',
+-                      reference_comparison='not_officially_comparable' if spec['dataset_relation']!='original_exact' else 'manual_reference_required')
+-        return timing,result if args.phase=='full' else None
+-    finally:
+-        if 'timer' in captured: captured['timer'].close()
+-
+-
+-def native_yolo(spec, rows, args, out):
+-    import torch
+-    from ultralytics import YOLO
+-    start=time.perf_counter();model=YOLO(str(Path(spec['model_path'])/args.variant));load=time.perf_counter()-start
+-    expected=['Black','East Asian','Indian','Latino_Hispanic','Middle Eastern','Southeast Asian','White']
+-    normalize=lambda s:' '.join(s.lower().replace('_',' ').split())
+-    if [normalize(model.names[i]) for i in range(7)]!=[normalize(s) for s in expected]:
+-        raise ValueError('YOLO native race output order differs from the frozen FairFace mapping')
+-    reader=Images();folder=HERE/'.runtime/fairface-native-v2'
+-    # Different smoke/full views prevent a small run from being mistaken for the full dataset.
+-    folder=folder/args.phase
+-    for row in rows:
+-        path=folder/'val'/f'{row["target"]:02d}_{expected[row["target"]]}'/(fingerprint(row['id'])+'.jpg')
+-        path.parent.mkdir(parents=True,exist_ok=True)
+-        if not path.exists(): path.write_bytes(reader.raw(row))
+-    reader.close()
+-    assert sum(1 for p in (folder/'val').glob('*/*') if p.is_file())==len(rows)
+-    # The official classification validator reads class names from train/ even
+-    # for split=val. This alias supplies metadata; no training or split occurs.
+-    if not (folder/'train').exists(): (folder/'train').symlink_to('val',target_is_directory=True)
+-    start=time.perf_counter()
+-    result=model.val(data=str(folder),split='val',imgsz=224,batch=args.batch_size,device=args.device,
+-                     workers=args.workers,half=False,plots=False,save_json=False,project=str(out),name='native_val',exist_ok=False)
+-    elapsed=time.perf_counter()-start
+-    speed=result.speed
+-    timing={'model_load_seconds':load,'native_validation_wall_seconds':elapsed,'timed_images':len(rows),
+-            'dataset_metadata_alias':'train -> val; validation only, no training or resplitting',
+-            'forward_seconds':speed['inference']*len(rows)/1000,'forward_amortized_ms_per_image':speed['inference'],
+-            'forward_images_per_second':1000/speed['inference'],
+-            'native_speed_ms_per_image':speed,'inference_e2e_seconds':None,
+-            'e2e_unavailable_reason':'Use publisher validator speed fields; its wall time includes setup and scoring',
+-            'peak_allocated_bytes':torch.cuda.max_memory_allocated(args.device) if str(args.device).startswith('cuda') else None}
+-    metrics={k:float(v) for k,v in result.results_dict.items()}
+-    metrics.update(scoring_source='Ultralytics ClassificationValidator',reference_comparison='manual_reference_required')
+-    return timing,metrics if args.phase=='full' else None
+-
+-
+ def run_one(args, spec, manifest):
+     key=f'm{spec["sequence"]}'+('-'+Path(args.variant).stem if args.variant else '')
+     out=args.output_root/args.phase/key
+@@ -361,10 +213,6 @@
+             return 0 if spec['status']=='skipped' else 2
+         env=environment()
+         code={p.name:digest(p) for p in HERE.glob('*.py')}
+-        code['native_js.mjs']=digest(HERE/'native_js.mjs')
+-        if spec['backend']=='transformers_js':
+-            code['package-lock.json']=digest(HERE/'package-lock.json')
+-            env['node']=subprocess.check_output(['node','--version'],text=True).strip()
+         protocol={'model':spec['protocol_fingerprint'],'code':code,'environment':env,'device':args.device,
+                   'batch_size':args.batch_size,'warmup':args.warmup,'workers':args.workers,'variant':args.variant}
+         fp=fingerprint(protocol)
+@@ -386,9 +234,9 @@
+             rows=check(spec,manifest)
+             if args.phase=='preflight':
+                 state.update(status='preflight_ready',images=len(rows));save(status_path,state);return 0
+-            if str(args.device).startswith('cuda') and not env['cuda_available'] and spec['backend']!='transformers_js':
++            if str(args.device).startswith('cuda') and not env['cuda_available']:
+                 raise RuntimeError('CUDA unavailable; no silent CPU fallback')
+-            if str(args.device).startswith('cuda') and spec['backend']!='transformers_js':
++            if str(args.device).startswith('cuda'):
+                 import torch
+                 torch.cuda.set_device(args.device)
+             if args.phase=='smoke': rows=smoke_rows(rows)
+@@ -399,10 +247,7 @@
+                 if s.get('status')!='partial_complete' or s.get('protocol_fingerprint')!=fp:
+                     raise RuntimeError('Matching smoke protocol has not passed')
+             args.segment=str(time.time_ns())
+-            if spec['backend']=='timm_native': timing,metrics=native_timm(spec,rows,args,out)
+-            elif spec['backend']=='ultralytics_native': timing,metrics=native_yolo(spec,rows,args,out)
+-            elif spec['backend']=='transformers_js': timing,metrics=js_run(spec,rows,args,out)
+-            else: timing,metrics=hf_run(spec,rows,args,out)
++            timing,metrics=hf_run(spec,rows,args,out)
+             timing.update(run_wall_seconds_this_segment=time.perf_counter()-started,
+                           gpu_at_end=gpu_snapshot(),phase=args.phase,
+                           performance_comparison_valid=False if args.phase=='smoke' else 'requires review of recorded GPU co-tenancy and matching batch/dtype/resolution')
+@@ -422,30 +267,8 @@
+             traceback.print_exc();return 1
+ 
+ 
+-def js_run(spec, rows, args, out):
+-    reader=Images();cache=HERE/'.runtime/js-images';cache.mkdir(parents=True,exist_ok=True)
+-    requests=[]
+-    for row in rows:
+-        p=cache/(fingerprint(row['id'])+'.jpg')
+-        if not p.exists(): p.write_bytes(reader.raw(row))
+-        requests.append({**row,'path':str(p)})
+-    reader.close()
+-    _,batches=journal_records(out/'batches.jsonl',rows)
+-    request={'model_path':spec['model_path'],'labels':spec['label_mapping'],'rows':requests,'warmup':args.warmup,'output':str(out),
+-             'completed_batches':batches,'segment':args.segment}
+-    save(out/'js_request.json',request)
+-    subprocess.run(['node',str(HERE/'native_js.mjs'),str(out/'js_request.json')],check=True)
+-    records,_=journal_records(out/'batches.jsonl',rows)
+-    assert [r['id'] for r in records]==[r['id'] for r in rows]
+-    with (out/'predictions.jsonl').open('w') as f:
+-        for record in records: f.write(json.dumps(record,ensure_ascii=False)+'\n')
+-    timing=json.loads((out/'js_timing.json').read_text())
+-    return timing,score(records,spec) if args.phase=='full' else None
+-
+-
+ def main():
+     parser=argparse.ArgumentParser()
+-    parser.add_argument('--model',type=int,required=True)
+     parser.add_argument('--phase',choices=['preflight','smoke','full'],default='preflight')
+     parser.add_argument('--describe',action='store_true')
+     parser.add_argument('--output-root',type=Path,default=HERE.parent/'results/run_001')
+@@ -459,7 +282,9 @@
+         args.output_root=HERE.parent/args.output_root
+     if args.batch_size<1 or args.warmup<1 or args.workers<1: parser.error('batch-size, warmup and workers must be positive')
+     manifest=json.loads((HERE/'models.json').read_text())
+-    spec=next(s for s in manifest['models'] if s['sequence']==args.model)
++    if len(manifest['models']) != 1:
++        raise ValueError('Expected one model in this folder')
++    spec=manifest['models'][0]
+     # Resolve the moved files against this model directory.
+     spec['model_path']=str((HERE.parent/spec['model_path']).resolve())
+     spec['index']=str((HERE.parent/spec['index']).resolve())

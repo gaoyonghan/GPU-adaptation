@@ -1,0 +1,27 @@
+{
+  "sequence": 23,
+  "model_id": "jameslahm/yoloe",
+  "source_archive_hash_matches": true,
+  "source_archive_sha256": "eb619c65fdcd87433e55c96549cf9ebe58931b49a63630443c37014c5690db42",
+  "prepared_entry_source_sha256": "62b9770dedb6db2612cef5258fb003551aed9ebde1eed1bc0b4b906e89c8f083",
+  "local_entry_sha256": "08354fef73ec113c4d42f642c76cd5723d968d6977599298524133d4b35ed5e0",
+  "local_entry": "inference/native/run_model.py",
+  "central_dispatch_in_entry": false,
+  "unexpected_external_links": [],
+  "declared_dataset_links": [
+    {
+      "path": "resources/runtime/assets/workspace/official_sources/object_detection/WildDet3D/data/in_the_wild",
+      "target": "/data2/gaoyonghan/gpu/dataset/wilddet3d_val"
+    }
+  ],
+  "broken_links": [],
+  "path_template_count": 366,
+  "state": "entrypoint_verified_full_run_pending",
+  "validation": {
+    "returncode": 0,
+    "python": "/home/ubuntu/gaoyonghan/miniconda3/envs/object-detection-yoloe-v2/bin/python",
+    "checked_at": "2026-11-10T15:38:34.131205+08:00",
+    "scope": "native help/import/path check only; not full inference"
+  },
+  "smoke_verification": null
+}

@@ -1,0 +1,24 @@
+{
+  "sequence": 167,
+  "model_id": "playrobin/furniture-styles",
+  "dirname": "playrobin__furniture-styles",
+  "loader": "transformers",
+  "timm_name": null,
+  "num_classes": 5,
+  "dataset": "interior_design",
+  "dataset_sub": "interior_3cls",
+  "dataset_source": "tonijhanel/my_interior_design_dataset 官方 test split（4182 张）中的 3 个可对应子类",
+  "transform": null,
+  "align": "furniture_167_map.json",
+  "expected_images": 1047,
+  "reported_top1": 0.524,
+  "reported_top5": null,
+  "reported_note": "作者值 52.4% 是 HuggingPics 模板自建 5 类口径，且其来源是 trainer.callback_metrics[val_acc]——即训练时最后一轮【验证】准确率，作者从未评测测试集；已验证验证集仅 21 张（模型卡 0.523809552192688=float32(11/21)，tfevents 四次 val_acc=11/21、9/21、10/21、11/21 全落在 1/21 网格），单张值 4.76pp，无统计意义；数据为 HuggingPics 代理调 Bing Image Search 下的 thumbnailUrl 缩略图；HF 上作者无公开数据集（api author=playrobin 为空、三个候选 repo 全 401），模板只推模型不推数据，且切分早于 pl.seed_everything(42)，永久不可还原；本表换 tonijhanel 官方 test split 只取 3 个可对应类，随机基线 33.3%（subset 口径）/20%（raw 5 类口径）。预处理口径做过对照：处理器默认（压扁 224）、tv_short:256@224（HuggingPics 若走 torchvision 的写法）、tv_short:224 三种结果完全一致（subset 均 36.77%），且 HuggingPics 实际是直接用 ViTFeatureExtractor(image_processor) 出张量、即压扁口径，故此处留空用处理器默认",
+  "prepare": {
+    "args": [
+      "--row",
+      "167",
+      "--apply"
+    ]
+  }
+}

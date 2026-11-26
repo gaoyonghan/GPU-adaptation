@@ -1,0 +1,54 @@
+{
+  "sequence": 165,
+  "model_id": "timm/vgg16.tv_in1k",
+  "task": "classification",
+  "model_dir": "classification/gaoyonghan/models/timm--vgg16.tv_in1k",
+  "layout": {
+    "entry": "inference.py",
+    "entrypoint": "inference/entrypoint.json",
+    "native_runner": "inference/native/run_model.py",
+    "model_config": "inference/native/model.json",
+    "engine": "inference/native/engine.py",
+    "prepare": "inference/prepare.py",
+    "output_format": "inference/output_format/",
+    "label_map": null,
+    "weights": "weights/",
+    "result": "result/run_001/",
+    "provenance": "provenance/"
+  },
+  "top_level_entries": [
+    "README.md",
+    "inference",
+    "inference.py",
+    "provenance",
+    "result",
+    "weights"
+  ],
+  "identity": {
+    "dirname": "timm__vgg16.tv_in1k",
+    "loader": "timm",
+    "num_classes": 1000,
+    "timm_name": "vgg16.tv_in1k",
+    "batch_size": 64,
+    "precision": "amp_bf16"
+  },
+  "weights": {
+    "local_dir": "weights/",
+    "file_count": 4,
+    "bytes": 553438679,
+    "verification": "weights/weight_verification.json",
+    "source_at_adaptation": "/mnt/afs/laishen/gpu_infer/models/timm__vgg16.tv_in1k"
+  },
+  "upstream": {
+    "repo": "timm/vgg16.tv_in1k",
+    "revision": null,
+    "source_files_kept": [
+      ".gitattributes",
+      "README.md",
+      "config.json",
+      "model.safetensors"
+    ],
+    "note": "只保留离线推理所需的仓库根文件；训练现场产物（checkpoint-*、optimizer.pt、runs/、.cache/）与 .bin 副本未收录。"
+  },
+  "created_at": "2026-11-19T13:26:47.431903+00:00"
+}

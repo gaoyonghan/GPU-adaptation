@@ -1,0 +1,36 @@
+{
+  "schema": "model-eval/classification-inventory/v1",
+  "scope": "Existing 59 classification models; model 93 is retrieval and excluded.",
+  "models": [
+    {
+      "sequence": 186,
+      "model_id": "HHousen/household-rooms",
+      "runner_family": "classification171",
+      "adapter": "native_labels",
+      "state": "integrated",
+      "dataset": {
+        "id": "classification171_186",
+        "relation": "public_replacement",
+        "split": "MIT Indoor67 TestImages; five supported room classes",
+        "note": [
+          "The available archive contains 98 images from the five supported classes listed by TestImages.txt; this is the frozen selected count.",
+          "Local checkpoint and publisher inference components retained. Offline file paths, eval mode, batching, timing observation and reference scoring are external orchestration."
+        ],
+        "index_source": "__MODEL_ROOT__/inference/native/indices/186.jsonl",
+        "data_containers": [
+          "__DATASET_ROOT__/datasets_171_200/indoor67/raw/indoor-scenes-cvpr-2019.zip"
+        ]
+      },
+      "qualification": "public_replacement",
+      "limitations": [],
+      "num_classes": 5,
+      "expected_images": 98,
+      "category_reference": {
+        "file": "__MODEL_ROOT__/inference/native/models.json",
+        "sequence": 186,
+        "field": "label_mapping"
+      },
+      "gt_index": "__MODEL_ROOT__/inference/native/indices/186.jsonl"
+    }
+  ]
+}

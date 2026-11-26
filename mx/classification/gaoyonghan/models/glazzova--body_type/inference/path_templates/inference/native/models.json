@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "sources": {},
+  "models": [
+    {
+      "sequence": 174,
+      "model_id": "glazzova/body_type",
+      "model_path": "__MODEL_ROOT__/weights/glazzova/body_type",
+      "revision": "49c5c2cc437566416b56364095cdc9e6b357e7cf",
+      "task_type": "image-classification",
+      "status": "blocked",
+      "official_model_card": "https://huggingface.co/glazzova/body_type",
+      "official_reference": null,
+      "reference_comparison": "manual_reference_required",
+      "known_differences": [],
+      "reason": "Dataset access approval pending",
+      "protocol_fingerprint": "d44fb0e081f53fe1285da79ad504d6f2320ed8f7db60a2cdd9a490b49a134079"
+    }
+  ],
+  "runtime_defaults": {
+    "batch_size": 1,
+    "device": "cuda:0",
+    "warmup_batches": 10,
+    "workers": 2
+  },
+  "scope": "Each published model retained; 177 includes all five weights; no full GPU inference launched by preparation."
+}

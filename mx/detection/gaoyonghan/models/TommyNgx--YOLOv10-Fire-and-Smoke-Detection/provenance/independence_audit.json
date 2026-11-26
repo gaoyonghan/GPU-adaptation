@@ -1,0 +1,22 @@
+{
+  "sequence": 46,
+  "model_id": "TommyNgx/YOLOv10-Fire-and-Smoke-Detection",
+  "source_archive_hash_matches": true,
+  "source_archive_sha256": "b0c1391b32a985e8338110f8e9f9b3553578d1842cf65002745a9852b90e0492",
+  "prepared_entry_source_sha256": "27e87f97ddf6375daf19f8f570935341a73ecc830933b20353b4a71c44e18854",
+  "local_entry_sha256": "402bda37e15672a87a65190717566faed7f644b5175dbca4019419a24266057c",
+  "local_entry": "inference/native/run_m46_native.py",
+  "central_dispatch_in_entry": false,
+  "unexpected_external_links": [],
+  "declared_dataset_links": [],
+  "broken_links": [],
+  "path_template_count": 446,
+  "state": "entrypoint_verified_full_run_pending",
+  "validation": {
+    "returncode": 0,
+    "python": "/home/ubuntu/gaoyonghan/miniconda3/envs/object-detection-yolo-v2/bin/python",
+    "checked_at": "2026-11-10T15:49:31.793880+08:00",
+    "scope": "native help/import/path check only; not full inference"
+  },
+  "smoke_verification": null
+}

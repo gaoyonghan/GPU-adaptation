@@ -1,0 +1,26 @@
+{
+  "model_load_seconds": 1.0205439603887498,
+  "native_validation_wall_seconds": 0.8849258059635758,
+  "timed_images": 10,
+  "dataset_metadata_alias": "train -> val; validation only, no training or resplitting",
+  "forward_seconds": 0.0790560208261013,
+  "forward_amortized_ms_per_image": 7.90560208261013,
+  "native_speed_ms_per_image": {
+    "preprocess": 0.18868469633162022,
+    "inference": 7.90560208261013,
+    "loss": 0.006283912807703018,
+    "postprocess": 0.011841952800750732
+  },
+  "inference_e2e_seconds": null,
+  "e2e_unavailable_reason": "Use publisher validator speed fields; its wall time includes setup and scoring",
+  "peak_allocated_bytes": 103892480,
+  "run_wall_seconds_this_segment": 2.728517876006663,
+  "gpu_at_end": "0, GPU-edb63bcd-7ac5-4284-b9ea-825830b8ebba, NVIDIA GeForce RTX 4090, 580.126.09, 774 MiB, 41 %\n1, GPU-a11f730c-a975-2bf0-b765-3c24d83b7104, NVIDIA GeForce RTX 4090, 580.126.09, 745 MiB, 14 %",
+  "phase": "smoke",
+  "performance_comparison_valid": false,
+  "backend_flags": {
+    "cuda_matmul_allow_tf32": false,
+    "cudnn_allow_tf32": true,
+    "cudnn_benchmark": false
+  }
+}

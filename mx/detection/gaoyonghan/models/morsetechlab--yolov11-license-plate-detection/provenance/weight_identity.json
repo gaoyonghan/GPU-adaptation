@@ -1,0 +1,78 @@
+{
+  "sequence": 33,
+  "files": [
+    {
+      "path": "license-plate-finetune-v1x.onnx",
+      "bytes": 227582903,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "license-plate-finetune-v1n.pt",
+      "bytes": 5465235,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "license-plate-finetune-v1m.onnx",
+      "bytes": 80308089,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3776,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "license-plate-finetune-v1n.onnx",
+      "bytes": 10481682,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "license-plate-finetune-v1s.pt",
+      "bytes": 19173715,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": ".gitattributes",
+      "bytes": 1519,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "license-plate-finetune-v1l.pt",
+      "bytes": 51189266,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "license-plate-finetune-v1l.onnx",
+      "bytes": 101390463,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "license-plate-finetune-v1x.pt",
+      "bytes": 114378962,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "license-plate-finetune-v1m.pt",
+      "bytes": 40507749,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "license-plate-finetune-v1s.onnx",
+      "bytes": 37805310,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    }
+  ],
+  "mismatches": []
+}

@@ -1,0 +1,204 @@
+{
+  "schema_version": 1,
+  "sources": {},
+  "models": [
+    {
+      "sequence": 197,
+      "model_id": "arize-ai/resnet-50-fashion-mnist-quality-drift",
+      "model_path": "__MODEL_ROOT__/weights/arize-ai/resnet-50-fashion-mnist-quality-drift",
+      "revision": "104610943e0d62797b614bf6f72b5a2ecbf8f8f9",
+      "task_type": "image-classification",
+      "status": "not_started",
+      "official_model_card": "https://huggingface.co/arize-ai/resnet-50-fashion-mnist-quality-drift",
+      "official_reference": {
+        "source": "https://huggingface.co/arize-ai/resnet-50-fashion-mnist-quality-drift",
+        "local_card_sha256": "b93a61ca6bdf1b1a5c196fdbd98c68862009049ccc887a93a9f3a9445585c787",
+        "model_index": [
+          {
+            "name": "resnet-50-fashion-mnist-quality-drift",
+            "results": [
+              {
+                "task": {
+                  "name": "Image Classification",
+                  "type": "image-classification"
+                },
+                "dataset": {
+                  "name": "fashion_mnist_quality_drift",
+                  "type": "fashion_mnist_quality_drift",
+                  "config": "default",
+                  "split": "training",
+                  "args": "default"
+                },
+                "metrics": [
+                  {
+                    "name": "Accuracy",
+                    "type": "accuracy",
+                    "value": 0.73
+                  },
+                  {
+                    "name": "F1",
+                    "type": "f1",
+                    "value": 0.7289360255705818
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "text_report_values": {
+          "accuracy": 0.73,
+          "f1_average_unspecified": 0.7289360255705818,
+          "loss": 0.7473
+        },
+        "units": "fractions for extracted accuracy/F1; original model-index units as published",
+        "comparison": "Manual protocol review required; no automatic drop calculation",
+        "note": "Card F1 averaging is unspecified; record macro/micro/weighted separately. Standard Fashion-MNIST differs from author quality_drift."
+      },
+      "reference_comparison": "manual_reference_required",
+      "known_differences": [
+        "Local checkpoint and publisher inference components retained. Offline file paths, eval mode, batching, timing observation and reference scoring are external orchestration."
+      ],
+      "config": {
+        "_name_or_path": "microsoft/resnet-50",
+        "architectures": [
+          "ResNetForImageClassification"
+        ],
+        "depths": [
+          3,
+          4,
+          6,
+          3
+        ],
+        "downsample_in_first_stage": false,
+        "embedding_size": 64,
+        "hidden_act": "relu",
+        "hidden_sizes": [
+          256,
+          512,
+          1024,
+          2048
+        ],
+        "id2label": {
+          "0": "T-shirt",
+          "1": "Trouser",
+          "2": "Pullover",
+          "3": "Dress",
+          "4": "Coat",
+          "5": "Sandal",
+          "6": "Shirt",
+          "7": "Sneaker",
+          "8": "Bag",
+          "9": "Ankle-boot"
+        },
+        "label2id": {
+          "Ankle-boot": 9,
+          "Bag": 8,
+          "Coat": 4,
+          "Dress": 3,
+          "Pullover": 2,
+          "Sandal": 5,
+          "Shirt": 6,
+          "Sneaker": 7,
+          "T-shirt": 0,
+          "Trouser": 1
+        },
+        "layer_type": "bottleneck",
+        "model_type": "resnet",
+        "num_channels": 3,
+        "output_hidden_states": true,
+        "problem_type": "single_label_classification",
+        "torch_dtype": "float32",
+        "transformers_version": "4.21.0"
+      },
+      "preprocessing": {
+        "crop_pct": 0.875,
+        "do_normalize": true,
+        "do_resize": true,
+        "feature_extractor_type": "ConvNextFeatureExtractor",
+        "image_mean": [
+          0.485,
+          0.456,
+          0.406
+        ],
+        "image_std": [
+          0.229,
+          0.224,
+          0.225
+        ],
+        "resample": 3,
+        "size": 224
+      },
+      "architecture": [
+        "ResNetForImageClassification"
+      ],
+      "files": {
+        "pytorch_model.bin": {
+          "size": 94438209,
+          "sha256": "b7da8f840e12240cb7d147d1b1ee173f5c48ae25aab6d6c2c6763921ee836a1b"
+        },
+        "config.json": {
+          "size": 926,
+          "sha256": "005666311718a6f8aa0ba9f7a2cf2b67d00d650a39c96b33d0fc23a725e151da"
+        },
+        "preprocessor_config.json": {
+          "size": 266,
+          "sha256": "fd575b890da5a949493e1d1e7a70bfcb9e4b99fe444004d2dbfa253add254741"
+        },
+        "README.md": {
+          "size": 2021,
+          "sha256": "b93a61ca6bdf1b1a5c196fdbd98c68862009049ccc887a93a9f3a9445585c787"
+        }
+      },
+      "weight": "pytorch_model.bin",
+      "backend": "hf_published",
+      "environment": "shared_hf",
+      "dataset_relation": "public_replacement",
+      "split": "standard Fashion-MNIST test, not quality_drift variant",
+      "excluded_source_labels": {},
+      "images": 10000,
+      "covered_target_classes": 10,
+      "num_output_classes": 10,
+      "label_mapping": {
+        "0": "T-shirt",
+        "1": "Trouser",
+        "2": "Pullover",
+        "3": "Dress",
+        "4": "Coat",
+        "5": "Sandal",
+        "6": "Shirt",
+        "7": "Sneaker",
+        "8": "Bag",
+        "9": "Ankle-boot"
+      },
+      "scoring": "reference",
+      "evaluator": "sklearn reference scoring",
+      "fidelity": "reference_baseline",
+      "case_type": "special",
+      "special_tags": [
+        "framework_numeric_difference",
+        "dataset_replacement",
+        "official_evaluator_missing"
+      ],
+      "inference_entry": "publisher_transformers_model_and_processor",
+      "default_batch_size": 1,
+      "dtype": "float32",
+      "warmup_batches": 10,
+      "index": "__MODEL_ROOT__/inference/native/indices/197.jsonl",
+      "index_sha256": "f0858a7a780d80cfc42981f73b9b426434f2adaa113d433cc17f271b2d042ba4",
+      "data_containers": {
+        "__DATASET_ROOT__/fashion_mnist/raw/t10k-images-idx3-ubyte.gz": {
+          "size": 4422102,
+          "mtime_ns": 1789978522935301253
+        }
+      },
+      "protocol_fingerprint": "5daa4378c78d148f71395c6422de1320ab8475ca535df089ff7592107e74e96b"
+    }
+  ],
+  "runtime_defaults": {
+    "batch_size": 1,
+    "device": "cuda:0",
+    "warmup_batches": 10,
+    "workers": 2
+  },
+  "scope": "Each published model retained; 177 includes all five weights; no full GPU inference launched by preparation."
+}

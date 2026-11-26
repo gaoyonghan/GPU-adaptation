@@ -1,0 +1,36 @@
+{
+  "schema": "model-eval/classification-inventory/v1",
+  "scope": "Existing 59 classification models; model 93 is retrieval and excluded.",
+  "models": [
+    {
+      "sequence": 178,
+      "model_id": "prithivMLmods/Facial-Emotion-Detection-SigLIP2",
+      "runner_family": "classification171",
+      "adapter": "native_labels",
+      "state": "integrated",
+      "dataset": {
+        "id": "classification171_178",
+        "relation": "public_replacement",
+        "split": "all published OAHEGA images; no independent split",
+        "note": [
+          "Full-precision probabilities retained for metrics; publisher demo rounds probabilities to three decimals only for Gradio display. Display rounding is not used to rank classes.",
+          "Local checkpoint and publisher inference components retained. Offline file paths, eval mode, batching, timing observation and reference scoring are external orchestration."
+        ],
+        "index_source": "__MODEL_ROOT__/inference/native/indices/178.jsonl",
+        "data_containers": [
+          "__DATASET_ROOT__/datasets_171_200/oahega/dataset.zip"
+        ]
+      },
+      "qualification": "public_replacement",
+      "limitations": [],
+      "num_classes": 6,
+      "expected_images": 15453,
+      "category_reference": {
+        "file": "__MODEL_ROOT__/inference/native/models.json",
+        "sequence": 178,
+        "field": "label_mapping"
+      },
+      "gt_index": "__MODEL_ROOT__/inference/native/indices/178.jsonl"
+    }
+  ]
+}

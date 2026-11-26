@@ -1,0 +1,299 @@
+{
+  "schema_version": 1,
+  "sources": {},
+  "models": [
+    {
+      "sequence": 145,
+      "model_id": "ozair23/mobilenet_v2_1.0_224-finetuned-plantdisease",
+      "runner_family": "native_script",
+      "adapter": "native_labels",
+      "state": "full_inference_and_public_scoring_verified",
+      "dataset": {
+        "id": "PlantVillage",
+        "split": "color/test",
+        "note": [
+          "PlantVillage color/test\n预定义叶片分组划分\n10,709 张"
+        ],
+        "native_scope": {
+          "name": "PlantVillage",
+          "source": "mohanty/PlantVillage color",
+          "split": "color/test",
+          "split_note": "predefined leaf-grouped color_test.txt split; 10709 images",
+          "label_column": "path-derived class name",
+          "image_count": 10709,
+          "class_count": 38,
+          "class_names": [
+            "Apple___Apple_scab",
+            "Apple___Black_rot",
+            "Apple___Cedar_apple_rust",
+            "Apple___healthy",
+            "Blueberry___healthy",
+            "Cherry_(including_sour)___Powdery_mildew",
+            "Cherry_(including_sour)___healthy",
+            "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot",
+            "Corn_(maize)___Common_rust_",
+            "Corn_(maize)___Northern_Leaf_Blight",
+            "Corn_(maize)___healthy",
+            "Grape___Black_rot",
+            "Grape___Esca_(Black_Measles)",
+            "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)",
+            "Grape___healthy",
+            "Orange___Haunglongbing_(Citrus_greening)",
+            "Peach___Bacterial_spot",
+            "Peach___healthy",
+            "Pepper,_bell___Bacterial_spot",
+            "Pepper,_bell___healthy",
+            "Potato___Early_blight",
+            "Potato___Late_blight",
+            "Potato___healthy",
+            "Raspberry___healthy",
+            "Soybean___healthy",
+            "Squash___Powdery_mildew",
+            "Strawberry___Leaf_scorch",
+            "Strawberry___healthy",
+            "Tomato___Bacterial_spot",
+            "Tomato___Early_blight",
+            "Tomato___Late_blight",
+            "Tomato___Leaf_Mold",
+            "Tomato___Septoria_leaf_spot",
+            "Tomato___Spider_mites Two-spotted_spider_mite",
+            "Tomato___Target_Spot",
+            "Tomato___Tomato_Yellow_Leaf_Curl_Virus",
+            "Tomato___Tomato_mosaic_virus",
+            "Tomato___healthy"
+          ]
+        },
+        "relation": "native_e07_registered_scope",
+        "index_source": "native loader GT, materialized as classification_annotations.json in the native phase directory",
+        "data_containers": [
+          "dataset/PlantVillage/data.zip"
+        ]
+      },
+      "qualification": "native_registered_scope",
+      "limitations": [
+        "Capture-ready is a code integration state, not a claim that inference has passed.",
+        "Unobserved native Top-5 is unavailable; aggregate scores are not predictions."
+      ],
+      "num_classes": 38,
+      "expected_images": 10709,
+      "native_script": {
+        "script": "inference/native/run_model.py",
+        "script_sha256": "881b821b6a7f66ba1e5ece326343474a7f03bb15a66e68988b92a946d55962eb",
+        "loop_lineno": 235,
+        "labels": "labels",
+        "prediction": "top5[:, 0]",
+        "ranking": "top5",
+        "classes": "logits.shape[-1]",
+        "loader_kind": "torch",
+        "label_position": 1,
+        "framework": "torch",
+        "original_script_sha256": "16cb2a7aee93800c579f89c8aed43608e9a339a7d9eaf1a58eb7a180ce4405a5",
+        "original_loop_lineno": 224,
+        "original_path": "code/mobilenet_v2_1.0_224-finetuned-plantdisease-plantvillage-test.py",
+        "ported_script_sha256": "8b425e22b6c8ee3dbba9246d11d08f8cfda9052ee05b3e769883dbce1bf6524b"
+      },
+      "output_relative_path": "result/run_001/full/m145",
+      "supports_max_samples": false,
+      "runtime": {
+        "batch_size": 128,
+        "workers": 0,
+        "warmup": 3
+      },
+      "weights_files": [
+        {
+          "path": "config.json",
+          "size": 3562,
+          "sha256": "af4f028e1014e166cddf07bb0a69642f5c16e8fe3203e6383fbc5264372e9aa8"
+        },
+        {
+          "path": "model.safetensors",
+          "size": 9264680,
+          "sha256": "c97c32b7a50a8ac61bcb910fa045e509d703b3cd18aa9bc33b8ded050b40d74c"
+        },
+        {
+          "path": "preprocessor_config.json",
+          "size": 408,
+          "sha256": "da177c827eb07a2cd6e3fa34e2351ab8ef668939d824d9c242b0cc7a1dfc740a"
+        }
+      ],
+      "dataset_files": [
+        "PlantVillage/data.zip",
+        "PlantVillage/splits/color_test.txt"
+      ],
+      "environment": "e07.txt",
+      "native_precision": "FP32",
+      "backend": "transformers",
+      "timing_alignment": {
+        "forward": "Same event/current-stream/synchronize semantics; wrapper preserves exactly one native call. MX runtime differs.",
+        "e2e": "Native DataLoader fetch to CPU prediction availability; worker-prefetch boundary differs from Example. Does not include subsequent metrics or record writes.",
+        "worker_prefetch": false,
+        "starts_after_spider_composition": false,
+        "native_metric_operations_before_prediction_readiness": [],
+        "model_load": "Sum of measured native construction/load/placement blocks, not Example contiguous block.",
+        "warmup": "Native repeated preprocessed first batch; native count retained; synchronized before/after. Unlike Example, preprocessing/transfer/softmax-to-CPU are outside the warmup interval.",
+        "evaluation": "Native aggregate evaluation not measured separately; evaluation_seconds=null. Public scoring duration is outside native timing.",
+        "resume": "No resume; repeated native phase archives previous output; resume_segments=1.",
+        "comparison_valid": false
+      },
+      "label_mapping": [
+        {
+          "id": 0,
+          "name": "Apple___Apple_scab"
+        },
+        {
+          "id": 1,
+          "name": "Apple___Black_rot"
+        },
+        {
+          "id": 2,
+          "name": "Apple___Cedar_apple_rust"
+        },
+        {
+          "id": 3,
+          "name": "Apple___healthy"
+        },
+        {
+          "id": 4,
+          "name": "Blueberry___healthy"
+        },
+        {
+          "id": 5,
+          "name": "Cherry_(including_sour)___Powdery_mildew"
+        },
+        {
+          "id": 6,
+          "name": "Cherry_(including_sour)___healthy"
+        },
+        {
+          "id": 7,
+          "name": "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot"
+        },
+        {
+          "id": 8,
+          "name": "Corn_(maize)___Common_rust_"
+        },
+        {
+          "id": 9,
+          "name": "Corn_(maize)___Northern_Leaf_Blight"
+        },
+        {
+          "id": 10,
+          "name": "Corn_(maize)___healthy"
+        },
+        {
+          "id": 11,
+          "name": "Grape___Black_rot"
+        },
+        {
+          "id": 12,
+          "name": "Grape___Esca_(Black_Measles)"
+        },
+        {
+          "id": 13,
+          "name": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)"
+        },
+        {
+          "id": 14,
+          "name": "Grape___healthy"
+        },
+        {
+          "id": 15,
+          "name": "Orange___Haunglongbing_(Citrus_greening)"
+        },
+        {
+          "id": 16,
+          "name": "Peach___Bacterial_spot"
+        },
+        {
+          "id": 17,
+          "name": "Peach___healthy"
+        },
+        {
+          "id": 18,
+          "name": "Pepper,_bell___Bacterial_spot"
+        },
+        {
+          "id": 19,
+          "name": "Pepper,_bell___healthy"
+        },
+        {
+          "id": 20,
+          "name": "Potato___Early_blight"
+        },
+        {
+          "id": 21,
+          "name": "Potato___Late_blight"
+        },
+        {
+          "id": 22,
+          "name": "Potato___healthy"
+        },
+        {
+          "id": 23,
+          "name": "Raspberry___healthy"
+        },
+        {
+          "id": 24,
+          "name": "Soybean___healthy"
+        },
+        {
+          "id": 25,
+          "name": "Squash___Powdery_mildew"
+        },
+        {
+          "id": 26,
+          "name": "Strawberry___Leaf_scorch"
+        },
+        {
+          "id": 27,
+          "name": "Strawberry___healthy"
+        },
+        {
+          "id": 28,
+          "name": "Tomato___Bacterial_spot"
+        },
+        {
+          "id": 29,
+          "name": "Tomato___Early_blight"
+        },
+        {
+          "id": 30,
+          "name": "Tomato___Late_blight"
+        },
+        {
+          "id": 31,
+          "name": "Tomato___Leaf_Mold"
+        },
+        {
+          "id": 32,
+          "name": "Tomato___Septoria_leaf_spot"
+        },
+        {
+          "id": 33,
+          "name": "Tomato___Spider_mites Two-spotted_spider_mite"
+        },
+        {
+          "id": 34,
+          "name": "Tomato___Target_Spot"
+        },
+        {
+          "id": 35,
+          "name": "Tomato___Tomato_Yellow_Leaf_Curl_Virus"
+        },
+        {
+          "id": 36,
+          "name": "Tomato___Tomato_mosaic_virus"
+        },
+        {
+          "id": 37,
+          "name": "Tomato___healthy"
+        }
+      ],
+      "layout_reference": {
+        "branch": "gaoyonghan/mx",
+        "commit": "208733e1562fca75b7128772ca2cd587943d9012",
+        "platform": "mx"
+      }
+    }
+  ]
+}

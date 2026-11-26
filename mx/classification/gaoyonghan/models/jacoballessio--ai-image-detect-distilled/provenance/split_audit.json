@@ -1,0 +1,20 @@
+{
+  "schema": "model-eval/provenance/split-audit/v1",
+  "model_id": "jacoballessio/ai-image-detect-distilled",
+  "sequence": 221,
+  "dataset": {
+    "id": "defactify",
+    "relation": null,
+    "split": null
+  },
+  "expected_images": 5625,
+  "num_classes": 2,
+  "sample_id_rule": "`<parquet 文件名>#<该文件内行号>`",
+  "protocol": "Defactify / MS COCOAI test 分片，5625 张 = 真图 937 + AI 图 4688。数据集 `Label_A`：0=real、1=AI；脚本按模型 `config.id2label` 自动对齐类别方向，不硬编码。",
+  "label_space": "native class ids recorded by the model config (adapter = native_labels); class names are display metadata only.",
+  "leakage": {
+    "declared": false,
+    "note": "No train/test overlap declared for this split."
+  },
+  "created": "2026-11-25"
+}

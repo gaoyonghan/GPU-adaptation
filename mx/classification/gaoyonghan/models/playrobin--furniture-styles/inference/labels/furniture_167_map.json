@@ -1,0 +1,61 @@
+{
+  "mode": "subset",
+  "_comment": [
+    "167 playrobin/furniture-styles 的类别子集映射表。",
+    "该模型 5 类（config.json id2label）：",
+    "  0 Scandinavian furniture room style",
+    "  1 bohemian furniture room style",
+    "  2 coastal furniture room style",
+    "  3 glamor furniture room style",
+    "  4 modern furniture room style",
+    "作者用 HuggingPics 从 Google 搜图自动生成数据集，无公开切分可复现。",
+    "本表把评测集换成 tonijhanel/my_interior_design_dataset 官方 test split",
+    "（style 列 11 类）里能语义对应的 3 类，评测集 parquet 的 label 已由",
+    "preprocess.py --row 167 写在【模型索引空间】= {1, 2, 4}。",
+    "",
+    "keep 的含义：评测时先 logits[:, [1,2,4]] 再 argmax（subset 口径，",
+    "随机基线 33.3%）。不限定的话模型可能永远输出 Scandinavian/glamor，全判错。",
+    "同一批数据同时给 raw 口径（5 类全类别 argmax，随机基线 20%）作对照。",
+    "",
+    "口径警示：model 的 'modern' ↔ 数据集的 'Mid-Century Modern' 属语义外推，",
+    "不是同一概念的严格同一；且作者报的 52.4% 是它自己 5 类自建集口径，不可直接比。"
+  ],
+  "keep": [1, 2, 4],
+  "classes": [
+    {
+      "model_idx": 1,
+      "model_label": "bohemian furniture room style",
+      "dataset_style": "Bohemian",
+      "dataset_style_idx": 1,
+      "confidence": "high",
+      "why": "同名同义（波西米亚风）"
+    },
+    {
+      "model_idx": 2,
+      "model_label": "coastal furniture room style",
+      "dataset_style": "Coastal",
+      "dataset_style_idx": 2,
+      "confidence": "high",
+      "why": "同名同义（海岸风）"
+    },
+    {
+      "model_idx": 4,
+      "model_label": "modern furniture room style",
+      "dataset_style": "Mid-Century Modern",
+      "dataset_style_idx": 7,
+      "confidence": "medium",
+      "why": "语义外推：'modern' 泛指现代风，'Mid-Century Modern' 特指中世纪现代（1950s 左右）。二者不等价，仅作最接近的候选；报告中须显式声明"
+    }
+  ],
+  "dataset": "tonijhanel/my_interior_design_dataset",
+  "dataset_split_used": "test",
+  "dataset_style_names": [
+    "Art Deco", "Bohemian", "Coastal", "Contemporary", "Eclectic",
+    "Farmhouse", "Mediterranean", "Mid-Century Modern",
+    "Rustic", "Traditional", "Transitional"
+  ],
+  "unmatched_model_classes": {
+    "0": "Scandinavian furniture room style — 数据集无对应类",
+    "3": "glamor furniture room style — 数据集无对应类"
+  }
+}

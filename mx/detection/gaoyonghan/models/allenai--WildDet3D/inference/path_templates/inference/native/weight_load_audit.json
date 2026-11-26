@@ -1,0 +1,8 @@
+{
+  "checkpoint": "__MODEL_ROOT__/weights/allenai/WildDet3D/wilddet3d_alldata_all_prompt_v1.0.pt",
+  "tensor_count": 2011,
+  "missing_keys": [],
+  "unexpected_keys": [],
+  "strict_load": true,
+  "auxiliary_weights_downloaded": false
+}

@@ -1,0 +1,108 @@
+{
+  "sequence": 89,
+  "files": [
+    {
+      "path": "eval_results.json",
+      "bytes": 204,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "pytorch_model.bin",
+      "bytes": 94670029,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "config.json",
+      "bytes": 3549,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "preprocessor_config.json",
+      "bytes": 410,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "trainer_state.json",
+      "bytes": 29965,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2012,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "all_results.json",
+      "bytes": 393,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "training_args.bin",
+      "bytes": 3643,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": ".gitattributes",
+      "bytes": 1477,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 13,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "train_results.json",
+      "bytes": 209,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "runs/May01_11-37-02_f493e3a4fb8c/events.out.tfevents.1682946572.f493e3a4fb8c.8992.2",
+      "bytes": 58883,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "runs/May01_11-37-02_f493e3a4fb8c/events.out.tfevents.1682952065.f493e3a4fb8c.8992.5",
+      "bytes": 411,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "runs/May01_11-37-02_f493e3a4fb8c/events.out.tfevents.1682941167.f493e3a4fb8c.8992.0",
+      "bytes": 51835,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "runs/May01_11-37-02_f493e3a4fb8c/1682946612.619405/events.out.tfevents.1682946612.f493e3a4fb8c.8992.4",
+      "bytes": 5907,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "runs/May01_11-37-02_f493e3a4fb8c/1682946572.6019552/events.out.tfevents.1682946572.f493e3a4fb8c.8992.3",
+      "bytes": 5907,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "runs/May01_11-37-02_f493e3a4fb8c/1682941167.166514/events.out.tfevents.1682941167.f493e3a4fb8c.8992.1",
+      "bytes": 5907,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    }
+  ],
+  "mismatches": []
+}

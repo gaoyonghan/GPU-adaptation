@@ -1,0 +1,66 @@
+{
+  "sequence": 90,
+  "files": [
+    {
+      "path": "eval_results.json",
+      "bytes": 203,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "pytorch_model.bin",
+      "bytes": 1213360941,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "config.json",
+      "bytes": 981,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "preprocessor_config.json",
+      "bytes": 325,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "trainer_state.json",
+      "bytes": 4913,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2140,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "all_results.json",
+      "bytes": 351,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "training_args.bin",
+      "bytes": 4219,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": ".gitattributes",
+      "bytes": 1519,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "train_results.json",
+      "bytes": 168,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    }
+  ],
+  "mismatches": []
+}

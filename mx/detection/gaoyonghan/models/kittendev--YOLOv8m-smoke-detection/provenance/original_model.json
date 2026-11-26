@@ -1,0 +1,86 @@
+{
+  "sequence": 58,
+  "model_id": "kittendev/YOLOv8m-smoke-detection",
+  "task": "object_detection",
+  "task_name": "目标检测",
+  "reported_result": "1900-04-07 23:22:21.968000",
+  "reference": "99.474",
+  "model_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/model_index/kittendev/YOLOv8m-smoke-detection",
+  "model_exists_at_build": true,
+  "dataset": {
+    "id": "smoke_v4_valid",
+    "relation": "original_protocol_incomplete",
+    "split": "validation",
+    "note": "Smoke100 v4 · validation · 4322 图\n同源数据：官方评测划分待核实"
+  },
+  "environment_id": "detection-yolo",
+  "runner_family": "remaining_detection",
+  "final_result_sources": [
+    {
+      "source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m058/metrics-0.json",
+      "sha256": "93bc0efa30c0b6cee774d7d78aacc9baa03f876da27503dd919d45176603b024",
+      "selection": "workbook_score_match",
+      "data": {
+        "metrics": {
+          "AP": 0.8431715227233729,
+          "AP50": 0.9897386536518611,
+          "AP75": 0.9665929285008249,
+          "AP_small": null,
+          "AP_medium": null,
+          "AP_large": 0.8431719485082284,
+          "AR1": 0.8665664044423877,
+          "AR10": 0.870823692734845,
+          "AR100": 0.8708931050439611,
+          "AR_small": null,
+          "AR_medium": null,
+          "AR_large": 0.8708931050439611,
+          "per_class_AP": {
+            "smoke": 0.8431715227233729
+          }
+        },
+        "unit": "fraction_0_to_1",
+        "coverage": {
+          "model_labels": {
+            "0": "smoke"
+          },
+          "mapping": {
+            "0": 0
+          },
+          "covered_labels": [
+            "smoke"
+          ],
+          "missing_labels": [],
+          "covered_count": 1,
+          "total_model_classes": 1,
+          "gt_instances_per_class": {
+            "smoke": 4322
+          }
+        },
+        "evaluation_images": 4322,
+        "annotation_sha256": "56b4a87ad7933a5548e9cd892168303117fa44788d5c6b16233cace4678cdaf2",
+        "protocol_fingerprint": "14e1b947509072512cb7add177fb0267d39a60bd1b07a80d2cb1638f9380e1eb",
+        "reference_check": "not_officially_comparable"
+      },
+      "source_original": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/remaining25_v2/m58-yolov8m-smoke-detection/bbox/metrics.json"
+    }
+  ],
+  "code": {
+    "source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/remaining25_v2/_source_snapshot/run_model.py",
+    "sha256": "166c80d5179b72ba36b3c6eef76833b0a97d0428e7556f46b346388e527a549d",
+    "recorded_sha256": null,
+    "attestation": "result_batch_snapshot",
+    "status_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m058/status.json",
+    "selection": "same_batch_snapshot",
+    "archive": "code_archive/166c80d5179b72ba_run_model.py"
+  },
+  "support_files": [
+    "models.json",
+    "run_model.py",
+    "run_ready.sh"
+  ],
+  "final_scorer": null,
+  "backend_package": "remaining_detection_eval",
+  "readiness": "code_and_result_identified",
+  "launch_status": "configured",
+  "metadata_warning": null
+}

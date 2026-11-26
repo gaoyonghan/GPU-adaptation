@@ -1,0 +1,82 @@
+{
+  "sequence": 57,
+  "model_id": "jozhang97/deta-swin-large",
+  "task": "object_detection",
+  "task_name": "目标检测",
+  "reported_result": "62.5557978521183",
+  "reference": "62.9",
+  "model_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/model_index/jozhang97/deta-swin-large",
+  "model_exists_at_build": true,
+  "dataset": {
+    "id": "coco2017_val",
+    "relation": "original_exact",
+    "split": "val2017",
+    "note": "COCO 2017 Detection · val2017 · 5000 图\n官方原集（不代表全协议已对齐）"
+  },
+  "environment_id": "detection-hf",
+  "runner_family": "official_detection",
+  "final_result_sources": [
+    {
+      "source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m057/metrics-0.json",
+      "sha256": "db0f73308ee8eb89532970bde70346ee14073da1a9cd743c59ca855269407a88",
+      "selection": "workbook_score_match",
+      "data": {
+        "metrics": {
+          "AP": 0.625557978521183,
+          "AP50": 0.7995223622126595,
+          "AP75": 0.6907656141531863,
+          "AP_small": 0.4768679550824463,
+          "AP_medium": 0.6703247804367082,
+          "AP_large": 0.7711250242906963,
+          "AR1": 0.42999592895826083,
+          "AR10": 0.7243829073896582,
+          "AR100": 0.7723739781738224,
+          "AR_small": 0.6402954742946408,
+          "AR_medium": 0.8186120039779213,
+          "AR_large": 0.8946699109787454
+        },
+        "metrics_percent": {
+          "AP": 62.5557978521183,
+          "AP50": 79.95223622126595,
+          "AP75": 69.07656141531862,
+          "AP_small": 47.68679550824463,
+          "AP_medium": 67.03247804367082,
+          "AP_large": 77.11250242906964,
+          "AR1": 42.99959289582608,
+          "AR10": 72.43829073896582,
+          "AR100": 77.23739781738223,
+          "AR_small": 64.02954742946409,
+          "AR_medium": 81.86120039779213,
+          "AR_large": 89.46699109787454
+        },
+        "official_reference": null,
+        "reference_check": {
+          "classification": "manual_reference_required"
+        }
+      },
+      "source_original": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/object_detection_official_v2/m57-deta-swin-large/metrics.json"
+    }
+  ],
+  "code": {
+    "source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/object_detection_official_v2/_source_snapshot/run_model.py",
+    "sha256": "f2fb744cfeffd526f9088df0d3ee7e4b17ce65eeada64030fe37deb96dd485dc",
+    "recorded_sha256": null,
+    "attestation": "result_batch_snapshot",
+    "status_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m057/status.json",
+    "selection": "same_batch_snapshot",
+    "archive": "code_archive/f2fb744cfeffd526_run_model.py"
+  },
+  "support_files": [
+    "download_official_source.py",
+    "models.json",
+    "run_model.py",
+    "setup_env.sh",
+    "run_all.sh",
+    "check_environment.py"
+  ],
+  "final_scorer": null,
+  "backend_package": "remaining_detection_eval",
+  "readiness": "code_and_result_identified",
+  "launch_status": "configured",
+  "metadata_warning": null
+}

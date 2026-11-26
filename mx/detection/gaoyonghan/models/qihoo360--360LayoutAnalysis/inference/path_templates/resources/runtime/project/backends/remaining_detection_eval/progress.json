@@ -1,0 +1,760 @@
+{
+  "generated_at": "2026-09-05T10:58:31.409026+00:00",
+  "total_detection_models": 62,
+  "existing_green_queue": 37,
+  "current_scope_unique_models": 25,
+  "initial_primary_blocker_counts": {
+    "旧替代集类别不全，需核对任务覆盖": 4,
+    "私有数据且缺任务匹配的公开金标": 2,
+    "原协议/划分不明，现有数据可做参考评测": 8,
+    "数据已有，缺任务适配或多权重覆盖": 8,
+    "仅下载了说明/发布链接，实际权重缺失": 2,
+    "数据下载未完成，当前目录为空": 1
+  },
+  "current_state_counts": {
+    "complete": 21,
+    "partial_complete": 3,
+    "blocked": 1
+  },
+  "counting_rule": "Unique model IDs; all required tasks must have complete frozen benchmark metrics. PubTables means the model-blind 1000-image benchmark, not the original 93834-image test. Invalid cmarkea and all superseded Qualcomm v1/v2 results excluded.",
+  "fidelity_counts": {
+    "reference_baseline": 25
+  },
+  "comparison_counts": {
+    "not_officially_comparable": 25
+  },
+  "case_type_counts": {
+    "special": 25
+  },
+  "models": [
+    {
+      "sequence": 41,
+      "model_id": "qihoo360/360LayoutAnalysis",
+      "state": "complete",
+      "all_tasks_complete": true,
+      "required_tasks": [
+        "paper_layout",
+        "report_layout",
+        "publaynet_layout",
+        "jiaocai_layout",
+        "general6_layout"
+      ],
+      "results": [
+        {
+          "status": "complete",
+          "task": "jiaocai",
+          "valid_complete": true,
+          "images": 1651,
+          "result_directory": "__MODEL_ROOT__/resources/runtime/assets/workspace/results/remaining25_v4/m41-360layoutanalysis/jiaocai",
+          "metrics": {
+            "metrics": {
+              "AP": 0.08714181699954258,
+              "AP50": 0.13810137455013974,
+              "AP75": 0.08790750984190457,
+              "AP_small": 0.05052936045676022,
+              "AP_medium": 0.06543504759600795,
+              "AP_large": 0.07543442440130275,
+              "AR1": 0.07847070578380701,
+              "AR10": 0.1459727689611773,
+              "AR100": 0.16694805357108844,
+              "AR_small": 0.08664544454477699,
+              "AR_medium": 0.14379614158218967,
+              "AR_large": 0.15458096891336107,
+              "per_class_AP": {
+                "paragraph": 0.3062785816981198,
+                "headline": 0.16115572626378555,
+                "figure": 0.2620027900267586,
+                "figure caption": 0.0005678525405415927,
+                "table": 2.582866982350409e-05,
+                "table caption": 0.0,
+                "header": 0.2125983267912979,
+                "footer": 0.0003427265803503427,
+                "page number": 0.18668367405172423,
+                "code": 0.0001267709643892566,
+                "code caption": 0.0,
+                "formula": 9.282178217821782e-05,
+                "footnote": 0.0029685216250846446
+              }
+            },
+            "unit": "fraction_0_to_1",
+            "coverage": {
+              "model_labels": {
+                "0": "header",
+                "1": "paragraph",
+                "2": "page number",
+                "3": "headline",
+                "4": "ordered list",
+                "5": "figure",
+                "6": "caption",
+                "7": "figure caption",
+                "8": "code",
+                "9": "unordered list",
+                "10": "formula",
+                "11": "footnote",
+                "12": "footer",
+                "13": "code caption",
+                "14": "subsection title",
+                "15": "section title",
+                "16": "other title",
+                "17": "subhead",
+                "18": "index",
+                "19": "catalogue",
+                "20": "chapter title",
+                "21": "table",
+                "22": "table caption"
+              },
+              "mapping": {
+                "0": 7,
+                "1": 1,
+                "2": 9,
+                "3": 2,
+                "5": 3,
+                "7": 4,
+                "8": 10,
+                "10": 12,
+                "11": 13,
+                "12": 8,
+                "13": 11,
+                "21": 5,
+                "22": 6
+              },
+              "covered_labels": [
+                "header",
+                "paragraph",
+                "page number",
+                "headline",
+                "figure",
+                "figure caption",
+                "code",
+                "formula",
+                "footnote",
+                "footer",
+                "code caption",
+                "table",
+                "table caption"
+              ],
+              "missing_labels": [
+                "ordered list",
+                "caption",
+                "unordered list",
+                "subsection title",
+                "section title",
+                "other title",
+                "subhead",
+                "index",
+                "catalogue",
+                "chapter title"
+              ],
+              "covered_count": 13,
+              "total_model_classes": 23,
+              "gt_instances_per_class": {
+                "paragraph": 17835,
+                "headline": 5756,
+                "figure": 2700,
+                "figure caption": 2037,
+                "table": 1980,
+                "table caption": 1801,
+                "header": 3235,
+                "footer": 2056,
+                "page number": 2503,
+                "code": 1355,
+                "code caption": 1318,
+                "formula": 3381,
+                "footnote": 1441
+              }
+            },
+            "evaluation_images": 1651,
+            "annotation_sha256": "54d2355e8c9f971b69edd089bf6322266b078026e6c99c23d621c131ca661e43",
+            "protocol_fingerprint": "d8242701c6e594965fb81362232009f33985b5a81a8984ed464c843523aefc7d",
+            "reference_check": "not_officially_comparable"
+          },
+          "coverage": {
+            "model_labels": {
+              "0": "header",
+              "1": "paragraph",
+              "2": "page number",
+              "3": "headline",
+              "4": "ordered list",
+              "5": "figure",
+              "6": "caption",
+              "7": "figure caption",
+              "8": "code",
+              "9": "unordered list",
+              "10": "formula",
+              "11": "footnote",
+              "12": "footer",
+              "13": "code caption",
+              "14": "subsection title",
+              "15": "section title",
+              "16": "other title",
+              "17": "subhead",
+              "18": "index",
+              "19": "catalogue",
+              "20": "chapter title",
+              "21": "table",
+              "22": "table caption"
+            },
+            "mapping": {
+              "0": 7,
+              "1": 1,
+              "2": 9,
+              "3": 2,
+              "5": 3,
+              "7": 4,
+              "8": 10,
+              "10": 12,
+              "11": 13,
+              "12": 8,
+              "13": 11,
+              "21": 5,
+              "22": 6
+            },
+            "covered_labels": [
+              "header",
+              "paragraph",
+              "page number",
+              "headline",
+              "figure",
+              "figure caption",
+              "code",
+              "formula",
+              "footnote",
+              "footer",
+              "code caption",
+              "table",
+              "table caption"
+            ],
+            "missing_labels": [
+              "ordered list",
+              "caption",
+              "unordered list",
+              "subsection title",
+              "section title",
+              "other title",
+              "subhead",
+              "index",
+              "catalogue",
+              "chapter title"
+            ],
+            "covered_count": 13,
+            "total_model_classes": 23,
+            "gt_instances_per_class": {
+              "paragraph": 17835,
+              "headline": 5756,
+              "figure": 2700,
+              "figure caption": 2037,
+              "table": 1980,
+              "table caption": 1801,
+              "header": 3235,
+              "footer": 2056,
+              "page number": 2503,
+              "code": 1355,
+              "code caption": 1318,
+              "formula": 3381,
+              "footnote": 1441
+            }
+          },
+          "error": null
+        },
+        {
+          "status": "complete",
+          "task": "general6",
+          "valid_complete": true,
+          "images": 1651,
+          "result_directory": "__MODEL_ROOT__/resources/runtime/assets/workspace/results/remaining25_v4/m41-360layoutanalysis/general6",
+          "metrics": {
+            "metrics": {
+              "AP": 0.44271286741319205,
+              "AP50": 0.5686909824648624,
+              "AP75": 0.4776428897011099,
+              "AP_small": 0.04354229093158674,
+              "AP_medium": 0.11457362496035804,
+              "AP_large": 0.4734800691026822,
+              "AR1": 0.23109633034579793,
+              "AR10": 0.505348318176596,
+              "AR100": 0.6120131160705389,
+              "AR_small": 0.10269736842105263,
+              "AR_medium": 0.2728872523763433,
+              "AR_large": 0.6442515817881457,
+              "per_class_AP": {
+                "Text": 0.6115929236161329,
+                "Title": 0.38200853621830644,
+                "Figure": 0.48706682549972363,
+                "Caption": 0.2534009211216851,
+                "Table": 0.7528071719313194,
+                "Equation": 0.1694008260919847
+              }
+            },
+            "unit": "fraction_0_to_1",
+            "coverage": {
+              "model_labels": {
+                "0": "Text",
+                "1": "Title",
+                "2": "Figure",
+                "3": "Table",
+                "4": "Caption",
+                "5": "Equation"
+              },
+              "mapping": {
+                "0": 1,
+                "1": 2,
+                "2": 3,
+                "3": 5,
+                "4": 4,
+                "5": 6
+              },
+              "covered_labels": [
+                "Text",
+                "Title",
+                "Figure",
+                "Table",
+                "Caption",
+                "Equation"
+              ],
+              "missing_labels": [],
+              "covered_count": 6,
+              "total_model_classes": 6,
+              "gt_instances_per_class": {
+                "Text": 17835,
+                "Title": 5756,
+                "Figure": 2700,
+                "Caption": 2523,
+                "Table": 1980,
+                "Equation": 3381
+              }
+            },
+            "evaluation_images": 1651,
+            "annotation_sha256": "3fb302ec05d052e7bbff6da0a428c35a83b3841205573d6f08d1d8c803c2dcfa",
+            "protocol_fingerprint": "d79baed0c3578907dbbbb5fd9f36cff4bd8b4f923f93fb475335825fdb2d5be0",
+            "reference_check": "not_officially_comparable"
+          },
+          "coverage": {
+            "model_labels": {
+              "0": "Text",
+              "1": "Title",
+              "2": "Figure",
+              "3": "Table",
+              "4": "Caption",
+              "5": "Equation"
+            },
+            "mapping": {
+              "0": 1,
+              "1": 2,
+              "2": 3,
+              "3": 5,
+              "4": 4,
+              "5": 6
+            },
+            "covered_labels": [
+              "Text",
+              "Title",
+              "Figure",
+              "Table",
+              "Caption",
+              "Equation"
+            ],
+            "missing_labels": [],
+            "covered_count": 6,
+            "total_model_classes": 6,
+            "gt_instances_per_class": {
+              "Text": 17835,
+              "Title": 5756,
+              "Figure": 2700,
+              "Caption": 2523,
+              "Table": 1980,
+              "Equation": 3381
+            }
+          },
+          "error": null
+        },
+        {
+          "status": "complete",
+          "task": "publaynet",
+          "valid_complete": true,
+          "images": 11245,
+          "result_directory": "__MODEL_ROOT__/resources/runtime/assets/workspace/results/remaining25_v4/m41-360layoutanalysis/publaynet",
+          "metrics": {
+            "metrics": {
+              "AP": 0.9248110790380012,
+              "AP50": 0.9759844261064837,
+              "AP75": 0.9577011407023924,
+              "AP_small": 0.36977612231799545,
+              "AP_medium": 0.7658003452837371,
+              "AP_large": 0.9659843938765497,
+              "AR1": 0.5348126413025799,
+              "AR10": 0.9319553078034586,
+              "AR100": 0.9440144889472164,
+              "AR_small": 0.4157092206514729,
+              "AR_medium": 0.8142964810105562,
+              "AR_large": 0.9783744519146371,
+              "per_class_AP": {
+                "text": 0.9309943027534162,
+                "title": 0.8372363783921122,
+                "list": 0.9202350966177686,
+                "table": 0.9705001621444673,
+                "figure": 0.9650894552822419
+              }
+            },
+            "unit": "fraction_0_to_1",
+            "coverage": {
+              "model_labels": {
+                "0": "text",
+                "1": "title",
+                "2": "list",
+                "3": "table",
+                "4": "figure"
+              },
+              "mapping": {
+                "0": 1,
+                "1": 2,
+                "2": 3,
+                "3": 4,
+                "4": 5
+              },
+              "covered_labels": [
+                "text",
+                "title",
+                "list",
+                "table",
+                "figure"
+              ],
+              "missing_labels": [],
+              "covered_count": 5,
+              "total_model_classes": 5,
+              "gt_instances_per_class": {
+                "text": 88625,
+                "title": 18801,
+                "list": 4239,
+                "table": 4769,
+                "figure": 4327
+              }
+            },
+            "evaluation_images": 11245,
+            "annotation_sha256": "7c356356f7afc0ac30c21eab1551a390213269f0865a21bdcf01bee2253270dd",
+            "protocol_fingerprint": "874bf7d94ce58c457a4faf36de6d18434848c216207010966395d8fc8b131097",
+            "reference_check": "not_officially_comparable"
+          },
+          "coverage": {
+            "model_labels": {
+              "0": "text",
+              "1": "title",
+              "2": "list",
+              "3": "table",
+              "4": "figure"
+            },
+            "mapping": {
+              "0": 1,
+              "1": 2,
+              "2": 3,
+              "3": 4,
+              "4": 5
+            },
+            "covered_labels": [
+              "text",
+              "title",
+              "list",
+              "table",
+              "figure"
+            ],
+            "missing_labels": [],
+            "covered_count": 5,
+            "total_model_classes": 5,
+            "gt_instances_per_class": {
+              "text": 88625,
+              "title": 18801,
+              "list": 4239,
+              "table": 4769,
+              "figure": 4327
+            }
+          },
+          "error": null
+        },
+        {
+          "status": "complete",
+          "task": "paper",
+          "valid_complete": true,
+          "images": 1651,
+          "result_directory": "__MODEL_ROOT__/resources/runtime/assets/workspace/results/remaining25_v4/m41-360layoutanalysis/paper",
+          "metrics": {
+            "metrics": {
+              "AP": 0.2179234353311489,
+              "AP50": 0.36333577876689577,
+              "AP75": 0.2014438102254246,
+              "AP_small": 0.0313989667986867,
+              "AP_medium": 0.07779558538118277,
+              "AP_large": 0.23805374196148915,
+              "AR1": 0.15051057288035344,
+              "AR10": 0.33251019046210445,
+              "AR100": 0.3942340163501595,
+              "AR_small": 0.1294601795751515,
+              "AR_medium": 0.23562247387053512,
+              "AR_large": 0.40969713111948586,
+              "per_class_AP": {
+                "Text": 0.39671068681198773,
+                "Title": 0.20019039929468505,
+                "Figure": 0.34692322028004957,
+                "Figure caption": 0.06438094772568942,
+                "Table": 0.5411400725439103,
+                "Table caption": 0.11512871731815848,
+                "Header": 0.20416252475270086,
+                "Footer": 0.07395957391772032,
+                "Reference": 0.00011198111381155042,
+                "Equation": 0.23652622955277647
+              }
+            },
+            "unit": "fraction_0_to_1",
+            "coverage": {
+              "model_labels": {
+                "0": "Text",
+                "1": "Title",
+                "2": "Figure",
+                "3": "Figure caption",
+                "4": "Table",
+                "5": "Table caption",
+                "6": "Header",
+                "7": "Footer",
+                "8": "Reference",
+                "9": "Equation"
+              },
+              "mapping": {
+                "0": 1,
+                "1": 2,
+                "2": 3,
+                "3": 4,
+                "4": 5,
+                "5": 6,
+                "6": 7,
+                "7": 8,
+                "8": 9,
+                "9": 10
+              },
+              "covered_labels": [
+                "Text",
+                "Title",
+                "Figure",
+                "Figure caption",
+                "Table",
+                "Table caption",
+                "Header",
+                "Footer",
+                "Reference",
+                "Equation"
+              ],
+              "missing_labels": [],
+              "covered_count": 10,
+              "total_model_classes": 10,
+              "gt_instances_per_class": {
+                "Text": 17835,
+                "Title": 5756,
+                "Figure": 2700,
+                "Figure caption": 2037,
+                "Table": 1980,
+                "Table caption": 1801,
+                "Header": 3235,
+                "Footer": 3244,
+                "Reference": 1590,
+                "Equation": 3381
+              }
+            },
+            "evaluation_images": 1651,
+            "annotation_sha256": "0ec822bc026cd3b861651835f10184b1496e6a34a8d2dc334e0bc8a434fef9a7",
+            "protocol_fingerprint": "eceeb13854b8d396aa0e5ec63faabfd210dd5dd504e1b354b29b555aad8c6247",
+            "reference_check": "not_officially_comparable"
+          },
+          "coverage": {
+            "model_labels": {
+              "0": "Text",
+              "1": "Title",
+              "2": "Figure",
+              "3": "Figure caption",
+              "4": "Table",
+              "5": "Table caption",
+              "6": "Header",
+              "7": "Footer",
+              "8": "Reference",
+              "9": "Equation"
+            },
+            "mapping": {
+              "0": 1,
+              "1": 2,
+              "2": 3,
+              "3": 4,
+              "4": 5,
+              "5": 6,
+              "6": 7,
+              "7": 8,
+              "8": 9,
+              "9": 10
+            },
+            "covered_labels": [
+              "Text",
+              "Title",
+              "Figure",
+              "Figure caption",
+              "Table",
+              "Table caption",
+              "Header",
+              "Footer",
+              "Reference",
+              "Equation"
+            ],
+            "missing_labels": [],
+            "covered_count": 10,
+            "total_model_classes": 10,
+            "gt_instances_per_class": {
+              "Text": 17835,
+              "Title": 5756,
+              "Figure": 2700,
+              "Figure caption": 2037,
+              "Table": 1980,
+              "Table caption": 1801,
+              "Header": 3235,
+              "Footer": 3244,
+              "Reference": 1590,
+              "Equation": 3381
+            }
+          },
+          "error": null
+        },
+        {
+          "status": "complete",
+          "task": "report",
+          "valid_complete": true,
+          "images": 1651,
+          "result_directory": "__MODEL_ROOT__/resources/runtime/assets/workspace/results/remaining25_v4/m41-360layoutanalysis/report",
+          "metrics": {
+            "metrics": {
+              "AP": 0.30601633787234506,
+              "AP50": 0.4285074682872179,
+              "AP75": 0.3291623484704558,
+              "AP_small": 0.05616503885279704,
+              "AP_medium": 0.1288738552636555,
+              "AP_large": 0.3339069840075706,
+              "AR1": 0.2216500249483139,
+              "AR10": 0.41273415655369233,
+              "AR100": 0.466943612861429,
+              "AR_small": 0.12712267175649003,
+              "AR_medium": 0.2525309778866972,
+              "AR_large": 0.49590217453706664,
+              "per_class_AP": {
+                "Text": 0.36227570144320614,
+                "Title": 0.3120662824626914,
+                "Figure": 0.32755307507316545,
+                "Figure caption": 0.054439958490497424,
+                "Table": 0.7064414382883311,
+                "Table caption": 0.23608417679760685,
+                "Header": 0.22327988083715122,
+                "Footer": 0.22599018958611117
+              }
+            },
+            "unit": "fraction_0_to_1",
+            "coverage": {
+              "model_labels": {
+                "0": "Text",
+                "1": "Title",
+                "2": "Header",
+                "3": "Footer",
+                "4": "Figure",
+                "5": "Table",
+                "6": "Toc",
+                "7": "Figure caption",
+                "8": "Table caption"
+              },
+              "mapping": {
+                "0": 1,
+                "1": 2,
+                "2": 7,
+                "3": 8,
+                "4": 3,
+                "5": 5,
+                "7": 4,
+                "8": 6
+              },
+              "covered_labels": [
+                "Text",
+                "Title",
+                "Header",
+                "Footer",
+                "Figure",
+                "Table",
+                "Figure caption",
+                "Table caption"
+              ],
+              "missing_labels": [
+                "Toc"
+              ],
+              "covered_count": 8,
+              "total_model_classes": 9,
+              "gt_instances_per_class": {
+                "Text": 17835,
+                "Title": 5756,
+                "Figure": 2700,
+                "Figure caption": 2037,
+                "Table": 1980,
+                "Table caption": 1801,
+                "Header": 3235,
+                "Footer": 3244
+              }
+            },
+            "evaluation_images": 1651,
+            "annotation_sha256": "a5af3a04c0b76489c9df20a12b577caa8c0683347084272eeaadb677d08ca23a",
+            "protocol_fingerprint": "879d36e2b55abc8f265f631bf406ff1aa02c9fc9d24fbeb2380887fc4be8b5ca",
+            "reference_check": "not_officially_comparable"
+          },
+          "coverage": {
+            "model_labels": {
+              "0": "Text",
+              "1": "Title",
+              "2": "Header",
+              "3": "Footer",
+              "4": "Figure",
+              "5": "Table",
+              "6": "Toc",
+              "7": "Figure caption",
+              "8": "Table caption"
+            },
+            "mapping": {
+              "0": 1,
+              "1": 2,
+              "2": 7,
+              "3": 8,
+              "4": 3,
+              "5": 5,
+              "7": 4,
+              "8": 6
+            },
+            "covered_labels": [
+              "Text",
+              "Title",
+              "Header",
+              "Footer",
+              "Figure",
+              "Table",
+              "Figure caption",
+              "Table caption"
+            ],
+            "missing_labels": [
+              "Toc"
+            ],
+            "covered_count": 8,
+            "total_model_classes": 9,
+            "gt_instances_per_class": {
+              "Text": 17835,
+              "Title": 5756,
+              "Figure": 2700,
+              "Figure caption": 2037,
+              "Table": 1980,
+              "Table caption": 1801,
+              "Header": 3235,
+              "Footer": 3244
+            }
+          },
+          "error": null
+        }
+      ],
+      "next_action": "分别评估5种领域权重；PubLayNet用于publaynet，其余用OmniDocBench等替代并记录类别范围。"
+    }
+  ],
+  "supplemental_updated_at": "2026-09-05T15:25:21.596769+00:00",
+  "supplemental_summary": "supplemental_20260905/summary.json"
+}

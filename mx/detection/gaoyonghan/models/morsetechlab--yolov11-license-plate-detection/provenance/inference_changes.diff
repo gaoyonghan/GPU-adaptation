@@ -1,0 +1,24 @@
+--- original_inference.py
++++ inference/native/run_m33x_native.py
+@@ -15,9 +15,9 @@
+ from run_m07_native import sha, write
+ 
+ HERE = Path(__file__).resolve().parent
+-OUT = Path('/home/ubuntu/gaoyonghan/gpu/results/m33x_native83123_v1')
+-DATA = Path('/data2/gaoyonghan/gpu/dataset/roboflow_licenseplates_v11_test/test')
+-WEIGHT = Path('/data2/gaoyonghan/gpu/model/morsetechlab/yolov11-license-plate-detection/license-plate-finetune-v1x.pt')
++OUT = Path('/data2/gaoyonghan/gpu_model_standalone_20261110/release/model/检测/morsetechlab--yolov11-license-plate-detection/results/run_001/m033')
++DATA = Path('/home/ubuntu/文档/ChatGPT/idea 2/outputs/launch_audit_20261005/migration_inputs/datasets/roboflow_licenseplates_v11_test/test')
++WEIGHT = Path('/data2/gaoyonghan/gpu_model_standalone_20261110/release/model/检测/morsetechlab--yolov11-license-plate-detection/resources/model_index/morsetechlab/yolov11-license-plate-detection/license-plate-finetune-v1x.pt')
+ WEIGHT_SHA = 'bf87430a3b2d0d0511a153a58eb73e97da6212861d258016cbad65a105068a14'
+ GT_SHA = '08d7d0b4b6405a17f897f71dc598176080b09ee4d9b656803b240ea88305fdda'
+ SPEC = {'sequence': 33, 'model_id': 'morsetechlab/yolov11-license-plate-detection', 'variant': 'x',
+@@ -46,7 +46,7 @@
+     import ultralytics.utils as utils
+     font = utils.USER_CONFIG_DIR / 'Arial.ttf'
+     if not font.exists():
+-        cached = Path('/home/ubuntu/.config/Ultralytics/Arial.ttf')
++        cached = Path('/data2/gaoyonghan/gpu_model_standalone_20261110/release/model/检测/morsetechlab--yolov11-license-plate-detection/resources/runtime/assets/fonts/Arial.ttf')
+         assert cached.is_file(), 'Missing cached Arial.ttf; refusing implicit download'
+         font.symlink_to(cached)
+ 

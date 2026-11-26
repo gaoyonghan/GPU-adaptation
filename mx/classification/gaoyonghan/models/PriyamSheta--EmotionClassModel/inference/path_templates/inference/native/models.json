@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "sources": {},
+  "models": [
+    {
+      "sequence": 139,
+      "model_id": "PriyamSheta/EmotionClassModel",
+      "runner_family": "native_script",
+      "adapter": "native_labels",
+      "state": "full_inference_and_public_scoring_verified",
+      "dataset": {
+        "id": "FER2013",
+        "split": null,
+        "note": [
+          "FER2013 PrivateTest\nHappy / Sad 两类子集\n1,473 / 3,589 张"
+        ],
+        "native_scope": {
+          "name": "FER2013",
+          "source": "Aaryan333/fer2013_train_publicTest_privateTest（本地 parquet）",
+          "source_split": "privateTest",
+          "source_image_count": 3589,
+          "evaluated_subset": "Happy (FER2013 label 3) and Sad (FER2013 label 4)",
+          "evaluated_image_count": 1473,
+          "evaluated_coverage_pct": 41.0421,
+          "source_class_counts": {
+            "Angry": 491,
+            "Disgust": 55,
+            "Fear": 528,
+            "Happy": 879,
+            "Sad": 594,
+            "Surprise": 416,
+            "Neutral": 626
+          },
+          "label_mapping": {
+            "FER2013 Happy (3)": "model Happy (0)",
+            "FER2013 Sad (4)": "model Sad (1)"
+          },
+          "scope_note": "该模型仅有 Happy/Sad 两类输出；其余 Angry、Disgust、Fear、Surprise、Neutral 五类未映射，故不参与指标计算。"
+        },
+        "relation": "native_e07_registered_scope",
+        "index_source": "native loader GT, materialized as classification_annotations.json in the native phase directory",
+        "data_containers": [
+          "dataset/fer2013/data/privateTest-00000-of-00001-4b8a0715cf1b7560.parquet"
+        ]
+      },
+      "qualification": "native_registered_scope",
+      "limitations": [
+        "Capture-ready is a code integration state, not a claim that inference has passed.",
+        "Unobserved native Top-5 is unavailable; aggregate scores are not predictions."
+      ],
+      "num_classes": 2,
+      "expected_images": 1473,
+      "native_script": {
+        "script": "inference/native/run_model.py",
+        "script_sha256": "e586f35d4bb21a921613d9c286c22e073bb1c16678d339b57aa45263a181285e",
+        "loop_lineno": 280,
+        "labels": "batch_labels",
+        "prediction": "batch_predictions",
+        "ranking": null,
+        "classes": "logits.shape[-1]",
+        "loader_kind": "torch",
+        "label_position": 1,
+        "framework": "torch",
+        "original_script_sha256": "9d2a5ed813e13bdfd8d34a13b22b5567c4253c8281aad0cdcc7d9f6344944ad6",
+        "original_loop_lineno": 269,
+        "original_path": "code/emotion-class-model-fer2013-test.py",
+        "ported_script_sha256": "4cf224f55d353774866e53ad385b0d95557bae0098937dd34534612a1b86bda7"
+      },
+      "output_relative_path": "result/run_001/full/m139",
+      "supports_max_samples": false,
+      "runtime": {
+        "batch_size": 64,
+        "workers": 0,
+        "warmup": 3
+      },
+      "weights_files": [
+        {
+          "path": "config.json",
+          "size": 723,
+          "sha256": "9f46182bd6aaf899a3f221342247201efce7435370f95eba5f14eab3b4885545"
+        },
+        {
+          "path": "preprocessor_config.json",
+          "size": 327,
+          "sha256": "b09d2030f83f2a59d12c717d41a9135a3f0c1ba0a2a5df694dbc40f77735daed"
+        },
+        {
+          "path": "pytorch_model.bin",
+          "size": 343265965,
+          "sha256": "9ec42a17c558617d25a8036a999b4db40a4381e85fe7594ea7ec4d4685779728"
+        }
+      ],
+      "dataset_files": [
+        "fer2013/data/privateTest-00000-of-00001-4b8a0715cf1b7560.parquet"
+      ],
+      "environment": "e07.txt",
+      "native_precision": "FP32",
+      "backend": "transformers",
+      "timing_alignment": {
+        "forward": "Same event/current-stream/synchronize semantics; wrapper preserves exactly one native call. MX runtime differs.",
+        "e2e": "Native DataLoader fetch to CPU prediction availability; worker-prefetch boundary differs from Example. Does not include subsequent metrics or record writes.",
+        "worker_prefetch": false,
+        "starts_after_spider_composition": false,
+        "native_metric_operations_before_prediction_readiness": [],
+        "model_load": "Sum of measured native construction/load/placement blocks, not Example contiguous block.",
+        "warmup": "Native repeated preprocessed first batch; native count retained; synchronized before/after. Unlike Example, preprocessing/transfer/softmax-to-CPU are outside the warmup interval.",
+        "evaluation": "Native aggregate evaluation not measured separately; evaluation_seconds=null. Public scoring duration is outside native timing.",
+        "resume": "No resume; repeated native phase archives previous output; resume_segments=1.",
+        "comparison_valid": false
+      },
+      "label_mapping": [
+        {
+          "id": 0,
+          "name": "output_class_0"
+        },
+        {
+          "id": 1,
+          "name": "output_class_1"
+        }
+      ],
+      "layout_reference": {
+        "branch": "gaoyonghan/mx",
+        "commit": "208733e1562fca75b7128772ca2cd587943d9012",
+        "platform": "mx"
+      }
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+import fs from 'node:fs/promises';
+import {FileBlob,SpreadsheetFile} from '@oai/artifact-tool';
+const base='/home/ubuntu/Documents/Codex/2026-09-27/codex-threads-01a0de0e-9d72-7fc0-b485';
+const source='__MODEL_ROOT__/resources/runtime/assets/workspace/9.11 100个模型结果汇总_五维度.xlsx';
+const score=(x)=>Number(x*100).toFixed(2);
+const sec=(x)=>Number(x).toFixed(2);
+const load=async p=>JSON.parse(await fs.readFile(base+'/work/'+p+'/metrics.json','utf8'));
+const m76=await load('m76_full');
+const m90=await load('m90_proxy');
+const m85=await load('m85_imagenet1k_proxy_5');
+const m86=await load('m86_imagenet1k_proxy_5');
+const m100=await load('m100_imagenet1k_proxy_5');
+for(const [m,id] of [[m85,85],[m86,86],[m100,100]]) if(m.model_number!==id||m.images!==4995||m.per_class_limit!==5) throw new Error('Invalid ImageNet metrics '+id);
+if(m76.model_number!==76||m76.images!==3000||m90.model_number!==90||m90.images!==50) throw new Error('Invalid metrics');
+const wb=await SpreadsheetFile.importXlsx(await FileBlob.load(source));
+const sheet=wb.worksheets.getItem('100模型结果');
+const set=(addr,value)=>{sheet.getRange(addr).values=[[value]]};
+set('A3','截至2026-09-28：100个编号中97个已有推理结果、3个跳过；本轮补齐5个诊断性替代集结果。完成不代表通过官方精度验收。');
+set('A6','本轮替代集：076 AnimeDL-2M；085/086/100 ImageNet-1k映射22k；090 PA-100K与ImageNet服饰图。均不能与官方指标直接比较；085/086/100的CPU计时受并行负载影响。');
+set('C84','AnimeDL-2M test（prepared，剔除局部修补）\n真人1500＋AI1500；替代集，非官方可比');
+set('D84',`Accuracy：${score(m76.accuracy)}%；AI类F1：${score(m76.f1_ai)}%（3000张）\nCPU前向 ${sec(m76.forward_seconds)} 秒；总 ${sec(m76.total_seconds)} 秒`);
+for(const [row,m] of [[93,m85],[94,m86],[108,m100]]){
+ set('C'+row,'ImageNet-1k val → ImageNet-22k\n999类×5张＝4995张；替代集，非官方可比');
+ set('D'+row,`22k全类别 Top-1：${score(m.global_top1)}%\n限定映射999类 Top-1：${score(m.restricted_top1)}%\nCPU前向 ${sec(m.forward_seconds)} 秒；总 ${sec(m.total_seconds)} 秒`);
+}
+set('C98','PA-100K test（监控图，四个人物类别各10张）\nImageNet-1k val（无人物服饰10张，pack）\n替代集，非官方可比');
+sheet.getRange('A98:F98').format.rowHeight=72;
+set('D98',`Accuracy：${score(m90.accuracy)}%（五类各10张）\n女成人/女童/男成人/男童：0/40/30/30%；pack：90%\nCPU前向 ${sec(m90.forward_seconds)} 秒；总 ${sec(m90.total_seconds)} 秒`);
+wb.recalculate();
+const inspect=await wb.inspect({kind:'region',sheetId:'100模型结果',range:'A82:E108',maxChars:9000});
+console.log(inspect.ndjson);
+const preview=await wb.render({sheetName:'100模型结果',autoCrop:'all',scale:0.5,format:'png'});
+await fs.writeFile(base+'/work/updated_preview.png',new Uint8Array(await preview.arrayBuffer()));
+await fs.mkdir(base+'/outputs',{recursive:true});
+const output=await SpreadsheetFile.exportXlsx(wb);
+await output.save(base+'/outputs/100个模型结果汇总_替代集补齐.xlsx');
+console.log('EXPORT_OK');

@@ -1,0 +1,736 @@
+{
+  "text_templates": [
+    {
+      "source": "inference/path_templates/inference/native/README.md",
+      "destination": "inference/native/README.md"
+    },
+    {
+      "source": "inference/path_templates/inference/native/audit_m38_omni.py",
+      "destination": "inference/native/audit_m38_omni.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/audit_summary.json",
+      "destination": "inference/native/audit_summary.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/blocker_audit.json",
+      "destination": "inference/native/blocker_audit.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/data.yaml",
+      "destination": "inference/native/data.yaml"
+    },
+    {
+      "source": "inference/path_templates/inference/native/m38_omni_coverage.md",
+      "destination": "inference/native/m38_omni_coverage.md"
+    },
+    {
+      "source": "inference/path_templates/inference/native/models.json",
+      "destination": "inference/native/models.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/official_comparison.json",
+      "destination": "inference/native/official_comparison.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/prepare_native_data.py",
+      "destination": "inference/native/prepare_native_data.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/prepare_publaynet.py",
+      "destination": "inference/native/prepare_publaynet.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/prepare_sku110k.py",
+      "destination": "inference/native/prepare_sku110k.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/probe_private_weights.py",
+      "destination": "inference/native/probe_private_weights.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/progress.json",
+      "destination": "inference/native/progress.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/protocol.json",
+      "destination": "inference/native/protocol.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/review_20260905/model19.md",
+      "destination": "inference/native/review_20260905/model19.md"
+    },
+    {
+      "source": "inference/path_templates/inference/native/review_20260905/model19_cpu_audit.json",
+      "destination": "inference/native/review_20260905/model19_cpu_audit.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/review_20260905/model19_cpu_audit.py",
+      "destination": "inference/native/review_20260905/model19_cpu_audit.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/review_20260905/model19_local_provenance.json",
+      "destination": "inference/native/review_20260905/model19_local_provenance.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/review_20260905/model30.md",
+      "destination": "inference/native/review_20260905/model30.md"
+    },
+    {
+      "source": "inference/path_templates/inference/native/review_20260905/model42.md",
+      "destination": "inference/native/review_20260905/model42.md"
+    },
+    {
+      "source": "inference/path_templates/inference/native/review_20260905/model42_rescore.py",
+      "destination": "inference/native/review_20260905/model42_rescore.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/review_20260905/model42_supplemental_metrics.json",
+      "destination": "inference/native/review_20260905/model42_supplemental_metrics.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/review_20260905/protocol_errata.json",
+      "destination": "inference/native/review_20260905/protocol_errata.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/run_anzhc_lapa.py",
+      "destination": "inference/native/run_anzhc_lapa.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/run_anzhc_text.py",
+      "destination": "inference/native/run_anzhc_text.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/run_cmarkea.py",
+      "destination": "inference/native/run_cmarkea.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/run_m12_native.py",
+      "destination": "inference/native/run_m12_native.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/run_m34_native.py",
+      "destination": "inference/native/run_m34_native.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/run_m34_native.sh",
+      "destination": "inference/native/run_m34_native.sh"
+    },
+    {
+      "source": "inference/path_templates/inference/native/run_m37_native.py",
+      "destination": "inference/native/run_m37_native.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/run_m37_native.sh",
+      "destination": "inference/native/run_m37_native.sh"
+    },
+    {
+      "source": "inference/path_templates/inference/native/run_m38_omni.py",
+      "destination": "inference/native/run_m38_omni.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/run_m38_omni.sh",
+      "destination": "inference/native/run_m38_omni.sh"
+    },
+    {
+      "source": "inference/path_templates/inference/native/run_m39_omni.py",
+      "destination": "inference/native/run_m39_omni.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/run_m39_omni.sh",
+      "destination": "inference/native/run_m39_omni.sh"
+    },
+    {
+      "source": "inference/path_templates/inference/native/run_m41_omni_four.py",
+      "destination": "inference/native/run_m41_omni_four.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/run_m46_native.py",
+      "destination": "inference/native/run_m46_native.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/run_m46_native.sh",
+      "destination": "inference/native/run_m46_native.sh"
+    },
+    {
+      "source": "inference/path_templates/inference/native/run_m47_native.py",
+      "destination": "inference/native/run_m47_native.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/run_m47_native.sh",
+      "destination": "inference/native/run_m47_native.sh"
+    },
+    {
+      "source": "inference/path_templates/inference/native/run_m48_native.py",
+      "destination": "inference/native/run_m48_native.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/run_m48_native.sh",
+      "destination": "inference/native/run_m48_native.sh"
+    },
+    {
+      "source": "inference/path_templates/inference/native/run_m54_sku_official.py",
+      "destination": "inference/native/run_m54_sku_official.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/run_m54_sku_official.sh",
+      "destination": "inference/native/run_m54_sku_official.sh"
+    },
+    {
+      "source": "inference/path_templates/inference/native/run_model.py",
+      "destination": "inference/native/run_model.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/run_pp_layout.py",
+      "destination": "inference/native/run_pp_layout.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/run_qualcomm_coco.py",
+      "destination": "inference/native/run_qualcomm_coco.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/run_sku110k.py",
+      "destination": "inference/native/run_sku110k.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/run_widerface.py",
+      "destination": "inference/native/run_widerface.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/score_m38_omni_official.py",
+      "destination": "inference/native/score_m38_omni_official.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/score_m38_omni_official.sh",
+      "destination": "inference/native/score_m38_omni_official.sh"
+    },
+    {
+      "source": "inference/path_templates/inference/native/score_m39_omni_official.py",
+      "destination": "inference/native/score_m39_omni_official.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/score_pp_v3.py",
+      "destination": "inference/native/score_pp_v3.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/setup_m12_native.sh",
+      "destination": "inference/native/setup_m12_native.sh"
+    },
+    {
+      "source": "inference/path_templates/inference/native/source_snapshots/pp_v2/run_pp_layout.py",
+      "destination": "inference/native/source_snapshots/pp_v2/run_pp_layout.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/summarize.py",
+      "destination": "inference/native/summarize.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/supplemental_20260905/model19/completion.json",
+      "destination": "inference/native/supplemental_20260905/model19/completion.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/supplemental_20260905/model19/download.sh",
+      "destination": "inference/native/supplemental_20260905/model19/download.sh"
+    },
+    {
+      "source": "inference/path_templates/inference/native/supplemental_20260905/model19/independent_verification.json",
+      "destination": "inference/native/supplemental_20260905/model19/independent_verification.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/supplemental_20260905/model19/prepare.py",
+      "destination": "inference/native/supplemental_20260905/model19/prepare.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/supplemental_20260905/model19/run.py",
+      "destination": "inference/native/supplemental_20260905/model19/run.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/supplemental_20260905/model19/verify_completed.py",
+      "destination": "inference/native/supplemental_20260905/model19/verify_completed.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/supplemental_20260905/model19/结果报告.md",
+      "destination": "inference/native/supplemental_20260905/model19/结果报告.md"
+    },
+    {
+      "source": "inference/path_templates/inference/native/supplemental_20260905/model30/author_source_reference.json",
+      "destination": "inference/native/supplemental_20260905/model30/author_source_reference.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/supplemental_20260905/model30/check_padding.py",
+      "destination": "inference/native/supplemental_20260905/model30/check_padding.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/supplemental_20260905/model30/commands.sh",
+      "destination": "inference/native/supplemental_20260905/model30/commands.sh"
+    },
+    {
+      "source": "inference/path_templates/inference/native/supplemental_20260905/model30/download.py",
+      "destination": "inference/native/supplemental_20260905/model30/download.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/supplemental_20260905/model30/independent_verification.json",
+      "destination": "inference/native/supplemental_20260905/model30/independent_verification.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/supplemental_20260905/model30/independent_verification_batch8.json",
+      "destination": "inference/native/supplemental_20260905/model30/independent_verification_batch8.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/supplemental_20260905/model30/protocol_clarification_batch1.json",
+      "destination": "inference/native/supplemental_20260905/model30/protocol_clarification_batch1.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/supplemental_20260905/model30/run.py",
+      "destination": "inference/native/supplemental_20260905/model30/run.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/supplemental_20260905/model30/run_batch8.py",
+      "destination": "inference/native/supplemental_20260905/model30/run_batch8.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/supplemental_20260905/model30/verify.py",
+      "destination": "inference/native/supplemental_20260905/model30/verify.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/supplemental_20260905/model30/verify_batch8.py",
+      "destination": "inference/native/supplemental_20260905/model30/verify_batch8.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/supplemental_20260905/model30/补评结果.md",
+      "destination": "inference/native/supplemental_20260905/model30/补评结果.md"
+    },
+    {
+      "source": "inference/path_templates/inference/native/supplemental_20260905/model48/completion.json",
+      "destination": "inference/native/supplemental_20260905/model48/completion.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/supplemental_20260905/model48/independent_verification.json",
+      "destination": "inference/native/supplemental_20260905/model48/independent_verification.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/supplemental_20260905/model48/independent_verification_raw.json",
+      "destination": "inference/native/supplemental_20260905/model48/independent_verification_raw.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/supplemental_20260905/model48/prepare.py",
+      "destination": "inference/native/supplemental_20260905/model48/prepare.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/supplemental_20260905/model48/run.py",
+      "destination": "inference/native/supplemental_20260905/model48/run.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/supplemental_20260905/model48/run_raw.py",
+      "destination": "inference/native/supplemental_20260905/model48/run_raw.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/supplemental_20260905/model48/verify.py",
+      "destination": "inference/native/supplemental_20260905/model48/verify.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/supplemental_20260905/model48/verify_raw.py",
+      "destination": "inference/native/supplemental_20260905/model48/verify_raw.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/supplemental_20260905/model48/结果报告.md",
+      "destination": "inference/native/supplemental_20260905/model48/结果报告.md"
+    },
+    {
+      "source": "inference/path_templates/inference/native/supplemental_20260905/summarize_supplemental.py",
+      "destination": "inference/native/supplemental_20260905/summarize_supplemental.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/supplemental_20260905/summary.json",
+      "destination": "inference/native/supplemental_20260905/summary.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/supplemental_20260905/补跑结果汇总.md",
+      "destination": "inference/native/supplemental_20260905/补跑结果汇总.md"
+    },
+    {
+      "source": "inference/path_templates/inference/native/verification.json",
+      "destination": "inference/native/verification.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/verify_results.py",
+      "destination": "inference/native/verify_results.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/处理进展.md",
+      "destination": "inference/native/处理进展.md"
+    },
+    {
+      "source": "inference/path_templates/inference/native/模型卡结果对照.md",
+      "destination": "inference/native/模型卡结果对照.md"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/README.md",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/README.md"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/audit_m38_omni.py",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/audit_m38_omni.py"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/audit_summary.json",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/audit_summary.json"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/blocker_audit.json",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/blocker_audit.json"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/m38_omni_coverage.md",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/m38_omni_coverage.md"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/models.json",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/models.json"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/official_comparison.json",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/official_comparison.json"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/prepare_native_data.py",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/prepare_native_data.py"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/prepare_publaynet.py",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/prepare_publaynet.py"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/prepare_sku110k.py",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/prepare_sku110k.py"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/probe_private_weights.py",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/probe_private_weights.py"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/progress.json",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/progress.json"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/review_20260905/model19.md",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/review_20260905/model19.md"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/review_20260905/model19_cpu_audit.json",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/review_20260905/model19_cpu_audit.json"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/review_20260905/model19_cpu_audit.py",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/review_20260905/model19_cpu_audit.py"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/review_20260905/model19_local_provenance.json",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/review_20260905/model19_local_provenance.json"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/review_20260905/model30.md",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/review_20260905/model30.md"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/review_20260905/model42.md",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/review_20260905/model42.md"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/review_20260905/model42_rescore.py",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/review_20260905/model42_rescore.py"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/review_20260905/model42_supplemental_metrics.json",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/review_20260905/model42_supplemental_metrics.json"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/review_20260905/protocol_errata.json",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/review_20260905/protocol_errata.json"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/run_anzhc_lapa.py",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/run_anzhc_lapa.py"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/run_anzhc_text.py",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/run_anzhc_text.py"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/run_cmarkea.py",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/run_cmarkea.py"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/run_m12_native.py",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/run_m12_native.py"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/run_m34_native.py",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/run_m34_native.py"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/run_m34_native.sh",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/run_m34_native.sh"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/run_m37_native.py",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/run_m37_native.py"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/run_m37_native.sh",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/run_m37_native.sh"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/run_m38_omni.py",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/run_m38_omni.py"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/run_m38_omni.sh",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/run_m38_omni.sh"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/run_m39_omni.py",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/run_m39_omni.py"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/run_m39_omni.sh",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/run_m39_omni.sh"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/run_m41_omni_four.py",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/run_m41_omni_four.py"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/run_m46_native.py",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/run_m46_native.py"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/run_m46_native.sh",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/run_m46_native.sh"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/run_m47_native.py",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/run_m47_native.py"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/run_m47_native.sh",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/run_m47_native.sh"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/run_m48_native.py",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/run_m48_native.py"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/run_m48_native.sh",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/run_m48_native.sh"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/run_m54_sku_official.py",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/run_m54_sku_official.py"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/run_m54_sku_official.sh",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/run_m54_sku_official.sh"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/run_model.py",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/run_model.py"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/run_pp_layout.py",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/run_pp_layout.py"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/run_qualcomm_coco.py",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/run_qualcomm_coco.py"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/run_sku110k.py",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/run_sku110k.py"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/run_widerface.py",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/run_widerface.py"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/score_m38_omni_official.py",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/score_m38_omni_official.py"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/score_m38_omni_official.sh",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/score_m38_omni_official.sh"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/score_m39_omni_official.py",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/score_m39_omni_official.py"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/score_pp_v3.py",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/score_pp_v3.py"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/setup_m12_native.sh",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/setup_m12_native.sh"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/source_snapshots/pp_v2/run_pp_layout.py",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/source_snapshots/pp_v2/run_pp_layout.py"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/summarize.py",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/summarize.py"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/supplemental_20260905/model19/completion.json",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/supplemental_20260905/model19/completion.json"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/supplemental_20260905/model19/download.sh",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/supplemental_20260905/model19/download.sh"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/supplemental_20260905/model19/independent_verification.json",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/supplemental_20260905/model19/independent_verification.json"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/supplemental_20260905/model19/prepare.py",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/supplemental_20260905/model19/prepare.py"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/supplemental_20260905/model19/run.py",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/supplemental_20260905/model19/run.py"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/supplemental_20260905/model19/verify_completed.py",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/supplemental_20260905/model19/verify_completed.py"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/supplemental_20260905/model19/结果报告.md",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/supplemental_20260905/model19/结果报告.md"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/supplemental_20260905/model30/author_source_reference.json",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/supplemental_20260905/model30/author_source_reference.json"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/supplemental_20260905/model30/check_padding.py",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/supplemental_20260905/model30/check_padding.py"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/supplemental_20260905/model30/commands.sh",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/supplemental_20260905/model30/commands.sh"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/supplemental_20260905/model30/download.py",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/supplemental_20260905/model30/download.py"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/supplemental_20260905/model30/independent_verification.json",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/supplemental_20260905/model30/independent_verification.json"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/supplemental_20260905/model30/independent_verification_batch8.json",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/supplemental_20260905/model30/independent_verification_batch8.json"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/supplemental_20260905/model30/protocol_clarification_batch1.json",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/supplemental_20260905/model30/protocol_clarification_batch1.json"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/supplemental_20260905/model30/run.py",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/supplemental_20260905/model30/run.py"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/supplemental_20260905/model30/run_batch8.py",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/supplemental_20260905/model30/run_batch8.py"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/supplemental_20260905/model30/verify.py",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/supplemental_20260905/model30/verify.py"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/supplemental_20260905/model30/verify_batch8.py",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/supplemental_20260905/model30/verify_batch8.py"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/supplemental_20260905/model30/补评结果.md",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/supplemental_20260905/model30/补评结果.md"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/supplemental_20260905/model48/completion.json",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/supplemental_20260905/model48/completion.json"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/supplemental_20260905/model48/independent_verification.json",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/supplemental_20260905/model48/independent_verification.json"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/supplemental_20260905/model48/independent_verification_raw.json",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/supplemental_20260905/model48/independent_verification_raw.json"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/supplemental_20260905/model48/prepare.py",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/supplemental_20260905/model48/prepare.py"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/supplemental_20260905/model48/run.py",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/supplemental_20260905/model48/run.py"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/supplemental_20260905/model48/run_raw.py",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/supplemental_20260905/model48/run_raw.py"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/supplemental_20260905/model48/verify.py",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/supplemental_20260905/model48/verify.py"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/supplemental_20260905/model48/verify_raw.py",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/supplemental_20260905/model48/verify_raw.py"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/supplemental_20260905/model48/结果报告.md",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/supplemental_20260905/model48/结果报告.md"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/supplemental_20260905/summarize_supplemental.py",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/supplemental_20260905/summarize_supplemental.py"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/supplemental_20260905/summary.json",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/supplemental_20260905/summary.json"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/supplemental_20260905/补跑结果汇总.md",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/supplemental_20260905/补跑结果汇总.md"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/verification.json",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/verification.json"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/verify_results.py",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/verify_results.py"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/处理进展.md",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/处理进展.md"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/remaining_detection_eval/模型卡结果对照.md",
+      "destination": "resources/runtime/project/backends/remaining_detection_eval/模型卡结果对照.md"
+    },
+    {
+      "source": "inference/path_templates/inference/output_format/detection_inventory.json",
+      "destination": "inference/output_format/detection_inventory.json"
+    },
+    {
+      "source": "inference/path_templates/inference/output_format/prepare_detection.py",
+      "destination": "inference/output_format/prepare_detection.py"
+    }
+  ],
+  "links": [],
+  "classification_manifests": [],
+  "pet_indices": [],
+  "prepared_data_revision": "20261115-mx-reuse"
+}

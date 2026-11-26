@@ -1,0 +1,66 @@
+{
+  "sequence": 192,
+  "files": [
+    {
+      "path": "pytorch_model.bin",
+      "bytes": 343283185,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "config.json",
+      "bytes": 685,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "preprocessor_config.json",
+      "bytes": 228,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "README.md",
+      "bytes": 822,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": ".gitattributes",
+      "bytes": 690,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "images/guanaco.jpg",
+      "bytes": 42502,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "images/llama.jpg",
+      "bytes": 57083,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "images/alpaca.jpg",
+      "bytes": 32106,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "images/vicuna.jpg",
+      "bytes": 56995,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "runs/events.out.tfevents.1625147468.219e2f4a0b3d.64.0",
+      "bytes": 1348,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    }
+  ],
+  "mismatches": []
+}

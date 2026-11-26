@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "suite": "top100-zero-shot-object-detection-official-protocol",
+  "fidelity_levels": {
+    "exact_official": "官方代码、官方原生权重和官方环境直接运行。",
+    "official_protocol_adapter": "本地权重是官方发布/转换的另一种格式；适配层逐项复刻官方数据、提示词、预处理、后处理和指标。",
+    "reference_baseline": "官方没有发布与报告表格完全对应的端到端评估入口；只能使用官方组件构造可复现基线，不能宣称复现官方值。"
+  },
+  "datasets": {
+    "coco2017_val": {
+      "name": "COCO 2017 detection",
+      "split": "val2017",
+      "images": 5000,
+      "categories": 80,
+      "annotation_archive": "COCO2017/annotations_trainval2017.zip",
+      "annotation_member": "annotations/instances_val2017.json",
+      "image_archives": [
+        "COCO2017/val2017.zip"
+      ],
+      "metric": "pycocotools COCOeval bbox AP, maxDets=[1,10,100]",
+      "official_url": "https://cocodataset.org/#download"
+    }
+  },
+  "models": [
+    {
+      "sequence": 68,
+      "key": "omdet-turbo-swin-tiny",
+      "repo_id": "omlab/omdet-turbo-swin-tiny-hf",
+      "hf_revision": "7fe93cecfb770c4d76cf71163956221249cab566",
+      "family": "omdet",
+      "runner": "omdet_coco_reference",
+      "dataset": "coco2017_val",
+      "fidelity": "reference_baseline",
+      "weight_format": "Official Hugging Face PyTorch checkpoint",
+      "official_source": {
+        "repository": "https://github.com/om-ai-lab/OmDet",
+        "revision": "956e2f36a13c32bd1e30b14a790233268c2305fb",
+        "inference_script": "demo/demo.py",
+        "evaluation_script": null,
+        "model_card": "https://huggingface.co/omlab/omdet-turbo-swin-tiny-hf"
+      },
+      "protocol": {
+        "queries": "80 COCO category names through official OmDetTurboProcessor",
+        "task": "processor default task derived from the class list",
+        "image_preprocess": "resize to 640x640 with official local processor config",
+        "selection": "threshold=0.0, NMS IoU=0.5, at most 300 before COCOeval",
+        "metric": "COCO bbox AP"
+      },
+      "official_reference": {
+        "scope": "paper/repository model row; exact evaluation entrypoint was not published",
+        "metrics_percent": {
+          "AP": 42.5
+        },
+        "source": "https://github.com/om-ai-lab/OmDet"
+      },
+      "known_differences": [
+        "官方仓库未提供可定位到 42.5 表格结果的完整 COCO evaluator、任务提示和阈值配置；此结果只能作为参考基线。",
+        "AP 计算保留低分预测，和官方单图 demo 的可视化阈值 0.30 不同。"
+      ],
+      "legacy_result": {
+        "AP_percent": 39.6969,
+        "classification": "reference_baseline_below_reported"
+      }
+    }
+  ]
+}

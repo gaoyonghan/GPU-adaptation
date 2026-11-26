@@ -1,0 +1,47 @@
+{
+  "schema": "model-eval/classification-inventory/v1",
+  "scope": "Existing 59 classification models; model 93 is retrieval and excluded.",
+  "models": [
+    {
+      "sequence": 92,
+      "model_id": "metadome/face_shape_classification",
+      "runner_family": "special",
+      "adapter": "native_labels",
+      "state": "integrated",
+      "dataset": {
+        "id": "face_shape",
+        "relation": "public_replacement",
+        "split": "testing_set",
+        "note": "Kaggle Face Shape Dataset testing_set 1000 图，公开替代集；已运行，原始官方验证图未知，所选结果 52.3% 与工作簿 52.5% 待核对。"
+      },
+      "qualification": "public_replacement",
+      "limitations": [
+        "Historical output may contain only Top-1. Missing Top-5 remains unavailable; never reconstruct ranking silently."
+      ],
+      "num_classes": 5,
+      "expected_images": 1000,
+      "categories": [
+        {
+          "id": 0,
+          "name": "Heart"
+        },
+        {
+          "id": 1,
+          "name": "Oblong"
+        },
+        {
+          "id": 2,
+          "name": "Oval"
+        },
+        {
+          "id": 3,
+          "name": "Round"
+        },
+        {
+          "id": 4,
+          "name": "Square"
+        }
+      ]
+    }
+  ]
+}

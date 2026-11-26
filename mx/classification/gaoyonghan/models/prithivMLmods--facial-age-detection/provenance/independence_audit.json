@@ -1,0 +1,22 @@
+{
+  "sequence": 99,
+  "model_id": "prithivMLmods/facial-age-detection",
+  "source_archive_hash_matches": true,
+  "source_archive_sha256": "b6a59ff0226b3d8904536bcc061398fd6c3ded6bdc401dbe5a124d018bf0934c",
+  "prepared_entry_source_sha256": "dbf8335f39b3cfb377e5662c78724505bda394c98b6ae0326945eab17ef6b1aa",
+  "local_entry_sha256": "a4e4a18f18149de6905dc2a3ff38cac33987663e3b0b28e440366b57efcfa9ed",
+  "local_entry": "inference/native/run_m99.py",
+  "central_dispatch_in_entry": false,
+  "unexpected_external_links": [],
+  "declared_dataset_links": [],
+  "broken_links": [],
+  "path_template_count": 319,
+  "state": "entrypoint_verified_full_run_pending",
+  "validation": {
+    "returncode": 0,
+    "python": "/home/ubuntu/gaoyonghan/gpu/classification8_eval/.venv-m83-optimum/bin/python",
+    "checked_at": "2026-11-10T15:57:28.414670+08:00",
+    "scope": "native help/import/path check only; not full inference"
+  },
+  "smoke_verification": null
+}

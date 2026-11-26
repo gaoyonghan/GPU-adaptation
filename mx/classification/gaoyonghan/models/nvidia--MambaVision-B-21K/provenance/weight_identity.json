@@ -1,0 +1,54 @@
+{
+  "sequence": 179,
+  "files": [
+    {
+      "path": "model.safetensors",
+      "bytes": 390807536,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "config.json",
+      "bytes": 36413,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "mambavision_base_21k.pth.tar",
+      "bytes": 1172671518,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 4139,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5411,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": ".gitattributes",
+      "bytes": 1519,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "configuration_mambavision.py",
+      "bytes": 768,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "modeling_mambavision.py",
+      "bytes": 29493,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    }
+  ],
+  "mismatches": []
+}

@@ -1,0 +1,97 @@
+{
+  "sequence": 83,
+  "model_id": "small-models-for-glam/historical-illustration-detector",
+  "model_path": "__MODEL_ROOT__/weights/small-models-for-glam/historical-illustration-detector",
+  "hf_revision": "3aab2a6336291b732a1552c562fd15b1bd606213",
+  "model_card": "https://huggingface.co/small-models-for-glam/historical-illustration-detector/blob/3aab2a6336291b732a1552c562fd15b1bd606213/README.md",
+  "model_files_sha256": {
+    "onnx/model.onnx": "ad4ec986f606f4a5adafa342af880707385cae81e7d51c8ff185fece291a81cf",
+    "config.json": "f4ac2468a849f5a4af16e4d42a5e24b89540a43809ef444afd28018cf17f6924",
+    "preprocessor_config.json": "10488f6235ceb6e22320f0b243a3f44339876ee8507b1f9ad8901fc38ba8b68e",
+    "README.md": "ab9e01d1b39273d2def28bb1e7dc2d9264d73a95d5d03fc853a318136daf2b65"
+  },
+  "weight_note": "Author-provided quantized ONNX. model.onnx and model_quantized.onnx have identical SHA256. No export/requantization or safetensors substitution.",
+  "task_type": "image-classification/historical-page-illustration-binary",
+  "dataset": "ImageIN/ImageIn_annotations",
+  "dataset_path": "__DATASET_ROOT__/imagein_holdout_unpublished",
+  "dataset_revision": "102d18f8eaf27f9c9cf8c66492cbafea6a5f0c40",
+  "dataset_url": "https://huggingface.co/datasets/ImageIN/ImageIn_annotations/tree/102d18f8eaf27f9c9cf8c66492cbafea6a5f0c40",
+  "dataset_files_sha256": {
+    "data/train-00000-of-00004.parquet": "19c6ada4a1acf4d832325550272815f862db1716991a9d640e858e3cfa9d26d1",
+    "data/train-00001-of-00004.parquet": "e32f9ff262aedd042a416f2219330db2c93af378319abccc25c57d35c15cbdaa",
+    "data/train-00002-of-00004.parquet": "3a227b4f33b8e555c735c214da85daf46e04207c31aed8a4d2dd7165417fcbfd",
+    "data/train-00003-of-00004.parquet": "5eaf758bef87cca3bafe6ea67c285a1753066ecbf7e641a8db01ffca27a11aa6"
+  },
+  "dataset_relation": "original_protocol_incomplete",
+  "is_replacement_dataset": false,
+  "published_split": "train",
+  "evaluation_scope": "All 1896 rows of published source dataset, explicitly selected by user; not an independent held-out test set.",
+  "images": 1896,
+  "label_field": "choice",
+  "image_field": "loaded_image.bytes",
+  "id_to_label": [
+    "not-illustrated",
+    "illustrated"
+  ],
+  "class_counts": {
+    "not-illustrated": 1430,
+    "illustrated": 466
+  },
+  "annotation_note": "choice is the binary class; the field named label contains page references, not the model target. Use original choices unchanged. No relabeling or deduplication.",
+  "training_eval_overlap": "Unknown exact membership, possible substantial overlap; author used this source but did not publish held-out indices. Newly splitting these rows does not establish independence.",
+  "input": "Embedded original page converted to RGB, author's AutoImageProcessor (slow): bilinear shortest-edge resize to 256, center crop 224, rescale 1/255, mean/std 0.5. No tiling or added page/illustration detection.",
+  "inference": "Author's ORTModelForImageClassification + AutoImageProcessor, CPUExecutionProvider, FP32 input/output with published quantized graph, batch 1, argmax(logits), no TTA or threshold tuning",
+  "metrics": [
+    "accuracy",
+    "binary_f1_illustrated"
+  ],
+  "scorer": "sklearn.metrics.accuracy_score and f1_score(pos_label=1, average=binary, zero_division=0), with independent confusion-count checks",
+  "official_evaluator": null,
+  "official_reference": {
+    "accuracy_percent": 95.09,
+    "f1_illustrated": 0.92,
+    "split": "author test (membership unpublished)",
+    "checkpoint_variant_verified": false,
+    "directly_comparable": false
+  },
+  "fidelity": "reference_baseline",
+  "case_type": "special",
+  "special_tags": [
+    "split_uncertain",
+    "training_eval_overlap",
+    "official_evaluator_missing",
+    "variant_mapping_uncertain"
+  ],
+  "code_boundary": "Our Parquet data loop, standard scoring and provenance archive; unchanged published ONNX graph, Transformers image processor and Optimum inference API. Not an author end-to-end test reproduction.",
+  "known_differences": [
+    "All published source rows instead of undisclosed author test",
+    "Author software versions unspecified except saved Transformers config 4.55.4; use compatible Optimum 1.27.0 and Transformers 4.50.0. ONNX executes saved graph, not Transformers MobileNet model implementation",
+    "CPU accuracy evaluation, not GPU adaptation or a reproduction of the reported 20ms latency"
+  ],
+  "versions": {
+    "torch": "2.5.1+cu121",
+    "transformers": "4.50.0",
+    "optimum": "1.27.0",
+    "onnx": "1.17.0",
+    "onnxruntime": "1.20.1",
+    "numpy": "1.26.4",
+    "Pillow": "11.1.0",
+    "pyarrow": "19.0.1",
+    "scikit-learn": "1.5.2",
+    "datasets": "3.4.1",
+    "protobuf": "4.25.6",
+    "huggingface-hub": "0.29.3",
+    "tokenizers": "0.21.4"
+  },
+  "status": "prepared_for_user_terminal_run",
+  "next_action": "Run setup/preflight, 10-image smoke, then full source-dataset evaluation. Report overlap warning alongside any metric.",
+  "source_sha256": {
+    "run_m83_imagein.py": "1014bcd40e15ab7324bfecad5adf404d4601c55db8d90bb4a201dc727cd134cc",
+    "run_m83_imagein.sh": "de88bb6676b08f7e819d5d4d9fd42fcc31e6709d3633a26a72a1249b3d1bbaf6",
+    "setup_m83_env.sh": "d602b46b125e1ca88a2ab60662a6692325e564658f1297388552127156cda5b9",
+    "models_m83.json": "3c67beeda8eab28169e7a07caa25eea05d305df872cd1d407f1e36de37fff95d",
+    "README_m83.md": "4761f2807dde7f2347f393ea94d18e533553ba9f7752ba0fca07ca091dcb409e"
+  },
+  "protocol_fingerprint": "aa1ada92a7757ec5cc69dcfd0c7a71689bc6966f81b43c834e29a05bb96e923f",
+  "selected_images": 1896
+}

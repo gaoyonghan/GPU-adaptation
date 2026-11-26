@@ -1,0 +1,44 @@
+{
+  "schema": "model-eval/classification-inventory/v1",
+  "scope": "One independent MX GPU classification model",
+  "models": [
+    {
+      "sequence": 120,
+      "model_id": "StephanAkkerman/chart-recognizer",
+      "dataset": {
+        "id": "HVPD Chart Identification Subset (CIS)",
+        "split": null,
+        "note": [
+          "HVPD Chart Identification Subset (CIS)\n全部 58,501 张\n无独立 test"
+        ],
+        "native_scope": {
+          "name": "HVPD Chart Identification Subset (CIS)",
+          "source": "WieszczUrsynowa/HVPD-HarmfulVisualPlotsDataset",
+          "archive": "<historical path omitted>",
+          "evaluation_scope": "entire CIS archive; the dataset does not publish a separate test split",
+          "expected_images": 58501,
+          "valid_images": 58501,
+          "invalid_images": 0,
+          "class_counts": {
+            "chart": 20738,
+            "non-chart": 37763
+          },
+          "dvcs_excluded": "DVCS labels deceptive chart properties, which do not match the model's chart/non-chart output."
+        },
+        "relation": "native_e07_registered_scope",
+        "index_source": "native loader GT, materialized as classification_annotations.json in the native phase directory",
+        "data_containers": [
+          "dataset/HVPD/CIS.zip"
+        ]
+      },
+      "qualification": "native_registered_scope",
+      "limitations": [
+        "Capture-ready is a code integration state, not a claim that inference has passed.",
+        "Unobserved native Top-5 is unavailable; aggregate scores are not predictions."
+      ],
+      "num_classes": 2,
+      "expected_images": 58501,
+      "adapter": "native_labels"
+    }
+  ]
+}

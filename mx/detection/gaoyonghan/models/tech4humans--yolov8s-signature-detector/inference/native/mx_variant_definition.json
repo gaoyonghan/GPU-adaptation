@@ -1,0 +1,10 @@
+{
+  "repository": "tech4humans/yolov8s-signature-detector",
+  "revision": "d2847a9818bb5e1d33ed95a5b9f3cf6426f487a6",
+  "directory": "tech4humans/yolov8s-signature-detector/pytorch/d2847a9818bb5e1d33ed95a5b9f3cf6426f487a6",
+  "weight": "yolov8s.pt",
+  "weight_sha256": "789580c242ac6f2543b4c09f083ca8c4ef6f1c598359bd2395febfcbcce99363",
+  "dtype": "float32",
+  "nv_rerun_required": true,
+  "change": "author PyTorch checkpoint replacing ONNX execution"
+}

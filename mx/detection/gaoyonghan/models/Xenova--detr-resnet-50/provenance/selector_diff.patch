@@ -1,0 +1,21 @@
+--- before_selector.py
++++ inference/native/run_model.py
+@@ -1156,7 +1156,6 @@
+ 
+ def parse_args() -> argparse.Namespace:
+     parser = argparse.ArgumentParser(description=__doc__)
+-    parser.add_argument("--models", default="all", help="all，或逗号分隔的 model_key/model_id")
+     parser.add_argument("--model-root", type=Path, default=DEFAULT_MODEL_ROOT)
+     parser.add_argument("--dataset-root", type=Path, default=DEFAULT_DATASET_ROOT)
+     parser.add_argument("--output-root", type=Path, default=DEFAULT_OUTPUT_ROOT)
+@@ -1216,7 +1215,9 @@
+         return 0
+ 
+     failed = []
+-    for spec in selected_models(manifest, args.models):
++    if len(manifest["models"]) != 1:
++        raise ValueError("Expected one model in this folder")
++    for spec in manifest["models"]:
+         if not run_one(manifest, spec, args):
+             failed.append(spec["model_key"])
+     if failed:

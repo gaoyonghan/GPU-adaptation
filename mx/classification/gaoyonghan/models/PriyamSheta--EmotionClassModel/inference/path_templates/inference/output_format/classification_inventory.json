@@ -1,0 +1,53 @@
+{
+  "schema": "model-eval/classification-inventory/v1",
+  "scope": "One independent MX GPU classification model",
+  "models": [
+    {
+      "sequence": 139,
+      "model_id": "PriyamSheta/EmotionClassModel",
+      "dataset": {
+        "id": "FER2013",
+        "split": null,
+        "note": [
+          "FER2013 PrivateTest\nHappy / Sad 两类子集\n1,473 / 3,589 张"
+        ],
+        "native_scope": {
+          "name": "FER2013",
+          "source": "Aaryan333/fer2013_train_publicTest_privateTest（本地 parquet）",
+          "source_split": "privateTest",
+          "source_image_count": 3589,
+          "evaluated_subset": "Happy (FER2013 label 3) and Sad (FER2013 label 4)",
+          "evaluated_image_count": 1473,
+          "evaluated_coverage_pct": 41.0421,
+          "source_class_counts": {
+            "Angry": 491,
+            "Disgust": 55,
+            "Fear": 528,
+            "Happy": 879,
+            "Sad": 594,
+            "Surprise": 416,
+            "Neutral": 626
+          },
+          "label_mapping": {
+            "FER2013 Happy (3)": "model Happy (0)",
+            "FER2013 Sad (4)": "model Sad (1)"
+          },
+          "scope_note": "该模型仅有 Happy/Sad 两类输出；其余 Angry、Disgust、Fear、Surprise、Neutral 五类未映射，故不参与指标计算。"
+        },
+        "relation": "native_e07_registered_scope",
+        "index_source": "native loader GT, materialized as classification_annotations.json in the native phase directory",
+        "data_containers": [
+          "dataset/fer2013/data/privateTest-00000-of-00001-4b8a0715cf1b7560.parquet"
+        ]
+      },
+      "qualification": "native_registered_scope",
+      "limitations": [
+        "Capture-ready is a code integration state, not a claim that inference has passed.",
+        "Unobserved native Top-5 is unavailable; aggregate scores are not predictions."
+      ],
+      "num_classes": 2,
+      "expected_images": 1473,
+      "adapter": "native_labels"
+    }
+  ]
+}

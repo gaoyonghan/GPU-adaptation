@@ -1,0 +1,63 @@
+{
+  "sequence": 63,
+  "model_id": "IDEA-Research/grounding-dino-base",
+  "task": "zero_shot_detection",
+  "task_name": "零样本检测",
+  "reported_result": "56.8967",
+  "reference": "56.7",
+  "model_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/model_index/IDEA-Research/grounding-dino-base",
+  "model_exists_at_build": true,
+  "dataset": {
+    "id": "coco2017_val",
+    "relation": "official_protocol_adapter",
+    "split": null,
+    "note": "COCO2017 · val · 5000 图\n官方原集（不代表全协议已对齐）"
+  },
+  "environment_id": "zero-shot",
+  "runner_family": "zero_shot",
+  "final_result_sources": [
+    {
+      "source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m063/metrics-0.json",
+      "sha256": "735a8d1624d61ef6d31902f7258d28d52ccaa8eda8388de38c80c3f358a4f315",
+      "selection": "workbook_score_match",
+      "data": {
+        "metrics": {
+          "AP": 0.5689668280662771,
+          "AP50": 0.7424639434380033,
+          "AP75": 0.6256512430480479,
+          "AP_large": 0.7260353366147148,
+          "AP_medium": 0.6110268579337789,
+          "AP_small": 0.40100575947019695,
+          "AR_1": 0.414330025357996,
+          "AR_10": 0.7052862495374239,
+          "AR_100": 0.7744160620447238,
+          "AR_large": 0.9183451753297075,
+          "AR_medium": 0.8148554871171644,
+          "AR_small": 0.6223508549894032
+        },
+        "protocol": "COCO bbox AP, maxDets=100 as defined by pycocotools"
+      },
+      "source_original": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/zero_shot/grounding-dino-base/metrics.json"
+    }
+  ],
+  "code": {
+    "source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/official_zero_shot_eval/run_model.py",
+    "sha256": "6b5c4102bc12ce6a9198c4e3055d3a6f6080dd62026df39af93db031843a0ad6",
+    "recorded_sha256": null,
+    "attestation": "current_code_unverified",
+    "status_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m063/status.json",
+    "selection": "current_shared_code",
+    "archive": "code_archive/6b5c4102bc12ce6a_run_model.py"
+  },
+  "support_files": [
+    "models.json",
+    "run_model.py",
+    "setup_env.sh",
+    "run_all.sh"
+  ],
+  "final_scorer": null,
+  "backend_package": "classification8_eval",
+  "readiness": "code_and_result_identified",
+  "launch_status": "configured",
+  "metadata_warning": null
+}

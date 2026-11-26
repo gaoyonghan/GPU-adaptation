@@ -1,0 +1,15 @@
+--- original_inference.py
++++ inference/native/run_m46_native.py
+@@ -17,9 +17,9 @@
+ import yaml
+ 
+ HERE = Path(__file__).resolve().parent
+-WEIGHT = Path('/data2/gaoyonghan/gpu/model/TommyNgx/YOLOv10-Fire-and-Smoke-Detection/best.pt')
+-ARCHIVE = Path('/data2/gaoyonghan/gpu/dataset/dfire_test_replacement_isfire4/Dataset.zip')
+-OUT = Path('/home/ubuntu/gaoyonghan/gpu/results/m46_native_v1')
++WEIGHT = Path('/data2/gaoyonghan/gpu_model_standalone_20261110/release/model/检测/TommyNgx--YOLOv10-Fire-and-Smoke-Detection/resources/model_index/TommyNgx/YOLOv10-Fire-and-Smoke-Detection/best.pt')
++ARCHIVE = Path('/home/ubuntu/文档/ChatGPT/idea 2/outputs/launch_audit_20261005/migration_inputs/datasets/dfire_test_replacement_isfire4/Dataset.zip')
++OUT = Path('/data2/gaoyonghan/gpu_model_standalone_20261110/release/model/检测/TommyNgx--YOLOv10-Fire-and-Smoke-Detection/results/run_001/m046')
+ NAMES = {0: 'Fire', 1: 'Smoke'}
+ MAPPING = {0: 1, 1: 0, 2: 1, 3: 0}
+ 

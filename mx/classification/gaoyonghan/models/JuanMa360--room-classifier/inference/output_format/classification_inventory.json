@@ -1,0 +1,72 @@
+{
+  "schema": "model-eval/classification-inventory/v1",
+  "scope": "One independent MX GPU classification model",
+  "models": [
+    {
+      "sequence": 141,
+      "model_id": "JuanMa360/room-classifier",
+      "dataset": {
+        "id": "house-rooms",
+        "split": "full_local_dataset",
+        "note": [
+          "house-rooms\n本地全部 5,250 张，无独立 test\n共同 5 类 logits 子集"
+        ],
+        "native_scope": {
+          "name": "house-rooms",
+          "source": "local House_Room_Dataset",
+          "resolved_root": "<historical path omitted>",
+          "split": "full_local_dataset",
+          "split_note": "本地目录未提供独立 test split；本次使用全部可用图片，结果不等价于独立泛化性能。",
+          "image_count": 5250,
+          "original_class_names": [
+            "Bathroom",
+            "Bedroom",
+            "Dinning",
+            "Kitchen",
+            "Livingroom"
+          ],
+          "evaluated_class_names": [
+            "bathroom",
+            "bedroom",
+            "dining_room",
+            "kitchen",
+            "living_room"
+          ],
+          "class_count": 5,
+          "class_counts": {
+            "bathroom": 606,
+            "bedroom": 1248,
+            "dining_room": 1158,
+            "kitchen": 965,
+            "living_room": 1273
+          },
+          "label_mapping": {
+            "Bathroom": "bathroom",
+            "Bedroom": "bedroom",
+            "Dinning": "dining_room",
+            "Kitchen": "kitchen",
+            "Livingroom": "living_room"
+          },
+          "excluded_model_classes": [
+            "Exterior",
+            "Interior"
+          ],
+          "exclusion_note": "数据集没有 Exterior、Interior 样本；主指标在共同五类 logits 子集上计算。"
+        },
+        "relation": "native_e07_registered_scope",
+        "index_source": "native loader GT, materialized as classification_annotations.json in the native phase directory",
+        "data_containers": [
+          "dataset/house-rooms"
+        ]
+      },
+      "qualification": "native_registered_scope",
+      "limitations": [
+        "Capture-ready is a code integration state, not a claim that inference has passed.",
+        "Unobserved native Top-5 is unavailable; aggregate scores are not predictions."
+      ],
+      "num_classes": 5,
+      "expected_images": 5250,
+      "adapter": "native_labels"
+    }
+  ]
+}

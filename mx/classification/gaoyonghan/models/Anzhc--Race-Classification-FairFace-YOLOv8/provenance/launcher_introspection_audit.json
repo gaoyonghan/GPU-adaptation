@@ -1,0 +1,5 @@
+{
+  "sequence": 177,
+  "recorded_commands": 5,
+  "change": "Help and preflight stop after the first command; normal execution keeps every recorded command."
+}

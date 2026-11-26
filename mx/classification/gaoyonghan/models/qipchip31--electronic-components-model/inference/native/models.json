@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "sources": {},
+  "models": [
+    {
+      "sequence": 121,
+      "model_id": "qipchip31/electronic-components-model",
+      "runner_family": "native_script",
+      "adapter": "native_labels",
+      "state": "full_inference_and_public_scoring_verified",
+      "dataset": {
+        "id": "qipchip31/electronic_components",
+        "split": "test",
+        "note": [
+          "qipchip31/electronic_components test\n74 张"
+        ],
+        "native_scope": {
+          "name": "qipchip31/electronic_components",
+          "split": "test",
+          "image_count": 74,
+          "class_count": 4,
+          "class_names": [
+            "resistor",
+            "capacitor",
+            "inductor",
+            "transistor"
+          ],
+          "label_counts": {
+            "resistor": 18,
+            "capacitor": 19,
+            "inductor": 20,
+            "transistor": 17
+          },
+          "small_test_set_note": "The repository test split contains only 74 images; metrics have high sampling uncertainty."
+        },
+        "relation": "native_e07_registered_scope",
+        "index_source": "native loader GT, materialized as classification_annotations.json in the native phase directory",
+        "data_containers": [
+          "dataset/electronic_components/data/test-00000-of-00001.parquet"
+        ]
+      },
+      "qualification": "native_registered_scope",
+      "limitations": [
+        "Capture-ready is a code integration state, not a claim that inference has passed.",
+        "Unobserved native Top-5 is unavailable; aggregate scores are not predictions."
+      ],
+      "num_classes": 4,
+      "expected_images": 74,
+      "native_script": {
+        "script": "inference/native/run_model.py",
+        "script_sha256": "498b1247cfde3e462c418ae1733fd2ee0cfbdac05716a1accde05af27ae562ea",
+        "loop_lineno": 228,
+        "labels": "batch_labels",
+        "prediction": "batch_predictions",
+        "ranking": "batch_top3",
+        "classes": "logits.shape[-1]",
+        "loader_kind": "torch",
+        "label_position": 1,
+        "framework": "torch",
+        "original_script_sha256": "d1a7186a66996998eeb89418fdbf438be8b167cfee5cb523d90f53b84c932bad",
+        "original_loop_lineno": 217,
+        "original_path": "code/electronic-components-model-electronic-components-test.py",
+        "ported_script_sha256": "eba66f1d521a981421d18f5ae5263c779c031aafb8a9d9f0bd456acb948f3696"
+      },
+      "output_relative_path": "result/run_001/full/m121",
+      "supports_max_samples": false,
+      "runtime": {
+        "batch_size": 32,
+        "workers": 0,
+        "warmup": 3
+      },
+      "weights_files": [
+        {
+          "path": "config.json",
+          "size": 803,
+          "sha256": "584818c979f9321509c425c5ed330789dd7e6e91ab971a20cceead65e302a762"
+        },
+        {
+          "path": "model.safetensors",
+          "size": 343230128,
+          "sha256": "ed8d3fbb8992345ac0b4ea253f034ff5d59b6e918da86672207f2d538d227753"
+        }
+      ],
+      "dataset_files": [
+        "electronic_components/data/test-00000-of-00001.parquet"
+      ],
+      "environment": "e07.txt",
+      "native_precision": "FP32",
+      "backend": "transformers",
+      "timing_alignment": {
+        "forward": "Same event/current-stream/synchronize semantics; wrapper preserves exactly one native call. MX runtime differs.",
+        "e2e": "Native DataLoader fetch to CPU prediction availability; worker-prefetch boundary differs from Example. Does not include subsequent metrics or record writes.",
+        "worker_prefetch": false,
+        "starts_after_spider_composition": false,
+        "native_metric_operations_before_prediction_readiness": [],
+        "model_load": "Sum of measured native construction/load/placement blocks, not Example contiguous block.",
+        "warmup": "Native repeated preprocessed first batch; native count retained; synchronized before/after. Unlike Example, preprocessing/transfer/softmax-to-CPU are outside the warmup interval.",
+        "evaluation": "Native aggregate evaluation not measured separately; evaluation_seconds=null. Public scoring duration is outside native timing.",
+        "resume": "No resume; repeated native phase archives previous output; resume_segments=1.",
+        "comparison_valid": false
+      },
+      "label_mapping": [
+        {
+          "id": 0,
+          "name": "resistor"
+        },
+        {
+          "id": 1,
+          "name": "capacitor"
+        },
+        {
+          "id": 2,
+          "name": "inductor"
+        },
+        {
+          "id": 3,
+          "name": "transistor"
+        }
+      ],
+      "layout_reference": {
+        "branch": "gaoyonghan/mx",
+        "commit": "208733e1562fca75b7128772ca2cd587943d9012",
+        "platform": "mx"
+      }
+    }
+  ]
+}

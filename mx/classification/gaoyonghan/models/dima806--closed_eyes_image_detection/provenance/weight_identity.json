@@ -1,0 +1,150 @@
+{
+  "sequence": 171,
+  "files": [
+    {
+      "path": "model.safetensors",
+      "bytes": 343223968,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "pytorch_model.bin",
+      "bytes": 343268717,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "config.json",
+      "bytes": 735,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "preprocessor_config.json",
+      "bytes": 325,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "README.md",
+      "bytes": 660,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "training_args.bin",
+      "bytes": 4411,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": ".gitattributes",
+      "bytes": 1519,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "weight_verification.json",
+      "bytes": 1212,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "checkpoint-2148/rng_state.pth",
+      "bytes": 14575,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "checkpoint-2148/scheduler.pt",
+      "bytes": 627,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "checkpoint-2148/pytorch_model.bin",
+      "bytes": 343268717,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "checkpoint-2148/config.json",
+      "bytes": 733,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "checkpoint-2148/preprocessor_config.json",
+      "bytes": 325,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "checkpoint-2148/trainer_state.json",
+      "bytes": 1451,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "checkpoint-2148/training_args.bin",
+      "bytes": 4027,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "checkpoint-2148/optimizer.pt",
+      "bytes": 686568453,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "checkpoint-1209/rng_state.pth",
+      "bytes": 14575,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "checkpoint-1209/model.safetensors",
+      "bytes": 343223968,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "checkpoint-1209/scheduler.pt",
+      "bytes": 627,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "checkpoint-1209/config.json",
+      "bytes": 735,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "checkpoint-1209/preprocessor_config.json",
+      "bytes": 325,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "checkpoint-1209/trainer_state.json",
+      "bytes": 1094,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "checkpoint-1209/training_args.bin",
+      "bytes": 4411,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "checkpoint-1209/optimizer.pt",
+      "bytes": 686568453,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    }
+  ],
+  "mismatches": []
+}

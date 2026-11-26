@@ -1,0 +1,22 @@
+{
+  "sequence": 185,
+  "model_id": "LishaV01/agriculture-crop-disease-detection",
+  "source_archive_hash_matches": true,
+  "source_archive_sha256": "edf4a011fba54770f5c0a7712c9bc2f998a66698ecd30554f89752874b757c39",
+  "prepared_entry_source_sha256": "fcecf0aac1321cab6b9ca475a9d8d332ebcaff89607bb9301b3b1c4bad79305d",
+  "local_entry_sha256": "3d5066b8ded683b1c09241fd1b845687678098382c39d86fdbc6cece36d1757c",
+  "local_entry": "inference/native/run_model.py",
+  "central_dispatch_in_entry": false,
+  "unexpected_external_links": [],
+  "declared_dataset_links": [],
+  "broken_links": [],
+  "path_template_count": 218,
+  "state": "entrypoint_verified_full_run_pending",
+  "validation": {
+    "returncode": 0,
+    "python": "/home/ubuntu/gaoyonghan/gpu/classification8_eval/.venv/bin/python",
+    "checked_at": "2026-11-10T15:57:47.269653+08:00",
+    "scope": "native help/import/path check only; not full inference"
+  },
+  "smoke_verification": null
+}

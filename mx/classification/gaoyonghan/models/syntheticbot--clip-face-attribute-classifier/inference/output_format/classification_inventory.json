@@ -1,0 +1,89 @@
+{
+  "schema": "model-eval/classification-inventory/v1",
+  "scope": "One independent MX GPU classification model",
+  "models": [
+    {
+      "sequence": 149,
+      "model_id": "syntheticbot/clip-face-attribute-classifier",
+      "dataset": {
+        "id": "FairFace",
+        "split": "validation",
+        "note": [
+          "FairFace validation\n10,954 张\n标签顺序按模型对齐"
+        ],
+        "native_scope": {
+          "name": "FairFace",
+          "source": "HuggingFaceM4/FairFace",
+          "split": "validation",
+          "image_count": 10954,
+          "dataset_label_order": {
+            "age": [
+              "0-2",
+              "3-9",
+              "10-19",
+              "20-29",
+              "30-39",
+              "40-49",
+              "50-59",
+              "60-69",
+              "more than 70"
+            ],
+            "gender": [
+              "Male",
+              "Female"
+            ],
+            "race": [
+              "East Asian",
+              "Indian",
+              "Black",
+              "White",
+              "Middle Eastern",
+              "Latino_Hispanic",
+              "Southeast Asian"
+            ]
+          },
+          "dataset_to_model_label_index": {
+            "age": [
+              0,
+              3,
+              1,
+              2,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "gender": [
+              1,
+              0
+            ],
+            "race": [
+              1,
+              2,
+              0,
+              6,
+              4,
+              3,
+              5
+            ]
+          },
+          "split_note": "This is FairFace's publicly available validation split (10,954 images); the downloaded public version does not provide a separate hidden test split."
+        },
+        "relation": "native_e07_registered_scope",
+        "index_source": "native loader GT, materialized as classification_annotations.json in the native phase directory",
+        "data_containers": [
+          "dataset/FairFace/0.25/validation-00000-of-00001-951dbd63c8724ee1.parquet"
+        ]
+      },
+      "qualification": "native_registered_scope",
+      "limitations": [
+        "Capture-ready is a code integration state, not a claim that inference has passed.",
+        "Unobserved native Top-5 is unavailable; aggregate scores are not predictions."
+      ],
+      "num_classes": 9,
+      "expected_images": 10954,
+      "adapter": "native_labels"
+    }
+  ]
+}

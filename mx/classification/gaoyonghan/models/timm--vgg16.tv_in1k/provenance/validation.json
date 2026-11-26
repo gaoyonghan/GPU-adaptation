@@ -1,0 +1,36 @@
+{
+  "sequence": 165,
+  "model_id": "timm/vgg16.tv_in1k",
+  "run_dir": "classification/laizihao/models/timm--vgg16.tv_in1k/result/run_001",
+  "phase": "full",
+  "state": "completed",
+  "images": 50000,
+  "evaluated_classes": 1000,
+  "chance_level": 0.001,
+  "metrics": {
+    "accuracy": 0.71558,
+    "balanced_accuracy": 0.71558,
+    "macro_f1": 0.7113591884086665,
+    "top5_accuracy": 0.90402,
+    "top5_status": "computed"
+  },
+  "reported_by_author": {
+    "top1": 0.71594,
+    "top5": 0.90398
+  },
+  "device": {
+    "gpu": "MetaX C500",
+    "torch": "2.10.0+metax3.8.1.0",
+    "precision": "amp_bf16",
+    "batch_size": 64
+  },
+  "predictions_sha256": "024961a5e3b032ede5e68923ea33e854521ff168d26132172c10cf7d28b47e49",
+  "wall_seconds": 53.393,
+  "metric_reportable": true,
+  "verdict": "与作者模型卡数值一致（差 -0.0004），链路无系统偏差；前向存在 1e-5 量级非确定性，见 known_limits",
+  "known_limits": [
+    "amp_bf16 前向下不是逐位确定：换环境重跑时 Top-1 不变，个别样本 topk 顺序会翻转，Top-5 与 macro-F1 在 1e-5 量级浮动。"
+  ],
+  "method": "classification/evaluate.py --run-dir <run>（与推理同一容器、同一环境）",
+  "validated_at": "2026-11-19T13:26:47.431903+00:00"
+}

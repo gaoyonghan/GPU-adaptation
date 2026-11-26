@@ -1,0 +1,52 @@
+--- original_inference.py
++++ inference/native/run_model.py
+@@ -1,3 +1,4 @@
++from imagenet_input import frozen_directory_index
+ #!/usr/bin/env python3
+ """Eight frozen classification protocols; no implicit weight/data downloads at inference."""
+ import argparse
+@@ -113,6 +114,9 @@
+ def prepare_dataset(kind):
+     """Extract only ImageNet val (~6GB), shared by native evaluators; other images stay in ZIPs."""
+     sources = dataset_sources(kind)
++    if kind == "imagenet" and not sources[0].is_file():
++        with locked(RUNTIME / "data/imagenet/.prepare.lock"):
++            return frozen_directory_index(sources[0], RUNTIME / "data/imagenet", MANIFEST["datasets"]["imagenet"], canonical, save)
+     identity = [{"path": str(p), "size": p.stat().st_size, "mtime_ns": p.stat().st_mtime_ns} for p in sources]
+     if kind == "plantvillage":
+         identity[-1]["sha256"] = digest(sources[-1])
+@@ -122,7 +126,24 @@
+         if marker.exists():
+             result = json.loads(marker.read_text())
+             if result["sources"] != identity:
+-                raise RuntimeError(f"Dataset sources changed; preserve existing cache and choose a new package: {cache}")
++                if (kind not in {"plantvillage", "synthraise"}
++                        or len(result["sources"]) != len(identity)
++                        or len(result["rows"]) != MANIFEST["datasets"][kind]["images"]
++                        or any(old["size"] != new["size"] for old, new in zip(result["sources"], identity))
++                        or kind == "plantvillage" and digest(sources[1]) != result["sources"][1]["sha256"]):
++                    raise RuntimeError(f"Dataset sources changed; preserve existing cache and choose a new package: {cache}")
++                archive_paths = {old["path"]: str(new) for old, new in zip(result["sources"], sources)}
++                with contextlib.ExitStack() as stack:
++                    archives = {old: stack.enter_context(zipfile.ZipFile(new))
++                                for old, new in archive_paths.items() if new.endswith(".zip")}
++                    if any(archives[row["archive"]].getinfo(row["member"]).CRC != row["crc32"]
++                           for row in result["rows"]):
++                        raise RuntimeError(f"{kind} evaluation images differ from the frozen cache")
++                result = {**result, "sources": identity,
++                          "rows": [{**row, "archive": archive_paths[row["archive"]]} for row in result["rows"]]}
++                result.pop("fingerprint")
++                result["fingerprint"] = canonical(result)
++                save(cache / "index.relocated.json", result)
+             # A source snapshot symlinks to the shared runtime: never depend on its output directory.
+             if kind == "imagenet" and result["folder"] != str(cache):
+                 previous = Path(result["folder"])
+@@ -384,6 +405,8 @@
+             model_root = check_model(spec)
+             data = prepare_dataset(spec["dataset"])
+             mapping = label_mapping(spec, data, model_root)
++            from classification_capture import snapshot_gt
++            snapshot_gt(output, select_rows(data, args.max_images), mapping)
+             fingerprint = canonical({"spec": spec, "versions": versions, "dataset": data["fingerprint"], "mapping": mapping,
+                                      "runner_sha256": digest(__file__), "timm_source": MANIFEST["timm_source"], "device": args.device})
+             if old and old.get("run_fingerprint") and old["run_fingerprint"] != fingerprint:

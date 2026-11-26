@@ -1,0 +1,134 @@
+{
+  "schema_version": 1,
+  "scope": [
+    71,
+    74,
+    84,
+    87,
+    88,
+    89,
+    91,
+    95
+  ],
+  "model_root": "__MODEL_ROOT__/weights",
+  "dataset_root": "__DATASET_ROOT__",
+  "imagenet_zip": "__DATASET_ROOT__/ImageNet/imagenet-object-localization-challenge.zip",
+  "result_root": "__MODEL_ROOT__/resources/runtime/assets/workspace/results/classification8_v1",
+  "datasets": {
+    "imagenet": {
+      "images": 50000,
+      "classes": 1000,
+      "split": "ILSVRC2012 val",
+      "mapping": "LOC_val_solution.csv synset -> timm ImageNetInfo canonical sorted synsets; HF labels exact verified"
+    }
+  },
+  "versions": {
+    "torch": "2.5.1+cu121",
+    "torchvision": "0.20.1+cu121",
+    "transformers": "4.50.0",
+    "timm": "1.0.15",
+    "numpy": "1.26.4",
+    "Pillow": "11.1.0",
+    "scipy": "1.12.0",
+    "scikit-learn": "1.5.2",
+    "onnxruntime": "1.20.1",
+    "safetensors": "0.5.3",
+    "huggingface-hub": "0.29.3"
+  },
+  "timm_source": {
+    "url": "https://raw.githubusercontent.com/huggingface/pytorch-image-models/v1.0.15/validate.py",
+    "sha256": "1b254648d0bff4655fb78d5a3923cd2faa79edf3407a06670f0a7416944658fb",
+    "version": "v1.0.15"
+  },
+  "models": [
+    {
+      "sequence": 88,
+      "model_id": "google/efficientnet-b3",
+      "weight_file": "pytorch_model.bin",
+      "files": {
+        "pytorch_model.bin": {
+          "size": 49475717,
+          "sha256": "d16416551981fdc160561ee54ef33d6664f2546b4244e289b12fddccd764d9ba",
+          "hf_revision": "130db5303a4beac0bd515b81620bb2ebbf06ea41"
+        },
+        "config.json": {
+          "size": 70190,
+          "sha256": "db1acfa8f5654813775ffb54c23d0962a3b963163490368948c008d3051b2e4c",
+          "hf_revision": "130db5303a4beac0bd515b81620bb2ebbf06ea41"
+        },
+        "README.md": {
+          "size": 2697,
+          "sha256": "6913557ceffe8a39749a1f30e9912d1debfa223ea558aa733ccd0e796423294f",
+          "hf_revision": "130db5303a4beac0bd515b81620bb2ebbf06ea41"
+        },
+        "preprocessor_config.json": {
+          "size": 495,
+          "sha256": "029b69b877081753afaa250a03a71c43bf484d8c2557469e7b7dc48949cf995b",
+          "hf_revision": "130db5303a4beac0bd515b81620bb2ebbf06ea41"
+        }
+      },
+      "config": {
+        "architectures": [
+          "EfficientNetForImageClassification"
+        ],
+        "image_size": 300,
+        "model_type": "efficientnet"
+      },
+      "preprocessor": {
+        "crop_size": {
+          "height": 289,
+          "width": 289
+        },
+        "do_center_crop": false,
+        "do_normalize": true,
+        "do_rescale": true,
+        "do_resize": true,
+        "image_mean": [
+          0.485,
+          0.456,
+          0.406
+        ],
+        "image_processor_type": "EfficientNetImageProcessor",
+        "image_std": [
+          0.47853944,
+          0.4732864,
+          0.47434163
+        ],
+        "include_top": true,
+        "resample": 0,
+        "rescale_factor": 0.00392156862745098,
+        "rescale_offset": false,
+        "size": {
+          "height": 300,
+          "width": 300
+        }
+      },
+      "model_key": "m88-efficientnet-b3",
+      "task_type": "image-classification",
+      "runner": "hf",
+      "dataset": "imagenet",
+      "dataset_relation": "original_exact",
+      "fidelity": "official_protocol_adapter",
+      "case_type": "special",
+      "special_tags": [
+        "framework_numeric_difference",
+        "label_mapping"
+      ],
+      "official_card": "https://huggingface.co/google/efficientnet-b3",
+      "official_reference": {
+        "metric": null,
+        "value": null,
+        "comparison": "manual_reference_required",
+        "notes": "仅列已确认参考行；运行完成不自动等同官方复现。"
+      },
+      "batch_size": 8,
+      "dtype": "float32",
+      "evaluation": "发布者 Transformers processor/model；项目逐图适配循环，scikit-learn 指标",
+      "known_differences": [
+        "未复建作者全部历史依赖，存在框架数值差异。",
+        "冒烟使用 10 图子集；全量使用完整所声明 split。"
+      ],
+      "protocol_notes": "完整沿用发布者处理器：300px、nearest、特殊 std、include_top；不自行改为常用 ImageNet 预处理。"
+    }
+  ]
+}

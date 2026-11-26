@@ -1,0 +1,1706 @@
+[
+  {
+    "id": "animedl_proxy",
+    "used_by": [
+      76
+    ],
+    "notes": [
+      "AnimeDL-2M test（prepared，剔除局部修补）\n真人1500＋AI1500；替代集，非官方可比"
+    ],
+    "uses": [
+      {
+        "sequence": 76,
+        "relation": null,
+        "split": null
+      }
+    ]
+  },
+  {
+    "id": "classification171_171",
+    "used_by": [
+      171
+    ],
+    "notes": [
+      [
+        "Local checkpoint and publisher inference components retained. Offline file paths, eval mode, batching, timing observation and reference scoring are external orchestration."
+      ]
+    ],
+    "uses": [
+      {
+        "sequence": 171,
+        "relation": "public_replacement",
+        "split": "publisher PreparedData/test"
+      }
+    ]
+  },
+  {
+    "id": "classification171_172",
+    "used_by": [
+      172
+    ],
+    "notes": [
+      [
+        "Model has 1677 collection classes, not 15 labels; same-source/train evaluation only.",
+        "Local checkpoint and publisher inference components retained. Offline file paths, eval mode, batching, timing observation and reference scoring are external orchestration."
+      ]
+    ],
+    "uses": [
+      {
+        "sequence": 172,
+        "relation": "original_protocol_incomplete",
+        "split": "published train (87547 images, not independent test)"
+      }
+    ]
+  },
+  {
+    "id": "classification171_173",
+    "used_by": [
+      173
+    ],
+    "notes": [
+      [
+        "Local checkpoint and publisher inference components retained. Offline file paths, eval mode, batching, timing observation and reference scoring are external orchestration."
+      ]
+    ],
+    "uses": [
+      {
+        "sequence": 173,
+        "relation": "public_replacement",
+        "split": "validation, one archive tree only (exclude duplicate images/images tree)"
+      }
+    ]
+  },
+  {
+    "id": "classification171_175",
+    "used_by": [
+      175
+    ],
+    "notes": [
+      [
+        "Four-class model evaluated only on its supported classes; do not claim full seven-class FER performance.",
+        "Local checkpoint and publisher inference components retained. Offline file paths, eval mode, batching, timing observation and reference scoring are external orchestration."
+      ]
+    ],
+    "uses": [
+      {
+        "sequence": 175,
+        "relation": "original_protocol_incomplete",
+        "split": "Jeneral test; four supported labels"
+      }
+    ]
+  },
+  {
+    "id": "classification171_176",
+    "used_by": [
+      176
+    ],
+    "notes": [
+      [
+        "Train/reference scoring; not a Kaggle leaderboard reproduction. Record binary log loss as reference.",
+        "Local checkpoint and publisher inference components retained. Offline file paths, eval mode, batching, timing observation and reference scoring are external orchestration."
+      ]
+    ],
+    "uses": [
+      {
+        "sequence": 176,
+        "relation": "public_replacement",
+        "split": "labelled competition train; test ground truth unavailable"
+      }
+    ]
+  },
+  {
+    "id": "classification171_177",
+    "used_by": [
+      177
+    ],
+    "notes": [
+      [
+        "Native publisher evaluator retained; historical author environment/complete reporting protocol not established, so exact_official is not claimed.",
+        "Native validator reads class metadata from train; train is a symlink to val, with split=val only and no training or resplitting.",
+        "Local checkpoint and publisher inference components retained. Offline file paths, eval mode, batching, timing observation and reference scoring are external orchestration."
+      ]
+    ],
+    "uses": [
+      {
+        "sequence": 177,
+        "relation": "original_exact",
+        "split": "FairFace 0.25 validation"
+      }
+    ]
+  },
+  {
+    "id": "classification171_178",
+    "used_by": [
+      178
+    ],
+    "notes": [
+      [
+        "Full-precision probabilities retained for metrics; publisher demo rounds probabilities to three decimals only for Gradio display. Display rounding is not used to rank classes.",
+        "Local checkpoint and publisher inference components retained. Offline file paths, eval mode, batching, timing observation and reference scoring are external orchestration."
+      ]
+    ],
+    "uses": [
+      {
+        "sequence": 178,
+        "relation": "public_replacement",
+        "split": "all published OAHEGA images; no independent split"
+      }
+    ]
+  },
+  {
+    "id": "classification171_179",
+    "used_by": [
+      179
+    ],
+    "notes": [
+      [
+        "Local checkpoint and publisher inference components retained. Offline file paths, eval mode, batching, timing observation and reference scoring are external orchestration."
+      ]
+    ],
+    "uses": [
+      {
+        "sequence": 179,
+        "relation": "original_exact",
+        "split": "ImageNet-1K validation"
+      }
+    ]
+  },
+  {
+    "id": "classification171_180",
+    "used_by": [
+      180
+    ],
+    "notes": [
+      [
+        "Full-precision probabilities retained for metrics; publisher demo rounds probabilities to three decimals only for Gradio display. Display rounding is not used to rank classes.",
+        "Local checkpoint and publisher inference components retained. Offline file paths, eval mode, batching, timing observation and reference scoring are external orchestration."
+      ]
+    ],
+    "uses": [
+      {
+        "sequence": 180,
+        "relation": "original_protocol_incomplete",
+        "split": "published Train shards; no independent test"
+      }
+    ]
+  },
+  {
+    "id": "classification171_181",
+    "used_by": [
+      181
+    ],
+    "notes": [
+      [
+        "Local checkpoint and publisher inference components retained. Offline file paths, eval mode, batching, timing observation and reference scoring are external orchestration."
+      ]
+    ],
+    "uses": [
+      {
+        "sequence": 181,
+        "relation": "public_replacement",
+        "split": "accepted core/test 5000 real + 5000 fake; seeded cluster sample"
+      }
+    ]
+  },
+  {
+    "id": "classification171_183",
+    "used_by": [
+      183
+    ],
+    "notes": [
+      [
+        "Full-precision probabilities retained for metrics; publisher demo rounds probabilities to three decimals only for Gradio display. Display rounding is not used to rank classes.",
+        "Local checkpoint and publisher inference components retained. Offline file paths, eval mode, batching, timing observation and reference scoring are external orchestration."
+      ]
+    ],
+    "uses": [
+      {
+        "sequence": 183,
+        "relation": "original_protocol_incomplete",
+        "split": "published train; no independent test"
+      }
+    ]
+  },
+  {
+    "id": "classification171_184",
+    "used_by": [
+      184
+    ],
+    "notes": [
+      [
+        "Native publisher evaluator retained; historical author environment/complete reporting protocol not established, so exact_official is not claimed.",
+        "Local checkpoint and publisher inference components retained. Offline file paths, eval mode, batching, timing observation and reference scoring are external orchestration."
+      ]
+    ],
+    "uses": [
+      {
+        "sequence": 184,
+        "relation": "original_exact",
+        "split": "ImageNet-1K validation"
+      }
+    ]
+  },
+  {
+    "id": "classification171_185",
+    "used_by": [
+      185
+    ],
+    "notes": [
+      [
+        "Full ViT state dict is published, no adapter_config or LoRA tensors; load original full checkpoint, no merging. Exclude nonmatching diseases rather than guess.",
+        "Local checkpoint and publisher inference components retained. Offline file paths, eval mode, batching, timing observation and reference scoring are external orchestration."
+      ]
+    ],
+    "uses": [
+      {
+        "sequence": 185,
+        "relation": "public_replacement",
+        "split": "exact-name supported crop/disease classes only"
+      }
+    ]
+  },
+  {
+    "id": "classification171_186",
+    "used_by": [
+      186
+    ],
+    "notes": [
+      [
+        "The available archive contains 98 images from the five supported classes listed by TestImages.txt; this is the frozen selected count.",
+        "Local checkpoint and publisher inference components retained. Offline file paths, eval mode, batching, timing observation and reference scoring are external orchestration."
+      ]
+    ],
+    "uses": [
+      {
+        "sequence": 186,
+        "relation": "public_replacement",
+        "split": "MIT Indoor67 TestImages; five supported room classes"
+      }
+    ]
+  },
+  {
+    "id": "classification171_187",
+    "used_by": [
+      187
+    ],
+    "notes": [
+      [
+        "Local checkpoint and publisher inference components retained. Offline file paths, eval mode, batching, timing observation and reference scoring are external orchestration."
+      ]
+    ],
+    "uses": [
+      {
+        "sequence": 187,
+        "relation": "public_replacement",
+        "split": "accepted KartaView 1376, London/New York/Tokyo"
+      }
+    ]
+  },
+  {
+    "id": "classification171_188",
+    "used_by": [
+      188
+    ],
+    "notes": [
+      [
+        "Local checkpoint and publisher inference components retained. Offline file paths, eval mode, batching, timing observation and reference scoring are external orchestration."
+      ]
+    ],
+    "uses": [
+      {
+        "sequence": 188,
+        "relation": "original_exact",
+        "split": "ImageNet-1K validation"
+      }
+    ]
+  },
+  {
+    "id": "classification171_189",
+    "used_by": [
+      189
+    ],
+    "notes": [
+      [
+        "Broader dataset styles are not a verified bijection to craftsman bungalow/tudor cottage subclasses. Predictions/timing only until taxonomy is resolved.",
+        "Local checkpoint and publisher inference components retained. Offline file paths, eval mode, batching, timing observation and reference scoring are external orchestration."
+      ]
+    ],
+    "uses": [
+      {
+        "sequence": 189,
+        "relation": "public_replacement",
+        "split": "three previously selected candidate styles, one archive tree"
+      }
+    ]
+  },
+  {
+    "id": "classification171_190",
+    "used_by": [
+      190
+    ],
+    "notes": [
+      [
+        "Age bins differ (FairFace 70+ vs three model bins, other boundary definitions undocumented). Predictions/timing only; no fabricated accuracy.",
+        "Local checkpoint and publisher inference components retained. Offline file paths, eval mode, batching, timing observation and reference scoring are external orchestration."
+      ]
+    ],
+    "uses": [
+      {
+        "sequence": 190,
+        "relation": "public_replacement",
+        "split": "FairFace 0.25 validation"
+      }
+    ]
+  },
+  {
+    "id": "classification171_191",
+    "used_by": [
+      191
+    ],
+    "notes": [
+      [
+        "Keep full model output head. Not an independent original model test set.",
+        "Local checkpoint and publisher inference components retained. Offline file paths, eval mode, batching, timing observation and reference scoring are external orchestration."
+      ]
+    ],
+    "uses": [
+      {
+        "sequence": 191,
+        "relation": "public_replacement",
+        "split": "ImageNet-1K val overlap 999 classes"
+      }
+    ]
+  },
+  {
+    "id": "classification171_192",
+    "used_by": [
+      192
+    ],
+    "notes": [
+      [
+        "Keep full model output head. Not an independent original model test set.",
+        "800 records, 793 unique hashes; original within-class duplicates retained; four conflicting files excluded.",
+        "Local checkpoint and publisher inference components retained. Offline file paths, eval mode, batching, timing observation and reference scoring are external orchestration."
+      ]
+    ],
+    "uses": [
+      {
+        "sequence": 192,
+        "relation": "public_replacement",
+        "split": "accepted external reference set"
+      }
+    ]
+  },
+  {
+    "id": "classification171_193",
+    "used_by": [
+      193
+    ],
+    "notes": [
+      [
+        "Native publisher evaluator retained; historical author environment/complete reporting protocol not established, so exact_official is not claimed.",
+        "Local checkpoint and publisher inference components retained. Offline file paths, eval mode, batching, timing observation and reference scoring are external orchestration."
+      ]
+    ],
+    "uses": [
+      {
+        "sequence": 193,
+        "relation": "original_exact",
+        "split": "ImageNet-1K validation"
+      }
+    ]
+  },
+  {
+    "id": "classification171_194",
+    "used_by": [
+      194
+    ],
+    "notes": [
+      [
+        "Local checkpoint and publisher inference components retained. Offline file paths, eval mode, batching, timing observation and reference scoring are external orchestration."
+      ]
+    ],
+    "uses": [
+      {
+        "sequence": 194,
+        "relation": "original_protocol_incomplete",
+        "split": "EuroSAT demo entire train, 27000; author held-out split unknown"
+      }
+    ]
+  },
+  {
+    "id": "classification171_195",
+    "used_by": [
+      195
+    ],
+    "notes": [
+      [
+        "Local checkpoint and publisher inference components retained. Offline file paths, eval mode, batching, timing observation and reference scoring are external orchestration."
+      ]
+    ],
+    "uses": [
+      {
+        "sequence": 195,
+        "relation": "original_exact",
+        "split": "CIFAR100 test, 10000"
+      }
+    ]
+  },
+  {
+    "id": "classification171_196",
+    "used_by": [
+      196
+    ],
+    "notes": [
+      [
+        "Local checkpoint and publisher inference components retained. Offline file paths, eval mode, batching, timing observation and reference scoring are external orchestration."
+      ]
+    ],
+    "uses": [
+      {
+        "sequence": 196,
+        "relation": "original_exact",
+        "split": "ImageNet-1K validation"
+      }
+    ]
+  },
+  {
+    "id": "classification171_197",
+    "used_by": [
+      197
+    ],
+    "notes": [
+      [
+        "Local checkpoint and publisher inference components retained. Offline file paths, eval mode, batching, timing observation and reference scoring are external orchestration."
+      ]
+    ],
+    "uses": [
+      {
+        "sequence": 197,
+        "relation": "public_replacement",
+        "split": "standard Fashion-MNIST test, not quality_drift variant"
+      }
+    ]
+  },
+  {
+    "id": "classification171_198",
+    "used_by": [
+      198
+    ],
+    "notes": [
+      [
+        "Local checkpoint and publisher inference components retained. Offline file paths, eval mode, batching, timing observation and reference scoring are external orchestration."
+      ]
+    ],
+    "uses": [
+      {
+        "sequence": 198,
+        "relation": "original_exact",
+        "split": "ImageNet-1K validation"
+      }
+    ]
+  },
+  {
+    "id": "classification171_199",
+    "used_by": [
+      199
+    ],
+    "notes": [
+      [
+        "Keep full model output head. Not an independent original model test set.",
+        "Native publisher evaluator retained; historical author environment/complete reporting protocol not established, so exact_official is not claimed.",
+        "Local checkpoint and publisher inference components retained. Offline file paths, eval mode, batching, timing observation and reference scoring are external orchestration."
+      ]
+    ],
+    "uses": [
+      {
+        "sequence": 199,
+        "relation": "public_replacement",
+        "split": "ImageNet-1K val overlap 999 classes"
+      }
+    ]
+  },
+  {
+    "id": "classification171_200",
+    "used_by": [
+      200
+    ],
+    "notes": [
+      [
+        "Keep full model output head. Not an independent original model test set.",
+        "Native publisher evaluator retained; historical author environment/complete reporting protocol not established, so exact_official is not claimed.",
+        "Local checkpoint and publisher inference components retained. Offline file paths, eval mode, batching, timing observation and reference scoring are external orchestration."
+      ]
+    ],
+    "uses": [
+      {
+        "sequence": 200,
+        "relation": "public_replacement",
+        "split": "ImageNet-1K val overlap 999 classes"
+      }
+    ]
+  },
+  {
+    "id": "coco_wholebody_val",
+    "used_by": [
+      32,
+      35,
+      55
+    ],
+    "notes": [
+      "COCO-WholeBody v1.0 · val2017 · 5000 图\n非官方评测集：公开替代",
+      "COCO-WholeBody v1.0 · validation · 5000 图\n非官方评测集：公开替代"
+    ],
+    "uses": [
+      {
+        "sequence": 32,
+        "relation": "public_replacement",
+        "split": "validation"
+      },
+      {
+        "sequence": 35,
+        "relation": "public_replacement",
+        "split": "validation"
+      },
+      {
+        "sequence": 55,
+        "relation": "public_replacement",
+        "split": "validation"
+      }
+    ]
+  },
+  {
+    "id": "coco2017_val",
+    "used_by": [
+      1,
+      4,
+      5,
+      7,
+      11,
+      13,
+      14,
+      20,
+      21,
+      29,
+      36,
+      40,
+      43,
+      44,
+      49,
+      50,
+      51,
+      53,
+      56,
+      57,
+      59,
+      62,
+      63,
+      66,
+      68
+    ],
+    "notes": [
+      "COCO 2017 Detection · val2017 · 5000 图\n官方原集（不代表全协议已对齐）",
+      "COCO 2017 · val2017 · 5000 图\n官方原集（不代表全协议已对齐）",
+      "COCO2017 · val · 5000 图\n官方原集（不代表全协议已对齐）"
+    ],
+    "uses": [
+      {
+        "sequence": 1,
+        "relation": "original_exact",
+        "split": "val2017"
+      },
+      {
+        "sequence": 4,
+        "relation": "original_exact",
+        "split": "val2017"
+      },
+      {
+        "sequence": 5,
+        "relation": "original_exact",
+        "split": "val2017"
+      },
+      {
+        "sequence": 7,
+        "relation": "original_exact",
+        "split": "val2017"
+      },
+      {
+        "sequence": 11,
+        "relation": "original_exact",
+        "split": "val2017"
+      },
+      {
+        "sequence": 13,
+        "relation": "original_exact",
+        "split": "val2017"
+      },
+      {
+        "sequence": 14,
+        "relation": "original_exact",
+        "split": "val2017"
+      },
+      {
+        "sequence": 20,
+        "relation": "original_exact",
+        "split": "val2017"
+      },
+      {
+        "sequence": 21,
+        "relation": "original_exact",
+        "split": "val2017"
+      },
+      {
+        "sequence": 29,
+        "relation": "original_exact",
+        "split": "val2017"
+      },
+      {
+        "sequence": 36,
+        "relation": "original_exact",
+        "split": "val2017"
+      },
+      {
+        "sequence": 40,
+        "relation": "original_exact",
+        "split": "val2017"
+      },
+      {
+        "sequence": 43,
+        "relation": "original_exact",
+        "split": "val2017"
+      },
+      {
+        "sequence": 44,
+        "relation": "original_exact",
+        "split": "val2017"
+      },
+      {
+        "sequence": 49,
+        "relation": "original_exact",
+        "split": "val2017"
+      },
+      {
+        "sequence": 50,
+        "relation": "original_exact",
+        "split": "val2017"
+      },
+      {
+        "sequence": 51,
+        "relation": "original_exact",
+        "split": "val2017"
+      },
+      {
+        "sequence": 53,
+        "relation": "original_exact",
+        "split": "val2017"
+      },
+      {
+        "sequence": 56,
+        "relation": "original_exact",
+        "split": "val2017"
+      },
+      {
+        "sequence": 57,
+        "relation": "original_exact",
+        "split": "val2017"
+      },
+      {
+        "sequence": 59,
+        "relation": "original_exact",
+        "split": "val2017"
+      },
+      {
+        "sequence": 62,
+        "relation": "original_exact",
+        "split": "val2017"
+      },
+      {
+        "sequence": 63,
+        "relation": "official_protocol_adapter",
+        "split": null
+      },
+      {
+        "sequence": 66,
+        "relation": "official_protocol_adapter",
+        "split": null
+      },
+      {
+        "sequence": 68,
+        "relation": "reference_baseline",
+        "split": null
+      }
+    ]
+  },
+  {
+    "id": "construction_safety_valid",
+    "used_by": [
+      60
+    ],
+    "notes": [
+      "Construction Site Safety v1 · validation · 57 图\n官方原集（不代表全协议已对齐）"
+    ],
+    "uses": [
+      {
+        "sequence": 60,
+        "relation": "original_exact",
+        "split": "validation"
+      }
+    ]
+  },
+  {
+    "id": "ctdar_tracka_test",
+    "used_by": [
+      17
+    ],
+    "notes": [
+      "ICDAR2019 cTDaR Track A · test · 439 图\n同源数据：官方评测划分待核实"
+    ],
+    "uses": [
+      {
+        "sequence": 17,
+        "relation": "original_protocol_incomplete",
+        "split": "official test"
+      }
+    ]
+  },
+  {
+    "id": "dfire_replacement",
+    "used_by": [
+      46
+    ],
+    "notes": [
+      "ISFire-4 · test · 703 图\n非官方评测集：公开替代"
+    ],
+    "uses": [
+      {
+        "sequence": 46,
+        "relation": "public_replacement",
+        "split": "test"
+      }
+    ]
+  },
+  {
+    "id": "doclaynet_test",
+    "used_by": [
+      42
+    ],
+    "notes": [
+      "DocLayNet · test · 4999 页\n同源数据：官方评测划分待核实"
+    ],
+    "uses": [
+      {
+        "sequence": 42,
+        "relation": "original_protocol_incomplete",
+        "split": "official test used as same-source candidate"
+      }
+    ]
+  },
+  {
+    "id": "doclaynet_val_test",
+    "used_by": [
+      19
+    ],
+    "notes": [
+      "DocLayNet 原比赛集 · 498 页\n官方原集（不代表全协议已对齐）"
+    ],
+    "uses": [
+      {
+        "sequence": 19,
+        "relation": "original_protocol_incomplete",
+        "split": "val + test"
+      }
+    ]
+  },
+  {
+    "id": "face_age",
+    "used_by": [
+      99
+    ],
+    "notes": [
+      "计划：Face-Age-10K（来源数据）\n未评测，官方对应关系待核实"
+    ],
+    "uses": [
+      {
+        "sequence": 99,
+        "relation": null,
+        "split": null
+      }
+    ]
+  },
+  {
+    "id": "face_shape",
+    "used_by": [
+      92
+    ],
+    "notes": [
+      "Kaggle Face Shape Dataset testing_set 1000 图，公开替代集；已运行，原始官方验证图未知，所选结果 52.3% 与工作簿 52.5% 待核对。"
+    ],
+    "uses": [
+      {
+        "sequence": 92,
+        "relation": "public_replacement",
+        "split": "testing_set"
+      }
+    ]
+  },
+  {
+    "id": "fashion_age_proxy",
+    "used_by": [
+      90
+    ],
+    "notes": [
+      "PA-100K test（监控图，四个人物类别各10张）\nImageNet-1k val（无人物服饰10张，pack）\n替代集，非官方可比"
+    ],
+    "uses": [
+      {
+        "sequence": 90,
+        "relation": null,
+        "split": null
+      }
+    ]
+  },
+  {
+    "id": "fashion_mixed_candidate",
+    "used_by": [
+      30
+    ],
+    "notes": [
+      "作者七类服装 test · 5544 图\n官方原集（不代表全协议已对齐）"
+    ],
+    "uses": [
+      {
+        "sequence": 30,
+        "relation": "public_replacement",
+        "split": "candidate validation"
+      }
+    ]
+  },
+  {
+    "id": "fashionpedia_val",
+    "used_by": [
+      10
+    ],
+    "notes": [
+      "Fashionpedia · validation · 1158 图\n官方原集（不代表全协议已对齐）"
+    ],
+    "uses": [
+      {
+        "sequence": 10,
+        "relation": "original_exact",
+        "split": "validation"
+      }
+    ]
+  },
+  {
+    "id": "fer2013",
+    "used_by": [
+      75,
+      81
+    ],
+    "notes": [
+      "计划：FERPlus / FER2013\n未评测，官方对应关系待核实",
+      "FER2013 PrivateTest 3589 图替代未明确的组合评测划分；结果为 provisional，标签映射尚未验证。"
+    ],
+    "uses": [
+      {
+        "sequence": 75,
+        "relation": null,
+        "split": null
+      },
+      {
+        "sequence": 81,
+        "relation": "public_replacement",
+        "split": "PrivateTest"
+      }
+    ]
+  },
+  {
+    "id": "flir_adas_thermal_eval",
+    "used_by": [
+      47
+    ],
+    "notes": [
+      "FLIR ADAS Thermal six-class subset · validation · 1144 图\n非官方评测集：公开替代"
+    ],
+    "uses": [
+      {
+        "sequence": 47,
+        "relation": "public_replacement",
+        "split": "validation"
+      }
+    ]
+  },
+  {
+    "id": "imagein",
+    "used_by": [
+      83
+    ],
+    "notes": [
+      "计划：ImageIN / ImageIn_annotations（来源数据）\n未评测，官方对应关系待核实"
+    ],
+    "uses": [
+      {
+        "sequence": 83,
+        "relation": null,
+        "split": null
+      }
+    ]
+  },
+  {
+    "id": "imagenet",
+    "used_by": [
+      74,
+      84,
+      87,
+      88,
+      91
+    ],
+    "notes": [
+      "ImageNet-1K · val · 50000 图\n官方原集（不代表全协议已对齐）"
+    ],
+    "uses": [
+      {
+        "sequence": 74,
+        "relation": "original_exact",
+        "split": null
+      },
+      {
+        "sequence": 84,
+        "relation": "original_exact",
+        "split": null
+      },
+      {
+        "sequence": 87,
+        "relation": "original_exact",
+        "split": null
+      },
+      {
+        "sequence": 88,
+        "relation": "original_exact",
+        "split": null
+      },
+      {
+        "sequence": 91,
+        "relation": "original_exact",
+        "split": null
+      }
+    ]
+  },
+  {
+    "id": "imagenet1k_to22k",
+    "used_by": [
+      85,
+      86,
+      100
+    ],
+    "notes": [
+      "ImageNet-1k val → ImageNet-22k\n999类×5张＝4995张；替代集，非官方可比"
+    ],
+    "uses": [
+      {
+        "sequence": 85,
+        "relation": null,
+        "split": null
+      },
+      {
+        "sequence": 86,
+        "relation": null,
+        "split": null
+      },
+      {
+        "sequence": 100,
+        "relation": null,
+        "split": null
+      }
+    ]
+  },
+  {
+    "id": "lapa_test",
+    "used_by": [
+      8
+    ],
+    "notes": [
+      "最终选定结果使用 LaPa test 2000 图；非官方替代集。工作簿 83.50% 与该结果不一致，仍需核对。"
+    ],
+    "uses": [
+      {
+        "sequence": 8,
+        "relation": "public_replacement",
+        "split": "test"
+      }
+    ]
+  },
+  {
+    "id": "license_plate_v1_valid",
+    "used_by": [
+      18,
+      45
+    ],
+    "notes": [
+      "Vehicle Registration Plates v1 · validation · 1765 图\n官方原集（不代表全协议已对齐）"
+    ],
+    "uses": [
+      {
+        "sequence": 18,
+        "relation": "original_exact",
+        "split": "validation"
+      },
+      {
+        "sequence": 45,
+        "relation": "original_exact",
+        "split": "validation"
+      }
+    ]
+  },
+  {
+    "id": "lvis_v1_val",
+    "used_by": [
+      64,
+      65,
+      67,
+      69,
+      70
+    ],
+    "notes": [
+      "LVIS v1 · val · 19809 图\n官方原集（不代表全协议已对齐）"
+    ],
+    "uses": [
+      {
+        "sequence": 64,
+        "relation": "official_protocol_adapter",
+        "split": null
+      },
+      {
+        "sequence": 65,
+        "relation": "official_protocol_adapter",
+        "split": null
+      },
+      {
+        "sequence": 67,
+        "relation": "official_protocol_adapter",
+        "split": null
+      },
+      {
+        "sequence": 69,
+        "relation": "official_protocol_adapter",
+        "split": null
+      },
+      {
+        "sequence": 70,
+        "relation": "official_protocol_adapter",
+        "split": null
+      }
+    ]
+  },
+  {
+    "id": "m072_dataset",
+    "used_by": [
+      72
+    ],
+    "notes": [
+      "Synthbuster DALL·E3/SDXL + RAISE · 各300，共900图\n非官方评测集：公开替代"
+    ],
+    "uses": [
+      {
+        "sequence": 72,
+        "relation": null,
+        "split": null
+      }
+    ]
+  },
+  {
+    "id": "m073_dataset",
+    "used_by": [
+      73
+    ],
+    "notes": [
+      "计划：ImageNet-1k / ILSVRC 2012\n未评测，官方对应关系待核实"
+    ],
+    "uses": [
+      {
+        "sequence": 73,
+        "relation": null,
+        "split": null
+      }
+    ]
+  },
+  {
+    "id": "m082_dataset",
+    "used_by": [
+      82
+    ],
+    "notes": [
+      "计划：LSPD（分类评测）\n未评测，官方对应关系待核实"
+    ],
+    "uses": [
+      {
+        "sequence": 82,
+        "relation": null,
+        "split": null
+      }
+    ]
+  },
+  {
+    "id": "m093_dataset",
+    "used_by": [
+      93
+    ],
+    "notes": [
+      "COCO2017 val · 5000图 + 25000字幕\n官方原集（不代表全协议已对齐）"
+    ],
+    "uses": [
+      {
+        "sequence": 93,
+        "relation": null,
+        "split": null
+      }
+    ]
+  },
+  {
+    "id": "m174_dataset",
+    "used_by": [
+      174
+    ],
+    "notes": [
+      []
+    ],
+    "uses": [
+      {
+        "sequence": 174,
+        "relation": "public_replacement",
+        "split": null
+      }
+    ]
+  },
+  {
+    "id": "m182_dataset",
+    "used_by": [
+      182
+    ],
+    "notes": [
+      []
+    ],
+    "uses": [
+      {
+        "sequence": 182,
+        "relation": null,
+        "split": null
+      }
+    ]
+  },
+  {
+    "id": "nemotron_public_composite",
+    "used_by": [
+      22
+    ],
+    "notes": [
+      "DocLayNet test4999 + InfoDet test432\n非官方评测集：公开替代"
+    ],
+    "uses": [
+      {
+        "sequence": 22,
+        "relation": "public_replacement",
+        "split": "composite public test"
+      }
+    ]
+  },
+  {
+    "id": "omnidocbench_eval",
+    "used_by": [
+      38,
+      39
+    ],
+    "notes": [
+      "OmniDocBench · 1651 页\n非官方评测集：公开替代"
+    ],
+    "uses": [
+      {
+        "sequence": 38,
+        "relation": "public_replacement",
+        "split": "evaluation"
+      },
+      {
+        "sequence": 39,
+        "relation": "public_replacement",
+        "split": "evaluation"
+      }
+    ]
+  },
+  {
+    "id": "omnidocbench_layout",
+    "used_by": [
+      41
+    ],
+    "notes": [
+      "general6、jiaocai、paper、report 分支使用 OmniDocBench 1651 页公开替代集。"
+    ],
+    "uses": [
+      {
+        "sequence": 41,
+        "relation": "public_replacement",
+        "split": "local 1651-page snapshot"
+      }
+    ]
+  },
+  {
+    "id": "omnidocbench_text_seg",
+    "used_by": [
+      8
+    ],
+    "notes": [
+      "text_seg 分支使用 OmniDocBench 1651 页公开替代集。"
+    ],
+    "uses": [
+      {
+        "sequence": 8,
+        "relation": "public_replacement",
+        "split": "local 1651-page snapshot"
+      }
+    ]
+  },
+  {
+    "id": "oxford_pets",
+    "used_by": [
+      77,
+      78,
+      79,
+      80,
+      96,
+      97,
+      98
+    ],
+    "notes": [
+      "Oxford-IIIT Pet · test · 3669 图\n非官方评测集：公开替代"
+    ],
+    "uses": [
+      {
+        "sequence": 77,
+        "relation": "public_replacement",
+        "split": null
+      },
+      {
+        "sequence": 78,
+        "relation": "public_replacement",
+        "split": null
+      },
+      {
+        "sequence": 79,
+        "relation": "public_replacement",
+        "split": null
+      },
+      {
+        "sequence": 80,
+        "relation": "public_replacement",
+        "split": null
+      },
+      {
+        "sequence": 96,
+        "relation": "public_replacement",
+        "split": null
+      },
+      {
+        "sequence": 97,
+        "relation": "public_replacement",
+        "split": null
+      },
+      {
+        "sequence": 98,
+        "relation": "public_replacement",
+        "split": null
+      }
+    ]
+  },
+  {
+    "id": "plantdoc_test",
+    "used_by": [
+      34
+    ],
+    "notes": [
+      "PlantDoc Object Detection · test · 237 图\n非官方评测集：公开替代"
+    ],
+    "uses": [
+      {
+        "sequence": 34,
+        "relation": "public_replacement",
+        "split": "test"
+      }
+    ]
+  },
+  {
+    "id": "plantvillage",
+    "used_by": [
+      71,
+      89
+    ],
+    "notes": [
+      "PlantVillage color_test · 10709 图\n非官方评测集：公开替代"
+    ],
+    "uses": [
+      {
+        "sequence": 71,
+        "relation": "public_replacement",
+        "split": null
+      },
+      {
+        "sequence": 89,
+        "relation": "public_replacement",
+        "split": null
+      }
+    ]
+  },
+  {
+    "id": "pmc_chartinfo_eval",
+    "used_by": [
+      48
+    ],
+    "notes": [
+      "CACHED / PMC Chart · 原 val · 560 图\n官方原集（不代表全协议已对齐）"
+    ],
+    "uses": [
+      {
+        "sequence": 48,
+        "relation": "original_exact",
+        "split": "test"
+      }
+    ]
+  },
+  {
+    "id": "ppe_v7_valid",
+    "used_by": [
+      61
+    ],
+    "notes": [
+      "Personal Protective Equipment v7 · validation · 3570 图\n官方原集（不代表全协议已对齐）"
+    ],
+    "uses": [
+      {
+        "sequence": 61,
+        "relation": "original_exact",
+        "split": "validation"
+      }
+    ]
+  },
+  {
+    "id": "publaynet_val",
+    "used_by": [
+      41
+    ],
+    "notes": [
+      "PubLayNet 分支使用 validation 11245 图；同源原数据，官方协议未完全核实。"
+    ],
+    "uses": [
+      {
+        "sequence": 41,
+        "relation": "original_protocol_incomplete",
+        "split": "validation"
+      }
+    ]
+  },
+  {
+    "id": "pubtables_detection_test",
+    "used_by": [
+      2
+    ],
+    "notes": [
+      "PubTables-1M Detection · official test · 57125 图\n官方原集（不代表全协议已对齐）"
+    ],
+    "uses": [
+      {
+        "sequence": 2,
+        "relation": "original_exact",
+        "split": "official test"
+      }
+    ]
+  },
+  {
+    "id": "pubtables_structure_test",
+    "used_by": [
+      6,
+      15,
+      37
+    ],
+    "notes": [
+      "PubTables-1M Structure · test · 93834 表\n官方原集（不代表全协议已对齐）",
+      "PubTables-1M test 固定子集 · 1000 表\n非官方评测集：公开替代"
+    ],
+    "uses": [
+      {
+        "sequence": 6,
+        "relation": "original_exact",
+        "split": "official test"
+      },
+      {
+        "sequence": 15,
+        "relation": "original_exact",
+        "split": "official test"
+      },
+      {
+        "sequence": 37,
+        "relation": "original_exact",
+        "split": "official test"
+      }
+    ]
+  },
+  {
+    "id": "roboflow_licenseplates_v11_test",
+    "used_by": [
+      33
+    ],
+    "notes": [
+      "License Plate Recognition v11 · test · 1020 图\n官方原集（不代表全协议已对齐）"
+    ],
+    "uses": [
+      {
+        "sequence": 33,
+        "relation": "original_exact",
+        "split": "test"
+      }
+    ]
+  },
+  {
+    "id": "roboflow_licenseplates_v2_valid",
+    "used_by": [
+      28
+    ],
+    "notes": [
+      "License Plates Recognition v2 · validation · 350 图\n非官方评测集：公开替代"
+    ],
+    "uses": [
+      {
+        "sequence": 28,
+        "relation": "public_replacement",
+        "split": "validation"
+      }
+    ]
+  },
+  {
+    "id": "signature_test",
+    "used_by": [
+      16
+    ],
+    "notes": [
+      "Signature Detection · test · 419 图\n官方原集（不代表全协议已对齐）"
+    ],
+    "uses": [
+      {
+        "sequence": 16,
+        "relation": "original_exact",
+        "split": "test"
+      }
+    ]
+  },
+  {
+    "id": "sku110k_test",
+    "used_by": [
+      54
+    ],
+    "notes": [
+      "SKU-110K · test · 2936 图\n非官方评测集：公开替代"
+    ],
+    "uses": [
+      {
+        "sequence": 54,
+        "relation": "public_replacement",
+        "split": "test"
+      }
+    ]
+  },
+  {
+    "id": "smoke_v4_valid",
+    "used_by": [
+      58
+    ],
+    "notes": [
+      "Smoke100 v4 · validation · 4322 图\n同源数据：官方评测划分待核实"
+    ],
+    "uses": [
+      {
+        "sequence": 58,
+        "relation": "original_protocol_incomplete",
+        "split": "validation"
+      }
+    ]
+  },
+  {
+    "id": "stock_future_build_chart",
+    "used_by": [
+      9
+    ],
+    "notes": [
+      "Roboflow build_chart v1 public replacement · test · 249 图\n非官方评测集：公开替代"
+    ],
+    "uses": [
+      {
+        "sequence": 9,
+        "relation": "public_replacement",
+        "split": "test"
+      }
+    ]
+  },
+  {
+    "id": "stock_pxex9_eval_clean",
+    "used_by": [
+      3
+    ],
+    "notes": [
+      "Stock stock-pxex9 cleaned public replacement · cleaned test · 159 图\n非官方评测集：公开替代"
+    ],
+    "uses": [
+      {
+        "sequence": 3,
+        "relation": "public_replacement",
+        "split": "cleaned test"
+      }
+    ]
+  },
+  {
+    "id": "synthraise",
+    "used_by": [
+      95
+    ],
+    "notes": [
+      "Synthbuster 9×300 + RAISE300 · 3000 图\n非官方评测集：公开替代/原集在审核阶段"
+    ],
+    "uses": [
+      {
+        "sequence": 95,
+        "relation": "public_replacement",
+        "split": null
+      }
+    ]
+  },
+  {
+    "id": "table_extraction_v2_valid",
+    "used_by": [
+      24,
+      52
+    ],
+    "notes": [
+      "Table Extraction PDF v2 · validation · 70 图\n官方原集（不代表全协议已对齐）"
+    ],
+    "uses": [
+      {
+        "sequence": 24,
+        "relation": "original_exact",
+        "split": "validation"
+      },
+      {
+        "sequence": 52,
+        "relation": "original_exact",
+        "split": "validation"
+      }
+    ]
+  },
+  {
+    "id": "tablebordernet_test",
+    "used_by": [
+      12
+    ],
+    "notes": [
+      "最终选定结果使用 TableBorderNet 同源 test 34 图；官方评测划分与工作簿 96.20% 数值均待核实。"
+    ],
+    "uses": [
+      {
+        "sequence": 12,
+        "relation": "original_protocol_incomplete",
+        "split": "test"
+      }
+    ]
+  },
+  {
+    "id": "unavailable",
+    "used_by": [
+      31
+    ],
+    "notes": [
+      "计划：暂不指定公开替代；建议合规人工构建脱敏金标集，或移出横向排名\n未评测，官方对应关系待核实"
+    ],
+    "uses": [
+      {
+        "sequence": 31,
+        "relation": "unavailable",
+        "split": null
+      }
+    ]
+  },
+  {
+    "id": "violence",
+    "used_by": [
+      94
+    ],
+    "notes": [
+      "计划：Real Life Violence Situations Dataset（来源视频）\n未评测，官方对应关系待核实"
+    ],
+    "uses": [
+      {
+        "sequence": 94,
+        "relation": null,
+        "split": null
+      }
+    ]
+  },
+  {
+    "id": "webclick_test",
+    "used_by": [
+      25
+    ],
+    "notes": [
+      "WebClick · test · 1639 图\n官方原集（不代表全协议已对齐）"
+    ],
+    "uses": [
+      {
+        "sequence": 25,
+        "relation": "original_exact",
+        "split": "test"
+      }
+    ]
+  },
+  {
+    "id": "widerface_val",
+    "used_by": [
+      26
+    ],
+    "notes": [
+      "WIDER FACE · val · 3226 图\n官方原集（不代表全协议已对齐）"
+    ],
+    "uses": [
+      {
+        "sequence": 26,
+        "relation": "original_exact",
+        "split": "validation easy/medium/hard"
+      }
+    ]
+  },
+  {
+    "id": "wilddet3d_val",
+    "used_by": [
+      27
+    ],
+    "notes": [
+      "计划：WildDet3D-Bench\n未评测，官方对应关系待核实"
+    ],
+    "uses": [
+      {
+        "sequence": 27,
+        "relation": "original_exact",
+        "split": "official validation"
+      }
+    ]
+  },
+  {
+    "id": "yoloe_lvis_minival",
+    "used_by": [
+      23
+    ],
+    "notes": [
+      "LVIS v1 minival · 4809 图\n官方原集（不代表全协议已对齐）"
+    ],
+    "uses": [
+      {
+        "sequence": 23,
+        "relation": "original_exact",
+        "split": "author minival"
+      }
+    ]
+  }
+]

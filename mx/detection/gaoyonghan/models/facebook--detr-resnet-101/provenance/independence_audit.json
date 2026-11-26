@@ -1,0 +1,27 @@
+{
+  "sequence": 11,
+  "model_id": "facebook/detr-resnet-101",
+  "source_archive_hash_matches": true,
+  "source_archive_sha256": "f2fb744cfeffd526f9088df0d3ee7e4b17ce65eeada64030fe37deb96dd485dc",
+  "prepared_entry_source_sha256": "dab75348093e37d770c4e67cfa3fbf008320b9a474a780c2a760fcaa412ab912",
+  "local_entry_sha256": "619a3ae6dc9de62d344b976e6184057d6b6cd1eac7f229e0c5f4b53a34f1c322",
+  "local_entry": "inference/native/run_model.py",
+  "central_dispatch_in_entry": false,
+  "unexpected_external_links": [],
+  "declared_dataset_links": [
+    {
+      "path": "resources/runtime/assets/workspace/official_sources/object_detection/WildDet3D/data/in_the_wild",
+      "target": "/data2/gaoyonghan/gpu/dataset/wilddet3d_val"
+    }
+  ],
+  "broken_links": [],
+  "path_template_count": 366,
+  "state": "entrypoint_verified_full_run_pending",
+  "validation": {
+    "returncode": 0,
+    "python": "/home/ubuntu/gaoyonghan/miniconda3/envs/object-detection-hf-v2/bin/python",
+    "checked_at": "2026-11-10T15:37:45.012047+08:00",
+    "scope": "native help/import/path check only; not full inference"
+  },
+  "smoke_verification": null
+}

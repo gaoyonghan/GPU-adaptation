@@ -1,0 +1,231 @@
+{
+  "generated_at": "2026-09-05T10:58:31.409026+00:00",
+  "total_detection_models": 62,
+  "existing_green_queue": 37,
+  "current_scope_unique_models": 25,
+  "initial_primary_blocker_counts": {
+    "旧替代集类别不全，需核对任务覆盖": 4,
+    "私有数据且缺任务匹配的公开金标": 2,
+    "原协议/划分不明，现有数据可做参考评测": 8,
+    "数据已有，缺任务适配或多权重覆盖": 8,
+    "仅下载了说明/发布链接，实际权重缺失": 2,
+    "数据下载未完成，当前目录为空": 1
+  },
+  "current_state_counts": {
+    "complete": 21,
+    "partial_complete": 3,
+    "blocked": 1
+  },
+  "counting_rule": "Unique model IDs; all required tasks must have complete frozen benchmark metrics. PubTables means the model-blind 1000-image benchmark, not the original 93834-image test. Invalid cmarkea and all superseded Qualcomm v1/v2 results excluded.",
+  "fidelity_counts": {
+    "reference_baseline": 25
+  },
+  "comparison_counts": {
+    "not_officially_comparable": 25
+  },
+  "case_type_counts": {
+    "special": 25
+  },
+  "models": [
+    {
+      "sequence": 42,
+      "model_id": "cmarkea/detr-layout-detection",
+      "state": "complete",
+      "all_tasks_complete": true,
+      "required_tasks": [
+        "bbox_detection_classification",
+        "semantic_segmentation"
+      ],
+      "results": [
+        {
+          "status": "failed",
+          "task": "test",
+          "valid_complete": false,
+          "images": null,
+          "result_directory": "__MODEL_ROOT__/resources/runtime/assets/workspace/results/remaining25_v3/m42-detr-layout-detection/test",
+          "metrics": null,
+          "coverage": {
+            "model_labels": {
+              "0": "Caption",
+              "1": "Footnote",
+              "2": "Formula",
+              "3": "List-item",
+              "4": "Page-footer",
+              "5": "Page-header",
+              "6": "Picture",
+              "7": "Section-header",
+              "8": "Table",
+              "9": "Text",
+              "10": "Title"
+            },
+            "mapping": {
+              "0": 1,
+              "1": 2,
+              "2": 3,
+              "3": 4,
+              "4": 5,
+              "5": 6,
+              "6": 7,
+              "7": 8,
+              "8": 9,
+              "9": 10,
+              "10": 11
+            },
+            "covered_labels": [
+              "Caption",
+              "Footnote",
+              "Formula",
+              "List-item",
+              "Page-footer",
+              "Page-header",
+              "Picture",
+              "Section-header",
+              "Table",
+              "Text",
+              "Title"
+            ],
+            "missing_labels": [],
+            "covered_count": 11,
+            "total_model_classes": 11,
+            "gt_instances_per_class": {
+              "Caption": 1543,
+              "Footnote": 387,
+              "Formula": 1966,
+              "List-item": 10522,
+              "Page-footer": 3994,
+              "Page-header": 3366,
+              "Picture": 3534,
+              "Section-header": 8550,
+              "Table": 2394,
+              "Text": 29940,
+              "Title": 335
+            }
+          },
+          "error": "Invalid checkpoint loading: model card requires DetrForSegmentation, detection-only auto loader left model randomly initialized. Predictions must not be used for metrics."
+        },
+        {
+          "status": "complete",
+          "task": "remaining25_cmarkea_v1",
+          "valid_complete": true,
+          "images": 4999,
+          "result_directory": "__MODEL_ROOT__/resources/runtime/assets/workspace/results/remaining25_cmarkea_v1",
+          "metrics": {
+            "bbox": {
+              "AP": 0.4840862457738713,
+              "AP50": 0.7343497527762437,
+              "AP75": 0.5080147025880516,
+              "AP_small": 0.2089274144336082,
+              "AP_medium": 0.3465066119261748,
+              "AP_large": 0.5444121912159455,
+              "AR1": 0.2910973705257884,
+              "AR10": 0.588724269496113,
+              "AR100": 0.6298562019019615,
+              "AR_small": 0.3218740750403806,
+              "AR_medium": 0.49696386300835255,
+              "AR_large": 0.668345655212529,
+              "per_class_AP": {
+                "Caption": 0.4240292837631132,
+                "Footnote": 0.3450895443684146,
+                "Formula": 0.4418113621103394,
+                "List-item": 0.45508064920902525,
+                "Page-footer": 0.38436550067675335,
+                "Page-header": 0.42444207175796644,
+                "Picture": 0.5218496169839931,
+                "Section-header": 0.44378311295073286,
+                "Table": 0.6874629367643642,
+                "Text": 0.6789980040315821,
+                "Title": 0.5180366208962996
+              }
+            },
+            "semantic_F1": {
+              "Background": 0.9473033002686039,
+              "Caption": 0.8057355123648103,
+              "Footnote": 0.7267249516726743,
+              "Formula": 0.8414041635985219,
+              "List-item": 0.8087355159463254,
+              "Page-footer": 0.786344513878257,
+              "Page-header": 0.6577983593577529,
+              "Picture": 0.824771401728203,
+              "Section-header": 0.7146378170972191,
+              "Table": 0.8457610851504629,
+              "Text": 0.9175251619917932,
+              "Title": 0.6548935868543013
+            },
+            "semantic_macro_foreground_F1": 0.7803938245127565,
+            "pixel_counts": [
+              [
+                2801538758,
+                128351602,
+                183337055
+              ],
+              [
+                16116277,
+                4088508,
+                3682827
+              ],
+              [
+                3817472,
+                619465,
+                2251552
+              ],
+              [
+                40446787,
+                9579041,
+                5668547
+              ],
+              [
+                140730814,
+                45643329,
+                20921836
+              ],
+              [
+                5441771,
+                1575854,
+                1381283
+              ],
+              [
+                8128488,
+                4122260,
+                4334988
+              ],
+              [
+                348995538,
+                92145809,
+                56147400
+              ],
+              [
+                36029381,
+                20330574,
+                8443226
+              ],
+              [
+                381806764,
+                81857968,
+                57399943
+              ],
+              [
+                1048324118,
+                116107614,
+                72356671
+              ],
+              [
+                3930707,
+                2793627,
+                1349068
+              ]
+            ],
+            "evaluation_images": 4999,
+            "protocol_fingerprint": "43935f3be098133df89e1c8aed7785f081d83c6d9c0c63f16e1a96091809d004",
+            "reference_check": "not_officially_comparable",
+            "unit": "fraction_0_to_1"
+          },
+          "coverage": null,
+          "error": null
+        }
+      ],
+      "next_action": "已使用DetrForSegmentation完成4999图框和像素F1；禁止从通用检测入口自动加载此权重。"
+    }
+  ],
+  "supplemental_updated_at": "2026-09-05T15:25:21.596769+00:00",
+  "supplemental_summary": "supplemental_20260905/summary.json"
+}

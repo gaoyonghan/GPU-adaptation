@@ -1,0 +1,42 @@
+{
+  "sequence": 27,
+  "files": [
+    {
+      "path": "config.json",
+      "bytes": 131,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "wilddet3d_stage1_omni3d_12e_v1.0.pt",
+      "bytes": 4733435582,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2699,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "wilddet3d_alldata_all_prompt_v1.0.pt",
+      "bytes": 4733213037,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": ".gitattributes",
+      "bytes": 1519,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "wilddet3d_stage2_alldata_12e_v1.0.pt",
+      "bytes": 4733437597,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    }
+  ],
+  "mismatches": []
+}

@@ -1,0 +1,36 @@
+{
+  "schema": "model-eval/classification-inventory/v1",
+  "scope": "Existing 59 classification models; model 93 is retrieval and excluded.",
+  "models": [
+    {
+      "sequence": 200,
+      "model_id": "timm/convnext_tiny.fb_in22k",
+      "runner_family": "classification171",
+      "adapter": "native_labels",
+      "state": "integrated",
+      "dataset": {
+        "id": "classification171_200",
+        "relation": "public_replacement",
+        "split": "ImageNet-1K val overlap 999 classes",
+        "note": [
+          "Keep full model output head. Not an independent original model test set.",
+          "Native publisher evaluator retained; historical author environment/complete reporting protocol not established, so exact_official is not claimed.",
+          "Local checkpoint and publisher inference components retained. Offline file paths, eval mode, batching, timing observation and reference scoring are external orchestration."
+        ],
+        "index_source": "__MODEL_ROOT__/inference/native/indices/200.jsonl",
+        "data_containers": []
+      },
+      "qualification": "public_replacement",
+      "limitations": [],
+      "num_classes": 21841,
+      "expected_images": 49950,
+      "category_reference": {
+        "file": "__MODEL_ROOT__/inference/native/models.json",
+        "sequence": 200,
+        "field": "label_mapping"
+      },
+      "gt_index": "__MODEL_ROOT__/inference/native/indices/200.jsonl",
+      "requires_capture_on_next_inference": true
+    }
+  ]
+}

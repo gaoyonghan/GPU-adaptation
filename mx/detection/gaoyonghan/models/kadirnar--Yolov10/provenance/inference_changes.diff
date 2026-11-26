@@ -1,0 +1,22 @@
+--- original_inference.py
++++ inference/native/run_native_18_20_21.py
+@@ -15,8 +15,8 @@
+ 
+ HERE = Path(__file__).resolve().parent
+ MANIFEST = HERE / 'native_18_20_21.json'
+-OUT = Path('/home/ubuntu/gaoyonghan/gpu/results/native_18_20_21_v1')
+-PLATE_ZIP = Path('/data2/gaoyonghan/gpu/dataset/license_plate_v1_valid/data/valid.zip')
++OUT = Path('/data2/gaoyonghan/gpu_model_standalone_20261110/release/model/检测/kadirnar--Yolov10/results/run_001/m020')
++PLATE_ZIP = Path('/home/ubuntu/文档/ChatGPT/idea 2/outputs/launch_audit_20261005/migration_inputs/datasets/license_plate_v1_valid/data/valid.zip')
+ 
+ 
+ def prepare_plate():
+@@ -80,7 +80,7 @@
+     # Validators check this font even with plots=False; reuse it without a network download.
+     font = config_dir / 'Arial.ttf'
+     if not font.exists():
+-        existing_font = Path('/home/ubuntu/.config/Ultralytics/Arial.ttf')
++        existing_font = Path('/data2/gaoyonghan/gpu_model_standalone_20261110/release/model/检测/kadirnar--Yolov10/resources/runtime/assets/fonts/Arial.ttf')
+         assert existing_font.is_file(), 'Missing cached Arial.ttf required by native validator'
+         font.symlink_to(existing_font)
+     if number == 21:

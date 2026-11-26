@@ -1,0 +1,9 @@
+{
+  "python": "3.11.16",
+  "requirements": "environments/e05-m94-timm0916/requirements.txt",
+  "expected": "environments/e05-m94-timm0916/expected.json",
+  "local_packages": [],
+  "original_python": "/home/ubuntu/gaoyonghan/gpu/.venv-m94-timm0916/bin/python",
+  "torch": "2.5.1+cu121",
+  "python_version_scope": "Pinned to original interpreter version"
+}

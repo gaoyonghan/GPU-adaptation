@@ -1,0 +1,18 @@
+{
+  "sequence": 161,
+  "model_id": "therealcyberlord/stanford-car-vit-patch16",
+  "dirname": "therealcyberlord__stanford-car-vit-patch16",
+  "loader": "transformers",
+  "timm_name": null,
+  "num_classes": 196,
+  "dataset": "stanford_cars",
+  "dataset_sub": "stanford_cars",
+  "dataset_source": "tanganke/stanford_cars (test, 8041 张)",
+  "transform": null,
+  "align": "stanford_cars_161_label_map.json",
+  "expected_images": 8041,
+  "reported_top1": 0.86,
+  "reported_top5": null,
+  "reported_note": "模型卡原文「around 86% on the testing set」；其 testing set 指原论文 6041 张切分，本表用 tanganke test 8041 张（≈6041+2000val），口径略有差异。该模型 config.json 的 id2label 顺序与数据集 ClassLabel 顺序仅 3/196 位相同，必须用 stanford_cars_161_label_map.json 重排——脚本自动同时输出 raw / remap 两行，落在 86% 附近的那行才是正解，另一行会在 0.5% 左右（随机水平）。",
+  "prepare": null
+}

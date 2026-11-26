@@ -1,0 +1,9 @@
+{
+  "name": "classification171-200-native-inference",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@huggingface/transformers": "4.3.0"
+  }
+}

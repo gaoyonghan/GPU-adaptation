@@ -1,0 +1,6 @@
+path: __MODEL_ROOT__/resources/runtime/assets/prepared/prepared_m33_root
+train: __MODEL_ROOT__/resources/runtime/assets/workspace/results/m33x_native83123_v1/full/run_20260914_215312_582780/test.txt
+val: __MODEL_ROOT__/resources/runtime/assets/workspace/results/m33x_native83123_v1/full/run_20260914_215312_582780/test.txt
+test: __MODEL_ROOT__/resources/runtime/assets/workspace/results/m33x_native83123_v1/full/run_20260914_215312_582780/test.txt
+names:
+  0: License_Plate

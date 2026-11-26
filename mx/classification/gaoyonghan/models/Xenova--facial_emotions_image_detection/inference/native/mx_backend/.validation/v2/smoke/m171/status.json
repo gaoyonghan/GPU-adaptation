@@ -1,0 +1,166 @@
+{
+  "sequence": 171,
+  "model_id": "dima806/closed_eyes_image_detection",
+  "variant": null,
+  "phase": "smoke",
+  "protocol_fingerprint": "d3e6390fdf94118347addb54a316e4c086d02830eda6340da186817d89bafa03",
+  "protocol": {
+    "model": "cea294cb05a2d02c29e8a1017570ef181e380203550f95ece45dbc027e736493",
+    "code": {
+      "run_model.py": "b9b7e34d4db126e9495d674a9fd24dea83a732fe2ad0a28cda953f4856831ec8",
+      "common.py": "87e119ea13cd713bb054693dae0e04b7064b4fd683c8479b7715fd9b3883d045",
+      "prepare.py": "bf5bd4e223b181dd89142dbf467f92fe7c09b88ab4c82b061346248019f4ad9b",
+      "dispatch.py": "5d421d08e4b36dc0ad02144dd8540c007b125f4e2c728c490e5e3270375e58cf",
+      "timing.py": "db23cf873121e5e9345f23488d02d7757560a25084f330a56e38d5969d448342",
+      "native_js.mjs": "7ce8d0c8d4119a2ce2a4a0b3b89ffaffea9e4028e1e4196b09d8cdbf922685b1"
+    },
+    "environment": {
+      "python": "3.11.16 (main, Aug 27 2026, 14:44:21) [GCC 14.3.0]",
+      "versions": {
+        "torch": "2.5.1+cu121",
+        "torchvision": "0.20.1+cu121",
+        "transformers": "4.50.0",
+        "timm": "1.0.15",
+        "Pillow": "11.1.0",
+        "numpy": "1.26.4",
+        "scikit-learn": "1.5.2",
+        "pyarrow": "19.0.1"
+      },
+      "cuda_runtime": "12.1",
+      "cuda_available": true
+    },
+    "device": "cuda:1",
+    "batch_size": 1,
+    "warmup": 10,
+    "workers": 2,
+    "variant": null
+  },
+  "model_manifest": {
+    "sequence": 171,
+    "model_id": "dima806/closed_eyes_image_detection",
+    "model_path": "/project/classification/gaoyonghan/models/Xenova--facial_emotions_image_detection/weights/dima806/closed_eyes_image_detection",
+    "revision": "8a2180a6c303b7cb42e5a42c43cb8155a6af30a0",
+    "task_type": "image-classification",
+    "status": "not_started",
+    "official_model_card": "https://huggingface.co/dima806/closed_eyes_image_detection",
+    "official_reference": null,
+    "reference_comparison": "manual_reference_required",
+    "known_differences": [],
+    "config": {
+      "_name_or_path": "dima806/closed_eyes_image_detection",
+      "architectures": [
+        "ViTForImageClassification"
+      ],
+      "attention_probs_dropout_prob": 0.0,
+      "encoder_stride": 16,
+      "hidden_act": "gelu",
+      "hidden_dropout_prob": 0.0,
+      "hidden_size": 768,
+      "id2label": {
+        "0": "closeEye",
+        "1": "openEye"
+      },
+      "image_size": 224,
+      "initializer_range": 0.02,
+      "intermediate_size": 3072,
+      "label2id": {
+        "closeEye": 0,
+        "openEye": 1
+      },
+      "layer_norm_eps": 1e-12,
+      "model_type": "vit",
+      "num_attention_heads": 12,
+      "num_channels": 3,
+      "num_hidden_layers": 12,
+      "patch_size": 16,
+      "problem_type": "single_label_classification",
+      "qkv_bias": true,
+      "torch_dtype": "float32",
+      "transformers_version": "4.38.1"
+    },
+    "preprocessing": {
+      "do_normalize": true,
+      "do_rescale": true,
+      "do_resize": true,
+      "image_mean": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "image_processor_type": "ViTImageProcessor",
+      "image_std": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "resample": 2,
+      "rescale_factor": 0.00392156862745098,
+      "size": {
+        "height": 224,
+        "width": 224
+      }
+    },
+    "architecture": [
+      "ViTForImageClassification"
+    ],
+    "files": {
+      "model.safetensors": {
+        "size": 343223968,
+        "sha256": "4c8ee02a898d927996cca335641a1031605297a0bbec21c69e5dc51baebfe911"
+      },
+      "config.json": {
+        "size": 735,
+        "sha256": "c3adf531c23f4bf14e63619126ddd2d2eea4557540b0308a516becc51960ad6e"
+      },
+      "preprocessor_config.json": {
+        "size": 325,
+        "sha256": "a34861a24e781942424ad790b82bc99348404a2e64ea882de88c40905851698d"
+      },
+      "README.md": {
+        "size": 660,
+        "sha256": "42db62e59efbfece54ac814152b2cd767641eb3fa82196b0874702d9e3be296e"
+      }
+    },
+    "weight": "model.safetensors",
+    "backend": "hf_published",
+    "environment": "shared_hf",
+    "dataset_relation": "public_replacement",
+    "split": "publisher PreparedData/test",
+    "excluded_source_labels": {},
+    "images": 4474,
+    "covered_target_classes": 2,
+    "num_output_classes": 2,
+    "label_mapping": {
+      "0": "closeEye",
+      "1": "openEye"
+    },
+    "scoring": "reference",
+    "evaluator": "sklearn reference scoring",
+    "fidelity": "reference_baseline",
+    "case_type": "special",
+    "special_tags": [
+      "framework_numeric_difference",
+      "dataset_replacement",
+      "official_evaluator_missing"
+    ],
+    "inference_entry": "publisher_transformers_model_and_processor",
+    "default_batch_size": 1,
+    "dtype": "float32",
+    "warmup_batches": 10,
+    "index": "/project/classification/gaoyonghan/models/Xenova--facial_emotions_image_detection/resources/runtime/assets/workspace/classification171_200_eval/indices/171.jsonl",
+    "index_sha256": "3ca54a372f123cbca706b9f70449efbe28eeaba41767e1091de5c35d40f823c0",
+    "data_containers": {
+      "/project/dataset/datasets_171_200/closed_eyes/raw/drivers-drowsiness-detection.zip": {
+        "size": 860422236,
+        "mtime_ns": 1695560087000000000
+      }
+    },
+    "protocol_fingerprint": "cea294cb05a2d02c29e8a1017570ef181e380203550f95ece45dbc027e736493"
+  },
+  "status": "partial_complete",
+  "gpu_at_start": "0, GPU-edb63bcd-7ac5-4284-b9ea-825830b8ebba, NVIDIA GeForce RTX 4090, 580.126.09, 778 MiB, 22 %\n1, GPU-a11f730c-a975-2bf0-b765-3c24d83b7104, NVIDIA GeForce RTX 4090, 580.126.09, 133 MiB, 27 %",
+  "full_evaluation": false,
+  "images": 10,
+  "timing_file": "/project/classification/gaoyonghan/models/Xenova--facial_emotions_image_detection/resources/runtime/assets/workspace/classification171_200_eval/.validation/v2/smoke/m171/timing.json",
+  "run_wall_seconds_this_segment": 6.348150189965963
+}

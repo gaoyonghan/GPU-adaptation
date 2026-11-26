@@ -1,0 +1,30 @@
+{
+  "schema": "model-eval/provenance/split-audit/v1",
+  "model_id": "dima806/traffic_sign_detection",
+  "sequence": 217,
+  "dataset": {
+    "id": "traffic_signs_tuanai",
+    "relation": "author_native",
+    "split": "test"
+  },
+  "expected_images": 9252,
+  "num_classes": 45,
+  "sample_id_rule": "`<zip 内路径>#<该路径在 test 中第几次出现>`（过采样会重复，故带出现序号保证唯一）",
+  "protocol": "作者原生流程运行时重建：`Unknown*` 合并为 `Unknown` → RandomOverSampler(random_state=83) 过采样 → train_test_split(test_size=0.4, stratify, random_state=42)。该 test 集磁盘上不存在，由 inference/native/run_model.py 现场构造。",
+  "label_space": "native class ids recorded by the model config (adapter = native_labels); class names are display metadata only.",
+  "leakage": {
+    "test_rows": 9252,
+    "test_rows_also_in_train": 7779,
+    "ratio": 0.841,
+    "note": "过采样发生在切分之前，导致 84.1% 的测试样本是训练集里出现过的重复图；该精度不能当泛化精度看。"
+  },
+  "created": "2026-11-25",
+  "reconstruction_dependency": {
+    "package": "imbalanced-learn",
+    "version": "0.14.2",
+    "delivery": "vendored at inference/vendor/, injected via PYTHONPATH in inference/entrypoint.json",
+    "reason": "e07 image does not ship imbalanced-learn and the container runs offline with --network none",
+    "version_source": "the original evaluation container sunyuqiyi-c500 had imbalanced-learn 0.14.2",
+    "why_pinned": "RandomOverSampler(random_state=83) determines which 9252 rows become the test split; a different version may resample differently and change the score"
+  }
+}

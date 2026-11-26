@@ -1,0 +1,42 @@
+{
+  "sequence": 9,
+  "files": [
+    {
+      "path": "best.pt",
+      "bytes": 22509112,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "config.json",
+      "bytes": 158,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "README.md",
+      "bytes": 6451,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "_Stockmarket-Future-Prediction.jpeg",
+      "bytes": 565453,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "events.out.tfevents.1695811408.pcai-B450M-DS3H-V2.7439.0",
+      "bytes": 583936,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": ".gitattributes",
+      "bytes": 1519,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    }
+  ],
+  "mismatches": []
+}

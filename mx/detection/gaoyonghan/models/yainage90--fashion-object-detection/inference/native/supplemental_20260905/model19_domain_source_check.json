@@ -1,0 +1,14 @@
+[
+  {
+    "file": "model19_official_hf_loader.py",
+    "url": "https://huggingface.co/datasets/docling-project/icdar2023-doclaynet/raw/b667fab7a2efacb4b040d0069aeff234bf5cab9b/icdar2023-doclaynet.py",
+    "status": 200,
+    "sha256": "45470ff04f7c7a453e2b3998bf923598e0c7f9ff74d0b53a70c3e2863b5b20c4",
+    "bytes": 8013
+  },
+  {
+    "file": "model19_official_website_tree.json",
+    "url": "https://api.github.com/repos/DS4SD/icdar23-doclaynet/git/trees/main?recursive=1",
+    "error": "HTTPSConnectionPool(host='api.github.com', port=443): Max retries exceeded with url: /repos/DS4SD/icdar23-doclaynet/git/trees/main?recursive=1 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7c58f09bed50>, 'Connection to api.github.com timed out. (connect timeout=25)'))"
+  }
+]

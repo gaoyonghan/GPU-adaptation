@@ -1,0 +1,101 @@
+{
+  "sequence": 172,
+  "model_id": "tonyassi/vogue-fashion-collection-15",
+  "task": "image_classification",
+  "task_name": "图像分类",
+  "reported_result": [
+    {
+      "variant": null,
+      "inference_status": "complete",
+      "accuracy": 0.9736141729585251,
+      "forward_seconds": 455.8252891559568,
+      "inference_e2e_seconds": 1061.2322811596096,
+      "metric_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/results_full.csv",
+      "timing_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/full/m172/timing.json"
+    }
+  ],
+  "reference": {
+    "source": "https://huggingface.co/tonyassi/vogue-fashion-collection-15",
+    "local_card_sha256": "bf21bf0a907d62976cf65a10efd476f6de00cbfe553aaa81d5e68db5efe846b4",
+    "model_index": [
+      {
+        "name": "vogue-fashion-collection-15",
+        "results": []
+      }
+    ],
+    "text_report_values": {
+      "accuracy": 0.9454,
+      "loss": 0.1795
+    },
+    "units": "fractions for extracted accuracy/F1; original model-index units as published",
+    "comparison": "Manual protocol review required; no automatic drop calculation",
+    "note": "Card reports retained as provenance, not proof that local data/split/framework exactly reproduces the reported run."
+  },
+  "model_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/model_index/tonyassi/vogue-fashion-collection-15",
+  "model_exists_at_build": true,
+  "dataset": {
+    "id": "classification171_172",
+    "relation": "original_protocol_incomplete",
+    "split": "published train (87547 images, not independent test)",
+    "note": [
+      "Model has 1677 collection classes, not 15 labels; same-source/train evaluation only.",
+      "Local checkpoint and publisher inference components retained. Offline file paths, eval mode, batching, timing observation and reference scoring are external orchestration."
+    ],
+    "index_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/classification171_200_eval/indices/172.jsonl",
+    "data_containers": [
+      "/data2/gaoyonghan/model inference for GPU adaptation/dataset/datasets_171_200/vogue_runway/raw/data/train-00000-of-00005.parquet",
+      "/data2/gaoyonghan/model inference for GPU adaptation/dataset/datasets_171_200/vogue_runway/raw/data/train-00001-of-00005.parquet",
+      "/data2/gaoyonghan/model inference for GPU adaptation/dataset/datasets_171_200/vogue_runway/raw/data/train-00002-of-00005.parquet",
+      "/data2/gaoyonghan/model inference for GPU adaptation/dataset/datasets_171_200/vogue_runway/raw/data/train-00003-of-00005.parquet",
+      "/data2/gaoyonghan/model inference for GPU adaptation/dataset/datasets_171_200/vogue_runway/raw/data/train-00004-of-00005.parquet"
+    ]
+  },
+  "environment_id": "classification171-shared_hf",
+  "runner_family": "classification171",
+  "final_result_sources": [
+    {
+      "source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m172/metrics-0.json",
+      "sha256": "577fb08d7fd5667d8f37dd6b9f7e4e11ffd07bb00971d9b298bdd8d72318156e",
+      "selection": "final_171_200_registry",
+      "source_original": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/full/m172/metrics.json"
+    }
+  ],
+  "code": {
+    "source": "/home/ubuntu/Documents/Codex/2026-09-27/codex-threads-01a0de0e-9d72-7fc0-b485/work/reorg/historical171/run_model.py",
+    "sha256": "8b61859273a256a4401a98181b66a0b3a487793a85c3fcf7d1f84491e2e0d5c1",
+    "recorded_sha256": "8b61859273a256a4401a98181b66a0b3a487793a85c3fcf7d1f84491e2e0d5c1",
+    "attestation": "hash_exact",
+    "status_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m172/status.json",
+    "selection": "recovered_exact_code",
+    "archive": "code_archive/8b61859273a256a4_run_model.py"
+  },
+  "support_files": [
+    "run_model.py"
+  ],
+  "final_scorer": null,
+  "backend_package": "classification171_200_eval",
+  "readiness": "code_and_result_identified",
+  "launch_status": "configured",
+  "metadata_warning": null,
+  "final_weight_records": [
+    {
+      "variant": null,
+      "model_revision": "ea35ac1566e7785abf7cc8f4a5e16c2d78410a2a",
+      "protocol_fingerprint": "ce5f46eea32da0bda79ce2ba130a55b98715c360fe689ce7206f5d82447c3a29",
+      "inference_status": "complete",
+      "scoring_kind": "original_run",
+      "review_status": null,
+      "dataset_relation": "original_protocol_incomplete",
+      "device": "cuda:1",
+      "scored_images": 87547,
+      "forward_seconds": 455.8252891559568,
+      "inference_e2e_seconds": 1061.2322811596096,
+      "metric_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/results_full.csv",
+      "detailed_metrics_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/full/m172/metrics.json",
+      "timing_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/full/m172/timing.json",
+      "status_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/full/m172/status.json",
+      "prediction_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/full/m172/predictions.jsonl",
+      "note": null
+    }
+  ]
+}

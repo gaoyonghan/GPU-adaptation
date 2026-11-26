@@ -1,0 +1,54 @@
+{
+  "sequence": 88,
+  "model_id": "google/efficientnet-b3",
+  "native_model": "tf.keras.applications.EfficientNetB3(weights=imagenet)",
+  "dataset": {
+    "images": 50000,
+    "classes": 1000,
+    "split": "ILSVRC2012 val",
+    "relation": "original_exact",
+    "image_root": "__MODEL_ROOT__/resources/runtime/assets/workspace/classification8_eval/.runtime/data/imagenet/val",
+    "annotation_sha256": "09811d286325caee803bdeb74d536ece564aa6faf1ebe1e839c70981f3ce9788",
+    "content_fingerprint": "45d85aee7e45950923da5d88b9b15e53ce5b268d37283f75d8e001a879e2ba08"
+  },
+  "runtime_versions": {
+    "tensorflow": "2.15.1",
+    "keras": "2.15.0",
+    "numpy": "1.26.4",
+    "h5py": "3.16.0"
+  },
+  "keras_source_sha256": "33dddcf434b1b97f0df8cd254448b1eb4dd3c56ff34a318f20c4e061f156756a",
+  "weight_sha256": "48e77d124276f5d00a4f8dcf9c564b7d0c627080af4aeb1da39f444ebd631433",
+  "asset_checksums": {
+    "preprocessing.py": [
+      "sha256",
+      "8bd9f09079a59af79bb3533892aa14feae9539d7aee121945f5a33dcb3395f9b"
+    ],
+    "imagenet_class_index.json": [
+      "sha256",
+      "a1e7a966a1f601d39e4b43e119b3e7dd4a2ad3ea08cf69847cbaf021013767bc"
+    ],
+    "models/efficientnetb3.h5": [
+      "md5",
+      "ffd1fdc53d0ce67064dc6a9c7960ede0"
+    ]
+  },
+  "batch_size": 16,
+  "dtype": "float32",
+  "preprocessing": "Google TPU EfficientNet preprocess_for_eval, image_size=300, resize_method=None; no external normalization",
+  "crop_fraction_constant": 0.875,
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "old_hf_result_preserved": "__MODEL_ROOT__/resources/runtime/assets/workspace/results/classification8_v1/m88-efficientnet-b3",
+  "implementation": "native Keras model/metrics + unchanged Google preprocessing; project data/batch/report wrapper",
+  "reference": {
+    "source": "https://keras.io/api/applications/",
+    "top1_percent": 81.6,
+    "top5_percent": 95.7
+  },
+  "official_reproduction_verified": false,
+  "caveats": [
+    "Keras 2.15 runtime, not the conversion script cited Keras 2.11 runtime.",
+    "Keras benchmark historical preprocessing not completely documented; Google upstream eval preprocessing selected.",
+    "Native/HF weight tensor equality not yet independently verified; no attribution of score changes to a single cause."
+  ]
+}

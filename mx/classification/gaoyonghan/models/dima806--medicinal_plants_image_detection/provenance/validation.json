@@ -1,0 +1,34 @@
+{
+  "sequence": 170,
+  "model_id": "dima806/medicinal_plants_image_detection",
+  "run_dir": "classification/laizihao/models/dima806--medicinal_plants_image_detection/result/run_001",
+  "phase": "full",
+  "state": "completed",
+  "images": 3680,
+  "evaluated_classes": 46,
+  "chance_level": 0.021739,
+  "metrics": {
+    "accuracy": 0.8619565217391304,
+    "balanced_accuracy": 0.8619565217391305,
+    "macro_f1": 0.86187552896782,
+    "top5_accuracy": 0.89375,
+    "top5_status": "computed"
+  },
+  "reported_by_author": {
+    "top1": 0.9962,
+    "top5": null
+  },
+  "device": {
+    "gpu": "MetaX C500",
+    "torch": "2.10.0+metax3.8.1.0",
+    "precision": "amp_bf16",
+    "batch_size": 64
+  },
+  "predictions_sha256": "226338b256808417fa5af482ea67147c04936cce4c5c6f3bf5d1142be729d4ea",
+  "wall_seconds": 65.477,
+  "metric_reportable": true,
+  "verdict": "与作者数值差 -0.1342，需结合口径说明看",
+  "known_limits": [],
+  "method": "classification/evaluate.py --run-dir <run>（与推理同一容器、同一环境）",
+  "validated_at": "2026-11-19T13:26:47.431903+00:00"
+}

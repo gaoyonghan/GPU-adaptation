@@ -1,0 +1,231 @@
+{
+  "sequence": 186,
+  "model_id": "HHousen/household-rooms",
+  "variant": null,
+  "phase": "smoke",
+  "protocol_fingerprint": "2ad895f698e1921e01ce804b573394bd74bdc012b728c4288f404e04fbb23a0e",
+  "protocol": {
+    "model": "37302a5ed99585ebe95136abe405520f8300be263f96c5dd7cc97fb7ae4edbdd",
+    "code": {
+      "run_model.py": "b9b7e34d4db126e9495d674a9fd24dea83a732fe2ad0a28cda953f4856831ec8",
+      "common.py": "87e119ea13cd713bb054693dae0e04b7064b4fd683c8479b7715fd9b3883d045",
+      "prepare.py": "bf5bd4e223b181dd89142dbf467f92fe7c09b88ab4c82b061346248019f4ad9b",
+      "dispatch.py": "5d421d08e4b36dc0ad02144dd8540c007b125f4e2c728c490e5e3270375e58cf",
+      "timing.py": "db23cf873121e5e9345f23488d02d7757560a25084f330a56e38d5969d448342",
+      "native_js.mjs": "7ce8d0c8d4119a2ce2a4a0b3b89ffaffea9e4028e1e4196b09d8cdbf922685b1"
+    },
+    "environment": {
+      "python": "3.11.16 (main, Aug 27 2026, 14:44:21) [GCC 14.3.0]",
+      "versions": {
+        "torch": "2.5.1+cu121",
+        "torchvision": "0.20.1+cu121",
+        "transformers": "4.50.0",
+        "timm": "1.0.15",
+        "Pillow": "11.1.0",
+        "numpy": "1.26.4",
+        "scikit-learn": "1.5.2",
+        "pyarrow": "19.0.1"
+      },
+      "cuda_runtime": "12.1",
+      "cuda_available": true
+    },
+    "device": "cuda:1",
+    "batch_size": 1,
+    "warmup": 10,
+    "workers": 2,
+    "variant": null
+  },
+  "model_manifest": {
+    "sequence": 186,
+    "model_id": "HHousen/household-rooms",
+    "model_path": "__MODEL_ROOT__/weights/HHousen/household-rooms",
+    "revision": "c80d9567f40da3d988bb01232ee66bc11c2a941f",
+    "task_type": "image-classification",
+    "status": "not_started",
+    "official_model_card": "https://huggingface.co/HHousen/household-rooms",
+    "official_reference": null,
+    "reference_comparison": "manual_reference_required",
+    "known_differences": [],
+    "config": {
+      "_name_or_path": "google/vit-base-patch16-224-in21k",
+      "architectures": [
+        "ViTForImageClassification"
+      ],
+      "attention_probs_dropout_prob": 0.0,
+      "hidden_act": "gelu",
+      "hidden_dropout_prob": 0.0,
+      "hidden_size": 768,
+      "id2label": {
+        "0": "bathroom",
+        "1": "bedroom",
+        "2": "dining room",
+        "3": "kitchen",
+        "4": "living room"
+      },
+      "image_size": 224,
+      "initializer_range": 0.02,
+      "intermediate_size": 3072,
+      "label2id": {
+        "bathroom": "0",
+        "bedroom": "1",
+        "dining room": "2",
+        "kitchen": "3",
+        "living room": "4"
+      },
+      "layer_norm_eps": 1e-12,
+      "model_type": "vit",
+      "num_attention_heads": 12,
+      "num_channels": 3,
+      "num_hidden_layers": 12,
+      "patch_size": 16,
+      "qkv_bias": true,
+      "torch_dtype": "float32",
+      "transformers_version": "4.16.2"
+    },
+    "preprocessing": {
+      "do_normalize": true,
+      "do_resize": true,
+      "feature_extractor_type": "ViTFeatureExtractor",
+      "image_mean": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "image_std": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "resample": 2,
+      "size": 224
+    },
+    "architecture": [
+      "ViTForImageClassification"
+    ],
+    "files": {
+      "pytorch_model.bin": {
+        "size": 343286257,
+        "sha256": "dfc7eb260068b41bcf5ae58b2f7fe72185e0735c75d42cd74a2d8abde7a1744b"
+      },
+      "config.json": {
+        "size": 800,
+        "sha256": "840613b9bc25a080d11d18d317818bd7875d397dcdf8aee2720dee6336751e5b"
+      },
+      "preprocessor_config.json": {
+        "size": 228,
+        "sha256": "af4eb4d79cf61b47010fc0bc9352ee967579c417423b4917188d809b7e048948"
+      },
+      "README.md": {
+        "size": 912,
+        "sha256": "1a1f275370bf6832d0833518479edd892af72dbecae602aec505648033203198"
+      }
+    },
+    "weight": "pytorch_model.bin",
+    "backend": "hf_published",
+    "environment": "shared_hf",
+    "dataset_relation": "public_replacement",
+    "split": "MIT Indoor67 TestImages; five supported room classes",
+    "excluded_source_labels": {
+      "airport_inside": 20,
+      "artstudio": 20,
+      "auditorium": 18,
+      "bakery": 19,
+      "bar": 18,
+      "bookstore": 20,
+      "bowling": 20,
+      "buffet": 20,
+      "casino": 19,
+      "children_room": 18,
+      "church_inside": 19,
+      "classroom": 18,
+      "cloister": 20,
+      "closet": 18,
+      "clothingstore": 18,
+      "computerroom": 18,
+      "concert_hall": 20,
+      "corridor": 21,
+      "deli": 19,
+      "dentaloffice": 21,
+      "elevator": 21,
+      "fastfood_restaurant": 17,
+      "florist": 19,
+      "gameroom": 20,
+      "garage": 18,
+      "greenhouse": 20,
+      "grocerystore": 21,
+      "gym": 18,
+      "hairsalon": 21,
+      "hospitalroom": 20,
+      "inside_bus": 23,
+      "inside_subway": 21,
+      "jewelleryshop": 22,
+      "kindergarden": 20,
+      "laboratorywet": 22,
+      "laundromat": 22,
+      "library": 20,
+      "lobby": 20,
+      "locker_room": 21,
+      "mall": 20,
+      "meeting_room": 22,
+      "movietheater": 20,
+      "museum": 23,
+      "nursery": 20,
+      "office": 21,
+      "operating_room": 19,
+      "pantry": 20,
+      "poolinside": 20,
+      "prisoncell": 20,
+      "restaurant": 20,
+      "restaurant_kitchen": 23,
+      "shoeshop": 19,
+      "stairscase": 20,
+      "studiomusic": 19,
+      "subway": 21,
+      "toystore": 22,
+      "trainstation": 20,
+      "tv_studio": 18,
+      "videostore": 22,
+      "waitingroom": 21,
+      "warehouse": 21,
+      "winecellar": 21
+    },
+    "images": 98,
+    "covered_target_classes": 5,
+    "num_output_classes": 5,
+    "label_mapping": {
+      "0": "bathroom",
+      "1": "bedroom",
+      "2": "dining room",
+      "3": "kitchen",
+      "4": "living room"
+    },
+    "scoring": "reference",
+    "evaluator": "sklearn reference scoring",
+    "fidelity": "reference_baseline",
+    "case_type": "special",
+    "special_tags": [
+      "framework_numeric_difference",
+      "dataset_replacement",
+      "official_evaluator_missing"
+    ],
+    "inference_entry": "publisher_transformers_model_and_processor",
+    "default_batch_size": 1,
+    "dtype": "float32",
+    "warmup_batches": 10,
+    "index": "__MODEL_ROOT__/resources/runtime/assets/workspace/classification171_200_eval/indices/186.jsonl",
+    "index_sha256": "71b849dbadcb531e3579065b11150bcb37e25e4d4e3f331cf0a3623a1a70bf78",
+    "data_containers": {
+      "__DATASET_ROOT__/datasets_171_200/indoor67/raw/indoor-scenes-cvpr-2019.zip": {
+        "size": 2508282304,
+        "mtime_ns": 1569363941000000000
+      }
+    },
+    "protocol_fingerprint": "37302a5ed99585ebe95136abe405520f8300be263f96c5dd7cc97fb7ae4edbdd"
+  },
+  "status": "partial_complete",
+  "gpu_at_start": "0, GPU-edb63bcd-7ac5-4284-b9ea-825830b8ebba, NVIDIA GeForce RTX 4090, 580.126.09, 777 MiB, 22 %\n1, GPU-a11f730c-a975-2bf0-b765-3c24d83b7104, NVIDIA GeForce RTX 4090, 580.126.09, 133 MiB, 14 %",
+  "full_evaluation": false,
+  "images": 10,
+  "timing_file": "__MODEL_ROOT__/resources/runtime/assets/workspace/classification171_200_eval/.validation/v2/smoke/m186/timing.json",
+  "run_wall_seconds_this_segment": 5.41968681011349
+}

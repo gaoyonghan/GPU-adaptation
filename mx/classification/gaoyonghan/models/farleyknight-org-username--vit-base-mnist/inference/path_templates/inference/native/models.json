@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "sources": {},
+  "models": [
+    {
+      "sequence": 136,
+      "model_id": "farleyknight-org-username/vit-base-mnist",
+      "runner_family": "native_script",
+      "adapter": "native_labels",
+      "state": "full_inference_and_public_scoring_verified",
+      "dataset": {
+        "id": "MNIST",
+        "split": "test",
+        "note": [
+          "MNIST test\n10,000 张"
+        ],
+        "native_scope": {
+          "name": "MNIST",
+          "split": "test",
+          "image_count": 10000,
+          "class_count": 10
+        },
+        "relation": "native_e07_registered_scope",
+        "index_source": "native loader GT, materialized as classification_annotations.json in the native phase directory",
+        "data_containers": [
+          "dataset/mnist/test-00000-of-00001.parquet"
+        ]
+      },
+      "qualification": "native_registered_scope",
+      "limitations": [
+        "Capture-ready is a code integration state, not a claim that inference has passed.",
+        "Unobserved native Top-5 is unavailable; aggregate scores are not predictions."
+      ],
+      "num_classes": 10,
+      "expected_images": 10000,
+      "native_script": {
+        "script": "inference/native/run_model.py",
+        "script_sha256": "42ef788d21102a77066479a799145e86edf87baf40db350dcfa82733de5e48f0",
+        "loop_lineno": 146,
+        "labels": "labels",
+        "prediction": "top5[:, 0]",
+        "ranking": "top5",
+        "classes": "logits.shape[-1]",
+        "loader_kind": "torch",
+        "label_position": 1,
+        "framework": "torch",
+        "original_script_sha256": "522a9670d36528090d27b2d29cce71ed09f8e0f8268c12805a2e7ee27a209f78",
+        "original_loop_lineno": 135,
+        "original_path": "code/vit-base-mnist-test.py",
+        "ported_script_sha256": "1bdcab3c1206361010a5a20a35d711bb5b16d8688826496037fb777f4b065967"
+      },
+      "output_relative_path": "result/run_001/full/m136",
+      "supports_max_samples": false,
+      "runtime": {
+        "batch_size": 128,
+        "workers": 4,
+        "warmup": 10
+      },
+      "weights_files": [
+        {
+          "path": "config.json",
+          "size": 985,
+          "sha256": "adfdbd41727a606a79e1c30a10a8f34798659dd063a19ad76cc67c136b3bd560"
+        },
+        {
+          "path": "preprocessor_config.json",
+          "size": 228,
+          "sha256": "af4eb4d79cf61b47010fc0bc9352ee967579c417423b4917188d809b7e048948"
+        },
+        {
+          "path": "pytorch_model.bin",
+          "size": 343291569,
+          "sha256": "354112314c2a6a219b585b09197af8a67b09d110ba53b09d8cfdf8a93a2bbf1c"
+        }
+      ],
+      "dataset_files": [
+        "mnist/test-00000-of-00001.parquet"
+      ],
+      "environment": "e07.txt",
+      "native_precision": "FP32",
+      "backend": "transformers",
+      "timing_alignment": {
+        "forward": "Same event/current-stream/synchronize semantics; wrapper preserves exactly one native call. MX runtime differs.",
+        "e2e": "Native DataLoader fetch to CPU prediction availability; worker-prefetch boundary differs from Example. Does not include subsequent metrics or record writes.",
+        "worker_prefetch": true,
+        "starts_after_spider_composition": false,
+        "native_metric_operations_before_prediction_readiness": [],
+        "model_load": "Sum of measured native construction/load/placement blocks, not Example contiguous block.",
+        "warmup": "Native repeated preprocessed first batch; native count retained; synchronized before/after. Unlike Example, preprocessing/transfer/softmax-to-CPU are outside the warmup interval.",
+        "evaluation": "Native aggregate evaluation not measured separately; evaluation_seconds=null. Public scoring duration is outside native timing.",
+        "resume": "No resume; repeated native phase archives previous output; resume_segments=1.",
+        "comparison_valid": false
+      },
+      "label_mapping": [
+        {
+          "id": 0,
+          "name": "output_class_0"
+        },
+        {
+          "id": 1,
+          "name": "output_class_1"
+        },
+        {
+          "id": 2,
+          "name": "output_class_2"
+        },
+        {
+          "id": 3,
+          "name": "output_class_3"
+        },
+        {
+          "id": 4,
+          "name": "output_class_4"
+        },
+        {
+          "id": 5,
+          "name": "output_class_5"
+        },
+        {
+          "id": 6,
+          "name": "output_class_6"
+        },
+        {
+          "id": 7,
+          "name": "output_class_7"
+        },
+        {
+          "id": 8,
+          "name": "output_class_8"
+        },
+        {
+          "id": 9,
+          "name": "output_class_9"
+        }
+      ],
+      "layout_reference": {
+        "branch": "gaoyonghan/mx",
+        "commit": "208733e1562fca75b7128772ca2cd587943d9012",
+        "platform": "mx"
+      }
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "sequence": 61,
+  "model_id": "keremberke/yolov8m-protective-equipment-detection",
+  "task": "object_detection",
+  "task_name": "目标检测",
+  "reported_result": "26.6832109093122",
+  "reference": "27.342",
+  "model_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/model_index/keremberke/yolov8m-protective-equipment-detection",
+  "model_exists_at_build": true,
+  "dataset": {
+    "id": "ppe_v7_valid",
+    "relation": "original_exact",
+    "split": "validation",
+    "note": "Personal Protective Equipment v7 · validation · 3570 图\n官方原集（不代表全协议已对齐）"
+  },
+  "environment_id": "detection-yolo",
+  "runner_family": "official_detection",
+  "final_result_sources": [
+    {
+      "source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m061/metrics-0.json",
+      "sha256": "aa44039c64f2086d2df7f8c7270df8ffc3abd234195b11a168fc1d14df772921",
+      "selection": "workbook_score_match",
+      "data": {
+        "metrics": {
+          "AP": 0.12549745236488424,
+          "AP50": 0.2668321090931216,
+          "AP75": 0.09544239899640351,
+          "AP_small": 0.05437293729372936,
+          "AP_medium": 0.12668899303230882,
+          "AP_large": 0.11244598712441796,
+          "AR1": 0.10763081187373925,
+          "AR10": 0.1789267280430369,
+          "AR100": 0.1807984732509447,
+          "AR_small": 0.0625,
+          "AR_medium": 0.17318980741756154,
+          "AR_large": 0.18566337928062346
+        },
+        "metrics_percent": {
+          "AP": 12.549745236488425,
+          "AP50": 26.68321090931216,
+          "AP75": 9.54423989964035,
+          "AP_small": 5.437293729372937,
+          "AP_medium": 12.668899303230882,
+          "AP_large": 11.244598712441796,
+          "AR1": 10.763081187373926,
+          "AR10": 17.89267280430369,
+          "AR100": 18.07984732509447,
+          "AR_small": 6.25,
+          "AR_medium": 17.318980741756153,
+          "AR_large": 18.566337928062346
+        },
+        "official_reference": null,
+        "reference_check": {
+          "classification": "manual_reference_required"
+        }
+      },
+      "source_original": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/object_detection_official_v2/m61-yolov8m-protective-equipment-detection/metrics.json"
+    }
+  ],
+  "code": {
+    "source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/object_detection_official_v2/_source_snapshot/run_model.py",
+    "sha256": "f2fb744cfeffd526f9088df0d3ee7e4b17ce65eeada64030fe37deb96dd485dc",
+    "recorded_sha256": null,
+    "attestation": "result_batch_snapshot",
+    "status_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m061/status.json",
+    "selection": "same_batch_snapshot",
+    "archive": "code_archive/f2fb744cfeffd526_run_model.py"
+  },
+  "support_files": [
+    "download_official_source.py",
+    "models.json",
+    "run_model.py",
+    "setup_env.sh",
+    "run_all.sh",
+    "check_environment.py"
+  ],
+  "final_scorer": null,
+  "backend_package": "remaining_detection_eval",
+  "readiness": "code_and_result_identified",
+  "launch_status": "configured",
+  "metadata_warning": null
+}

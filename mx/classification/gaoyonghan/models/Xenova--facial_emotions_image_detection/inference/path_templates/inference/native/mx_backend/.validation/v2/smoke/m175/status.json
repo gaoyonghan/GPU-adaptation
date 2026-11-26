@@ -1,0 +1,177 @@
+{
+  "sequence": 175,
+  "model_id": "gerhardien/face-emotion",
+  "variant": null,
+  "phase": "smoke",
+  "protocol_fingerprint": "d05e1e2732ba97007a900e3305a9d4e433f81782c2fdeeb3349bbcc91094fcd5",
+  "protocol": {
+    "model": "6a50dc6da67cbc6dbee02d24b24b49e17fb7d84c35d57a66315eae31aeb593e0",
+    "code": {
+      "run_model.py": "b9b7e34d4db126e9495d674a9fd24dea83a732fe2ad0a28cda953f4856831ec8",
+      "common.py": "87e119ea13cd713bb054693dae0e04b7064b4fd683c8479b7715fd9b3883d045",
+      "prepare.py": "bf5bd4e223b181dd89142dbf467f92fe7c09b88ab4c82b061346248019f4ad9b",
+      "dispatch.py": "5d421d08e4b36dc0ad02144dd8540c007b125f4e2c728c490e5e3270375e58cf",
+      "timing.py": "db23cf873121e5e9345f23488d02d7757560a25084f330a56e38d5969d448342",
+      "native_js.mjs": "7ce8d0c8d4119a2ce2a4a0b3b89ffaffea9e4028e1e4196b09d8cdbf922685b1"
+    },
+    "environment": {
+      "python": "3.11.16 (main, Aug 27 2026, 14:44:21) [GCC 14.3.0]",
+      "versions": {
+        "torch": "2.5.1+cu121",
+        "torchvision": "0.20.1+cu121",
+        "transformers": "4.50.0",
+        "timm": "1.0.15",
+        "Pillow": "11.1.0",
+        "numpy": "1.26.4",
+        "scikit-learn": "1.5.2",
+        "pyarrow": "19.0.1"
+      },
+      "cuda_runtime": "12.1",
+      "cuda_available": true
+    },
+    "device": "cuda:1",
+    "batch_size": 1,
+    "warmup": 10,
+    "workers": 2,
+    "variant": null
+  },
+  "model_manifest": {
+    "sequence": 175,
+    "model_id": "gerhardien/face-emotion",
+    "model_path": "__MODEL_ROOT__/weights/gerhardien/face-emotion",
+    "revision": "88e7271a54509ce5200686811177038880514dc2",
+    "task_type": "image-classification",
+    "status": "not_started",
+    "official_model_card": "https://huggingface.co/gerhardien/face-emotion",
+    "official_reference": null,
+    "reference_comparison": "manual_reference_required",
+    "known_differences": [
+      "Four-class model evaluated only on its supported classes; do not claim full seven-class FER performance."
+    ],
+    "config": {
+      "_name_or_path": "./best_model",
+      "architectures": [
+        "ViTForImageClassification"
+      ],
+      "attention_probs_dropout_prob": 0.0,
+      "encoder_stride": 16,
+      "hidden_act": "gelu",
+      "hidden_dropout_prob": 0.0,
+      "hidden_size": 768,
+      "id2label": {
+        "0": "angry",
+        "1": "happy",
+        "2": "neutral",
+        "3": "sad"
+      },
+      "image_size": 224,
+      "initializer_range": 0.02,
+      "intermediate_size": 3072,
+      "label2id": {
+        "angry": 0,
+        "happy": 1,
+        "neutral": 2,
+        "sad": 3
+      },
+      "layer_norm_eps": 1e-12,
+      "model_type": "vit",
+      "num_attention_heads": 12,
+      "num_channels": 3,
+      "num_hidden_layers": 12,
+      "patch_size": 16,
+      "qkv_bias": true,
+      "torch_dtype": "float32",
+      "transformers_version": "4.47.1"
+    },
+    "preprocessing": {
+      "do_convert_rgb": null,
+      "do_normalize": true,
+      "do_rescale": true,
+      "do_resize": true,
+      "image_mean": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "image_processor_type": "ViTImageProcessor",
+      "image_std": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "resample": 2,
+      "rescale_factor": 0.00392156862745098,
+      "size": {
+        "height": 224,
+        "width": 224
+      }
+    },
+    "architecture": [
+      "ViTForImageClassification"
+    ],
+    "files": {
+      "model.safetensors": {
+        "size": 343230128,
+        "sha256": "da3a7ba7d2b37caf4b04f83396994e0b7b86c7cd97eb887f2de31c944ed59b20"
+      },
+      "config.json": {
+        "size": 721,
+        "sha256": "8ca9615603df3fe8d97d1253ccbdfd5622ee924b8a32f20e752f1dd7c3c5b64b"
+      },
+      "preprocessor_config.json": {
+        "size": 351,
+        "sha256": "445c77049d082004aa07593344d5e1f521f1198228bf586196f70ce7ae021414"
+      },
+      "README.md": {
+        "size": 988,
+        "sha256": "2230d0a21d3dde4c1e58a6b827b249ed23a4a0e0808206704022fc54e6283326"
+      }
+    },
+    "weight": "model.safetensors",
+    "backend": "hf_published",
+    "environment": "shared_hf",
+    "dataset_relation": "original_protocol_incomplete",
+    "split": "Jeneral test; four supported labels",
+    "excluded_source_labels": {
+      "disgust": 111,
+      "fear": 1024,
+      "surprise": 831
+    },
+    "images": 5212,
+    "covered_target_classes": 4,
+    "num_output_classes": 4,
+    "label_mapping": {
+      "0": "angry",
+      "1": "happy",
+      "2": "neutral",
+      "3": "sad"
+    },
+    "scoring": "reference",
+    "evaluator": "sklearn reference scoring",
+    "fidelity": "reference_baseline",
+    "case_type": "special",
+    "special_tags": [
+      "framework_numeric_difference",
+      "official_evaluator_missing"
+    ],
+    "inference_entry": "publisher_transformers_model_and_processor",
+    "default_batch_size": 1,
+    "dtype": "float32",
+    "warmup_batches": 10,
+    "index": "__MODEL_ROOT__/resources/runtime/assets/workspace/classification171_200_eval/indices/175.jsonl",
+    "index_sha256": "061275620eaa52025418fc06329795a3e2b0036f8bdd9d130e233857e0e55ddc",
+    "data_containers": {
+      "__DATASET_ROOT__/datasets_171_200/fer2013_jeneral/raw/test.pt": {
+        "size": 11590857,
+        "mtime_ns": 1790055643461409172
+      }
+    },
+    "protocol_fingerprint": "6a50dc6da67cbc6dbee02d24b24b49e17fb7d84c35d57a66315eae31aeb593e0"
+  },
+  "status": "partial_complete",
+  "gpu_at_start": "0, GPU-edb63bcd-7ac5-4284-b9ea-825830b8ebba, NVIDIA GeForce RTX 4090, 580.126.09, 786 MiB, 20 %\n1, GPU-a11f730c-a975-2bf0-b765-3c24d83b7104, NVIDIA GeForce RTX 4090, 580.126.09, 133 MiB, 12 %",
+  "full_evaluation": false,
+  "images": 10,
+  "timing_file": "__MODEL_ROOT__/resources/runtime/assets/workspace/classification171_200_eval/.validation/v2/smoke/m175/timing.json",
+  "run_wall_seconds_this_segment": 4.056344176176935
+}

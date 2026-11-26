@@ -1,0 +1,60 @@
+{
+  "sequence": 68,
+  "files": [
+    {
+      "path": "merges.txt",
+      "bytes": 524619,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "model.safetensors",
+      "bytes": 461822656,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "config.json",
+      "bytes": 1959,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "preprocessor_config.json",
+      "bytes": 492,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5141,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "vocab.json",
+      "bytes": 1059962,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": ".gitattributes",
+      "bytes": 1519,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tokenizer_config.json",
+      "bytes": 749,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "special_tokens_map.json",
+      "bytes": 588,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    }
+  ],
+  "mismatches": []
+}

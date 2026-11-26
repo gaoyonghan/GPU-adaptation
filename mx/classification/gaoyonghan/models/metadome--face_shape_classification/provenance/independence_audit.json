@@ -1,0 +1,22 @@
+{
+  "sequence": 92,
+  "model_id": "metadome/face_shape_classification",
+  "source_archive_hash_matches": true,
+  "source_archive_sha256": "e1396ad28e7dbd834039b5392b1d8459dcd7ce17a13a9e610f59dbbcf61cf180",
+  "prepared_entry_source_sha256": "968dd8beeb9c348edd7369e296b1e6b70077d869fb4ed90b7d321604aeb3d652",
+  "local_entry_sha256": "d5ced2d108a3d1259ed279dd685fa79f2ef7a650f02fae7c0244690c76f84e1a",
+  "local_entry": "inference/native/run_m92_native.py",
+  "central_dispatch_in_entry": false,
+  "unexpected_external_links": [],
+  "declared_dataset_links": [],
+  "broken_links": [],
+  "path_template_count": 321,
+  "state": "entrypoint_verified_full_run_pending",
+  "validation": {
+    "returncode": 0,
+    "python": "/home/ubuntu/gaoyonghan/gpu/.venv-m92-huggingpics/bin/python",
+    "checked_at": "2026-11-10T15:56:58.860453+08:00",
+    "scope": "native help/import/path check only; not full inference"
+  },
+  "smoke_verification": null
+}

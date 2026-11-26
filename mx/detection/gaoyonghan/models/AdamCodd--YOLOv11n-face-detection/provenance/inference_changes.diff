@@ -1,0 +1,21 @@
+--- original_inference.py
++++ inference/native/run_widerface.py
+@@ -13,15 +13,15 @@
+ from run_model import core, digest, file_hash
+ 
+ HERE=Path(__file__).resolve().parent
+-DATA=Path('/data2/gaoyonghan/gpu/dataset/widerface_val')
++DATA=Path('/home/ubuntu/文档/ChatGPT/idea 2/outputs/launch_audit_20261005/migration_inputs/datasets/widerface_val')
+ EVAL=HERE/'assets/widerface_evaluator'
+ 
+ def main():
+     parser=argparse.ArgumentParser();parser.add_argument('--max-images',type=int,default=10);parser.add_argument('--device',default='cuda:0');args=parser.parse_args()
+-    out=Path('/home/ubuntu/gaoyonghan/gpu/results/remaining25_wider_v2/YOLOv11n-face-detection');out.mkdir(parents=True,exist_ok=True)
++    out=Path('/data2/gaoyonghan/gpu_model_standalone_20261110/release/model/检测/AdamCodd--YOLOv11n-face-detection/results/run_001/m026');out.mkdir(parents=True,exist_ok=True)
+     with (out/'.lock').open('w') as lock:
+         fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
+-        weight=Path('/data2/gaoyonghan/gpu/model/AdamCodd/YOLOv11n-face-detection/model.pt')
++        weight=Path('/data2/gaoyonghan/gpu_model_standalone_20261110/release/model/检测/AdamCodd--YOLOv11n-face-detection/resources/model_index/AdamCodd/YOLOv11n-face-detection/model.pt')
+         gt_dir=DATA/'eval_tools/ground_truth';gt=loadmat(gt_dir/'wider_face_val.mat')
+         samples=[(str(e[0][0]),str(f[0][0])) for e,fs in zip(gt['event_list'],gt['file_list']) for f in fs[0]]
+         assert len(samples)==3226 and len(set(samples))==3226

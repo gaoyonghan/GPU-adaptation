@@ -1,0 +1,35 @@
+{
+  "schema": "model-eval/classification-inventory/v1",
+  "scope": "Existing 59 classification models; model 93 is retrieval and excluded.",
+  "models": [
+    {
+      "sequence": 195,
+      "model_id": "Ahmed9275/Vit-Cifar100",
+      "runner_family": "classification171",
+      "adapter": "native_labels",
+      "state": "integrated",
+      "dataset": {
+        "id": "classification171_195",
+        "relation": "original_exact",
+        "split": "CIFAR100 test, 10000",
+        "note": [
+          "Local checkpoint and publisher inference components retained. Offline file paths, eval mode, batching, timing observation and reference scoring are external orchestration."
+        ],
+        "index_source": "inference/indices/195.jsonl",
+        "data_containers": [
+          "../../../../dataset/datasets_171_200/cifar100/raw/cifar100/test-00000-of-00001.parquet"
+        ]
+      },
+      "qualification": "original_exact",
+      "limitations": [],
+      "num_classes": 100,
+      "expected_images": 10000,
+      "category_reference": {
+        "file": "inference/models.json",
+        "sequence": 195,
+        "field": "label_mapping"
+      },
+      "gt_index": "inference/indices/195.jsonl"
+    }
+  ]
+}

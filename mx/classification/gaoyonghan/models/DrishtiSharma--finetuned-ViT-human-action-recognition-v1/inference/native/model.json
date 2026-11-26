@@ -1,0 +1,18 @@
+{
+  "sequence": 162,
+  "model_id": "DrishtiSharma/finetuned-ViT-human-action-recognition-v1",
+  "dirname": "DrishtiSharma__finetuned-ViT-human-action-recognition-v1",
+  "loader": "transformers",
+  "timm_name": null,
+  "num_classes": 15,
+  "dataset": "human_action",
+  "dataset_sub": "har_test",
+  "dataset_source": "Bingsu/Human_Action_Recognition 官方 test split（5400 张，非 gated）",
+  "transform": "tv_short:224",
+  "align": null,
+  "expected_images": 5400,
+  "reported_top1": 0.07907,
+  "reported_top5": null,
+  "reported_note": "作者值 7.9074% 的全精度原值是 tfevents step100 的 eval/accuracy=0.07907407730817795（×5400=427.0 精确）；该 split 标签全为 calling（数据集卡片原文 All test data is labeled 0），故此指标实为「判成 calling 的比例」，非分类准确率。作者用的是 transformers 官方示例 run_image_classification 的 val_transforms=Resize(224)+CenterCrop(224)（等比缩到短边 224 再中心裁剪），本表用 transform=tv_short:224 复刻：全表统一 bf16 得 420/5400=7.7778%（差 -0.1296pp），与作者 Native AMP 对应的 fp16 及 fp32 得 421/5400=7.7963%（差 -0.1111pp），两种精度均判复现成功（仅 1 张近邻并列样本在 bf16 下翻面，批次大小无影响）；若改用 ViTFeatureExtractor 的压扁口径会得 508/5400=9.4074%，差 +1.50pp，已证伪（该口径下 bf16/fp16/fp32 × bs8/bs64 四配置逐字节相同）。上传权重为 checkpoint-100（0.13 epoch 的早期检查点）",
+  "prepare": null
+}

@@ -1,0 +1,55 @@
+{
+  "sequence": 161,
+  "model_id": "therealcyberlord/stanford-car-vit-patch16",
+  "task": "classification",
+  "model_dir": "classification/gaoyonghan/models/therealcyberlord--stanford-car-vit-patch16",
+  "layout": {
+    "entry": "inference.py",
+    "entrypoint": "inference/entrypoint.json",
+    "native_runner": "inference/native/run_model.py",
+    "model_config": "inference/native/model.json",
+    "engine": "inference/native/engine.py",
+    "prepare": "inference/prepare.py",
+    "output_format": "inference/output_format/",
+    "label_map": "inference/labels/stanford_cars_161_label_map.json",
+    "weights": "weights/",
+    "result": "result/run_001/",
+    "provenance": "provenance/"
+  },
+  "top_level_entries": [
+    "README.md",
+    "inference",
+    "inference.py",
+    "provenance",
+    "result",
+    "weights"
+  ],
+  "identity": {
+    "dirname": "therealcyberlord__stanford-car-vit-patch16",
+    "loader": "transformers",
+    "num_classes": 196,
+    "timm_name": null,
+    "batch_size": 64,
+    "precision": "amp_bf16"
+  },
+  "weights": {
+    "local_dir": "weights/",
+    "file_count": 5,
+    "bytes": 343840300,
+    "verification": "weights/weight_verification.json",
+    "source_at_adaptation": "/mnt/afs/laishen/gpu_infer/models/therealcyberlord__stanford-car-vit-patch16"
+  },
+  "upstream": {
+    "repo": "therealcyberlord/stanford-car-vit-patch16",
+    "revision": "4a2c3dac90a7d0a169612b4928c8dc63a6a6f3c8",
+    "source_files_kept": [
+      ".gitattributes",
+      "README.md",
+      "config.json",
+      "model.safetensors",
+      "preprocessor_config.json"
+    ],
+    "note": "只保留离线推理所需的仓库根文件；训练现场产物（checkpoint-*、optimizer.pt、runs/、.cache/）与 .bin 副本未收录。"
+  },
+  "created_at": "2026-11-19T13:26:47.431903+00:00"
+}

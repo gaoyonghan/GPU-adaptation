@@ -1,0 +1,379 @@
+{
+  "generated_at": "2026-09-05T10:58:31.409026+00:00",
+  "total_detection_models": 62,
+  "existing_green_queue": 37,
+  "current_scope_unique_models": 25,
+  "initial_primary_blocker_counts": {
+    "旧替代集类别不全，需核对任务覆盖": 4,
+    "私有数据且缺任务匹配的公开金标": 2,
+    "原协议/划分不明，现有数据可做参考评测": 8,
+    "数据已有，缺任务适配或多权重覆盖": 8,
+    "仅下载了说明/发布链接，实际权重缺失": 2,
+    "数据下载未完成，当前目录为空": 1
+  },
+  "current_state_counts": {
+    "complete": 21,
+    "partial_complete": 3,
+    "blocked": 1
+  },
+  "counting_rule": "Unique model IDs; all required tasks must have complete frozen benchmark metrics. PubTables means the model-blind 1000-image benchmark, not the original 93834-image test. Invalid cmarkea and all superseded Qualcomm v1/v2 results excluded.",
+  "fidelity_counts": {
+    "reference_baseline": 25
+  },
+  "comparison_counts": {
+    "not_officially_comparable": 25
+  },
+  "case_type_counts": {
+    "special": 25
+  },
+  "models": [
+    {
+      "sequence": 19,
+      "model_id": "Aryn/deformable-detr-DocLayNet",
+      "state": "complete",
+      "all_tasks_complete": true,
+      "required_tasks": [
+        "bbox_detection_classification"
+      ],
+      "results": [
+        {
+          "status": "complete",
+          "task": "val",
+          "valid_complete": true,
+          "images": 6489,
+          "result_directory": "__MODEL_ROOT__/resources/runtime/assets/workspace/results/remaining25_v3/m19-deformable-detr-doclaynet/val",
+          "metrics": {
+            "metrics": {
+              "AP": 0.7315644440470418,
+              "AP50": 0.9252723325451168,
+              "AP75": 0.7739664676123218,
+              "AP_small": 0.5885813453979969,
+              "AP_medium": 0.630906708268036,
+              "AP_large": 0.7967201336386789,
+              "AR1": 0.37912709971045666,
+              "AR10": 0.7799433607853804,
+              "AR100": 0.8295846707983937,
+              "AR_small": 0.6964870248175528,
+              "AR_medium": 0.7653300982231676,
+              "AR_large": 0.8900262647646112,
+              "per_class_AP": {
+                "Caption": 0.8459563227506719,
+                "Footnote": 0.703649320923663,
+                "Formula": 0.6293358835959331,
+                "List-item": 0.8107154289401199,
+                "Page-footer": 0.5476456093786839,
+                "Page-header": 0.6491803432210851,
+                "Picture": 0.8218064680824007,
+                "Section-header": 0.5959214631712615,
+                "Table": 0.8475278343678347,
+                "Text": 0.8129162688295634,
+                "Title": 0.7825539412562424
+              }
+            },
+            "unit": "fraction_0_to_1",
+            "coverage": {
+              "model_labels": {
+                "1": "Caption",
+                "10": "Text",
+                "11": "Title",
+                "2": "Footnote",
+                "3": "Formula",
+                "4": "List-item",
+                "5": "Page-footer",
+                "6": "Page-header",
+                "7": "Picture",
+                "8": "Section-header",
+                "9": "Table"
+              },
+              "mapping": {
+                "1": 1,
+                "10": 10,
+                "11": 11,
+                "2": 2,
+                "3": 3,
+                "4": 4,
+                "5": 5,
+                "6": 6,
+                "7": 7,
+                "8": 8,
+                "9": 9
+              },
+              "covered_labels": [
+                "Caption",
+                "Text",
+                "Title",
+                "Footnote",
+                "Formula",
+                "List-item",
+                "Page-footer",
+                "Page-header",
+                "Picture",
+                "Section-header",
+                "Table"
+              ],
+              "missing_labels": [],
+              "covered_count": 11,
+              "total_model_classes": 11,
+              "gt_instances_per_class": {
+                "Caption": 1763,
+                "Footnote": 312,
+                "Formula": 1894,
+                "List-item": 13320,
+                "Page-footer": 5571,
+                "Page-header": 6683,
+                "Picture": 2775,
+                "Section-header": 15744,
+                "Table": 2269,
+                "Text": 49186,
+                "Title": 299
+              }
+            },
+            "evaluation_images": 6489,
+            "annotation_sha256": "16da7ad53f07dd0b0d0d24b41098e7d96c99a0a42e7155b7c545ba4d8e9c743c",
+            "protocol_fingerprint": "656a77c2bcc822a5560cdb8c00a23e48664fcb78041cb0932cbb4c220ae21579",
+            "reference_check": "not_officially_comparable"
+          },
+          "coverage": {
+            "model_labels": {
+              "1": "Caption",
+              "10": "Text",
+              "11": "Title",
+              "2": "Footnote",
+              "3": "Formula",
+              "4": "List-item",
+              "5": "Page-footer",
+              "6": "Page-header",
+              "7": "Picture",
+              "8": "Section-header",
+              "9": "Table"
+            },
+            "mapping": {
+              "1": 1,
+              "10": 10,
+              "11": 11,
+              "2": 2,
+              "3": 3,
+              "4": 4,
+              "5": 5,
+              "6": 6,
+              "7": 7,
+              "8": 8,
+              "9": 9
+            },
+            "covered_labels": [
+              "Caption",
+              "Text",
+              "Title",
+              "Footnote",
+              "Formula",
+              "List-item",
+              "Page-footer",
+              "Page-header",
+              "Picture",
+              "Section-header",
+              "Table"
+            ],
+            "missing_labels": [],
+            "covered_count": 11,
+            "total_model_classes": 11,
+            "gt_instances_per_class": {
+              "Caption": 1763,
+              "Footnote": 312,
+              "Formula": 1894,
+              "List-item": 13320,
+              "Page-footer": 5571,
+              "Page-header": 6683,
+              "Picture": 2775,
+              "Section-header": 15744,
+              "Table": 2269,
+              "Text": 49186,
+              "Title": 299
+            }
+          },
+          "error": null
+        },
+        {
+          "status": "complete",
+          "task": "test",
+          "valid_complete": true,
+          "images": 4999,
+          "result_directory": "__MODEL_ROOT__/resources/runtime/assets/workspace/results/remaining25_v3/m19-deformable-detr-doclaynet/test",
+          "metrics": {
+            "metrics": {
+              "AP": 0.7442089100042552,
+              "AP50": 0.9074214949353159,
+              "AP75": 0.8072947096318441,
+              "AP_small": 0.5484990153104041,
+              "AP_medium": 0.6540212800416103,
+              "AP_large": 0.8162120856316705,
+              "AR1": 0.38588704025381376,
+              "AR10": 0.7954796861778886,
+              "AR100": 0.8400443591044167,
+              "AR_small": 0.6632207107100779,
+              "AR_medium": 0.7771752079762202,
+              "AR_large": 0.8970640307869424,
+              "per_class_AP": {
+                "Caption": 0.717578954631626,
+                "Footnote": 0.7623803450364319,
+                "Formula": 0.6176967439049244,
+                "List-item": 0.8395663357374985,
+                "Page-footer": 0.5835419786278144,
+                "Page-header": 0.7031862430763706,
+                "Picture": 0.7385590247828298,
+                "Section-header": 0.7117665837130677,
+                "Table": 0.8522955040476533,
+                "Text": 0.8646891400701264,
+                "Title": 0.7950371564184644
+              }
+            },
+            "unit": "fraction_0_to_1",
+            "coverage": {
+              "model_labels": {
+                "1": "Caption",
+                "10": "Text",
+                "11": "Title",
+                "2": "Footnote",
+                "3": "Formula",
+                "4": "List-item",
+                "5": "Page-footer",
+                "6": "Page-header",
+                "7": "Picture",
+                "8": "Section-header",
+                "9": "Table"
+              },
+              "mapping": {
+                "1": 1,
+                "10": 10,
+                "11": 11,
+                "2": 2,
+                "3": 3,
+                "4": 4,
+                "5": 5,
+                "6": 6,
+                "7": 7,
+                "8": 8,
+                "9": 9
+              },
+              "covered_labels": [
+                "Caption",
+                "Text",
+                "Title",
+                "Footnote",
+                "Formula",
+                "List-item",
+                "Page-footer",
+                "Page-header",
+                "Picture",
+                "Section-header",
+                "Table"
+              ],
+              "missing_labels": [],
+              "covered_count": 11,
+              "total_model_classes": 11,
+              "gt_instances_per_class": {
+                "Caption": 1543,
+                "Footnote": 387,
+                "Formula": 1966,
+                "List-item": 10522,
+                "Page-footer": 3994,
+                "Page-header": 3366,
+                "Picture": 3534,
+                "Section-header": 8550,
+                "Table": 2394,
+                "Text": 29940,
+                "Title": 335
+              }
+            },
+            "evaluation_images": 4999,
+            "annotation_sha256": "a40fc336e568eb25e566bcc3d7b18d8680821fd8095aafa17bc97e534aaf15e5",
+            "protocol_fingerprint": "27a505c6e9f0e9909548c66d6418213bf41bbcdbbee843f7b9ce9da44ffc8290",
+            "reference_check": "not_officially_comparable"
+          },
+          "coverage": {
+            "model_labels": {
+              "1": "Caption",
+              "10": "Text",
+              "11": "Title",
+              "2": "Footnote",
+              "3": "Formula",
+              "4": "List-item",
+              "5": "Page-footer",
+              "6": "Page-header",
+              "7": "Picture",
+              "8": "Section-header",
+              "9": "Table"
+            },
+            "mapping": {
+              "1": 1,
+              "10": 10,
+              "11": 11,
+              "2": 2,
+              "3": 3,
+              "4": 4,
+              "5": 5,
+              "6": 6,
+              "7": 7,
+              "8": 8,
+              "9": 9
+            },
+            "covered_labels": [
+              "Caption",
+              "Text",
+              "Title",
+              "Footnote",
+              "Formula",
+              "List-item",
+              "Page-footer",
+              "Page-header",
+              "Picture",
+              "Section-header",
+              "Table"
+            ],
+            "missing_labels": [],
+            "covered_count": 11,
+            "total_model_classes": 11,
+            "gt_instances_per_class": {
+              "Caption": 1543,
+              "Footnote": 387,
+              "Formula": 1966,
+              "List-item": 10522,
+              "Page-footer": 3994,
+              "Page-header": 3366,
+              "Picture": 3534,
+              "Section-header": 8550,
+              "Table": 2394,
+              "Text": 29940,
+              "Title": 335
+            }
+          },
+          "error": null
+        }
+      ],
+      "next_action": "官方DocLayNet val/test分别运行；保留切分不明，不按更高分挑选官方结果。",
+      "supplemental_results": [
+        {
+          "sequence": 19,
+          "label": "原比赛集，整体COCO评分",
+          "state": "complete",
+          "result_directory": "__MODEL_ROOT__/resources/runtime/assets/workspace/results/remaining25_supplemental_20260905/m19-doclaynet-competition498",
+          "images": 498,
+          "classes": 11,
+          "gt_instances": 9158,
+          "predictions": 49800,
+          "AP": 0.6015225569768398,
+          "AP50": 0.7844178398856715,
+          "AR100": 0.7428505054778051,
+          "unit": "fraction_0_to_1",
+          "protocol_fingerprint": "95c2f49002db4f0273c04cd8c7eeced8c1f4fbca005f99f37bfa06a689771dad",
+          "weight_sha256": "e3861d34685d3b36e5f38370597daf98fb2f98a852cfa5c125035057ded06809",
+          "independent_verification": "model19/independent_verification.json",
+          "metrics_sha256": "630ba5696b68416c031287725f831d12984a5dcead9f946be3a7af36d465940d"
+        }
+      ],
+      "preferred_reference_result_directory": "__MODEL_ROOT__/resources/runtime/assets/workspace/results/remaining25_supplemental_20260905/m19-doclaynet-competition498",
+      "supplemental_note": "已补原比赛498页、9158框、11类；pooled AP60.1523%/AR74.2851%均按论文精度舍入为60.2%/74.3%。实际官方ZIP缺四域页面映射，四域排名分仍为空；模型卡57.1来源未确认。旧普通test74.42%保留历史基线。"
+    }
+  ],
+  "supplemental_updated_at": "2026-09-05T15:25:21.596769+00:00",
+  "supplemental_summary": "supplemental_20260905/summary.json"
+}

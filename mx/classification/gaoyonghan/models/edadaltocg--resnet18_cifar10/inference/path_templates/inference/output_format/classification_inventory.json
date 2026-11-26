@@ -1,0 +1,48 @@
+{
+  "schema": "model-eval/classification-inventory/v1",
+  "scope": "One independent MX GPU classification model",
+  "models": [
+    {
+      "sequence": 110,
+      "model_id": "edadaltocg/resnet18_cifar10",
+      "dataset": {
+        "id": "CIFAR-10",
+        "split": "test",
+        "note": [
+          "CIFAR-10 test\n10,000 张"
+        ],
+        "native_scope": {
+          "name": "CIFAR-10",
+          "split": "test",
+          "image_count": 10000,
+          "class_count": 10,
+          "class_names": [
+            "airplane",
+            "automobile",
+            "bird",
+            "cat",
+            "deer",
+            "dog",
+            "frog",
+            "horse",
+            "ship",
+            "truck"
+          ]
+        },
+        "relation": "native_e07_registered_scope",
+        "index_source": "native loader GT, materialized as classification_annotations.json in the native phase directory",
+        "data_containers": [
+          "dataset/CIFAR-10"
+        ]
+      },
+      "qualification": "native_registered_scope",
+      "limitations": [
+        "Capture-ready is a code integration state, not a claim that inference has passed.",
+        "Unobserved native Top-5 is unavailable; aggregate scores are not predictions."
+      ],
+      "num_classes": 10,
+      "expected_images": 10000,
+      "adapter": "native_labels"
+    }
+  ]
+}

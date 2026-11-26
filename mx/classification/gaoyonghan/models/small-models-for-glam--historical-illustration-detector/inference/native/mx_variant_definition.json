@@ -1,0 +1,10 @@
+{
+  "repository": "small-models-for-glam/historical-illustration-detector",
+  "revision": "3aab2a6336291b732a1552c562fd15b1bd606213",
+  "directory": "small-models-for-glam/historical-illustration-detector/pytorch/3aab2a6336291b732a1552c562fd15b1bd606213",
+  "weight": "model.safetensors",
+  "weight_sha256": "88a735f925ba36d83ad52049d3e3da6f574a118075008d049f9e355180a2f63b",
+  "dtype": "float32",
+  "nv_rerun_required": true,
+  "change": "author floating-point checkpoint replacing quantized ONNX"
+}

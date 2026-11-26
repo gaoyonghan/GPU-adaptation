@@ -1,0 +1,82 @@
+{
+  "sequence": 50,
+  "model_id": "SenseTime/deformable-detr",
+  "task": "object_detection",
+  "task_name": "目标检测",
+  "reported_result": "44.5372266305238",
+  "reference": "44.5",
+  "model_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/model_index/SenseTime/deformable-detr",
+  "model_exists_at_build": true,
+  "dataset": {
+    "id": "coco2017_val",
+    "relation": "original_exact",
+    "split": "val2017",
+    "note": "COCO 2017 Detection · val2017 · 5000 图\n官方原集（不代表全协议已对齐）"
+  },
+  "environment_id": "detection-hf",
+  "runner_family": "official_detection",
+  "final_result_sources": [
+    {
+      "source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m050/metrics-0.json",
+      "sha256": "4256aeb8b5fb29145a5ab6c59d0915cfc98a7e803d2595a4be36c3a06fb937b1",
+      "selection": "workbook_score_match",
+      "data": {
+        "metrics": {
+          "AP": 0.4453722663052376,
+          "AP50": 0.6367105208220794,
+          "AP75": 0.48691190541640095,
+          "AP_small": 0.26871674042741006,
+          "AP_medium": 0.4762818649111513,
+          "AP_large": 0.5958926622409599,
+          "AR1": 0.3520241402931356,
+          "AR10": 0.5877207011704725,
+          "AR100": 0.6293387830721929,
+          "AR_small": 0.41937056651033944,
+          "AR_medium": 0.6728984449706726,
+          "AR_large": 0.8174969540321615
+        },
+        "metrics_percent": {
+          "AP": 44.537226630523755,
+          "AP50": 63.671052082207936,
+          "AP75": 48.6911905416401,
+          "AP_small": 26.871674042741006,
+          "AP_medium": 47.62818649111513,
+          "AP_large": 59.589266224095994,
+          "AR1": 35.20241402931356,
+          "AR10": 58.77207011704725,
+          "AR100": 62.933878307219295,
+          "AR_small": 41.93705665103394,
+          "AR_medium": 67.28984449706726,
+          "AR_large": 81.74969540321615
+        },
+        "official_reference": null,
+        "reference_check": {
+          "classification": "manual_reference_required"
+        }
+      },
+      "source_original": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/object_detection_official_v2/m50-deformable-detr/metrics.json"
+    }
+  ],
+  "code": {
+    "source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/object_detection_official_v2/_source_snapshot/run_model.py",
+    "sha256": "f2fb744cfeffd526f9088df0d3ee7e4b17ce65eeada64030fe37deb96dd485dc",
+    "recorded_sha256": null,
+    "attestation": "result_batch_snapshot",
+    "status_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m050/status.json",
+    "selection": "same_batch_snapshot",
+    "archive": "code_archive/f2fb744cfeffd526_run_model.py"
+  },
+  "support_files": [
+    "download_official_source.py",
+    "models.json",
+    "run_model.py",
+    "setup_env.sh",
+    "run_all.sh",
+    "check_environment.py"
+  ],
+  "final_scorer": null,
+  "backend_package": "remaining_detection_eval",
+  "readiness": "code_and_result_identified",
+  "launch_status": "configured",
+  "metadata_warning": null
+}

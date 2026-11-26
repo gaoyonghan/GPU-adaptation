@@ -1,0 +1,27 @@
+{
+  "sequence": 27,
+  "model_id": "allenai/WildDet3D",
+  "source_archive_hash_matches": true,
+  "source_archive_sha256": "8ff7433d0cc7586a8604977e7c0b03cbd55543182c025c339e8ebe95ca1524db",
+  "prepared_entry_source_sha256": "a356ea11d2ee8e4e730d36053a2914fc8f8f9d54386a3ebeb61d4c858f8ada21",
+  "local_entry_sha256": "7845799db2fe2633c4597a50551f1f1e94884d93e5e7a501841da73b80ab11f6",
+  "local_entry": "inference/native/run_m27_native.py",
+  "central_dispatch_in_entry": false,
+  "unexpected_external_links": [],
+  "declared_dataset_links": [
+    {
+      "path": "resources/runtime/assets/workspace/official_sources/object_detection/WildDet3D/data/in_the_wild",
+      "target": "/data2/gaoyonghan/gpu/dataset/wilddet3d_val"
+    }
+  ],
+  "broken_links": [],
+  "path_template_count": 280,
+  "state": "entrypoint_verified_full_run_pending",
+  "validation": {
+    "returncode": 0,
+    "python": "/home/ubuntu/gaoyonghan/miniconda3/envs/object-detection-wilddet3d-v2/bin/python",
+    "checked_at": "2026-11-10T15:38:49.725031+08:00",
+    "scope": "native help/import/path check only; not full inference"
+  },
+  "smoke_verification": null
+}

@@ -1,0 +1,27 @@
+{
+  "sequence": 33,
+  "model_id": "morsetechlab/yolov11-license-plate-detection",
+  "source_archive_hash_matches": true,
+  "source_archive_sha256": "52c5ddb59fbe1b8eb67c33fdb16c289fb4a00d1dae133e7187e248e64edc5344",
+  "prepared_entry_source_sha256": "34ff87e679bb7aad2180ebd726bfbcf5f9d795cec50752c182c42a30a298390a",
+  "local_entry_sha256": "76e41fe020da9c76ee9b85878a18bbe9d8105add6b8734b559c0f68e87f20169",
+  "local_entry": "inference/native/run_m33x_native.py",
+  "central_dispatch_in_entry": false,
+  "unexpected_external_links": [],
+  "declared_dataset_links": [
+    {
+      "path": "resources/runtime/assets/workspace/official_sources/object_detection/WildDet3D/data/in_the_wild",
+      "target": "/data2/gaoyonghan/gpu/dataset/wilddet3d_val"
+    }
+  ],
+  "broken_links": [],
+  "path_template_count": 280,
+  "state": "entrypoint_verified_full_run_pending",
+  "validation": {
+    "returncode": 0,
+    "python": "/home/ubuntu/gaoyonghan/gpu/.venv-m33x-ultralytics83123/bin/python",
+    "checked_at": "2026-11-10T15:46:54.628724+08:00",
+    "scope": "native help/import/path check only; not full inference"
+  },
+  "smoke_verification": null
+}

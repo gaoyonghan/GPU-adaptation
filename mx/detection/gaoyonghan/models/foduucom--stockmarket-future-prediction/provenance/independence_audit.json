@@ -1,0 +1,22 @@
+{
+  "sequence": 9,
+  "model_id": "foduucom/stockmarket-future-prediction",
+  "source_archive_hash_matches": true,
+  "source_archive_sha256": "166c80d5179b72ba36b3c6eef76833b0a97d0428e7556f46b346388e527a549d",
+  "prepared_entry_source_sha256": "87c8805a26a16d1a80ccdbefb62d51ccb830bb5671d7a679ee25c2e82d4279ad",
+  "local_entry_sha256": "33633e5a55f44a265e0474000fa74564b996f49c25fc266b2c1978d3a8d59877",
+  "local_entry": "inference/native/run_model.py",
+  "central_dispatch_in_entry": false,
+  "unexpected_external_links": [],
+  "declared_dataset_links": [],
+  "broken_links": [],
+  "path_template_count": 404,
+  "state": "entrypoint_verified_full_run_pending",
+  "validation": {
+    "returncode": 0,
+    "python": "/home/ubuntu/文档/ChatGPT/idea 2/outputs/launch_audit_20261005/.venv-cu124/bin/python",
+    "checked_at": "2026-11-10T15:37:40.105961+08:00",
+    "scope": "native help/import/path check only; not full inference"
+  },
+  "smoke_verification": null
+}

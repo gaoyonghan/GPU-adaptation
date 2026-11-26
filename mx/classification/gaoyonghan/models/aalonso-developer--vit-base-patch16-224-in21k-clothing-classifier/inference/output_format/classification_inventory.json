@@ -1,0 +1,77 @@
+{
+  "schema": "model-eval/classification-inventory/v1",
+  "scope": "One independent MX GPU classification model",
+  "models": [
+    {
+      "sequence": 112,
+      "model_id": "aalonso-developer/vit-base-patch16-224-in21k-clothing-classifier",
+      "dataset": {
+        "id": "DeepFashion Category and Attribute Prediction Benchmark",
+        "split": "official test",
+        "note": [
+          "DeepFashion Category and Attribute Prediction Benchmark\n官方 test 的匹配 14 类子集\n32,692 张"
+        ],
+        "native_scope": {
+          "name": "DeepFashion Category and Attribute Prediction Benchmark",
+          "split": "official test",
+          "official_split_counts": {
+            "train": 209222,
+            "val": 40000,
+            "test": 40000
+          },
+          "selection": "14 categories whose names exactly match model labels",
+          "selected_image_count": 32692,
+          "full_selected_image_count": 32692,
+          "excluded_test_image_count": 7308,
+          "excluded_categories": {
+            "Anorak": 23,
+            "Blouse": 3416,
+            "Bomber": 39,
+            "Button-Down": 46,
+            "Caftan": 9,
+            "Capris": 9,
+            "Chinos": 73,
+            "Coat": 304,
+            "Coverup": 1,
+            "Culottes": 71,
+            "Cutoffs": 243,
+            "Flannel": 51,
+            "Gauchos": 8,
+            "Halter": 2,
+            "Henley": 106,
+            "Hoodie": 597,
+            "Jeggings": 64,
+            "Jersey": 106,
+            "Jodhpurs": 8,
+            "Joggers": 575,
+            "Kaftan": 17,
+            "Kimono": 338,
+            "Leggings": 724,
+            "Onesie": 11,
+            "Parka": 87,
+            "Peacoat": 17,
+            "Poncho": 106,
+            "Robe": 21,
+            "Sarong": 6,
+            "Sweatshorts": 160,
+            "Trunks": 41,
+            "Turtleneck": 29
+          }
+        },
+        "relation": "native_e07_registered_scope",
+        "index_source": "native loader GT, materialized as classification_annotations.json in the native phase directory",
+        "data_containers": [
+          "dataset/DeepFashion-Category-and-Attribute-Prediction-Benchmark"
+        ]
+      },
+      "qualification": "native_registered_scope",
+      "limitations": [
+        "Capture-ready is a code integration state, not a claim that inference has passed.",
+        "Unobserved native Top-5 is unavailable; aggregate scores are not predictions."
+      ],
+      "num_classes": 14,
+      "expected_images": 32692,
+      "adapter": "native_labels"
+    }
+  ]
+}

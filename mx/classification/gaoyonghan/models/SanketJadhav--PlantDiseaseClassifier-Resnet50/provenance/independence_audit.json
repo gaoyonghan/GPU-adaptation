@@ -1,0 +1,22 @@
+{
+  "sequence": 89,
+  "model_id": "SanketJadhav/PlantDiseaseClassifier-Resnet50",
+  "source_archive_hash_matches": true,
+  "source_archive_sha256": "46865be5eddebff4f08b138958aa7db8a749673f00879ce83cc1b2d02c9b5291",
+  "prepared_entry_source_sha256": "15d65085dd6e1040a3c936a60e0469de17ff422774506069ddffb5fe77edcd7e",
+  "local_entry_sha256": "15d65085dd6e1040a3c936a60e0469de17ff422774506069ddffb5fe77edcd7e",
+  "local_entry": "inference/native/run_model.py",
+  "central_dispatch_in_entry": false,
+  "unexpected_external_links": [],
+  "declared_dataset_links": [],
+  "broken_links": [],
+  "path_template_count": 319,
+  "state": "entrypoint_verified_full_run_pending",
+  "validation": {
+    "returncode": 0,
+    "python": "/home/ubuntu/gaoyonghan/gpu/classification8_eval/.venv/bin/python",
+    "checked_at": "2026-11-10T15:56:42.301124+08:00",
+    "scope": "native help/import/path check only; not full inference"
+  },
+  "smoke_verification": null
+}

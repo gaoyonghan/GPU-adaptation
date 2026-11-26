@@ -1,0 +1,32 @@
+{
+  "model_root": "/project/detection/gaoyonghan/models/google--owlvit-large-patch14/weights",
+  "dataset_root": "/project/dataset",
+  "official_source_root": "/project/detection/gaoyonghan/models/google--owlvit-large-patch14/resources/runtime/assets/workspace/official_sources/object_detection",
+  "classification8_runtime_root": "/project/detection/gaoyonghan/models/google--owlvit-large-patch14/resources/runtime/assets/workspace/classification8_eval/.runtime",
+  "path_rewrites": {
+    "/workspace/gpu/model": "/project/detection/gaoyonghan/models/google--owlvit-large-patch14/weights",
+    "/workspace/gpu/dataset": "/project/dataset",
+    "/work/evaluation/runtime/assets": "/project/detection/gaoyonghan/models/google--owlvit-large-patch14/resources/runtime/assets",
+    "/work/evaluation/runtime/project": "/project/detection/gaoyonghan/models/google--owlvit-large-patch14/resources/runtime/project",
+    "/work/evaluation/runtime/results/_shared_runtimes": "/project/detection/gaoyonghan/models/google--owlvit-large-patch14/resources/runtime/results/_shared_runtimes",
+    "/home/ubuntu/gaoyonghan/miniconda3/envs/object-detection-hf-v2/lib/python3.11/site-packages/timm/data/_info/imagenet22k_synsets.txt": "/project/detection/gaoyonghan/models/google--owlvit-large-patch14/resources/runtime/assets/labels/imagenet22k_synsets.txt",
+    "/home/ubuntu/Documents/Codex/2026-09-27/codex-threads-01a0de0e-9d72-7fc0-b485/outputs/模型评测项目整理_v3_推理计时": "/project/detection/gaoyonghan/models/google--owlvit-large-patch14/resources/runtime/project",
+    "/home/ubuntu/gaoyonghan/gpu/results/m33x_native83123_v1/dataset": "/project/detection/gaoyonghan/models/google--owlvit-large-patch14/resources/runtime/assets/prepared/prepared_m33_root",
+    "/home/ubuntu/gaoyonghan/gpu/results/m24_native8021_v1/dataset": "/project/detection/gaoyonghan/models/google--owlvit-large-patch14/resources/runtime/assets/prepared/prepared_m24_root",
+    "/home/ubuntu/gaoyonghan/gpu/results/native_18_20_21_v1/plate": "/project/detection/gaoyonghan/models/google--owlvit-large-patch14/resources/runtime/assets/prepared/prepared_plate_root",
+    "/home/ubuntu/gaoyonghan/datasets/omnidocbench/OmniDocBench": "/project/detection/gaoyonghan/models/google--owlvit-large-patch14/resources/runtime/assets/OmniDocBench",
+    "/home/ubuntu/gaoyonghan/gpu/results/m07_native840_v1/coco": "/project/detection/gaoyonghan/models/google--owlvit-large-patch14/resources/runtime/assets/prepared/prepared_coco_root",
+    "/home/ubuntu/文档/ChatGPT/gpu/model_197_assets/datasets": "/project/dataset",
+    "/home/ubuntu/文档/ChatGPT/gpu/model_197_assets/weights": "/project/detection/gaoyonghan/models/google--owlvit-large-patch14/weights/arize-ai/resnet-50-fashion-mnist-quality-drift",
+    "/home/ubuntu/文档/ChatGPT/gpu/datasets_171_200": "/project/dataset/datasets_171_200",
+    "/home/ubuntu/gaoyonghan/gpu/datasets_171_200": "/project/dataset/datasets_171_200",
+    "/home/ubuntu/.config/Ultralytics/Arial.ttf": "/project/detection/gaoyonghan/models/google--owlvit-large-patch14/resources/runtime/assets/fonts/Arial.ttf",
+    "/data2/gaoyonghan/dataset/ImageNet": "/project/dataset/ImageNet",
+    "/data2/gaoyonghan/gpu/dataset": "/project/dataset",
+    "/data2/gaoyonghan/gpu/model": "/project/detection/gaoyonghan/models/google--owlvit-large-patch14/weights",
+    "/home/ubuntu/gaoyonghan/gpu": "/project/detection/gaoyonghan/models/google--owlvit-large-patch14/resources/runtime/assets/workspace",
+    "/home/ubuntu/文档/ChatGPT/gpu": "/project/detection/gaoyonghan/models/google--owlvit-large-patch14/resources/runtime/assets/workspace",
+    "/data2/caichengrui/dataset": "/project/dataset",
+    "/project/detection/gaoyonghan/models/google--owlvit-large-patch14/resources/runtime/assets/workspace/classification8_eval/.runtime/data/imagenet": "/project/dataset/imagenet1k_val"
+  }
+}

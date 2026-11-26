@@ -1,0 +1,176 @@
+{
+  "sequence": 178,
+  "model_id": "prithivMLmods/Facial-Emotion-Detection-SigLIP2",
+  "variant": null,
+  "phase": "smoke",
+  "protocol_fingerprint": "b1544e53a08164e9436813dbd6d00a97c12bcd0e7c811a915457db809d8c64cd",
+  "protocol": {
+    "model": "9aad8794352e10818e7f9c70e0666e2a63f194be2fb436c830e69347824cd998",
+    "code": {
+      "run_model.py": "b9b7e34d4db126e9495d674a9fd24dea83a732fe2ad0a28cda953f4856831ec8",
+      "common.py": "87e119ea13cd713bb054693dae0e04b7064b4fd683c8479b7715fd9b3883d045",
+      "prepare.py": "bf5bd4e223b181dd89142dbf467f92fe7c09b88ab4c82b061346248019f4ad9b",
+      "dispatch.py": "5d421d08e4b36dc0ad02144dd8540c007b125f4e2c728c490e5e3270375e58cf",
+      "timing.py": "db23cf873121e5e9345f23488d02d7757560a25084f330a56e38d5969d448342",
+      "native_js.mjs": "7ce8d0c8d4119a2ce2a4a0b3b89ffaffea9e4028e1e4196b09d8cdbf922685b1"
+    },
+    "environment": {
+      "python": "3.11.16 (main, Aug 27 2026, 14:44:21) [GCC 14.3.0]",
+      "versions": {
+        "torch": "2.5.1+cu121",
+        "torchvision": "0.20.1+cu121",
+        "transformers": "4.50.0",
+        "timm": "1.0.15",
+        "Pillow": "11.1.0",
+        "numpy": "1.26.4",
+        "scikit-learn": "1.5.2",
+        "pyarrow": "19.0.1"
+      },
+      "cuda_runtime": "12.1",
+      "cuda_available": true
+    },
+    "device": "cuda:1",
+    "batch_size": 1,
+    "warmup": 10,
+    "workers": 2,
+    "variant": null
+  },
+  "model_manifest": {
+    "sequence": 178,
+    "model_id": "prithivMLmods/Facial-Emotion-Detection-SigLIP2",
+    "model_path": "/project/classification/gaoyonghan/models/Xenova--facial_emotions_image_detection/weights/prithivMLmods/Facial-Emotion-Detection-SigLIP2",
+    "revision": "5a352c0bab8d6b94308ca60d196fc53fd1dd5f05",
+    "task_type": "image-classification",
+    "status": "not_started",
+    "official_model_card": "https://huggingface.co/prithivMLmods/Facial-Emotion-Detection-SigLIP2",
+    "official_reference": null,
+    "reference_comparison": "manual_reference_required",
+    "known_differences": [],
+    "config": {
+      "_name_or_path": "google/siglip2-base-patch16-224",
+      "architectures": [
+        "SiglipForImageClassification"
+      ],
+      "id2label": {
+        "0": "Ahegao",
+        "1": "Angry",
+        "2": "Happy",
+        "3": "Neutral",
+        "4": "Sad",
+        "5": "Surprise"
+      },
+      "initializer_factor": 1.0,
+      "label2id": {
+        "Ahegao": 0,
+        "Angry": 1,
+        "Happy": 2,
+        "Neutral": 3,
+        "Sad": 4,
+        "Surprise": 5
+      },
+      "model_type": "siglip",
+      "problem_type": "single_label_classification",
+      "text_config": {
+        "model_type": "siglip_text_model",
+        "torch_dtype": "float32",
+        "vocab_size": 256000
+      },
+      "torch_dtype": "float32",
+      "transformers_version": "4.50.0.dev0",
+      "vision_config": {
+        "model_type": "siglip_vision_model",
+        "torch_dtype": "float32"
+      }
+    },
+    "preprocessing": {
+      "do_convert_rgb": null,
+      "do_normalize": true,
+      "do_rescale": true,
+      "do_resize": true,
+      "image_mean": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "image_processor_type": "SiglipImageProcessor",
+      "image_std": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "processor_class": "SiglipProcessor",
+      "resample": 2,
+      "rescale_factor": 0.00392156862745098,
+      "size": {
+        "height": 224,
+        "width": 224
+      }
+    },
+    "architecture": [
+      "SiglipForImageClassification"
+    ],
+    "files": {
+      "model.safetensors": {
+        "size": 371580296,
+        "sha256": "588eb8ef63533f4a6e4f195836b60ae0bafb147ff8e1abbddd1f2e5e71d02bbe"
+      },
+      "config.json": {
+        "size": 757,
+        "sha256": "1615cdc6cf9aee3a182b834893e6b9f4bbd44dfd4959ae1c9b90e375fdc14e8f"
+      },
+      "preprocessor_config.json": {
+        "size": 394,
+        "sha256": "9b36b57ebaf20f09bf4c22100ccc21877ea6bfe5aead0c00c59f8af8ccefacfc"
+      },
+      "README.md": {
+        "size": 3533,
+        "sha256": "9ee55b40fa6a9837eb8b82bc425c9479ed54e62ee3020bcab9bececc3d289e5f"
+      }
+    },
+    "weight": "model.safetensors",
+    "backend": "hf_published",
+    "environment": "shared_hf",
+    "dataset_relation": "public_replacement",
+    "split": "all published OAHEGA images; no independent split",
+    "excluded_source_labels": {},
+    "images": 15453,
+    "covered_target_classes": 6,
+    "num_output_classes": 6,
+    "label_mapping": {
+      "0": "Ahegao",
+      "1": "Angry",
+      "2": "Happy",
+      "3": "Neutral",
+      "4": "Sad",
+      "5": "Surprise"
+    },
+    "scoring": "reference",
+    "evaluator": "sklearn reference scoring",
+    "fidelity": "reference_baseline",
+    "case_type": "special",
+    "special_tags": [
+      "framework_numeric_difference",
+      "dataset_replacement",
+      "official_evaluator_missing"
+    ],
+    "inference_entry": "publisher_transformers_model_and_processor",
+    "default_batch_size": 1,
+    "dtype": "float32",
+    "warmup_batches": 10,
+    "index": "/project/classification/gaoyonghan/models/Xenova--facial_emotions_image_detection/resources/runtime/assets/workspace/classification171_200_eval/indices/178.jsonl",
+    "index_sha256": "27dcce4f4e27c2171676693cfcc5b79c949e07179c409b67b28d9bd7d8951489",
+    "data_containers": {
+      "/project/dataset/datasets_171_200/oahega/dataset.zip": {
+        "size": 2126166092,
+        "mtime_ns": 1790016581026640553
+      }
+    },
+    "protocol_fingerprint": "9aad8794352e10818e7f9c70e0666e2a63f194be2fb436c830e69347824cd998"
+  },
+  "status": "partial_complete",
+  "gpu_at_start": "0, GPU-edb63bcd-7ac5-4284-b9ea-825830b8ebba, NVIDIA GeForce RTX 4090, 580.126.09, 780 MiB, 15 %\n1, GPU-a11f730c-a975-2bf0-b765-3c24d83b7104, NVIDIA GeForce RTX 4090, 580.126.09, 133 MiB, 13 %",
+  "full_evaluation": false,
+  "images": 10,
+  "timing_file": "/project/classification/gaoyonghan/models/Xenova--facial_emotions_image_detection/resources/runtime/assets/workspace/classification171_200_eval/.validation/v2/smoke/m178/timing.json",
+  "run_wall_seconds_this_segment": 6.110733941197395
+}

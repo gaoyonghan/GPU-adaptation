@@ -1,0 +1,30 @@
+{
+  "sequence": 162,
+  "dataset": {
+    "name": "har_test",
+    "path": "/projectdataset/har_test",
+    "layout": "parquet",
+    "images": 5400,
+    "files": [
+      {
+        "name": "data/test-00000-of-00001.parquet",
+        "rows": 5400,
+        "size": 98055831,
+        "sha256": "dcb581fba9da6150ce55d4c3b8bf6566f35cdce758b9a7d0376cff4f1748b9af"
+      }
+    ],
+    "label_column": "labels",
+    "classes_observed": 1,
+    "label_distribution": {
+      "0": 5400
+    }
+  },
+  "expected_images": 5400,
+  "observed_images": 5400,
+  "match": true,
+  "label_handling": {
+    "align": null,
+    "note": "模型输出索引与数据集 ClassLabel 顺序一致，无额外映射。"
+  },
+  "verified_at": "2026-11-19T13:26:47.431903+00:00"
+}

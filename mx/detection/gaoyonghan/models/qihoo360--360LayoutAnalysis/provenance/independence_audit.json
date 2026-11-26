@@ -1,0 +1,22 @@
+{
+  "sequence": 41,
+  "model_id": "qihoo360/360LayoutAnalysis",
+  "source_archive_hash_matches": true,
+  "source_archive_sha256": "b4d210e21ec016488ccafaed65bf52fe0c94e67ba77b7f0ac77ea30867d29230",
+  "prepared_entry_source_sha256": "026c9fc409cb92044491ecb71333b68dc423b5f714b4ba6ef682a46ada90b3c1",
+  "local_entry_sha256": "85be981e15dd8349d4ede57ded6ce9e2a803d876eac723175eecf88facd3632d",
+  "local_entry": "inference/native/run_m41_omni_four.py",
+  "central_dispatch_in_entry": false,
+  "unexpected_external_links": [],
+  "declared_dataset_links": [],
+  "broken_links": [],
+  "path_template_count": 446,
+  "state": "entrypoint_verified_full_run_pending",
+  "validation": {
+    "returncode": 0,
+    "python": "/home/ubuntu/文档/ChatGPT/idea 2/outputs/launch_audit_20261005/.venv-cu124/bin/python",
+    "checked_at": "2026-11-10T15:48:58.155088+08:00",
+    "scope": "native help/import/path check only; not full inference"
+  },
+  "smoke_verification": null
+}

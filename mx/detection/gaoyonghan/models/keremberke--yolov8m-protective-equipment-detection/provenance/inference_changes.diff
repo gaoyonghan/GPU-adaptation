@@ -1,0 +1,26 @@
+--- original_inference.py
++++ inference/native/run_model.py
+@@ -33,10 +33,10 @@
+ os.environ.setdefault("TRANSFORMERS_OFFLINE", "1")
+ 
+ SCRIPT_DIR = Path(__file__).resolve().parent
+-DEFAULT_MODEL_ROOT = Path("/data2/gaoyonghan/gpu/model")
+-DEFAULT_DATASET_ROOT = Path("/data2/gaoyonghan/gpu/dataset")
+-DEFAULT_OUTPUT_ROOT = Path("/home/ubuntu/gaoyonghan/gpu/results/object_detection_official_v2")
+-DEFAULT_SOURCE_ROOT = Path("/home/ubuntu/gaoyonghan/gpu/official_sources/object_detection")
++DEFAULT_MODEL_ROOT = Path("/data2/gaoyonghan/gpu_model_standalone_20261110/release/model/检测/keremberke--yolov8m-protective-equipment-detection/resources/model_index")
++DEFAULT_DATASET_ROOT = Path("/home/ubuntu/文档/ChatGPT/idea 2/outputs/launch_audit_20261005/migration_inputs/datasets")
++DEFAULT_OUTPUT_ROOT = Path("/data2/gaoyonghan/gpu_model_standalone_20261110/release/model/检测/keremberke--yolov8m-protective-equipment-detection/resources/runtime/assets/workspace/results/object_detection_official_v2")
++DEFAULT_SOURCE_ROOT = Path("/data2/gaoyonghan/gpu_model_standalone_20261110/release/model/检测/keremberke--yolov8m-protective-equipment-detection/resources/runtime/assets/workspace/official_sources/object_detection")
+ IMAGE_SUFFIXES = {".jpg", ".jpeg", ".png", ".bmp", ".tif", ".tiff", ".webp"}
+ COCO80_NAMES = [
+     "person", "bicycle", "car", "motorcycle", "airplane", "bus", "train", "truck", "boat", "traffic light",
+@@ -1545,7 +1545,7 @@
+ 
+ 
+ def run_delegate(spec: dict[str, Any], output_dir: Path, max_images: int, device: str) -> dict[str, Any]:
+-    package = Path("/home/ubuntu/gaoyonghan/gpu/document_layout_table_eval")
++    package = Path("/data2/gaoyonghan/gpu_model_standalone_20261110/release/model/检测/keremberke--yolov8m-protective-equipment-detection/resources/runtime/assets/workspace/document_layout_table_eval")
+     if not (package / "run_model.py").is_file():
+         raise FileNotFoundError(package / "run_model.py")
+     keys = ["taha-ctdar-tracka"] if spec["sequence"] == 17 else ["aryn-doclaynet-val", "aryn-doclaynet-test"]

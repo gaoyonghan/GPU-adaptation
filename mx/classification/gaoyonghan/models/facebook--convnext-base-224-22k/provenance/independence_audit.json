@@ -1,0 +1,22 @@
+{
+  "sequence": 100,
+  "model_id": "facebook/convnext-base-224-22k",
+  "source_archive_hash_matches": true,
+  "source_archive_sha256": "775bd9641379a8ab12cd5d794d69758d40af269098cde6f132f2bf7384c41eda",
+  "prepared_entry_source_sha256": "0d3f9907e21f619f933aa07afe6624c2aea8fea8d24c0173c6418dd34c2109fe",
+  "local_entry_sha256": "01bd95cc7b30311731d86fbcd24825f32af01363a796b3a9d5be9493846fe626",
+  "local_entry": "inference/native/eval_imagenet1k_to_22k.py",
+  "central_dispatch_in_entry": false,
+  "unexpected_external_links": [],
+  "declared_dataset_links": [],
+  "broken_links": [],
+  "path_template_count": 274,
+  "state": "entrypoint_verified_full_run_pending",
+  "validation": {
+    "returncode": 0,
+    "python": "/home/ubuntu/gaoyonghan/miniconda3/envs/object-detection-hf-v2/bin/python",
+    "checked_at": "2026-11-10T15:57:34.155655+08:00",
+    "scope": "native help/import/path check only; not full inference"
+  },
+  "smoke_verification": null
+}

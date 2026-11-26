@@ -1,0 +1,168 @@
+{
+  "sequence": 22,
+  "files": [
+    {
+      "path": "MANIFEST.in",
+      "bytes": 161,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 21817,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "README.md",
+      "bytes": 13930,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "example.png",
+      "bytes": 444638,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": ".gitattributes",
+      "bytes": 1604,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "Demo.ipynb",
+      "bytes": 1812701,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "bytes": 21712,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "viz.png",
+      "bytes": 277160,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 54,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "setup.py",
+      "bytes": 352,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "pyproject.toml",
+      "bytes": 2538,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "nemotron_page_elements_v3/page_element_v3.py",
+      "bytes": 2943,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "nemotron_page_elements_v3/config.json",
+      "bytes": 0,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "nemotron_page_elements_v3/utils.py",
+      "bytes": 4753,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "nemotron_page_elements_v3/model.py",
+      "bytes": 7930,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "nemotron_page_elements_v3/weights.pth",
+      "bytes": 433894508,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "nemotron_page_elements_v3/post_processing/wbf.py",
+      "bytes": 11008,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "nemotron_page_elements_v3/post_processing/__init__.py",
+      "bytes": 1244,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "nemotron_page_elements_v3/post_processing/text_pp.py",
+      "bytes": 8845,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "nemotron_page_elements_v3/post_processing/page_elt_pp.py",
+      "bytes": 8474,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "nemotron_page_elements_v3/yolox/yolo_pafpn.py",
+      "bytes": 3670,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "nemotron_page_elements_v3/yolox/yolo_head.py",
+      "bytes": 7952,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "nemotron_page_elements_v3/yolox/darknet.py",
+      "bytes": 6159,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "nemotron_page_elements_v3/yolox/yolox.py",
+      "bytes": 1063,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "nemotron_page_elements_v3/yolox/yolo_fpn.py",
+      "bytes": 2616,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "nemotron_page_elements_v3/yolox/boxes.py",
+      "bytes": 2145,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "nemotron_page_elements_v3/yolox/network_blocks.py",
+      "bytes": 6232,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    }
+  ],
+  "mismatches": []
+}

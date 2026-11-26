@@ -1,0 +1,34 @@
+{
+  "schema": "model-eval/classification-inventory/v1",
+  "scope": "One independent MX GPU classification model",
+  "models": [
+    {
+      "sequence": 106,
+      "model_id": "apple/mobilevit-x-small",
+      "dataset": {
+        "id": "ImageNet-1K val",
+        "split": null,
+        "note": [
+          "ImageNet-1K val\n50,000 张"
+        ],
+        "native_scope": {
+          "name": "ImageNet-1K val",
+          "image_count": 50000
+        },
+        "relation": "native_e07_registered_scope",
+        "index_source": "native loader GT, materialized as classification_annotations.json in the native phase directory",
+        "data_containers": [
+          "dataset/ImageNet-1K"
+        ]
+      },
+      "qualification": "native_registered_scope",
+      "limitations": [
+        "Capture-ready is a code integration state, not a claim that inference has passed.",
+        "Unobserved native Top-5 is unavailable; aggregate scores are not predictions."
+      ],
+      "num_classes": 1000,
+      "expected_images": 50000,
+      "adapter": "native_labels"
+    }
+  ]
+}

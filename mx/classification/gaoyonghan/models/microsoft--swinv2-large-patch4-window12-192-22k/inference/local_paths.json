@@ -1,0 +1,203 @@
+{
+  "text_templates": [
+    {
+      "source": "inference/path_templates/inference/native/eval_imagenet1k_to_22k.py",
+      "destination": "inference/native/eval_imagenet1k_to_22k.py"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification8_eval/README.md",
+      "destination": "resources/runtime/project/backends/classification8_eval/README.md"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification8_eval/README_m75.md",
+      "destination": "resources/runtime/project/backends/classification8_eval/README_m75.md"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification8_eval/README_m76.md",
+      "destination": "resources/runtime/project/backends/classification8_eval/README_m76.md"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification8_eval/README_m81.md",
+      "destination": "resources/runtime/project/backends/classification8_eval/README_m81.md"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification8_eval/README_m83.md",
+      "destination": "resources/runtime/project/backends/classification8_eval/README_m83.md"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification8_eval/README_m85.md",
+      "destination": "resources/runtime/project/backends/classification8_eval/README_m85.md"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification8_eval/README_m85_m86_native.md",
+      "destination": "resources/runtime/project/backends/classification8_eval/README_m85_m86_native.md"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification8_eval/README_m85_m86_partial.md",
+      "destination": "resources/runtime/project/backends/classification8_eval/README_m85_m86_partial.md"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification8_eval/README_m88.md",
+      "destination": "resources/runtime/project/backends/classification8_eval/README_m88.md"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification8_eval/README_m92.md",
+      "destination": "resources/runtime/project/backends/classification8_eval/README_m92.md"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification8_eval/README_m94.md",
+      "destination": "resources/runtime/project/backends/classification8_eval/README_m94.md"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification8_eval/README_m95.md",
+      "destination": "resources/runtime/project/backends/classification8_eval/README_m95.md"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification8_eval/README_m99.md",
+      "destination": "resources/runtime/project/backends/classification8_eval/README_m99.md"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification8_eval/download_m85_fall11.sh",
+      "destination": "resources/runtime/project/backends/classification8_eval/download_m85_fall11.sh"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification8_eval/models.json",
+      "destination": "resources/runtime/project/backends/classification8_eval/models.json"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification8_eval/models_m81.json",
+      "destination": "resources/runtime/project/backends/classification8_eval/models_m81.json"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification8_eval/models_m83.json",
+      "destination": "resources/runtime/project/backends/classification8_eval/models_m83.json"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification8_eval/models_m92.json",
+      "destination": "resources/runtime/project/backends/classification8_eval/models_m92.json"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification8_eval/models_m92_native.json",
+      "destination": "resources/runtime/project/backends/classification8_eval/models_m92_native.json"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification8_eval/models_m94.json",
+      "destination": "resources/runtime/project/backends/classification8_eval/models_m94.json"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification8_eval/models_m95.json",
+      "destination": "resources/runtime/project/backends/classification8_eval/models_m95.json"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification8_eval/models_m99.json",
+      "destination": "resources/runtime/project/backends/classification8_eval/models_m99.json"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification8_eval/run_all.sh",
+      "destination": "resources/runtime/project/backends/classification8_eval/run_all.sh"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification8_eval/run_m75_fer2013.py",
+      "destination": "resources/runtime/project/backends/classification8_eval/run_m75_fer2013.py"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification8_eval/run_m75_fer2013.sh",
+      "destination": "resources/runtime/project/backends/classification8_eval/run_m75_fer2013.sh"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification8_eval/run_m76_animedl.py",
+      "destination": "resources/runtime/project/backends/classification8_eval/run_m76_animedl.py"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification8_eval/run_m76_animedl.sh",
+      "destination": "resources/runtime/project/backends/classification8_eval/run_m76_animedl.sh"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification8_eval/run_m81_fer2013.py",
+      "destination": "resources/runtime/project/backends/classification8_eval/run_m81_fer2013.py"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification8_eval/run_m81_fer2013.sh",
+      "destination": "resources/runtime/project/backends/classification8_eval/run_m81_fer2013.sh"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification8_eval/run_m83_imagein.py",
+      "destination": "resources/runtime/project/backends/classification8_eval/run_m83_imagein.py"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification8_eval/run_m83_imagein.sh",
+      "destination": "resources/runtime/project/backends/classification8_eval/run_m83_imagein.sh"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification8_eval/run_m85_m86_native.py",
+      "destination": "resources/runtime/project/backends/classification8_eval/run_m85_m86_native.py"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification8_eval/run_m85_m86_native.sh",
+      "destination": "resources/runtime/project/backends/classification8_eval/run_m85_m86_native.sh"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification8_eval/run_m85_m86_partial.py",
+      "destination": "resources/runtime/project/backends/classification8_eval/run_m85_m86_partial.py"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification8_eval/run_m85_m86_partial.sh",
+      "destination": "resources/runtime/project/backends/classification8_eval/run_m85_m86_partial.sh"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification8_eval/run_m88_keras.py",
+      "destination": "resources/runtime/project/backends/classification8_eval/run_m88_keras.py"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification8_eval/run_m88_keras.sh",
+      "destination": "resources/runtime/project/backends/classification8_eval/run_m88_keras.sh"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification8_eval/run_m92.py",
+      "destination": "resources/runtime/project/backends/classification8_eval/run_m92.py"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification8_eval/run_m92.sh",
+      "destination": "resources/runtime/project/backends/classification8_eval/run_m92.sh"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification8_eval/run_m92_native.py",
+      "destination": "resources/runtime/project/backends/classification8_eval/run_m92_native.py"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification8_eval/run_m92_native.sh",
+      "destination": "resources/runtime/project/backends/classification8_eval/run_m92_native.sh"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification8_eval/run_m94.py",
+      "destination": "resources/runtime/project/backends/classification8_eval/run_m94.py"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification8_eval/run_m94.sh",
+      "destination": "resources/runtime/project/backends/classification8_eval/run_m94.sh"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification8_eval/run_m95_test.py",
+      "destination": "resources/runtime/project/backends/classification8_eval/run_m95_test.py"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification8_eval/run_m95_test.sh",
+      "destination": "resources/runtime/project/backends/classification8_eval/run_m95_test.sh"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification8_eval/run_m99.py",
+      "destination": "resources/runtime/project/backends/classification8_eval/run_m99.py"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification8_eval/run_m99.sh",
+      "destination": "resources/runtime/project/backends/classification8_eval/run_m99.sh"
+    },
+    {
+      "source": "inference/path_templates/resources/runtime/project/backends/classification8_eval/setup_m83_env.sh",
+      "destination": "resources/runtime/project/backends/classification8_eval/setup_m83_env.sh"
+    }
+  ],
+  "links": [],
+  "classification_manifests": [],
+  "pet_indices": []
+}

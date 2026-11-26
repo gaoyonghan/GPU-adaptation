@@ -1,0 +1,619 @@
+{
+  "schema_version": 1,
+  "sources": {},
+  "models": [
+    {
+      "sequence": 134,
+      "model_id": "skylord/swin-finetuned-food101",
+      "runner_family": "native_script",
+      "adapter": "native_labels",
+      "state": "full_inference_and_public_scoring_verified",
+      "dataset": {
+        "id": "Food-101",
+        "split": "test (HF validation name)",
+        "note": [
+          "Food-101 test\nHF 名称 validation\n25,250 张"
+        ],
+        "native_scope": {
+          "name": "Food-101",
+          "source": "ethz/food101",
+          "split": "test (HF validation name)",
+          "split_note": "ethz/food101 validation corresponds to the official Food-101 test split",
+          "label_column": "label",
+          "image_count": 25250,
+          "class_count": 101,
+          "class_names": [
+            "apple_pie",
+            "baby_back_ribs",
+            "baklava",
+            "beef_carpaccio",
+            "beef_tartare",
+            "beet_salad",
+            "beignets",
+            "bibimbap",
+            "bread_pudding",
+            "breakfast_burrito",
+            "bruschetta",
+            "caesar_salad",
+            "cannoli",
+            "caprese_salad",
+            "carrot_cake",
+            "ceviche",
+            "cheesecake",
+            "cheese_plate",
+            "chicken_curry",
+            "chicken_quesadilla",
+            "chicken_wings",
+            "chocolate_cake",
+            "chocolate_mousse",
+            "churros",
+            "clam_chowder",
+            "club_sandwich",
+            "crab_cakes",
+            "creme_brulee",
+            "croque_madame",
+            "cup_cakes",
+            "deviled_eggs",
+            "donuts",
+            "dumplings",
+            "edamame",
+            "eggs_benedict",
+            "escargots",
+            "falafel",
+            "filet_mignon",
+            "fish_and_chips",
+            "foie_gras",
+            "french_fries",
+            "french_onion_soup",
+            "french_toast",
+            "fried_calamari",
+            "fried_rice",
+            "frozen_yogurt",
+            "garlic_bread",
+            "gnocchi",
+            "greek_salad",
+            "grilled_cheese_sandwich",
+            "grilled_salmon",
+            "guacamole",
+            "gyoza",
+            "hamburger",
+            "hot_and_sour_soup",
+            "hot_dog",
+            "huevos_rancheros",
+            "hummus",
+            "ice_cream",
+            "lasagna",
+            "lobster_bisque",
+            "lobster_roll_sandwich",
+            "macaroni_and_cheese",
+            "macarons",
+            "miso_soup",
+            "mussels",
+            "nachos",
+            "omelette",
+            "onion_rings",
+            "oysters",
+            "pad_thai",
+            "paella",
+            "pancakes",
+            "panna_cotta",
+            "peking_duck",
+            "pho",
+            "pizza",
+            "pork_chop",
+            "poutine",
+            "prime_rib",
+            "pulled_pork_sandwich",
+            "ramen",
+            "ravioli",
+            "red_velvet_cake",
+            "risotto",
+            "samosa",
+            "sashimi",
+            "scallops",
+            "seaweed_salad",
+            "shrimp_and_grits",
+            "spaghetti_bolognese",
+            "spaghetti_carbonara",
+            "spring_rolls",
+            "steak",
+            "strawberry_shortcake",
+            "sushi",
+            "tacos",
+            "takoyaki",
+            "tiramisu",
+            "tuna_tartare",
+            "waffles"
+          ]
+        },
+        "relation": "native_e07_registered_scope",
+        "index_source": "native loader GT, materialized as classification_annotations.json in the native phase directory",
+        "data_containers": [
+          "dataset/food101/data/validation-00000-of-00003.parquet",
+          "dataset/food101/data/validation-00001-of-00003.parquet",
+          "dataset/food101/data/validation-00002-of-00003.parquet"
+        ]
+      },
+      "qualification": "native_registered_scope",
+      "limitations": [
+        "Capture-ready is a code integration state, not a claim that inference has passed.",
+        "Unobserved native Top-5 is unavailable; aggregate scores are not predictions."
+      ],
+      "num_classes": 101,
+      "expected_images": 25250,
+      "native_script": {
+        "script": "inference/native/run_model.py",
+        "script_sha256": "4650c075725ae584dd413f9d0cb57bfcebbc6bd1f910a62f16ed06521a9399a4",
+        "loop_lineno": 260,
+        "labels": "labels",
+        "prediction": "predicted",
+        "ranking": "top5",
+        "classes": "logits.shape[-1]",
+        "loader_kind": "torch",
+        "label_position": 1,
+        "framework": "torch",
+        "original_script_sha256": "747f148f936be2808cb9e75399a16c97dc85102a08089c7f093371344b9f3deb",
+        "original_loop_lineno": 249,
+        "original_path": "code/swin-finetuned-food101-test.py",
+        "ported_script_sha256": "bb28147c7afeaf9f7f7fdb79d61b2dd27b6228ef5f26b929f2d626591e9639d9"
+      },
+      "output_relative_path": "result/run_001/full/m134",
+      "supports_max_samples": false,
+      "runtime": {
+        "batch_size": 64,
+        "workers": 0,
+        "warmup": 3
+      },
+      "weights_files": [
+        {
+          "path": "config.json",
+          "size": 5812,
+          "sha256": "c5c1390bd32bf5ab4b02d6aef3bfa4c5a1b5ecb92d72b07571cf8ba8ba66ff95"
+        },
+        {
+          "path": "preprocessor_config.json",
+          "size": 240,
+          "sha256": "63ae741f85ba4dfcb1917ef808968baaad3a395dd8067e970c872d0e6ac05f3b"
+        },
+        {
+          "path": "pytorch_model.bin",
+          "size": 348002367,
+          "sha256": "b86ae7fb5c7bf6f9d4168237865509b30814fa98dd455f7da8005363654e648c"
+        }
+      ],
+      "dataset_files": [
+        "food101/data/validation-00000-of-00003.parquet",
+        "food101/data/validation-00001-of-00003.parquet",
+        "food101/data/validation-00002-of-00003.parquet"
+      ],
+      "environment": "e07.txt",
+      "native_precision": "FP32",
+      "backend": "transformers",
+      "timing_alignment": {
+        "forward": "Same event/current-stream/synchronize semantics; wrapper preserves exactly one native call. MX runtime differs.",
+        "e2e": "Native DataLoader fetch to CPU prediction availability; worker-prefetch boundary differs from Example. Does not include subsequent metrics or record writes.",
+        "worker_prefetch": false,
+        "starts_after_spider_composition": false,
+        "native_metric_operations_before_prediction_readiness": [
+          "top1_correct += top5[:, 0].eq(labels).sum().item()"
+        ],
+        "model_load": "Sum of measured native construction/load/placement blocks, not Example contiguous block.",
+        "warmup": "Native repeated preprocessed first batch; native count retained; synchronized before/after. Unlike Example, preprocessing/transfer/softmax-to-CPU are outside the warmup interval.",
+        "evaluation": "Native aggregate evaluation not measured separately; evaluation_seconds=null. Public scoring duration is outside native timing.",
+        "resume": "No resume; repeated native phase archives previous output; resume_segments=1.",
+        "comparison_valid": false
+      },
+      "label_mapping": [
+        {
+          "id": 0,
+          "name": "output_class_0"
+        },
+        {
+          "id": 1,
+          "name": "output_class_1"
+        },
+        {
+          "id": 2,
+          "name": "output_class_2"
+        },
+        {
+          "id": 3,
+          "name": "output_class_3"
+        },
+        {
+          "id": 4,
+          "name": "output_class_4"
+        },
+        {
+          "id": 5,
+          "name": "output_class_5"
+        },
+        {
+          "id": 6,
+          "name": "output_class_6"
+        },
+        {
+          "id": 7,
+          "name": "output_class_7"
+        },
+        {
+          "id": 8,
+          "name": "output_class_8"
+        },
+        {
+          "id": 9,
+          "name": "output_class_9"
+        },
+        {
+          "id": 10,
+          "name": "output_class_10"
+        },
+        {
+          "id": 11,
+          "name": "output_class_11"
+        },
+        {
+          "id": 12,
+          "name": "output_class_12"
+        },
+        {
+          "id": 13,
+          "name": "output_class_13"
+        },
+        {
+          "id": 14,
+          "name": "output_class_14"
+        },
+        {
+          "id": 15,
+          "name": "output_class_15"
+        },
+        {
+          "id": 16,
+          "name": "output_class_16"
+        },
+        {
+          "id": 17,
+          "name": "output_class_17"
+        },
+        {
+          "id": 18,
+          "name": "output_class_18"
+        },
+        {
+          "id": 19,
+          "name": "output_class_19"
+        },
+        {
+          "id": 20,
+          "name": "output_class_20"
+        },
+        {
+          "id": 21,
+          "name": "output_class_21"
+        },
+        {
+          "id": 22,
+          "name": "output_class_22"
+        },
+        {
+          "id": 23,
+          "name": "output_class_23"
+        },
+        {
+          "id": 24,
+          "name": "output_class_24"
+        },
+        {
+          "id": 25,
+          "name": "output_class_25"
+        },
+        {
+          "id": 26,
+          "name": "output_class_26"
+        },
+        {
+          "id": 27,
+          "name": "output_class_27"
+        },
+        {
+          "id": 28,
+          "name": "output_class_28"
+        },
+        {
+          "id": 29,
+          "name": "output_class_29"
+        },
+        {
+          "id": 30,
+          "name": "output_class_30"
+        },
+        {
+          "id": 31,
+          "name": "output_class_31"
+        },
+        {
+          "id": 32,
+          "name": "output_class_32"
+        },
+        {
+          "id": 33,
+          "name": "output_class_33"
+        },
+        {
+          "id": 34,
+          "name": "output_class_34"
+        },
+        {
+          "id": 35,
+          "name": "output_class_35"
+        },
+        {
+          "id": 36,
+          "name": "output_class_36"
+        },
+        {
+          "id": 37,
+          "name": "output_class_37"
+        },
+        {
+          "id": 38,
+          "name": "output_class_38"
+        },
+        {
+          "id": 39,
+          "name": "output_class_39"
+        },
+        {
+          "id": 40,
+          "name": "output_class_40"
+        },
+        {
+          "id": 41,
+          "name": "output_class_41"
+        },
+        {
+          "id": 42,
+          "name": "output_class_42"
+        },
+        {
+          "id": 43,
+          "name": "output_class_43"
+        },
+        {
+          "id": 44,
+          "name": "output_class_44"
+        },
+        {
+          "id": 45,
+          "name": "output_class_45"
+        },
+        {
+          "id": 46,
+          "name": "output_class_46"
+        },
+        {
+          "id": 47,
+          "name": "output_class_47"
+        },
+        {
+          "id": 48,
+          "name": "output_class_48"
+        },
+        {
+          "id": 49,
+          "name": "output_class_49"
+        },
+        {
+          "id": 50,
+          "name": "output_class_50"
+        },
+        {
+          "id": 51,
+          "name": "output_class_51"
+        },
+        {
+          "id": 52,
+          "name": "output_class_52"
+        },
+        {
+          "id": 53,
+          "name": "output_class_53"
+        },
+        {
+          "id": 54,
+          "name": "output_class_54"
+        },
+        {
+          "id": 55,
+          "name": "output_class_55"
+        },
+        {
+          "id": 56,
+          "name": "output_class_56"
+        },
+        {
+          "id": 57,
+          "name": "output_class_57"
+        },
+        {
+          "id": 58,
+          "name": "output_class_58"
+        },
+        {
+          "id": 59,
+          "name": "output_class_59"
+        },
+        {
+          "id": 60,
+          "name": "output_class_60"
+        },
+        {
+          "id": 61,
+          "name": "output_class_61"
+        },
+        {
+          "id": 62,
+          "name": "output_class_62"
+        },
+        {
+          "id": 63,
+          "name": "output_class_63"
+        },
+        {
+          "id": 64,
+          "name": "output_class_64"
+        },
+        {
+          "id": 65,
+          "name": "output_class_65"
+        },
+        {
+          "id": 66,
+          "name": "output_class_66"
+        },
+        {
+          "id": 67,
+          "name": "output_class_67"
+        },
+        {
+          "id": 68,
+          "name": "output_class_68"
+        },
+        {
+          "id": 69,
+          "name": "output_class_69"
+        },
+        {
+          "id": 70,
+          "name": "output_class_70"
+        },
+        {
+          "id": 71,
+          "name": "output_class_71"
+        },
+        {
+          "id": 72,
+          "name": "output_class_72"
+        },
+        {
+          "id": 73,
+          "name": "output_class_73"
+        },
+        {
+          "id": 74,
+          "name": "output_class_74"
+        },
+        {
+          "id": 75,
+          "name": "output_class_75"
+        },
+        {
+          "id": 76,
+          "name": "output_class_76"
+        },
+        {
+          "id": 77,
+          "name": "output_class_77"
+        },
+        {
+          "id": 78,
+          "name": "output_class_78"
+        },
+        {
+          "id": 79,
+          "name": "output_class_79"
+        },
+        {
+          "id": 80,
+          "name": "output_class_80"
+        },
+        {
+          "id": 81,
+          "name": "output_class_81"
+        },
+        {
+          "id": 82,
+          "name": "output_class_82"
+        },
+        {
+          "id": 83,
+          "name": "output_class_83"
+        },
+        {
+          "id": 84,
+          "name": "output_class_84"
+        },
+        {
+          "id": 85,
+          "name": "output_class_85"
+        },
+        {
+          "id": 86,
+          "name": "output_class_86"
+        },
+        {
+          "id": 87,
+          "name": "output_class_87"
+        },
+        {
+          "id": 88,
+          "name": "output_class_88"
+        },
+        {
+          "id": 89,
+          "name": "output_class_89"
+        },
+        {
+          "id": 90,
+          "name": "output_class_90"
+        },
+        {
+          "id": 91,
+          "name": "output_class_91"
+        },
+        {
+          "id": 92,
+          "name": "output_class_92"
+        },
+        {
+          "id": 93,
+          "name": "output_class_93"
+        },
+        {
+          "id": 94,
+          "name": "output_class_94"
+        },
+        {
+          "id": 95,
+          "name": "output_class_95"
+        },
+        {
+          "id": 96,
+          "name": "output_class_96"
+        },
+        {
+          "id": 97,
+          "name": "output_class_97"
+        },
+        {
+          "id": 98,
+          "name": "output_class_98"
+        },
+        {
+          "id": 99,
+          "name": "output_class_99"
+        },
+        {
+          "id": 100,
+          "name": "output_class_100"
+        }
+      ],
+      "layout_reference": {
+        "branch": "gaoyonghan/mx",
+        "commit": "208733e1562fca75b7128772ca2cd587943d9012",
+        "platform": "mx"
+      }
+    }
+  ]
+}

@@ -1,0 +1,584 @@
+{
+  "schema_version": 1,
+  "sources": {},
+  "models": [
+    {
+      "sequence": 107,
+      "model_id": "skyau/dog-breed-classifier-vit",
+      "runner_family": "native_script",
+      "adapter": "native_labels",
+      "state": "full_inference_and_public_scoring_verified",
+      "dataset": {
+        "id": "Stanford Dogs",
+        "split": "test",
+        "note": [
+          "Stanford Dogs test\n8,580 张"
+        ],
+        "native_scope": {
+          "name": "Stanford Dogs",
+          "split": "test",
+          "image_count": 8580,
+          "class_count": 120,
+          "label_mapping": "按犬种名称对齐 dataset ClassLabel 与 model config.id2label"
+        },
+        "relation": "native_e07_registered_scope",
+        "index_source": "native loader GT, materialized as classification_annotations.json in the native phase directory",
+        "data_containers": [
+          "dataset/stanford-dogs/data/test-00000-of-00001.parquet"
+        ]
+      },
+      "qualification": "native_registered_scope",
+      "limitations": [
+        "Capture-ready is a code integration state, not a claim that inference has passed.",
+        "Unobserved native Top-5 is unavailable; aggregate scores are not predictions."
+      ],
+      "num_classes": 120,
+      "expected_images": 8580,
+      "native_script": {
+        "script": "inference/native/run_model.py",
+        "script_sha256": "fb6b813fe22d5105281945bec92204af24c7d47dce5acee697235f0cb20717da",
+        "loop_lineno": 209,
+        "labels": "labels",
+        "prediction": "top5[:, 0]",
+        "ranking": "top5",
+        "classes": "logits.shape[-1]",
+        "loader_kind": "torch",
+        "label_position": 1,
+        "framework": "torch",
+        "original_script_sha256": "1a2740b84dc102b84b6f62cb8edaad78c55498e8b5524a6931d7e37778c9e8b8",
+        "original_loop_lineno": 198,
+        "original_path": "code/dog-breed-classifier-vit.py",
+        "ported_script_sha256": "23e046d93895b6c1a964747c2badde79c420a1562724ce2ef8a696bbf540ccaf"
+      },
+      "output_relative_path": "result/run_001/full/m107",
+      "supports_max_samples": false,
+      "runtime": {
+        "batch_size": 128,
+        "workers": 4,
+        "warmup": 10
+      },
+      "weights_files": [
+        {
+          "path": "config.json",
+          "size": 7217,
+          "sha256": "20e67468ff57cd0835fafc84920be1d3f023272fc7fa07f07155ad034e0290df"
+        },
+        {
+          "path": "preprocessor_config.json",
+          "size": 228,
+          "sha256": "af4eb4d79cf61b47010fc0bc9352ee967579c417423b4917188d809b7e048948"
+        },
+        {
+          "path": "pytorch_model.bin",
+          "size": 343629937,
+          "sha256": "5c3e2ea07a5b92151efd6820c2d10d6202dd36856fd015a8783460212e954425"
+        }
+      ],
+      "dataset_files": [
+        "stanford-dogs/data/test-00000-of-00001.parquet"
+      ],
+      "environment": "e07.txt",
+      "native_precision": "FP32",
+      "backend": "transformers",
+      "timing_alignment": {
+        "forward": "Same event/current-stream/synchronize semantics; wrapper preserves exactly one native call. MX runtime differs.",
+        "e2e": "Native DataLoader fetch to CPU prediction availability; worker-prefetch boundary differs from Example. Does not include subsequent metrics or record writes.",
+        "worker_prefetch": true,
+        "starts_after_spider_composition": false,
+        "native_metric_operations_before_prediction_readiness": [],
+        "model_load": "Sum of measured native construction/load/placement blocks, not Example contiguous block.",
+        "warmup": "Native repeated preprocessed first batch; native count retained; synchronized before/after. Unlike Example, preprocessing/transfer/softmax-to-CPU are outside the warmup interval.",
+        "evaluation": "Native aggregate evaluation not measured separately; evaluation_seconds=null. Public scoring duration is outside native timing.",
+        "resume": "No resume; repeated native phase archives previous output; resume_segments=1.",
+        "comparison_valid": false
+      },
+      "label_mapping": [
+        {
+          "id": 0,
+          "name": "output_class_0"
+        },
+        {
+          "id": 1,
+          "name": "output_class_1"
+        },
+        {
+          "id": 2,
+          "name": "output_class_2"
+        },
+        {
+          "id": 3,
+          "name": "output_class_3"
+        },
+        {
+          "id": 4,
+          "name": "output_class_4"
+        },
+        {
+          "id": 5,
+          "name": "output_class_5"
+        },
+        {
+          "id": 6,
+          "name": "output_class_6"
+        },
+        {
+          "id": 7,
+          "name": "output_class_7"
+        },
+        {
+          "id": 8,
+          "name": "output_class_8"
+        },
+        {
+          "id": 9,
+          "name": "output_class_9"
+        },
+        {
+          "id": 10,
+          "name": "output_class_10"
+        },
+        {
+          "id": 11,
+          "name": "output_class_11"
+        },
+        {
+          "id": 12,
+          "name": "output_class_12"
+        },
+        {
+          "id": 13,
+          "name": "output_class_13"
+        },
+        {
+          "id": 14,
+          "name": "output_class_14"
+        },
+        {
+          "id": 15,
+          "name": "output_class_15"
+        },
+        {
+          "id": 16,
+          "name": "output_class_16"
+        },
+        {
+          "id": 17,
+          "name": "output_class_17"
+        },
+        {
+          "id": 18,
+          "name": "output_class_18"
+        },
+        {
+          "id": 19,
+          "name": "output_class_19"
+        },
+        {
+          "id": 20,
+          "name": "output_class_20"
+        },
+        {
+          "id": 21,
+          "name": "output_class_21"
+        },
+        {
+          "id": 22,
+          "name": "output_class_22"
+        },
+        {
+          "id": 23,
+          "name": "output_class_23"
+        },
+        {
+          "id": 24,
+          "name": "output_class_24"
+        },
+        {
+          "id": 25,
+          "name": "output_class_25"
+        },
+        {
+          "id": 26,
+          "name": "output_class_26"
+        },
+        {
+          "id": 27,
+          "name": "output_class_27"
+        },
+        {
+          "id": 28,
+          "name": "output_class_28"
+        },
+        {
+          "id": 29,
+          "name": "output_class_29"
+        },
+        {
+          "id": 30,
+          "name": "output_class_30"
+        },
+        {
+          "id": 31,
+          "name": "output_class_31"
+        },
+        {
+          "id": 32,
+          "name": "output_class_32"
+        },
+        {
+          "id": 33,
+          "name": "output_class_33"
+        },
+        {
+          "id": 34,
+          "name": "output_class_34"
+        },
+        {
+          "id": 35,
+          "name": "output_class_35"
+        },
+        {
+          "id": 36,
+          "name": "output_class_36"
+        },
+        {
+          "id": 37,
+          "name": "output_class_37"
+        },
+        {
+          "id": 38,
+          "name": "output_class_38"
+        },
+        {
+          "id": 39,
+          "name": "output_class_39"
+        },
+        {
+          "id": 40,
+          "name": "output_class_40"
+        },
+        {
+          "id": 41,
+          "name": "output_class_41"
+        },
+        {
+          "id": 42,
+          "name": "output_class_42"
+        },
+        {
+          "id": 43,
+          "name": "output_class_43"
+        },
+        {
+          "id": 44,
+          "name": "output_class_44"
+        },
+        {
+          "id": 45,
+          "name": "output_class_45"
+        },
+        {
+          "id": 46,
+          "name": "output_class_46"
+        },
+        {
+          "id": 47,
+          "name": "output_class_47"
+        },
+        {
+          "id": 48,
+          "name": "output_class_48"
+        },
+        {
+          "id": 49,
+          "name": "output_class_49"
+        },
+        {
+          "id": 50,
+          "name": "output_class_50"
+        },
+        {
+          "id": 51,
+          "name": "output_class_51"
+        },
+        {
+          "id": 52,
+          "name": "output_class_52"
+        },
+        {
+          "id": 53,
+          "name": "output_class_53"
+        },
+        {
+          "id": 54,
+          "name": "output_class_54"
+        },
+        {
+          "id": 55,
+          "name": "output_class_55"
+        },
+        {
+          "id": 56,
+          "name": "output_class_56"
+        },
+        {
+          "id": 57,
+          "name": "output_class_57"
+        },
+        {
+          "id": 58,
+          "name": "output_class_58"
+        },
+        {
+          "id": 59,
+          "name": "output_class_59"
+        },
+        {
+          "id": 60,
+          "name": "output_class_60"
+        },
+        {
+          "id": 61,
+          "name": "output_class_61"
+        },
+        {
+          "id": 62,
+          "name": "output_class_62"
+        },
+        {
+          "id": 63,
+          "name": "output_class_63"
+        },
+        {
+          "id": 64,
+          "name": "output_class_64"
+        },
+        {
+          "id": 65,
+          "name": "output_class_65"
+        },
+        {
+          "id": 66,
+          "name": "output_class_66"
+        },
+        {
+          "id": 67,
+          "name": "output_class_67"
+        },
+        {
+          "id": 68,
+          "name": "output_class_68"
+        },
+        {
+          "id": 69,
+          "name": "output_class_69"
+        },
+        {
+          "id": 70,
+          "name": "output_class_70"
+        },
+        {
+          "id": 71,
+          "name": "output_class_71"
+        },
+        {
+          "id": 72,
+          "name": "output_class_72"
+        },
+        {
+          "id": 73,
+          "name": "output_class_73"
+        },
+        {
+          "id": 74,
+          "name": "output_class_74"
+        },
+        {
+          "id": 75,
+          "name": "output_class_75"
+        },
+        {
+          "id": 76,
+          "name": "output_class_76"
+        },
+        {
+          "id": 77,
+          "name": "output_class_77"
+        },
+        {
+          "id": 78,
+          "name": "output_class_78"
+        },
+        {
+          "id": 79,
+          "name": "output_class_79"
+        },
+        {
+          "id": 80,
+          "name": "output_class_80"
+        },
+        {
+          "id": 81,
+          "name": "output_class_81"
+        },
+        {
+          "id": 82,
+          "name": "output_class_82"
+        },
+        {
+          "id": 83,
+          "name": "output_class_83"
+        },
+        {
+          "id": 84,
+          "name": "output_class_84"
+        },
+        {
+          "id": 85,
+          "name": "output_class_85"
+        },
+        {
+          "id": 86,
+          "name": "output_class_86"
+        },
+        {
+          "id": 87,
+          "name": "output_class_87"
+        },
+        {
+          "id": 88,
+          "name": "output_class_88"
+        },
+        {
+          "id": 89,
+          "name": "output_class_89"
+        },
+        {
+          "id": 90,
+          "name": "output_class_90"
+        },
+        {
+          "id": 91,
+          "name": "output_class_91"
+        },
+        {
+          "id": 92,
+          "name": "output_class_92"
+        },
+        {
+          "id": 93,
+          "name": "output_class_93"
+        },
+        {
+          "id": 94,
+          "name": "output_class_94"
+        },
+        {
+          "id": 95,
+          "name": "output_class_95"
+        },
+        {
+          "id": 96,
+          "name": "output_class_96"
+        },
+        {
+          "id": 97,
+          "name": "output_class_97"
+        },
+        {
+          "id": 98,
+          "name": "output_class_98"
+        },
+        {
+          "id": 99,
+          "name": "output_class_99"
+        },
+        {
+          "id": 100,
+          "name": "output_class_100"
+        },
+        {
+          "id": 101,
+          "name": "output_class_101"
+        },
+        {
+          "id": 102,
+          "name": "output_class_102"
+        },
+        {
+          "id": 103,
+          "name": "output_class_103"
+        },
+        {
+          "id": 104,
+          "name": "output_class_104"
+        },
+        {
+          "id": 105,
+          "name": "output_class_105"
+        },
+        {
+          "id": 106,
+          "name": "output_class_106"
+        },
+        {
+          "id": 107,
+          "name": "output_class_107"
+        },
+        {
+          "id": 108,
+          "name": "output_class_108"
+        },
+        {
+          "id": 109,
+          "name": "output_class_109"
+        },
+        {
+          "id": 110,
+          "name": "output_class_110"
+        },
+        {
+          "id": 111,
+          "name": "output_class_111"
+        },
+        {
+          "id": 112,
+          "name": "output_class_112"
+        },
+        {
+          "id": 113,
+          "name": "output_class_113"
+        },
+        {
+          "id": 114,
+          "name": "output_class_114"
+        },
+        {
+          "id": 115,
+          "name": "output_class_115"
+        },
+        {
+          "id": 116,
+          "name": "output_class_116"
+        },
+        {
+          "id": 117,
+          "name": "output_class_117"
+        },
+        {
+          "id": 118,
+          "name": "output_class_118"
+        },
+        {
+          "id": 119,
+          "name": "output_class_119"
+        }
+      ],
+      "layout_reference": {
+        "branch": "gaoyonghan/mx",
+        "commit": "208733e1562fca75b7128772ca2cd587943d9012",
+        "platform": "mx"
+      }
+    }
+  ]
+}

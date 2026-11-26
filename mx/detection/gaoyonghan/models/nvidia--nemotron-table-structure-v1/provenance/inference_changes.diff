@@ -1,0 +1,17 @@
+--- original_inference.py
++++ inference/native/run_m37_native.py
+@@ -17,10 +17,10 @@
+ from run_model import core, digest, file_hash, metrics
+ 
+ HERE = Path(__file__).resolve().parent
+-MODEL = Path('/data2/gaoyonghan/gpu/model/nvidia/nemotron-table-structure-v1')
+-DATA = Path('/home/ubuntu/gaoyonghan/gpu/results/remaining25_prepared/pubtables_structure_1000')
+-OLD = Path('/home/ubuntu/gaoyonghan/gpu/results/remaining25_nemotron_v2/m37-nemotron-table-structure-v1/structure')
+-OUT = Path('/home/ubuntu/gaoyonghan/gpu/results/m37_native_entry_v1')
++MODEL = Path('/data2/gaoyonghan/gpu_model_standalone_20261110/release/model/检测/nvidia--nemotron-table-structure-v1/resources/model_index/nvidia/nemotron-table-structure-v1')
++DATA = Path('/data2/gaoyonghan/gpu_model_standalone_20261110/release/model/检测/nvidia--nemotron-table-structure-v1/resources/runtime/assets/workspace/results/remaining25_prepared/pubtables_structure_1000')
++OLD = Path('/data2/gaoyonghan/gpu_model_standalone_20261110/release/model/检测/nvidia--nemotron-table-structure-v1/resources/runtime/assets/workspace/results/remaining25_nemotron_v2/m37-nemotron-table-structure-v1/structure')
++OUT = Path('/data2/gaoyonghan/gpu_model_standalone_20261110/release/model/检测/nvidia--nemotron-table-structure-v1/results/run_001/m037')
+ WEIGHT = MODEL / 'nemotron_table_structure_v1/weights.pth'
+ 
+ 

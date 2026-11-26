@@ -1,0 +1,33 @@
+{
+  "schema": "model-eval/classification-inventory/v1",
+  "scope": "Existing 59 classification models; model 93 is retrieval and excluded.",
+  "models": [
+    {
+      "sequence": 198,
+      "model_id": "google/vit-hybrid-base-bit-384",
+      "runner_family": "classification171",
+      "adapter": "native_labels",
+      "state": "integrated",
+      "dataset": {
+        "id": "classification171_198",
+        "relation": "original_exact",
+        "split": "ImageNet-1K validation",
+        "note": [
+          "Local checkpoint and publisher inference components retained. Offline file paths, eval mode, batching, timing observation and reference scoring are external orchestration."
+        ],
+        "index_source": "__MODEL_ROOT__/inference/native/indices/198.jsonl",
+        "data_containers": []
+      },
+      "qualification": "original_exact",
+      "limitations": [],
+      "num_classes": 1000,
+      "expected_images": 50000,
+      "category_reference": {
+        "file": "__MODEL_ROOT__/inference/native/models.json",
+        "sequence": 198,
+        "field": "label_mapping"
+      },
+      "gt_index": "__MODEL_ROOT__/inference/native/indices/198.jsonl"
+    }
+  ]
+}

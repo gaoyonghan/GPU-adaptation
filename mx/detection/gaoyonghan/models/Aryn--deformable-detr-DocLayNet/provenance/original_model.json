@@ -1,0 +1,110 @@
+{
+  "sequence": 19,
+  "model_id": "Aryn/deformable-detr-DocLayNet",
+  "task": "object_detection",
+  "task_name": "目标检测",
+  "reported_result": "60.152255697684",
+  "reference": "模型卡 AP 57.10%\n作者论文整体 AP 60.20% / AR 74.30%",
+  "model_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/model_index/Aryn/deformable-detr-DocLayNet",
+  "model_exists_at_build": true,
+  "dataset": {
+    "id": "doclaynet_val_test",
+    "relation": "original_protocol_incomplete",
+    "split": "val + test",
+    "note": "DocLayNet 原比赛集 · 498 页\n官方原集（不代表全协议已对齐）"
+  },
+  "environment_id": "detection-hf",
+  "runner_family": "remaining_detection",
+  "final_result_sources": [
+    {
+      "source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m019/metrics-0.json",
+      "sha256": "630ba5696b68416c031287725f831d12984a5dcead9f946be3a7af36d465940d",
+      "selection": "workbook_score_match",
+      "data": {
+        "unit": "fraction_0_to_1",
+        "evaluation_images": 498,
+        "competition_AP": null,
+        "competition_AR100": null,
+        "domain_mapping_state": "not_published_in_downloaded_official_archives",
+        "domain_mapping_note": "COCO image records omit doc_category and all 498 auxiliary JSON metadata rows say other. Do not invent four-domain membership.",
+        "per_domain": {},
+        "pooled": {
+          "AP": 0.6015225569768398,
+          "AP50": 0.7844178398856715,
+          "AP75": 0.6394673708408886,
+          "AP_small": 0.3503523083401145,
+          "AP_medium": 0.5703183902549506,
+          "AP_large": 0.5821433436565339,
+          "AR1": 0.32714417167652704,
+          "AR10": 0.6958304738157218,
+          "AR100": 0.7428505054778051,
+          "AR_small": 0.47548928182318395,
+          "AR_medium": 0.7029594934464298,
+          "AR_large": 0.8053666410093914,
+          "per_class_AP": {
+            "Caption": 0.41109894944525766,
+            "Footnote": 0.3280395428292526,
+            "Formula": 0.8366336633663366,
+            "List-item": 0.549123664434357,
+            "Page-footer": 0.4859527491360492,
+            "Page-header": 0.5432056102360567,
+            "Picture": 0.6380719895716876,
+            "Section-header": 0.5713075644752703,
+            "Table": 0.7797502803276678,
+            "Text": 0.7300374133201649,
+            "Title": 0.7435266996031373
+          },
+          "images": 498,
+          "gt_instances_per_class": {
+            "List-item": 1653,
+            "Page-footer": 640,
+            "Page-header": 364,
+            "Picture": 720,
+            "Caption": 300,
+            "Title": 39,
+            "Section-header": 1401,
+            "Text": 3665,
+            "Table": 243,
+            "Footnote": 129,
+            "Formula": 4
+          },
+          "predictions": 49800
+        },
+        "reference": {
+          "paper_competition_AP": 0.602,
+          "paper_competition_AR": 0.743,
+          "model_card_box_mAP": 0.571,
+          "paper_delta_percentage_points": null,
+          "limitation": "Author checkpoint and full postprocessing unspecified; model-card 57.1 dataset/protocol unresolved."
+        },
+        "protocol_fingerprint": "95c2f49002db4f0273c04cd8c7eeced8c1f4fbca005f99f37bfa06a689771dad",
+        "annotation_sha256": "19d9ac607176e3a36bcffd658e096576c37bc03090f4341211419ef247cc9787",
+        "predictions_sha256": "f377028de40b38d237f1fdf4a62ad287fce66567c9990b265af9486263041daf"
+      },
+      "source_original": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/remaining25_supplemental_20260905/m19-doclaynet-competition498/metrics.json"
+    }
+  ],
+  "code": {
+    "source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/remaining_detection_eval/supplemental_20260905/model19/run.py",
+    "sha256": "3997aa180d15fae9183aff7cc07cb07d5d48f58515b364651930455abb30a1c4",
+    "recorded_sha256": "3997aa180d15fae9183aff7cc07cb07d5d48f58515b364651930455abb30a1c4",
+    "attestation": "hash_exact",
+    "status_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m019/status.json",
+    "selection": "final_special_run",
+    "archive": "code_archive/3997aa180d15fae9_run.py"
+  },
+  "support_files": [
+    "independent_verification.json",
+    "verify_completed.py",
+    "completion.json",
+    "download.sh",
+    "prepare.py",
+    "run.py",
+    "score_threshold_diagnostic.py"
+  ],
+  "final_scorer": null,
+  "backend_package": "remaining_detection_eval",
+  "readiness": "code_and_result_identified",
+  "launch_status": "configured",
+  "metadata_warning": null
+}

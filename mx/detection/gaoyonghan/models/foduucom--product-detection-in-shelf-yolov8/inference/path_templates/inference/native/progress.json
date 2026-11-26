@@ -1,0 +1,146 @@
+{
+  "generated_at": "2026-09-05T10:58:31.409026+00:00",
+  "total_detection_models": 62,
+  "existing_green_queue": 37,
+  "current_scope_unique_models": 25,
+  "initial_primary_blocker_counts": {
+    "旧替代集类别不全，需核对任务覆盖": 4,
+    "私有数据且缺任务匹配的公开金标": 2,
+    "原协议/划分不明，现有数据可做参考评测": 8,
+    "数据已有，缺任务适配或多权重覆盖": 8,
+    "仅下载了说明/发布链接，实际权重缺失": 2,
+    "数据下载未完成，当前目录为空": 1
+  },
+  "current_state_counts": {
+    "complete": 21,
+    "partial_complete": 3,
+    "blocked": 1
+  },
+  "counting_rule": "Unique model IDs; all required tasks must have complete frozen benchmark metrics. PubTables means the model-blind 1000-image benchmark, not the original 93834-image test. Invalid cmarkea and all superseded Qualcomm v1/v2 results excluded.",
+  "fidelity_counts": {
+    "reference_baseline": 25
+  },
+  "comparison_counts": {
+    "not_officially_comparable": 25
+  },
+  "case_type_counts": {
+    "special": 25
+  },
+  "models": [
+    {
+      "sequence": 54,
+      "model_id": "foduucom/product-detection-in-shelf-yolov8",
+      "state": "complete",
+      "all_tasks_complete": true,
+      "required_tasks": [
+        "bbox_detection_classification"
+      ],
+      "results": [
+        {
+          "status": "failed",
+          "task": "sku110k",
+          "valid_complete": false,
+          "images": null,
+          "result_directory": "__MODEL_ROOT__/resources/runtime/assets/workspace/results/remaining25_v4/m54-product-detection-in-shelf-yolov8/sku110k",
+          "metrics": null,
+          "coverage": {
+            "model_labels": {
+              "0": "empty",
+              "1": "product"
+            },
+            "mapping": {
+              "1": 1
+            },
+            "covered_labels": [
+              "product"
+            ],
+            "missing_labels": [
+              "empty"
+            ],
+            "covered_count": 1,
+            "total_model_classes": 2,
+            "gt_instances_per_class": {
+              "product": 431546
+            }
+          },
+          "error": "OSError('image file is truncated (14 bytes not processed)')"
+        },
+        {
+          "status": "complete",
+          "task": "sku110k",
+          "valid_complete": true,
+          "images": 2936,
+          "result_directory": "__MODEL_ROOT__/resources/runtime/assets/workspace/results/remaining25_v5/m54-product-detection-in-shelf-yolov8/sku110k",
+          "metrics": {
+            "metrics": {
+              "AP": 0.08607075262620323,
+              "AP50": 0.22370447591278067,
+              "AP75": 0.048178358911663735,
+              "AP_small": 0.00099009900990099,
+              "AP_medium": 0.01363460527469716,
+              "AP_large": 0.10380811348714408,
+              "AR1": 0.0023967317504970504,
+              "AR10": 0.022982717948955615,
+              "AR100": 0.14332284391466962,
+              "AR_small": 0.0003853564547206166,
+              "AR_medium": 0.01985461384981001,
+              "AR_large": 0.1710844193985001,
+              "per_class_AP": {
+                "product": 0.08607075262620323
+              }
+            },
+            "unit": "fraction_0_to_1",
+            "coverage": {
+              "model_labels": {
+                "0": "empty",
+                "1": "product"
+              },
+              "mapping": {
+                "1": 1
+              },
+              "covered_labels": [
+                "product"
+              ],
+              "missing_labels": [
+                "empty"
+              ],
+              "covered_count": 1,
+              "total_model_classes": 2,
+              "gt_instances_per_class": {
+                "product": 431546
+              }
+            },
+            "evaluation_images": 2936,
+            "annotation_sha256": "4ff3e01d9931577ed797b553eda0e06845da31a8c4039787ded292c8729c5032",
+            "protocol_fingerprint": "71e42e602a2309a85bde1f9f2f492622342683888001489ee0ada2d3eb8845cb",
+            "reference_check": "not_officially_comparable"
+          },
+          "coverage": {
+            "model_labels": {
+              "0": "empty",
+              "1": "product"
+            },
+            "mapping": {
+              "1": 1
+            },
+            "covered_labels": [
+              "product"
+            ],
+            "missing_labels": [
+              "empty"
+            ],
+            "covered_count": 1,
+            "total_model_classes": 2,
+            "gt_instances_per_class": {
+              "product": 431546
+            }
+          },
+          "error": null
+        }
+      ],
+      "next_action": "接入SKU110K官方test CSV；保留小框，明确COCO maxDets与密集货架原协议差异。"
+    }
+  ],
+  "supplemental_updated_at": "2026-09-05T15:25:21.596769+00:00",
+  "supplemental_summary": "supplemental_20260905/summary.json"
+}

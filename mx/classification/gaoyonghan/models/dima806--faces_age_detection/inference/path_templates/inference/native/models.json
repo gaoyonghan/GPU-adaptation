@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "sources": {},
+  "models": [
+    {
+      "sequence": 116,
+      "model_id": "dima806/faces_age_detection",
+      "runner_family": "native_script",
+      "adapter": "native_labels",
+      "state": "full_inference_and_public_scoring_verified",
+      "dataset": {
+        "id": "FairFace",
+        "split": "validation",
+        "note": [
+          "FairFace validation\n10,954 张\n年龄映射 0-29 / 30-59 / 60+"
+        ],
+        "native_scope": {
+          "name": "FairFace",
+          "source": "HuggingFaceM4/FairFace",
+          "split": "validation",
+          "image_count": 10954,
+          "original_age_labels": [
+            "0-2",
+            "3-9",
+            "10-19",
+            "20-29",
+            "30-39",
+            "40-49",
+            "50-59",
+            "60-69",
+            "more than 70"
+          ],
+          "coarse_label_mapping": {
+            "YOUNG": [
+              "0-2",
+              "3-9",
+              "10-19",
+              "20-29"
+            ],
+            "MIDDLE": [
+              "30-39",
+              "40-49",
+              "50-59"
+            ],
+            "OLD": [
+              "60-69",
+              "more than 70"
+            ]
+          },
+          "split_note": "This is FairFace's publicly available validation split (10,954 images); the downloaded public version does not provide a separate hidden test split.",
+          "mapping_note": "The model's original Young/Middle/Old age cutoffs are not documented as strict ranges; this evaluation uses 0-29/30-59/60+ for reproducibility."
+        },
+        "relation": "native_e07_registered_scope",
+        "index_source": "native loader GT, materialized as classification_annotations.json in the native phase directory",
+        "data_containers": [
+          "dataset/FairFace/0.25/validation-00000-of-00001-951dbd63c8724ee1.parquet"
+        ]
+      },
+      "qualification": "native_registered_scope",
+      "limitations": [
+        "Capture-ready is a code integration state, not a claim that inference has passed.",
+        "Unobserved native Top-5 is unavailable; aggregate scores are not predictions."
+      ],
+      "num_classes": 3,
+      "expected_images": 10954,
+      "native_script": {
+        "script": "inference/native/run_model.py",
+        "script_sha256": "d046dd78c62f18abdd75fb49c3d0695d0d1afb7b66f0b51da4b0fbec1f869e00",
+        "loop_lineno": 254,
+        "labels": "batch_labels",
+        "prediction": "batch_predictions",
+        "ranking": null,
+        "classes": "logits.shape[-1]",
+        "loader_kind": "torch",
+        "label_position": 1,
+        "framework": "torch",
+        "original_script_sha256": "cb40c68ddadd5d1d2327d2528633e712604ef5382f4d725c109899547d76f089",
+        "original_loop_lineno": 243,
+        "original_path": "code/faces-age-detection-fairface-test.py",
+        "ported_script_sha256": "772ada7338726c83eb69a4ac643064efa303414aa64b85e93281894c221be1a4"
+      },
+      "output_relative_path": "result/run_001/full/m116",
+      "supports_max_samples": false,
+      "runtime": {
+        "batch_size": 64,
+        "workers": 0,
+        "warmup": 3
+      },
+      "weights_files": [
+        {
+          "path": "config.json",
+          "size": 749,
+          "sha256": "54d4ebe9aea44ab71747a1d63edb4823710a649e0ddf5bd771a00c57f60666e4"
+        },
+        {
+          "path": "model.safetensors",
+          "size": 343227052,
+          "sha256": "26c28313dbb1eb8f18c833f6aba6ced089f26f9a25213fb8d05d327640ffdabf"
+        },
+        {
+          "path": "preprocessor_config.json",
+          "size": 325,
+          "sha256": "a34861a24e781942424ad790b82bc99348404a2e64ea882de88c40905851698d"
+        }
+      ],
+      "dataset_files": [
+        "FairFace/0.25/validation-00000-of-00001-951dbd63c8724ee1.parquet"
+      ],
+      "environment": "e07.txt",
+      "native_precision": "See native metrics and source",
+      "backend": "transformers",
+      "timing_alignment": {
+        "forward": "Same event/current-stream/synchronize semantics; wrapper preserves exactly one native call. MX runtime differs.",
+        "e2e": "Native DataLoader fetch to CPU prediction availability; worker-prefetch boundary differs from Example. Does not include subsequent metrics or record writes.",
+        "worker_prefetch": false,
+        "starts_after_spider_composition": false,
+        "native_metric_operations_before_prediction_readiness": [],
+        "model_load": "Sum of measured native construction/load/placement blocks, not Example contiguous block.",
+        "warmup": "Native repeated preprocessed first batch; native count retained; synchronized before/after. Unlike Example, preprocessing/transfer/softmax-to-CPU are outside the warmup interval.",
+        "evaluation": "Native aggregate evaluation not measured separately; evaluation_seconds=null. Public scoring duration is outside native timing.",
+        "resume": "No resume; repeated native phase archives previous output; resume_segments=1.",
+        "comparison_valid": false
+      },
+      "label_mapping": [
+        {
+          "id": 0,
+          "name": "output_class_0"
+        },
+        {
+          "id": 1,
+          "name": "output_class_1"
+        },
+        {
+          "id": 2,
+          "name": "output_class_2"
+        }
+      ],
+      "layout_reference": {
+        "branch": "gaoyonghan/mx",
+        "commit": "208733e1562fca75b7128772ca2cd587943d9012",
+        "platform": "mx"
+      }
+    }
+  ]
+}

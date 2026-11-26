@@ -1,0 +1,87 @@
+{
+  "source_bundle": [
+    {
+      "path": "WildDet3D",
+      "repository": "allenai/WildDet3D",
+      "method": "github_codeload",
+      "commit": "1b8aa52b6ff3f00d0ebfa07175efc0c0c440964a",
+      "url": "https://codeload.github.com/allenai/WildDet3D/tar.gz/1b8aa52b6ff3f00d0ebfa07175efc0c0c440964a",
+      "archive_sha256": "95b87064e8cede650602d6c7065a0e56b8b79561abab15300ce1961377038072"
+    },
+    {
+      "path": "WildDet3D/third_party/sam3",
+      "repository": "weikaih04/sam3_for_wilddet3d",
+      "method": "github_codeload",
+      "commit": "159490bb13108749dd5ceff68f42cd1792e60641",
+      "url": "https://codeload.github.com/weikaih04/sam3_for_wilddet3d/tar.gz/159490bb13108749dd5ceff68f42cd1792e60641",
+      "archive_sha256": "547f82b726968ee4c4f098f4e62da0a6b8ca0ec3a3eb7c884260fc1961ad40fb"
+    },
+    {
+      "path": "WildDet3D/third_party/lingbot_depth",
+      "repository": "Robbyant/lingbot-depth",
+      "method": "github_codeload",
+      "commit": "ff29de5bf433d1b1519cd851da00bc652668964a",
+      "url": "https://codeload.github.com/Robbyant/lingbot-depth/tar.gz/ff29de5bf433d1b1519cd851da00bc652668964a",
+      "archive_sha256": "1a581fec1929ac8396794c6314362d36e2533fa7caa6de8e8a20bc3affc45c2c"
+    },
+    {
+      "path": "_deps/vis4d_cuda_ops",
+      "repository": "SysCV/vis4d_cuda_ops",
+      "method": "github_codeload",
+      "commit": "d2478d80045b62f85be19235981a63ea9bc8db66",
+      "url": "https://codeload.github.com/SysCV/vis4d_cuda_ops/tar.gz/d2478d80045b62f85be19235981a63ea9bc8db66",
+      "archive_sha256": "177b2fa231767b776e62bd7a18ae178591bc69eb1ab4e0d8351ae2d79ce63fbf"
+    },
+    {
+      "path": "_deps/utils3d",
+      "repository": "EasternJournalist/utils3d",
+      "method": "github_codeload",
+      "commit": "ca3e9ac015ab3473a37ea60f2f55063696638416",
+      "url": "https://codeload.github.com/EasternJournalist/utils3d/tar.gz/ca3e9ac015ab3473a37ea60f2f55063696638416",
+      "archive_sha256": "39cc200b5c435c4c167a892261420e6dbb03be157d995b99077b2dbffcde62db"
+    }
+  ],
+  "annotation": "__DATASET_ROOT__/wilddet3d_val/annotations/InTheWild_v3_val.json",
+  "annotation_sha256": "3480126cea309ea1b8724753fe574c5b6a077b8d0cf290b1b8e0f30872221370",
+  "images": 2470,
+  "raw_annotations": 43867,
+  "categories": 785,
+  "missing_images": 0,
+  "checkpoint": "__MODEL_ROOT__/weights/allenai/WildDet3D/wilddet3d_alldata_all_prompt_v1.0.pt",
+  "checkpoint_sha256": "f8b6a9e548f733ba62625a0d2adc4b0f4fdb6007ee11d9927f9c1027010fee57",
+  "environment": {
+    "torch": "2.5.1+cu121",
+    "torchvision": "0.20.1+cu121",
+    "vis4d": "1.0.0",
+    "lightning": "2.6.5",
+    "numpy": "1.26.4"
+  },
+  "mode": "full",
+  "official_config": "configs/eval/in_the_wild/text.py",
+  "dataset": "InTheWild v3 validation (official)",
+  "prompt": "text",
+  "with_gt_depth": false,
+  "reference": {
+    "AP_percent": 22.6,
+    "APr_percent": 28.3,
+    "APc_percent": 21.6,
+    "APf_percent": 18.7,
+    "url": "https://arxiv.org/html/2604.08626v2",
+    "table": 3,
+    "row": "WildDet3D (All Data), Text",
+    "mapping_status": "candidate; verify native metric definition with result"
+  },
+  "changes_from_native_entry": [
+    "Construct components without auxiliary pretrained loads; strict-load complete author checkpoint",
+    "Read exact LingBot model_config extracted from pinned public checkpoint metadata",
+    "Single-GPU strategy auto instead of training DDP; numerical settings unchanged",
+    "Record coverage/native metric dictionaries; skip formal scoring for smoke"
+  ],
+  "scripts_sha256": {
+    "run_m27_native.py": "8ff7433d0cc7586a8604977e7c0b03cbd55543182c025c339e8ebe95ca1524db",
+    "run_m27_native.sh": "5dbf76f481a57cb0f78bf93ff216bca89f9c22b674df6fcc0f99aa6c18a30a49",
+    "m27_native_config.py": "54c8e69598279db63ee8aa35d4a77f662d0c90a2234b1877dc1410676d206f64",
+    "m27_lingbot_config.json": "8d11bc0ca11cf3c1e7089ea27f90e350e398cb141dc5a9556f0d6588e2baa8c7"
+  },
+  "protocol_fingerprint": "14df99dbeeced2034a5ed9d65ef26d1202dbec0767daf051a159106e93cd33b6"
+}

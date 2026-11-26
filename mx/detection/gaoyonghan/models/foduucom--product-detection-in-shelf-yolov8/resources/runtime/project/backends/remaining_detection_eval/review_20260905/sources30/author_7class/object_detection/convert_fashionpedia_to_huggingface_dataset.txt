@@ -1,0 +1,235 @@
+CELL 0 (markdown)
+1. https://github.com/cvdfoundation/fashionpedia 여기서 Training images, Validation and test images, instances_attributes_train2020, instances_attributes_val2020 다운로드
+2. 현재 주피터 노트북 위치 기준으로 ./fashionpedia 디렉터리 생성
+   - images 폴더 아래에 이미지 train, test 폴더 위치시킨다.
+   - instances_attributes_train2020.json, instances_attributes_val2020.json 위치시킨다. 파일명에서 val -> test로 변경.
+3. 이후 아래 코드 실행하면 huggingface dataset 포맷으로 데이터셋이 생성됨.
+
+
+CELL 1 (code)
+import json
+import io
+import os
+from tqdm import tqdm
+from PIL import Image
+from collections import defaultdict
+from datasets import Dataset, Value, Sequence, ClassLabel, Features, DatasetDict, concatenate_datasets, load_from_disk
+from datasets import Image as DImage
+
+CELL 2 (code)
+def create_annotation_dict(attribute_dict):
+    annotation_dict = defaultdict(list)
+    for annotation in attribute_dict['annotations']:
+        image_id = annotation['image_id']
+        category_id = annotation['category_id']
+        bbox = annotation['bbox']
+        area = annotation['area']
+        iscrowd = annotation['iscrowd']
+
+        annotation_dict[image_id].append(
+            {
+                'category_id': category_id,
+                'bbox': bbox,
+                'area': area,
+                'iscrowd': iscrowd,
+            }
+        )
+
+    return annotation_dict
+
+CELL 3 (code)
+def create_image_dict(attribute_dict):
+    image_dict = {}
+    for image in attribute_dict['images']:
+        image_id = image['id']
+        width = image['width']
+        height = image['height']
+        image_fname = image['file_name']
+
+        image_dict[image_id] = {
+            'width': width,
+            'height': height,
+            'image_fname': image_fname,
+        }
+
+    return image_dict
+
+CELL 4 (code)
+category_norm_dict = {
+    'skirt': 'bottom',
+    'top, t-shirt, sweatshirt': 'top',
+    'cape': 'outer',
+    'pants': 'bottom',
+    'shoe': 'shoes',
+    'coat': 'outer',
+    'shirt, blouse': 'top',
+    'dress': 'dress',
+    'cardigan': 'outer',
+    'bag, wallet': 'bag',
+    'hat': 'hat',
+    'jacket': 'outer',
+    'tights, stockings': 'bottom',
+    'vest': 'outer',
+    'shorts': 'bottom',
+}
+
+norm_categories = list(sorted(set(category_norm_dict.values())))
+print(norm_categories)
+
+id2label = {
+    i: c for (i, c) in enumerate(norm_categories)
+}
+
+label2id = {
+    c: i for (i, c) in enumerate(norm_categories)
+}
+
+print(id2label)
+print(label2id)
+
+OUTPUT:
+['bag', 'bottom', 'dress', 'hat', 'outer', 'shoes', 'top']
+{0: 'bag', 1: 'bottom', 2: 'dress', 3: 'hat', 4: 'outer', 5: 'shoes', 6: 'top'}
+{'bag': 0, 'bottom': 1, 'dress': 2, 'hat': 3, 'outer': 4, 'shoes': 5, 'top': 6}
+
+
+CELL 5 (code)
+def create_dataset_split(split):
+
+    with open(f'./fashionpedia/instances_attributes_{split}2020.json', 'r') as f:
+        attribute_dict = json.load(f)
+
+    annotation_dict = create_annotation_dict(attribute_dict)
+    image_dict = create_image_dict(attribute_dict)
+    category_id_to_name = {}
+    for obj in attribute_dict['categories']:
+        category_id_to_name[obj['id']] = obj['name']
+
+
+    bbox_id = 0
+
+    data_list = []
+    for image_id, image_obj in tqdm(image_dict.items()):
+        width = image_obj['width']
+        height = image_obj['height']
+        image_fname = image_obj['image_fname']
+        image = Image.open(f"./fashionpedia/images/{split}/{image_fname}").convert('RGB')
+        jpeg_buffer = io.BytesIO()
+        image.save(jpeg_buffer, format='JPEG')
+        jpeg_buffer.seek(0)
+        image = Image.open(jpeg_buffer)
+
+        data = {}
+        data = {
+            'image_id': image_id,
+            'width': width,
+            'height': height,
+            'image': image,
+        }
+
+        objects = []
+        is_valid = True
+        for obj in annotation_dict[image_id]:
+            category_id = obj['category_id']
+            norm_category = category_norm_dict.get(category_id_to_name[category_id])
+            if not norm_category:
+                continue
+
+            norm_category_id = label2id[norm_category]
+            bbox = obj['bbox']
+
+            x1, y1, width, height = bbox
+            if not (x1 >= 0 and y1 >= 0 and width > 0 and height > 0):
+                is_valid = False
+                break
+            
+            area = obj['area']
+            iscrowd = obj['iscrowd']
+
+            objects.append(
+                {
+                    'category': norm_category_id,
+                    'bbox_id': bbox_id,
+                    'bbox': bbox,
+                    'area': area,
+                    'iscrowd': iscrowd,
+                }
+            )
+
+            bbox_id += 1
+
+        if not is_valid:
+            continue
+        
+        if objects:
+            data['objects'] = objects
+            data_list.append(data)
+
+    class_label = ClassLabel(names=norm_categories)
+    features = Features({
+        'image_id': Value('int64'),
+        'width': Value('int64'),
+        'height': Value('int64'),
+        'image': DImage(decode=True),
+        'objects': Sequence({
+            'bbox_id': Value('int64'),
+            'category': class_label,
+            'bbox': Sequence(Value('float64'), length=4),
+            'area': Value('int64')
+        })
+    })
+    
+    # 메모리 부족으로 나눠서 처리
+    sub_datasets = []
+    for i in tqdm(range(0, len(data_list), 500)):
+        sub_data = data_list[i: i + 500]
+        sub_dataset = Dataset.from_list(sub_data, features=features)
+        sub_datasets.append(sub_dataset)
+
+    dataset = concatenate_datasets(sub_datasets)
+
+    return dataset
+
+CELL 6 (code)
+split_train = create_dataset_split('train')
+split_test = create_dataset_split('test')
+
+dataset = DatasetDict({
+    'train': split_train,
+    'test': split_test, 
+})
+
+save_dir = f'./fashionpedia_hf_dataset'
+if not os.path.isdir(save_dir):
+    os.makedirs(save_dir)
+
+dataset.save_to_disk(save_dir)
+
+OUTPUT:
+100%|██████████| 1158/1158 [00:04<00:00, 251.77it/s]
+100%|██████████| 3/3 [00:03<00:00,  1.19s/it]
+
+
+OUTPUT:
+Saving the dataset (0/7 shards):   0%|          | 0/44932 [00:00<?, ? examples/s]
+
+OUTPUT:
+Saving the dataset (0/1 shards):   0%|          | 0/1155 [00:00<?, ? examples/s]
+
+CELL 7 (code)
+dataset = load_from_disk('./fashionpedia_hf_dataset', keep_in_memory=True)
+
+CELL 8 (code)
+dataset
+
+OUTPUT:
+DatasetDict({
+    train: Dataset({
+        features: ['image_id', 'width', 'height', 'image', 'objects'],
+        num_rows: 44932
+    })
+    test: Dataset({
+        features: ['image_id', 'width', 'height', 'image', 'objects'],
+        num_rows: 1155
+    })
+})

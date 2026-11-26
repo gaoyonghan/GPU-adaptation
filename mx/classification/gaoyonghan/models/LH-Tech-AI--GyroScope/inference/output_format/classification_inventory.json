@@ -1,0 +1,41 @@
+{
+  "schema": "model-eval/classification-inventory/v1",
+  "scope": "One independent MX GPU classification model",
+  "models": [
+    {
+      "sequence": 152,
+      "model_id": "LH-Tech-AI/GyroScope",
+      "dataset": {
+        "id": "ImageNet-1K val × 4 rotations",
+        "split": null,
+        "note": [
+          "ImageNet-1K val\n50,000 张 x 4 个旋转方向\n共 200,000 个样本"
+        ],
+        "native_scope": {
+          "name": "ImageNet-1K val × 4 rotations",
+          "original_image_count": 50000,
+          "rotation_sample_count": 200000,
+          "angles": [
+            0,
+            90,
+            180,
+            270
+          ]
+        },
+        "relation": "native_e07_registered_scope",
+        "index_source": "native loader GT, materialized as classification_annotations.json in the native phase directory",
+        "data_containers": [
+          "dataset/ImageNet-1K"
+        ]
+      },
+      "qualification": "native_registered_scope",
+      "limitations": [
+        "Capture-ready is a code integration state, not a claim that inference has passed.",
+        "Unobserved native Top-5 is unavailable; aggregate scores are not predictions."
+      ],
+      "num_classes": 4,
+      "expected_images": 200000,
+      "adapter": "native_labels"
+    }
+  ]
+}

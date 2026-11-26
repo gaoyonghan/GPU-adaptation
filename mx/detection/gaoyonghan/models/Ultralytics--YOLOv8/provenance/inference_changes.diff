@@ -1,0 +1,26 @@
+--- original_inference.py
++++ inference/native/run_m07_native.py
+@@ -15,9 +15,9 @@
+ import tempfile
+ import zipfile
+ 
+-SOURCE = Path('/data2/gaoyonghan/gpu/dataset/COCO2017')
+-WEIGHT = Path('/data2/gaoyonghan/gpu/model/Ultralytics/YOLO11/yolo11n.pt')
+-OUT = Path('/home/ubuntu/gaoyonghan/gpu/results/m07_native840_v1')
++SOURCE = Path('/home/ubuntu/文档/ChatGPT/idea 2/outputs/launch_audit_20261005/migration_inputs/datasets/COCO2017')
++WEIGHT = Path('/data2/gaoyonghan/gpu_model_standalone_20261110/release/model/检测/Ultralytics--YOLOv8/resources/model_index/Ultralytics/YOLO11/yolo11n.pt')
++OUT = Path('/data2/gaoyonghan/gpu_model_standalone_20261110/release/model/检测/Ultralytics--YOLOv8/results/run_001/m004')
+ 
+ 
+ def sha(path):
+@@ -106,8 +106,8 @@
+     assert ultralytics.__version__ == '8.4.0'
+     if args.model_number == 4:
+         model_id, checkpoint_version, reference = 'Ultralytics/YOLOv8', '8.0.0.dev0', 37.3
+-        weight = Path('/data2/gaoyonghan/gpu/model/Ultralytics/YOLOv8/yolov8n.pt')
+-        output = OUT.parent / 'm04_native840_v1'
++        weight = Path('/data2/gaoyonghan/gpu_model_standalone_20261110/release/model/检测/Ultralytics--YOLOv8/resources/model_index/Ultralytics/YOLOv8/yolov8n.pt')
++        output = OUT
+     else:
+         model_id, checkpoint_version, reference = 'Ultralytics/YOLO11', '8.2.100', 39.5
+         weight, output = WEIGHT, OUT

@@ -1,0 +1,9 @@
+{
+  "python": "3.11.16",
+  "requirements": "environments/e11-onnx-v2/requirements.txt",
+  "expected": "environments/e11-onnx-v2/expected.json",
+  "local_packages": [],
+  "original_python": "/home/ubuntu/gaoyonghan/miniconda3/envs/object-detection-onnx-v2/bin/python",
+  "torch": null,
+  "python_version_scope": "Pinned to original interpreter version"
+}

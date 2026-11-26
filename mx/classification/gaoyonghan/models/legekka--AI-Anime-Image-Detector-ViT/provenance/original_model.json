@@ -1,0 +1,112 @@
+{
+  "sequence": 76,
+  "model_id": "legekka/AI-Anime-Image-Detector-ViT",
+  "task": "image_classification",
+  "task_name": "图像分类",
+  "reported_result": "Accuracy：84.77%；AI类F1：83.08%（3000张）\nCPU前向 319.64 秒；总 452.65 秒",
+  "reference": "未核实对应模型卡指标",
+  "model_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/model_index/legekka/AI-Anime-Image-Detector-ViT",
+  "model_exists_at_build": true,
+  "dataset": {
+    "id": "animedl_proxy",
+    "relation": null,
+    "split": null,
+    "note": "AnimeDL-2M test（prepared，剔除局部修补）\n真人1500＋AI1500；替代集，非官方可比"
+  },
+  "environment_id": "detection-hf",
+  "runner_family": "special",
+  "final_result_sources": [
+    {
+      "source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m076/metrics-0.json",
+      "sha256": "b67f91ce33cdf0c2a4bd70151f4282af9db6a470386ac69ce41e93258f1ed834",
+      "selection": "latest_replacement_run",
+      "data": {
+        "model_number": 76,
+        "model_id": "legekka/AI-Anime-Image-Detector-ViT",
+        "dataset": "AnimeDL-2M local prepared test subset",
+        "shards": [
+          "0050",
+          "0110",
+          "0240"
+        ],
+        "per_shard_per_label": 500,
+        "images": 3000,
+        "confusion_matrix_real_ai": [
+          [
+            1421,
+            79
+          ],
+          [
+            378,
+            1122
+          ]
+        ],
+        "accuracy": 0.8476666666666667,
+        "precision_ai": 0.9342214820982515,
+        "recall_ai": 0.748,
+        "f1_ai": 0.8308034061458719,
+        "by_generator": {
+          "human": {
+            "correct": 1421,
+            "images": 1500,
+            "accuracy": 0.9473333333333334
+          },
+          "FLUX1": {
+            "correct": 229,
+            "images": 490,
+            "accuracy": 0.4673469387755102
+          },
+          "SDXL": {
+            "correct": 470,
+            "images": 491,
+            "accuracy": 0.9572301425661914
+          },
+          "SD": {
+            "correct": 423,
+            "images": 519,
+            "accuracy": 0.815028901734104
+          }
+        },
+        "device": "cpu",
+        "load_seconds": 0.6580087780021131,
+        "forward_seconds": 319.64272058807546,
+        "preprocess_seconds": 132.23486401601986,
+        "total_seconds": 452.64862772400375,
+        "scope": "balanced local test-shard subset; excludes inpainting",
+        "officially_comparable": false,
+        "manifest_sha256": "3aee9e7dc1e3c4932336d2c7ded0736acd4a6e65708f73e6af2a3c15c29745e7",
+        "predictions_sha256": "c17698cdcbabbc120bbd11c45a956e261b2025d77672f51f1b33a864f18dde16"
+      },
+      "source_original": "/home/ubuntu/Documents/Codex/2026-09-27/codex-threads-01a0de0e-9d72-7fc0-b485/work/m76_full/metrics.json"
+    }
+  ],
+  "code": {
+    "source": "/home/ubuntu/Documents/Codex/2026-09-27/codex-threads-01a0de0e-9d72-7fc0-b485/work/eval_m76_local.py",
+    "sha256": "436e3789f7a10f9d9136908f6cf911b127b174275194391115bfee6b582495f6",
+    "recorded_sha256": null,
+    "attestation": "current_code_unverified",
+    "status_source": null,
+    "selection": "latest_local_replacement_code",
+    "archive": "code_archive/436e3789f7a10f9d_eval_m76_local.py"
+  },
+  "support_files": [
+    "build_100_model_results.mjs",
+    "eval_imagenet1k_to_22k.py",
+    "preview_workbook.mjs",
+    "audit_workbook.py",
+    "eval_m76_local.py",
+    "eval_m90_proxy.py"
+  ],
+  "final_scorer": null,
+  "backend_package": "classification8_eval",
+  "readiness": "code_and_result_identified",
+  "launch_status": "configured",
+  "metadata_warning": null,
+  "table_comparison_protocol_20261009": {
+    "runner": "protocol_alignment/m076_fixed.py",
+    "manifest": "protocol_alignment/m076_samples.jsonl",
+    "manifest_metadata": "protocol_alignment/m076_protocol.json",
+    "samples": 3000,
+    "selection": "original fixed identities and content hashes; no absolute-path sampling"
+  }
+}

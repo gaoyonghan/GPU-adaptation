@@ -1,0 +1,8 @@
+{
+  "source": "/data2/gaoyonghan/env/model_eval_portable_v4/results/m038/official/full/run_20261007_183154_310122",
+  "files": {
+    "protocol.json": "d2f3dfe3a2f036306e07716394b2f0d08931ea463ba9b17d235b140212b501d4",
+    "coverage.json": "a2e69f471dcbf68e76968e1d4558bd5f94bca98936c6038dd63a4d50f1ebad77",
+    "layout_detection.yaml": "53e4f3cd1985512f3bcb8c73afbab65fe2da4798f662c5d2fb9b9be49ed06bb9"
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "sources": {},
+  "models": [
+    {
+      "sequence": 115,
+      "model_id": "dima806/attractive_faces_celebs_detection",
+      "runner_family": "native_script",
+      "adapter": "native_labels",
+      "state": "full_inference_and_public_scoring_verified",
+      "dataset": {
+        "id": "CelebA",
+        "split": "test",
+        "note": [
+          "CelebA test\n19,962 张"
+        ],
+        "native_scope": {
+          "name": "CelebA",
+          "source": "flwrlabs/celeba",
+          "split": "test",
+          "image_count": 19962,
+          "target_attribute": "Attractive",
+          "target_mapping": {
+            "True": "attractive (class 0)",
+            "False": "not attractive (class 1)"
+          },
+          "split_note": "Official CelebA test split with the original binary Attractive attribute."
+        },
+        "relation": "native_e07_registered_scope",
+        "index_source": "native loader GT, materialized as classification_annotations.json in the native phase directory",
+        "data_containers": [
+          "dataset/CelebA/img_align+identity+attr/test-00000-of-00003.parquet",
+          "dataset/CelebA/img_align+identity+attr/test-00001-of-00003.parquet",
+          "dataset/CelebA/img_align+identity+attr/test-00002-of-00003.parquet"
+        ]
+      },
+      "qualification": "native_registered_scope",
+      "limitations": [
+        "Capture-ready is a code integration state, not a claim that inference has passed.",
+        "Unobserved native Top-5 is unavailable; aggregate scores are not predictions."
+      ],
+      "num_classes": 2,
+      "expected_images": 19962,
+      "native_script": {
+        "script": "inference/native/run_model.py",
+        "script_sha256": "dfcfbe8b6f112a1f5b6628ef8e8c6742b7a51f0e87b23ca8c0e874946874b3ae",
+        "loop_lineno": 241,
+        "labels": "batch_labels",
+        "prediction": "batch_predictions",
+        "ranking": null,
+        "classes": "logits.shape[-1]",
+        "loader_kind": "torch",
+        "label_position": 1,
+        "framework": "torch",
+        "original_script_sha256": "d6512a795aa6a054878a048734e964c3275f8dd2885fc1495beebdcebebb7772",
+        "original_loop_lineno": 230,
+        "original_path": "code/attractive-faces-celebs-detection-celeba-test.py",
+        "ported_script_sha256": "c5269368a08132a07ab6bbc2ef0c9c8222fc8dd49ffd784f650bf6ce49b8a24f"
+      },
+      "output_relative_path": "result/run_001/full/m115",
+      "supports_max_samples": false,
+      "runtime": {
+        "batch_size": 64,
+        "workers": 0,
+        "warmup": 3
+      },
+      "weights_files": [
+        {
+          "path": "config.json",
+          "size": 759,
+          "sha256": "9eebe9f305648d96faa1cbd9b5dafa89b627220e890f48667e02bbe3c4c056d8"
+        },
+        {
+          "path": "model.safetensors",
+          "size": 343223968,
+          "sha256": "1f3a80f5c706bca73ca214109bf83b272fca7f90ee9a6d205be513a9376317d1"
+        },
+        {
+          "path": "preprocessor_config.json",
+          "size": 325,
+          "sha256": "a34861a24e781942424ad790b82bc99348404a2e64ea882de88c40905851698d"
+        }
+      ],
+      "dataset_files": [
+        "CelebA/img_align+identity+attr/test-00000-of-00003.parquet",
+        "CelebA/img_align+identity+attr/test-00001-of-00003.parquet",
+        "CelebA/img_align+identity+attr/test-00002-of-00003.parquet"
+      ],
+      "environment": "e07.txt",
+      "native_precision": "See native metrics and source",
+      "backend": "transformers",
+      "timing_alignment": {
+        "forward": "Same event/current-stream/synchronize semantics; wrapper preserves exactly one native call. MX runtime differs.",
+        "e2e": "Native DataLoader fetch to CPU prediction availability; worker-prefetch boundary differs from Example. Does not include subsequent metrics or record writes.",
+        "worker_prefetch": false,
+        "starts_after_spider_composition": false,
+        "native_metric_operations_before_prediction_readiness": [],
+        "model_load": "Sum of measured native construction/load/placement blocks, not Example contiguous block.",
+        "warmup": "Native repeated preprocessed first batch; native count retained; synchronized before/after. Unlike Example, preprocessing/transfer/softmax-to-CPU are outside the warmup interval.",
+        "evaluation": "Native aggregate evaluation not measured separately; evaluation_seconds=null. Public scoring duration is outside native timing.",
+        "resume": "No resume; repeated native phase archives previous output; resume_segments=1.",
+        "comparison_valid": false
+      },
+      "label_mapping": [
+        {
+          "id": 0,
+          "name": "attractive"
+        },
+        {
+          "id": 1,
+          "name": "not attractive"
+        }
+      ],
+      "layout_reference": {
+        "branch": "gaoyonghan/mx",
+        "commit": "208733e1562fca75b7128772ca2cd587943d9012",
+        "platform": "mx"
+      }
+    }
+  ]
+}

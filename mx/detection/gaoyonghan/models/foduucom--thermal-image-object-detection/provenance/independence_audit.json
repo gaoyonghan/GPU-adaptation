@@ -1,0 +1,22 @@
+{
+  "sequence": 47,
+  "model_id": "foduucom/thermal-image-object-detection",
+  "source_archive_hash_matches": true,
+  "source_archive_sha256": "e82cd89347966d1128f5df9bfd6200fb876d2c4c80913bc29ad21a526f07efbf",
+  "prepared_entry_source_sha256": "d402d711cc2dc0b9c056a9198770a5a80559f7e0a0a1f6d044037044b08ec177",
+  "local_entry_sha256": "02fd771249a3a5b49d8dc67947fa3da3aad1eaf4953f1ee7ab60073778c6a90a",
+  "local_entry": "inference/native/run_m47_native.py",
+  "central_dispatch_in_entry": false,
+  "unexpected_external_links": [],
+  "declared_dataset_links": [],
+  "broken_links": [],
+  "path_template_count": 446,
+  "state": "entrypoint_verified_full_run_pending",
+  "validation": {
+    "returncode": 0,
+    "python": "/home/ubuntu/gaoyonghan/gpu/.venv-m12-ultralytics8043/bin/python",
+    "checked_at": "2026-11-10T15:53:36.796616+08:00",
+    "scope": "native help/import/path check only; not full inference"
+  },
+  "smoke_verification": null
+}

@@ -1,0 +1,26 @@
+{
+  "sequence": 170,
+  "model_id": "dima806/medicinal_plants_image_detection",
+  "dirname": "dima806__medicinal_plants_image_detection",
+  "loader": "transformers",
+  "timm_name": null,
+  "num_classes": 52,
+  "dataset": "indian_medicinal",
+  "dataset_sub": "indian_170",
+  "dataset_source": "sydney31/Indian_Medicinal_Plants_and_Leaf_Dataset_Large 的 med.zip（13.28GB）流式读取",
+  "transform": null,
+  "align": "indian_170_classmap.json",
+  "expected_images": 3680,
+  "reported_top1": 0.9962,
+  "reported_top5": null,
+  "reported_note": "作者卡写 55 类 / test 6012 张 / 99.62%，但仓库 config.json 实际只有 52 类；该 test 是 Kaggle 私有切分，公开 zip 无法还原。本表从 med.zip 的 169 个类目录里取模型 52 类能对上的 46 个目录，每簇抽样 ≤80 张建评测集（与训练集同源、可能重叠，得高分属合理）。模型把 6 对同物异名拆成了两个输出类（Curry/Curry_Leaf、Pappaya/Papaya、Doddpathre/Doddapatre、Tulsi/Tulasi、Gauva/Guava、Bhrami/Brahmi），按 ImageNet 处理同义类的惯例合并成 46 簇，簇内 logsumexp 后再 argmax；另有 raw 对照口径（先在 52 类 argmax 再折叠到簇）",
+  "prepare": {
+    "args": [
+      "--row",
+      "170",
+      "--apply",
+      "--classmap",
+      "indian_170_classmap.json"
+    ]
+  }
+}

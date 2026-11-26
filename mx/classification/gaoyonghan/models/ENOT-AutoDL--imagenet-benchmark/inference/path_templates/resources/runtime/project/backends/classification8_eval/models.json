@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "scope": [
+    71,
+    74,
+    84,
+    87,
+    88,
+    89,
+    91,
+    95
+  ],
+  "model_root": "__MODEL_ROOT__/weights",
+  "dataset_root": "__DATASET_ROOT__",
+  "imagenet_zip": "__DATASET_ROOT__/ImageNet/imagenet-object-localization-challenge.zip",
+  "result_root": "__MODEL_ROOT__/resources/runtime/assets/workspace/results/classification8_v1",
+  "datasets": {
+    "imagenet": {
+      "images": 50000,
+      "classes": 1000,
+      "split": "ILSVRC2012 val",
+      "mapping": "LOC_val_solution.csv synset -> timm ImageNetInfo canonical sorted synsets; HF labels exact verified"
+    }
+  },
+  "versions": {
+    "torch": "2.5.1+cu121",
+    "torchvision": "0.20.1+cu121",
+    "transformers": "4.50.0",
+    "timm": "1.0.15",
+    "numpy": "1.26.4",
+    "Pillow": "11.1.0",
+    "scipy": "1.12.0",
+    "scikit-learn": "1.5.2",
+    "onnxruntime": "1.20.1",
+    "safetensors": "0.5.3",
+    "huggingface-hub": "0.29.3"
+  },
+  "timm_source": {
+    "url": "https://raw.githubusercontent.com/huggingface/pytorch-image-models/v1.0.15/validate.py",
+    "sha256": "1b254648d0bff4655fb78d5a3923cd2faa79edf3407a06670f0a7416944658fb",
+    "version": "v1.0.15"
+  },
+  "models": [
+    {
+      "sequence": 91,
+      "model_id": "ENOT-AutoDL/imagenet-benchmark",
+      "weight_file": "ResNet-50/ResNet50-ENOT-x2.pth",
+      "files": {
+        "ResNet-50/ResNet50-ENOT-x2.pth": {
+          "size": 101839301,
+          "sha256": "c0b29e2ac563332d02274d6d656379d3b0957b91b7c8b6c1b4433657d74d6e68",
+          "hf_revision": "aef10c6528b6a93e1eb9fecaed4921f476e6c3a5"
+        },
+        "config.json": {
+          "size": 24,
+          "sha256": "486d398368158463cd53b7ed5886fb75f50e170b97b63347629e71f3ef87eb60",
+          "hf_revision": "aef10c6528b6a93e1eb9fecaed4921f476e6c3a5"
+        },
+        "README.md": {
+          "size": 2036,
+          "sha256": "3751c72446eacda575015d256664c73cc726065f31178a358060c9e77d8a3f15",
+          "hf_revision": "aef10c6528b6a93e1eb9fecaed4921f476e6c3a5"
+        },
+        "test.py": {
+          "size": 5266,
+          "sha256": "c479096ad7c7c96843450b81e1adcf8d6e290a62ff0ef816d4b2e8bbb43b986b",
+          "hf_revision": "aef10c6528b6a93e1eb9fecaed4921f476e6c3a5"
+        },
+        "utils.py": {
+          "size": 6277,
+          "sha256": "1d4d8c291cee52874102bed06e7d110a9d29b84fd496648b9a80ebba05421d6b",
+          "hf_revision": "aef10c6528b6a93e1eb9fecaed4921f476e6c3a5"
+        },
+        "requirements.txt": {
+          "size": 115,
+          "sha256": "943df756aab8f6e466310a9920fcaf3cbbe1ab279effa0cf1de36bc5578fe1fb",
+          "hf_revision": "aef10c6528b6a93e1eb9fecaed4921f476e6c3a5"
+        }
+      },
+      "config": {},
+      "preprocessor": null,
+      "model_key": "m91-imagenet-benchmark",
+      "task_type": "image-classification",
+      "runner": "enot",
+      "dataset": "imagenet",
+      "dataset_relation": "original_exact",
+      "fidelity": "official_protocol_adapter",
+      "case_type": "special",
+      "special_tags": [
+        "framework_numeric_difference",
+        "label_mapping"
+      ],
+      "official_card": "https://huggingface.co/ENOT-AutoDL/imagenet-benchmark",
+      "official_reference": {
+        "metric": "top1_percent",
+        "value": 75.48,
+        "comparison": "manual_reference_required",
+        "notes": "仅列已确认参考行；运行完成不自动等同官方复现。"
+      },
+      "batch_size": 8,
+      "dtype": "float32",
+      "evaluation": "未修改发布者 test.py 的 load_data/evaluate 函数",
+      "known_differences": [
+        "未复建作者全部历史依赖，存在框架数值差异。",
+        "冒烟使用 10 图子集；全量使用完整所声明 split。"
+      ],
+      "protocol_notes": "固定 ResNet50-ENOT-x2.pth，沿用作者 test.py/load_data/evaluate；其他变体不替换。作者 torch 1.13.1/torchvision 0.14.1，本环境为 2.5.1/0.20.1，标注框架差异。"
+    }
+  ]
+}

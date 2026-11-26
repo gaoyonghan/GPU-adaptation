@@ -1,0 +1,23 @@
+{
+  "text_templates": [
+    {
+      "source": "inference/path_templates/inference/native/README.md",
+      "destination": "inference/native/README.md"
+    },
+    {
+      "source": "inference/path_templates/inference/native/run_model.py",
+      "destination": "inference/native/run_model.py"
+    },
+    {
+      "source": "inference/path_templates/inference/output_format/detection_inventory.json",
+      "destination": "inference/output_format/detection_inventory.json"
+    },
+    {
+      "source": "inference/path_templates/inference/output_format/prepare_detection.py",
+      "destination": "inference/output_format/prepare_detection.py"
+    }
+  ],
+  "links": [],
+  "classification_manifests": [],
+  "pet_indices": []
+}

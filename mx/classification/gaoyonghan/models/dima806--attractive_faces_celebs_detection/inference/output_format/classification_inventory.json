@@ -1,0 +1,44 @@
+{
+  "schema": "model-eval/classification-inventory/v1",
+  "scope": "One independent MX GPU classification model",
+  "models": [
+    {
+      "sequence": 115,
+      "model_id": "dima806/attractive_faces_celebs_detection",
+      "dataset": {
+        "id": "CelebA",
+        "split": "test",
+        "note": [
+          "CelebA test\n19,962 张"
+        ],
+        "native_scope": {
+          "name": "CelebA",
+          "source": "flwrlabs/celeba",
+          "split": "test",
+          "image_count": 19962,
+          "target_attribute": "Attractive",
+          "target_mapping": {
+            "True": "attractive (class 0)",
+            "False": "not attractive (class 1)"
+          },
+          "split_note": "Official CelebA test split with the original binary Attractive attribute."
+        },
+        "relation": "native_e07_registered_scope",
+        "index_source": "native loader GT, materialized as classification_annotations.json in the native phase directory",
+        "data_containers": [
+          "dataset/CelebA/img_align+identity+attr/test-00000-of-00003.parquet",
+          "dataset/CelebA/img_align+identity+attr/test-00001-of-00003.parquet",
+          "dataset/CelebA/img_align+identity+attr/test-00002-of-00003.parquet"
+        ]
+      },
+      "qualification": "native_registered_scope",
+      "limitations": [
+        "Capture-ready is a code integration state, not a claim that inference has passed.",
+        "Unobserved native Top-5 is unavailable; aggregate scores are not predictions."
+      ],
+      "num_classes": 2,
+      "expected_images": 19962,
+      "adapter": "native_labels"
+    }
+  ]
+}
