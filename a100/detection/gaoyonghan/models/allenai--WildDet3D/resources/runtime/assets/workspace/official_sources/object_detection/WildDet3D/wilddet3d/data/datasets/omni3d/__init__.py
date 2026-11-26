@@ -1,1 +1,0 @@
-"""Omni3D Dataset."""

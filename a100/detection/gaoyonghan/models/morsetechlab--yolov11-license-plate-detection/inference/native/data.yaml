@@ -1,6 +1,0 @@
-path: /mnt/aoss/model inference for GPU adaptation/detection/gaoyonghan/models/morsetechlab--yolov11-license-plate-detection/resources/runtime/assets/prepared/prepared_m33_root
-train: /mnt/aoss/model inference for GPU adaptation/detection/gaoyonghan/models/morsetechlab--yolov11-license-plate-detection/resources/runtime/assets/workspace/results/m33x_native83123_v1/full/run_20260914_215312_582780/test.txt
-val: /mnt/aoss/model inference for GPU adaptation/detection/gaoyonghan/models/morsetechlab--yolov11-license-plate-detection/resources/runtime/assets/workspace/results/m33x_native83123_v1/full/run_20260914_215312_582780/test.txt
-test: /mnt/aoss/model inference for GPU adaptation/detection/gaoyonghan/models/morsetechlab--yolov11-license-plate-detection/resources/runtime/assets/workspace/results/m33x_native83123_v1/full/run_20260914_215312_582780/test.txt
-names:
-  0: License_Plate

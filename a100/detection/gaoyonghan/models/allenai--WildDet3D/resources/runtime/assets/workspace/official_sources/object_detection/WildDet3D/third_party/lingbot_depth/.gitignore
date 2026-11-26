@@ -1,9 +1,0 @@
-*.pyc
-*.egg-info
-*.egg
-__pycache__
-.idea
-.vscode
-workspace*/
-result*/
-ckpt/

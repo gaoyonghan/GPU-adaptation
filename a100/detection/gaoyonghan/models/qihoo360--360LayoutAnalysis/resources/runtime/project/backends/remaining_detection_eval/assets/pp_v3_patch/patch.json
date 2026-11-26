@@ -1,5 +1,0 @@
-{
-  "reason": "Empty mask crop on a narrow predicted box; use the existing rectangle fallback, including None contours. This affects predictions only, never ground truth.",
-  "original_sha256": "cb326010b4a9066abc2539b4a5ba61ad55953b74103df270b66710799dc13875",
-  "patched_sha256": "f5caa741828fe025cec21edcd71b32ecdc9d171c228f7950906abf97c5802c22"
-}

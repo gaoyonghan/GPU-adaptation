@@ -1,6 +1,0 @@
-{
-  "url": "https://qaihub-public-assets.s3.us-west-2.amazonaws.com/qai-hub-models/models/mediapipe_hand/releases/v0.61.0/mediapipe_hand-onnx-float.zip",
-  "version": "0.61.0",
-  "sha256": "01a6d63a8617d92c13580da71bde7bc7abd96e90c6d27f83d2dd393477454bb3",
-  "bytes": 11406591
-}
