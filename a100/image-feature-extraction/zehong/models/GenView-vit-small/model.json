@@ -1,0 +1,6 @@
+{
+  "architecture": "vit_small_patch16_224",
+  "device": "cuda:0",
+  "bundle": "../../../../dataset/aimv2_features/imagenet_validation_1000",
+  "source": "mocov3-vit-small-300e"
+}

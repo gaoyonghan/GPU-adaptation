@@ -1,0 +1,74 @@
+{
+  "schema": "model-assets/v1",
+  "model": "DA3NESTED-GIANT-LARGE",
+  "platform": "A100",
+  "sources": [
+    {
+      "repo_id": "depth-anything/da3nested-giant-large",
+      "evidence": "README.md"
+    }
+  ],
+  "revision": "8615eefb62f2db4f8d6ebaa59160086981672829",
+  "revision_status": "recorded_in_source",
+  "assets": [
+    {
+      "argument": "--weights",
+      "path": "weights",
+      "required": true,
+      "role": "model_or_cache"
+    },
+    {
+      "argument": "--dataset-root",
+      "path": "../../../../dataset",
+      "required": true,
+      "role": "dataset"
+    }
+  ],
+  "weights_contents": [
+    {
+      "path": "weights/config.json",
+      "kind": "file",
+      "bytes": 3113
+    },
+    {
+      "path": "weights/model.safetensors",
+      "kind": "file",
+      "bytes": 6759558100
+    }
+  ],
+  "data_kind": "native_dataset",
+  "prepared_data": [],
+  "nested_load_calls": [
+    {
+      "file": "inference/src/depth_anything_3/api.py",
+      "line": 64,
+      "call": "model = DepthAnything3.from_pretrained(\"huggingface/model-name\")"
+    },
+    {
+      "file": "inference/src/depth_anything_3/app/modules/model_inference.py",
+      "line": 55,
+      "call": "self.model = DepthAnything3.from_pretrained(model_dir)"
+    },
+    {
+      "file": "inference/src/depth_anything_3/bench/evaluator.py",
+      "line": 51,
+      "call": "api = DepthAnything3.from_pretrained(\"...\")"
+    },
+    {
+      "file": "inference/src/depth_anything_3/bench/evaluator.py",
+      "line": 743,
+      "call": "api = DepthAnything3.from_pretrained(model_path)"
+    },
+    {
+      "file": "inference/src/depth_anything_3/services/backend.py",
+      "line": 171,
+      "call": "self.model = DepthAnything3.from_pretrained(self.model_dir).to(self.device)"
+    },
+    {
+      "file": "inference/src/depth_anything_3/services/inference_service.py",
+      "line": 42,
+      "call": "self.model = DepthAnything3.from_pretrained(self.model_dir).to(self.device)"
+    }
+  ],
+  "environment_manifest": "../../environment/manifests/JinPeng/shared/g02-depth/requirements-install.txt"
+}

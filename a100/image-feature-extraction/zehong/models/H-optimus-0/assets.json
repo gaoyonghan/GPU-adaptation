@@ -1,0 +1,58 @@
+{
+  "schema": "model-assets/v1",
+  "model": "H-optimus-0",
+  "platform": "A100",
+  "sources": [
+    {
+      "repo_id": "bioptimus/H-optimus-0",
+      "evidence": "inference/model.py"
+    }
+  ],
+  "revision": "b145cc1e6c6b30d3251aa8b1f844e6974188a743",
+  "revision_status": "recorded_in_source",
+  "assets": [
+    {
+      "argument": "--weights",
+      "path": "weights",
+      "required": true,
+      "role": "model_or_cache"
+    },
+    {
+      "argument": "--bundle",
+      "path": "../../../../dataset/crc_val_he_7k_bundle",
+      "required": true,
+      "role": "dataset"
+    }
+  ],
+  "weights_contents": [
+    {
+      "path": "weights/config.json",
+      "kind": "file",
+      "bytes": 447
+    },
+    {
+      "path": "weights/pytorch_model.bin",
+      "kind": "file",
+      "bytes": 4539305018
+    }
+  ],
+  "data_kind": "prepared_bundle",
+  "prepared_data": [
+    {
+      "path": "../../../../dataset/crc_val_he_7k_bundle",
+      "samples": 1000,
+      "manifest": "input_manifest.jsonl",
+      "manifest_sha256": "c42975e0b34a7ac145ac58e5b47bba2bc88892320f73bd535d472c5afde7ba26",
+      "format_fields": [
+        "sample_id",
+        "relative_path",
+        "image_sha256",
+        "source_relative_path"
+      ],
+      "bundled_description": [],
+      "sampling_recipe": "见随包dataset_manifest及上述说明；未记录的采样细节不得推定为官方标准"
+    }
+  ],
+  "nested_load_calls": [],
+  "environment_manifest": "../../environment/manifests/songjie/requirements-install.txt"
+}

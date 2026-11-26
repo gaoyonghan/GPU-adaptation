@@ -1,0 +1,48 @@
+{
+  "schema": "model-assets/v1",
+  "model": "convnextv2-large-22k-384",
+  "platform": "A100",
+  "sources": [
+    {
+      "repo_id": "facebook/convnextv2-large-22k-384",
+      "evidence": "inference.py"
+    }
+  ],
+  "revision": "df688211cd93c25ff75b899bf7018cfd26fc840f",
+  "revision_status": "recorded_in_source",
+  "assets": [
+    {
+      "argument": "--weights",
+      "path": "weights",
+      "required": true,
+      "role": "model_or_cache"
+    },
+    {
+      "argument": "--dataset-root",
+      "path": "../../../../dataset/imagenet-1k",
+      "required": true,
+      "role": "dataset"
+    }
+  ],
+  "weights_contents": [
+    {
+      "path": "weights/config.json",
+      "kind": "file",
+      "bytes": 69727
+    },
+    {
+      "path": "weights/model.safetensors",
+      "kind": "file",
+      "bytes": 791873696
+    },
+    {
+      "path": "weights/preprocessor_config.json",
+      "kind": "file",
+      "bytes": 352
+    }
+  ],
+  "data_kind": "native_dataset",
+  "prepared_data": [],
+  "nested_load_calls": [],
+  "environment_manifest": "../../environment/manifests/zehong/shared/g01-classification/requirements-install.txt"
+}

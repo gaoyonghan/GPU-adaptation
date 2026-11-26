@@ -1,0 +1,6 @@
+{
+  "architecture": "resnet50",
+  "device": "cuda:0",
+  "bundle": "../../../../dataset/aimv2_features/imagenet_validation_1000",
+  "source": "mocov3-resnet50-300e"
+}

@@ -1,0 +1,48 @@
+{
+  "schema": "model-assets/v1",
+  "model": "face_obstruction_image_detection",
+  "platform": "A100",
+  "sources": [
+    {
+      "repo_id": "dima806/face_obstruction_image_detection",
+      "evidence": "inference.py"
+    }
+  ],
+  "revision": "d58c7ee572d1216c61a039b18423d056eff971f5",
+  "revision_status": "recorded_in_source",
+  "assets": [
+    {
+      "argument": "--weights",
+      "path": "weights",
+      "required": true,
+      "role": "model_or_cache"
+    },
+    {
+      "argument": "--dataset-root",
+      "path": "../../../../dataset/face_obstruction_image_detection",
+      "required": true,
+      "role": "dataset"
+    }
+  ],
+  "weights_contents": [
+    {
+      "path": "weights/config.json",
+      "kind": "file",
+      "bytes": 874
+    },
+    {
+      "path": "weights/model.safetensors",
+      "kind": "file",
+      "bytes": 343236280
+    },
+    {
+      "path": "weights/preprocessor_config.json",
+      "kind": "file",
+      "bytes": 325
+    }
+  ],
+  "data_kind": "native_dataset",
+  "prepared_data": [],
+  "nested_load_calls": [],
+  "environment_manifest": "../../environment/manifests/zehong/shared/g01-classification/requirements-install.txt"
+}

@@ -1,0 +1,29 @@
+{
+  "_class_name": "MarigoldDepthPipeline",
+  "_diffusers_version": "0.24.0",
+  "prediction_type": "depth",
+  "scale_invariant": true,
+  "shift_invariant": true,
+  "default_denoising_steps": 4,
+  "default_processing_resolution": 768,
+  "unet": [
+    "diffusers",
+    "UNet2DConditionModel"
+  ],
+  "vae": [
+    "diffusers",
+    "AutoencoderKL"
+  ],
+  "scheduler": [
+    "diffusers",
+    "DDIMScheduler"
+  ],
+  "text_encoder": [
+    "transformers",
+    "CLIPTextModel"
+  ],
+  "tokenizer": [
+    "transformers",
+    "CLIPTokenizer"
+  ]
+}

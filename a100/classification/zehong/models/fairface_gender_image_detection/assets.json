@@ -1,0 +1,48 @@
+{
+  "schema": "model-assets/v1",
+  "model": "fairface_gender_image_detection",
+  "platform": "A100",
+  "sources": [
+    {
+      "repo_id": "dima806/fairface_gender_image_detection",
+      "evidence": "inference.py"
+    }
+  ],
+  "revision": "a8e129dc622dafa08bd2ee2e0fd05759850ae14e",
+  "revision_status": "recorded_in_source",
+  "assets": [
+    {
+      "argument": "--weights",
+      "path": "weights",
+      "required": true,
+      "role": "model_or_cache"
+    },
+    {
+      "argument": "--dataset-root",
+      "path": "../../../../dataset/fairface_gender_image_detection",
+      "required": true,
+      "role": "dataset"
+    }
+  ],
+  "weights_contents": [
+    {
+      "path": "weights/config.json",
+      "kind": "file",
+      "bytes": 723
+    },
+    {
+      "path": "weights/model.safetensors",
+      "kind": "file",
+      "bytes": 343223968
+    },
+    {
+      "path": "weights/preprocessor_config.json",
+      "kind": "file",
+      "bytes": 325
+    }
+  ],
+  "data_kind": "native_dataset",
+  "prepared_data": [],
+  "nested_load_calls": [],
+  "environment_manifest": "../../environment/manifests/zehong/shared/g01-classification/requirements-install.txt"
+}

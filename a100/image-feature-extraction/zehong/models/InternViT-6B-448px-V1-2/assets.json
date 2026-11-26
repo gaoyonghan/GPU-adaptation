@@ -1,0 +1,114 @@
+{
+  "schema": "model-assets/v1",
+  "model": "InternViT-6B-448px-V1-2",
+  "platform": "A100",
+  "sources": [
+    {
+      "repo_id": "OpenGVLab/InternViT-6B-448px-V1-2",
+      "evidence": "inference/model.py"
+    }
+  ],
+  "revision": "3856ec12f97eddf87c06dfc86135b18bf15052f1",
+  "revision_status": "recorded_in_source",
+  "assets": [
+    {
+      "argument": "--weights",
+      "path": "weights",
+      "required": true,
+      "role": "model_or_cache"
+    },
+    {
+      "argument": "--bundle",
+      "path": "../../../../dataset/coco_val_bundle_1000",
+      "required": true,
+      "role": "dataset"
+    }
+  ],
+  "weights_contents": [
+    {
+      "path": "weights/config.json",
+      "kind": "file",
+      "bytes": 745
+    },
+    {
+      "path": "weights/configuration_intern_vit.py",
+      "kind": "file",
+      "bytes": 5478
+    },
+    {
+      "path": "weights/flash_attention.py",
+      "kind": "file",
+      "bytes": 3370
+    },
+    {
+      "path": "weights/model-00001-of-00003.safetensors",
+      "kind": "file",
+      "bytes": 4988565944
+    },
+    {
+      "path": "weights/model-00002-of-00003.safetensors",
+      "kind": "file",
+      "bytes": 4937250176
+    },
+    {
+      "path": "weights/model-00003-of-00003.safetensors",
+      "kind": "file",
+      "bytes": 1147238088
+    },
+    {
+      "path": "weights/model.safetensors.index.json",
+      "kind": "file",
+      "bytes": 43846
+    },
+    {
+      "path": "weights/modeling_intern_vit.py",
+      "kind": "file",
+      "bytes": 14046
+    },
+    {
+      "path": "weights/preprocessor_config.json",
+      "kind": "file",
+      "bytes": 287
+    }
+  ],
+  "data_kind": "prepared_bundle",
+  "prepared_data": [
+    {
+      "path": "../../../../dataset/coco_val_bundle_1000",
+      "samples": 1000,
+      "manifest": "input_manifest.jsonl",
+      "manifest_sha256": "f71ac5867a0329d1ac795dc0e7cc78cc3a4f6ee925146a3bde36093a9813d622",
+      "format_fields": [
+        "sample_id",
+        "relative_path",
+        "image_sha256",
+        "source_relative_path"
+      ],
+      "bundled_description": [],
+      "sampling_recipe": "见随包dataset_manifest及上述说明；未记录的采样细节不得推定为官方标准"
+    }
+  ],
+  "nested_load_calls": [
+    {
+      "file": "inference/model.py",
+      "line": 42,
+      "call": "processor = AutoImageProcessor.from_pretrained(snapshot, trust_remote_code=True)"
+    },
+    {
+      "file": "inference/model.py",
+      "line": 43,
+      "call": "model = AutoModel.from_pretrained(snapshot, trust_remote_code=True)"
+    },
+    {
+      "file": "inference/model.py",
+      "line": 73,
+      "call": "def hf_hub_download(repo_id=None,filename=None,**kwargs):"
+    },
+    {
+      "file": "weights/configuration_intern_vit.py",
+      "line": 105,
+      "call": "def from_pretrained(cls, pretrained_model_name_or_path: Union[str, os.PathLike], **kwargs) -> 'PretrainedConfig':"
+    }
+  ],
+  "environment_manifest": "../../environment/manifests/JinPeng/shared/g04-feature4/requirements-install.txt"
+}

@@ -1,0 +1,48 @@
+{
+  "schema": "model-assets/v1",
+  "model": "levit-128s",
+  "platform": "A100",
+  "sources": [
+    {
+      "repo_id": "facebook/levit-128S",
+      "evidence": "inference.py"
+    }
+  ],
+  "revision": "46576b0c1bead4e89d89eb42e0a1ad4cb236fb20",
+  "revision_status": "recorded_in_source",
+  "assets": [
+    {
+      "argument": "--weights",
+      "path": "weights",
+      "required": true,
+      "role": "model_or_cache"
+    },
+    {
+      "argument": "--dataset-root",
+      "path": "../../../../dataset/imagenet-1k",
+      "required": true,
+      "role": "dataset"
+    }
+  ],
+  "weights_contents": [
+    {
+      "path": "weights/config.json",
+      "kind": "file",
+      "bytes": 69957
+    },
+    {
+      "path": "weights/model.safetensors",
+      "kind": "file",
+      "bytes": 32075976
+    },
+    {
+      "path": "weights/preprocessor_config.json",
+      "kind": "file",
+      "bytes": 268
+    }
+  ],
+  "data_kind": "native_dataset",
+  "prepared_data": [],
+  "nested_load_calls": [],
+  "environment_manifest": "../../environment/manifests/zehong/shared/g01-classification/requirements-install.txt"
+}

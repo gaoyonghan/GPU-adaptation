@@ -1,0 +1,69 @@
+{
+  "schema": "model-assets/v1",
+  "model": "DepthCrafter",
+  "platform": "A100",
+  "sources": [
+    {
+      "repo_id": "tencent/DepthCrafter",
+      "evidence": "README.md"
+    }
+  ],
+  "revision": "f2207fa67e799d3cac41b0a051bb051401137a5b",
+  "revision_status": "recorded_in_source",
+  "assets": [
+    {
+      "argument": "--weights",
+      "path": "weights",
+      "required": true,
+      "role": "model_or_cache"
+    },
+    {
+      "argument": "--dataset-root",
+      "path": "../../../../dataset",
+      "required": true,
+      "role": "dataset"
+    }
+  ],
+  "weights_contents": [
+    {
+      "path": "weights/config.json",
+      "kind": "file",
+      "bytes": 891
+    },
+    {
+      "path": "weights/diffusion_pytorch_model.safetensors",
+      "kind": "file",
+      "bytes": 3049435868
+    },
+    {
+      "path": "weights/pipeline",
+      "kind": "directory"
+    }
+  ],
+  "data_kind": "native_dataset",
+  "prepared_data": [],
+  "nested_load_calls": [
+    {
+      "file": "inference/depthcrafter_model.py",
+      "line": 13,
+      "call": "unet = DiffusersUNetSpatioTemporalConditionModelDepthCrafter.from_pretrained(unet_path, low_cpu_mem_usage=True, torch_dtype=torch.float16)"
+    },
+    {
+      "file": "inference/depthcrafter_model.py",
+      "line": 14,
+      "call": "self.pipe = DepthCrafterPipeline.from_pretrained(pre_train_path, unet=unet, torch_dtype=torch.float16, variant='fp16')"
+    },
+    {
+      "file": "inference/depthcrafter/inference.py",
+      "line": 39,
+      "call": "unet = DiffusersUNetSpatioTemporalConditionModelDepthCrafter.from_pretrained("
+    },
+    {
+      "file": "inference/depthcrafter/inference.py",
+      "line": 46,
+      "call": "self.pipe = DepthCrafterPipeline.from_pretrained("
+    }
+  ],
+  "extra_weights_note": "除主权重外，需要完整本地pipeline的VAE、image_encoder、scheduler等配置和权重。",
+  "environment_manifest": "../../environment/manifests/JinPeng/shared/g02-depth/requirements-install.txt"
+}

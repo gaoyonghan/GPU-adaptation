@@ -1,0 +1,18 @@
+{
+  "kind": "gender",
+  "repo": "ProjectPersonal/GenderClassifier",
+  "data_repo": "HuggingFaceM4/FairFace",
+  "dataset": "../../../../dataset/jinpeng_public/FairFace/validation-00000-of-00001-951dbd63c8724ee1.parquet",
+  "split": "validation",
+  "rows": 10954,
+  "column": "gender",
+  "mapping": {
+    "0": 1,
+    "1": 0
+  },
+  "labels": [
+    "human female",
+    "human male"
+  ],
+  "device": "cuda:0"
+}

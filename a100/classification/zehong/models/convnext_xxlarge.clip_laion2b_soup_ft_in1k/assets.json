@@ -1,0 +1,38 @@
+{
+  "schema": "model-assets/v1",
+  "model": "convnext_xxlarge.clip_laion2b_soup_ft_in1k",
+  "platform": "A100",
+  "sources": [
+    {
+      "repo_id": "timm/convnext_xxlarge.clip_laion2b_soup_ft_in1k",
+      "evidence": "README.md"
+    }
+  ],
+  "revision": "f999200c20652db510508240f12b1557112f552f",
+  "revision_status": "recorded_in_source",
+  "assets": [
+    {
+      "argument": "--weights",
+      "path": "weights",
+      "required": true,
+      "role": "model_or_cache"
+    },
+    {
+      "argument": "--dataset-root",
+      "path": "../../../../dataset/ILSVRC___imagenet-1k",
+      "required": true,
+      "role": "dataset"
+    }
+  ],
+  "weights_contents": [
+    {
+      "path": "weights/model.safetensors",
+      "kind": "file",
+      "bytes": 3385923150
+    }
+  ],
+  "data_kind": "native_dataset",
+  "prepared_data": [],
+  "nested_load_calls": [],
+  "environment_manifest": "../../environment/manifests/songjie/shared/g01-classification/requirements-install.txt"
+}

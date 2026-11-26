@@ -1,0 +1,1 @@
+-r ../../environment/manifests/zehong/shared/clip-hqq-a100-py311/requirements-install.txt

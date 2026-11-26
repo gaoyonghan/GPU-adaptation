@@ -1,0 +1,69 @@
+{
+  "schema": "model-assets/v1",
+  "model": "PE-Spatial-G14-448",
+  "platform": "A100",
+  "sources": [
+    {
+      "repo_id": "facebook/PE-Spatial-G14-448",
+      "evidence": "inference/model.py"
+    }
+  ],
+  "revision": "12594718a2702146ec5f73a6aef4e3cc26c28710",
+  "revision_status": "recorded_in_source",
+  "assets": [
+    {
+      "argument": "--weights",
+      "path": "weights",
+      "required": true,
+      "role": "model_or_cache"
+    },
+    {
+      "argument": "--bundle",
+      "path": "../../../../dataset/NYUv2_bundle_1000",
+      "required": true,
+      "role": "dataset"
+    }
+  ],
+  "weights_contents": [
+    {
+      "path": "weights/PE-Spatial-G14-448.pt",
+      "kind": "file",
+      "bytes": 7407781406
+    }
+  ],
+  "data_kind": "prepared_bundle",
+  "prepared_data": [
+    {
+      "path": "../../../../dataset/NYUv2_bundle_1000",
+      "samples": 1000,
+      "manifest": "input_manifest.jsonl",
+      "manifest_sha256": "6e280d6ff20cc1c1c2ce2f759dca92418256de72bc2c9c051b99b09147bb7d89",
+      "format_fields": [
+        "sample_id",
+        "relative_path",
+        "image_sha256",
+        "source_relative_path"
+      ],
+      "bundled_description": [],
+      "sampling_recipe": "见随包dataset_manifest及上述说明；未记录的采样细节不得推定为官方标准"
+    }
+  ],
+  "nested_load_calls": [
+    {
+      "file": "inference/perception_models/core/audio_visual_encoder/transforms.py",
+      "line": 180,
+      "call": "tokenizer=AutoTokenizer.from_pretrained(checkpoint_dir),"
+    },
+    {
+      "file": "inference/perception_models/core/audio_visual_encoder/transforms.py",
+      "line": 248,
+      "call": "tokenizer=AutoTokenizer.from_pretrained(checkpoint_dir),"
+    },
+    {
+      "file": "inference/perception_models/core/vision_encoder/config.py",
+      "line": 24,
+      "call": "return hf_hub_download(repo_id=repo, filename=file)"
+    }
+  ],
+  "environment_manifest": "../../environment/manifests/songjie/shared/g04-feature4/requirements-install.txt"
+}

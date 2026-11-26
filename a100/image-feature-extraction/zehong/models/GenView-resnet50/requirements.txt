@@ -1,0 +1,1 @@
+-r ../../environment/manifests/JinPeng/shared/g04-feature4/requirements-install.txt

@@ -1,0 +1,9 @@
+{
+  "model_name": "MambaVision-L-21K",
+  "kind": "mamba",
+  "weights": "weights",
+  "device": "cuda:0",
+  "dataset_name": "imagenet-1k",
+  "dataset_root": "../../../../dataset/ILSVRC___imagenet-1k",
+  "warmup_steps": 3
+}

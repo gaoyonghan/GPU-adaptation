@@ -1,0 +1,58 @@
+{
+  "schema": "model-assets/v1",
+  "model": "marigold-depth-v1-1",
+  "platform": "A100",
+  "sources": [
+    {
+      "repo_id": "prs-eth/marigold-depth-v1-1",
+      "evidence": "inference.py"
+    }
+  ],
+  "revision": "9571e7123e258cf052b4e54241f17971c290e9a8",
+  "revision_status": "recorded_in_source",
+  "assets": [
+    {
+      "argument": "--weights",
+      "path": "weights",
+      "required": true,
+      "role": "model_or_cache"
+    },
+    {
+      "argument": "--dataset-root",
+      "path": "../../../../dataset",
+      "required": true,
+      "role": "dataset"
+    }
+  ],
+  "weights_contents": [
+    {
+      "path": "weights/model_index.json",
+      "kind": "file",
+      "bytes": 534
+    },
+    {
+      "path": "weights/scheduler",
+      "kind": "directory"
+    },
+    {
+      "path": "weights/text_encoder",
+      "kind": "directory"
+    },
+    {
+      "path": "weights/tokenizer",
+      "kind": "directory"
+    },
+    {
+      "path": "weights/unet",
+      "kind": "directory"
+    },
+    {
+      "path": "weights/vae",
+      "kind": "directory"
+    }
+  ],
+  "data_kind": "native_dataset",
+  "prepared_data": [],
+  "nested_load_calls": [],
+  "environment_manifest": "../../environment/manifests/songjie/requirements-install.txt"
+}

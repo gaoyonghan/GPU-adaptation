@@ -1,0 +1,152 @@
+{
+  "schema": "model-assets/v1",
+  "model": "TITAN",
+  "platform": "A100",
+  "sources": [
+    {
+      "repo_id": "MahmoodLab/TITAN",
+      "evidence": "inference/model.py"
+    }
+  ],
+  "revision": "dac6773d9961cfc75503440676ff157a2c6e8d2e",
+  "revision_status": "recorded_in_source",
+  "assets": [
+    {
+      "argument": "--weights",
+      "path": "weights",
+      "required": true,
+      "role": "model_or_cache"
+    },
+    {
+      "argument": "--bundle",
+      "path": "../../../../dataset/aimv2_features/imagenet_validation_1000",
+      "required": true,
+      "role": "dataset"
+    }
+  ],
+  "weights_contents": [
+    {
+      "path": "weights/conch_tokenizer.py",
+      "kind": "file",
+      "bytes": 1647
+    },
+    {
+      "path": "weights/conch_v1_5.py",
+      "kind": "file",
+      "bytes": 26073
+    },
+    {
+      "path": "weights/conch_v1_5_pytorch_model.bin",
+      "kind": "file",
+      "bytes": 1224549846
+    },
+    {
+      "path": "weights/config.json",
+      "kind": "file",
+      "bytes": 6372
+    },
+    {
+      "path": "weights/configuration_titan.py",
+      "kind": "file",
+      "bytes": 4149
+    },
+    {
+      "path": "weights/model.safetensors",
+      "kind": "file",
+      "bytes": 635494504
+    },
+    {
+      "path": "weights/modeling_titan.py",
+      "kind": "file",
+      "bytes": 3711
+    },
+    {
+      "path": "weights/special_tokens_map.json",
+      "kind": "file",
+      "bytes": 93
+    },
+    {
+      "path": "weights/text_transformer.py",
+      "kind": "file",
+      "bytes": 19005
+    },
+    {
+      "path": "weights/tokenizer.json",
+      "kind": "file",
+      "bytes": 1644583
+    },
+    {
+      "path": "weights/tokenizer_config.json",
+      "kind": "file",
+      "bytes": 1476
+    },
+    {
+      "path": "weights/vision_transformer.py",
+      "kind": "file",
+      "bytes": 25134
+    }
+  ],
+  "data_kind": "prepared_bundle",
+  "prepared_data": [
+    {
+      "path": "../../../../dataset/aimv2_features/imagenet_validation_1000",
+      "samples": 1000,
+      "manifest": "input_manifest.jsonl",
+      "manifest_sha256": "0bb6256649fa206dcb5608112f025b21c62a8d8c515fe9b627968a5bceb41db5",
+      "format_fields": [
+        "source_image_id",
+        "image_sha256",
+        "label",
+        "sample_id",
+        "relative_path"
+      ],
+      "bundled_description": [
+        "inference/data_description/dataset_manifest.json"
+      ],
+      "sampling_recipe": "见随包dataset_manifest及上述说明；未记录的采样细节不得推定为官方标准"
+    }
+  ],
+  "nested_load_calls": [
+    {
+      "file": "inference/model.py",
+      "line": 40,
+      "call": "processor=AutoImageProcessor.from_pretrained(str(snapshot),local_files_only=True,use_fast=False)"
+    },
+    {
+      "file": "inference/model.py",
+      "line": 41,
+      "call": "model=AutoModel.from_pretrained(str(snapshot),local_files_only=True,trust_remote_code=True)"
+    },
+    {
+      "file": "inference/model.py",
+      "line": 58,
+      "call": "model,processor=create_model_from_pretrained('conch_ViT-B-16',checkpoint_path=str(snapshot/'pytorch_model.bin'))"
+    },
+    {
+      "file": "inference/model.py",
+      "line": 63,
+      "call": "model=VTPModel.from_pretrained(str(snapshot),local_files_only=True)"
+    },
+    {
+      "file": "inference/model.py",
+      "line": 71,
+      "call": "titan=Titan.from_pretrained(str(snapshot),config=TitanConfig.from_pretrained(str(snapshot),local_files_only=True),local_files_only=True)"
+    },
+    {
+      "file": "inference/titan_native/conch_tokenizer.py",
+      "line": 18,
+      "call": "self.tokenizer = PreTrainedTokenizerFast.from_pretrained(str(Path(__file__).resolve().parents[2]/'weights'),local_files_only=True)"
+    },
+    {
+      "file": "weights/conch_tokenizer.py",
+      "line": 17,
+      "call": "self.tokenizer = PreTrainedTokenizerFast.from_pretrained(\"MahmoodLab/TITAN\")"
+    },
+    {
+      "file": "weights/conch_v1_5.py",
+      "line": 683,
+      "call": "checkpoint_path = hf_hub_download("
+    }
+  ],
+  "environment_manifest": "../../environment/manifests/zineng/shared/g04-feature4/requirements-install.txt"
+}

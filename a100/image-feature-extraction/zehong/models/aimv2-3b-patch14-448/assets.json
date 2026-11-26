@@ -1,0 +1,76 @@
+{
+  "schema": "model-assets/v1",
+  "model": "aimv2-3b-patch14-448",
+  "platform": "A100",
+  "sources": [
+    {
+      "repo_id": "apple/aimv2-3B-patch14-448",
+      "evidence": "inference.py"
+    }
+  ],
+  "revision": "70810b618e4456b724bacc8ef4d2d038060ceda6",
+  "revision_status": "recorded_in_source",
+  "assets": [
+    {
+      "argument": "--weights",
+      "path": "weights",
+      "required": true,
+      "role": "model_or_cache"
+    },
+    {
+      "argument": "--bundle",
+      "path": "../../../../dataset/aimv2_features/imagenet_validation_1000",
+      "required": true,
+      "role": "dataset"
+    }
+  ],
+  "weights_contents": [
+    {
+      "path": "weights/config.json",
+      "kind": "file",
+      "bytes": 606
+    },
+    {
+      "path": "weights/configuration_aimv2.py",
+      "kind": "file",
+      "bytes": 2402
+    },
+    {
+      "path": "weights/model.safetensors",
+      "kind": "file",
+      "bytes": 10892089304
+    },
+    {
+      "path": "weights/modeling_aimv2.py",
+      "kind": "file",
+      "bytes": 6365
+    },
+    {
+      "path": "weights/preprocessor_config.json",
+      "kind": "file",
+      "bytes": 466
+    }
+  ],
+  "data_kind": "prepared_bundle",
+  "prepared_data": [
+    {
+      "path": "../../../../dataset/aimv2_features/imagenet_validation_1000",
+      "samples": 1000,
+      "manifest": "input_manifest.jsonl",
+      "manifest_sha256": "0bb6256649fa206dcb5608112f025b21c62a8d8c515fe9b627968a5bceb41db5",
+      "format_fields": [
+        "source_image_id",
+        "image_sha256",
+        "label",
+        "sample_id",
+        "relative_path"
+      ],
+      "bundled_description": [
+        "inference/data_description/dataset_manifest.json"
+      ],
+      "sampling_recipe": "见随包dataset_manifest及上述说明；未记录的采样细节不得推定为官方标准"
+    }
+  ],
+  "nested_load_calls": [],
+  "environment_manifest": "../../environment/manifests/zehong/shared/g04-feature4/requirements-install.txt"
+}

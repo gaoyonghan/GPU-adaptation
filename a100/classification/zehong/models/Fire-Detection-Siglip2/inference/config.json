@@ -1,0 +1,20 @@
+{
+  "kind": "fire",
+  "repo": "prithivMLmods/Fire-Detection-Siglip2",
+  "data_repo": "EdBianchi/SmokeFire",
+  "dataset": "../../../../dataset/jinpeng_public/SmokeFire/test-00000-of-00001-42d26e110d541931.parquet",
+  "split": "test",
+  "rows": 759,
+  "column": "label",
+  "mapping": {
+    "0": 0,
+    "1": 1,
+    "2": 2
+  },
+  "labels": [
+    "fire",
+    "normal",
+    "smoke"
+  ],
+  "device": "cuda:0"
+}

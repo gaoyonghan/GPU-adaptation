@@ -1,0 +1,38 @@
+{
+  "schema": "model-assets/v1",
+  "model": "convnextv2_nano.fcmae_ft_in22k_in1k",
+  "platform": "A100",
+  "sources": [
+    {
+      "repo_id": "timm/convnextv2_nano.fcmae_ft_in22k_in1k",
+      "evidence": "README.md"
+    }
+  ],
+  "revision": "aacb23b94d2adf0b206df6c8a75798b672183d6d",
+  "revision_status": "recorded_in_source",
+  "assets": [
+    {
+      "argument": "--weights",
+      "path": "weights",
+      "required": true,
+      "role": "model_or_cache"
+    },
+    {
+      "argument": "--dataset-root",
+      "path": "../../../../dataset/ILSVRC___imagenet-1k",
+      "required": true,
+      "role": "dataset"
+    }
+  ],
+  "weights_contents": [
+    {
+      "path": "weights/model.safetensors",
+      "kind": "file",
+      "bytes": 62511014
+    }
+  ],
+  "data_kind": "native_dataset",
+  "prepared_data": [],
+  "nested_load_calls": [],
+  "environment_manifest": "../../environment/manifests/songjie/shared/g01-classification/requirements-install.txt"
+}

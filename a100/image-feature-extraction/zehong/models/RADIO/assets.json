@@ -1,0 +1,172 @@
+{
+  "schema": "model-assets/v1",
+  "model": "RADIO",
+  "platform": "A100",
+  "sources": [
+    {
+      "repo_id": "nvidia/RADIO",
+      "evidence": "inference/model.py"
+    }
+  ],
+  "revision": "10f0448935988a74dd59b4969ac520dbcd7db293",
+  "revision_status": "recorded_in_source",
+  "assets": [
+    {
+      "argument": "--weights",
+      "path": "weights",
+      "required": true,
+      "role": "model_or_cache"
+    },
+    {
+      "argument": "--bundle",
+      "path": "../../../../dataset/aimv2_features/imagenet_validation_1000",
+      "required": true,
+      "role": "dataset"
+    }
+  ],
+  "weights_contents": [
+    {
+      "path": "weights/adaptor_base.py",
+      "kind": "file",
+      "bytes": 1156
+    },
+    {
+      "path": "weights/adaptor_generic.py",
+      "kind": "file",
+      "bytes": 1148
+    },
+    {
+      "path": "weights/adaptor_mlp.py",
+      "kind": "file",
+      "bytes": 4709
+    },
+    {
+      "path": "weights/adaptor_registry.py",
+      "kind": "file",
+      "bytes": 1371
+    },
+    {
+      "path": "weights/cls_token.py",
+      "kind": "file",
+      "bytes": 1613
+    },
+    {
+      "path": "weights/common.py",
+      "kind": "file",
+      "bytes": 1645
+    },
+    {
+      "path": "weights/config.json",
+      "kind": "file",
+      "bytes": 9513
+    },
+    {
+      "path": "weights/enable_cpe_support.py",
+      "kind": "file",
+      "bytes": 2277
+    },
+    {
+      "path": "weights/enable_spectral_reparam.py",
+      "kind": "file",
+      "bytes": 8480
+    },
+    {
+      "path": "weights/eradio_model.py",
+      "kind": "file",
+      "bytes": 58123
+    },
+    {
+      "path": "weights/extra_timm_models.py",
+      "kind": "file",
+      "bytes": 2880
+    },
+    {
+      "path": "weights/hf_model.py",
+      "kind": "file",
+      "bytes": 4982
+    },
+    {
+      "path": "weights/input_conditioner.py",
+      "kind": "file",
+      "bytes": 1492
+    },
+    {
+      "path": "weights/model.py",
+      "kind": "file",
+      "bytes": 3280
+    },
+    {
+      "path": "weights/model.safetensors",
+      "kind": "file",
+      "bytes": 1304018880
+    },
+    {
+      "path": "weights/open_clip_adaptor.py",
+      "kind": "file",
+      "bytes": 1550
+    },
+    {
+      "path": "weights/preprocessor_config.json",
+      "kind": "file",
+      "bytes": 331
+    },
+    {
+      "path": "weights/pytorch_model.bin",
+      "kind": "file",
+      "bytes": 2662624177
+    },
+    {
+      "path": "weights/radio_model.py",
+      "kind": "file",
+      "bytes": 6918
+    },
+    {
+      "path": "weights/vit_patch_generator.py",
+      "kind": "file",
+      "bytes": 11796
+    },
+    {
+      "path": "weights/vitdet.py",
+      "kind": "file",
+      "bytes": 5798
+    }
+  ],
+  "data_kind": "prepared_bundle",
+  "prepared_data": [
+    {
+      "path": "../../../../dataset/aimv2_features/imagenet_validation_1000",
+      "samples": 1000,
+      "manifest": "input_manifest.jsonl",
+      "manifest_sha256": "0bb6256649fa206dcb5608112f025b21c62a8d8c515fe9b627968a5bceb41db5",
+      "format_fields": [
+        "source_image_id",
+        "image_sha256",
+        "label",
+        "sample_id",
+        "relative_path"
+      ],
+      "bundled_description": [
+        "inference/data_description/dataset_manifest.json"
+      ],
+      "sampling_recipe": "见随包dataset_manifest及上述说明；未记录的采样细节不得推定为官方标准"
+    }
+  ],
+  "nested_load_calls": [
+    {
+      "file": "inference/model.py",
+      "line": 46,
+      "call": "config = AutoConfig.from_pretrained(snapshot, trust_remote_code=True, local_files_only=True)"
+    },
+    {
+      "file": "inference/model.py",
+      "line": 59,
+      "call": "processor = CLIPImageProcessor.from_pretrained(snapshot)"
+    },
+    {
+      "file": "weights/open_clip_adaptor.py",
+      "line": 25,
+      "call": "self.oc_model = open_clip.create_model_from_pretrained("
+    }
+  ],
+  "environment_manifest": "../../environment/manifests/songjie/shared/g04-feature4/requirements-install.txt"
+}

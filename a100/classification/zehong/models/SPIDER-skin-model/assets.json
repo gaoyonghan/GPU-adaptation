@@ -1,0 +1,87 @@
+{
+  "schema": "model-assets/v1",
+  "model": "SPIDER-skin-model",
+  "platform": "A100",
+  "sources": [
+    {
+      "repo_id": "histai/SPIDER-skin-model",
+      "evidence": "inference/model.py"
+    }
+  ],
+  "revision": "b594d4290a0aa10f86784abf4baedae6fee72902",
+  "revision_status": "recorded_in_source",
+  "assets": [
+    {
+      "argument": "--weights",
+      "path": "weights",
+      "required": true,
+      "role": "model_or_cache"
+    },
+    {
+      "argument": "--hf-cache",
+      "path": "weights/.runtime_cache",
+      "required": false,
+      "role": "model_or_cache",
+      "condition": "模型构造器需要嵌套骨干时，缓存内的骨干文件是必需资产；见nested_load_calls"
+    },
+    {
+      "argument": "--dataset-root",
+      "dataset_name": "spider-skin",
+      "path": "../../../../dataset/SPIDER-skin/SPIDER-skin",
+      "role": "dataset"
+    }
+  ],
+  "weights_contents": [
+    {
+      "path": "weights/config.json",
+      "kind": "file",
+      "bytes": 2118
+    },
+    {
+      "path": "weights/configuration_spider.py",
+      "kind": "file",
+      "bytes": 2724
+    },
+    {
+      "path": "weights/model.safetensors",
+      "kind": "file",
+      "bytes": 1215648928
+    },
+    {
+      "path": "weights/modeling_spider.py",
+      "kind": "file",
+      "bytes": 6742
+    },
+    {
+      "path": "weights/preprocessor_config.json",
+      "kind": "file",
+      "bytes": 458
+    }
+  ],
+  "data_kind": "native_dataset",
+  "prepared_data": [],
+  "nested_load_calls": [
+    {
+      "file": "inference/data.py",
+      "line": 112,
+      "call": "return ViTImageProcessor.from_pretrained(model_id, trust_remote_code=True)"
+    },
+    {
+      "file": "inference/model.py",
+      "line": 45,
+      "call": "model = AutoModel.from_pretrained(str(ARGS.weights), trust_remote_code=True, local_files_only=True).to(device)"
+    },
+    {
+      "file": "inference/runner.py",
+      "line": 14,
+      "call": "return ViTImageProcessor.from_pretrained(ARGS.weights,trust_remote_code=True,local_files_only=True)"
+    },
+    {
+      "file": "weights/modeling_spider.py",
+      "line": 44,
+      "call": "self.feature_extractor = AutoModel.from_pretrained("
+    }
+  ],
+  "extra_weights_note": "自定义模型类可能根据config加载嵌套骨干；weights/.runtime_cache内现有HF骨干必须随资产保留或根据config另行获取，不作为普通临时缓存删除。",
+  "environment_manifest": "../../environment/manifests/JinPeng/shared/g01-classification/requirements-install.txt"
+}

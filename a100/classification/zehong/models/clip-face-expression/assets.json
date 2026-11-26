@@ -1,0 +1,72 @@
+{
+  "schema": "model-assets/v1",
+  "model": "clip-face-expression",
+  "platform": "A100",
+  "sources": [
+    {
+      "repo_id": "syntheticbot/clip-face-expression",
+      "evidence": "inference/model.py"
+    }
+  ],
+  "revision": "861d1156c6ef8fee8915184167d5d82ee5d195b9",
+  "revision_status": "recorded_in_source",
+  "assets": [
+    {
+      "argument": "--weights",
+      "path": "weights",
+      "required": true,
+      "role": "model_or_cache"
+    },
+    {
+      "argument": "--vision-weights",
+      "path": "weights/vision",
+      "required": true,
+      "role": "model_or_cache"
+    },
+    {
+      "argument": "--hf-cache",
+      "path": "weights/.runtime_cache",
+      "required": false,
+      "role": "model_or_cache",
+      "condition": "模型构造器需要嵌套骨干时，缓存内的骨干文件是必需资产；见nested_load_calls"
+    },
+    {
+      "argument": "--dataset-root",
+      "dataset_name": "fer-2013",
+      "path": "../../../../dataset/FER-2013",
+      "role": "dataset"
+    }
+  ],
+  "weights_contents": [
+    {
+      "path": "weights/model.safetensors",
+      "kind": "file",
+      "bytes": 1212800804
+    },
+    {
+      "path": "weights/vision",
+      "kind": "directory"
+    }
+  ],
+  "data_kind": "native_dataset",
+  "prepared_data": [],
+  "nested_load_calls": [
+    {
+      "file": "inference/data.py",
+      "line": 115,
+      "call": "processor = AutoProcessor.from_pretrained(str(ARGS.vision_weights),local_files_only=True)"
+    },
+    {
+      "file": "inference/model.py",
+      "line": 43,
+      "call": "vision_model = CLIPVisionModel.from_pretrained(str(ARGS.vision_weights), local_files_only=True).to(DEVICE)"
+    },
+    {
+      "file": "inference/runner.py",
+      "line": 14,
+      "call": "return ViTImageProcessor.from_pretrained(ARGS.weights,trust_remote_code=True,local_files_only=True)"
+    }
+  ],
+  "extra_weights_note": "需通过--vision-weights weights/vision提供完整CLIPVision骨干，不能只下载分类器权重。",
+  "environment_manifest": "../../environment/manifests/JinPeng/shared/g01-classification/requirements-install.txt"
+}

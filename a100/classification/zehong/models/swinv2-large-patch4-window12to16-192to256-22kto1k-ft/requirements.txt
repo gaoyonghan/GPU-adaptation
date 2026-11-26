@@ -1,0 +1,1 @@
+-r ../../environment/manifests/songjie/shared/g01-classification/requirements-install.txt

@@ -1,0 +1,52 @@
+{
+  "schema": "model-assets/v1",
+  "model": "brLVFace",
+  "platform": "A100",
+  "sources": [
+    {
+      "repo_id": "bytedance-research/LVFace",
+      "evidence": "inference/model.py"
+    }
+  ],
+  "revision": "b12702ab1f5c721748e054a66dc90e1edd1f0724",
+  "revision_status": "recorded_in_source",
+  "assets": [
+    {
+      "argument": "--weights",
+      "path": "weights",
+      "required": true,
+      "role": "model_or_cache"
+    },
+    {
+      "argument": "--bundle",
+      "path": "../../../../dataset/LVdataset/ijbb_bundle_1000",
+      "required": true,
+      "role": "dataset"
+    }
+  ],
+  "weights_contents": [
+    {
+      "path": "weights/LVFace-B_Glint360K",
+      "kind": "directory"
+    }
+  ],
+  "data_kind": "prepared_bundle",
+  "prepared_data": [
+    {
+      "path": "../../../../dataset/LVdataset/ijbb_bundle_1000",
+      "samples": 1000,
+      "manifest": "input_manifest.jsonl",
+      "manifest_sha256": "cc77dc8dc8cf62fdfb471995234580030d4e1b99a76eaee83cd80387d7835a12",
+      "format_fields": [
+        "sample_id",
+        "relative_path",
+        "image_sha256",
+        "source_relative_path"
+      ],
+      "bundled_description": [],
+      "sampling_recipe": "见随包dataset_manifest及上述说明；未记录的采样细节不得推定为官方标准"
+    }
+  ],
+  "nested_load_calls": [],
+  "environment_manifest": "../../environment/manifests/songjie/shared/g03-feature5/requirements-install.txt"
+}

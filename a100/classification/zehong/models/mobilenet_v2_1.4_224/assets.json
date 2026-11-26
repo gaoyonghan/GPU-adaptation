@@ -1,0 +1,48 @@
+{
+  "schema": "model-assets/v1",
+  "model": "mobilenet_v2_1.4_224",
+  "platform": "A100",
+  "sources": [
+    {
+      "repo_id": "google/mobilenet_v2_1.4_224",
+      "evidence": "inference.py"
+    }
+  ],
+  "revision": "0e3703e4a4aed8291774c334913893226042f96a",
+  "revision_status": "recorded_in_source",
+  "assets": [
+    {
+      "argument": "--weights",
+      "path": "weights",
+      "required": true,
+      "role": "model_or_cache"
+    },
+    {
+      "argument": "--dataset-root",
+      "path": "../../../../dataset/imagenet-1k",
+      "required": true,
+      "role": "dataset"
+    }
+  ],
+  "weights_contents": [
+    {
+      "path": "weights/config.json",
+      "kind": "file",
+      "bytes": 69770
+    },
+    {
+      "path": "weights/preprocessor_config.json",
+      "kind": "file",
+      "bytes": 406
+    },
+    {
+      "path": "weights/pytorch_model.bin",
+      "kind": "file",
+      "bytes": 24735245
+    }
+  ],
+  "data_kind": "native_dataset",
+  "prepared_data": [],
+  "nested_load_calls": [],
+  "environment_manifest": "../../environment/manifests/zehong/shared/g01-classification/requirements-install.txt"
+}

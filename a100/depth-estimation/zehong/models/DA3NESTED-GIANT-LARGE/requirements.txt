@@ -1,0 +1,1 @@
+-r ../../environment/manifests/JinPeng/shared/g02-depth/requirements-install.txt

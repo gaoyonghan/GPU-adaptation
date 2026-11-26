@@ -1,0 +1,77 @@
+{
+  "schema": "model-assets/v1",
+  "model": "TTPLanet_SDXL_Controlnet_Tile_Realistic",
+  "platform": "A100",
+  "sources": [
+    {
+      "repo_id": "TTPlanet/TTPLanet_SDXL_Controlnet_Tile_Realistic",
+      "evidence": "inference/model.py"
+    }
+  ],
+  "revision": "37f1c4575b543fb2036e39f5763d082fdd135318",
+  "revision_status": "recorded_in_source",
+  "assets": [
+    {
+      "argument": "--weights",
+      "path": "weights",
+      "required": true,
+      "role": "model_or_cache"
+    },
+    {
+      "argument": "--bundle",
+      "path": "../../../../dataset/aimv2_features/imagenet_validation_1000",
+      "required": true,
+      "role": "dataset"
+    }
+  ],
+  "weights_contents": [
+    {
+      "path": "weights/TTPLANET_Controlnet_Tile_realistic_v2_fp16.safetensors",
+      "kind": "file",
+      "bytes": 2502139104
+    },
+    {
+      "path": "weights/config.json",
+      "kind": "file",
+      "bytes": 1282
+    }
+  ],
+  "data_kind": "prepared_bundle",
+  "prepared_data": [
+    {
+      "path": "../../../../dataset/aimv2_features/imagenet_validation_1000",
+      "samples": 1000,
+      "manifest": "input_manifest.jsonl",
+      "manifest_sha256": "0bb6256649fa206dcb5608112f025b21c62a8d8c515fe9b627968a5bceb41db5",
+      "format_fields": [
+        "source_image_id",
+        "image_sha256",
+        "label",
+        "sample_id",
+        "relative_path"
+      ],
+      "bundled_description": [
+        "inference/data_description/dataset_manifest.json"
+      ],
+      "sampling_recipe": "见随包dataset_manifest及上述说明；未记录的采样细节不得推定为官方标准"
+    }
+  ],
+  "nested_load_calls": [
+    {
+      "file": "inference/model.py",
+      "line": 66,
+      "call": "weight_path = hf_hub_download(repo_id=MODEL_ID, filename=WEIGHT_NAME)"
+    },
+    {
+      "file": "inference/model.py",
+      "line": 67,
+      "call": "config_path = hf_hub_download(repo_id=MODEL_ID, filename='config.json')"
+    },
+    {
+      "file": "inference/model.py",
+      "line": 102,
+      "call": "def hf_hub_download(repo_id=None, filename=None, **kwargs):"
+    }
+  ],
+  "environment_manifest": "../../environment/manifests/JinPeng/shared/g03-feature5/requirements-install.txt"
+}

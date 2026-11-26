@@ -1,0 +1,179 @@
+{
+  "schema": "model-assets/v1",
+  "model": "InternVL-14B-224px",
+  "platform": "A100",
+  "sources": [
+    {
+      "repo_id": "OpenGVLab/InternVL-14B-224px",
+      "evidence": "inference/model.py"
+    }
+  ],
+  "revision": "c72300cb8a7ffa62130b54c3deed814acc9d2a61",
+  "revision_status": "recorded_in_source",
+  "assets": [
+    {
+      "argument": "--weights",
+      "path": "weights",
+      "required": true,
+      "role": "model_or_cache"
+    },
+    {
+      "argument": "--bundle",
+      "path": "../../../../dataset/coco_val_bundle_1000",
+      "required": true,
+      "role": "dataset"
+    }
+  ],
+  "weights_contents": [
+    {
+      "path": "weights/__init__.py",
+      "kind": "file",
+      "bytes": 3596
+    },
+    {
+      "path": "weights/config.json",
+      "kind": "file",
+      "bytes": 5082
+    },
+    {
+      "path": "weights/configuration_intern_vit.py",
+      "kind": "file",
+      "bytes": 5478
+    },
+    {
+      "path": "weights/configuration_internvl.py",
+      "kind": "file",
+      "bytes": 4802
+    },
+    {
+      "path": "weights/flash_attention.py",
+      "kind": "file",
+      "bytes": 3459
+    },
+    {
+      "path": "weights/model-00001-of-00003.safetensors",
+      "kind": "file",
+      "bytes": 9927986042
+    },
+    {
+      "path": "weights/model-00002-of-00003.safetensors",
+      "kind": "file",
+      "bytes": 9980457712
+    },
+    {
+      "path": "weights/model-00003-of-00003.safetensors",
+      "kind": "file",
+      "bytes": 7761633516
+    },
+    {
+      "path": "weights/model.safetensors.index.json",
+      "kind": "file",
+      "bytes": 96113
+    },
+    {
+      "path": "weights/modeling_intern_vit.py",
+      "kind": "file",
+      "bytes": 14046
+    },
+    {
+      "path": "weights/modeling_internvl.py",
+      "kind": "file",
+      "bytes": 21092
+    },
+    {
+      "path": "weights/modeling_qllama.py",
+      "kind": "file",
+      "bytes": 48012
+    },
+    {
+      "path": "weights/preprocessor_config.json",
+      "kind": "file",
+      "bytes": 287
+    },
+    {
+      "path": "weights/pytorch_model-00003-of-00003.bin",
+      "kind": "file",
+      "bytes": 7761682141
+    },
+    {
+      "path": "weights/pytorch_model.bin.index.json",
+      "kind": "file",
+      "bytes": 91910
+    },
+    {
+      "path": "weights/special_tokens_map.json",
+      "kind": "file",
+      "bytes": 96
+    },
+    {
+      "path": "weights/tokenizer_config.json",
+      "kind": "file",
+      "bytes": 844
+    }
+  ],
+  "data_kind": "prepared_bundle",
+  "prepared_data": [
+    {
+      "path": "../../../../dataset/coco_val_bundle_1000",
+      "samples": 1000,
+      "manifest": "input_manifest.jsonl",
+      "manifest_sha256": "f71ac5867a0329d1ac795dc0e7cc78cc3a4f6ee925146a3bde36093a9813d622",
+      "format_fields": [
+        "sample_id",
+        "relative_path",
+        "image_sha256",
+        "source_relative_path"
+      ],
+      "bundled_description": [],
+      "sampling_recipe": "见随包dataset_manifest及上述说明；未记录的采样细节不得推定为官方标准"
+    }
+  ],
+  "nested_load_calls": [
+    {
+      "file": "inference/model.py",
+      "line": 42,
+      "call": "processor = CLIPImageProcessor.from_pretrained(snapshot)"
+    },
+    {
+      "file": "inference/model.py",
+      "line": 43,
+      "call": "model = AutoModel.from_pretrained(snapshot, torch_dtype=torch.bfloat16, low_cpu_mem_usage=True, trust_remote_code=True)"
+    },
+    {
+      "file": "inference/model.py",
+      "line": 73,
+      "call": "def hf_hub_download(repo_id=None,filename=None,**kwargs):"
+    },
+    {
+      "file": "weights/__init__.py",
+      "line": 26,
+      "call": "self.tokenizer = LlamaTokenizer.from_pretrained(model_path)"
+    },
+    {
+      "file": "weights/__init__.py",
+      "line": 57,
+      "call": "model = InternVL_C.from_pretrained(ckpt_path, torch_dtype=torch.float16).to(device)"
+    },
+    {
+      "file": "weights/__init__.py",
+      "line": 74,
+      "call": "model = InternVL_G.from_pretrained(ckpt_path, torch_dtype=torch.float16).to(device)"
+    },
+    {
+      "file": "weights/configuration_intern_vit.py",
+      "line": 105,
+      "call": "def from_pretrained(cls, pretrained_model_name_or_path: Union[str, os.PathLike], **kwargs) -> 'PretrainedConfig':"
+    },
+    {
+      "file": "weights/modeling_qllama.py",
+      "line": 974,
+      "call": ">>> model = LlamaForCausalLM.from_pretrained(PATH_TO_CONVERTED_WEIGHTS)"
+    },
+    {
+      "file": "weights/modeling_qllama.py",
+      "line": 975,
+      "call": ">>> tokenizer = AutoTokenizer.from_pretrained(PATH_TO_CONVERTED_TOKENIZER)"
+    }
+  ],
+  "environment_manifest": "../../environment/manifests/JinPeng/shared/g04-feature4/requirements-install.txt"
+}

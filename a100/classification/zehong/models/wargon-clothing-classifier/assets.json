@@ -1,0 +1,76 @@
+{
+  "schema": "model-assets/v1",
+  "model": "wargon-clothing-classifier",
+  "platform": "A100",
+  "sources": [
+    {
+      "repo_id": "wargoninnovation/wargon-clothing-classifier",
+      "evidence": "README.md"
+    }
+  ],
+  "revision": "972befbd9a82cda03352239d813ff4959d2ccb4d",
+  "revision_status": "recorded_in_source",
+  "assets": [
+    {
+      "argument": "--weights",
+      "path": "weights",
+      "required": true,
+      "role": "model_or_cache"
+    },
+    {
+      "argument": "--hf-cache",
+      "path": "weights/.runtime_cache",
+      "required": false,
+      "role": "model_or_cache",
+      "condition": "模型构造器需要嵌套骨干时，缓存内的骨干文件是必需资产；见nested_load_calls"
+    },
+    {
+      "argument": "--dataset-root",
+      "dataset_name": "clothingdatasetsecondhand",
+      "path": "../../../../dataset/clothingdataset_clean_test",
+      "role": "dataset"
+    }
+  ],
+  "weights_contents": [
+    {
+      "path": "weights/config.json",
+      "kind": "file",
+      "bytes": 1829
+    },
+    {
+      "path": "weights/model.safetensors",
+      "kind": "file",
+      "bytes": 343300876
+    },
+    {
+      "path": "weights/preprocessor_config.json",
+      "kind": "file",
+      "bytes": 598
+    }
+  ],
+  "data_kind": "native_dataset",
+  "prepared_data": [],
+  "nested_load_calls": [
+    {
+      "file": "inference/data.py",
+      "line": 111,
+      "call": "processor = AutoImageProcessor.from_pretrained(model_name_or_path)"
+    },
+    {
+      "file": "inference/model.py",
+      "line": 13,
+      "call": "processor = AutoImageProcessor.from_pretrained(str(ARGS.weights), local_files_only=True)"
+    },
+    {
+      "file": "inference/model.py",
+      "line": 14,
+      "call": "model = AutoModelForImageClassification.from_pretrained(str(ARGS.weights), local_files_only=True)"
+    },
+    {
+      "file": "inference/runner.py",
+      "line": 14,
+      "call": "return ViTImageProcessor.from_pretrained(ARGS.weights,trust_remote_code=True,local_files_only=True)"
+    }
+  ],
+  "environment_manifest": "../../environment/manifests/JinPeng/shared/g01-classification/requirements-install.txt"
+}

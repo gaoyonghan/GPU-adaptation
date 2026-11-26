@@ -1,0 +1,108 @@
+{
+  "schema": "model-assets/v1",
+  "model": "rad-dino",
+  "platform": "A100",
+  "sources": [
+    {
+      "repo_id": "microsoft/rad-dino",
+      "evidence": "inference/model.py"
+    }
+  ],
+  "revision": "110cbc18d5133582e320b43d53bf5c44e410c936",
+  "revision_status": "recorded_in_source",
+  "assets": [
+    {
+      "argument": "--weights",
+      "path": "weights",
+      "required": true,
+      "role": "model_or_cache"
+    },
+    {
+      "argument": "--bundle",
+      "path": "../../../../dataset/rad_dino_chexpert_valid_bundle",
+      "required": true,
+      "role": "dataset"
+    }
+  ],
+  "weights_contents": [
+    {
+      "path": "weights/augmentations.py",
+      "kind": "file",
+      "bytes": 4981
+    },
+    {
+      "path": "weights/backbone_compatible.safetensors",
+      "kind": "file",
+      "bytes": 346338024
+    },
+    {
+      "path": "weights/config.json",
+      "kind": "file",
+      "bytes": 879
+    },
+    {
+      "path": "weights/dino_head.safetensors",
+      "kind": "file",
+      "bytes": 92554920
+    },
+    {
+      "path": "weights/model.safetensors",
+      "kind": "file",
+      "bytes": 346345912
+    },
+    {
+      "path": "weights/preprocessor_config.json",
+      "kind": "file",
+      "bytes": 756
+    },
+    {
+      "path": "weights/src",
+      "kind": "directory"
+    }
+  ],
+  "data_kind": "prepared_bundle",
+  "prepared_data": [
+    {
+      "path": "../../../../dataset/rad_dino_chexpert_valid_bundle",
+      "samples": 234,
+      "manifest": "input_manifest.jsonl",
+      "manifest_sha256": "8a397add20e65a53e9340a134d13f5766600cf0d4bd0c9fb2d5fe4aec8e0ed9a",
+      "format_fields": [
+        "sample_id",
+        "relative_path",
+        "image_sha256",
+        "source_relative_path"
+      ],
+      "bundled_description": [],
+      "sampling_recipe": "见随包dataset_manifest及上述说明；未记录的采样细节不得推定为官方标准"
+    }
+  ],
+  "nested_load_calls": [
+    {
+      "file": "inference/model.py",
+      "line": 42,
+      "call": "processor = AutoImageProcessor.from_pretrained(snapshot)"
+    },
+    {
+      "file": "inference/model.py",
+      "line": 43,
+      "call": "model = AutoModel.from_pretrained(snapshot, trust_remote_code=True)"
+    },
+    {
+      "file": "inference/model.py",
+      "line": 73,
+      "call": "def hf_hub_download(repo_id=None,filename=None,**kwargs):"
+    },
+    {
+      "file": "weights/src/rad_dino/__init__.py",
+      "line": 25,
+      "call": "self.model = AutoModel.from_pretrained(self._REPO).eval()"
+    },
+    {
+      "file": "weights/src/rad_dino/__init__.py",
+      "line": 26,
+      "call": "self.processor = AutoImageProcessor.from_pretrained(self._REPO, use_fast=False)"
+    }
+  ],
+  "environment_manifest": "../../environment/manifests/JinPeng/shared/g04-feature4/requirements-install.txt"
+}

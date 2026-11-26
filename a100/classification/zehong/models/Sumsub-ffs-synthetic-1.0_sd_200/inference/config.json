@@ -1,0 +1,18 @@
+{
+  "kind": "sumsub",
+  "repo": "Sumsub/Sumsub-ffs-synthetic-1.0_sd_200",
+  "data_repo": "dragonintelligence/CIFAKE-image-dataset",
+  "dataset": "../../../../dataset/jinpeng_public/CIFAKE/test-00000-of-00001.parquet",
+  "split": "test",
+  "rows": 20000,
+  "column": "label",
+  "mapping": {
+    "0": 1,
+    "1": 0
+  },
+  "labels": [
+    "by human",
+    "by ai"
+  ],
+  "device": "cuda:0"
+}

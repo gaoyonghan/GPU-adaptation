@@ -1,0 +1,64 @@
+{
+  "schema": "model-assets/v1",
+  "model": "dpt-hybrid-midas",
+  "platform": "A100",
+  "sources": [],
+  "revision": null,
+  "revision_status": "未在入口明确固定；发布前需核对原权重来源，不使用main冒充固定版本",
+  "assets": [
+    {
+      "argument": "--weights",
+      "path": "weights",
+      "required": true,
+      "role": "model_or_cache"
+    },
+    {
+      "argument": "--dataset-root",
+      "path": "../../../../dataset",
+      "required": true,
+      "role": "dataset"
+    }
+  ],
+  "weights_contents": [
+    {
+      "path": "weights/config.json",
+      "kind": "file",
+      "bytes": 10335
+    },
+    {
+      "path": "weights/preprocessor_config.json",
+      "kind": "file",
+      "bytes": 406
+    },
+    {
+      "path": "weights/pytorch_model.bin",
+      "kind": "file",
+      "bytes": 489648389
+    }
+  ],
+  "data_kind": "native_dataset",
+  "prepared_data": [],
+  "nested_load_calls": [
+    {
+      "file": "inference/adapter.py",
+      "line": 14,
+      "call": "self.model=DepthAnything.from_pretrained(str(weights),local_files_only=True)"
+    },
+    {
+      "file": "inference/adapter.py",
+      "line": 19,
+      "call": "self.model=LotusGPipeline.from_pretrained(weights,torch_dtype=getattr(torch,lotus_dtype),local_files_only=True)"
+    },
+    {
+      "file": "inference/adapter.py",
+      "line": 22,
+      "call": "self.processor=AutoImageProcessor.from_pretrained(weights,local_files_only=True)"
+    },
+    {
+      "file": "inference/adapter.py",
+      "line": 23,
+      "call": "self.model=AutoModelForDepthEstimation.from_pretrained(weights,local_files_only=True)"
+    }
+  ],
+  "environment_manifest": "../../environment/manifests/zineng/shared/g02-depth/requirements-install.txt"
+}

@@ -1,0 +1,28 @@
+{
+  "_name_or_path": "google/siglip2-base-patch16-224",
+  "architectures": [
+    "SiglipForImageClassification"
+  ],
+  "id2label": {
+    "0": "fire",
+    "1": "normal",
+    "2": "smoke"
+  },
+  "initializer_factor": 1.0,
+  "label2id": {
+    "fire": 0,
+    "normal": 1,
+    "smoke": 2
+  },
+  "model_type": "siglip",
+  "problem_type": "single_label_classification",
+  "text_config": {
+    "model_type": "siglip_text_model",
+    "vocab_size": 256000
+  },
+  "torch_dtype": "float32",
+  "transformers_version": "4.48.3",
+  "vision_config": {
+    "model_type": "siglip_vision_model"
+  }
+}

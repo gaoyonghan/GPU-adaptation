@@ -1,0 +1,69 @@
+{
+  "schema": "model-assets/v1",
+  "model": "Virchow",
+  "platform": "A100",
+  "sources": [
+    {
+      "repo_id": "paige-ai/Virchow",
+      "evidence": "inference/model.py"
+    }
+  ],
+  "revision": "19eebc84ae33e79f1b2d866e6ff90ae50e522f9a",
+  "revision_status": "recorded_in_source",
+  "assets": [
+    {
+      "argument": "--weights",
+      "path": "weights",
+      "required": true,
+      "role": "model_or_cache"
+    },
+    {
+      "argument": "--bundle",
+      "path": "../../../../dataset/nct_crc_nonorm_bundle_1000",
+      "required": true,
+      "role": "dataset"
+    }
+  ],
+  "weights_contents": [
+    {
+      "path": "weights/config.json",
+      "kind": "file",
+      "bytes": 716
+    },
+    {
+      "path": "weights/model.safetensors",
+      "kind": "file",
+      "bytes": 2524960072
+    },
+    {
+      "path": "weights/pytorch_model.bin",
+      "kind": "file",
+      "bytes": 2525082914
+    }
+  ],
+  "data_kind": "prepared_bundle",
+  "prepared_data": [
+    {
+      "path": "../../../../dataset/nct_crc_nonorm_bundle_1000",
+      "samples": 1000,
+      "manifest": "input_manifest.jsonl",
+      "manifest_sha256": "8400ff62c5028916e8daeef4653152a640b6f943b8be351b44d303d4c207de93",
+      "format_fields": [
+        "sample_id",
+        "relative_path",
+        "image_sha256",
+        "source_relative_path"
+      ],
+      "bundled_description": [],
+      "sampling_recipe": "见随包dataset_manifest及上述说明；未记录的采样细节不得推定为官方标准"
+    }
+  ],
+  "nested_load_calls": [
+    {
+      "file": "inference/model.py",
+      "line": 86,
+      "call": "def hf_hub_download(repo_id=None,filename=None,**kwargs):"
+    }
+  ],
+  "environment_manifest": "../../environment/manifests/JinPeng/shared/g04-feature4/requirements-install.txt"
+}

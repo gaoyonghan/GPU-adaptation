@@ -1,0 +1,89 @@
+{
+  "schema": "model-assets/v1",
+  "model": "MoonViT-SO-400M",
+  "platform": "A100",
+  "sources": [
+    {
+      "repo_id": "moonshotai/MoonViT-SO-400M",
+      "evidence": "inference/model.py"
+    }
+  ],
+  "revision": "a889d399ff2306053e4e28d499d3b8f97d3e5007",
+  "revision_status": "recorded_in_source",
+  "assets": [
+    {
+      "argument": "--weights",
+      "path": "weights",
+      "required": true,
+      "role": "model_or_cache"
+    },
+    {
+      "argument": "--bundle",
+      "path": "../../../../dataset/infovqa_bundle_1000",
+      "required": true,
+      "role": "dataset"
+    }
+  ],
+  "weights_contents": [
+    {
+      "path": "weights/config.json",
+      "kind": "file",
+      "bytes": 501
+    },
+    {
+      "path": "weights/configuration_moonvit.py",
+      "kind": "file",
+      "bytes": 1020
+    },
+    {
+      "path": "weights/image_processing_moonvit.py",
+      "kind": "file",
+      "bytes": 4681
+    },
+    {
+      "path": "weights/model.safetensors",
+      "kind": "file",
+      "bytes": 833765656
+    },
+    {
+      "path": "weights/modeling_moonvit.py",
+      "kind": "file",
+      "bytes": 19448
+    },
+    {
+      "path": "weights/preprocessor_config.json",
+      "kind": "file",
+      "bytes": 339
+    }
+  ],
+  "data_kind": "prepared_bundle",
+  "prepared_data": [
+    {
+      "path": "../../../../dataset/infovqa_bundle_1000",
+      "samples": 1000,
+      "manifest": "input_manifest.jsonl",
+      "manifest_sha256": "7291021af12454eafc06cf5764a2ae90546fd766b0156035608408219d7fd1db",
+      "format_fields": [
+        "sample_id",
+        "relative_path",
+        "image_sha256",
+        "source_relative_path"
+      ],
+      "bundled_description": [],
+      "sampling_recipe": "见随包dataset_manifest及上述说明；未记录的采样细节不得推定为官方标准"
+    }
+  ],
+  "nested_load_calls": [
+    {
+      "file": "inference/model.py",
+      "line": 47,
+      "call": "processor = AutoImageProcessor.from_pretrained(snapshot, trust_remote_code=True)"
+    },
+    {
+      "file": "inference/model.py",
+      "line": 48,
+      "call": "model = AutoModel.from_pretrained(snapshot, trust_remote_code=True, torch_dtype='auto', attn_implementation='sdpa')"
+    }
+  ],
+  "environment_manifest": "../../environment/manifests/songjie/shared/g04-feature4/requirements-install.txt"
+}

@@ -1,0 +1,12 @@
+{
+  "id2label": {
+    "0": "by AI",
+    "1": "by human"
+  },
+  "label2id": {
+    "by AI": "0",
+    "by human": "1"
+  },
+  "pretrained": false,
+  "timm_model": "convnext_large_mlp.clip_laion2b_soup_ft_in12k_in1k_384"
+}

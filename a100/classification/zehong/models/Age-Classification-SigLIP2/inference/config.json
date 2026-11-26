@@ -1,0 +1,9 @@
+{
+  "model_name": "Age-Classification-SigLIP2",
+  "kind": "age",
+  "weights": "weights",
+  "device": "cuda:0",
+  "dataset_name": "Age-Classification-Set",
+  "dataset_root": "../../../../dataset/Age-Classification-Set",
+  "warmup_steps": 20
+}

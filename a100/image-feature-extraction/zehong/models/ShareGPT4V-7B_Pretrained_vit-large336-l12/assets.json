@@ -1,0 +1,74 @@
+{
+  "schema": "model-assets/v1",
+  "model": "ShareGPT4V-7B_Pretrained_vit-large336-l12",
+  "platform": "A100",
+  "sources": [
+    {
+      "repo_id": "Lin-Chen/ShareGPT4V-7B_Pretrained_vit-large336-l12",
+      "evidence": "inference/model.py"
+    }
+  ],
+  "revision": "7c7cca174ca36fe4fa29fafa6431f365fc31dac1",
+  "revision_status": "recorded_in_source",
+  "assets": [
+    {
+      "argument": "--weights",
+      "path": "weights",
+      "required": true,
+      "role": "model_or_cache"
+    },
+    {
+      "argument": "--bundle",
+      "path": "../../../../dataset/mm-vet/mmvet_bundle",
+      "required": true,
+      "role": "dataset"
+    }
+  ],
+  "weights_contents": [
+    {
+      "path": "weights/config.json",
+      "kind": "file",
+      "bytes": 573
+    },
+    {
+      "path": "weights/preprocessor_config.json",
+      "kind": "file",
+      "bytes": 518
+    },
+    {
+      "path": "weights/pytorch_model.bin",
+      "kind": "file",
+      "bytes": 607160538
+    }
+  ],
+  "data_kind": "prepared_bundle",
+  "prepared_data": [
+    {
+      "path": "../../../../dataset/mm-vet/mmvet_bundle",
+      "samples": 200,
+      "manifest": "input_manifest.jsonl",
+      "manifest_sha256": "5999bcb22cc2cf45c600ea20ea12f4b4b1995be3669955e4e7d325f8c25117e7",
+      "format_fields": [
+        "sample_id",
+        "relative_path",
+        "image_sha256",
+        "source_relative_path"
+      ],
+      "bundled_description": [],
+      "sampling_recipe": "见随包dataset_manifest及上述说明；未记录的采样细节不得推定为官方标准"
+    }
+  ],
+  "nested_load_calls": [
+    {
+      "file": "inference/model.py",
+      "line": 53,
+      "call": "processor = CLIPImageProcessor.from_pretrained(snapshot)"
+    },
+    {
+      "file": "inference/model.py",
+      "line": 54,
+      "call": "model = CLIPVisionModel.from_pretrained(snapshot, torch_dtype=torch.float16, attn_implementation='eager')"
+    }
+  ],
+  "environment_manifest": "../../environment/manifests/songjie/requirements-install.txt"
+}

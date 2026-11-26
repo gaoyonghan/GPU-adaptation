@@ -1,0 +1,48 @@
+{
+  "schema": "model-assets/v1",
+  "model": "beit-base-patch16-384",
+  "platform": "A100",
+  "sources": [
+    {
+      "repo_id": "microsoft/beit-base-patch16-384",
+      "evidence": "inference.py"
+    }
+  ],
+  "revision": null,
+  "revision_status": "未在入口明确固定；发布前需核对原权重来源，不使用main冒充固定版本",
+  "assets": [
+    {
+      "argument": "--weights",
+      "path": "weights",
+      "required": true,
+      "role": "model_or_cache"
+    },
+    {
+      "argument": "--dataset-root",
+      "path": "../../../../dataset/ILSVRC___imagenet-1k",
+      "required": true,
+      "role": "dataset"
+    }
+  ],
+  "weights_contents": [
+    {
+      "path": "weights/config.json",
+      "kind": "file",
+      "bytes": 69889
+    },
+    {
+      "path": "weights/preprocessor_config.json",
+      "kind": "file",
+      "bytes": 276
+    },
+    {
+      "path": "weights/pytorch_model.bin",
+      "kind": "file",
+      "bytes": 379027947
+    }
+  ],
+  "data_kind": "native_dataset",
+  "prepared_data": [],
+  "nested_load_calls": [],
+  "environment_manifest": "../../environment/manifests/songjie/shared/g01-classification/requirements-install.txt"
+}

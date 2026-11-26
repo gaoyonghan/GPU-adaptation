@@ -1,0 +1,99 @@
+{
+  "schema": "model-assets/v1",
+  "model": "hibou-L",
+  "platform": "A100",
+  "sources": [
+    {
+      "repo_id": "histai/hibou-L",
+      "evidence": "inference/model.py"
+    }
+  ],
+  "revision": "31a3b9fee16554c8552cb643d311733bce8faf7c",
+  "revision_status": "recorded_in_source",
+  "assets": [
+    {
+      "argument": "--weights",
+      "path": "weights",
+      "required": true,
+      "role": "model_or_cache"
+    },
+    {
+      "argument": "--bundle",
+      "path": "../../../../dataset/pannuke_bundle_1000",
+      "required": true,
+      "role": "dataset"
+    }
+  ],
+  "weights_contents": [
+    {
+      "path": "weights/config.json",
+      "kind": "file",
+      "bytes": 1292
+    },
+    {
+      "path": "weights/configuration_dinov2.py",
+      "kind": "file",
+      "bytes": 8354
+    },
+    {
+      "path": "weights/model.safetensors",
+      "kind": "file",
+      "bytes": 1214686200
+    },
+    {
+      "path": "weights/modeling_dinov2.py",
+      "kind": "file",
+      "bytes": 38682
+    },
+    {
+      "path": "weights/preprocessor_config.json",
+      "kind": "file",
+      "bytes": 468
+    }
+  ],
+  "data_kind": "prepared_bundle",
+  "prepared_data": [
+    {
+      "path": "../../../../dataset/pannuke_bundle_1000",
+      "samples": 1000,
+      "manifest": "input_manifest.jsonl",
+      "manifest_sha256": "afd17eded6686832936fb509452914cccd23a3078fc5fbd88c40e64fd56e48a7",
+      "format_fields": [
+        "sample_id",
+        "relative_path",
+        "image_sha256",
+        "source_relative_path"
+      ],
+      "bundled_description": [],
+      "sampling_recipe": "见随包dataset_manifest及上述说明；未记录的采样细节不得推定为官方标准"
+    }
+  ],
+  "nested_load_calls": [
+    {
+      "file": "inference/model.py",
+      "line": 42,
+      "call": "processor = AutoImageProcessor.from_pretrained(snapshot)"
+    },
+    {
+      "file": "inference/model.py",
+      "line": 43,
+      "call": "model = AutoModel.from_pretrained(snapshot, trust_remote_code=True)"
+    },
+    {
+      "file": "inference/model.py",
+      "line": 73,
+      "call": "def hf_hub_download(repo_id=None,filename=None,**kwargs):"
+    },
+    {
+      "file": "weights/modeling_dinov2.py",
+      "line": 932,
+      "call": ">>> processor = AutoImageProcessor.from_pretrained(\"facebook/dinov2-base\")"
+    },
+    {
+      "file": "weights/modeling_dinov2.py",
+      "line": 933,
+      "call": ">>> model = AutoBackbone.from_pretrained("
+    }
+  ],
+  "environment_manifest": "../../environment/manifests/JinPeng/shared/g04-feature4/requirements-install.txt"
+}
