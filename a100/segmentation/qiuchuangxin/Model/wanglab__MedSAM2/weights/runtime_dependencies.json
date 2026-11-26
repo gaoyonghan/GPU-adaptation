@@ -1,0 +1,23 @@
+{
+  "model_id": "wanglab__MedSAM2",
+  "adapter": "medsam2",
+  "native_code_files": 40,
+  "dependencies": [
+    "numpy",
+    "Pillow",
+    "torch",
+    "torchvision",
+    "hydra-core",
+    "omegaconf",
+    "SimpleITK"
+  ],
+  "loader": "../inference.py",
+  "local_packages_precede_installed_editable_packages": true,
+  "optional_native_extension": {
+    "copied": false,
+    "default_postprocessing": false,
+    "reason": "The supplied Python 3.12 extension is unused by this protocol; rebuild from sam2/csrc using setup.py in a matching CUDA environment if optional hole filling is explicitly enabled."
+  },
+  "source_root": ".",
+  "package_boundary": "current model directory; no shared runtime code or other model"
+}

@@ -1,0 +1,16 @@
+{
+  "model_id": "keras-io__semantic-segmentation",
+  "adapter": "keras_pets",
+  "native_code_files": 1,
+  "dependencies": [
+    "numpy",
+    "Pillow",
+    "tensorflow",
+    "tf-keras",
+    "tensorflow-datasets"
+  ],
+  "loader": "../inference.py",
+  "local_packages_precede_installed_editable_packages": true,
+  "source_root": ".",
+  "package_boundary": "current model directory; no shared runtime code or other model"
+}

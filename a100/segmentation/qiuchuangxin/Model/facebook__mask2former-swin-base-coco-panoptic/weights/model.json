@@ -1,0 +1,29 @@
+{
+  "adapter": "coco",
+  "adapter_group": "facebook_coco_shared",
+  "weight_path": "weights",
+  "source_entry": "utils/coco_panoptic_runner.py",
+  "model_id": "facebook__mask2former-swin-base-coco-panoptic",
+  "source_root": "weights",
+  "dataset_root": "../../../../dataset/segmentation",
+  "datasets": [
+    {
+      "name": "COCO",
+      "split": [
+        "val2017"
+      ],
+      "protocol": {
+        "label_view": "panoptic_semantic"
+      }
+    }
+  ],
+  "native_task": "COCO 全景/可投影语义",
+  "native_boundary": "可按官方 categories 将 segment ID 投影为类别；统一 void、冲突与类别映射",
+  "original_entrypoints": [
+    "facebook__mask2former-swin-base-coco-panoptic/Mask2FormerSwinBaseCocoPanopticStart.py"
+  ],
+  "python": "../../venv/bin/python",
+  "evaluation_python": "../../venv/bin/python",
+  "seed": 42,
+  "bundle_root": "result/coco_bundle"
+}

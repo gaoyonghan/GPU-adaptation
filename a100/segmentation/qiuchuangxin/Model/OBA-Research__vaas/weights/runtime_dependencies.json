@@ -1,0 +1,18 @@
+{
+  "model_id": "OBA-Research__vaas",
+  "adapter": "vaas",
+  "native_code_files": 2,
+  "dependencies": [
+    "numpy",
+    "Pillow",
+    "torch",
+    "torchvision",
+    "transformers",
+    "scikit-learn",
+    "scipy"
+  ],
+  "loader": "../inference.py",
+  "local_packages_precede_installed_editable_packages": true,
+  "source_root": ".",
+  "package_boundary": "current model directory; no shared runtime code or other model"
+}

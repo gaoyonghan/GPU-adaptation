@@ -1,0 +1,27 @@
+{
+  "model_id": "ZhengPeng7__BiRefNet-portrait",
+  "adapter": "binary",
+  "weight_path": "weight",
+  "family": "birefnet",
+  "input_size": 1024,
+  "source_root": "weights",
+  "dataset_root": "../../../../dataset/segmentation",
+  "datasets": [
+    {
+      "name": "P3M-10k",
+      "split": [
+        "P3M-500-P"
+      ],
+      "protocol": {}
+    }
+  ],
+  "native_task": "人像alpha抠图",
+  "native_boundary": "入口使用blurred_image；和NP原图分组记录",
+  "original_entrypoints": [
+    "ZhengPeng7__BiRefNet-portrait/BiRefNetPortraitStart.py"
+  ],
+  "python": "../../venv/bin/python",
+  "evaluation_python": "../../venv/bin/python",
+  "seed": 42,
+  "bundle_root": "result/coco_bundle"
+}

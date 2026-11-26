@@ -1,0 +1,38 @@
+{
+  "model_id": "ChongCong__Medical-SAM3",
+  "adapter": "medical_sam3",
+  "weight_path": "weights/checkpoint_2D.pt",
+  "text_prompt": "Polyp",
+  "confidence_threshold": 0.1,
+  "source_root": "weights",
+  "dataset_root": "../../../../dataset/segmentation",
+  "datasets": [
+    {
+      "name": "CVC-ClinicDB",
+      "split": [
+        "test"
+      ],
+      "protocol": {}
+    },
+    {
+      "name": "CHASE_DB1",
+      "split": [
+        "test"
+      ],
+      "protocol": {
+        "text_prompt": "blood vessel"
+      },
+      "optional": true
+    }
+  ],
+  "native_task": "医学文本/框提示分割",
+  "native_boundary": "默认文本Polyp；提供gt-box/both模式；需记录提示来源与checkpoint兼容性",
+  "original_entrypoints": [
+    "ChongCong__Medical-SAM3/MedicalSAM3Start.py"
+  ],
+  "python": "../../venv/bin/python",
+  "evaluation_python": "../../venv/bin/python",
+  "seed": 42,
+  "box_max_exclusive": true,
+  "bundle_root": "result/coco_bundle"
+}

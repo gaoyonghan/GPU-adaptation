@@ -1,0 +1,18 @@
+{
+  "model_id": "briaai__RMBG-1.4",
+  "adapter": "binary",
+  "native_code_files": 13,
+  "dependencies": [
+    "numpy",
+    "Pillow",
+    "torch",
+    "torchvision",
+    "transformers",
+    "safetensors",
+    "timm"
+  ],
+  "loader": "../inference.py",
+  "local_packages_precede_installed_editable_packages": true,
+  "source_root": ".",
+  "package_boundary": "current model directory; no shared runtime code or other model"
+}

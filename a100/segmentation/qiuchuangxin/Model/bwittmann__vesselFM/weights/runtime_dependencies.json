@@ -1,0 +1,15 @@
+{
+  "model_id": "bwittmann__vesselFM",
+  "adapter": "vessel",
+  "native_code_files": 0,
+  "dependencies": [
+    "numpy",
+    "Pillow",
+    "torch",
+    "monai"
+  ],
+  "loader": "../inference.py",
+  "local_packages_precede_installed_editable_packages": true,
+  "source_root": ".",
+  "package_boundary": "current model directory; no shared runtime code or other model"
+}

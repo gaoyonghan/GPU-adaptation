@@ -1,0 +1,17 @@
+{
+  "model_id": "joelseytre__toonout",
+  "adapter": "toonout",
+  "native_code_files": 2,
+  "dependencies": [
+    "numpy",
+    "Pillow",
+    "torch",
+    "torchvision",
+    "transformers",
+    "timm"
+  ],
+  "loader": "../inference.py",
+  "local_packages_precede_installed_editable_packages": true,
+  "source_root": ".",
+  "package_boundary": "current model directory; no shared runtime code or other model"
+}

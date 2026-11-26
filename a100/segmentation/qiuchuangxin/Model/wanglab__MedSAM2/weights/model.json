@@ -1,0 +1,30 @@
+{
+  "model_id": "wanglab__MedSAM2",
+  "adapter": "medsam2",
+  "weight_path": "weights/MedSAM2_US_Heart.pt",
+  "prompt": "ed_mask",
+  "gt_role": "es",
+  "source_root": "weights",
+  "dataset_root": "../../../../dataset/segmentation",
+  "datasets": [
+    {
+      "name": "CAMUS",
+      "split": [
+        "subgroup_testing"
+      ],
+      "protocol": {
+        "prompt": "ed_mask",
+        "gt_role": "es"
+      }
+    }
+  ],
+  "native_task": "医学视频/序列提示分割",
+  "native_boundary": "默认MedSAM2_US_Heart.pt；病例序列和提示策略独立于COCO",
+  "original_entrypoints": [
+    "wanglab__MedSAM2/MedSAM2CAMUSStart.py"
+  ],
+  "python": "../../venv/bin/python",
+  "evaluation_python": "../../venv/bin/python",
+  "seed": 42,
+  "bundle_root": "result/coco_bundle"
+}

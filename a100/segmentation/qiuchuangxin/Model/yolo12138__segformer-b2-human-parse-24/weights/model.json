@@ -1,0 +1,29 @@
+{
+  "adapter": "semantic",
+  "adapter_group": "human24",
+  "weight_path": "weights",
+  "source_entry": "shared/gpu-reproduction/additional_models.py",
+  "model_id": "yolo12138__segformer-b2-human-parse-24",
+  "source_root": "weights",
+  "dataset_root": "../../../../dataset/segmentation",
+  "datasets": [
+    {
+      "name": "ATR",
+      "split": [
+        "author_seed42_holdout"
+      ],
+      "protocol": {
+        "label_view": "atr_human24_common15"
+      }
+    }
+  ],
+  "native_task": "24类人体解析",
+  "native_boundary": "公共代理数据；原始human_parsing_29_mix未公开；不属于官方held-out成绩",
+  "original_entrypoints": [
+    "gpu-reproduction/additional_models.py human24"
+  ],
+  "python": "../../venv/bin/python",
+  "evaluation_python": "../../venv/bin/python",
+  "seed": 42,
+  "bundle_root": "result/coco_bundle"
+}

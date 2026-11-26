@@ -1,0 +1,27 @@
+{
+  "adapter": "semantic",
+  "adapter_group": "fashion_segformer",
+  "weight_path": "weights",
+  "source_entry": "SegFormerB3FashionStart.py",
+  "model_id": "sayeed99__segformer-b3-fashion",
+  "source_root": "weights",
+  "dataset_root": "../../../../dataset/segmentation",
+  "datasets": [
+    {
+      "name": "Fashion",
+      "split": [
+        "validation_seed42_15pct"
+      ],
+      "protocol": {}
+    }
+  ],
+  "native_task": "47类服饰语义",
+  "native_boundary": "不是COCO类别；B2/B3类别0显示名不同，需按数值映射",
+  "original_entrypoints": [
+    "sayeed99__segformer-b3-fashion/SegFormerB3FashionStart.py"
+  ],
+  "python": "../../venv/bin/python",
+  "evaluation_python": "../../venv/bin/python",
+  "seed": 42,
+  "bundle_root": "result/coco_bundle"
+}

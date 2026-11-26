@@ -1,0 +1,16 @@
+{
+  "model_id": "CIDAS__clipseg-rd64-refined",
+  "adapter": "clipseg",
+  "native_code_files": 4,
+  "dependencies": [
+    "numpy",
+    "Pillow",
+    "torch",
+    "transformers",
+    "safetensors"
+  ],
+  "loader": "../inference.py",
+  "local_packages_precede_installed_editable_packages": true,
+  "source_root": ".",
+  "package_boundary": "current model directory; no shared runtime code or other model"
+}
