@@ -1,0 +1,61 @@
+{
+  "model_id": "microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224",
+  "revision": "9f341de24bfb00180f1b847274256e9b65a3a32e",
+  "scope": "user_decision_all_77_top20",
+  "historical_task": "BiomedCLIP官方评测器",
+  "backend": "OpenCLIP local config/checkpoint",
+  "runtime_backend": "OpenCLIP",
+  "handoff_status": "catalogued_native_protocol_port_pending",
+  "historical_acceptance": "严格官方指标对齐",
+  "official_datasets": "PatchCamelyon official test",
+  "native_evaluator": "evaluation_audit/evaluate_biomedclip_pcam_official.py",
+  "native_evaluator_sha256": "6cd821731bfbd4d9d55637aca3e198f960335a821335aabb53db11c47787a19a",
+  "weight_reference": "classification/zhoujianjie/models/microsoft__BiomedCLIP-PubMedBERT_256-vit_base_patch16_224/weights",
+  "evidence": [
+    {
+      "source": "results/biomedclip_pcam_official/summary.json",
+      "snapshot": "history/evidence_01.json",
+      "sha256": "2468d9bd3d6e541f04b7ecd2829a0a0a3bfce22f9c0e54ae7839e19b65075303"
+    }
+  ],
+  "official_dataset": null,
+  "standard_dataset": null,
+  "primary_metrics": [
+    "top1_accuracy"
+  ],
+  "metric_unit": "fraction",
+  "classification_protocol_status": "requires_native_protocol_review_before_top1",
+  "official_claim": null,
+  "model_asset_sha256": {
+    "config.json": "56bab767c02bc792897638feb8addc06d483d9c73769a5f554bbabea1f5507a1",
+    "download_receipt.json": "e494ceaada2aac73849679a23e2f7c5d854816b69081780b588715e71cc782e9",
+    "open_clip_config.json": "9a41f334a8c444678772c0ebb9ab854c97ab350bced3a17b803e258d39c23dc0",
+    "special_tokens_map.json": "b6d346be366a7d1d48332dbc9fdf3bf8960b5d879522b7799ddba59e76237ee3",
+    "tokenizer.json": "defc1f91456606e7847af3a2fb4a8abb96441423aa5407a52498395ea68327ff",
+    "tokenizer_config.json": "e1790949631401af1bfb6c9c7aeec7fcf612e274d73579d99f704faea40c8ba7",
+    "vocab.txt": "7b36651908a88bc38bda41b728b2a598191e0d3b553cbacf7b1e5f026d5b5b9f"
+  },
+  "framework_sha256": {
+    "zero-shot-classification/zhoujianjie/models/microsoft__BiomedCLIP-PubMedBERT_256-vit_base_patch16_224/inference/shared/__init__.py": "ac530da703ede9365e51055357b2227002a9de0097e365da28ac1cd002680710",
+    "zero-shot-classification/zhoujianjie/models/microsoft__BiomedCLIP-PubMedBERT_256-vit_base_patch16_224/inference/shared/classification_contract.py": "a4c1f76d0d476ad5a51ba8e66dab28ba94903b62391cfd5addd762a59d53ab0b",
+    "zero-shot-classification/zhoujianjie/models/microsoft__BiomedCLIP-PubMedBERT_256-vit_base_patch16_224/inference/shared/classification_metrics.py": "623580d4254977e67cbfcce6c45a6e9f8eedab927e4ec692d26d63f474f49bbb",
+    "zero-shot-classification/zhoujianjie/models/microsoft__BiomedCLIP-PubMedBERT_256-vit_base_patch16_224/inference/shared/handoff_runtime.py": "4de24cfbb2ddb1f045a0e4d795785034be3f9a6f80cee367d9242cc1e73bdb54",
+    "zero-shot-classification/zhoujianjie/models/microsoft__BiomedCLIP-PubMedBERT_256-vit_base_patch16_224/inference/shared/legacy/class_names.py": "314a107b4fe15bc163030517d1191d8e6eef4d474fbaf09472323ced989cd46a",
+    "zero-shot-classification/zhoujianjie/models/microsoft__BiomedCLIP-PubMedBERT_256-vit_base_patch16_224/inference/shared/legacy/evaluate_b01.py": "7d71c5d270ef59a17d9148b200b6b32e0943cd10c82686b87692fd0211056ab8",
+    "zero-shot-classification/zhoujianjie/models/microsoft__BiomedCLIP-PubMedBERT_256-vit_base_patch16_224/inference/shared/legacy/evaluate_imagenet1k_official.py": "ee2b1d5af45da948549b811d911325bc94bc8be656be9ed0f9163bd96e2c3a01",
+    "zero-shot-classification/zhoujianjie/models/microsoft__BiomedCLIP-PubMedBERT_256-vit_base_patch16_224/inference/shared/legacy/imagenet1k_official_spec.py": "3aeb7f0134ee4b55a4a8b2e3aed4d176f76bc892ef1e908bb2fe209e045a43bb",
+    "zero-shot-classification/zhoujianjie/models/microsoft__BiomedCLIP-PubMedBERT_256-vit_base_patch16_224/inference/shared/legacy/official_22_models.py": "4cec0a47a0479e2c4ae9634e5c58af1979a84340d3fa96e4fcf33de9f1fcc3b8",
+    "zero-shot-classification/zhoujianjie/models/microsoft__BiomedCLIP-PubMedBERT_256-vit_base_patch16_224/inference/shared/legacy/prompt_engineering_constants.py": "08b6bfd94da4ad774a87246c615bae191ecf7db47477c4b98e8b7a759aff00d2",
+    "zero-shot-classification/zhoujianjie/models/microsoft__BiomedCLIP-PubMedBERT_256-vit_base_patch16_224/inference/shared/legacy/validate_stage2_models.py": "a4436f1e241f2bc98ec48661fdcee76369b2c73e1bc7b16b14a01cb84a65532a",
+    "zero-shot-classification/zhoujianjie/models/microsoft__BiomedCLIP-PubMedBERT_256-vit_base_patch16_224/inference/shared/standard_dataset.py": "9ef01e01d024a5e3897e14e51fe099238701ab6a9c7623946411db892e278098",
+    "zero-shot-classification/zhoujianjie/models/microsoft__BiomedCLIP-PubMedBERT_256-vit_base_patch16_224/inference/shared/standard_scoring.py": "b47dfa18dec99f68e0dd35965aee27f116a5ca48f8925bb1ea0847d8cd6c29e8",
+    "zero-shot-classification/zhoujianjie/models/microsoft__BiomedCLIP-PubMedBERT_256-vit_base_patch16_224/inference/Dataset_Coco/__init__.py": "bc5bb4e4e38cf7a2445eb919778d69361ca2f0cb10db241651d80a217bcf6b85",
+    "zero-shot-classification/zhoujianjie/models/microsoft__BiomedCLIP-PubMedBERT_256-vit_base_patch16_224/inference/Dataset_Coco/coco_bundle.py": "965397e6f697e414bca59d987660d394af5e5cad0be145cdd5d9224cfcc06263"
+  },
+  "weight_reference_before_packaging": "models/microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224",
+  "a100_historical_status": "completed",
+  "submission_gpu_retested": false,
+  "submission_required_dataset_directories": [
+    "standardized/pcam_test"
+  ]
+}
