@@ -1,0 +1,89 @@
+{
+  "sequence": 28,
+  "model_id": "nickmuchi/yolos-small-finetuned-license-plate-detection",
+  "task": "object_detection",
+  "task_name": "目标检测",
+  "reported_result": "49.915573440247",
+  "reference": "49",
+  "model_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/model_index/nickmuchi/yolos-small-finetuned-license-plate-detection",
+  "model_exists_at_build": true,
+  "dataset": {
+    "id": "roboflow_licenseplates_v2_valid",
+    "relation": "public_replacement",
+    "split": "validation",
+    "note": "License Plates Recognition v2 · validation · 350 图\n非官方评测集：公开替代"
+  },
+  "environment_id": "detection-hf",
+  "runner_family": "remaining_detection",
+  "final_result_sources": [
+    {
+      "source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m028/metrics-0.json",
+      "sha256": "385130a37abc4634d290fbcf647894d874ea14e521c0f8dc10aef9d7ab96103f",
+      "selection": "workbook_score_match",
+      "data": {
+        "metrics": {
+          "AP": 0.49915573440247035,
+          "AP50": 0.8794625405490638,
+          "AP75": 0.5302877116653049,
+          "AP_small": 0.17169536318368772,
+          "AP_medium": 0.5795718004248602,
+          "AP_large": 0.7258333175747819,
+          "AR1": 0.5456185567010309,
+          "AR10": 0.6255154639175258,
+          "AR100": 0.6713917525773196,
+          "AR_small": 0.3527472527472527,
+          "AR_medium": 0.753125,
+          "AR_large": 0.8682926829268292,
+          "per_class_AP": {
+            "license plate": 0.49915573440247035
+          }
+        },
+        "unit": "fraction_0_to_1",
+        "coverage": {
+          "model_labels": {
+            "0": "name",
+            "1": "license-plates"
+          },
+          "mapping": {
+            "1": 1
+          },
+          "covered_labels": [
+            "license-plates"
+          ],
+          "missing_labels": [
+            "name"
+          ],
+          "covered_count": 1,
+          "total_model_classes": 2,
+          "gt_instances_per_class": {
+            "license plate": 388
+          }
+        },
+        "evaluation_images": 350,
+        "annotation_sha256": "31f0a433734c36e2d586cb2f106943d7cbd6dfd22a8922742c78fdb46985181a",
+        "protocol_fingerprint": "e7f8ac213f24c69dcfd51e3d7a8e488e2f7d7ffe96a01bff600678a909d55d72",
+        "reference_check": "not_officially_comparable"
+      },
+      "source_original": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/remaining25_v2/m28-yolos-small-finetuned-license-plate-detection/bbox/metrics.json"
+    }
+  ],
+  "code": {
+    "source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/remaining25_v2/_source_snapshot/run_model.py",
+    "sha256": "166c80d5179b72ba36b3c6eef76833b0a97d0428e7556f46b346388e527a549d",
+    "recorded_sha256": null,
+    "attestation": "result_batch_snapshot",
+    "status_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m028/status.json",
+    "selection": "same_batch_snapshot",
+    "archive": "code_archive/166c80d5179b72ba_run_model.py"
+  },
+  "support_files": [
+    "models.json",
+    "run_model.py",
+    "run_ready.sh"
+  ],
+  "final_scorer": null,
+  "backend_package": "remaining_detection_eval",
+  "readiness": "code_and_result_identified",
+  "launch_status": "configured",
+  "metadata_warning": null
+}

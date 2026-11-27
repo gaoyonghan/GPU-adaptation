@@ -1,0 +1,43 @@
+{
+  "audited_on": "2026-09-05",
+  "total_detection_models": 62,
+  "existing_green_batch": 37,
+  "remaining_models": 25,
+  "scope_note": "37是已选入队列数，不是全量完成数。25按唯一model_id统计；任务/权重子记录不重复计数。",
+  "source_manifest": "__MODEL_ROOT__/resources/runtime/assets/workspace/official_object_detection_eval/models.json",
+  "source_sha256": "b45b4ecf6abc95ee7f2f542b2125dd8fcf4b013bed08cf81dc50c452ce023c00",
+  "primary_blocker_counts": {
+    "旧替代集类别不全，需核对任务覆盖": 4,
+    "私有数据且缺任务匹配的公开金标": 2,
+    "原协议/划分不明，现有数据可做参考评测": 8,
+    "数据已有，缺任务适配或多权重覆盖": 8,
+    "仅下载了说明/发布链接，实际权重缺失": 2,
+    "数据下载未完成，当前目录为空": 1
+  },
+  "models": [
+    {
+      "sequence": 39,
+      "excel_row": 40,
+      "model_id": "PaddlePaddle/PP-DocLayoutV3_safetensors",
+      "primary_blocker": "旧替代集类别不全，需核对任务覆盖",
+      "historical_reason": "P2-不合格｜Paddle自建原评测数据未公开，允许替代；但 OmniDocBench不能完整覆盖V3全部类别/弯曲页面协议。当前只能作子集与稳健性实验，不能作为完整主评测。依据：https://github.com/opendatalab/OmniDocBench",
+      "required_tasks": [
+        "layout_detection_classification",
+        "polygon_segmentation",
+        "reading_order"
+      ],
+      "task_inventory_status": "model_card_and_prior_audit",
+      "weight_files_present": [
+        {
+          "file": "model.safetensors",
+          "bytes": 133270468
+        }
+      ],
+      "next_action": "OmniDocBench多边形和order覆盖mask/排序；使用支持pp_doclayout_v3的Transformers。",
+      "source_model_card": "https://huggingface.co/PaddlePaddle/PP-DocLayoutV3_safetensors",
+      "local_model_card": "__MODEL_ROOT__/weights/PaddlePaddle/PP-DocLayoutV3_safetensors/README.md",
+      "technical_complete": false,
+      "metrics": null
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "schema": "model-eval/classification-inventory/v1",
+  "scope": "One independent MX GPU classification model",
+  "models": [
+    {
+      "sequence": 117,
+      "model_id": "tonyassi/celebrity-classifier",
+      "dataset": {
+        "id": "celebrity-1000",
+        "split": null,
+        "note": [
+          "celebrity-1000\ntrain 分层抽取 20%，seed=42\n3,637 张，非官方 test"
+        ],
+        "native_scope": {
+          "name": "celebrity-1000",
+          "source": "tonyassi/celebrity-1000 (local parquet cache)",
+          "source_split": "train",
+          "evaluated_split": "stratified_holdout",
+          "split_note": "公开数据集只有 train split；按 seed=42 分层抽取 20% 作为测试 holdout，非官方 test split。",
+          "split_seed": 42,
+          "holdout_fraction": 0.2,
+          "source_image_count": 18184,
+          "image_count": 3637,
+          "class_count": 997
+        },
+        "relation": "native_e07_registered_scope",
+        "index_source": "native loader GT, materialized as classification_annotations.json in the native phase directory",
+        "data_containers": [
+          "dataset/celebrity-1000/data/train-00000-of-00001.parquet"
+        ]
+      },
+      "qualification": "native_registered_scope",
+      "limitations": [
+        "Capture-ready is a code integration state, not a claim that inference has passed.",
+        "Unobserved native Top-5 is unavailable; aggregate scores are not predictions."
+      ],
+      "num_classes": 997,
+      "expected_images": 3637,
+      "adapter": "native_labels"
+    }
+  ]
+}

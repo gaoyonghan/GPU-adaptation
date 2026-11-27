@@ -1,0 +1,256 @@
+{
+  "schema_version": 1,
+  "sources": {},
+  "models": [
+    {
+      "sequence": 149,
+      "model_id": "syntheticbot/clip-face-attribute-classifier",
+      "runner_family": "native_script",
+      "adapter": "native_labels",
+      "state": "full_inference_and_public_scoring_verified",
+      "dataset": {
+        "id": "FairFace",
+        "split": "validation",
+        "note": [
+          "FairFace validation\n10,954 张\n标签顺序按模型对齐"
+        ],
+        "native_scope": {
+          "name": "FairFace",
+          "source": "HuggingFaceM4/FairFace",
+          "split": "validation",
+          "image_count": 10954,
+          "dataset_label_order": {
+            "age": [
+              "0-2",
+              "3-9",
+              "10-19",
+              "20-29",
+              "30-39",
+              "40-49",
+              "50-59",
+              "60-69",
+              "more than 70"
+            ],
+            "gender": [
+              "Male",
+              "Female"
+            ],
+            "race": [
+              "East Asian",
+              "Indian",
+              "Black",
+              "White",
+              "Middle Eastern",
+              "Latino_Hispanic",
+              "Southeast Asian"
+            ]
+          },
+          "dataset_to_model_label_index": {
+            "age": [
+              0,
+              3,
+              1,
+              2,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "gender": [
+              1,
+              0
+            ],
+            "race": [
+              1,
+              2,
+              0,
+              6,
+              4,
+              3,
+              5
+            ]
+          },
+          "split_note": "This is FairFace's publicly available validation split (10,954 images); the downloaded public version does not provide a separate hidden test split."
+        },
+        "relation": "native_e07_registered_scope",
+        "index_source": "native loader GT, materialized as classification_annotations.json in the native phase directory",
+        "data_containers": [
+          "dataset/FairFace/0.25/validation-00000-of-00001-951dbd63c8724ee1.parquet"
+        ]
+      },
+      "qualification": "native_registered_scope",
+      "limitations": [
+        "Capture-ready is a code integration state, not a claim that inference has passed.",
+        "Unobserved native Top-5 is unavailable; aggregate scores are not predictions."
+      ],
+      "num_classes": 9,
+      "expected_images": 10954,
+      "native_script": {
+        "script": "inference/native/run_model.py",
+        "script_sha256": "031ebfb55d14ad000a5cc3d9095ec058ff3a1d07fe4ba917b3381aed7a5b02dd",
+        "loop_lineno": 302,
+        "labels": "labels",
+        "prediction": "predictions",
+        "ranking": null,
+        "classes": "logits.shape[-1]",
+        "loader_kind": "torch",
+        "label_position": 1,
+        "branches": [
+          "age",
+          "gender",
+          "race"
+        ],
+        "framework": "torch",
+        "original_script_sha256": "a46d326d0fd46a47ed9939fe3248d7c19c5c3269c102f92e2ecf33847f4533c0",
+        "original_loop_lineno": 291,
+        "original_path": "code/clip-face-attribute-classifier-fairface-test.py",
+        "ported_script_sha256": "bf4c1bc33b8e462356efcf65414f1f27a82d269db47070e0e8909a7d0119580f"
+      },
+      "output_relative_path": "result/run_001/full/m149",
+      "supports_max_samples": false,
+      "runtime": {
+        "batch_size": 64,
+        "workers": 0,
+        "warmup": 3
+      },
+      "weights_files": [
+        {
+          "path": "config.json",
+          "size": 4519,
+          "sha256": "8a09b467700c58138c29d53c605b34ebc69beaadd13274a8a2af8ad2c2f4032a"
+        },
+        {
+          "path": "model.safetensors",
+          "size": 1212846240,
+          "sha256": "e811883e6f247acc61a869a938b9523d1eb1d34fa3c1e882b3f033a49b8cb72d"
+        },
+        {
+          "path": "preprocessor_config.json",
+          "size": 466,
+          "sha256": "205d45875859846dc1ca211b9a19f5db72f47e953b396954ee34d48d8e95c3c6"
+        },
+        {
+          "path": "tokenizer.json",
+          "size": 2224003,
+          "sha256": "a83e0809aa4c3af7208b2df632a7a69668c6d48775b3c3fe4e1b1199d1f8b8f4"
+        },
+        {
+          "path": "tokenizer_config.json",
+          "size": 905,
+          "sha256": "deef455e52fa5e8151e339add0582e4235f066009601360999d3a9cda83b1129"
+        },
+        {
+          "path": "vocab.json",
+          "size": 961143,
+          "sha256": "3f0c4f7d2086b61b38487075278ea9ed04edb53a03cbb045b86c27190fa8fb69"
+        }
+      ],
+      "dataset_files": [
+        "FairFace/0.25/validation-00000-of-00001-951dbd63c8724ee1.parquet"
+      ],
+      "environment": "e07.txt",
+      "native_precision": "See native metrics and source",
+      "backend": "native_torch_multitask_clip",
+      "timing_alignment": {
+        "forward": "Same event/current-stream/synchronize semantics; wrapper preserves exactly one native call. MX runtime differs.",
+        "e2e": "Native DataLoader fetch to CPU prediction availability; worker-prefetch boundary differs from Example. Does not include subsequent metrics or record writes.",
+        "worker_prefetch": false,
+        "starts_after_spider_composition": false,
+        "native_metric_operations_before_prediction_readiness": [
+          "for (task_index, task) in enumerate(TASK_ORDER):\n    task_logits = logits[task]\n    labels = batch_model_labels[:, task_index]\n    probabilities = F.softmax(task_logits, dim=1)\n    (confidence, predictions) = probabilities.max(dim=1)\n    losses = F.cross_entropy(task_logits, labels, reduction='none')\n    task_labels[task].extend(labels.cpu().tolist())\n    task_predictions[task].extend(predictions.cpu().tolist())\n    task_losses[task].extend(losses.cpu().tolist())\n    task_confidences[task].extend(confidence.cpu().tolist())\n    raw_values[task].extend(batch_raw_labels[:, task_index].tolist())"
+        ],
+        "model_load": "Sum of measured native construction/load/placement blocks, not Example contiguous block.",
+        "warmup": "Native repeated preprocessed first batch; native count retained; synchronized before/after. Unlike Example, preprocessing/transfer/softmax-to-CPU are outside the warmup interval.",
+        "evaluation": "Native aggregate evaluation not measured separately; evaluation_seconds=null. Public scoring duration is outside native timing.",
+        "resume": "No resume; repeated native phase archives previous output; resume_segments=1.",
+        "comparison_valid": false
+      },
+      "label_mapping": {
+        "age": [
+          {
+            "id": 0,
+            "name": "0-2"
+          },
+          {
+            "id": 1,
+            "name": "10-19"
+          },
+          {
+            "id": 2,
+            "name": "20-29"
+          },
+          {
+            "id": 3,
+            "name": "3-9"
+          },
+          {
+            "id": 4,
+            "name": "30-39"
+          },
+          {
+            "id": 5,
+            "name": "40-49"
+          },
+          {
+            "id": 6,
+            "name": "50-59"
+          },
+          {
+            "id": 7,
+            "name": "60-69"
+          },
+          {
+            "id": 8,
+            "name": "more than 70"
+          }
+        ],
+        "gender": [
+          {
+            "id": 0,
+            "name": "Female"
+          },
+          {
+            "id": 1,
+            "name": "Male"
+          }
+        ],
+        "race": [
+          {
+            "id": 0,
+            "name": "Black"
+          },
+          {
+            "id": 1,
+            "name": "East Asian"
+          },
+          {
+            "id": 2,
+            "name": "Indian"
+          },
+          {
+            "id": 3,
+            "name": "Latino_Hispanic"
+          },
+          {
+            "id": 4,
+            "name": "Middle Eastern"
+          },
+          {
+            "id": 5,
+            "name": "Southeast Asian"
+          },
+          {
+            "id": 6,
+            "name": "White"
+          }
+        ]
+      },
+      "layout_reference": {
+        "branch": "gaoyonghan/mx",
+        "commit": "208733e1562fca75b7128772ca2cd587943d9012",
+        "platform": "mx"
+      }
+    }
+  ]
+}

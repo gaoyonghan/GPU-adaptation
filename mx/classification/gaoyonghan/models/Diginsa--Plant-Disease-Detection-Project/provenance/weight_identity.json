@@ -1,0 +1,66 @@
+{
+  "sequence": 71,
+  "files": [
+    {
+      "path": "model.safetensors",
+      "bytes": 9264680,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "config.json",
+      "bytes": 3410,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "preprocessor_config.json",
+      "bytes": 434,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "trainer_state.json",
+      "bytes": 28640,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3318,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "all_results.json",
+      "bytes": 211,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "training_args.bin",
+      "bytes": 4600,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": ".gitattributes",
+      "bytes": 54,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "gitattributes",
+      "bytes": 1519,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "train_results.json",
+      "bytes": 211,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    }
+  ],
+  "mismatches": []
+}

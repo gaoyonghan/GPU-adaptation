@@ -1,0 +1,35 @@
+{
+  "text_templates": [
+    {
+      "source": "inference/path_templates/inference/native/run_official.sh",
+      "destination": "inference/native/run_official.sh"
+    },
+    {
+      "source": "inference/path_templates/inference/output_format/detection_inventory.json",
+      "destination": "inference/output_format/detection_inventory.json"
+    },
+    {
+      "source": "inference/path_templates/inference/output_format/prepare_detection.py",
+      "destination": "inference/output_format/prepare_detection.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/run_model.py",
+      "destination": "inference/native/mx_backend/run_model.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_backend/models.json",
+      "destination": "inference/native/mx_backend/models.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_variant_config.json",
+      "destination": "inference/native/mx_variant_config.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/mx_variant_definition.json",
+      "destination": "inference/native/mx_variant_definition.json"
+    }
+  ],
+  "links": [],
+  "classification_manifests": [],
+  "pet_indices": []
+}

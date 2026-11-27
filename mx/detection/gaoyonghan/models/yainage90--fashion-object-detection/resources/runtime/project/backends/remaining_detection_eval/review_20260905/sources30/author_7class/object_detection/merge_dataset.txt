@@ -1,0 +1,40 @@
+CELL 0 (code)
+from datasets import load_from_disk, concatenate_datasets, DatasetDict, load_from_disk
+
+fashionpedia_hf_dataset = load_from_disk('./fashionpedia_hf_dataset')
+modanet_hf_dataset = load_from_disk('./modanet_hf_dataset')
+
+train_merged = concatenate_datasets([fashionpedia_hf_dataset['train'], modanet_hf_dataset['train']])
+test_merged = concatenate_datasets([fashionpedia_hf_dataset['test'], modanet_hf_dataset['test']])
+
+dataset = DatasetDict({
+    'train': train_merged,
+    'test': test_merged
+})
+
+dataset.save_to_disk('./object_detection_dataset')
+
+OUTPUT:
+Saving the dataset (0/10 shards):   0%|          | 0/84431 [00:00<?, ? examples/s]
+
+OUTPUT:
+Saving the dataset (0/1 shards):   0%|          | 0/5544 [00:00<?, ? examples/s]
+
+CELL 1 (code)
+dataset = load_from_disk('./object_detection_dataset')
+dataset
+
+OUTPUT:
+DatasetDict({
+    train: Dataset({
+        features: ['image_id', 'width', 'height', 'image', 'objects'],
+        num_rows: 84431
+    })
+    test: Dataset({
+        features: ['image_id', 'width', 'height', 'image', 'objects'],
+        num_rows: 5544
+    })
+})
+
+CELL 2 (code)
+

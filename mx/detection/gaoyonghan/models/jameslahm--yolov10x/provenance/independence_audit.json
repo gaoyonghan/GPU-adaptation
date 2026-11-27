@@ -1,0 +1,27 @@
+{
+  "sequence": 29,
+  "model_id": "jameslahm/yolov10x",
+  "source_archive_hash_matches": true,
+  "source_archive_sha256": "21df719faee3f079363000830700d165761c9723fafe11261018bc6dc0488b65",
+  "prepared_entry_source_sha256": "d8028c6eeb52d36c316c160fc3c3dd5696c69e311228d585968ff323feefe06b",
+  "local_entry_sha256": "b859cd25f87ad70bee1d349019adc2c020412a3741edea2083a0554186d720a7",
+  "local_entry": "inference/native/run_m29_native.py",
+  "central_dispatch_in_entry": false,
+  "unexpected_external_links": [],
+  "declared_dataset_links": [
+    {
+      "path": "resources/runtime/assets/workspace/official_sources/object_detection/WildDet3D/data/in_the_wild",
+      "target": "/data2/gaoyonghan/gpu/dataset/wilddet3d_val"
+    }
+  ],
+  "broken_links": [],
+  "path_template_count": 280,
+  "state": "entrypoint_verified_full_run_pending",
+  "validation": {
+    "returncode": 0,
+    "python": "/home/ubuntu/gaoyonghan/miniconda3/envs/object-detection-yolov10-v2/bin/python",
+    "checked_at": "2026-11-10T15:38:53.522314+08:00",
+    "scope": "native help/import/path check only; not full inference"
+  },
+  "smoke_verification": null
+}

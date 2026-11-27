@@ -1,0 +1,13 @@
+{
+  "repo": "https://github.com/yainage90/fashion-visual-search",
+  "revision": "76c1dcd166ebae50bd1cad5ed1bbf3417e2fcc7c",
+  "current_head": "7ef84081f528e3b6cc12de95e453e6fff0eb552f",
+  "files": {
+    "Readme.md": "a0f93dafc744c6e453bc4dea394c84f4eb6e781458ef7088e8836c830c1d1d92",
+    "object_detection/convert_fashionpedia_to_huggingface_dataset.ipynb": "ad808b726c3d9b759f2e3757ddd6f61b7b22fe884c37efdbd4d814509e361989",
+    "object_detection/convert_modanet_to_huggingface_dataset.ipynb": "7cf309f43e170af8cda7626906a9b30e1d2f341ebd97c87b9d9ebe9a87936196",
+    "object_detection/merge_dataset.ipynb": "d81149bb0bc00b6a7d5848c9aee81f5a8eb4725d64a9f8eb1f9abb5e804a80d0",
+    "object_detection/train_model.ipynb": "eba1459af22a81b2e2de3d1564b8b1e7425a5bc29beceeabb940e9c21d958ea8",
+    "object_detection/requirements.txt": "2d1f376bab7ee557bf76c8e032f7906bf7af25417c7b6fce7fb26df5c34b9196"
+  }
+}

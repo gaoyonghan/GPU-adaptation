@@ -1,0 +1,3714 @@
+{
+  "sequence": 16,
+  "files": [
+    {
+      "path": "config.yaml",
+      "bytes": 1688,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "dataset.py",
+      "bytes": 1370,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "README.md",
+      "bytes": 19106,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "handler.py",
+      "bytes": 8780,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "inference.py",
+      "bytes": 1961,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": ".gitattributes",
+      "bytes": 1718,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "yolov8s.engine",
+      "bytes": 55031754,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "yolov8s.pt",
+      "bytes": 22515427,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 124,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 34,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "yolov8s.onnx",
+      "bytes": 44615140,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "train/labels_correlogram.jpg",
+      "bytes": 213899,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "train/F1_curve.png",
+      "bytes": 100727,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "train/val_batch1_labels.jpg",
+      "bytes": 525454,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "train/confusion_matrix.png",
+      "bytes": 91445,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "train/train_batch1101.jpg",
+      "bytes": 515692,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "train/val_batch2_pred.jpg",
+      "bytes": 551340,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "train/P_curve.png",
+      "bytes": 96555,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "train/val_batch0_pred.jpg",
+      "bytes": 556600,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "train/train_batch1.jpg",
+      "bytes": 483501,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "train/train_batch0.jpg",
+      "bytes": 584215,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "train/val_batch1_pred.jpg",
+      "bytes": 535195,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "train/events.out.tfevents.1731881178.e16bb5119aa6.99.1",
+      "bytes": 209047,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "train/train_batch2.jpg",
+      "bytes": 500555,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "train/train_batch1100.jpg",
+      "bytes": 470316,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "train/results.png",
+      "bytes": 320475,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "train/R_curve.png",
+      "bytes": 97485,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "train/train_batch1102.jpg",
+      "bytes": 537754,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "train/val_batch0_labels.jpg",
+      "bytes": 542957,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "train/args.yaml",
+      "bytes": 1688,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "train/val_batch2_labels.jpg",
+      "bytes": 539173,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "train/results.csv",
+      "bytes": 4525,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "train/PR_curve.png",
+      "bytes": 85486,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "train/confusion_matrix_normalized.png",
+      "bytes": 94470,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "train/labels.jpg",
+      "bytes": 158077,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "assets/sweep.png",
+      "bytes": 2379751,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "assets/model_selection.png",
+      "bytes": 290341,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "assets/trials.png",
+      "bytes": 196743,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "assets/demo.mp4",
+      "bytes": 1169806,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "assets/roboflow_ds.png",
+      "bytes": 599037,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "train/val/F1_curve.png",
+      "bytes": 82566,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "train/val/val_batch1_labels.jpg",
+      "bytes": 44122,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "train/val/confusion_matrix.png",
+      "bytes": 85522,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "train/val/val_batch2_pred.jpg",
+      "bytes": 46075,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "train/val/P_curve.png",
+      "bytes": 74691,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "train/val/val_batch0_pred.jpg",
+      "bytes": 95299,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "train/val/val_batch1_pred.jpg",
+      "bytes": 44122,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "train/val/predictions.json",
+      "bytes": 37630,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "train/val/R_curve.png",
+      "bytes": 86232,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "train/val/val_batch0_labels.jpg",
+      "bytes": 95299,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "train/val/val_batch2_labels.jpg",
+      "bytes": 45702,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "train/val/PR_curve.png",
+      "bytes": 90579,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "train/val/confusion_matrix_normalized.png",
+      "bytes": 92265,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "train/weights/last.pt",
+      "bytes": 22515491,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "train/weights/best.pt",
+      "bytes": 22515491,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "train/weights/best.onnx",
+      "bytes": 44731617,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "train/weights/best.engine",
+      "bytes": 24391379,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "train/val2/F1_curve.png",
+      "bytes": 82872,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "train/val2/val_batch1_labels.jpg",
+      "bytes": 44122,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "train/val2/confusion_matrix.png",
+      "bytes": 85589,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "train/val2/val_batch2_pred.jpg",
+      "bytes": 46075,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "train/val2/P_curve.png",
+      "bytes": 74723,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "train/val2/val_batch0_pred.jpg",
+      "bytes": 95299,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "train/val2/val_batch1_pred.jpg",
+      "bytes": 44122,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "train/val2/predictions.json",
+      "bytes": 37680,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "train/val2/R_curve.png",
+      "bytes": 86065,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "train/val2/val_batch0_labels.jpg",
+      "bytes": 95299,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "train/val2/val_batch2_labels.jpg",
+      "bytes": 45702,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "train/val2/PR_curve.png",
+      "bytes": 90487,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "train/val2/confusion_matrix_normalized.png",
+      "bytes": 92251,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "pytorch/d2847a9818bb5e1d33ed95a5b9f3cf6426f487a6/README.md",
+      "bytes": 19106,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "pytorch/d2847a9818bb5e1d33ed95a5b9f3cf6426f487a6/yolov8s.pt",
+      "bytes": 22515427,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "pytorch/d2847a9818bb5e1d33ed95a5b9f3cf6426f487a6/weight_source.json",
+      "bytes": 911,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_14/labels_correlogram.jpg",
+      "bytes": 207142,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_14/F1_curve.png",
+      "bytes": 87853,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_14/val_batch1_labels.jpg",
+      "bytes": 478562,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_14/confusion_matrix.png",
+      "bytes": 97036,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_14/val_batch2_pred.jpg",
+      "bytes": 593413,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_14/P_curve.png",
+      "bytes": 83364,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_14/val_batch0_pred.jpg",
+      "bytes": 496552,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_14/train_batch1.jpg",
+      "bytes": 496062,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_14/train_batch0.jpg",
+      "bytes": 463123,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_14/val_batch1_pred.jpg",
+      "bytes": 491838,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_14/train_batch2.jpg",
+      "bytes": 504869,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_14/predictions.json",
+      "bytes": 78271,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_14/results.png",
+      "bytes": 304507,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_14/train_batch1550.jpg",
+      "bytes": 443723,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_14/R_curve.png",
+      "bytes": 94776,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_14/val_batch0_labels.jpg",
+      "bytes": 482481,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_14/args.yaml",
+      "bytes": 1675,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_14/val_batch2_labels.jpg",
+      "bytes": 577695,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_14/results.csv",
+      "bytes": 4508,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_14/PR_curve.png",
+      "bytes": 89432,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_14/train_batch1552.jpg",
+      "bytes": 456332,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_14/train_batch1551.jpg",
+      "bytes": 419172,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_14/confusion_matrix_normalized.png",
+      "bytes": 94350,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_14/labels.jpg",
+      "bytes": 162539,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_19/labels_correlogram.jpg",
+      "bytes": 207142,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_19/F1_curve.png",
+      "bytes": 88424,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_19/val_batch1_labels.jpg",
+      "bytes": 478562,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_19/confusion_matrix.png",
+      "bytes": 97823,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_19/val_batch2_pred.jpg",
+      "bytes": 595878,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_19/P_curve.png",
+      "bytes": 81901,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_19/val_batch0_pred.jpg",
+      "bytes": 496311,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_19/train_batch1.jpg",
+      "bytes": 496062,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_19/train_batch0.jpg",
+      "bytes": 463123,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_19/val_batch1_pred.jpg",
+      "bytes": 491787,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_19/train_batch2.jpg",
+      "bytes": 504869,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_19/predictions.json",
+      "bytes": 77237,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_19/results.png",
+      "bytes": 246858,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_19/train_batch1550.jpg",
+      "bytes": 443723,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_19/R_curve.png",
+      "bytes": 95459,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_19/val_batch0_labels.jpg",
+      "bytes": 482481,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_19/args.yaml",
+      "bytes": 1675,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_19/val_batch2_labels.jpg",
+      "bytes": 577695,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_19/results.csv",
+      "bytes": 3810,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_19/PR_curve.png",
+      "bytes": 86616,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_19/train_batch1552.jpg",
+      "bytes": 456332,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_19/train_batch1551.jpg",
+      "bytes": 419172,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_19/confusion_matrix_normalized.png",
+      "bytes": 94511,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_19/labels.jpg",
+      "bytes": 162539,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_11/labels_correlogram.jpg",
+      "bytes": 207142,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_11/F1_curve.png",
+      "bytes": 86111,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_11/val_batch1_labels.jpg",
+      "bytes": 478562,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_11/confusion_matrix.png",
+      "bytes": 97544,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_11/val_batch2_pred.jpg",
+      "bytes": 593713,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_11/P_curve.png",
+      "bytes": 81789,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_11/val_batch0_pred.jpg",
+      "bytes": 496159,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_11/train_batch1.jpg",
+      "bytes": 496062,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_11/train_batch0.jpg",
+      "bytes": 463123,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_11/val_batch1_pred.jpg",
+      "bytes": 492606,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_11/train_batch2.jpg",
+      "bytes": 504869,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_11/predictions.json",
+      "bytes": 76534,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_11/results.png",
+      "bytes": 300763,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_11/train_batch1550.jpg",
+      "bytes": 443723,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_11/R_curve.png",
+      "bytes": 93912,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_11/val_batch0_labels.jpg",
+      "bytes": 482481,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_11/args.yaml",
+      "bytes": 1675,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_11/val_batch2_labels.jpg",
+      "bytes": 577695,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_11/results.csv",
+      "bytes": 4582,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_11/PR_curve.png",
+      "bytes": 86258,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_11/train_batch1552.jpg",
+      "bytes": 456332,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_11/train_batch1551.jpg",
+      "bytes": 419172,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_11/confusion_matrix_normalized.png",
+      "bytes": 94496,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_11/labels.jpg",
+      "bytes": 162539,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_18/labels_correlogram.jpg",
+      "bytes": 207142,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_18/F1_curve.png",
+      "bytes": 87207,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_18/val_batch1_labels.jpg",
+      "bytes": 478562,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_18/confusion_matrix.png",
+      "bytes": 97943,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_18/val_batch2_pred.jpg",
+      "bytes": 593430,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_18/P_curve.png",
+      "bytes": 79882,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_18/val_batch0_pred.jpg",
+      "bytes": 496216,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_18/train_batch1.jpg",
+      "bytes": 496062,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_18/train_batch0.jpg",
+      "bytes": 463123,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_18/val_batch1_pred.jpg",
+      "bytes": 492236,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_18/train_batch2.jpg",
+      "bytes": 504869,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_18/predictions.json",
+      "bytes": 74634,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_18/results.png",
+      "bytes": 281348,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_18/train_batch1550.jpg",
+      "bytes": 443723,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_18/R_curve.png",
+      "bytes": 93295,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_18/val_batch0_labels.jpg",
+      "bytes": 482481,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_18/args.yaml",
+      "bytes": 1676,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_18/val_batch2_labels.jpg",
+      "bytes": 577695,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_18/results.csv",
+      "bytes": 4561,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_18/PR_curve.png",
+      "bytes": 84758,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_18/train_batch1552.jpg",
+      "bytes": 456332,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_18/train_batch1551.jpg",
+      "bytes": 419172,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_18/confusion_matrix_normalized.png",
+      "bytes": 94511,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_18/labels.jpg",
+      "bytes": 162539,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10_resume/labels_correlogram.jpg",
+      "bytes": 207142,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10_resume/F1_curve.png",
+      "bytes": 98204,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10_resume/val_batch1_labels.jpg",
+      "bytes": 493186,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10_resume/confusion_matrix.png",
+      "bytes": 96264,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10_resume/val_batch2_pred.jpg",
+      "bytes": 532827,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10_resume/P_curve.png",
+      "bytes": 93226,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10_resume/val_batch0_pred.jpg",
+      "bytes": 535073,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10_resume/train_batch1.jpg",
+      "bytes": 486859,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10_resume/train_batch0.jpg",
+      "bytes": 463123,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10_resume/val_batch1_pred.jpg",
+      "bytes": 507740,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10_resume/train_batch2.jpg",
+      "bytes": 486549,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10_resume/results.png",
+      "bytes": 297073,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10_resume/R_curve.png",
+      "bytes": 96350,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10_resume/val_batch0_labels.jpg",
+      "bytes": 524289,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10_resume/args.yaml",
+      "bytes": 1765,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10_resume/val_batch2_labels.jpg",
+      "bytes": 524546,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10_resume/results.csv",
+      "bytes": 1678,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10_resume/PR_curve.png",
+      "bytes": 86914,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10_resume/confusion_matrix_normalized.png",
+      "bytes": 94348,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10_resume/labels.jpg",
+      "bytes": 162539,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_7/labels_correlogram.jpg",
+      "bytes": 207142,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_7/F1_curve.png",
+      "bytes": 89915,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_7/val_batch1_labels.jpg",
+      "bytes": 478562,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_7/confusion_matrix.png",
+      "bytes": 96449,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_7/val_batch2_pred.jpg",
+      "bytes": 606951,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_7/P_curve.png",
+      "bytes": 84661,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_7/val_batch0_pred.jpg",
+      "bytes": 495210,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_7/train_batch1.jpg",
+      "bytes": 496062,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_7/train_batch0.jpg",
+      "bytes": 463123,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_7/val_batch1_pred.jpg",
+      "bytes": 490464,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_7/train_batch2.jpg",
+      "bytes": 504869,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_7/predictions.json",
+      "bytes": 89371,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_7/results.png",
+      "bytes": 302038,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_7/train_batch1550.jpg",
+      "bytes": 443723,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_7/R_curve.png",
+      "bytes": 94289,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_7/val_batch0_labels.jpg",
+      "bytes": 482481,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_7/args.yaml",
+      "bytes": 1675,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_7/val_batch2_labels.jpg",
+      "bytes": 577695,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_7/results.csv",
+      "bytes": 4557,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_7/PR_curve.png",
+      "bytes": 91873,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_7/train_batch1552.jpg",
+      "bytes": 456332,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_7/train_batch1551.jpg",
+      "bytes": 419172,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_7/confusion_matrix_normalized.png",
+      "bytes": 94322,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_7/labels.jpg",
+      "bytes": 162539,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_8/labels_correlogram.jpg",
+      "bytes": 207142,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_8/F1_curve.png",
+      "bytes": 74458,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_8/val_batch1_labels.jpg",
+      "bytes": 478562,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_8/confusion_matrix.png",
+      "bytes": 85622,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_8/val_batch2_pred.jpg",
+      "bytes": 541228,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_8/P_curve.png",
+      "bytes": 93121,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_8/val_batch0_pred.jpg",
+      "bytes": 444595,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_8/train_batch1.jpg",
+      "bytes": 496062,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_8/train_batch0.jpg",
+      "bytes": 463123,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_8/val_batch1_pred.jpg",
+      "bytes": 445754,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_8/train_batch2.jpg",
+      "bytes": 504869,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_8/results.png",
+      "bytes": 270901,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_8/R_curve.png",
+      "bytes": 87228,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_8/val_batch0_labels.jpg",
+      "bytes": 482481,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_8/args.yaml",
+      "bytes": 1674,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_8/val_batch2_labels.jpg",
+      "bytes": 577695,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_8/results.csv",
+      "bytes": 1499,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_8/PR_curve.png",
+      "bytes": 83871,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_8/confusion_matrix_normalized.png",
+      "bytes": 89780,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_8/labels.jpg",
+      "bytes": 162539,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_15/labels_correlogram.jpg",
+      "bytes": 207142,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_15/F1_curve.png",
+      "bytes": 87503,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_15/val_batch1_labels.jpg",
+      "bytes": 478562,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_15/confusion_matrix.png",
+      "bytes": 97227,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_15/val_batch2_pred.jpg",
+      "bytes": 596737,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_15/P_curve.png",
+      "bytes": 80485,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_15/val_batch0_pred.jpg",
+      "bytes": 496768,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_15/train_batch1.jpg",
+      "bytes": 496062,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_15/train_batch0.jpg",
+      "bytes": 463123,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_15/val_batch1_pred.jpg",
+      "bytes": 492532,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_15/train_batch2.jpg",
+      "bytes": 504869,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_15/predictions.json",
+      "bytes": 72730,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_15/results.png",
+      "bytes": 287169,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_15/train_batch1550.jpg",
+      "bytes": 443723,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_15/R_curve.png",
+      "bytes": 93996,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_15/val_batch0_labels.jpg",
+      "bytes": 482481,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_15/args.yaml",
+      "bytes": 1676,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_15/val_batch2_labels.jpg",
+      "bytes": 577695,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_15/results.csv",
+      "bytes": 4568,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_15/PR_curve.png",
+      "bytes": 87585,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_15/train_batch1552.jpg",
+      "bytes": 456332,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_15/train_batch1551.jpg",
+      "bytes": 419172,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_15/confusion_matrix_normalized.png",
+      "bytes": 94350,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_15/labels.jpg",
+      "bytes": 162539,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_12/labels_correlogram.jpg",
+      "bytes": 207142,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_12/F1_curve.png",
+      "bytes": 87911,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_12/val_batch1_labels.jpg",
+      "bytes": 478562,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_12/confusion_matrix.png",
+      "bytes": 97229,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_12/val_batch2_pred.jpg",
+      "bytes": 589809,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_12/P_curve.png",
+      "bytes": 79834,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_12/val_batch0_pred.jpg",
+      "bytes": 496103,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_12/train_batch1.jpg",
+      "bytes": 496062,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_12/train_batch0.jpg",
+      "bytes": 463123,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_12/val_batch1_pred.jpg",
+      "bytes": 492952,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_12/train_batch2.jpg",
+      "bytes": 504869,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_12/predictions.json",
+      "bytes": 71639,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_12/results.png",
+      "bytes": 280709,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_12/train_batch1550.jpg",
+      "bytes": 443723,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_12/R_curve.png",
+      "bytes": 94115,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_12/val_batch0_labels.jpg",
+      "bytes": 482481,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_12/args.yaml",
+      "bytes": 1675,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_12/val_batch2_labels.jpg",
+      "bytes": 577695,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_12/results.csv",
+      "bytes": 4562,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_12/PR_curve.png",
+      "bytes": 85975,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_12/train_batch1552.jpg",
+      "bytes": 456332,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_12/train_batch1551.jpg",
+      "bytes": 419172,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_12/confusion_matrix_normalized.png",
+      "bytes": 94770,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_12/labels.jpg",
+      "bytes": 162539,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_2/labels_correlogram.jpg",
+      "bytes": 207142,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_2/F1_curve.png",
+      "bytes": 71611,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_2/val_batch1_labels.jpg",
+      "bytes": 478562,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_2/confusion_matrix.png",
+      "bytes": 90820,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_2/val_batch2_pred.jpg",
+      "bytes": 555525,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_2/P_curve.png",
+      "bytes": 93674,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_2/val_batch0_pred.jpg",
+      "bytes": 453563,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_2/train_batch1.jpg",
+      "bytes": 496062,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_2/train_batch0.jpg",
+      "bytes": 463123,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_2/val_batch1_pred.jpg",
+      "bytes": 453956,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_2/train_batch2.jpg",
+      "bytes": 504869,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_2/predictions.json",
+      "bytes": 237489,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_2/results.png",
+      "bytes": 200267,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_2/R_curve.png",
+      "bytes": 77676,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_2/val_batch0_labels.jpg",
+      "bytes": 482481,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_2/args.yaml",
+      "bytes": 1671,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_2/val_batch2_labels.jpg",
+      "bytes": 577695,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_2/results.csv",
+      "bytes": 1756,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_2/PR_curve.png",
+      "bytes": 80127,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_2/confusion_matrix_normalized.png",
+      "bytes": 93331,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_2/labels.jpg",
+      "bytes": 162539,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_16/labels_correlogram.jpg",
+      "bytes": 207142,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_16/F1_curve.png",
+      "bytes": 88495,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_16/val_batch1_labels.jpg",
+      "bytes": 478562,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_16/confusion_matrix.png",
+      "bytes": 98215,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_16/val_batch2_pred.jpg",
+      "bytes": 599974,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_16/P_curve.png",
+      "bytes": 85151,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_16/val_batch0_pred.jpg",
+      "bytes": 493071,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_16/train_batch1.jpg",
+      "bytes": 496062,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_16/train_batch0.jpg",
+      "bytes": 463123,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_16/val_batch1_pred.jpg",
+      "bytes": 491093,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_16/train_batch2.jpg",
+      "bytes": 504869,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_16/predictions.json",
+      "bytes": 82433,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_16/results.png",
+      "bytes": 286598,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_16/R_curve.png",
+      "bytes": 95691,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_16/val_batch0_labels.jpg",
+      "bytes": 482481,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_16/args.yaml",
+      "bytes": 1676,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_16/val_batch2_labels.jpg",
+      "bytes": 577695,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_16/results.csv",
+      "bytes": 2434,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_16/PR_curve.png",
+      "bytes": 88296,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_16/confusion_matrix_normalized.png",
+      "bytes": 94511,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_16/labels.jpg",
+      "bytes": 162539,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10/labels_correlogram.jpg",
+      "bytes": 207142,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10/F1_curve.png",
+      "bytes": 87937,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10/val_batch1_labels.jpg",
+      "bytes": 478562,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10/confusion_matrix.png",
+      "bytes": 97441,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10/val_batch2_pred.jpg",
+      "bytes": 596439,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10/P_curve.png",
+      "bytes": 81685,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10/val_batch0_pred.jpg",
+      "bytes": 496879,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10/train_batch1.jpg",
+      "bytes": 496062,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10/train_batch0.jpg",
+      "bytes": 463123,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10/val_batch1_pred.jpg",
+      "bytes": 492901,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10/train_batch2.jpg",
+      "bytes": 504869,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10/predictions.json",
+      "bytes": 78280,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10/results.png",
+      "bytes": 297461,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10/train_batch1550.jpg",
+      "bytes": 443723,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10/R_curve.png",
+      "bytes": 93525,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10/val_batch0_labels.jpg",
+      "bytes": 482481,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10/args.yaml",
+      "bytes": 1836,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10/val_batch2_labels.jpg",
+      "bytes": 577695,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10/results.csv",
+      "bytes": 4551,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10/PR_curve.png",
+      "bytes": 86239,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10/train_batch1552.jpg",
+      "bytes": 456332,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10/train_batch1551.jpg",
+      "bytes": 419172,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10/confusion_matrix_normalized.png",
+      "bytes": 94511,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10/labels.jpg",
+      "bytes": 162539,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_17/labels_correlogram.jpg",
+      "bytes": 207142,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_17/F1_curve.png",
+      "bytes": 89078,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_17/val_batch1_labels.jpg",
+      "bytes": 478562,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_17/confusion_matrix.png",
+      "bytes": 97368,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_17/val_batch2_pred.jpg",
+      "bytes": 602283,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_17/P_curve.png",
+      "bytes": 84354,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_17/val_batch0_pred.jpg",
+      "bytes": 494679,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_17/train_batch1.jpg",
+      "bytes": 496062,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_17/train_batch0.jpg",
+      "bytes": 463123,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_17/val_batch1_pred.jpg",
+      "bytes": 490836,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_17/train_batch2.jpg",
+      "bytes": 504869,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_17/predictions.json",
+      "bytes": 89397,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_17/results.png",
+      "bytes": 297865,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_17/train_batch1550.jpg",
+      "bytes": 443723,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_17/R_curve.png",
+      "bytes": 92943,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_17/val_batch0_labels.jpg",
+      "bytes": 482481,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_17/args.yaml",
+      "bytes": 1673,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_17/val_batch2_labels.jpg",
+      "bytes": 577695,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_17/results.csv",
+      "bytes": 4513,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_17/PR_curve.png",
+      "bytes": 90604,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_17/train_batch1552.jpg",
+      "bytes": 456332,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_17/train_batch1551.jpg",
+      "bytes": 419172,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_17/confusion_matrix_normalized.png",
+      "bytes": 94342,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_17/labels.jpg",
+      "bytes": 162539,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_6/labels_correlogram.jpg",
+      "bytes": 207142,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_6/F1_curve.png",
+      "bytes": 88062,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_6/val_batch1_labels.jpg",
+      "bytes": 478562,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_6/confusion_matrix.png",
+      "bytes": 96621,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_6/val_batch2_pred.jpg",
+      "bytes": 599302,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_6/P_curve.png",
+      "bytes": 81522,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_6/val_batch0_pred.jpg",
+      "bytes": 492151,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_6/train_batch1.jpg",
+      "bytes": 496062,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_6/train_batch0.jpg",
+      "bytes": 463123,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_6/val_batch1_pred.jpg",
+      "bytes": 492061,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_6/train_batch2.jpg",
+      "bytes": 504869,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_6/predictions.json",
+      "bytes": 74790,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_6/results.png",
+      "bytes": 308268,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_6/train_batch1550.jpg",
+      "bytes": 443723,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_6/R_curve.png",
+      "bytes": 95426,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_6/val_batch0_labels.jpg",
+      "bytes": 482481,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_6/args.yaml",
+      "bytes": 1674,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_6/val_batch2_labels.jpg",
+      "bytes": 577695,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_6/results.csv",
+      "bytes": 4566,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_6/PR_curve.png",
+      "bytes": 90870,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_6/train_batch1552.jpg",
+      "bytes": 456332,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_6/train_batch1551.jpg",
+      "bytes": 419172,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_6/confusion_matrix_normalized.png",
+      "bytes": 93767,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_6/labels.jpg",
+      "bytes": 162539,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_9/labels_correlogram.jpg",
+      "bytes": 207142,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_9/F1_curve.png",
+      "bytes": 88452,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_9/val_batch1_labels.jpg",
+      "bytes": 478562,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_9/confusion_matrix.png",
+      "bytes": 96148,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_9/val_batch2_pred.jpg",
+      "bytes": 601991,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_9/P_curve.png",
+      "bytes": 83491,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_9/val_batch0_pred.jpg",
+      "bytes": 496610,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_9/train_batch1.jpg",
+      "bytes": 496062,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_9/train_batch0.jpg",
+      "bytes": 463123,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_9/val_batch1_pred.jpg",
+      "bytes": 492555,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_9/train_batch2.jpg",
+      "bytes": 504869,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_9/predictions.json",
+      "bytes": 83012,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_9/results.png",
+      "bytes": 239224,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_9/train_batch1550.jpg",
+      "bytes": 443723,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_9/R_curve.png",
+      "bytes": 95220,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_9/val_batch0_labels.jpg",
+      "bytes": 482481,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_9/args.yaml",
+      "bytes": 1690,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_9/val_batch2_labels.jpg",
+      "bytes": 577695,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_9/results.csv",
+      "bytes": 3937,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_9/PR_curve.png",
+      "bytes": 87055,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_9/train_batch1552.jpg",
+      "bytes": 456332,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_9/train_batch1551.jpg",
+      "bytes": 419172,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_9/confusion_matrix_normalized.png",
+      "bytes": 94543,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_9/labels.jpg",
+      "bytes": 162539,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_4/labels_correlogram.jpg",
+      "bytes": 207142,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_4/F1_curve.png",
+      "bytes": 90329,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_4/val_batch1_labels.jpg",
+      "bytes": 478562,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_4/confusion_matrix.png",
+      "bytes": 97856,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_4/val_batch2_pred.jpg",
+      "bytes": 605455,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_4/P_curve.png",
+      "bytes": 84942,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_4/val_batch0_pred.jpg",
+      "bytes": 495372,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_4/train_batch1.jpg",
+      "bytes": 496062,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_4/train_batch0.jpg",
+      "bytes": 463123,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_4/val_batch1_pred.jpg",
+      "bytes": 500725,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_4/train_batch2.jpg",
+      "bytes": 504869,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_4/predictions.json",
+      "bytes": 91145,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_4/results.png",
+      "bytes": 326017,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_4/train_batch1550.jpg",
+      "bytes": 443723,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_4/R_curve.png",
+      "bytes": 94120,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_4/val_batch0_labels.jpg",
+      "bytes": 482481,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_4/args.yaml",
+      "bytes": 1676,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_4/val_batch2_labels.jpg",
+      "bytes": 577695,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_4/results.csv",
+      "bytes": 4535,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_4/PR_curve.png",
+      "bytes": 92837,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_4/train_batch1552.jpg",
+      "bytes": 456332,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_4/train_batch1551.jpg",
+      "bytes": 419172,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_4/confusion_matrix_normalized.png",
+      "bytes": 94758,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_4/labels.jpg",
+      "bytes": 162539,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_5/labels_correlogram.jpg",
+      "bytes": 207142,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_5/F1_curve.png",
+      "bytes": 65245,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_5/val_batch1_labels.jpg",
+      "bytes": 478562,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_5/confusion_matrix.png",
+      "bytes": 89951,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_5/val_batch2_pred.jpg",
+      "bytes": 762189,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_5/P_curve.png",
+      "bytes": 72663,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_5/val_batch0_pred.jpg",
+      "bytes": 675899,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_5/train_batch1.jpg",
+      "bytes": 496062,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_5/train_batch0.jpg",
+      "bytes": 463123,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_5/val_batch1_pred.jpg",
+      "bytes": 688134,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_5/train_batch2.jpg",
+      "bytes": 504869,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_5/predictions.json",
+      "bytes": 971530,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_5/results.png",
+      "bytes": 240359,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_5/R_curve.png",
+      "bytes": 72469,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_5/val_batch0_labels.jpg",
+      "bytes": 482481,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_5/args.yaml",
+      "bytes": 1674,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_5/val_batch2_labels.jpg",
+      "bytes": 577695,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_5/results.csv",
+      "bytes": 1045,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_5/PR_curve.png",
+      "bytes": 73672,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_5/confusion_matrix_normalized.png",
+      "bytes": 91489,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_5/labels.jpg",
+      "bytes": 162539,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_0/labels_correlogram.jpg",
+      "bytes": 207142,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_0/val_batch1_labels.jpg",
+      "bytes": 478562,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_0/confusion_matrix.png",
+      "bytes": 85622,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_0/val_batch2_pred.jpg",
+      "bytes": 541228,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_0/val_batch0_pred.jpg",
+      "bytes": 444595,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_0/train_batch1.jpg",
+      "bytes": 496062,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_0/train_batch0.jpg",
+      "bytes": 463123,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_0/val_batch1_pred.jpg",
+      "bytes": 445754,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_0/train_batch2.jpg",
+      "bytes": 504869,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_0/results.png",
+      "bytes": 180539,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_0/train_batch1550.jpg",
+      "bytes": 443723,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_0/val_batch0_labels.jpg",
+      "bytes": 482481,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_0/args.yaml",
+      "bytes": 1671,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_0/val_batch2_labels.jpg",
+      "bytes": 577695,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_0/results.csv",
+      "bytes": 3446,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_0/train_batch1552.jpg",
+      "bytes": 456332,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_0/train_batch1551.jpg",
+      "bytes": 419172,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_0/confusion_matrix_normalized.png",
+      "bytes": 89780,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_0/labels.jpg",
+      "bytes": 162539,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_1/labels_correlogram.jpg",
+      "bytes": 207142,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_1/F1_curve.png",
+      "bytes": 87390,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_1/val_batch1_labels.jpg",
+      "bytes": 478562,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_1/confusion_matrix.png",
+      "bytes": 97765,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_1/val_batch2_pred.jpg",
+      "bytes": 592056,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_1/P_curve.png",
+      "bytes": 81752,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_1/val_batch0_pred.jpg",
+      "bytes": 496491,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_1/train_batch1.jpg",
+      "bytes": 496062,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_1/train_batch0.jpg",
+      "bytes": 463123,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_1/val_batch1_pred.jpg",
+      "bytes": 492770,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_1/train_batch2.jpg",
+      "bytes": 504869,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_1/predictions.json",
+      "bytes": 77331,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_1/results.png",
+      "bytes": 273057,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_1/train_batch1550.jpg",
+      "bytes": 443723,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_1/R_curve.png",
+      "bytes": 95302,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_1/val_batch0_labels.jpg",
+      "bytes": 482481,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_1/args.yaml",
+      "bytes": 1689,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_1/val_batch2_labels.jpg",
+      "bytes": 577695,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_1/results.csv",
+      "bytes": 4569,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_1/PR_curve.png",
+      "bytes": 86329,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_1/train_batch1552.jpg",
+      "bytes": 456332,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_1/train_batch1551.jpg",
+      "bytes": 419172,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_1/confusion_matrix_normalized.png",
+      "bytes": 94511,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_1/labels.jpg",
+      "bytes": 162539,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_13/labels_correlogram.jpg",
+      "bytes": 207142,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_13/F1_curve.png",
+      "bytes": 86696,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_13/val_batch1_labels.jpg",
+      "bytes": 478562,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_13/confusion_matrix.png",
+      "bytes": 96508,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_13/val_batch2_pred.jpg",
+      "bytes": 596102,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_13/P_curve.png",
+      "bytes": 81142,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_13/val_batch0_pred.jpg",
+      "bytes": 495347,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_13/train_batch1.jpg",
+      "bytes": 496062,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_13/train_batch0.jpg",
+      "bytes": 463123,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_13/val_batch1_pred.jpg",
+      "bytes": 490339,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_13/train_batch2.jpg",
+      "bytes": 504869,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_13/predictions.json",
+      "bytes": 77935,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_13/results.png",
+      "bytes": 314468,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_13/train_batch1550.jpg",
+      "bytes": 443723,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_13/R_curve.png",
+      "bytes": 94235,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_13/val_batch0_labels.jpg",
+      "bytes": 482481,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_13/args.yaml",
+      "bytes": 1675,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_13/val_batch2_labels.jpg",
+      "bytes": 577695,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_13/results.csv",
+      "bytes": 4577,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_13/PR_curve.png",
+      "bytes": 89082,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_13/train_batch1552.jpg",
+      "bytes": 456332,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_13/train_batch1551.jpg",
+      "bytes": 419172,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_13/confusion_matrix_normalized.png",
+      "bytes": 94350,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_13/labels.jpg",
+      "bytes": 162539,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_3/labels_correlogram.jpg",
+      "bytes": 207142,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_3/val_batch1_labels.jpg",
+      "bytes": 478562,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_3/confusion_matrix.png",
+      "bytes": 86817,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_3/val_batch2_pred.jpg",
+      "bytes": 647589,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_3/val_batch0_pred.jpg",
+      "bytes": 554096,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_3/train_batch1.jpg",
+      "bytes": 496062,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_3/train_batch0.jpg",
+      "bytes": 463123,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_3/val_batch1_pred.jpg",
+      "bytes": 560297,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_3/train_batch2.jpg",
+      "bytes": 504869,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_3/predictions.json",
+      "bytes": 120771,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_3/results.png",
+      "bytes": 212395,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_3/val_batch0_labels.jpg",
+      "bytes": 482481,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_3/args.yaml",
+      "bytes": 1673,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_3/val_batch2_labels.jpg",
+      "bytes": 577695,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_3/results.csv",
+      "bytes": 1428,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_3/confusion_matrix_normalized.png",
+      "bytes": 91489,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_3/labels.jpg",
+      "bytes": 162539,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_14/weights/last.pt",
+      "bytes": 22515427,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_14/weights/best.pt",
+      "bytes": 22515427,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_19/weights/last.pt",
+      "bytes": 22514659,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_19/weights/best.pt",
+      "bytes": 22514659,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_11/weights/last.pt",
+      "bytes": 22515427,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_11/weights/best.pt",
+      "bytes": 22515427,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_18/weights/last.pt",
+      "bytes": 22515427,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_18/weights/best.pt",
+      "bytes": 22515427,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10_resume/weights/last.pt",
+      "bytes": 22512611,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10_resume/weights/best.pt",
+      "bytes": 22512611,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10_resume/weights/best.onnx",
+      "bytes": 44615053,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10_resume/test/F1_curve.png",
+      "bytes": 87198,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10_resume/test/val_batch1_labels.jpg",
+      "bytes": 75256,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10_resume/test/confusion_matrix.png",
+      "bytes": 97551,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10_resume/test/val_batch2_pred.jpg",
+      "bytes": 95299,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10_resume/test/P_curve.png",
+      "bytes": 81226,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10_resume/test/val_batch0_pred.jpg",
+      "bytes": 89610,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10_resume/test/val_batch1_pred.jpg",
+      "bytes": 75256,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10_resume/test/predictions.json",
+      "bytes": 75096,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10_resume/test/R_curve.png",
+      "bytes": 94100,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10_resume/test/val_batch0_labels.jpg",
+      "bytes": 89610,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10_resume/test/val_batch2_labels.jpg",
+      "bytes": 95299,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10_resume/test/PR_curve.png",
+      "bytes": 88807,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10_resume/test/confusion_matrix_normalized.png",
+      "bytes": 94770,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_7/weights/last.pt",
+      "bytes": 22515427,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_7/weights/best.pt",
+      "bytes": 22515427,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_8/weights/last.pt",
+      "bytes": 22512355,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_8/weights/best.pt",
+      "bytes": 22512355,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_15/weights/last.pt",
+      "bytes": 22515427,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_15/weights/best.pt",
+      "bytes": 22515427,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_12/weights/last.pt",
+      "bytes": 22515427,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_12/weights/best.pt",
+      "bytes": 22515427,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_2/weights/last.pt",
+      "bytes": 22513123,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_2/weights/best.pt",
+      "bytes": 22513123,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_16/weights/last.pt",
+      "bytes": 22513251,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_16/weights/best.pt",
+      "bytes": 22513251,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10/weights/last.pt",
+      "bytes": 22515427,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10/weights/best.pt",
+      "bytes": 22515427,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10/weights/best.onnx",
+      "bytes": 44615053,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10/test/F1_curve.png",
+      "bytes": 88598,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10/test/val_batch1_labels.jpg",
+      "bytes": 75256,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10/test/confusion_matrix.png",
+      "bytes": 96612,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10/test/val_batch2_pred.jpg",
+      "bytes": 95299,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10/test/P_curve.png",
+      "bytes": 82138,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10/test/val_batch0_pred.jpg",
+      "bytes": 95477,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10/test/val_batch1_pred.jpg",
+      "bytes": 75256,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10/test/predictions.json",
+      "bytes": 78724,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10/test/R_curve.png",
+      "bytes": 94376,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10/test/val_batch0_labels.jpg",
+      "bytes": 95477,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10/test/val_batch2_labels.jpg",
+      "bytes": 95299,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10/test/PR_curve.png",
+      "bytes": 86282,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_10/test/confusion_matrix_normalized.png",
+      "bytes": 94543,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_17/weights/last.pt",
+      "bytes": 22515427,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_17/weights/best.pt",
+      "bytes": 22515427,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_6/weights/last.pt",
+      "bytes": 22515427,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_6/weights/best.pt",
+      "bytes": 22515427,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_9/weights/last.pt",
+      "bytes": 22514787,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_9/weights/best.pt",
+      "bytes": 22514787,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_4/weights/last.pt",
+      "bytes": 22515427,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_4/weights/best.pt",
+      "bytes": 22515427,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_5/weights/last.pt",
+      "bytes": 22512099,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_5/weights/best.pt",
+      "bytes": 22512099,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_0/weights/last.pt",
+      "bytes": 22515171,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_0/weights/best.pt",
+      "bytes": 22515171,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_1/weights/last.pt",
+      "bytes": 22515427,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_1/weights/best.pt",
+      "bytes": 22515427,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_13/weights/last.pt",
+      "bytes": 22515427,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_13/weights/best.pt",
+      "bytes": 22515427,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_3/weights/last.pt",
+      "bytes": 22512611,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tune/trial_3/weights/best.pt",
+      "bytes": 22512611,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    }
+  ],
+  "mismatches": []
+}

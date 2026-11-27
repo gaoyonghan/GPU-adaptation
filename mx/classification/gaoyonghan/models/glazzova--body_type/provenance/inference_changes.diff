@@ -1,0 +1,11 @@
+--- original_inference.py
++++ inference/native/run_proxy_174.py
+@@ -121,6 +121,8 @@
+         model = model.to(device=device, dtype=torch.float32).eval()
+         model_load_seconds = time.perf_counter() - load_start
+         selected = rows[:10] if args.phase == "smoke" else rows
++        from classification_capture import snapshot_gt
++        snapshot_gt(out, [dict(id=r["id"],target=r["target_id"]) for r in selected])
+         def read_images(chunk: list[dict]) -> list[Image.Image]:
+             images = []
+             for row in chunk:

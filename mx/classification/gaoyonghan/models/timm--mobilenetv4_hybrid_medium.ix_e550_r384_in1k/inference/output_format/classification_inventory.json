@@ -1,0 +1,27 @@
+{
+  "schema": "model-eval/classification-inventory/v1",
+  "scope": "sunyuqiyi contribution; model-local inventory, one entry per model.",
+  "models": [
+    {
+      "sequence": 220,
+      "model_id": "timm/mobilenetv4_hybrid_medium.ix_e550_r384_in1k",
+      "runner_family": "special",
+      "adapter": "native_labels",
+      "state": "integrated",
+      "dataset": {
+        "id": "imagenet",
+        "relation": "original_exact",
+        "split": "validation",
+        "note": "ImageNet-1K val · 50000 图 / 1000 类；输入 384px"
+      },
+      "qualification": "original_exact",
+      "limitations": [
+        "Native timm config carries no class names, so category names fall back to output_class_N; numeric class IDs are authoritative.",
+        "Top-5 must be captured natively; it cannot be reconstructed from Top-1."
+      ],
+      "num_classes": 1000,
+      "expected_images": 50000,
+      "requires_capture_on_next_inference": true
+    }
+  ]
+}

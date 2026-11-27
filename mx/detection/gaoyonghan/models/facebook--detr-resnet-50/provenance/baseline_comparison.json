@@ -1,0 +1,8 @@
+{
+  "baseline": "原迁移流程生成的实际运行脚本",
+  "isolated": "独立模型目录",
+  "samples": 2,
+  "predictions_exactly_equal": true,
+  "device": "cpu",
+  "scope": "2-image smoke only"
+}

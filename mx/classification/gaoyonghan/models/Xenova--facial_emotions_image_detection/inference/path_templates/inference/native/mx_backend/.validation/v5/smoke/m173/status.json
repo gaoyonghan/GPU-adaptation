@@ -1,0 +1,182 @@
+{
+  "sequence": 173,
+  "model_id": "Xenova/facial_emotions_image_detection",
+  "variant": null,
+  "phase": "smoke",
+  "protocol_fingerprint": "29f2402f6fc0af8ed1ac01abc6e592370dad1da4e49edd0d745a051891373e42",
+  "protocol": {
+    "model": "6abc0aff09525269c0d11efd08707ba9236add219e369af1225decc87f8d8ea1",
+    "code": {
+      "run_model.py": "f063681f54830af373cde2af4616f6bc60e8eb73b264647e3988ad8eac50f5b4",
+      "common.py": "87e119ea13cd713bb054693dae0e04b7064b4fd683c8479b7715fd9b3883d045",
+      "prepare.py": "bf5bd4e223b181dd89142dbf467f92fe7c09b88ab4c82b061346248019f4ad9b",
+      "dispatch.py": "d181cd69bc36c4600c40cfc5f4e8e8d94a6c5eb71abcdaf652e989e92ecc80ab",
+      "timing.py": "db23cf873121e5e9345f23488d02d7757560a25084f330a56e38d5969d448342",
+      "native_js.mjs": "0248698e4b94dd21738c8dc1214bf61d77938c49d45e5c7168ba194de25607c4",
+      "package-lock.json": "5573d34c27867190fe079abe219b4a7495bc04e3077415c51773a0c4fc72b71c"
+    },
+    "environment": {
+      "python": "3.11.16 (main, Aug 27 2026, 14:44:21) [GCC 14.3.0]",
+      "versions": {
+        "torch": "2.5.1+cu121",
+        "torchvision": "0.20.1+cu121",
+        "transformers": "4.50.0",
+        "timm": "1.0.15",
+        "Pillow": "11.1.0",
+        "numpy": "1.26.4",
+        "scikit-learn": "1.5.2",
+        "pyarrow": "19.0.1"
+      },
+      "cuda_runtime": "12.1",
+      "cuda_available": true,
+      "node": "v20.20.0"
+    },
+    "device": "cpu",
+    "batch_size": 1,
+    "warmup": 10,
+    "workers": 2,
+    "variant": null
+  },
+  "model_manifest": {
+    "sequence": 173,
+    "model_id": "Xenova/facial_emotions_image_detection",
+    "model_path": "__MODEL_ROOT__/weights/Xenova/facial_emotions_image_detection",
+    "revision": "e039a363ab5d9e1b82eb08b3af90b4648cb8f696",
+    "task_type": "image-classification",
+    "status": "not_started",
+    "official_model_card": "https://huggingface.co/Xenova/facial_emotions_image_detection",
+    "official_reference": null,
+    "reference_comparison": "manual_reference_required",
+    "known_differences": [],
+    "config": {
+      "_name_or_path": "dima806/facial_emotions_image_detection",
+      "architectures": [
+        "ViTForImageClassification"
+      ],
+      "attention_probs_dropout_prob": 0.0,
+      "encoder_stride": 16,
+      "hidden_act": "gelu",
+      "hidden_dropout_prob": 0.0,
+      "hidden_size": 768,
+      "id2label": {
+        "0": "sad",
+        "1": "disgust",
+        "2": "angry",
+        "3": "neutral",
+        "4": "fear",
+        "5": "surprise",
+        "6": "happy"
+      },
+      "image_size": 224,
+      "initializer_range": 0.02,
+      "intermediate_size": 3072,
+      "label2id": {
+        "angry": 2,
+        "disgust": 1,
+        "fear": 4,
+        "happy": 6,
+        "neutral": 3,
+        "sad": 0,
+        "surprise": 5
+      },
+      "layer_norm_eps": 1e-12,
+      "model_type": "vit",
+      "num_attention_heads": 12,
+      "num_channels": 3,
+      "num_hidden_layers": 12,
+      "patch_size": 16,
+      "problem_type": "single_label_classification",
+      "qkv_bias": true,
+      "transformers_version": "4.36.2"
+    },
+    "preprocessing": {
+      "do_normalize": true,
+      "do_rescale": true,
+      "do_resize": true,
+      "image_mean": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "image_processor_type": "ViTFeatureExtractor",
+      "image_std": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "resample": 2,
+      "rescale_factor": 0.00392156862745098,
+      "size": {
+        "height": 224,
+        "width": 224
+      }
+    },
+    "architecture": [
+      "ViTForImageClassification"
+    ],
+    "files": {
+      "onnx/model_quantized.onnx": {
+        "size": 87485840,
+        "sha256": "539b7b281d5fa35315c0cd0e54f2d1d5434c9bddfcf824488f355ae1dd1921c3"
+      },
+      "config.json": {
+        "size": 879,
+        "sha256": "3f2d9a2f633b4b7e1a2d159e1be4d5ef92d56980682336be74ab2b160f9f751f"
+      },
+      "preprocessor_config.json": {
+        "size": 327,
+        "sha256": "b09d2030f83f2a59d12c717d41a9135a3f0c1ba0a2a5df694dbc40f77735daed"
+      },
+      "README.md": {
+        "size": 1302,
+        "sha256": "afb3345ad968a2af892eeec8d0899331adc876efa77e6ff1b83fd5160beca5fb"
+      }
+    },
+    "weight": "onnx/model_quantized.onnx",
+    "backend": "transformers_js",
+    "environment": "js",
+    "dataset_relation": "public_replacement",
+    "split": "validation, one archive tree only (exclude duplicate images/images tree)",
+    "excluded_source_labels": {},
+    "images": 7066,
+    "covered_target_classes": 7,
+    "num_output_classes": 7,
+    "label_mapping": {
+      "0": "sad",
+      "1": "disgust",
+      "2": "angry",
+      "3": "neutral",
+      "4": "fear",
+      "5": "surprise",
+      "6": "happy"
+    },
+    "scoring": "reference",
+    "evaluator": "sklearn reference scoring",
+    "fidelity": "reference_baseline",
+    "case_type": "special",
+    "special_tags": [
+      "framework_numeric_difference",
+      "dataset_replacement",
+      "official_evaluator_missing"
+    ],
+    "inference_entry": "publisher_transformers_model_and_processor",
+    "default_batch_size": 1,
+    "dtype": "published ONNX q8 on CPU",
+    "warmup_batches": 10,
+    "index": "__MODEL_ROOT__/resources/runtime/assets/workspace/classification171_200_eval/indices/173.jsonl",
+    "index_sha256": "fb733c9b97e33493ca9d80d168a0324b7e071ed05cb5af2e08001a453363a5a3",
+    "data_containers": {
+      "__DATASET_ROOT__/datasets_171_200/facial_emotions/raw/facial-emotion-expressions.zip": {
+        "size": 126358582,
+        "mtime_ns": 1675739081000000000
+      }
+    },
+    "protocol_fingerprint": "6abc0aff09525269c0d11efd08707ba9236add219e369af1225decc87f8d8ea1"
+  },
+  "status": "partial_complete",
+  "gpu_at_start": "0, GPU-edb63bcd-7ac5-4284-b9ea-825830b8ebba, NVIDIA GeForce RTX 4090, 580.126.09, 785 MiB, 22 %\n1, GPU-a11f730c-a975-2bf0-b765-3c24d83b7104, NVIDIA GeForce RTX 4090, 580.126.09, 133 MiB, 12 %",
+  "full_evaluation": false,
+  "images": 10,
+  "timing_file": "__MODEL_ROOT__/resources/runtime/assets/workspace/classification171_200_eval/.validation/v5/smoke/m173/timing.json",
+  "run_wall_seconds_this_segment": 3.121343072038144
+}

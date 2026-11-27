@@ -1,0 +1,37 @@
+{
+  "schema": "model-eval/classification-inventory/v1",
+  "scope": "Existing 59 classification models; model 93 is retrieval and excluded.",
+  "models": [
+    {
+      "sequence": 72,
+      "model_id": "NYUAD-ComNets/NYUAD_AI-generated_images_detector",
+      "runner_family": "single72",
+      "adapter": "native_labels",
+      "state": "integrated",
+      "dataset": {
+        "id": null,
+        "relation": null,
+        "split": null,
+        "note": "Synthbuster DALL·E3/SDXL + RAISE · 各300，共900图\n非官方评测集：公开替代"
+      },
+      "qualification": "existing_protocol_not_officially_verified",
+      "limitations": [],
+      "num_classes": 3,
+      "categories": [
+        {
+          "id": 0,
+          "name": "dalle"
+        },
+        {
+          "id": 1,
+          "name": "real"
+        },
+        {
+          "id": 2,
+          "name": "sd"
+        }
+      ],
+      "expected_images": 900
+    }
+  ]
+}

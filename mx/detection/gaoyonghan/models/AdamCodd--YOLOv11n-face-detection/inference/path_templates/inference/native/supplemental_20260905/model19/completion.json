@@ -1,0 +1,73 @@
+{
+  "state": "complete",
+  "sequence": 19,
+  "dataset_images": 498,
+  "GT_instances": 9158,
+  "native_classes": 11,
+  "predictions": 49800,
+  "result_dir": "__MODEL_ROOT__/resources/runtime/assets/workspace/results/remaining25_supplemental_20260905/m19-doclaynet-competition498",
+  "metrics": {
+    "AP": 0.6015225569768398,
+    "AP50": 0.7844178398856715,
+    "AP75": 0.6394673708408886,
+    "AP_small": 0.3503523083401145,
+    "AP_medium": 0.5703183902549506,
+    "AP_large": 0.5821433436565339,
+    "AR1": 0.32714417167652704,
+    "AR10": 0.6958304738157218,
+    "AR100": 0.7428505054778051,
+    "AR_small": 0.47548928182318395,
+    "AR_medium": 0.7029594934464298,
+    "AR_large": 0.8053666410093914,
+    "per_class_AP": {
+      "Caption": 0.41109894944525766,
+      "Footnote": 0.3280395428292526,
+      "Formula": 0.8366336633663366,
+      "List-item": 0.549123664434357,
+      "Page-footer": 0.4859527491360492,
+      "Page-header": 0.5432056102360567,
+      "Picture": 0.6380719895716876,
+      "Section-header": 0.5713075644752703,
+      "Table": 0.7797502803276678,
+      "Text": 0.7300374133201649,
+      "Title": 0.7435266996031373
+    },
+    "images": 498,
+    "gt_instances_per_class": {
+      "List-item": 1653,
+      "Page-footer": 640,
+      "Page-header": 364,
+      "Picture": 720,
+      "Caption": 300,
+      "Title": 39,
+      "Section-header": 1401,
+      "Text": 3665,
+      "Table": 243,
+      "Footnote": 129,
+      "Formula": 4
+    },
+    "predictions": 49800
+  },
+  "competition_AP": null,
+  "domain_mapping_state": "not_published_in_downloaded_official_archives",
+  "paper_reference": {
+    "mAP": 0.602,
+    "mAR": 0.743,
+    "aggregation_not_stated": true,
+    "both_match_at_three_decimal_places": true
+  },
+  "model_card_reference": {
+    "box_mAP": 0.571,
+    "dataset_and_protocol_unresolved": true
+  },
+  "independent_verification_passed": true,
+  "independent_CPU_rescore_tolerance": 1e-12,
+  "source_snapshot_timing": "Post-run archive; hashes match actual recorded execution hashes",
+  "report": "__MODEL_ROOT__/resources/runtime/assets/workspace/remaining_detection_eval/supplemental_20260905/model19/结果报告.md",
+  "code_sha256": {
+    "prepare.py": "cf3879552b22e84ab0bc07f657b6fad7132a0cb48a7f8ec01708def2cdcd5cd7",
+    "run.py": "3997aa180d15fae9183aff7cc07cb07d5d48f58515b364651930455abb30a1c4",
+    "score_threshold_diagnostic.py": "08e3859b2b6049796d697a6799eba04d02eedc533c00c387d357789a07f2441f",
+    "verify_completed.py": "db00ecbfdd119346ea0e6faf49a8d53bd269222233cc00faaab1537f06b2c725"
+  }
+}

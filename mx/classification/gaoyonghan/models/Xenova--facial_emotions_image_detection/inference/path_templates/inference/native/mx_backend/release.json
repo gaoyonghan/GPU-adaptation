@@ -1,0 +1,24 @@
+{
+  "created_at_utc": "2026-09-22T11:27:23.967960+00:00",
+  "directory": "__MODEL_ROOT__/resources/runtime/assets/workspace/classification171_200_eval",
+  "sha256": {
+    "README.md": "dc4663bd7334faffe5762072dc2f93372eb0f2d7270a2af56acb3ddaf529bb95",
+    "VALIDATION.md": "95e8abdd643580185c1b81edd7afc6f508e82530a15b35ed2cbbe111ff3c6359",
+    "common.py": "87e119ea13cd713bb054693dae0e04b7064b4fd683c8479b7715fd9b3883d045",
+    "dispatch.py": "1daae0db4b8505244c7bf60a5b6495c75fecc1383332a324aef1b975424dbe19",
+    "model_card_references.json": "6184cc1ef4c4804b62f9fcb70b4328f1bb7dfbe6180614cd261b5458af8265fe",
+    "models.json": "3594272e4bb9e40e82261897d53dbb6c550c872006766306546a2f3b3ce10e9f",
+    "native_js.mjs": "0248698e4b94dd21738c8dc1214bf61d77938c49d45e5c7168ba194de25607c4",
+    "package-lock.json": "5573d34c27867190fe079abe219b4a7495bc04e3077415c51773a0c4fc72b71c",
+    "package.json": "92ea9a9456a6902570934ad2f86af01fcebe9941c01d085bd25f07df70dfa112",
+    "prepare.py": "ceed5fdaa05e599a9fa51defe7c8077d149a8c4cd4c4c2eb22714adfad0450bf",
+    "run_all.sh": "a8304b0f91ca8046f2501441daf40ef52eda8f1f71319b4117baa087e5dc3f45",
+    "run_model.py": "8b61859273a256a4401a98181b66a0b3a487793a85c3fcf7d1f84491e2e0d5c1",
+    "setup_env.sh": "1ae443563143c415c7c8525774d566bf2699166e5067fd1051d03e10c5f069ad",
+    "timing.py": "db23cf873121e5e9345f23488d02d7757560a25084f330a56e38d5969d448342"
+  },
+  "validation": "validation_final/audit_summary_smoke.json",
+  "validated_unique_models": 28,
+  "validated_model_variants": 32,
+  "full_evaluations_launched": 0
+}

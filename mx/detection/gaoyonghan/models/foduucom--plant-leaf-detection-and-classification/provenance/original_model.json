@@ -1,0 +1,232 @@
+{
+  "sequence": 34,
+  "model_id": "foduucom/plant-leaf-detection-and-classification",
+  "task": "object_detection",
+  "task_name": "目标检测",
+  "reported_result": "AP 41.18% 植物种类不全12/46类玉米 AP50 98.50%、葡萄 83.40%；土豆 4.12%、桃 7.24%。",
+  "reference": "94.6",
+  "model_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/model_index/foduucom/plant-leaf-detection-and-classification",
+  "model_exists_at_build": true,
+  "dataset": {
+    "id": "plantdoc_test",
+    "relation": "public_replacement",
+    "split": "test",
+    "note": "PlantDoc Object Detection · test · 237 图\n非官方评测集：公开替代"
+  },
+  "environment_id": "detection-yolo",
+  "runner_family": "remaining_detection",
+  "final_result_sources": [
+    {
+      "source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m034/metrics-0.json",
+      "sha256": "a336fe61a013aa3f115a94b35a45f8474f1b9d50393d4b82f467b3dbc731f5dc",
+      "selection": "workbook_score_match",
+      "data": {
+        "native_metrics": {
+          "metrics/precision(B)": 0.39895035873985024,
+          "metrics/recall(B)": 0.4677616555726865,
+          "metrics/mAP50(B)": 0.41181144841720907,
+          "metrics/mAP50-95(B)": 0.3346374747692223,
+          "fitness": 0.342354872134021
+        },
+        "per_class": {
+          "soyabean": {
+            "precision": 0.3059305157036766,
+            "recall": 0.55,
+            "AP50": 0.31451964588824444,
+            "AP": 0.2750668492534901
+          },
+          "raspberry": {
+            "precision": 0.3841980959929577,
+            "recall": 0.6470588235294118,
+            "AP50": 0.4710555961582278,
+            "AP": 0.4207843197817086
+          },
+          "corn": {
+            "precision": 0.9641258679908941,
+            "recall": 0.9615384615384616,
+            "AP50": 0.985,
+            "AP": 0.8543154342936493
+          },
+          "strawberry": {
+            "precision": 0.8918152420223425,
+            "recall": 0.550013546194019,
+            "AP50": 0.7243101673771906,
+            "AP": 0.5812471528971074
+          },
+          "Blueberry": {
+            "precision": 0.1711610833926536,
+            "recall": 0.5909090909090909,
+            "AP50": 0.42409158625658555,
+            "AP": 0.3249157854468291
+          },
+          "potato": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "AP50": 0.04119511094382723,
+            "AP": 0.03613131965945906
+          },
+          "capcicum": {
+            "precision": 0.40158107334471066,
+            "recall": 0.038461538461538464,
+            "AP50": 0.1250007279968619,
+            "AP": 0.10712892164740126
+          },
+          "cherry": {
+            "precision": 0.14102588665998222,
+            "recall": 0.51855704611203,
+            "AP50": 0.18927388954165364,
+            "AP": 0.1413903715749306
+          },
+          "apple": {
+            "precision": 0.3683531934211586,
+            "recall": 0.4411764705882353,
+            "AP50": 0.3399764157593659,
+            "AP": 0.2751473516184713
+          },
+          "peach": {
+            "precision": 0.24564381117306822,
+            "recall": 0.1,
+            "AP50": 0.07242747082606518,
+            "AP": 0.058706078522845574
+          },
+          "tomato": {
+            "precision": 0.5868108082280943,
+            "recall": 0.2589031504090168,
+            "AP50": 0.4209226980187019,
+            "AP": 0.27568144666069677
+          },
+          "grape": {
+            "precision": 0.32675872694866454,
+            "recall": 0.9565217391304348,
+            "AP50": 0.8339640722397851,
+            "AP": 0.6651346658740784
+          }
+        },
+        "unit": "fraction_0_to_1",
+        "evaluation_images": 237,
+        "covered_classes": 12,
+        "total_model_classes": 46,
+        "official_comparable": false,
+        "actual_half": false,
+        "actual_options": {
+          "task": "detect",
+          "mode": "val",
+          "model": null,
+          "data": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/m34_native8043_v1/full/run_20260914_222022_593281/data.yaml",
+          "epochs": 100,
+          "patience": 50,
+          "batch": 1,
+          "imgsz": 640,
+          "save": true,
+          "save_period": -1,
+          "cache": false,
+          "device": "0",
+          "workers": 0,
+          "project": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/m34_native8043_v1/full",
+          "name": "run_20260914_222022_593281",
+          "exist_ok": true,
+          "pretrained": false,
+          "optimizer": "SGD",
+          "verbose": true,
+          "seed": 0,
+          "deterministic": true,
+          "single_cls": false,
+          "image_weights": false,
+          "rect": true,
+          "cos_lr": false,
+          "close_mosaic": 10,
+          "resume": false,
+          "min_memory": false,
+          "overlap_mask": true,
+          "mask_ratio": 4,
+          "dropout": 0.0,
+          "val": true,
+          "split": "test",
+          "save_json": true,
+          "save_hybrid": false,
+          "conf": 0.001,
+          "iou": 0.7,
+          "max_det": 300,
+          "half": false,
+          "dnn": false,
+          "plots": false,
+          "source": null,
+          "show": false,
+          "save_txt": false,
+          "save_conf": false,
+          "save_crop": false,
+          "hide_labels": false,
+          "hide_conf": false,
+          "vid_stride": 1,
+          "line_thickness": 3,
+          "visualize": false,
+          "augment": false,
+          "agnostic_nms": false,
+          "classes": null,
+          "retina_masks": false,
+          "boxes": true,
+          "format": "torchscript",
+          "keras": false,
+          "optimize": false,
+          "int8": false,
+          "dynamic": false,
+          "simplify": false,
+          "opset": null,
+          "workspace": 4,
+          "nms": false,
+          "lr0": 0.01,
+          "lrf": 0.01,
+          "momentum": 0.937,
+          "weight_decay": 0.0005,
+          "warmup_epochs": 3.0,
+          "warmup_momentum": 0.8,
+          "warmup_bias_lr": 0.1,
+          "box": 7.5,
+          "cls": 0.5,
+          "dfl": 1.5,
+          "fl_gamma": 0.0,
+          "label_smoothing": 0.0,
+          "nbs": 64,
+          "hsv_h": 0.015,
+          "hsv_s": 0.7,
+          "hsv_v": 0.4,
+          "degrees": 0.0,
+          "translate": 0.1,
+          "scale": 0.5,
+          "shear": 0.0,
+          "perspective": 0.0,
+          "flipud": 0.0,
+          "fliplr": 0.5,
+          "mosaic": 1.0,
+          "mixup": 0.0,
+          "copy_paste": 0.0,
+          "cfg": null,
+          "v5loader": false,
+          "tracker": "botsort.yaml"
+        }
+      },
+      "source_original": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/m34_native8043_v1/full/run_20260914_222022_593281/metrics.json"
+    }
+  ],
+  "code": {
+    "source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/m34_native8043_v1/full/run_20260914_222022_593281/run_m34_native.py",
+    "sha256": "cd6d63a258a5ad5f2ec112a70403de2b30e83537acb049a8b6f334f31da33509",
+    "recorded_sha256": null,
+    "attestation": "result_batch_snapshot",
+    "status_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m034/status.json",
+    "selection": "same_run_snapshot",
+    "archive": "code_archive/cd6d63a258a5ad5f_run_m34_native.py"
+  },
+  "support_files": [
+    "run_m34_native.py",
+    "run_m34_native.sh",
+    "protocol.json",
+    "coverage.json",
+    "data.yaml"
+  ],
+  "final_scorer": null,
+  "backend_package": "remaining_detection_eval",
+  "readiness": "code_and_result_identified",
+  "launch_status": "configured",
+  "metadata_warning": null
+}

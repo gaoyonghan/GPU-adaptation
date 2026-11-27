@@ -1,0 +1,48 @@
+{
+  "sequence": 4,
+  "files": [
+    {
+      "path": "yolov8n.pt",
+      "bytes": 6534387,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "README.md",
+      "bytes": 24723,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "yolov8x.pt",
+      "bytes": 136867539,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": ".gitattributes",
+      "bytes": 1519,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "yolov8l.pt",
+      "bytes": 87769683,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "yolov8m.pt",
+      "bytes": 52117635,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "yolov8s.pt",
+      "bytes": 22573363,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    }
+  ],
+  "mismatches": []
+}

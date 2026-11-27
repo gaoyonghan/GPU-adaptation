@@ -1,0 +1,27 @@
+{
+  "sequence": 4,
+  "model_id": "Ultralytics/YOLOv8",
+  "source_archive_hash_matches": true,
+  "source_archive_sha256": "aa4165d81aafa70a3d891842b2b529073367a8ab8d05bf07f99e743ec4c26e91",
+  "prepared_entry_source_sha256": "bb54b383c154deca7ac9d3a2d635b7f556a860ab460c8470e6b02ff4c52830a0",
+  "local_entry_sha256": "60f247a947cfce0cd2473ca5653d72f91a58acd59d4b2acd204ff75bc3ca40db",
+  "local_entry": "inference/native/run_m07_native.py",
+  "central_dispatch_in_entry": false,
+  "unexpected_external_links": [],
+  "declared_dataset_links": [
+    {
+      "path": "resources/runtime/assets/workspace/official_sources/object_detection/WildDet3D/data/in_the_wild",
+      "target": "/data2/gaoyonghan/gpu/dataset/wilddet3d_val"
+    }
+  ],
+  "broken_links": [],
+  "path_template_count": 299,
+  "state": "entrypoint_verified_full_run_pending",
+  "validation": {
+    "returncode": 0,
+    "python": "/home/ubuntu/gaoyonghan/miniconda3/envs/object-detection-yolo-v2/bin/python",
+    "checked_at": "2026-11-10T15:37:31.113841+08:00",
+    "scope": "native help/import/path check only; not full inference"
+  },
+  "smoke_verification": null
+}

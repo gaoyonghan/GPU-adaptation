@@ -1,0 +1,118 @@
+{
+  "model_path": "__MODEL_ROOT__/weights/Xenova/facial_emotions_image_detection",
+  "labels": {
+    "0": "sad",
+    "1": "disgust",
+    "2": "angry",
+    "3": "neutral",
+    "4": "fear",
+    "5": "surprise",
+    "6": "happy"
+  },
+  "rows": [
+    {
+      "id": "images/validation/angry/10052.jpg",
+      "archive": "__DATASET_ROOT__/datasets_171_200/facial_emotions/raw/facial-emotion-expressions.zip",
+      "member": "images/validation/angry/10052.jpg",
+      "crc32": 2414784908,
+      "bytes": 1490,
+      "target": 2,
+      "source_label": "angry",
+      "path": "__MODEL_ROOT__/resources/runtime/assets/workspace/classification171_200_eval/.runtime/js-images/a6feb7ca38a3bb7e2506826a7096c68556b974354496990396c7cf444aeef5e7.jpg"
+    },
+    {
+      "id": "images/validation/angry/10065.jpg",
+      "archive": "__DATASET_ROOT__/datasets_171_200/facial_emotions/raw/facial-emotion-expressions.zip",
+      "member": "images/validation/angry/10065.jpg",
+      "crc32": 3750677111,
+      "bytes": 1779,
+      "target": 2,
+      "source_label": "angry",
+      "path": "__MODEL_ROOT__/resources/runtime/assets/workspace/classification171_200_eval/.runtime/js-images/5dbb252699a2cdf42847098530785b0632a0d612a9e3a74a7d9a27b461787d6e.jpg"
+    },
+    {
+      "id": "images/validation/angry/10079.jpg",
+      "archive": "__DATASET_ROOT__/datasets_171_200/facial_emotions/raw/facial-emotion-expressions.zip",
+      "member": "images/validation/angry/10079.jpg",
+      "crc32": 3939323038,
+      "bytes": 1435,
+      "target": 2,
+      "source_label": "angry",
+      "path": "__MODEL_ROOT__/resources/runtime/assets/workspace/classification171_200_eval/.runtime/js-images/4fc3c7ae3b3b1a4de117f96dc969a3aac9ce53f904d83f0380e81d572655f30b.jpg"
+    },
+    {
+      "id": "images/validation/angry/10095.jpg",
+      "archive": "__DATASET_ROOT__/datasets_171_200/facial_emotions/raw/facial-emotion-expressions.zip",
+      "member": "images/validation/angry/10095.jpg",
+      "crc32": 3017715047,
+      "bytes": 1782,
+      "target": 2,
+      "source_label": "angry",
+      "path": "__MODEL_ROOT__/resources/runtime/assets/workspace/classification171_200_eval/.runtime/js-images/a2a3c00865adf7787e044f312def746c8cfdb2aaef60c5fc7de50e441f02ea95.jpg"
+    },
+    {
+      "id": "images/validation/disgust/10053.jpg",
+      "archive": "__DATASET_ROOT__/datasets_171_200/facial_emotions/raw/facial-emotion-expressions.zip",
+      "member": "images/validation/disgust/10053.jpg",
+      "crc32": 3410967563,
+      "bytes": 1395,
+      "target": 1,
+      "source_label": "disgust",
+      "path": "__MODEL_ROOT__/resources/runtime/assets/workspace/classification171_200_eval/.runtime/js-images/b9d0fe9877335484d19052724d73745f3669c9a39767f0de89c968ee5149e105.jpg"
+    },
+    {
+      "id": "images/validation/fear/10029.jpg",
+      "archive": "__DATASET_ROOT__/datasets_171_200/facial_emotions/raw/facial-emotion-expressions.zip",
+      "member": "images/validation/fear/10029.jpg",
+      "crc32": 1208891135,
+      "bytes": 1641,
+      "target": 4,
+      "source_label": "fear",
+      "path": "__MODEL_ROOT__/resources/runtime/assets/workspace/classification171_200_eval/.runtime/js-images/5ae1a2a1f4eceee250af2aad3e19da1be379dfe40c58eb0943add2491630bd44.jpg"
+    },
+    {
+      "id": "images/validation/happy/10019.jpg",
+      "archive": "__DATASET_ROOT__/datasets_171_200/facial_emotions/raw/facial-emotion-expressions.zip",
+      "member": "images/validation/happy/10019.jpg",
+      "crc32": 1930515960,
+      "bytes": 1297,
+      "target": 6,
+      "source_label": "happy",
+      "path": "__MODEL_ROOT__/resources/runtime/assets/workspace/classification171_200_eval/.runtime/js-images/be67b92a21ffc52e3fde9a3e1192a1eca38b70f47d35f5cd6c1c4b2fc4b9bf23.jpg"
+    },
+    {
+      "id": "images/validation/neutral/10033.jpg",
+      "archive": "__DATASET_ROOT__/datasets_171_200/facial_emotions/raw/facial-emotion-expressions.zip",
+      "member": "images/validation/neutral/10033.jpg",
+      "crc32": 312541980,
+      "bytes": 1749,
+      "target": 3,
+      "source_label": "neutral",
+      "path": "__MODEL_ROOT__/resources/runtime/assets/workspace/classification171_200_eval/.runtime/js-images/51f4325ca41ee171552503a03f57a878b655351120bd9be2cd94b9897a24992a.jpg"
+    },
+    {
+      "id": "images/validation/sad/10004.jpg",
+      "archive": "__DATASET_ROOT__/datasets_171_200/facial_emotions/raw/facial-emotion-expressions.zip",
+      "member": "images/validation/sad/10004.jpg",
+      "crc32": 2182656941,
+      "bytes": 1485,
+      "target": 0,
+      "source_label": "sad",
+      "path": "__MODEL_ROOT__/resources/runtime/assets/workspace/classification171_200_eval/.runtime/js-images/6e48e0dce9ea05f11a0681b2da2ee9dda8f81a81f0e2fcdbaac1bd4f00aa69d3.jpg"
+    },
+    {
+      "id": "images/validation/surprise/10056.jpg",
+      "archive": "__DATASET_ROOT__/datasets_171_200/facial_emotions/raw/facial-emotion-expressions.zip",
+      "member": "images/validation/surprise/10056.jpg",
+      "crc32": 1379395630,
+      "bytes": 1587,
+      "target": 5,
+      "source_label": "surprise",
+      "path": "__MODEL_ROOT__/resources/runtime/assets/workspace/classification171_200_eval/.runtime/js-images/3040f3c017bd007f6eb96c069320ecfe491215a8aaf3b2821af40a51e4339e92.jpg"
+    }
+  ],
+  "warmup": 10,
+  "output": "__MODEL_ROOT__/resources/runtime/assets/workspace/classification171_200_eval/.validation/v5/smoke/m173",
+  "completed_batches": [],
+  "segment": "1790075631925357811"
+}

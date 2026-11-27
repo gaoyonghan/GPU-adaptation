@@ -1,0 +1,38 @@
+{
+  "sequence": 167,
+  "model_id": "playrobin/furniture-styles",
+  "run_dir": "classification/laizihao/models/playrobin--furniture-styles/result/run_001",
+  "phase": "full",
+  "state": "completed",
+  "images": 1047,
+  "evaluated_classes": 3,
+  "chance_level": 0.333333,
+  "metrics": {
+    "accuracy": 0.36771728748806115,
+    "balanced_accuracy": 0.3333333333333333,
+    "macro_f1": 0.1792364990689013,
+    "top5_accuracy": null,
+    "top5_status": "not_applicable_fewer_than_five_classes"
+  },
+  "reported_by_author": {
+    "top1": 0.524,
+    "top5": null
+  },
+  "device": {
+    "gpu": "MetaX C500",
+    "torch": "2.10.0+metax3.8.1.0",
+    "precision": "amp_bf16",
+    "batch_size": 64
+  },
+  "predictions_sha256": "48de525f034d03b9d0c590f05ececbf6e09010163dd7ed45339b7bbdc6ca60c5",
+  "wall_seconds": 24.584,
+  "metric_reportable": false,
+  "verdict": "实测 0.36772 处于随机水平附近（chance=0.3333），且存在已知口径问题：不可作为该模型精度参考，详见 known_limits",
+  "known_limits": [
+    "模型 id2label 为 5 类，评测集 interior_3cls 只覆盖其中 3 类，类别空间不匹配。",
+    "预测全部落在同一类，accuracy 恰好等于该类在评测集中的占比，balanced accuracy 退化为 1/3（三类随机水平）。",
+    "该数值只能说明链路可跑通，不能作为精度水平。"
+  ],
+  "method": "classification/evaluate.py --run-dir <run>（与推理同一容器、同一环境）",
+  "validated_at": "2026-11-19T13:26:47.431903+00:00"
+}

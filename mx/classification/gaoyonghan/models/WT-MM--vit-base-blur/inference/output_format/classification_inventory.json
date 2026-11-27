@@ -1,0 +1,47 @@
+{
+  "models": [
+    {
+      "sequence": 168,
+      "model_id": "WT-MM/vit-base-blur",
+      "runner_family": "metax_c500_161_170",
+      "adapter": "native_labels",
+      "state": "integrated",
+      "dataset": {
+        "id": "blur_sd21",
+        "relation": "original_protocol_incomplete",
+        "split": "dataset/blur_sd21 · 按作者方法自建 SD2.1 前 10/30 步解码，450 对 (900 images)",
+        "note": [
+          "按作者公开方法自建：SD2.1 30 步跑完(clean) / 30 步调度只跑前 10 步(blurry)，512×512"
+        ],
+        "index_source": null,
+        "data_containers": []
+      },
+      "qualification": "synthetic_reconstruction",
+      "limitations": [
+        "评测集按作者公开方法重建：SD2.1 同 prompt 同 seed，30 步调度只跑前 10 步解码得到 blurry，跑满 30 步得 clean，共 450 对 900 张。",
+        "作者 100% 是 173 张 held-out 上的结果，与本次 900 张口径不同，差值仅参照。",
+        "只有 Top-1；2 类 Top-5 不适用。"
+      ],
+      "num_classes": 2,
+      "expected_images": 900,
+      "existing_protocol": {
+        "id": "metax_c500_m168_v1",
+        "scope": "900 images; original inference and alignment done by run_inference.py, this inventory entry only registers the conversion/scoring scope",
+        "expected_inference_images": 900,
+        "expected_scored_images": 900,
+        "metrics_path": "m168/metrics.json",
+        "official_reference_comparable": false
+      },
+      "categories": [
+        {
+          "id": 0,
+          "name": "blurry"
+        },
+        {
+          "id": 1,
+          "name": "clear"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "sequence": 1,
+  "files": [
+    {
+      "path": "model.safetensors",
+      "bytes": 166587896,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "pytorch_model.bin",
+      "bytes": 166731871,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "config.json",
+      "bytes": 4592,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "preprocessor_config.json",
+      "bytes": 290,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5891,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": ".gitattributes",
+      "bytes": 744,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "pytorch/1d5f47bd3bdd2c4bbfa585418ffe6da5028b4c0b/model.safetensors",
+      "bytes": 166587896,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "pytorch/1d5f47bd3bdd2c4bbfa585418ffe6da5028b4c0b/config.json",
+      "bytes": 4592,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "pytorch/1d5f47bd3bdd2c4bbfa585418ffe6da5028b4c0b/preprocessor_config.json",
+      "bytes": 290,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "pytorch/1d5f47bd3bdd2c4bbfa585418ffe6da5028b4c0b/README.md",
+      "bytes": 5891,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "pytorch/1d5f47bd3bdd2c4bbfa585418ffe6da5028b4c0b/weight_source.json",
+      "bytes": 1522,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    }
+  ],
+  "mismatches": []
+}

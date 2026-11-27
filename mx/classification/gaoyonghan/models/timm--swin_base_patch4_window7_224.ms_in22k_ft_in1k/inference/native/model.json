@@ -1,0 +1,18 @@
+{
+  "sequence": 164,
+  "model_id": "timm/swin_base_patch4_window7_224.ms_in22k_ft_in1k",
+  "dirname": "timm__swin_base_patch4_window7_224.ms_in22k_ft_in1k",
+  "loader": "timm",
+  "timm_name": "swin_base_patch4_window7_224.ms_in22k_ft_in1k",
+  "num_classes": 1000,
+  "dataset": "imagenet1k_val",
+  "dataset_sub": "imagenet1k_val",
+  "dataset_source": "mrm8488/ImageNet1K-val (50000 张, 非 gated 镜像；与官方 gated split 同批图，50000 张原始字节 md5 全等)",
+  "transform": null,
+  "align": null,
+  "expected_images": 50000,
+  "reported_top1": 0.85276,
+  "reported_top5": 0.97566,
+  "reported_note": "timm 官方结果表 results-imagenet.csv: top1 85.276 / top5 97.566",
+  "prepare": null
+}

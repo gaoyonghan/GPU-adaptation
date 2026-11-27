@@ -1,0 +1,168 @@
+{
+  "sequence": 13,
+  "files": [
+    {
+      "path": "yolo26m-seg.pt",
+      "bytes": 54750385,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "yolo26m-cls.pt",
+      "bytes": 23477398,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "yolo26x.pt",
+      "bytes": 118667365,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "yolo26l-seg.pt",
+      "bytes": 63700037,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "yolo26n-pose.pt",
+      "bytes": 7878574,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "yolo26x-seg.pt",
+      "bytes": 142129861,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "yolo26l-obb.pt",
+      "bytes": 57263057,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "README.md",
+      "bytes": 30708,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "yolo26s-seg.pt",
+      "bytes": 23467933,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "yolo26x-cls.pt",
+      "bytes": 59610168,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "yolo26s-obb.pt",
+      "bytes": 21701632,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": ".gitattributes",
+      "bytes": 1519,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "yolo26m-pose.pt",
+      "bytes": 49036866,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "yolo26n-cls.pt",
+      "bytes": 5786434,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "yolo26m.pt",
+      "bytes": 44255705,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "yolo26x-pose.pt",
+      "bytes": 126242553,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "yolo26x-obb.pt",
+      "bytes": 126937426,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "yolo26m-obb.pt",
+      "bytes": 48363653,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "yolo26n-obb.pt",
+      "bytes": 5907357,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "yolo26n-seg.pt",
+      "bytes": 6719965,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "yolo26s-cls.pt",
+      "bytes": 13622082,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "yolo26s.pt",
+      "bytes": 20422725,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "yolo26n.pt",
+      "bytes": 5544453,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "yolo26l-pose.pt",
+      "bytes": 57995961,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "yolo26l-cls.pt",
+      "bytes": 28535928,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "yolo26l.pt",
+      "bytes": 53211173,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "yolo26s-pose.pt",
+      "bytes": 24151790,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    }
+  ],
+  "mismatches": []
+}

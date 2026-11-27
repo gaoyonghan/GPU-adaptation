@@ -1,0 +1,214 @@
+{
+  "schema_version": 1,
+  "sources": {
+    "ultralytics": {
+      "path": "__MODEL_ROOT__/resources/runtime/assets/workspace/171-200/inference_code/ultralytics",
+      "commit": "6900c83b16eebee55c7b9de23b9ef447e6ff11e7"
+    }
+  },
+  "models": [
+    {
+      "sequence": 177,
+      "model_id": "Anzhc/Race-Classification-FairFace-YOLOv8",
+      "model_path": "__MODEL_ROOT__/weights/Anzhc/Race-Classification-FairFace-YOLOv8",
+      "revision": "67bd9e4cfa604370316fa15e69de59ef697b602e",
+      "task_type": "image-classification",
+      "status": "not_started",
+      "official_model_card": "https://huggingface.co/Anzhc/Race-Classification-FairFace-YOLOv8",
+      "official_reference": {
+        "source": "https://huggingface.co/Anzhc/Race-Classification-FairFace-YOLOv8",
+        "local_card_sha256": "46359d1190f1f0b9ca3d634b037fe96ea5799b2954bd219e68d28938b75d5b56",
+        "model_index": [
+          {
+            "name": "v8n",
+            "results": [
+              {
+                "task": {
+                  "type": "Image Classification"
+                },
+                "dataset": {
+                  "name": "FairFace",
+                  "type": "FairFace"
+                },
+                "metrics": [
+                  {
+                    "name": "top1_acc",
+                    "type": "top1_acc",
+                    "value": 0.717
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "v8s",
+            "results": [
+              {
+                "task": {
+                  "type": "Image Classification"
+                },
+                "dataset": {
+                  "name": "FairFace",
+                  "type": "FairFace"
+                },
+                "metrics": [
+                  {
+                    "name": "top1_acc",
+                    "type": "top1_acc",
+                    "value": 0.721
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "v8m",
+            "results": [
+              {
+                "task": {
+                  "type": "Image Classification"
+                },
+                "dataset": {
+                  "name": "FairFace",
+                  "type": "FairFace"
+                },
+                "metrics": [
+                  {
+                    "name": "top1_acc",
+                    "type": "top1_acc",
+                    "value": 0.725
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "11l",
+            "results": [
+              {
+                "task": {
+                  "type": "Image Classification"
+                },
+                "dataset": {
+                  "name": "FairFace",
+                  "type": "FairFace"
+                },
+                "metrics": [
+                  {
+                    "name": "top1_acc",
+                    "type": "top1_acc",
+                    "value": 0.733
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "11x",
+            "results": [
+              {
+                "task": {
+                  "type": "Image Classification"
+                },
+                "dataset": {
+                  "name": "FairFace",
+                  "type": "FairFace"
+                },
+                "metrics": [
+                  {
+                    "name": "top1_acc",
+                    "type": "top1_acc",
+                    "value": 0.735
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "text_report_values": null,
+        "units": "fractions for extracted accuracy/F1; original model-index units as published",
+        "comparison": "Manual protocol review required; no automatic drop calculation",
+        "note": "Card reports retained as provenance, not proof that local data/split/framework exactly reproduces the reported run."
+      },
+      "reference_comparison": "manual_reference_required",
+      "known_differences": [
+        "Native publisher evaluator retained; historical author environment/complete reporting protocol not established, so exact_official is not claimed.",
+        "Native validator reads class metadata from train; train is a symlink to val, with split=val only and no training or resplitting.",
+        "Local checkpoint and publisher inference components retained. Offline file paths, eval mode, batching, timing observation and reference scoring are external orchestration."
+      ],
+      "config": {},
+      "preprocessing": {},
+      "architecture": null,
+      "variants": [
+        "Race-CLS-FairFace_yolo11l.pt",
+        "Race-CLS-FairFace_yolo11x.pt",
+        "Race-CLS-FairFace_yolov8m.pt",
+        "Race-CLS-FairFace_yolov8n.pt",
+        "Race-CLS-FairFace_yolov8s.pt"
+      ],
+      "files": {
+        "Race-CLS-FairFace_yolo11l.pt": {
+          "size": 25996919,
+          "sha256": "409860807160319828dfc1d5db76b5ad9745621b53134e3a3081017dff278e22"
+        },
+        "Race-CLS-FairFace_yolo11x.pt": {
+          "size": 57071287,
+          "sha256": "cebfe600af3508e56a8907bafe7b9374c43ad05aa8910de5a4c06a0c3604026f"
+        },
+        "Race-CLS-FairFace_yolov8m.pt": {
+          "size": 31720706,
+          "sha256": "28ccbd03fb1a226308aa79581c630124f2a8e8da809e0dd46324acd5e4b4167c"
+        },
+        "Race-CLS-FairFace_yolov8n.pt": {
+          "size": 3001302,
+          "sha256": "de34495a0dc8bea82a4d45b8ddd9cdc5fce93dc9592dcd7dc887c79bb0a070d7"
+        },
+        "Race-CLS-FairFace_yolov8s.pt": {
+          "size": 10288578,
+          "sha256": "056cddb8a7b1a923bc58b3a3d4686e66c15fcfb0560a14d1de6c4b7731203909"
+        },
+        "README.md": {
+          "size": 3604,
+          "sha256": "46359d1190f1f0b9ca3d634b037fe96ea5799b2954bd219e68d28938b75d5b56"
+        }
+      },
+      "weight": "Race-CLS-FairFace_yolo11l.pt",
+      "backend": "ultralytics_native",
+      "environment": "yolo",
+      "dataset_relation": "original_exact",
+      "split": "FairFace 0.25 validation",
+      "excluded_source_labels": {},
+      "images": 10954,
+      "covered_target_classes": 7,
+      "num_output_classes": 7,
+      "label_mapping": {},
+      "scoring": "native",
+      "evaluator": "Ultralytics ClassificationValidator",
+      "fidelity": "reference_baseline",
+      "case_type": "special",
+      "special_tags": [
+        "framework_numeric_difference"
+      ],
+      "inference_entry": "publisher_transformers_model_and_processor",
+      "default_batch_size": 1,
+      "dtype": "float32",
+      "warmup_batches": 10,
+      "index": "__MODEL_ROOT__/inference/native/indices/177.jsonl",
+      "index_sha256": "e999f1753cb1bb27ee499f360c79cc37bc22903c21be348a611b42c08de90d09",
+      "data_containers": {
+        "__DATASET_ROOT__/FairFace/0.25/validation-00000-of-00001-951dbd63c8724ee1.parquet": {
+          "size": 63189799,
+          "mtime_ns": 1789185259736949938
+        }
+      },
+      "protocol_fingerprint": "0befca19273c892024b9bca402304efe12a9a6e94d42b046bc85c3e17a147161"
+    }
+  ],
+  "runtime_defaults": {
+    "batch_size": 1,
+    "device": "cuda:0",
+    "warmup_batches": 10,
+    "workers": 2
+  },
+  "scope": "Each published model retained; 177 includes all five weights; no full GPU inference launched by preparation."
+}

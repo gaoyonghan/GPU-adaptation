@@ -1,0 +1,11 @@
+--- original_inference.py
++++ inference/native/run_m92_native.py
+@@ -103,7 +103,7 @@
+     p.add_argument('--describe', action='store_true')
+     p.add_argument('--preflight', action='store_true')
+     p.add_argument('--max-images', type=int, default=0)
+-    p.add_argument('--output-root', type=Path, default=Path('/home/ubuntu/gaoyonghan/gpu/results/m92_huggingpics_native_v1'))
++    p.add_argument('--output-root', type=Path, default=Path('/data2/gaoyonghan/gpu_model_standalone_20261110/release/model/分类/metadome--face_shape_classification/resources/runtime/assets/workspace/results/m92_huggingpics_native_v1'))
+     args = p.parse_args()
+     if args.describe:
+         print(json.dumps({'native_protocol': spec, 'frozen_model_and_data': base}, ensure_ascii=False, indent=2))

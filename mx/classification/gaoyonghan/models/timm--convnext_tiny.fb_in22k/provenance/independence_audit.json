@@ -1,0 +1,22 @@
+{
+  "sequence": 200,
+  "model_id": "timm/convnext_tiny.fb_in22k",
+  "source_archive_hash_matches": true,
+  "source_archive_sha256": "8b61859273a256a4401a98181b66a0b3a487793a85c3fcf7d1f84491e2e0d5c1",
+  "prepared_entry_source_sha256": "6a38e2c5ae2f0afc3c6ccf71a88323c99f69cf863d96e0e306f009b1d0dcdfde",
+  "local_entry_sha256": "364069aca806fcededc564bb022d99af9ac83669d5c45b061c66ac7b0126d989",
+  "local_entry": "inference/native/run_model.py",
+  "central_dispatch_in_entry": false,
+  "unexpected_external_links": [],
+  "declared_dataset_links": [],
+  "broken_links": [],
+  "path_template_count": 210,
+  "state": "entrypoint_verified_full_run_pending",
+  "validation": {
+    "returncode": 0,
+    "python": "/home/ubuntu/gaoyonghan/gpu/classification8_eval/.venv/bin/python",
+    "checked_at": "2026-11-10T15:57:57.518288+08:00",
+    "scope": "native help/import/path check only; not full inference"
+  },
+  "smoke_verification": null
+}

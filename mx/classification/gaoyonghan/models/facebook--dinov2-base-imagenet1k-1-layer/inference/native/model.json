@@ -1,0 +1,18 @@
+{
+  "sequence": 169,
+  "model_id": "facebook/dinov2-base-imagenet1k-1-layer",
+  "dirname": "facebook__dinov2-base-imagenet1k-1-layer",
+  "loader": "transformers",
+  "timm_name": null,
+  "num_classes": 1000,
+  "dataset": "imagenet1k_val",
+  "dataset_sub": "imagenet1k_val",
+  "dataset_source": "mrm8488/ImageNet1K-val (50000 张, 非 gated 镜像；与官方 gated split 同批图，50000 张原始字节 md5 全等)",
+  "transform": null,
+  "align": null,
+  "expected_images": 50000,
+  "reported_top1": 0.845,
+  "reported_top5": null,
+  "reported_note": "模型卡未给数值；0.845 取 DINOv2 论文 ViT-B/14 的 ImageNet-1k linear probe 结果作参考，属参考值而非作者声明。上传权重只有 pytorch_model.bin（无 safetensors），torch>=2.6 下 torch.load 默认 weights_only=True 会拒绝加载，须靠 TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD=1（本包 env.sh 已设）。另在官方 gated validation（ILSVRC/imagenet-1k，50000 张）上复跑对照过：84.314%（差 -0.186pp），用 code/run_official.sh 可重跑",
+  "prepare": null
+}

@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "sources": {},
+  "models": [
+    {
+      "sequence": 123,
+      "model_id": "itorrento/iabditorrentoModel",
+      "runner_family": "native_script",
+      "adapter": "native_labels",
+      "state": "full_inference_and_public_scoring_verified",
+      "dataset": {
+        "id": "Cats vs Dogs",
+        "split": "deterministic_20pct_holdout_from_train",
+        "note": [
+          "Cats vs Dogs\ntrain 分层抽取 20%，seed=42\n4,682 张，非官方 test"
+        ],
+        "native_scope": {
+          "name": "Cats vs Dogs",
+          "source": "microsoft/cats_vs_dogs",
+          "split": "deterministic_20pct_holdout_from_train",
+          "split_note": "microsoft/cats_vs_dogs has no official test split; stratified holdout test_size=0.2, seed=42",
+          "label_column": "labels",
+          "class_names": [
+            "cat",
+            "dog"
+          ],
+          "image_count": 4682
+        },
+        "relation": "native_e07_registered_scope",
+        "index_source": "native loader GT, materialized as classification_annotations.json in the native phase directory",
+        "data_containers": [
+          "dataset/cats_vs_dogs/data/train-00000-of-00002.parquet",
+          "dataset/cats_vs_dogs/data/train-00001-of-00002.parquet"
+        ]
+      },
+      "qualification": "native_registered_scope",
+      "limitations": [
+        "Capture-ready is a code integration state, not a claim that inference has passed.",
+        "Unobserved native Top-5 is unavailable; aggregate scores are not predictions."
+      ],
+      "num_classes": 2,
+      "expected_images": 4682,
+      "native_script": {
+        "script": "inference/native/run_model.py",
+        "script_sha256": "4d662e064e99832cead9c023403a044daa2f4fafc186ad753e340dfd6a7a503d",
+        "loop_lineno": 225,
+        "labels": "batch_labels",
+        "prediction": "logits.argmax(dim=1)",
+        "ranking": null,
+        "classes": "logits.shape[-1]",
+        "loader_kind": "torch",
+        "label_position": 1,
+        "framework": "torch",
+        "original_script_sha256": "0a230e27368e16a7c8a5cb7fc5be0c0a78c62985ff5762214f458a055d6734e9",
+        "original_loop_lineno": 214,
+        "original_path": "code/iabditorrentoModel-cats-vs-dogs-test.py",
+        "ported_script_sha256": "f72d97fe2d99793ff4cddac9cbb8cd0b76ae99c484c3c512677e3ec2b5e44738"
+      },
+      "output_relative_path": "result/run_001/full/m123",
+      "supports_max_samples": false,
+      "runtime": {
+        "batch_size": 64,
+        "workers": 0,
+        "warmup": 3
+      },
+      "weights_files": [
+        {
+          "path": "config.json",
+          "size": 743,
+          "sha256": "70177e0892c75651cdd959f160ff6cbebd03cd84db18cb313219f27e060f84bc"
+        },
+        {
+          "path": "preprocessor_config.json",
+          "size": 228,
+          "sha256": "af4eb4d79cf61b47010fc0bc9352ee967579c417423b4917188d809b7e048948"
+        },
+        {
+          "path": "pytorch_model.bin",
+          "size": 343266993,
+          "sha256": "8fb5f7703115de0c0c15e04616bcfcf01d5dba29023a829fb68b5bc82533a75b"
+        }
+      ],
+      "dataset_files": [
+        "cats_vs_dogs/data/train-00000-of-00002.parquet",
+        "cats_vs_dogs/data/train-00001-of-00002.parquet"
+      ],
+      "environment": "e07.txt",
+      "native_precision": "FP32",
+      "backend": "transformers",
+      "timing_alignment": {
+        "forward": "Same event/current-stream/synchronize semantics; wrapper preserves exactly one native call. MX runtime differs.",
+        "e2e": "Native DataLoader fetch to CPU prediction availability; worker-prefetch boundary differs from Example. Does not include subsequent metrics or record writes.",
+        "worker_prefetch": false,
+        "starts_after_spider_composition": false,
+        "native_metric_operations_before_prediction_readiness": [],
+        "model_load": "Sum of measured native construction/load/placement blocks, not Example contiguous block.",
+        "warmup": "Native repeated preprocessed first batch; native count retained; synchronized before/after. Unlike Example, preprocessing/transfer/softmax-to-CPU are outside the warmup interval.",
+        "evaluation": "Native aggregate evaluation not measured separately; evaluation_seconds=null. Public scoring duration is outside native timing.",
+        "resume": "No resume; repeated native phase archives previous output; resume_segments=1.",
+        "comparison_valid": false
+      },
+      "label_mapping": [
+        {
+          "id": 0,
+          "name": "output_class_0"
+        },
+        {
+          "id": 1,
+          "name": "output_class_1"
+        }
+      ],
+      "layout_reference": {
+        "branch": "gaoyonghan/mx",
+        "commit": "208733e1562fca75b7128772ca2cd587943d9012",
+        "platform": "mx"
+      }
+    }
+  ]
+}

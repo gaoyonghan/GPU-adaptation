@@ -1,0 +1,8 @@
+{
+  "environment": "e07",
+  "image": "mx-model-envs:20261118",
+  "image_id": "sha256:c19629cdfd550849dabddcb1b5a0a69ca30703d153c602ba230b5319dac732cf",
+  "python": "/opt/model-envs/e07/bin/python",
+  "dependencies": "../../../environment/e07.txt",
+  "path_base": "configuration_directory"
+}

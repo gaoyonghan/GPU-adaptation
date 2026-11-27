@@ -1,0 +1,162 @@
+{
+  "sequence": 48,
+  "files": [
+    {
+      "path": "MANIFEST.in",
+      "bytes": 167,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 21817,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "README.md",
+      "bytes": 15405,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "example.png",
+      "bytes": 201319,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": ".gitattributes",
+      "bytes": 1604,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "Demo.ipynb",
+      "bytes": 878101,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "bytes": 21712,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "viz.png",
+      "bytes": 231574,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 42,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "setup.py",
+      "bytes": 406,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "pyproject.toml",
+      "bytes": 1893,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "nemotron_graphic_elements_v1/config.json",
+      "bytes": 0,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "nemotron_graphic_elements_v1/utils.py",
+      "bytes": 7355,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "nemotron_graphic_elements_v1/model.py",
+      "bytes": 7709,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "nemotron_graphic_elements_v1/__init__.py",
+      "bytes": 795,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "nemotron_graphic_elements_v1/weights.pth",
+      "bytes": 433919084,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "nemotron_graphic_elements_v1/graphic_element_v1.py",
+      "bytes": 2861,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "nemotron_graphic_elements_v1/post_processing/graphic_elt_pp.py",
+      "bytes": 4247,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "nemotron_graphic_elements_v1/yolox/yolo_pafpn.py",
+      "bytes": 3669,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "nemotron_graphic_elements_v1/yolox/yolo_head.py",
+      "bytes": 7951,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "nemotron_graphic_elements_v1/yolox/darknet.py",
+      "bytes": 6158,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "nemotron_graphic_elements_v1/yolox/yolox.py",
+      "bytes": 1062,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "nemotron_graphic_elements_v1/yolox/__init__.py",
+      "bytes": 327,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "nemotron_graphic_elements_v1/yolox/yolo_fpn.py",
+      "bytes": 2615,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "nemotron_graphic_elements_v1/yolox/boxes.py",
+      "bytes": 2144,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "nemotron_graphic_elements_v1/yolox/network_blocks.py",
+      "bytes": 6231,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    }
+  ],
+  "mismatches": []
+}

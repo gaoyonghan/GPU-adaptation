@@ -1,0 +1,22 @@
+{
+  "sequence": 42,
+  "model_id": "cmarkea/detr-layout-detection",
+  "source_archive_hash_matches": true,
+  "source_archive_sha256": "c4ede533da033ad71325c4a162b904e832fef9a86f2c1e8cdb81a35081c66325",
+  "prepared_entry_source_sha256": "a2bda0d5152742b546c7e27ae153ebc318f680f0a39d8aca882dc5380e1aa0ab",
+  "local_entry_sha256": "6309a509b26f7017f8daa961867e1b61d3b67f0847a2540083227a161a632c05",
+  "local_entry": "inference/native/run_cmarkea.py",
+  "central_dispatch_in_entry": false,
+  "unexpected_external_links": [],
+  "declared_dataset_links": [],
+  "broken_links": [],
+  "path_template_count": 473,
+  "state": "entrypoint_verified_full_run_pending",
+  "validation": {
+    "returncode": 0,
+    "python": "/home/ubuntu/gaoyonghan/miniconda3/envs/object-detection-hf-v2/bin/python",
+    "checked_at": "2026-11-10T15:49:05.986101+08:00",
+    "scope": "native help/import/path check only; not full inference"
+  },
+  "smoke_verification": null
+}

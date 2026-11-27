@@ -1,0 +1,164 @@
+{
+  "schema_version": 1,
+  "sources": {
+    "transformers_js": {
+      "path": "__MODEL_ROOT__/resources/runtime/assets/workspace/171-200/inference_code/transformers.js",
+      "commit": "a1728dd363256efffb6e8678138cb6ad755d051d"
+    }
+  },
+  "models": [
+    {
+      "sequence": 173,
+      "model_id": "Xenova/facial_emotions_image_detection",
+      "model_path": "__MODEL_ROOT__/weights/Xenova/facial_emotions_image_detection",
+      "revision": "e039a363ab5d9e1b82eb08b3af90b4648cb8f696",
+      "task_type": "image-classification",
+      "status": "not_started",
+      "official_model_card": "https://huggingface.co/Xenova/facial_emotions_image_detection",
+      "official_reference": {
+        "source": "https://huggingface.co/Xenova/facial_emotions_image_detection",
+        "local_card_sha256": "afb3345ad968a2af892eeec8d0899331adc876efa77e6ff1b83fd5160beca5fb",
+        "model_index": null,
+        "text_report_values": null,
+        "units": "fractions for extracted accuracy/F1; original model-index units as published",
+        "comparison": "Manual protocol review required; no automatic drop calculation",
+        "note": "No unambiguous numeric reference for this exact checkpoint was extracted from the frozen card."
+      },
+      "reference_comparison": "manual_reference_required",
+      "known_differences": [
+        "Local checkpoint and publisher inference components retained. Offline file paths, eval mode, batching, timing observation and reference scoring are external orchestration."
+      ],
+      "config": {
+        "_name_or_path": "dima806/facial_emotions_image_detection",
+        "architectures": [
+          "ViTForImageClassification"
+        ],
+        "attention_probs_dropout_prob": 0.0,
+        "encoder_stride": 16,
+        "hidden_act": "gelu",
+        "hidden_dropout_prob": 0.0,
+        "hidden_size": 768,
+        "id2label": {
+          "0": "sad",
+          "1": "disgust",
+          "2": "angry",
+          "3": "neutral",
+          "4": "fear",
+          "5": "surprise",
+          "6": "happy"
+        },
+        "image_size": 224,
+        "initializer_range": 0.02,
+        "intermediate_size": 3072,
+        "label2id": {
+          "angry": 2,
+          "disgust": 1,
+          "fear": 4,
+          "happy": 6,
+          "neutral": 3,
+          "sad": 0,
+          "surprise": 5
+        },
+        "layer_norm_eps": 1e-12,
+        "model_type": "vit",
+        "num_attention_heads": 12,
+        "num_channels": 3,
+        "num_hidden_layers": 12,
+        "patch_size": 16,
+        "problem_type": "single_label_classification",
+        "qkv_bias": true,
+        "transformers_version": "4.36.2"
+      },
+      "preprocessing": {
+        "do_normalize": true,
+        "do_rescale": true,
+        "do_resize": true,
+        "image_mean": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "image_processor_type": "ViTFeatureExtractor",
+        "image_std": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "resample": 2,
+        "rescale_factor": 0.00392156862745098,
+        "size": {
+          "height": 224,
+          "width": 224
+        }
+      },
+      "architecture": [
+        "ViTForImageClassification"
+      ],
+      "files": {
+        "onnx/model_quantized.onnx": {
+          "size": 87485840,
+          "sha256": "539b7b281d5fa35315c0cd0e54f2d1d5434c9bddfcf824488f355ae1dd1921c3"
+        },
+        "config.json": {
+          "size": 879,
+          "sha256": "3f2d9a2f633b4b7e1a2d159e1be4d5ef92d56980682336be74ab2b160f9f751f"
+        },
+        "preprocessor_config.json": {
+          "size": 327,
+          "sha256": "b09d2030f83f2a59d12c717d41a9135a3f0c1ba0a2a5df694dbc40f77735daed"
+        },
+        "README.md": {
+          "size": 1302,
+          "sha256": "afb3345ad968a2af892eeec8d0899331adc876efa77e6ff1b83fd5160beca5fb"
+        }
+      },
+      "weight": "onnx/model_quantized.onnx",
+      "backend": "transformers_js",
+      "environment": "js",
+      "dataset_relation": "public_replacement",
+      "split": "validation, one archive tree only (exclude duplicate images/images tree)",
+      "excluded_source_labels": {},
+      "images": 7066,
+      "covered_target_classes": 7,
+      "num_output_classes": 7,
+      "label_mapping": {
+        "0": "sad",
+        "1": "disgust",
+        "2": "angry",
+        "3": "neutral",
+        "4": "fear",
+        "5": "surprise",
+        "6": "happy"
+      },
+      "scoring": "reference",
+      "evaluator": "sklearn reference scoring",
+      "fidelity": "reference_baseline",
+      "case_type": "special",
+      "special_tags": [
+        "framework_numeric_difference",
+        "dataset_replacement",
+        "official_evaluator_missing"
+      ],
+      "inference_entry": "publisher_transformers_model_and_processor",
+      "default_batch_size": 1,
+      "dtype": "published ONNX q8 on CPU",
+      "warmup_batches": 10,
+      "index": "__MODEL_ROOT__/inference/native/indices/173.jsonl",
+      "index_sha256": "91f9fae692735ca1ac5bbe8e27bdec89aa6b8501a5696d7f6481d9ecf2ddf320",
+      "data_containers": {
+        "__DATASET_ROOT__/datasets_171_200/facial_emotions/raw/facial-emotion-expressions.zip": {
+          "size": 126358582,
+          "mtime_ns": 1675739081000000000
+        }
+      },
+      "protocol_fingerprint": "050c51da1629e4648850f06e3445915a905ca7e6391c4b02e8facf557c09c946"
+    }
+  ],
+  "runtime_defaults": {
+    "batch_size": 1,
+    "device": "cuda:0",
+    "warmup_batches": 10,
+    "workers": 2
+  },
+  "scope": "Each published model retained; 177 includes all five weights; no full GPU inference launched by preparation."
+}

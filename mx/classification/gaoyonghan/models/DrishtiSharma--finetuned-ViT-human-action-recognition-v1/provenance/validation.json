@@ -1,0 +1,38 @@
+{
+  "sequence": 162,
+  "model_id": "DrishtiSharma/finetuned-ViT-human-action-recognition-v1",
+  "run_dir": "classification/laizihao/models/DrishtiSharma--finetuned-ViT-human-action-recognition-v1/result/run_001",
+  "phase": "full",
+  "state": "completed",
+  "images": 5400,
+  "evaluated_classes": 15,
+  "chance_level": 0.066667,
+  "metrics": {
+    "accuracy": 0.07759259259259259,
+    "balanced_accuracy": 0.07759259259259259,
+    "macro_f1": 0.1440109984533425,
+    "top5_accuracy": 0.4216666666666667,
+    "top5_status": "computed"
+  },
+  "reported_by_author": {
+    "top1": 0.07907,
+    "top5": null
+  },
+  "device": {
+    "gpu": "MetaX C500",
+    "torch": "2.10.0+metax3.8.1.0",
+    "precision": "amp_bf16",
+    "batch_size": 64
+  },
+  "predictions_sha256": "e166edae27faee03875b9176d2e955935a5b3677cd534f2c3872688d8a8369e5",
+  "wall_seconds": 28.733,
+  "metric_reportable": false,
+  "verdict": "实测 0.07759 处于随机水平附近（chance=0.0667），且存在已知口径问题：不可作为该模型精度参考，详见 known_limits",
+  "known_limits": [
+    "上游数据集 Bingsu/Human_Action_Recognition 的 test split 在数据集 README 中声明 \"All test data is labeled 0\"，5400 张 GT 全部为 calling(0)。",
+    "作者模型卡在同一（全 0）标注口径上报 Accuracy 0.0791、Eval loss 3.1427；3.1427 高于 ln(15)=2.709，说明该 checkpoint 自身未收敛。",
+    "本次结果与作者同量级，结论是「链路复现」，不能作为该模型精度水平。"
+  ],
+  "method": "classification/evaluate.py --run-dir <run>（与推理同一容器、同一环境）",
+  "validated_at": "2026-11-19T13:26:47.431903+00:00"
+}

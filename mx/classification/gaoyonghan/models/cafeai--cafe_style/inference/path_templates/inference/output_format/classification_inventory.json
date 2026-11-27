@@ -1,0 +1,53 @@
+{
+  "schema": "model-eval/classification-inventory/v1",
+  "scope": "One independent MX GPU classification model",
+  "models": [
+    {
+      "sequence": 137,
+      "model_id": "cafeai/cafe_style",
+      "dataset": {
+        "id": "cafe_style_classsfication",
+        "split": "full_local_dataset",
+        "note": [
+          "cafe_style_classsfication\n本地全部 250 张，5 类\n无独立 test"
+        ],
+        "native_scope": {
+          "name": "cafe_style_classsfication",
+          "source": "local image directories and manifest.csv",
+          "manifest_sha256": "85257fb20a4b02671afe69cc47af74edf53d0bd29b0737d116fadfc07b98d628",
+          "split": "full_local_dataset",
+          "image_count": 250,
+          "class_count": 5,
+          "class_counts": {
+            "anime": 50,
+            "real_life": 50,
+            "3d": 50,
+            "manga_like": 50,
+            "other": 50
+          },
+          "label_mapping": {
+            "anime": 0,
+            "real_life": 1,
+            "3d": 2,
+            "manga_like": 3,
+            "other": 4
+          },
+          "split_note": "本地清单没有独立 test split；使用全部本地图片，训练数据重叠未知，不能视为独立测试集泛化指标。"
+        },
+        "relation": "native_e07_registered_scope",
+        "index_source": "native loader GT, materialized as classification_annotations.json in the native phase directory",
+        "data_containers": [
+          "dataset/cafe_style_classsfication"
+        ]
+      },
+      "qualification": "native_registered_scope",
+      "limitations": [
+        "Capture-ready is a code integration state, not a claim that inference has passed.",
+        "Unobserved native Top-5 is unavailable; aggregate scores are not predictions."
+      ],
+      "num_classes": 5,
+      "expected_images": 250,
+      "adapter": "native_labels"
+    }
+  ]
+}

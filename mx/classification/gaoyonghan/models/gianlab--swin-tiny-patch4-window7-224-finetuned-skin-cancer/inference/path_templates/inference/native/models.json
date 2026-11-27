@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "sources": {},
+  "models": [
+    {
+      "sequence": 135,
+      "model_id": "gianlab/swin-tiny-patch4-window7-224-finetuned-skin-cancer",
+      "runner_family": "native_script",
+      "adapter": "native_labels",
+      "state": "full_inference_and_public_scoring_verified",
+      "dataset": {
+        "id": "HAM10000",
+        "split": null,
+        "note": [
+          "HAM10000\ntrain 分层抽取 20%，seed=42\n2,003 张，非官方 test"
+        ],
+        "native_scope": {
+          "name": "HAM10000",
+          "source": "kuchikihater/HAM10000 (local parquet cache)",
+          "source_split": "train",
+          "evaluated_split": "stratified_holdout",
+          "split_note": "HAM10000 原始数据及本地仓库只有一个带标签 train split；按 seed=42 分层抽取 20% 作为测试 holdout，非官方 test split。",
+          "split_seed": 42,
+          "holdout_fraction": 0.2,
+          "image_count": 2003,
+          "source_image_count": 10015,
+          "class_count": 7,
+          "class_names": [
+            "Actinic-keratoses",
+            "Basal-cell-carcinoma",
+            "Benign-keratosis-like-lesions",
+            "Dermatofibroma",
+            "Melanocytic-nevi",
+            "Melanoma",
+            "Vascular-lesions"
+          ]
+        },
+        "relation": "native_e07_registered_scope",
+        "index_source": "native loader GT, materialized as classification_annotations.json in the native phase directory",
+        "data_containers": [
+          "dataset/HAM10000/data/train-00000-of-00006-6e9cc1f2a2bc29bf.parquet",
+          "dataset/HAM10000/data/train-00001-of-00006-d0e18093f7a3c694.parquet",
+          "dataset/HAM10000/data/train-00002-of-00006-39dedb0b31996810.parquet",
+          "dataset/HAM10000/data/train-00003-of-00006-a910be683ad738f8.parquet",
+          "dataset/HAM10000/data/train-00004-of-00006-7a1958d1ffb42c3f.parquet",
+          "dataset/HAM10000/data/train-00005-of-00006-bcb0987169f383d4.parquet"
+        ]
+      },
+      "qualification": "native_registered_scope",
+      "limitations": [
+        "Capture-ready is a code integration state, not a claim that inference has passed.",
+        "Unobserved native Top-5 is unavailable; aggregate scores are not predictions."
+      ],
+      "num_classes": 7,
+      "expected_images": 2003,
+      "native_script": {
+        "script": "inference/native/run_model.py",
+        "script_sha256": "c93a6c659a0bb9d279fcc813752c6a3e6b858a5bf61bbdef68cc8dce354f5ceb",
+        "loop_lineno": 293,
+        "labels": "batch_labels",
+        "prediction": "batch_predictions",
+        "ranking": "batch_top5",
+        "classes": "logits.shape[-1]",
+        "loader_kind": "torch",
+        "label_position": 1,
+        "framework": "torch",
+        "original_script_sha256": "141cd73dfb7232c925134fb00abf9b7d8e693f47691a8a9f93c63cff12651004",
+        "original_loop_lineno": 282,
+        "original_path": "code/swin-tiny-patch4-window7-224-finetuned-skin-cancer-ham10000-test.py",
+        "ported_script_sha256": "5dc041bdb9312e9201fb4d0d4a7f6d061ab8422d7ffde349b97d6c0c9d239b93"
+      },
+      "output_relative_path": "result/run_001/full/m135",
+      "supports_max_samples": false,
+      "runtime": {
+        "batch_size": 64,
+        "workers": 0,
+        "warmup": 3
+      },
+      "weights_files": [
+        {
+          "path": "config.json",
+          "size": 1241,
+          "sha256": "fd3082d4591ea5872545dfd3ffb6c603f26c59e6274d4c761d1be05d190c2a6c"
+        },
+        {
+          "path": "preprocessor_config.json",
+          "size": 240,
+          "sha256": "63ae741f85ba4dfcb1917ef808968baaad3a395dd8067e970c872d0e6ac05f3b"
+        },
+        {
+          "path": "pytorch_model.bin",
+          "size": 110404975,
+          "sha256": "23a2e6f43e8a72f5b5c2cb9ce4fa6c00b5abc88c78f279546ea37020dbef9324"
+        }
+      ],
+      "dataset_files": [
+        "HAM10000/data/train-00000-of-00006-6e9cc1f2a2bc29bf.parquet",
+        "HAM10000/data/train-00001-of-00006-d0e18093f7a3c694.parquet",
+        "HAM10000/data/train-00002-of-00006-39dedb0b31996810.parquet",
+        "HAM10000/data/train-00003-of-00006-a910be683ad738f8.parquet",
+        "HAM10000/data/train-00004-of-00006-7a1958d1ffb42c3f.parquet",
+        "HAM10000/data/train-00005-of-00006-bcb0987169f383d4.parquet"
+      ],
+      "environment": "e07.txt",
+      "native_precision": "FP32",
+      "backend": "transformers",
+      "timing_alignment": {
+        "forward": "Same event/current-stream/synchronize semantics; wrapper preserves exactly one native call. MX runtime differs.",
+        "e2e": "Native DataLoader fetch to CPU prediction availability; worker-prefetch boundary differs from Example. Does not include subsequent metrics or record writes.",
+        "worker_prefetch": false,
+        "starts_after_spider_composition": false,
+        "native_metric_operations_before_prediction_readiness": [],
+        "model_load": "Sum of measured native construction/load/placement blocks, not Example contiguous block.",
+        "warmup": "Native repeated preprocessed first batch; native count retained; synchronized before/after. Unlike Example, preprocessing/transfer/softmax-to-CPU are outside the warmup interval.",
+        "evaluation": "Native aggregate evaluation not measured separately; evaluation_seconds=null. Public scoring duration is outside native timing.",
+        "resume": "No resume; repeated native phase archives previous output; resume_segments=1.",
+        "comparison_valid": false
+      },
+      "label_mapping": [
+        {
+          "id": 0,
+          "name": "output_class_0"
+        },
+        {
+          "id": 1,
+          "name": "output_class_1"
+        },
+        {
+          "id": 2,
+          "name": "output_class_2"
+        },
+        {
+          "id": 3,
+          "name": "output_class_3"
+        },
+        {
+          "id": 4,
+          "name": "output_class_4"
+        },
+        {
+          "id": 5,
+          "name": "output_class_5"
+        },
+        {
+          "id": 6,
+          "name": "output_class_6"
+        }
+      ],
+      "layout_reference": {
+        "branch": "gaoyonghan/mx",
+        "commit": "208733e1562fca75b7128772ca2cd587943d9012",
+        "platform": "mx"
+      }
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "generated_at": "2026-09-05T10:58:31.409026+00:00",
+  "total_detection_models": 62,
+  "existing_green_queue": 37,
+  "current_scope_unique_models": 25,
+  "initial_primary_blocker_counts": {
+    "旧替代集类别不全，需核对任务覆盖": 4,
+    "私有数据且缺任务匹配的公开金标": 2,
+    "原协议/划分不明，现有数据可做参考评测": 8,
+    "数据已有，缺任务适配或多权重覆盖": 8,
+    "仅下载了说明/发布链接，实际权重缺失": 2,
+    "数据下载未完成，当前目录为空": 1
+  },
+  "current_state_counts": {
+    "complete": 21,
+    "partial_complete": 3,
+    "blocked": 1
+  },
+  "counting_rule": "Unique model IDs; all required tasks must have complete frozen benchmark metrics. PubTables means the model-blind 1000-image benchmark, not the original 93834-image test. Invalid cmarkea and all superseded Qualcomm v1/v2 results excluded.",
+  "fidelity_counts": {
+    "reference_baseline": 25
+  },
+  "comparison_counts": {
+    "not_officially_comparable": 25
+  },
+  "case_type_counts": {
+    "special": 25
+  },
+  "models": [
+    {
+      "sequence": 46,
+      "model_id": "TommyNgx/YOLOv10-Fire-and-Smoke-Detection",
+      "state": "complete",
+      "all_tasks_complete": true,
+      "required_tasks": [
+        "bbox_detection_classification"
+      ],
+      "results": [
+        {
+          "status": "complete",
+          "task": "bbox",
+          "valid_complete": true,
+          "images": 703,
+          "result_directory": "__MODEL_ROOT__/resources/runtime/assets/workspace/results/remaining25_v2/m46-yolov10-fire-and-smoke-detection/bbox",
+          "metrics": {
+            "metrics": {
+              "AP": 0.24456695292535047,
+              "AP50": 0.4653131450379365,
+              "AP75": 0.2275691325794087,
+              "AP_small": 0.02522389173590725,
+              "AP_medium": 0.05239304366793612,
+              "AP_large": 0.27723298237923855,
+              "AR1": 0.2957036884046746,
+              "AR10": 0.41494346052563635,
+              "AR100": 0.44294745357222765,
+              "AR_small": 0.05,
+              "AR_medium": 0.16575396825396824,
+              "AR_large": 0.4905319693388768,
+              "per_class_AP": {
+                "smoke": 0.34940100433179355,
+                "fire": 0.13973290151890744
+              }
+            },
+            "unit": "fraction_0_to_1",
+            "coverage": {
+              "model_labels": {
+                "0": "Fire",
+                "1": "Smoke"
+              },
+              "mapping": {
+                "0": 2,
+                "1": 1
+              },
+              "covered_labels": [
+                "Fire",
+                "Smoke"
+              ],
+              "missing_labels": [],
+              "covered_count": 2,
+              "total_model_classes": 2,
+              "gt_instances_per_class": {
+                "smoke": 535,
+                "fire": 543
+              }
+            },
+            "evaluation_images": 703,
+            "annotation_sha256": "a1a31bfd1ab459daba26919b20d76eb288802fd9c1f4d699af1ec331052c18e6",
+            "protocol_fingerprint": "18e6f51a4a9d1d463e774402ce05ea2cd5acc02a65647ab1d6ae04fda14074c5",
+            "reference_check": "not_officially_comparable"
+          },
+          "coverage": {
+            "model_labels": {
+              "0": "Fire",
+              "1": "Smoke"
+            },
+            "mapping": {
+              "0": 2,
+              "1": 1
+            },
+            "covered_labels": [
+              "Fire",
+              "Smoke"
+            ],
+            "missing_labels": [],
+            "covered_count": 2,
+            "total_model_classes": 2,
+            "gt_instances_per_class": {
+              "smoke": 535,
+              "fire": 543
+            }
+          },
+          "error": null
+        }
+      ],
+      "next_action": "使用ISFire-4 test合并四类为fire/smoke；验证YOLOv10加载兼容性。"
+    }
+  ],
+  "supplemental_updated_at": "2026-09-05T15:25:21.596769+00:00",
+  "supplemental_summary": "supplemental_20260905/summary.json"
+}

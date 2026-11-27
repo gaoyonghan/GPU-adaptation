@@ -1,0 +1,102 @@
+{
+  "sequence": 185,
+  "model_id": "LishaV01/agriculture-crop-disease-detection",
+  "task": "image_classification",
+  "task_name": "图像分类",
+  "reported_result": [
+    {
+      "variant": null,
+      "inference_status": "complete",
+      "accuracy": 0.18180881747012773,
+      "forward_seconds": 73.88089613709599,
+      "inference_e2e_seconds": 162.0942293992266,
+      "metric_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/outputs/classification171_200_repair_20260926/full/m185/metrics.json",
+      "timing_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/outputs/classification171_200_repair_20260926/full/m185/timing_from_journal.json"
+    }
+  ],
+  "reference": {
+    "source": "https://huggingface.co/LishaV01/agriculture-crop-disease-detection",
+    "local_card_sha256": "0df231bcd8832baf36c805cdfb22b038cc7720dca7e9d41138c03d3c578978ff",
+    "model_index": null,
+    "text_report_values": null,
+    "units": "fractions for extracted accuracy/F1; original model-index units as published",
+    "comparison": "Manual protocol review required; no automatic drop calculation",
+    "note": "No unambiguous numeric reference for this exact checkpoint was extracted from the frozen card."
+  },
+  "model_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/model_index/LishaV01/agriculture-crop-disease-detection",
+  "model_exists_at_build": true,
+  "dataset": {
+    "id": "classification171_185",
+    "relation": "public_replacement",
+    "split": "exact-name supported crop/disease classes only",
+    "note": [
+      "Full ViT state dict is published, no adapter_config or LoRA tensors; load original full checkpoint, no merging. Exclude nonmatching diseases rather than guess.",
+      "Local checkpoint and publisher inference components retained. Offline file paths, eval mode, batching, timing observation and reference scoring are external orchestration."
+    ],
+    "index_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/classification171_200_eval/indices/185.jsonl",
+    "data_containers": [
+      "/data2/gaoyonghan/model inference for GPU adaptation/dataset/datasets_171_200/fc45dhlpd/15 Crop 45 Disease and Healthy Leaf dataset.zip"
+    ]
+  },
+  "environment_id": "classification171-shared_hf",
+  "runner_family": "classification171",
+  "final_result_sources": [
+    {
+      "source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m185/metrics-0.json",
+      "sha256": "85bf233b0619eb024abe66ea36c29bfbc29bac9366481376c54668686f714b2f",
+      "selection": "final_171_200_registry",
+      "source_original": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/outputs/classification171_200_repair_20260926/full/m185/metrics.json"
+    }
+  ],
+  "code": {
+    "source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/classification171_200_eval/run_model.py",
+    "sha256": "edf4a011fba54770f5c0a7712c9bc2f998a66698ecd30554f89752874b757c39",
+    "recorded_sha256": "edf4a011fba54770f5c0a7712c9bc2f998a66698ecd30554f89752874b757c39",
+    "attestation": "hash_exact",
+    "status_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m185/status.json",
+    "selection": "current_shared_code",
+    "archive": "code_archive/edf4a011fba54770_run_model.py"
+  },
+  "support_files": [
+    "run_model.py",
+    "common.py",
+    "prepare_somaset_174.py",
+    "setup_env.sh",
+    "native_js.mjs",
+    "prepare.py",
+    "model_card_references.json",
+    "run_all.sh",
+    "run_somaset_174_prediction.py",
+    "dispatch.py",
+    "timing.py",
+    "package.json",
+    "package-lock.json",
+    "release.json"
+  ],
+  "final_scorer": null,
+  "backend_package": "classification171_200_eval",
+  "readiness": "code_and_result_identified",
+  "launch_status": "configured",
+  "metadata_warning": null,
+  "final_weight_records": [
+    {
+      "variant": null,
+      "model_revision": "24abe2d06442f62d8168041ec539832cd39d397e",
+      "protocol_fingerprint": "462f4adda27eb6dd69dd444a114c1da6ff8b8b7a301fded5a4b15557f9b60705",
+      "inference_status": "complete",
+      "scoring_kind": "cpu_repair",
+      "review_status": null,
+      "dataset_relation": "public_replacement",
+      "device": "cpu",
+      "scored_images": 9708,
+      "forward_seconds": 73.88089613709599,
+      "inference_e2e_seconds": 162.0942293992266,
+      "metric_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/outputs/classification171_200_repair_20260926/full/m185/metrics.json",
+      "detailed_metrics_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/outputs/classification171_200_repair_20260926/full/m185/metrics.json",
+      "timing_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/outputs/classification171_200_repair_20260926/full/m185/timing_from_journal.json",
+      "status_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/outputs/classification171_200_repair_20260926/full/m185/status.json",
+      "prediction_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/outputs/classification171_200_repair_20260926/full/m185/predictions.jsonl",
+      "note": "CPU repair run; timing reconstructed from completed batch journal"
+    }
+  ]
+}

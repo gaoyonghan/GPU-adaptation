@@ -1,0 +1,37 @@
+{
+  "schema": "model-eval/classification-inventory/v1",
+  "scope": "One independent MX GPU classification model",
+  "models": [
+    {
+      "sequence": 114,
+      "model_id": "wesleyacheng/dog-breeds-multiclass-image-classification-with-vit",
+      "dataset": {
+        "id": "Stanford Dogs",
+        "split": "test",
+        "note": [
+          "Stanford Dogs test\n8,580 张"
+        ],
+        "native_scope": {
+          "name": "Stanford Dogs",
+          "split": "test",
+          "image_count": 8580,
+          "class_count": 120,
+          "label_mapping": "按犬种名称对齐 dataset ClassLabel 与 model config.id2label"
+        },
+        "relation": "native_e07_registered_scope",
+        "index_source": "native loader GT, materialized as classification_annotations.json in the native phase directory",
+        "data_containers": [
+          "dataset/stanford-dogs/data/test-00000-of-00001.parquet"
+        ]
+      },
+      "qualification": "native_registered_scope",
+      "limitations": [
+        "Capture-ready is a code integration state, not a claim that inference has passed.",
+        "Unobserved native Top-5 is unavailable; aggregate scores are not predictions."
+      ],
+      "num_classes": 120,
+      "expected_images": 8580,
+      "adapter": "native_labels"
+    }
+  ]
+}

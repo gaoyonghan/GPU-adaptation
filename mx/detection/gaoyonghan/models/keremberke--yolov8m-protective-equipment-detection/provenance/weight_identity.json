@@ -1,0 +1,42 @@
+{
+  "sequence": 61,
+  "files": [
+    {
+      "path": "best.pt",
+      "bytes": 51998624,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "events.out.tfevents.1675039768.ovyeman.40844.56",
+      "bytes": 2044232,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "config.json",
+      "bytes": 161,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1977,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": ".gitattributes",
+      "bytes": 1477,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "thumbnail.jpg",
+      "bytes": 790153,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    }
+  ],
+  "mismatches": []
+}

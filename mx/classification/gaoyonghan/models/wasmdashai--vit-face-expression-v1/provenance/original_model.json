@@ -1,0 +1,135 @@
+{
+  "sequence": 75,
+  "model_id": "wasmdashai/vit-face-expression-v1",
+  "task": "image_classification",
+  "task_name": "图像分类",
+  "reported_result": "acc：71.8%",
+  "reference": "未核实对应模型卡指标",
+  "model_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/model_index/wasmdashai/vit-face-expression-v1",
+  "model_exists_at_build": true,
+  "dataset": {
+    "id": "fer2013",
+    "relation": "public_replacement_author_test_unverified",
+    "split": "PrivateTest",
+    "note": "最终记录：原始 FER2013 标签，PrivateTest 3589 图；CSV 位于 fer2013/deadskull7/fer2013.csv。"
+  },
+  "environment_id": "classification-shared",
+  "runner_family": "special",
+  "final_result_sources": [
+    {
+      "source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m075/metrics-0.json",
+      "sha256": "f86d04551cac187d4b07cc4c081e791334855c82be49aa2933b81c32df583ec2",
+      "selection": "workbook_score_match",
+      "data": {
+        "accuracy": 0.7180273056561717,
+        "accuracy_percent": 71.80273056561717,
+        "correct": 2577,
+        "evaluation_images": 3589,
+        "confusion_matrix_label_order": [
+          "angry",
+          "disgust",
+          "fear",
+          "happy",
+          "sad",
+          "surprise",
+          "neutral"
+        ],
+        "confusion_matrix": [
+          [
+            314,
+            6,
+            49,
+            15,
+            66,
+            6,
+            35
+          ],
+          [
+            7,
+            42,
+            3,
+            1,
+            2,
+            0,
+            0
+          ],
+          [
+            62,
+            3,
+            298,
+            8,
+            93,
+            28,
+            36
+          ],
+          [
+            15,
+            1,
+            7,
+            793,
+            23,
+            16,
+            24
+          ],
+          [
+            56,
+            3,
+            58,
+            16,
+            370,
+            6,
+            85
+          ],
+          [
+            15,
+            0,
+            39,
+            17,
+            7,
+            332,
+            6
+          ],
+          [
+            34,
+            1,
+            34,
+            24,
+            95,
+            10,
+            428
+          ]
+        ],
+        "state": "complete",
+        "dataset_relation": "public_replacement_author_test_unverified",
+        "official_model_reference": null,
+        "predictions_sha256": "821197ddfd47def7e4e401dcf81ad04c365ee777839bfa394e69cf2ca6ea3e2d"
+      },
+      "source_original": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/m75_fer2013_v1/full/run_20260915_144944_067219/metrics.json"
+    }
+  ],
+  "code": {
+    "source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/m75_fer2013_v1/full/run_20260915_144944_067219/run_m75_fer2013.py",
+    "sha256": "b9e184191792ecbccb77d930718fe340d33bc0ec840ac3061e950c37b5f5871f",
+    "recorded_sha256": null,
+    "attestation": "result_batch_snapshot",
+    "status_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m075/status.json",
+    "selection": "same_run_snapshot",
+    "archive": "code_archive/b9e184191792ecbc_run_m75_fer2013.py"
+  },
+  "support_files": [
+    "run_m75_fer2013.py",
+    "protocol.json",
+    "run_m75_fer2013.sh"
+  ],
+  "final_scorer": null,
+  "backend_package": "classification8_eval",
+  "readiness": "code_and_result_identified",
+  "launch_status": "configured",
+  "metadata_warning": "数据集列仍写未评测；须按原始结果核对",
+  "dataset_from_initial_table": {
+    "id": "fer2013",
+    "relation": null,
+    "split": null,
+    "note": "计划：FERPlus / FER2013\n未评测，官方对应关系待核实"
+  }
+}

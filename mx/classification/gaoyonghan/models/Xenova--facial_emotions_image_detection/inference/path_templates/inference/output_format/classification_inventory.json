@@ -1,0 +1,37 @@
+{
+  "schema": "model-eval/classification-inventory/v1",
+  "scope": "Existing 59 classification models; model 93 is retrieval and excluded.",
+  "models": [
+    {
+      "sequence": 173,
+      "model_id": "Xenova/facial_emotions_image_detection",
+      "runner_family": "classification171",
+      "adapter": "native_labels",
+      "state": "integrated",
+      "dataset": {
+        "id": "classification171_173",
+        "relation": "public_replacement",
+        "split": "validation, one archive tree only (exclude duplicate images/images tree)",
+        "note": [
+          "Local checkpoint and publisher inference components retained. Offline file paths, eval mode, batching, timing observation and reference scoring are external orchestration."
+        ],
+        "index_source": "__MODEL_ROOT__/inference/native/indices/173.jsonl",
+        "data_containers": [
+          "__DATASET_ROOT__/datasets_171_200/facial_emotions/raw/facial-emotion-expressions.zip"
+        ]
+      },
+      "qualification": "public_replacement",
+      "limitations": [
+        "Existing JS route uses CPU. Format conversion does not certify GPU execution."
+      ],
+      "num_classes": 7,
+      "expected_images": 7066,
+      "category_reference": {
+        "file": "__MODEL_ROOT__/inference/native/models.json",
+        "sequence": 173,
+        "field": "label_mapping"
+      },
+      "gt_index": "__MODEL_ROOT__/inference/native/indices/173.jsonl"
+    }
+  ]
+}

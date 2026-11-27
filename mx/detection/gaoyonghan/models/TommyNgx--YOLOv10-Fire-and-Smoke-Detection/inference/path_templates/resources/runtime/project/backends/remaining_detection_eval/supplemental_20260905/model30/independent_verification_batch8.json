@@ -1,0 +1,33 @@
+{
+  "verified": true,
+  "new_inference_performed_by_this_check": false,
+  "result_directory": "__MODEL_ROOT__/resources/runtime/assets/workspace/results/remaining25_supplemental_20260905/m30-author-test5544-author-batch8",
+  "images": 5544,
+  "annotations": 23629,
+  "predictions": 554400,
+  "ground_truth_per_class": {
+    "shoes": 9004,
+    "bottom": 4439,
+    "top": 3628,
+    "outer": 2363,
+    "bag": 1916,
+    "hat": 562,
+    "dress": 1717
+  },
+  "predictions_per_class": {
+    "shoes": 51242,
+    "bottom": 92311,
+    "top": 144348,
+    "dress": 61263,
+    "outer": 101771,
+    "bag": 87161,
+    "hat": 16304
+  },
+  "sha256": {
+    "__MODEL_ROOT__/resources/runtime/assets/workspace/results/remaining25_supplemental_20260905/m30-author-test5544-author-batch8/annotation.json": "0b7cff401f374905f1ddeb86029dc106c8de8384c9a5a52db216f57d1026d5e7",
+    "__MODEL_ROOT__/resources/runtime/assets/workspace/results/remaining25_supplemental_20260905/m30-author-test5544-author-batch8/status.json": "dc80791b3b4d86293cde695157d16d415d07c4c992bec09b891f121bf5b7af09",
+    "__MODEL_ROOT__/resources/runtime/assets/workspace/results/remaining25_supplemental_20260905/m30-author-test5544-author-batch8/metrics.json": "1930cbfb45e1f94cd618e8443df9d9191294bc3c7a2bfe8e8e1e9f56a35866df",
+    "__MODEL_ROOT__/resources/runtime/assets/workspace/results/remaining25_supplemental_20260905/m30-author-test5544-author-batch8/predictions.jsonl": "aba7364e23fd6a99b094ba22b1304c9764d75665af690b03c612fca2bca2e70b",
+    "__MODEL_ROOT__/resources/runtime/assets/workspace/remaining_detection_eval/supplemental_20260905/verify_run.py": "71f9d5000f2edb620186a7d81caad09f189fe82277090e31f9e7cfcd86f2fa43"
+  }
+}

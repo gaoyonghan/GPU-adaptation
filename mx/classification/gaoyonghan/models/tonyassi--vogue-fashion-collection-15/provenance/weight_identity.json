@@ -1,0 +1,60 @@
+{
+  "sequence": 172,
+  "files": [
+    {
+      "path": "model.safetensors",
+      "bytes": 348376316,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "config.json",
+      "bytes": 155281,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "preprocessor_config.json",
+      "bytes": 325,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2594,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "training_args.bin",
+      "bytes": 4600,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": ".gitattributes",
+      "bytes": 1519,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "weight_verification.json",
+      "bytes": 1216,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "runs/Dec28_06-41-05_2fc04d23ad30/events.out.tfevents.1703745666.2fc04d23ad30.2767.0",
+      "bytes": 246634,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "runs/Dec28_08-11-02_2fc04d23ad30/events.out.tfevents.1703751063.2fc04d23ad30.2767.1",
+      "bytes": 334223,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    }
+  ],
+  "mismatches": []
+}

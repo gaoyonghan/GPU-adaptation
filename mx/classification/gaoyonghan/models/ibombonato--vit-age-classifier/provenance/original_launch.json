@@ -1,0 +1,56 @@
+[
+  {
+    "command": [
+      "/home/ubuntu/gaoyonghan/gpu/classification8_eval/.venv/bin/python",
+      "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/project/results/runtime/m190/run_model.py",
+      "--phase",
+      "full",
+      "--model",
+      "190",
+      "--output-root",
+      "/data2/gaoyonghan/gpu_model_standalone_20261110/build_results/m190",
+      "--device",
+      "cuda:0",
+      "--batch-size",
+      "1",
+      "--warmup",
+      "10",
+      "--workers",
+      "2"
+    ],
+    "cwd": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/project/results/runtime/m190",
+    "environment": {
+      "PATH": "/home/ubuntu/.local/bin:/home/ubuntu/bin:/home/ubuntu/.codex/tmp/arg0/codex-arg0CXlF7D:/home/ubuntu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override:/home/ubuntu/.local/bin:/home/ubuntu/bin:/home/ubuntu/.local/bin:/home/ubuntu/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/ubuntu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback:/usr/lib/chatgpt/resources",
+      "PYTHONNOUSERSITE": "1",
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "HF_HUB_OFFLINE": "1",
+      "TRANSFORMERS_OFFLINE": "1",
+      "YOLO_AUTOINSTALL": "false",
+      "CUDA_VISIBLE_DEVICES": "0",
+      "PYTHONPATH": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/project/results/runtime/m190:"
+    },
+    "output": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_results/m190",
+    "index": 1,
+    "phase": "full"
+  },
+  {
+    "command": [
+      "/home/ubuntu/gaoyonghan/gpu/classification8_eval/.venv/bin/python",
+      "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/project/protocol_alignment/rescore_classification.py",
+      "--model",
+      "190",
+      "--predictions",
+      "/data2/gaoyonghan/gpu_model_standalone_20261110/build_results/m190/full/m190/predictions.jsonl",
+      "--index",
+      "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/project/backends/classification171_200_eval/indices/190.jsonl",
+      "--output",
+      "/data2/gaoyonghan/gpu_model_standalone_20261110/build_results/m190/comparison_metrics.json"
+    ],
+    "cwd": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/project",
+    "environment": {},
+    "output": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_results/m190",
+    "index": 2,
+    "phase": "full",
+    "post_inference": true
+  }
+]

@@ -1,0 +1,35 @@
+--- original_inference.py
++++ inference/native/run_m83_imagein.py
+@@ -26,11 +26,8 @@
+ 
+ 
+ def check_environment(spec):
+-    if sys.version_info[:2] != (3, 11):
+-        raise RuntimeError('请使用Python 3.11环境')
+-    actual = {name: importlib.metadata.version(name) for name in spec['versions']}
+-    if actual != spec['versions']:
+-        raise RuntimeError(f'环境版本与清单不符，请运行setup_m83_env.sh: {actual}')
++    from metax_runtime import check_archived_environment
++    actual = check_archived_environment(spec['versions'])
+     from optimum.onnxruntime import ORTModelForImageClassification
+     return actual
+ 
+@@ -109,7 +106,7 @@
+     spec = json.loads((HERE / 'models_m83.json').read_text())
+     parser = argparse.ArgumentParser(description=__doc__)
+     parser.add_argument('--output-root', type=Path,
+-                        default=Path('/home/ubuntu/gaoyonghan/gpu/results/m83_imagein_source_v1'))
++                        default=Path('/data2/gaoyonghan/gpu_model_standalone_20261110/release/model/分类/small-models-for-glam--historical-illustration-detector/resources/runtime/assets/workspace/results/m83_imagein_source_v1'))
+     parser.add_argument('--max-images', type=int, default=0)
+     parser.add_argument('--describe', action='store_true')
+     parser.add_argument('--check-environment', action='store_true')
+@@ -159,6 +156,9 @@
+     protocol = dict(spec, source_sha256={name: sha256(out / name) for name in SOURCES})
+     fingerprint = hashlib.sha256(json.dumps(protocol, sort_keys=True).encode()).hexdigest()
+     protocol.update(protocol_fingerprint=fingerprint, selected_images=limit)
++    from classification_capture import snapshot_gt
++    from itertools import islice
++    snapshot_gt(out, [dict(id=r['id'],target=spec['id_to_label'].index(r['choice'])) for r in islice(rows(spec), limit)])
+     save_json(out / 'protocol.json', protocol)
+     targets, predictions = [], []
+ 

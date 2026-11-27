@@ -1,0 +1,16 @@
+{
+  "state": "complete",
+  "images": 1660,
+  "protocol_fingerprint": "f7d559e99d864ffb21156898142f6e3711ad9339a339b9a0ba3c9a2f40d3a845",
+  "officially_comparable": false,
+  "model_number": 94,
+  "data_audit": {
+    "decode_failures": 0,
+    "exact_duplicate_groups": 108,
+    "cross_split_duplicate_groups": 44,
+    "train_test_duplicate_groups": 23,
+    "test_images_matching_train": 26,
+    "conflicting_label_duplicate_groups": 7,
+    "policy": "保留作者划分和标签，披露问题，不静默去重或重标"
+  }
+}

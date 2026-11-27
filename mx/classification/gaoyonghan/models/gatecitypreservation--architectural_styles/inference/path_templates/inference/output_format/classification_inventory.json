@@ -1,0 +1,59 @@
+{
+  "schema": "model-eval/classification-inventory/v1",
+  "scope": "Existing 59 classification models; model 93 is retrieval and excluded.",
+  "models": [
+    {
+      "sequence": 189,
+      "model_id": "gatecitypreservation/architectural_styles",
+      "runner_family": "classification171",
+      "adapter": "qualified_architecture",
+      "state": "integrated",
+      "dataset": {
+        "id": "classification171_189",
+        "relation": "public_replacement",
+        "split": "three previously selected candidate styles, one archive tree",
+        "note": [
+          "Broader dataset styles are not a verified bijection to craftsman bungalow/tudor cottage subclasses. Predictions/timing only until taxonomy is resolved.",
+          "Local checkpoint and publisher inference components retained. Offline file paths, eval mode, batching, timing observation and reference scoring are external orchestration."
+        ],
+        "index_source": "__MODEL_ROOT__/inference/native/indices/189.jsonl",
+        "data_containers": [
+          "__DATASET_ROOT__/datasets_171_200/architectural_styles/raw/architectural-styles-dataset.zip"
+        ]
+      },
+      "qualification": "conditional_filtered_proxy",
+      "limitations": [
+        "Reuse the existing explicitly qualified filtering/mapping protocol; do not present as unqualified full-dataset accuracy.",
+        "Historical output may contain only Top-1. Missing Top-5 remains unavailable; never reconstruct ranking silently."
+      ],
+      "num_classes": 5,
+      "expected_images": 1539,
+      "category_reference": {
+        "file": "__MODEL_ROOT__/inference/native/models.json",
+        "sequence": 189,
+        "field": "label_mapping"
+      },
+      "gt_index": "__MODEL_ROOT__/inference/native/indices/189.jsonl",
+      "existing_protocol": {
+        "id": "architecture_filtered_proxy_v1",
+        "scope": "1539张预测；排除American craftsman style后评分1175张",
+        "expected_inference_images": 1539,
+        "expected_scored_images": 1175,
+        "metrics_path": "comparison_metrics.json",
+        "official_reference_comparable": false,
+        "limitations": [
+          "沿用Queen Anne→3、Tudor Revival→4；后者并非已证明的分类体系等价"
+        ],
+        "scoring_entry": "protocol_alignment/rescore_classification.py"
+      },
+      "gt_mapping": {
+        "Queen Anne architecture": 3,
+        "Tudor Revival architecture": 4
+      },
+      "excluded_labels": [
+        "American craftsman style"
+      ],
+      "expected_scored_images": 1175
+    }
+  ]
+}

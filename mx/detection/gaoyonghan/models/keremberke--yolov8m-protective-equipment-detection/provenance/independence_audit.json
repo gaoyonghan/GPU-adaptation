@@ -1,0 +1,27 @@
+{
+  "sequence": 61,
+  "model_id": "keremberke/yolov8m-protective-equipment-detection",
+  "source_archive_hash_matches": true,
+  "source_archive_sha256": "f2fb744cfeffd526f9088df0d3ee7e4b17ce65eeada64030fe37deb96dd485dc",
+  "prepared_entry_source_sha256": "dab75348093e37d770c4e67cfa3fbf008320b9a474a780c2a760fcaa412ab912",
+  "local_entry_sha256": "b6beea84ef846640d6717911a4d97a0df68cf338f96a9250dfb9f0bc3759ddcd",
+  "local_entry": "inference/native/run_model.py",
+  "central_dispatch_in_entry": false,
+  "unexpected_external_links": [],
+  "declared_dataset_links": [
+    {
+      "path": "resources/runtime/assets/workspace/official_sources/object_detection/WildDet3D/data/in_the_wild",
+      "target": "/data2/gaoyonghan/gpu/dataset/wilddet3d_val"
+    }
+  ],
+  "broken_links": [],
+  "path_template_count": 366,
+  "state": "entrypoint_verified_full_run_pending",
+  "validation": {
+    "returncode": 0,
+    "python": "/home/ubuntu/gaoyonghan/miniconda3/envs/object-detection-yolo-v2/bin/python",
+    "checked_at": "2026-11-10T15:54:05.743041+08:00",
+    "scope": "native help/import/path check only; not full inference"
+  },
+  "smoke_verification": null
+}

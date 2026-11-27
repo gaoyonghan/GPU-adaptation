@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "sources": {},
+  "models": [
+    {
+      "sequence": 175,
+      "model_id": "gerhardien/face-emotion",
+      "model_path": "__MODEL_ROOT__/weights/gerhardien/face-emotion",
+      "revision": "88e7271a54509ce5200686811177038880514dc2",
+      "task_type": "image-classification",
+      "status": "not_started",
+      "official_model_card": "https://huggingface.co/gerhardien/face-emotion",
+      "official_reference": {
+        "source": "https://huggingface.co/gerhardien/face-emotion",
+        "local_card_sha256": "2230d0a21d3dde4c1e58a6b827b249ed23a4a0e0808206704022fc54e6283326",
+        "model_index": null,
+        "text_report_values": {
+          "training_accuracy": 0.8327,
+          "validation_accuracy": 0.7652
+        },
+        "units": "fractions for extracted accuracy/F1; original model-index units as published",
+        "comparison": "Manual protocol review required; no automatic drop calculation",
+        "note": "Card reports retained as provenance, not proof that local data/split/framework exactly reproduces the reported run."
+      },
+      "reference_comparison": "manual_reference_required",
+      "known_differences": [
+        "Four-class model evaluated only on its supported classes; do not claim full seven-class FER performance.",
+        "Local checkpoint and publisher inference components retained. Offline file paths, eval mode, batching, timing observation and reference scoring are external orchestration."
+      ],
+      "config": {
+        "_name_or_path": "./best_model",
+        "architectures": [
+          "ViTForImageClassification"
+        ],
+        "attention_probs_dropout_prob": 0.0,
+        "encoder_stride": 16,
+        "hidden_act": "gelu",
+        "hidden_dropout_prob": 0.0,
+        "hidden_size": 768,
+        "id2label": {
+          "0": "angry",
+          "1": "happy",
+          "2": "neutral",
+          "3": "sad"
+        },
+        "image_size": 224,
+        "initializer_range": 0.02,
+        "intermediate_size": 3072,
+        "label2id": {
+          "angry": 0,
+          "happy": 1,
+          "neutral": 2,
+          "sad": 3
+        },
+        "layer_norm_eps": 1e-12,
+        "model_type": "vit",
+        "num_attention_heads": 12,
+        "num_channels": 3,
+        "num_hidden_layers": 12,
+        "patch_size": 16,
+        "qkv_bias": true,
+        "torch_dtype": "float32",
+        "transformers_version": "4.47.1"
+      },
+      "preprocessing": {
+        "do_convert_rgb": null,
+        "do_normalize": true,
+        "do_rescale": true,
+        "do_resize": true,
+        "image_mean": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "image_processor_type": "ViTImageProcessor",
+        "image_std": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "resample": 2,
+        "rescale_factor": 0.00392156862745098,
+        "size": {
+          "height": 224,
+          "width": 224
+        }
+      },
+      "architecture": [
+        "ViTForImageClassification"
+      ],
+      "files": {
+        "model.safetensors": {
+          "size": 343230128,
+          "sha256": "da3a7ba7d2b37caf4b04f83396994e0b7b86c7cd97eb887f2de31c944ed59b20"
+        },
+        "config.json": {
+          "size": 721,
+          "sha256": "8ca9615603df3fe8d97d1253ccbdfd5622ee924b8a32f20e752f1dd7c3c5b64b"
+        },
+        "preprocessor_config.json": {
+          "size": 351,
+          "sha256": "445c77049d082004aa07593344d5e1f521f1198228bf586196f70ce7ae021414"
+        },
+        "README.md": {
+          "size": 988,
+          "sha256": "2230d0a21d3dde4c1e58a6b827b249ed23a4a0e0808206704022fc54e6283326"
+        }
+      },
+      "weight": "model.safetensors",
+      "backend": "hf_published",
+      "environment": "shared_hf",
+      "dataset_relation": "original_protocol_incomplete",
+      "split": "Jeneral test; four supported labels",
+      "excluded_source_labels": {
+        "disgust": 111,
+        "fear": 1024,
+        "surprise": 831
+      },
+      "images": 5212,
+      "covered_target_classes": 4,
+      "num_output_classes": 4,
+      "label_mapping": {
+        "0": "angry",
+        "1": "happy",
+        "2": "neutral",
+        "3": "sad"
+      },
+      "scoring": "reference",
+      "evaluator": "sklearn reference scoring",
+      "fidelity": "reference_baseline",
+      "case_type": "special",
+      "special_tags": [
+        "framework_numeric_difference",
+        "official_evaluator_missing"
+      ],
+      "inference_entry": "publisher_transformers_model_and_processor",
+      "default_batch_size": 1,
+      "dtype": "float32",
+      "warmup_batches": 10,
+      "index": "__MODEL_ROOT__/inference/native/indices/175.jsonl",
+      "index_sha256": "3e8ac5b3d1a7dedf7dcda060ff869fe68b0dc499048fc8068e4a496f591541e3",
+      "data_containers": {
+        "__DATASET_ROOT__/datasets_171_200/fer2013_jeneral/raw/test.pt": {
+          "size": 11590857,
+          "mtime_ns": 1790055643461409172
+        }
+      },
+      "protocol_fingerprint": "0b76ac215f991ad1f6c3743f29c7d8f2da023d708edf7b1c714a0c17928e45c3"
+    }
+  ],
+  "runtime_defaults": {
+    "batch_size": 1,
+    "device": "cuda:0",
+    "warmup_batches": 10,
+    "workers": 2
+  },
+  "scope": "Each published model retained; 177 includes all five weights; no full GPU inference launched by preparation."
+}

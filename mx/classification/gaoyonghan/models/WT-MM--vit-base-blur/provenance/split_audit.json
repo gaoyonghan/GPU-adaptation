@@ -1,0 +1,31 @@
+{
+  "sequence": 168,
+  "dataset": {
+    "name": "blur_sd21",
+    "path": "/projectdataset/blur_sd21",
+    "layout": "parquet",
+    "images": 900,
+    "files": [
+      {
+        "name": "blur_sd21.parquet",
+        "rows": 900,
+        "size": 456834247,
+        "sha256": "df1aada0e94fb602177431869663eafa16f91094d2ab9d40e73174e2f4547fcd"
+      }
+    ],
+    "label_column": "label",
+    "classes_observed": 2,
+    "label_distribution": {
+      "0": 450,
+      "1": 450
+    }
+  },
+  "expected_images": 900,
+  "observed_images": 900,
+  "match": true,
+  "label_handling": {
+    "align": null,
+    "note": "模型输出索引与数据集 ClassLabel 顺序一致，无额外映射。"
+  },
+  "verified_at": "2026-11-19T13:26:47.431903+00:00"
+}

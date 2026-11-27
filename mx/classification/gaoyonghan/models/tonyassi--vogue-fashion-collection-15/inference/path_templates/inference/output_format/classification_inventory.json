@@ -1,0 +1,40 @@
+{
+  "schema": "model-eval/classification-inventory/v1",
+  "scope": "Existing 59 classification models; model 93 is retrieval and excluded.",
+  "models": [
+    {
+      "sequence": 172,
+      "model_id": "tonyassi/vogue-fashion-collection-15",
+      "runner_family": "classification171",
+      "adapter": "native_labels",
+      "state": "integrated",
+      "dataset": {
+        "id": "classification171_172",
+        "relation": "original_protocol_incomplete",
+        "split": "published train (87547 images, not independent test)",
+        "note": [
+          "Model has 1677 collection classes, not 15 labels; same-source/train evaluation only.",
+          "Local checkpoint and publisher inference components retained. Offline file paths, eval mode, batching, timing observation and reference scoring are external orchestration."
+        ],
+        "index_source": "__MODEL_ROOT__/inference/native/indices/172.jsonl",
+        "data_containers": [
+          "__DATASET_ROOT__/datasets_171_200/vogue_runway/raw/data/train-00000-of-00005.parquet",
+          "__DATASET_ROOT__/datasets_171_200/vogue_runway/raw/data/train-00001-of-00005.parquet",
+          "__DATASET_ROOT__/datasets_171_200/vogue_runway/raw/data/train-00002-of-00005.parquet",
+          "__DATASET_ROOT__/datasets_171_200/vogue_runway/raw/data/train-00003-of-00005.parquet",
+          "__DATASET_ROOT__/datasets_171_200/vogue_runway/raw/data/train-00004-of-00005.parquet"
+        ]
+      },
+      "qualification": "original_protocol_incomplete",
+      "limitations": [],
+      "num_classes": 1677,
+      "expected_images": 87547,
+      "category_reference": {
+        "file": "__MODEL_ROOT__/inference/native/models.json",
+        "sequence": 172,
+        "field": "label_mapping"
+      },
+      "gt_index": "__MODEL_ROOT__/inference/native/indices/172.jsonl"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "schema": "model-eval/classification-inventory/v1",
+  "scope": "One independent MX GPU classification model",
+  "models": [
+    {
+      "sequence": 142,
+      "model_id": "RickyIG/emotion_face_image_classification_v3",
+      "dataset": {
+        "id": "FER+",
+        "split": null,
+        "note": [
+          "FER+ PrivateTest\n多数票标签筛选\n3,153 / 3,589 张"
+        ],
+        "native_scope": {
+          "name": "FER+",
+          "images_source": "FER2013 PrivateTest images from Aaryan333/fer2013_train_publicTest_privateTest",
+          "labels_source": "microsoft/FERPlus fer2013new.csv",
+          "source_split": "PrivateTest",
+          "source_image_count": 3589,
+          "evaluated_image_count": 3153,
+          "evaluated_coverage_pct": 87.8518,
+          "accepted_class_counts": {
+            "contempt": 16,
+            "neutral": 1090,
+            "anger": 273,
+            "happy": 893,
+            "surprise": 396,
+            "fear": 83,
+            "disgust": 18,
+            "sad": 384
+          },
+          "excluded_image_counts": {
+            "unknown_or_non_face": 26,
+            "no_strict_majority": 410
+          },
+          "label_protocol": "Microsoft FER+ majority mode: remove one-vote outliers, require a strict majority (>50% of valid votes), then discard unknown/non-face or ambiguous samples.",
+          "alignment_note": "FER+ annotation rows and FER2013 PrivateTest images are paired by their shared PrivateTest row order; both contain 3589 rows."
+        },
+        "relation": "native_e07_registered_scope",
+        "index_source": "native loader GT, materialized as classification_annotations.json in the native phase directory",
+        "data_containers": [
+          "dataset/fer2013/data/privateTest-00000-of-00001-4b8a0715cf1b7560.parquet"
+        ]
+      },
+      "qualification": "native_registered_scope",
+      "limitations": [
+        "Capture-ready is a code integration state, not a claim that inference has passed.",
+        "Unobserved native Top-5 is unavailable; aggregate scores are not predictions."
+      ],
+      "num_classes": 8,
+      "expected_images": 3153,
+      "adapter": "native_labels"
+    }
+  ]
+}

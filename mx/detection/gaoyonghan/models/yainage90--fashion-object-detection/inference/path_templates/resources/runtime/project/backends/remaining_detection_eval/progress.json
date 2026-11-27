@@ -1,0 +1,205 @@
+{
+  "generated_at": "2026-09-05T10:58:31.409026+00:00",
+  "total_detection_models": 62,
+  "existing_green_queue": 37,
+  "current_scope_unique_models": 25,
+  "initial_primary_blocker_counts": {
+    "旧替代集类别不全，需核对任务覆盖": 4,
+    "私有数据且缺任务匹配的公开金标": 2,
+    "原协议/划分不明，现有数据可做参考评测": 8,
+    "数据已有，缺任务适配或多权重覆盖": 8,
+    "仅下载了说明/发布链接，实际权重缺失": 2,
+    "数据下载未完成，当前目录为空": 1
+  },
+  "current_state_counts": {
+    "complete": 21,
+    "partial_complete": 3,
+    "blocked": 1
+  },
+  "counting_rule": "Unique model IDs; all required tasks must have complete frozen benchmark metrics. PubTables means the model-blind 1000-image benchmark, not the original 93834-image test. Invalid cmarkea and all superseded Qualcomm v1/v2 results excluded.",
+  "fidelity_counts": {
+    "reference_baseline": 25
+  },
+  "comparison_counts": {
+    "not_officially_comparable": 25
+  },
+  "case_type_counts": {
+    "special": 25
+  },
+  "models": [
+    {
+      "sequence": 30,
+      "model_id": "yainage90/fashion-object-detection",
+      "state": "complete",
+      "all_tasks_complete": true,
+      "required_tasks": [
+        "bbox_detection_classification"
+      ],
+      "results": [
+        {
+          "status": "complete",
+          "task": "fashionpedia7",
+          "valid_complete": true,
+          "images": 1158,
+          "result_directory": "__MODEL_ROOT__/resources/runtime/assets/workspace/results/remaining25_v3/m30-fashion-object-detection/fashionpedia7",
+          "metrics": {
+            "metrics": {
+              "AP": 0.7159294162643299,
+              "AP50": 0.8731342119006621,
+              "AP75": 0.7870050848655463,
+              "AP_small": 0.22917115793614268,
+              "AP_medium": 0.5763901171877545,
+              "AP_large": 0.7480960467792521,
+              "AR1": 0.7309327183320673,
+              "AR10": 0.8378811617176594,
+              "AR100": 0.8456899672751633,
+              "AR_small": 0.3232380952380952,
+              "AR_medium": 0.7538111810989456,
+              "AR_large": 0.8999520162575008,
+              "per_class_AP": {
+                "top": 0.6771468945139089,
+                "outer": 0.8025236129865316,
+                "bottom": 0.7603545679236824,
+                "dress": 0.8509836722828079,
+                "hat": 0.6795937671804688,
+                "shoes": 0.6432574677710245,
+                "bag": 0.5976459311918848
+              }
+            },
+            "unit": "fraction_0_to_1",
+            "coverage": {
+              "model_labels": {
+                "0": "bag",
+                "1": "bottom",
+                "2": "dress",
+                "3": "hat",
+                "4": "outer",
+                "5": "shoes",
+                "6": "top"
+              },
+              "mapping": {
+                "0": 18,
+                "1": 3,
+                "2": 4,
+                "3": 8,
+                "4": 2,
+                "5": 17,
+                "6": 1
+              },
+              "covered_labels": [
+                "bag",
+                "bottom",
+                "dress",
+                "hat",
+                "outer",
+                "shoes",
+                "top"
+              ],
+              "missing_labels": [],
+              "covered_count": 7,
+              "total_model_classes": 7,
+              "gt_instances_per_class": {
+                "top": 622,
+                "outer": 299,
+                "bottom": 582,
+                "dress": 508,
+                "hat": 74,
+                "shoes": 1566,
+                "bag": 214
+              }
+            },
+            "evaluation_images": 1158,
+            "annotation_sha256": "ff46c9b57d032daac932efb51716540e97292e66851a7fb519f76565cca467b1",
+            "protocol_fingerprint": "5d7f07fb17ec7e915073b53ca93f9bb1f28ea4d64eee9280b5bed85718f0ff8e",
+            "reference_check": "not_officially_comparable"
+          },
+          "coverage": {
+            "model_labels": {
+              "0": "bag",
+              "1": "bottom",
+              "2": "dress",
+              "3": "hat",
+              "4": "outer",
+              "5": "shoes",
+              "6": "top"
+            },
+            "mapping": {
+              "0": 18,
+              "1": 3,
+              "2": 4,
+              "3": 8,
+              "4": 2,
+              "5": 17,
+              "6": 1
+            },
+            "covered_labels": [
+              "bag",
+              "bottom",
+              "dress",
+              "hat",
+              "outer",
+              "shoes",
+              "top"
+            ],
+            "missing_labels": [],
+            "covered_count": 7,
+            "total_model_classes": 7,
+            "gt_instances_per_class": {
+              "top": 622,
+              "outer": 299,
+              "bottom": 582,
+              "dress": 508,
+              "hat": 74,
+              "shoes": 1566,
+              "bag": 214
+            }
+          },
+          "error": null
+        }
+      ],
+      "next_action": "Fashionpedia七类显式合并，冻结映射并完成检测AP。",
+      "supplemental_results": [
+        {
+          "sequence": 30,
+          "label": "作者测试集，batch1",
+          "state": "complete",
+          "result_directory": "__MODEL_ROOT__/resources/runtime/assets/workspace/results/remaining25_supplemental_20260905/m30-author-test5544",
+          "images": 5544,
+          "classes": 7,
+          "gt_instances": 23629,
+          "predictions": 554400,
+          "AP": 0.8031064867973328,
+          "AP50": 0.9443861246109009,
+          "AR100": 0.883491039276123,
+          "unit": "fraction_0_to_1",
+          "protocol_fingerprint": "b1073590c7099c6cb08039c86fe44d7ee20f09c0454e491907d49773b46bccd6",
+          "weight_sha256": "01f78edc0c0e3abfcf8b09555d04ab5a43216a501bf24559ce5619673c4ce824",
+          "independent_verification": "model30/independent_verification.json",
+          "metrics_sha256": "10be15559ed1f8b669835b42d723c6c1220db35df54145c16a0e3770b4db04e9"
+        },
+        {
+          "sequence": 30,
+          "label": "作者测试集，作者batch8流程",
+          "state": "complete",
+          "result_directory": "__MODEL_ROOT__/resources/runtime/assets/workspace/results/remaining25_supplemental_20260905/m30-author-test5544-author-batch8",
+          "images": 5544,
+          "classes": 7,
+          "gt_instances": 23629,
+          "predictions": 554400,
+          "AP": 0.8062976002693176,
+          "AP50": 0.94501131772995,
+          "AR100": 0.8859511017799377,
+          "unit": "fraction_0_to_1",
+          "protocol_fingerprint": "271a174c16b67a23226f43cc856cc82b2922f924b19121e54c5c612ee888fcf7",
+          "weight_sha256": "01f78edc0c0e3abfcf8b09555d04ab5a43216a501bf24559ce5619673c4ce824",
+          "independent_verification": "model30/independent_verification_batch8.json",
+          "metrics_sha256": "1930cbfb45e1f94cd618e8443df9d9191294bc3c7a2bfe8e8e1e9f56a35866df"
+        }
+      ],
+      "preferred_reference_result_directory": "__MODEL_ROOT__/resources/runtime/assets/workspace/results/remaining25_supplemental_20260905/m30-author-test5544-author-batch8",
+      "supplemental_note": "已下载作者七类test5544图（Fashionpedia1155+ModaNet4389），类别/GT沿用作者。完整batch1 AP80.3106%；作者batch8流程AP80.6298%，比卡75.42高5.2098个百分点，差异仍未解释。两评分器一致、全部图像已核验，优先冻结batch8。旧1158图AP71.59仅作替代历史。"
+    }
+  ],
+  "supplemental_updated_at": "2026-09-05T15:25:21.596769+00:00",
+  "supplemental_summary": "supplemental_20260905/summary.json"
+}

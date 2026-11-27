@@ -1,0 +1,160 @@
+{
+  "schema_version": 1,
+  "sources": {},
+  "models": [
+    {
+      "sequence": 178,
+      "model_id": "prithivMLmods/Facial-Emotion-Detection-SigLIP2",
+      "model_path": "__MODEL_ROOT__/weights/prithivMLmods/Facial-Emotion-Detection-SigLIP2",
+      "revision": "5a352c0bab8d6b94308ca60d196fc53fd1dd5f05",
+      "task_type": "image-classification",
+      "status": "not_started",
+      "official_model_card": "https://huggingface.co/prithivMLmods/Facial-Emotion-Detection-SigLIP2",
+      "official_reference": {
+        "source": "https://huggingface.co/prithivMLmods/Facial-Emotion-Detection-SigLIP2",
+        "local_card_sha256": "9ee55b40fa6a9837eb8b82bc425c9479ed54e62ee3020bcab9bececc3d289e5f",
+        "model_index": null,
+        "text_report_values": {
+          "accuracy": 0.8665,
+          "macro_f1": 0.8726,
+          "weighted_f1": 0.8663
+        },
+        "units": "fractions for extracted accuracy/F1; original model-index units as published",
+        "comparison": "Manual protocol review required; no automatic drop calculation",
+        "note": "Card reports retained as provenance, not proof that local data/split/framework exactly reproduces the reported run."
+      },
+      "reference_comparison": "manual_reference_required",
+      "known_differences": [
+        "Full-precision probabilities retained for metrics; publisher demo rounds probabilities to three decimals only for Gradio display. Display rounding is not used to rank classes.",
+        "Local checkpoint and publisher inference components retained. Offline file paths, eval mode, batching, timing observation and reference scoring are external orchestration."
+      ],
+      "config": {
+        "_name_or_path": "google/siglip2-base-patch16-224",
+        "architectures": [
+          "SiglipForImageClassification"
+        ],
+        "id2label": {
+          "0": "Ahegao",
+          "1": "Angry",
+          "2": "Happy",
+          "3": "Neutral",
+          "4": "Sad",
+          "5": "Surprise"
+        },
+        "initializer_factor": 1.0,
+        "label2id": {
+          "Ahegao": 0,
+          "Angry": 1,
+          "Happy": 2,
+          "Neutral": 3,
+          "Sad": 4,
+          "Surprise": 5
+        },
+        "model_type": "siglip",
+        "problem_type": "single_label_classification",
+        "text_config": {
+          "model_type": "siglip_text_model",
+          "torch_dtype": "float32",
+          "vocab_size": 256000
+        },
+        "torch_dtype": "float32",
+        "transformers_version": "4.50.0.dev0",
+        "vision_config": {
+          "model_type": "siglip_vision_model",
+          "torch_dtype": "float32"
+        }
+      },
+      "preprocessing": {
+        "do_convert_rgb": null,
+        "do_normalize": true,
+        "do_rescale": true,
+        "do_resize": true,
+        "image_mean": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "image_processor_type": "SiglipImageProcessor",
+        "image_std": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "processor_class": "SiglipProcessor",
+        "resample": 2,
+        "rescale_factor": 0.00392156862745098,
+        "size": {
+          "height": 224,
+          "width": 224
+        }
+      },
+      "architecture": [
+        "SiglipForImageClassification"
+      ],
+      "files": {
+        "model.safetensors": {
+          "size": 371580296,
+          "sha256": "588eb8ef63533f4a6e4f195836b60ae0bafb147ff8e1abbddd1f2e5e71d02bbe"
+        },
+        "config.json": {
+          "size": 757,
+          "sha256": "1615cdc6cf9aee3a182b834893e6b9f4bbd44dfd4959ae1c9b90e375fdc14e8f"
+        },
+        "preprocessor_config.json": {
+          "size": 394,
+          "sha256": "9b36b57ebaf20f09bf4c22100ccc21877ea6bfe5aead0c00c59f8af8ccefacfc"
+        },
+        "README.md": {
+          "size": 3533,
+          "sha256": "9ee55b40fa6a9837eb8b82bc425c9479ed54e62ee3020bcab9bececc3d289e5f"
+        }
+      },
+      "weight": "model.safetensors",
+      "backend": "hf_published",
+      "environment": "shared_hf",
+      "dataset_relation": "public_replacement",
+      "split": "all published OAHEGA images; no independent split",
+      "excluded_source_labels": {},
+      "images": 15453,
+      "covered_target_classes": 6,
+      "num_output_classes": 6,
+      "label_mapping": {
+        "0": "Ahegao",
+        "1": "Angry",
+        "2": "Happy",
+        "3": "Neutral",
+        "4": "Sad",
+        "5": "Surprise"
+      },
+      "scoring": "reference",
+      "evaluator": "sklearn reference scoring",
+      "fidelity": "reference_baseline",
+      "case_type": "special",
+      "special_tags": [
+        "framework_numeric_difference",
+        "dataset_replacement",
+        "official_evaluator_missing"
+      ],
+      "inference_entry": "publisher_transformers_model_and_processor",
+      "default_batch_size": 1,
+      "dtype": "float32",
+      "warmup_batches": 10,
+      "index": "__MODEL_ROOT__/inference/native/indices/178.jsonl",
+      "index_sha256": "c47b9fb122b42a3b4d44f49213300aaf8b0d2e2bb57282e9cb6374ca282472fa",
+      "data_containers": {
+        "__DATASET_ROOT__/datasets_171_200/oahega/dataset.zip": {
+          "size": 2126166092,
+          "mtime_ns": 1790016581026640553
+        }
+      },
+      "protocol_fingerprint": "a5418c9e49d6f9b0c84505e2671f4249c1ca26e7cebbb58c69c7532ccc659a33"
+    }
+  ],
+  "runtime_defaults": {
+    "batch_size": 1,
+    "device": "cuda:0",
+    "warmup_batches": 10,
+    "workers": 2
+  },
+  "scope": "Each published model retained; 177 includes all five weights; no full GPU inference launched by preparation."
+}

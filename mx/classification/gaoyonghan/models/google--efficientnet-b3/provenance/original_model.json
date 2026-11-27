@@ -1,0 +1,62 @@
+{
+  "sequence": 88,
+  "model_id": "google/efficientnet-b3",
+  "task": "image_classification",
+  "task_name": "图像分类",
+  "reported_result": "81.47",
+  "reference": "0.816",
+  "model_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/model_index/google/efficientnet-b3",
+  "model_exists_at_build": true,
+  "dataset": {
+    "id": "imagenet",
+    "relation": "original_exact",
+    "split": null,
+    "note": "ImageNet-1K · val · 50000 图\n官方原集（不代表全协议已对齐）"
+  },
+  "environment_id": "classification-shared",
+  "runner_family": "classification8",
+  "final_result_sources": [
+    {
+      "source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m088/metrics-0.json",
+      "sha256": "6d67cebebc5bae05f622b1c8d61f6c9445bf8343817b832ef83b2695846ecde6",
+      "selection": "workbook_score_match",
+      "data": {
+        "evaluation_images": 50000,
+        "top1_percent": 81.472,
+        "top5_percent": 95.646,
+        "correct_top1": 40736,
+        "correct_top5": 47823,
+        "keras_metric_raw_percent": {
+          "top1": 81.47199749946594,
+          "top5": 95.64599990844727
+        },
+        "predictions_sha256": "808341c55352a2c094bba0580f6095196903ced15b36a48419badcd4af0dae09",
+        "official_reproduction_verified": false,
+        "difference_pp_vs_keras_reference": {
+          "top1": -0.1280000000000001,
+          "top5": -0.054000000000002046
+        }
+      },
+      "source_original": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/m88_keras_native_v1/full/run_20260915_191146_394309360/metrics.json"
+    }
+  ],
+  "code": {
+    "source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/m88_keras_native_v1/full/run_20260915_191146_394309360/run_m88_keras.py",
+    "sha256": "b83c8cc8838262b7d2106e92dea281b95fc661bec60742957a26674cf91b1910",
+    "recorded_sha256": null,
+    "attestation": "result_batch_snapshot",
+    "status_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m088/status.json",
+    "selection": "same_run_snapshot",
+    "archive": "code_archive/b83c8cc8838262b7_run_m88_keras.py"
+  },
+  "support_files": [
+    "run_m88_keras.sh",
+    "protocol.json",
+    "run_m88_keras.py"
+  ],
+  "final_scorer": null,
+  "backend_package": "classification8_eval",
+  "readiness": "code_and_result_identified",
+  "launch_status": "configured",
+  "metadata_warning": null
+}

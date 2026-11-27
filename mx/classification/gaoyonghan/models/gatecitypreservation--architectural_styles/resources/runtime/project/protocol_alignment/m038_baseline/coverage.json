@@ -1,0 +1,20 @@
+{
+  "images": 1651,
+  "gt_instances": {
+    "text": 16520,
+    "isolate_formula": 2066,
+    "abandon": 4735,
+    "figure": 1425,
+    "title": 4441,
+    "table": 665,
+    "formula_caption": 281
+  },
+  "prediction_exclusions": {
+    "figure_title": 1044,
+    "vision_footnote": 629,
+    "inline_formula": 35,
+    "seal": 36,
+    "algorithm": 28,
+    "reference_content": 267
+  }
+}

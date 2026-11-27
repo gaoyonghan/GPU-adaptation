@@ -1,0 +1,171 @@
+{
+  "schema_version": 1,
+  "sources": {},
+  "models": [
+    {
+      "sequence": 146,
+      "model_id": "histai/SPIDER-colorectal-model",
+      "runner_family": "native_script",
+      "adapter": "native_labels",
+      "state": "full_inference_and_public_scoring_verified",
+      "dataset": {
+        "id": "histai/SPIDER-colorectal-model",
+        "split": "official slide-level test",
+        "note": [
+          "histai/SPIDER-colorectal\n官方 slide-level test\n13,193 张，5x5 上下文"
+        ],
+        "native_scope": {
+          "id": "histai/SPIDER-colorectal",
+          "split": "official slide-level test",
+          "image_count": 13193,
+          "class_count": 13,
+          "input_patch_count_per_sample": 25,
+          "central_patch_size": "224x224",
+          "composite_size": "1120x1120"
+        },
+        "relation": "native_e07_registered_scope",
+        "index_source": "native loader GT, materialized as classification_annotations.json in the native phase directory",
+        "data_containers": [
+          "dataset/SPIDER-colorectal/SPIDER-colorectal/test-images.zip"
+        ]
+      },
+      "qualification": "native_registered_scope",
+      "limitations": [
+        "Capture-ready is a code integration state, not a claim that inference has passed.",
+        "Unobserved native Top-5 is unavailable; aggregate scores are not predictions."
+      ],
+      "num_classes": 13,
+      "expected_images": 13193,
+      "native_script": {
+        "script": "inference/native/run_model.py",
+        "script_sha256": "833d634f06cb07216e769993bf8d529bb0dd42a92a1e9e6b1580b7c5c1c18819",
+        "loop_lineno": 246,
+        "labels": "targets",
+        "prediction": "predictions",
+        "ranking": "top3",
+        "classes": "logits.shape[-1]",
+        "loader_kind": "spider",
+        "label_position": 1,
+        "framework": "torch",
+        "original_script_sha256": "33043d714bf1bd35fcdf8fc3e05e7d9da3fd22f03abbe5b4eb65102b25f33b46",
+        "original_loop_lineno": 235,
+        "original_path": "code/spider-colorectal-model-spider-colorectal-test.py",
+        "ported_script_sha256": "bfb7eafc24d30f3418bcaeb7e4562a2112a5a9adbcab595f9d0e439467c97fd2"
+      },
+      "output_relative_path": "result/run_001/full/m146",
+      "supports_max_samples": true,
+      "runtime": {
+        "batch_size": 8,
+        "workers": 0,
+        "warmup": 3
+      },
+      "weights_files": [
+        {
+          "path": "config.json",
+          "size": 1494,
+          "sha256": "4684f131bc2d0747bc8df933c2a0c53eb129cbb3290018d57a3456fd1ec737bd"
+        },
+        {
+          "path": "configuration_spider.py",
+          "size": 2724,
+          "sha256": "98536973b869a8236716ae386388e3ea412cd142d4e44fd4f3a7aa33cc7480f0"
+        },
+        {
+          "path": "model.safetensors",
+          "size": 1215643252,
+          "sha256": "0057834bfe0e6631743d5d84d6925f53e634c97a4486475f222b47886f5c8d40"
+        },
+        {
+          "path": "modeling_spider.py",
+          "size": 7123,
+          "sha256": "12e46871a64ebbd6791900e74d8c8a9b04ea9e504d5a17f524c1801ec52ddf2f"
+        },
+        {
+          "path": "preprocessor_config.json",
+          "size": 458,
+          "sha256": "9845607ea8d69a39a3cfab0cf60fab4b8c0c1202e70bdb28347b1950e19fb102"
+        }
+      ],
+      "dataset_files": [
+        "SPIDER-colorectal/SPIDER-colorectal/metadata.json",
+        "SPIDER-colorectal/SPIDER-colorectal/test-images.zip"
+      ],
+      "environment": "e07.txt",
+      "native_precision": "FP32 with TF32 matrix multiplication enabled",
+      "backend": "native_torch_spider",
+      "timing_alignment": {
+        "forward": "Same event/current-stream/synchronize semantics; wrapper preserves exactly one native call. MX runtime differs.",
+        "e2e": "Native DataLoader fetch to CPU prediction availability; worker-prefetch boundary differs from Example. Does not include subsequent metrics or record writes.",
+        "worker_prefetch": false,
+        "starts_after_spider_composition": true,
+        "native_metric_operations_before_prediction_readiness": [
+          "loss_sum += F.cross_entropy(logits, targets, reduction='sum').item()"
+        ],
+        "model_load": "Sum of measured native construction/load/placement blocks, not Example contiguous block.",
+        "warmup": "Native repeated preprocessed first batch; native count retained; synchronized before/after. Unlike Example, preprocessing/transfer/softmax-to-CPU are outside the warmup interval.",
+        "evaluation": "Native aggregate evaluation not measured separately; evaluation_seconds=null. Public scoring duration is outside native timing.",
+        "resume": "No resume; repeated native phase archives previous output; resume_segments=1.",
+        "comparison_valid": false
+      },
+      "label_mapping": [
+        {
+          "id": 0,
+          "name": "Adenocarcinoma high grade"
+        },
+        {
+          "id": 1,
+          "name": "Adenocarcinoma low grade"
+        },
+        {
+          "id": 2,
+          "name": "Adenoma high grade"
+        },
+        {
+          "id": 3,
+          "name": "Adenoma low grade"
+        },
+        {
+          "id": 4,
+          "name": "Fat"
+        },
+        {
+          "id": 5,
+          "name": "Hyperplastic polyp"
+        },
+        {
+          "id": 6,
+          "name": "Inflammation"
+        },
+        {
+          "id": 7,
+          "name": "Mucus"
+        },
+        {
+          "id": 8,
+          "name": "Muscle"
+        },
+        {
+          "id": 9,
+          "name": "Necrosis"
+        },
+        {
+          "id": 10,
+          "name": "Sessile serrated lesion"
+        },
+        {
+          "id": 11,
+          "name": "Stroma healthy"
+        },
+        {
+          "id": 12,
+          "name": "Vessels"
+        }
+      ],
+      "layout_reference": {
+        "branch": "gaoyonghan/mx",
+        "commit": "208733e1562fca75b7128772ca2cd587943d9012",
+        "platform": "mx"
+      }
+    }
+  ]
+}

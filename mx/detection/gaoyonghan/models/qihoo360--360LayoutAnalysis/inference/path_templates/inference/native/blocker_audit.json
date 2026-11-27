@@ -1,0 +1,69 @@
+{
+  "audited_on": "2026-09-05",
+  "total_detection_models": 62,
+  "existing_green_batch": 37,
+  "remaining_models": 25,
+  "scope_note": "37是已选入队列数，不是全量完成数。25按唯一model_id统计；任务/权重子记录不重复计数。",
+  "source_manifest": "__MODEL_ROOT__/resources/runtime/assets/workspace/official_object_detection_eval/models.json",
+  "source_sha256": "b45b4ecf6abc95ee7f2f542b2125dd8fcf4b013bed08cf81dc50c452ce023c00",
+  "primary_blocker_counts": {
+    "旧替代集类别不全，需核对任务覆盖": 4,
+    "私有数据且缺任务匹配的公开金标": 2,
+    "原协议/划分不明，现有数据可做参考评测": 8,
+    "数据已有，缺任务适配或多权重覆盖": 8,
+    "仅下载了说明/发布链接，实际权重缺失": 2,
+    "数据下载未完成，当前目录为空": 1
+  },
+  "models": [
+    {
+      "sequence": 41,
+      "excel_row": 42,
+      "model_id": "qihoo360/360LayoutAnalysis",
+      "primary_blocker": "数据已有，缺任务适配或多权重覆盖",
+      "historical_reason": "P1-协议待确认｜publaynet-8n.pt的作者来源可确认是 PubLayNet，优先使用官方validation；但仓库其他权重对应自建数据，不能共用该分数。评测时必须明确只对应 publaynet-8n.pt。依据：https://github.com/ibm-aur-nlp/PubLayNet",
+      "required_tasks": [
+        "paper_layout",
+        "report_layout",
+        "publaynet_layout",
+        "jiaocai_layout",
+        "general6_layout"
+      ],
+      "task_inventory_status": "model_card_and_prior_audit",
+      "weight_files_present": [
+        {
+          "file": "general6-8n.pt",
+          "bytes": 6232750
+        },
+        {
+          "file": "jiaocai-8n.pt",
+          "bytes": 6246105
+        },
+        {
+          "file": "paper-8n.pt",
+          "bytes": 6232494
+        },
+        {
+          "file": "publaynet-8n.pt",
+          "bytes": 6234670
+        },
+        {
+          "file": "report-8n.pt",
+          "bytes": 6232174
+        },
+        {
+          "file": "weights/paper-8n.pt",
+          "bytes": 6232494
+        },
+        {
+          "file": "weights/report-8n.pt",
+          "bytes": 6232174
+        }
+      ],
+      "next_action": "分别评估5种领域权重；PubLayNet用于publaynet，其余用OmniDocBench等替代并记录类别范围。",
+      "source_model_card": "https://huggingface.co/qihoo360/360LayoutAnalysis",
+      "local_model_card": "__MODEL_ROOT__/weights/qihoo360/360LayoutAnalysis/README.md",
+      "technical_complete": false,
+      "metrics": null
+    }
+  ]
+}

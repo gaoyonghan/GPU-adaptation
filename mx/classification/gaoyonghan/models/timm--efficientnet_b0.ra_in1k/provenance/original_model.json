@@ -1,0 +1,63 @@
+{
+  "sequence": 87,
+  "model_id": "timm/efficientnet_b0.ra_in1k",
+  "task": "image_classification",
+  "task_name": "图像分类",
+  "reported_result": "77.696",
+  "reference": "77.696",
+  "model_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/model_index/timm/efficientnet_b0.ra_in1k",
+  "model_exists_at_build": true,
+  "dataset": {
+    "id": "imagenet",
+    "relation": "original_exact",
+    "split": null,
+    "note": "ImageNet-1K · val · 50000 图\n官方原集（不代表全协议已对齐）"
+  },
+  "environment_id": "classification-shared",
+  "runner_family": "classification8",
+  "final_result_sources": [
+    {
+      "source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m087/metrics-0.json",
+      "sha256": "ab5fbc683e59a8f57e07caf8afd334de7531169f6c0f3816267b5bb61e74aaee",
+      "selection": "workbook_score_match",
+      "data": {
+        "metrics": {
+          "top1_percent": 77.696,
+          "top5_percent": 93.53
+        },
+        "evaluation_images": 50000,
+        "dataset_relation": "original_exact",
+        "fidelity": "official_protocol_adapter",
+        "official_reference": {
+          "metric": null,
+          "value": null,
+          "comparison": "manual_reference_required",
+          "notes": "仅列已确认参考行；运行完成不自动等同官方复现。"
+        },
+        "reference_check": "manual_reference_required",
+        "run_fingerprint": "630e30d31cf542312dad57daf9d95036d14a039879b54ed009d916fe15d959f0"
+      },
+      "source_original": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification8_v1/m87-efficientnet_b0.ra_in1k/metrics.json"
+    }
+  ],
+  "code": {
+    "source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification8_v1/_source_snapshot/run_model.py",
+    "sha256": "46865be5eddebff4f08b138958aa7db8a749673f00879ce83cc1b2d02c9b5291",
+    "recorded_sha256": null,
+    "attestation": "result_batch_snapshot",
+    "status_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m087/status.json",
+    "selection": "same_batch_snapshot",
+    "archive": "code_archive/46865be5eddebff4_run_model.py"
+  },
+  "support_files": [
+    "models.json",
+    "run_model.py",
+    "setup_env.sh",
+    "run_all.sh"
+  ],
+  "final_scorer": null,
+  "backend_package": "classification8_eval",
+  "readiness": "code_and_result_identified",
+  "launch_status": "configured",
+  "metadata_warning": null
+}

@@ -1,0 +1,48 @@
+{
+  "sequence": 81,
+  "files": [
+    {
+      "path": "model.safetensors",
+      "bytes": 1213703748,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "confusion_matrix.png",
+      "bytes": 106803,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "config.json",
+      "bytes": 1790,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "preprocessor_config.json",
+      "bytes": 442,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5935,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": ".gitattributes",
+      "bytes": 1576,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "classification_report.png",
+      "bytes": 26383,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    }
+  ],
+  "mismatches": []
+}

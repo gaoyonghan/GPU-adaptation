@@ -1,0 +1,179 @@
+{
+  "sequence": 70,
+  "model_id": "google/owlvit-large-patch14",
+  "task": "zero_shot_detection",
+  "task_name": "零样本检测",
+  "reported_result": "HF：AP 29.60% / APr 23.79%\n原生流程：AP 33.82% / APr 31.85%\n两条结果均保留；原生权重由HF反转换",
+  "reference": "官方README AP34.60% / APr31.20%",
+  "model_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/model_index/google/owlvit-large-patch14",
+  "model_exists_at_build": true,
+  "dataset": {
+    "id": "lvis_v1_val",
+    "relation": "upstream_evaluator",
+    "split": "validation",
+    "note": "LVIS v1 validation, 19809 images; official Scenic clip_l14 evaluator"
+  },
+  "environment_id": "owlvit-scenic-native",
+  "runner_family": "owlvit_scenic_native",
+  "final_result_sources": [
+    {
+      "source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m070/metrics-0.json",
+      "sha256": "8f248c931f86d073708a20752ef5b40a900e3b6b47870e45660744c46485b820",
+      "selection": "native_scenic_main_result_20261009",
+      "data": {
+        "metrics": {
+          "AP": 0.33828265731715756,
+          "AP50": 0.4826977675056129,
+          "AP75": 0.3710025099209549,
+          "APs": 0.24341544641019447,
+          "APm": 0.42382350130320606,
+          "APl": 0.5434479436767402,
+          "APr": 0.3187574016061468,
+          "APc": 0.3253408241386724,
+          "APf": 0.3613078526584789,
+          "AR@300": 0.46130617678485647,
+          "ARs@300": 0.30728885237515274,
+          "ARm@300": 0.5633794381661906,
+          "ARl@300": 0.7172955983972664
+        },
+        "fidelity": "upstream_evaluator",
+        "weight_provenance": "official_hf_reverse_converted_roundtrip_exact"
+      },
+      "source_original": "/data2/gaoyonghan/env/model_eval_portable_v4/results_repaired_20261009/m070_native_20261009/m070/clip_l14/lvis/results_validation.json"
+    },
+    {
+      "source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m070/metrics-1.json",
+      "sha256": "a7f2e526f166c7be5825f58298e5242643ff0f4472ed6827a9ab6ae57653ec02",
+      "selection": "native_scenic_previous_result_20260903",
+      "data": {
+        "metrics": {
+          "AP": 0.3382145141985899,
+          "AP50": 0.48269185343917287,
+          "AP75": 0.37109367803935533,
+          "APs": 0.24339328947063857,
+          "APm": 0.4232605193801532,
+          "APl": 0.5430657412121205,
+          "APr": 0.31850055901552726,
+          "APc": 0.32542624514779533,
+          "APf": 0.3611512589727726,
+          "AR@300": 0.4611462717575179,
+          "ARs@300": 0.3072106992115997,
+          "ARm@300": 0.5627266900313986,
+          "ARl@300": 0.7174473322258419
+        },
+        "fidelity": "upstream_evaluator"
+      },
+      "source_original": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/zero_shot_native/owlvit-large-patch14/clip_l14/lvis/results_validation.json"
+    },
+    {
+      "source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m070/metrics-2.json",
+      "sha256": "172bc067fd778054dbc86d3062837c012c851e15022636183a35ae25143702ed",
+      "selection": "historical_hf_adapter_diagnostic",
+      "data": {
+        "fidelity": "official_protocol_adapter",
+        "metric_implementation": "lvis-api LVISEval",
+        "metrics": {
+          "AP": 0.29596560059653604,
+          "AP50": 0.42062486471859556,
+          "AP75": 0.3253140374948115,
+          "APc": 0.2780723321185429,
+          "APf": 0.3414659897025873,
+          "APl": 0.5020745253220439,
+          "APm": 0.38370706439391405,
+          "APr": 0.23787627342857082,
+          "APs": 0.2127524581800428,
+          "AR@300": 0.42796328454657157,
+          "ARl@300": 0.6876763803902969,
+          "ARm@300": 0.531216170776522,
+          "ARs@300": 0.2736030822814402
+        },
+        "model_key": "owlvit-large-patch14",
+        "official_reference_comparison": {
+          "classification": "does_not_match_reference",
+          "delta_points": {
+            "AP": -5.0034399403463965,
+            "APr": -7.412372657142917
+          },
+          "reference": {
+            "mapping_basis": "Scenic README 的 CLIP L/14 公共 checkpoint 行",
+            "metrics_percent": {
+              "AP": 34.6,
+              "APr": 31.2
+            },
+            "scope": "OWL-ViT CLIP L/14 public checkpoint table",
+            "source": "https://github.com/google-research/scenic/blob/08ee9dc4288a1a103df053915fd92e755a6b05da/scenic/projects/owl_vit/README.md"
+          },
+          "tolerance_absolute_points": 1.0
+        },
+        "protocol_fingerprint": "0124c03cecbe29fffcf101700588cb9b2d51c232259713acaa6ca68c4c33ed25"
+      },
+      "source_original": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/zero_shot_official/owlvit-large-patch14/metrics.json"
+    }
+  ],
+  "code": {
+    "source": "/home/ubuntu/文档/ChatGPT/idea 2/outputs/model_eval_portable_v4/project/backends/owlvit_scenic_native/run_model.py",
+    "sha256": "94154a56a3f2d7c5afa1091975c7de07e4d74e6670c1a084f1d2d80018db2035",
+    "recorded_sha256": "94154a56a3f2d7c5afa1091975c7de07e4d74e6670c1a084f1d2d80018db2035",
+    "attestation": "native_upstream_launcher",
+    "archive": "code_archive/94154a56a3f2d7c5_run_model.py",
+    "selection": "native_scenic_route",
+    "status_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m070/status.json"
+  },
+  "support_files": [
+    "convert_hf_to_scenic.py",
+    "launch_official_evaluator.py",
+    "patch_lvis.py",
+    "prepare_lvis_validation_tfds.py",
+    "run_model.py",
+    "run_official.sh",
+    "setup_env.sh"
+  ],
+  "final_scorer": null,
+  "backend_package": "owlvit_scenic_native",
+  "native_route": {
+    "execution_path": "upstream_evaluator",
+    "scenic_revision": "08ee9dc4288a1a103df053915fd92e755a6b05da",
+    "upstream_module": "scenic.projects.owl_vit.evaluator",
+    "config": "clip_l14",
+    "weight_provenance": "official_hf_reverse_converted_roundtrip_exact",
+    "prepared_data_subdirectory": "owlvit_scenic_native",
+    "smoke_phase": "preflight_only",
+    "automatic_download": false,
+    "backend_file_sha256": {
+      "run_model.py": "94154a56a3f2d7c5afa1091975c7de07e4d74e6670c1a084f1d2d80018db2035",
+      "convert_hf_to_scenic.py": "2a5e93dc3d7364a6428f2a76043e2dc0f775adeefcb3d41de27fd6a1dc9680ff",
+      "setup_env.sh": "a769df0fdf924e32f6c5563d1b5797fc4b5412566dc87b4e1fc311328af18f34",
+      "launch_official_evaluator.py": "36921215f8f5c7e0c11a85d257e67d82751f670d4001b26330863384930f8d4c",
+      "patch_lvis.py": "979d7a8fb8a0180e332efdf6656f6b79d407d6f360e0ce2cfbba9e5f687f207e",
+      "prepare_lvis_validation_tfds.py": "0ffce3487bb1e1131b9311f6d5e12875abe5a272f2a9f70d0f894e744d6ee058",
+      "run_official.sh": "4b5f8e0871d1329a5f2e6c0df23e0803d1d3c6befeda0fb69af650a17d100d4d"
+    }
+  },
+  "readiness": "code_and_result_identified",
+  "launch_status": "configured",
+  "metadata_warning": null,
+  "latest_native_run": {
+    "manifest": "/data2/gaoyonghan/env/model_eval_portable_v4/results_repaired_20261009/m070_native_20261009/m070/run_manifest.json",
+    "started_at": "2026-10-09T04:38:30.517935+00:00",
+    "finished_at": "2026-10-09T06:02:13.692942+00:00",
+    "metrics_percent": {
+      "AP": 33.82826573171576,
+      "APr": 31.87574016061468
+    },
+    "prediction_validation": {
+      "status": "verified",
+      "file": "/data2/gaoyonghan/env/model_eval_portable_v4/results_repaired_20261009/m070_native_20261009/m070/clip_l14/lvis/predictions_validation.json",
+      "file_size_bytes": 1539922653,
+      "sha256": "a1ecf9b9cb3aac66daf727dce50b51c4a1fcff57195d34cb70c0c7f4628ef54b",
+      "predictions": 5936534,
+      "unique_images": 19809,
+      "min_per_image": 276,
+      "max_per_image": 300,
+      "category_id_min": 2,
+      "category_id_max": 1203,
+      "unique_categories_with_predictions": 1202,
+      "invalid_numeric_records": 0,
+      "upstream_class_zero_filter": "Scenic 08ee9dc format_predictions uses `if not label: continue`; with label_shift=1 this intentionally omits category_id=1."
+    }
+  }
+}

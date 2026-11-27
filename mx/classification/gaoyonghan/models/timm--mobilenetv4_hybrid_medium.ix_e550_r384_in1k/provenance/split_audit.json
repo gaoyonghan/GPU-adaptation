@@ -1,0 +1,20 @@
+{
+  "schema": "model-eval/provenance/split-audit/v1",
+  "model_id": "timm/mobilenetv4_hybrid_medium.ix_e550_r384_in1k",
+  "sequence": 220,
+  "dataset": {
+    "id": "imagenet",
+    "relation": "original_exact",
+    "split": "validation"
+  },
+  "expected_images": 50000,
+  "num_classes": 1000,
+  "sample_id_rule": "`validation#<数据集行号>`（官方 val 顺序，行号即身份）",
+  "protocol": "官方 ILSVRC2012 CLS-LOC validation 全量 50000 张，1000 类各 50 张；输入 384px。",
+  "label_space": "native class ids recorded by the model config (adapter = native_labels); class names are display metadata only.",
+  "leakage": {
+    "declared": false,
+    "note": "No train/test overlap declared for this split."
+  },
+  "created": "2026-11-25"
+}

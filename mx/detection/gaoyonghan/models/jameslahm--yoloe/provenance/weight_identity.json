@@ -1,0 +1,186 @@
+{
+  "sequence": 23,
+  "files": [
+    {
+      "path": "yoloe-11s-seg-pf.pt",
+      "bytes": 24239013,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "yoloe-v8m-seg.pt",
+      "bytes": 65800690,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "yoloe-11s-seg-coco.pt",
+      "bytes": 20609019,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "yoloe-11l-seg-coco.pt",
+      "bytes": 56016240,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "yoloe-11m-seg-coco-pe.pt",
+      "bytes": 45298798,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "yoloe-11l-seg-coco-pe.pt",
+      "bytes": 56007207,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "yoloe-v8s-seg.pt",
+      "bytes": 31135890,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "yoloe-11m-seg-pf.pt",
+      "bytes": 56319807,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "README.md",
+      "bytes": 17701,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "yoloe-v8m-seg-coco.pt",
+      "bytes": 54932771,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "yoloe-v8l-seg.pt",
+      "bytes": 107405586,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": ".gitattributes",
+      "bytes": 1572,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "yoloe-v8s-seg-pf.pt",
+      "bytes": 27570549,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "yoloe-v8s-seg-coco-pe.pt",
+      "bytes": 23914598,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "yoloe-v8s-seg-coco.pt",
+      "bytes": 23940203,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "yoloe-11s-seg.pt",
+      "bytes": 27803986,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "yoloe-v8l-seg-pf.pt",
+      "bytes": 103448517,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "yoloe-v8m-seg-pf.pt",
+      "bytes": 62039485,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "yoloe-v8m-seg-coco-pe.pt",
+      "bytes": 54922118,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "yoloe-11l-seg.pt",
+      "bytes": 70982416,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "yoloe-v8l-seg-coco.pt",
+      "bytes": 92437531,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "yoloe-11m-seg.pt",
+      "bytes": 60276714,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "yoloe-11l-seg-pf.pt",
+      "bytes": 67026518,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "yoloe-11s-seg-coco-pe.pt",
+      "bytes": 20583846,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "yoloe-11m-seg-coco.pt",
+      "bytes": 45308929,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "yoloe-v8l-seg-coco-pe.pt",
+      "bytes": 92427174,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "figures/pipeline.svg",
+      "bytes": 178928,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "figures/visualization.svg",
+      "bytes": 839657,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "figures/comparison.svg",
+      "bytes": 87205,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "figures/logo.png",
+      "bytes": 520170,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    }
+  ],
+  "mismatches": []
+}

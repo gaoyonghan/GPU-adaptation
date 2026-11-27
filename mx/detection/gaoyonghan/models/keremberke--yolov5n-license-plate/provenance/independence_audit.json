@@ -1,0 +1,27 @@
+{
+  "sequence": 45,
+  "model_id": "keremberke/yolov5n-license-plate",
+  "source_archive_hash_matches": true,
+  "source_archive_sha256": "f2fb744cfeffd526f9088df0d3ee7e4b17ce65eeada64030fe37deb96dd485dc",
+  "prepared_entry_source_sha256": "dab75348093e37d770c4e67cfa3fbf008320b9a474a780c2a760fcaa412ab912",
+  "local_entry_sha256": "bdc3cf5162eb29e70f2650c8b0e510977e166d6bea6c541b9ef0657e83b19042",
+  "local_entry": "inference/native/run_model.py",
+  "central_dispatch_in_entry": false,
+  "unexpected_external_links": [],
+  "declared_dataset_links": [
+    {
+      "path": "resources/runtime/assets/workspace/official_sources/object_detection/WildDet3D/data/in_the_wild",
+      "target": "/data2/gaoyonghan/gpu/dataset/wilddet3d_val"
+    }
+  ],
+  "broken_links": [],
+  "path_template_count": 366,
+  "state": "entrypoint_verified_full_run_pending",
+  "validation": {
+    "returncode": 0,
+    "python": "/home/ubuntu/gaoyonghan/miniconda3/envs/object-detection-yolov5-v2/bin/python",
+    "checked_at": "2026-11-10T15:49:26.182002+08:00",
+    "scope": "native help/import/path check only; not full inference"
+  },
+  "smoke_verification": null
+}

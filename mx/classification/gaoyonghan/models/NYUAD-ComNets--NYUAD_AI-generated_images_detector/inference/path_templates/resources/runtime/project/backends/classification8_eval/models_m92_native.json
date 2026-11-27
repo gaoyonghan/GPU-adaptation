@@ -1,0 +1,35 @@
+{
+  "sequence": 92,
+  "source_revision": "8b39429eaf39750d913bcc5368be395bb4d41b12",
+  "source_url": "https://raw.githubusercontent.com/nateraw/huggingpics/8b39429eaf39750d913bcc5368be395bb4d41b12/HuggingPics.ipynb",
+  "source_sha256": "15b4efd2537388978b439599bd2ce22f95073a26fd16a7bb4aeb59c22b56770c",
+  "native_classes": [
+    "ImageClassificationCollator",
+    "Classifier"
+  ],
+  "dependencies": {
+    "pytorch-lightning": "2.1.2",
+    "torchmetrics": "1.2.0",
+    "lightning-utilities": "0.10.0"
+  },
+  "evaluator": "未修改HuggingPics Classifier.validation_step + Lightning Trainer.validate + TorchMetrics Accuracy",
+  "metric": "native_val_acc_percent",
+  "precision": "16-mixed",
+  "batch_size": 8,
+  "num_workers": 0,
+  "seed": 42,
+  "fidelity": "reference_baseline",
+  "dataset_relation": "public_replacement",
+  "officially_comparable": false,
+  "baseline": "__MODEL_ROOT__/resources/runtime/assets/workspace/results/m92_faceshape_v1/full/run_20260916_113236_197929",
+  "baseline_predictions_sha256": "a6f92d3f5c95f2be0987649fbaf5fae26f109b888d01fb253dbba43cac548af7",
+  "known_differences": [
+    "复用模型卡链接的HuggingPics原生类，但不能确认此提交及依赖版本就是发布者当年所用版本。",
+    "直接验证已发布权重，不重新训练、不重新随机划分。固定替代集testing_set 1000张，原85.31%对应的验证图未知。",
+    "原笔记本使用precision=16；在Lightning 2.1.2中显式使用等价16-mixed。模型参数FP32、验证前向AMP，与旧pipeline FP32结果有差异。",
+    "ZIP图片读取模拟ImageFolder的PIL RGB读取，不使用pipeline的EXIF自动转正；不裁脸或增强。",
+    "num_workers由原笔记本2改为0，避免ZIP句柄跨进程；仅关闭日志、checkpoint和模型摘要等训练附属功能。",
+    "Transformers仍为4.50.0/eager，模型配置记录4.35.2；历史完整软件栈未知。",
+    "替代集尚未找到官方evaluator，用户批准改用模型关联工具的验证流程；不宣称数据集官方或原成绩复现。"
+  ]
+}

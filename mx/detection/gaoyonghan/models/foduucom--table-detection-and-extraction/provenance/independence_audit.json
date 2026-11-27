@@ -1,0 +1,22 @@
+{
+  "sequence": 12,
+  "model_id": "foduucom/table-detection-and-extraction",
+  "source_archive_hash_matches": true,
+  "source_archive_sha256": "645b6f5e94cf46d5d5e9348ebb8f43a94b0d94bc05bf0e469e62909f2e7587b2",
+  "prepared_entry_source_sha256": "d3cef83122d716e43767f492a1c0a52e6d4a3635c5acd5ee9951af5b5895d12c",
+  "local_entry_sha256": "01c2d0b947455392658e06829d69d9eada589d6242a2596113f0b3c66761b5f6",
+  "local_entry": "inference/native/run_m12_native.py",
+  "central_dispatch_in_entry": false,
+  "unexpected_external_links": [],
+  "declared_dataset_links": [],
+  "broken_links": [],
+  "path_template_count": 446,
+  "state": "entrypoint_verified_full_run_pending",
+  "validation": {
+    "returncode": 0,
+    "python": "/home/ubuntu/gaoyonghan/gpu/.venv-m12-ultralytics8043/bin/python",
+    "checked_at": "2026-11-10T15:37:53.038363+08:00",
+    "scope": "native help/import/path check only; not full inference"
+  },
+  "smoke_verification": null
+}

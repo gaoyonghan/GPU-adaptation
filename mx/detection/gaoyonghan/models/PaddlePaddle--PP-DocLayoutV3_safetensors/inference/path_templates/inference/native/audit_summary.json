@@ -1,0 +1,119 @@
+{
+  "generated_at": "2026-09-05T10:58:31.409026+00:00",
+  "total_detection_models": 62,
+  "existing_green_queue": 37,
+  "current_scope_unique_models": 25,
+  "initial_primary_blocker_counts": {
+    "旧替代集类别不全，需核对任务覆盖": 4,
+    "私有数据且缺任务匹配的公开金标": 2,
+    "原协议/划分不明，现有数据可做参考评测": 8,
+    "数据已有，缺任务适配或多权重覆盖": 8,
+    "仅下载了说明/发布链接，实际权重缺失": 2,
+    "数据下载未完成，当前目录为空": 1
+  },
+  "current_state_counts": {
+    "complete": 21,
+    "partial_complete": 3,
+    "blocked": 1
+  },
+  "counting_rule": "Unique model IDs; all required tasks must have complete frozen benchmark metrics. PubTables means the model-blind 1000-image benchmark, not the original 93834-image test. Invalid cmarkea and all superseded Qualcomm v1/v2 results excluded.",
+  "fidelity_counts": {
+    "reference_baseline": 25
+  },
+  "comparison_counts": {
+    "not_officially_comparable": 25
+  },
+  "case_type_counts": {
+    "special": 25
+  },
+  "models": [
+    {
+      "sequence": 39,
+      "model_id": "PaddlePaddle/PP-DocLayoutV3_safetensors",
+      "state": "complete",
+      "all_tasks_complete": true,
+      "required_tasks": [
+        "layout_detection_classification",
+        "polygon_segmentation",
+        "reading_order"
+      ],
+      "results": [
+        {
+          "status": "failed",
+          "task": "remaining25_pp_v1",
+          "valid_complete": false,
+          "images": null,
+          "result_directory": "__MODEL_ROOT__/resources/runtime/assets/workspace/results/remaining25_pp_v1/PP-DocLayoutV3_safetensors",
+          "metrics": null,
+          "coverage": null,
+          "error": "error(\"OpenCV(4.10.0) /io/opencv/modules/imgproc/src/resize.cpp:4152: error: (-215:Assertion failed) !ssize.empty() in function 'resize'\\n\")"
+        },
+        {
+          "status": "failed",
+          "task": "remaining25_pp_v2",
+          "valid_complete": false,
+          "images": 1651,
+          "result_directory": "__MODEL_ROOT__/resources/runtime/assets/workspace/results/remaining25_pp_v2/PP-DocLayoutV3_safetensors",
+          "metrics": null,
+          "coverage": null,
+          "error": "TypeError('list indices must be integers or slices, not str')"
+        },
+        {
+          "status": "complete",
+          "task": "remaining25_pp_v3",
+          "valid_complete": true,
+          "images": 1651,
+          "result_directory": "__MODEL_ROOT__/resources/runtime/assets/workspace/results/remaining25_pp_v3/PP-DocLayoutV3_safetensors",
+          "metrics": {
+            "bbox": {
+              "AP": 0.5130373044463993,
+              "AP50": 0.6522533971214725,
+              "AP75": 0.5550840792537495,
+              "AP_small": 0.18137960832418099,
+              "AP_medium": 0.30771720759747034,
+              "AP_large": 0.5230595028195585,
+              "AR1": 0.28419413932072535,
+              "AR10": 0.5434969557936771,
+              "AR100": 0.6375298642518769,
+              "AR_small": 0.387138442793299,
+              "AR_medium": 0.5289061821041566,
+              "AR_large": 0.6445794807142715,
+              "per_class_AP": {
+                "text": 0.7050961596619602,
+                "title": 0.5441707433278101,
+                "image": 0.5785927114851096,
+                "caption": 0.2969887631974123,
+                "table": 0.9452663970825514,
+                "formula": 0.34486188215918456,
+                "header": 0.40051110459396827,
+                "footer": 0.5257904562503706,
+                "number": 0.4055626732044467,
+                "footnote": 0.11116149510532733,
+                "reference": 0.7854079628422511
+              }
+            },
+            "unit": "fraction_0_to_1",
+            "reference_check": "not_officially_comparable",
+            "reading_order": {
+              "correct_pairs": 388671,
+              "matched_pairs": 397509,
+              "all_gt_pairs": 546614,
+              "matched_elements": 22694,
+              "gt_ordered_elements": 27582,
+              "pair_accuracy": 0.9777665411349177,
+              "matched_element_recall": 0.8227829744035966,
+              "end_to_end_correct_pair_fraction": 0.7110520403795
+            },
+            "polygon_segm_AP": 0.5027206608921475,
+            "polygon_segm_AP50": 0.6508025340596614
+          },
+          "coverage": null,
+          "error": null
+        }
+      ],
+      "next_action": "OmniDocBench多边形和order覆盖mask/排序；使用支持pp_doclayout_v3的Transformers。"
+    }
+  ],
+  "supplemental_updated_at": "2026-09-05T15:25:21.596769+00:00",
+  "supplemental_summary": "supplemental_20260905/summary.json"
+}

@@ -1,0 +1,221 @@
+{
+  "schema_version": 1,
+  "sources": {},
+  "models": [
+    {
+      "sequence": 104,
+      "model_id": "microsoft/dit-large-finetuned-rvlcdip",
+      "runner_family": "native_script",
+      "adapter": "native_labels",
+      "state": "full_inference_and_public_scoring_verified",
+      "dataset": {
+        "id": "RVL-CDIP",
+        "split": "test",
+        "note": [
+          "RVL-CDIP test\n39,999 张，跳过 1 张损坏图"
+        ],
+        "native_scope": {
+          "id": "aharley/rvl_cdip",
+          "name": "RVL-CDIP",
+          "split": "test",
+          "image_count": 39999,
+          "skipped_corrupt_images": 1,
+          "expected_image_count": 40000,
+          "class_count": 16,
+          "class_names": [
+            "letter",
+            "form",
+            "email",
+            "handwritten",
+            "advertisement",
+            "scientific report",
+            "scientific publication",
+            "specification",
+            "file folder",
+            "news article",
+            "budget",
+            "invoice",
+            "presentation",
+            "questionnaire",
+            "resume",
+            "memo"
+          ]
+        },
+        "relation": "native_e07_registered_scope",
+        "index_source": "native loader GT, materialized as classification_annotations.json in the native phase directory",
+        "data_containers": [
+          "dataset/RVL-CDIP/cache/aharley___rvl_cdip/default/1.0.0/b9e57261da1599f0f1a4a03abe42d47bfa600a4fd3d3297cd0d0d45309085b23/rvl_cdip-test-00000-of-00010.arrow",
+          "dataset/RVL-CDIP/cache/aharley___rvl_cdip/default/1.0.0/b9e57261da1599f0f1a4a03abe42d47bfa600a4fd3d3297cd0d0d45309085b23/rvl_cdip-test-00001-of-00010.arrow",
+          "dataset/RVL-CDIP/cache/aharley___rvl_cdip/default/1.0.0/b9e57261da1599f0f1a4a03abe42d47bfa600a4fd3d3297cd0d0d45309085b23/rvl_cdip-test-00002-of-00010.arrow",
+          "dataset/RVL-CDIP/cache/aharley___rvl_cdip/default/1.0.0/b9e57261da1599f0f1a4a03abe42d47bfa600a4fd3d3297cd0d0d45309085b23/rvl_cdip-test-00003-of-00010.arrow",
+          "dataset/RVL-CDIP/cache/aharley___rvl_cdip/default/1.0.0/b9e57261da1599f0f1a4a03abe42d47bfa600a4fd3d3297cd0d0d45309085b23/rvl_cdip-test-00004-of-00010.arrow",
+          "dataset/RVL-CDIP/cache/aharley___rvl_cdip/default/1.0.0/b9e57261da1599f0f1a4a03abe42d47bfa600a4fd3d3297cd0d0d45309085b23/rvl_cdip-test-00005-of-00010.arrow",
+          "dataset/RVL-CDIP/cache/aharley___rvl_cdip/default/1.0.0/b9e57261da1599f0f1a4a03abe42d47bfa600a4fd3d3297cd0d0d45309085b23/rvl_cdip-test-00006-of-00010.arrow",
+          "dataset/RVL-CDIP/cache/aharley___rvl_cdip/default/1.0.0/b9e57261da1599f0f1a4a03abe42d47bfa600a4fd3d3297cd0d0d45309085b23/rvl_cdip-test-00007-of-00010.arrow",
+          "dataset/RVL-CDIP/cache/aharley___rvl_cdip/default/1.0.0/b9e57261da1599f0f1a4a03abe42d47bfa600a4fd3d3297cd0d0d45309085b23/rvl_cdip-test-00008-of-00010.arrow",
+          "dataset/RVL-CDIP/cache/aharley___rvl_cdip/default/1.0.0/b9e57261da1599f0f1a4a03abe42d47bfa600a4fd3d3297cd0d0d45309085b23/rvl_cdip-test-00009-of-00010.arrow"
+        ]
+      },
+      "qualification": "native_registered_scope",
+      "limitations": [
+        "Capture-ready is a code integration state, not a claim that inference has passed.",
+        "Unobserved native Top-5 is unavailable; aggregate scores are not predictions."
+      ],
+      "num_classes": 16,
+      "expected_images": 39999,
+      "native_script": {
+        "script": "inference/native/run_model.py",
+        "script_sha256": "40c62ce7b7f7a9075202c4c588a8c18ccf39933935b70937a873771fafde8179",
+        "loop_lineno": 250,
+        "labels": "labels",
+        "prediction": "predictions",
+        "ranking": null,
+        "classes": "logits.shape[-1]",
+        "loader_kind": "torch",
+        "label_position": 1,
+        "framework": "torch",
+        "original_script_sha256": "58ddc1e40d1d5150a7bee2f5fa51d305aabe169c57020b99d6722f89b0e2f0d8",
+        "original_loop_lineno": 239,
+        "original_path": "code/dit-large-finetuned-rvlcdip.py",
+        "ported_script_sha256": "8a4f933711d61aed62c95e86431f7f45f439d7ef04911eb9c480b5bfa2b511b7"
+      },
+      "output_relative_path": "result/run_001/full/m104",
+      "supports_max_samples": false,
+      "runtime": {
+        "batch_size": 64,
+        "workers": 8,
+        "warmup": 10
+      },
+      "weights_files": [
+        {
+          "path": "models--microsoft--dit-large-finetuned-rvlcdip/.no_exist/38c9854c991d465a7b48030931fb1971b0a05313/model.safetensors",
+          "size": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "models--microsoft--dit-large-finetuned-rvlcdip/.no_exist/38c9854c991d465a7b48030931fb1971b0a05313/model.safetensors.index.json",
+          "size": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "models--microsoft--dit-large-finetuned-rvlcdip/refs/main",
+          "size": 40,
+          "sha256": "1de5ee3591d867bd9a4093431bc6c27902f47985914d73b5d36397879d02f46b"
+        },
+        {
+          "path": "models--microsoft--dit-large-finetuned-rvlcdip/snapshots/38c9854c991d465a7b48030931fb1971b0a05313/config.json",
+          "size": 1792,
+          "sha256": "63ac52861495887d00e2175957b3e489d3a724613f8b01c542a06c6495856e79"
+        },
+        {
+          "path": "models--microsoft--dit-large-finetuned-rvlcdip/snapshots/38c9854c991d465a7b48030931fb1971b0a05313/preprocessor_config.json",
+          "size": 302,
+          "sha256": "e04b5163749dcc966092f2dd359d88ed499f1ed5d3d8b1095d9b9d7f54b1c8be"
+        },
+        {
+          "path": "models--microsoft--dit-large-finetuned-rvlcdip/snapshots/38c9854c991d465a7b48030931fb1971b0a05313/pytorch_model.bin",
+          "size": 1213532225,
+          "sha256": "819c39abe94292bfb9e2992a70053e49968b71563a352f156167b5f024499fac"
+        }
+      ],
+      "dataset_files": [
+        "RVL-CDIP/cache/aharley___rvl_cdip/default/1.0.0/b9e57261da1599f0f1a4a03abe42d47bfa600a4fd3d3297cd0d0d45309085b23/rvl_cdip-test-00000-of-00010.arrow",
+        "RVL-CDIP/cache/aharley___rvl_cdip/default/1.0.0/b9e57261da1599f0f1a4a03abe42d47bfa600a4fd3d3297cd0d0d45309085b23/rvl_cdip-test-00001-of-00010.arrow",
+        "RVL-CDIP/cache/aharley___rvl_cdip/default/1.0.0/b9e57261da1599f0f1a4a03abe42d47bfa600a4fd3d3297cd0d0d45309085b23/rvl_cdip-test-00002-of-00010.arrow",
+        "RVL-CDIP/cache/aharley___rvl_cdip/default/1.0.0/b9e57261da1599f0f1a4a03abe42d47bfa600a4fd3d3297cd0d0d45309085b23/rvl_cdip-test-00003-of-00010.arrow",
+        "RVL-CDIP/cache/aharley___rvl_cdip/default/1.0.0/b9e57261da1599f0f1a4a03abe42d47bfa600a4fd3d3297cd0d0d45309085b23/rvl_cdip-test-00004-of-00010.arrow",
+        "RVL-CDIP/cache/aharley___rvl_cdip/default/1.0.0/b9e57261da1599f0f1a4a03abe42d47bfa600a4fd3d3297cd0d0d45309085b23/rvl_cdip-test-00005-of-00010.arrow",
+        "RVL-CDIP/cache/aharley___rvl_cdip/default/1.0.0/b9e57261da1599f0f1a4a03abe42d47bfa600a4fd3d3297cd0d0d45309085b23/rvl_cdip-test-00006-of-00010.arrow",
+        "RVL-CDIP/cache/aharley___rvl_cdip/default/1.0.0/b9e57261da1599f0f1a4a03abe42d47bfa600a4fd3d3297cd0d0d45309085b23/rvl_cdip-test-00007-of-00010.arrow",
+        "RVL-CDIP/cache/aharley___rvl_cdip/default/1.0.0/b9e57261da1599f0f1a4a03abe42d47bfa600a4fd3d3297cd0d0d45309085b23/rvl_cdip-test-00008-of-00010.arrow",
+        "RVL-CDIP/cache/aharley___rvl_cdip/default/1.0.0/b9e57261da1599f0f1a4a03abe42d47bfa600a4fd3d3297cd0d0d45309085b23/rvl_cdip-test-00009-of-00010.arrow"
+      ],
+      "environment": "e07.txt",
+      "native_precision": "FP32",
+      "backend": "transformers",
+      "timing_alignment": {
+        "forward": "Same event/current-stream/synchronize semantics; wrapper preserves exactly one native call. MX runtime differs.",
+        "e2e": "Native DataLoader fetch to CPU prediction availability; worker-prefetch boundary differs from Example. Does not include subsequent metrics or record writes.",
+        "worker_prefetch": true,
+        "starts_after_spider_composition": false,
+        "native_metric_operations_before_prediction_readiness": [],
+        "model_load": "Sum of measured native construction/load/placement blocks, not Example contiguous block.",
+        "warmup": "Native repeated preprocessed first batch; native count retained; synchronized before/after. Unlike Example, preprocessing/transfer/softmax-to-CPU are outside the warmup interval.",
+        "evaluation": "Native aggregate evaluation not measured separately; evaluation_seconds=null. Public scoring duration is outside native timing.",
+        "resume": "No resume; repeated native phase archives previous output; resume_segments=1.",
+        "comparison_valid": false
+      },
+      "label_mapping": [
+        {
+          "id": 0,
+          "name": "letter"
+        },
+        {
+          "id": 1,
+          "name": "form"
+        },
+        {
+          "id": 2,
+          "name": "email"
+        },
+        {
+          "id": 3,
+          "name": "handwritten"
+        },
+        {
+          "id": 4,
+          "name": "advertisement"
+        },
+        {
+          "id": 5,
+          "name": "scientific report"
+        },
+        {
+          "id": 6,
+          "name": "scientific publication"
+        },
+        {
+          "id": 7,
+          "name": "specification"
+        },
+        {
+          "id": 8,
+          "name": "file folder"
+        },
+        {
+          "id": 9,
+          "name": "news article"
+        },
+        {
+          "id": 10,
+          "name": "budget"
+        },
+        {
+          "id": 11,
+          "name": "invoice"
+        },
+        {
+          "id": 12,
+          "name": "presentation"
+        },
+        {
+          "id": 13,
+          "name": "questionnaire"
+        },
+        {
+          "id": 14,
+          "name": "resume"
+        },
+        {
+          "id": 15,
+          "name": "memo"
+        }
+      ],
+      "layout_reference": {
+        "branch": "gaoyonghan/mx",
+        "commit": "208733e1562fca75b7128772ca2cd587943d9012",
+        "platform": "mx"
+      }
+    }
+  ]
+}

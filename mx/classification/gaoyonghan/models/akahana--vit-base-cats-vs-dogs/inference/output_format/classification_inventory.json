@@ -1,0 +1,43 @@
+{
+  "schema": "model-eval/classification-inventory/v1",
+  "scope": "One independent MX GPU classification model",
+  "models": [
+    {
+      "sequence": 154,
+      "model_id": "akahana/vit-base-cats-vs-dogs",
+      "dataset": {
+        "id": "Cats vs Dogs",
+        "split": "deterministic_20pct_holdout_from_train",
+        "note": [
+          "Cats vs Dogs\ntrain 分层抽取 20%，seed=42\n4,682 张，非官方 test"
+        ],
+        "native_scope": {
+          "name": "Cats vs Dogs",
+          "source": "microsoft/cats_vs_dogs",
+          "split": "deterministic_20pct_holdout_from_train",
+          "split_note": "microsoft/cats_vs_dogs has no official test split; stratified holdout test_size=0.2, seed=42",
+          "label_column": "labels",
+          "class_names": [
+            "cat",
+            "dog"
+          ],
+          "image_count": 4682
+        },
+        "relation": "native_e07_registered_scope",
+        "index_source": "native loader GT, materialized as classification_annotations.json in the native phase directory",
+        "data_containers": [
+          "dataset/cats_vs_dogs/data/train-00000-of-00002.parquet",
+          "dataset/cats_vs_dogs/data/train-00001-of-00002.parquet"
+        ]
+      },
+      "qualification": "native_registered_scope",
+      "limitations": [
+        "Capture-ready is a code integration state, not a claim that inference has passed.",
+        "Unobserved native Top-5 is unavailable; aggregate scores are not predictions."
+      ],
+      "num_classes": 2,
+      "expected_images": 4682,
+      "adapter": "native_labels"
+    }
+  ]
+}

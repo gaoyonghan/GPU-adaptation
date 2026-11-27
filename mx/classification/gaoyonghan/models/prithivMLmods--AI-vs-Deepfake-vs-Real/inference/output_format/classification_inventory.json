@@ -1,0 +1,51 @@
+{
+  "schema": "model-eval/classification-inventory/v1",
+  "scope": "One independent MX GPU classification model",
+  "models": [
+    {
+      "sequence": 124,
+      "model_id": "prithivMLmods/AI-vs-Deepfake-vs-Real",
+      "dataset": {
+        "id": "AI-vs-Deepfake-vs-Real",
+        "split": "full_local_dataset",
+        "note": [
+          "AI-vs-Deepfake-vs-Real\n本地全部 9,999 张\n无独立 test"
+        ],
+        "native_scope": {
+          "name": "AI-vs-Deepfake-vs-Real",
+          "source": "prithivMLmods/AI-vs-Deepfake-vs-Real",
+          "split": "full_local_dataset",
+          "split_note": "本地数据集仅提供完整数据，没有独立官方 test split；结果可能与模型训练数据重叠，不应视为独立泛化性能。",
+          "image_count": 9999,
+          "class_count": 3,
+          "class_names": [
+            "Artificial",
+            "Deepfake",
+            "Real"
+          ],
+          "class_counts": {
+            "Artificial": 3333,
+            "Deepfake": 3333,
+            "Real": 3333
+          }
+        },
+        "relation": "native_e07_registered_scope",
+        "index_source": "native loader GT, materialized as classification_annotations.json in the native phase directory",
+        "data_containers": [
+          "dataset/AI-vs-Deepfake-vs-Real/0000.parquet",
+          "dataset/AI-vs-Deepfake-vs-Real/0001.parquet",
+          "dataset/AI-vs-Deepfake-vs-Real/0002.parquet",
+          "dataset/AI-vs-Deepfake-vs-Real/0003.parquet"
+        ]
+      },
+      "qualification": "native_registered_scope",
+      "limitations": [
+        "Capture-ready is a code integration state, not a claim that inference has passed.",
+        "Unobserved native Top-5 is unavailable; aggregate scores are not predictions."
+      ],
+      "num_classes": 3,
+      "expected_images": 9999,
+      "adapter": "native_labels"
+    }
+  ]
+}

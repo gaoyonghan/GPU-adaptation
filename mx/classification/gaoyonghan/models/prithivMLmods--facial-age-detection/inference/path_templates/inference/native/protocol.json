@@ -1,0 +1,84 @@
+{
+  "sequence": 99,
+  "model_id": "prithivMLmods/facial-age-detection",
+  "model_path": "__MODEL_ROOT__/weights/prithivMLmods/facial-age-detection",
+  "model_card": "https://huggingface.co/prithivMLmods/facial-age-detection/blob/ceb570360eb639cf8496deabc3eeb4da4cb66bcc/README.md",
+  "model_files_sha256": {
+    "model.safetensors": "fbe2101f827826eba65938ed4e574788e3bf3542a179b1d352c2f8b255452c68",
+    "config.json": "3bfe9a20835902987ab8977e69a09ca4d68ef97b7cbf1f0dc868368855e39ee2",
+    "preprocessor_config.json": "9b36b57ebaf20f09bf4c22100ccc21877ea6bfe5aead0c00c59f8af8ccefacfc",
+    "README.md": "6c5d90ad26e8e954164ec0783f6ce93aeff4cef7927995b3fc650e5fc6036f00"
+  },
+  "dataset_id": "prithivMLmods/Face-Age-10K",
+  "dataset_path": "__DATASET_ROOT__/faceage_holdout_unpublished/dataset/0000.parquet",
+  "dataset_sha256": "0a1ff63c0558467ce8aa1ebc27142c1e556d8ca4cf07131706ee5c2d4623604b",
+  "split": "train",
+  "scope": "all_published_source_rows",
+  "images": 9165,
+  "class_names": [
+    "age 01-10",
+    "age 11-20",
+    "age 21-30",
+    "age 31-40",
+    "age 41-55",
+    "age 56-65",
+    "age 66-80",
+    "age 80 +"
+  ],
+  "class_counts": [
+    2474,
+    1181,
+    1523,
+    1010,
+    1181,
+    799,
+    653,
+    344
+  ],
+  "versions": {
+    "torch": "2.5.1+cu121",
+    "transformers": "4.50.0",
+    "numpy": "1.26.4",
+    "Pillow": "11.1.0",
+    "pyarrow": "19.0.1",
+    "scikit-learn": "1.5.2",
+    "safetensors": "0.5.3"
+  },
+  "official_reference": {
+    "accuracy": 0.8225,
+    "macro_f1": 0.7971,
+    "weighted_f1": 0.8223
+  },
+  "checkpoint_reference": {
+    "checkpoint": "checkpoint-1722",
+    "epoch": 6.0,
+    "eval_accuracy": 0.8224768139661757,
+    "note": "本地官方trainer_state.json记录与模型卡四位小数吻合；仍未证明评估图片逐一相同或独立于训练。"
+  },
+  "batch_size": 1,
+  "precision": "float32",
+  "inference": "从固定模型卡抽取未修改classify_image函数及id2label，直接执行。仅将processor输出移到CUDA，不启动Gradio。",
+  "scoring": "项目补充scikit-learn classification_report/accuracy_score/confusion_matrix，使用未舍入logits的argmax；保留原函数三位小数概率作为展示审计。没有找到作者批量计分源代码，不声称计分脚本原生。",
+  "dataset_relation": "author_public_source_not_verified_holdout",
+  "fidelity": "official_inference_adapter",
+  "independent_test": "unverified",
+  "known_differences": [
+    "公开split名train保持不变，不自行划test；每类数量与模型卡报告一致不等于样本身份/训练独立性已证实。",
+    "模型卡文字提到512，但发布权重config和processor均为224；以发布配置224及配套原函数为准，不擅自改512。",
+    "模型卡单图示例默认CPU；本入口同一函数使用CUDA FP32，batch1，禁用TF32与AMP。",
+    "公开推理函数将展示概率舍入至3位；计分使用未舍入logits，避免人为引入并列。舍入导致的top1差异另行记录。",
+    "Transformers4.50.0与权重config一致；其余依赖为冻结的现有兼容环境，未声称还原完整作者历史软件栈。"
+  ],
+  "cuda": "12.1",
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "source_sha256": {
+    "run_m99.py": "b6a59ff0226b3d8904536bcc061398fd6c3ded6bdc401dbe5a124d018bf0934c",
+    "run_m99.sh": "fac386a21af9628c961c8225c6864624eca9f0af51fdb2b55619c07df0eb516f",
+    "models_m99.json": "e212b3d7a5d59f4db322541582f4e91e4de0f2d871834c7d6ecc925fd14a8ab6",
+    "README_m99.md": "390020a63fdca9460c8744c46307adab62e5fc995879d6e79ee94806b10f920c"
+  },
+  "full_source": true,
+  "tf32": false,
+  "amp": false,
+  "official_exact_reproduction": false
+}

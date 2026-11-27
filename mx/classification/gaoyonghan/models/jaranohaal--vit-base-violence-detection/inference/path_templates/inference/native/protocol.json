@@ -1,0 +1,119 @@
+{
+  "sequence": 94,
+  "model_id": "jaranohaal/vit-base-violence-detection",
+  "task_type": "image-classification",
+  "model_path": "__MODEL_ROOT__/weights/jaranohaal/vit-base-violence-detection",
+  "hf_revision": "31931091dfd4ea08a30c42be0db8e1488263cbd5",
+  "model_card": "https://huggingface.co/jaranohaal/vit-base-violence-detection",
+  "weight_relationship": "发布的safetensors实际包含152个原生timm参数键，与同目录pytorch_model.bin逐张量完全相同；无需转换。HF配置及示例与实际参数格式不符，本入口依作者timm代码严格加载。",
+  "files_sha256": {
+    "model.safetensors": "9eec3237288742eb4267cb2cbbbdacba5bee889be4673215bfe40e1dbd5621a5",
+    "config.json": "03652439b83bb9626e74675127b66e0278da16d74660e581a3be48663f75c626",
+    "preprocessor_config.json": "5e6895a8a80efa00a98656b6c24d202d7582614ceea87aa122f861120dc833c0",
+    "README.md": "eec62e115b63cf716cdd6c6cda33580b6afe476f5e24a55185e754a832f87076"
+  },
+  "source_revision": "0961a54da65dffffd95ac3abda869e4cbc4a674a",
+  "source_url": "https://raw.githubusercontent.com/jaranohaal/vit-base-violence-detection/0961a54da65dffffd95ac3abda869e4cbc4a674a/ViT-base-Violence-Detection.ipynb",
+  "source_sha256": "a1a229fac9961a1797752139e3a02eb826ab3b140ee0d8376e92bc8a7a0aa7ec",
+  "dataset": "Kaggle abdulmananraja/real-life-violence-situations (11K images)",
+  "dataset_url": "https://www.kaggle.com/datasets/abdulmananraja/real-life-violence-situations",
+  "dataset_root": "__DATASET_ROOT__/violence_images_11k/new_violence",
+  "zip_path": "__DATASET_ROOT__/violence_images_11k/real-life-violence-situations.zip",
+  "zip_sha256": "de3f5e4266a0d67a7767028154b37cf912cb350c50fa0ad26e2384f55e64a803",
+  "images": 11073,
+  "class_counts": {
+    "non_violence": 5231,
+    "violence": 5842
+  },
+  "class_to_idx": {
+    "non_violence": 0,
+    "violence": 1
+  },
+  "split": "作者ImageFolder顺序；random_split([7753,1660,1660], generator=torch.Generator().manual_seed(42))，只评测第三段test",
+  "test_images": 1660,
+  "test_class_counts": {
+    "non_violence": 771,
+    "violence": 889
+  },
+  "full_manifest_sha256": "ada2417914b53034d059821ff838e3b126e8d0f67c8161542ea371e3d0930155",
+  "split_indices_sha256": {
+    "train": "180348631ec725a9667404bbc914d6562c063e60db5ea1da7955385cf4d4416b",
+    "valid": "8c4f0b2b7d98dcd880d0cd359756be9b50af3d187138441dbb0497d05d5e39bb",
+    "test": "2a1422663a33a241ef4042997b222e0f042289f032b954d1b86211981cb7ed45"
+  },
+  "data_audit": {
+    "decode_failures": 0,
+    "exact_duplicate_groups": 108,
+    "cross_split_duplicate_groups": 44,
+    "train_test_duplicate_groups": 23,
+    "test_images_matching_train": 26,
+    "conflicting_label_duplicate_groups": 7,
+    "policy": "保留作者划分和标签，披露问题，不静默去重或重标"
+  },
+  "preprocessing": "直接执行作者cell 8的img_size/data_transforms赋值；ImageFolder RGB，Resize((224,224))默认双线性，ToTensor，mean/std均0.5；不使用HF处理器或额外裁剪",
+  "inference": {
+    "architecture": "vit_base_patch16_224",
+    "num_classes": 2,
+    "batch_size": 64,
+    "dtype": "float32",
+    "amp": false,
+    "tf32": false,
+    "attention": "timm 0.9.16默认实现，不自行改注意力算子"
+  },
+  "evaluator": "作者cell 19 eval_violence，函数体不修改；使用全测试1660张时其全局val_len同为1660",
+  "metrics": [
+    "native_accuracy_percent"
+  ],
+  "official_references": {
+    "model_card_accuracy_percent": 98.8,
+    "notebook_vit_base_accuracy_percent": 98.49,
+    "checkpoint_reference_mapping_verified": false,
+    "note": "两个官方数字不同，未取得笔记本vit1.pth与发布权重的对应证明，不择一当作已确认基准。笔记本Loss为最后一个batch的平滑交叉熵，不当作全集平均loss。"
+  },
+  "versions": {
+    "torch": "2.5.1+cu121",
+    "torchvision": "0.20.1+cu121",
+    "timm": "0.9.16",
+    "Pillow": "11.1.0",
+    "numpy": "1.26.4",
+    "safetensors": "0.5.3"
+  },
+  "author_versions_visible": {
+    "python": "3.10",
+    "torch": "2.2.1+cu121",
+    "torchvision": "0.17.1+cu121",
+    "timm": "0.9.16",
+    "safetensors": "0.4.2"
+  },
+  "native_model": true,
+  "native_evaluator": true,
+  "fidelity": "reference_baseline",
+  "dataset_relation": "original_protocol_incomplete",
+  "officially_comparable": false,
+  "case_type": "special",
+  "special_tags": [
+    "training_eval_overlap",
+    "annotation_exception",
+    "variant_mapping_uncertain",
+    "framework_numeric_difference"
+  ],
+  "known_differences": [
+    "同一图片版来源和公开划分代码，不是另选替代集；作者未附历史逐文件清单/哈希，无法证明上游版本与历史test成员逐一相同。",
+    "timm与作者同版；复用当前torch/torchvision/CUDA环境，未完全重建历史软件栈。",
+    "只运行原生accuracy函数，不执行训练、下载预训练权重、原笔记本多余的loss.backward或其他模型单元。",
+    "保留重复及冲突标签风险，结果不能视为无训练泄漏的泛化证明。"
+  ],
+  "python": "3.11.16",
+  "cuda": "12.1",
+  "device": "NVIDIA GeForce RTX 4090",
+  "model_parameter_count": 85800194,
+  "model_source_sha256": "8dc607d12266dbe12c0b35e2e9832cf132b9ad052eb2f2ae50d402fa07f88ba3",
+  "snapshot_sha256": {
+    "README_m94.md": "9af5217a9bc0c1a63344ded2db91df71160257b8d32aee323ad3d633e9f8dfe2",
+    "models_m94.json": "69e05b34c240ee083144f1898f5a793c27b3e0ec94bf1c5f9b1ca941d8a85aa2",
+    "run_m94.sh": "bf8b6a0a23acd9645388d242a00b9ca7cafcb12ef6e6ab9080ce998f2dfe9fc3",
+    "author.ipynb": "a1a229fac9961a1797752139e3a02eb826ab3b140ee0d8376e92bc8a7a0aa7ec",
+    "run_m94.py": "885909a2299c1da677e224163723aed8e83002b66d71c3cea8ffeddeb61e3341"
+  },
+  "protocol_fingerprint": "f7d559e99d864ffb21156898142f6e3711ad9339a339b9a0ba3c9a2f40d3a845"
+}

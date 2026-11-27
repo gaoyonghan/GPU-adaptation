@@ -1,0 +1,22 @@
+{
+  "sequence": 34,
+  "model_id": "foduucom/plant-leaf-detection-and-classification",
+  "source_archive_hash_matches": true,
+  "source_archive_sha256": "cd6d63a258a5ad5f2ec112a70403de2b30e83537acb049a8b6f334f31da33509",
+  "prepared_entry_source_sha256": "4dc00fa31c861123e8ef86c5c9b2ef993efe81839ca8825381ed9bc7aa326145",
+  "local_entry_sha256": "2a06859934da2da89391bafe5238353157eac35beab339e5792ef5c3eb9ff75e",
+  "local_entry": "inference/native/run_m34_native.py",
+  "central_dispatch_in_entry": false,
+  "unexpected_external_links": [],
+  "declared_dataset_links": [],
+  "broken_links": [],
+  "path_template_count": 408,
+  "state": "entrypoint_verified_full_run_pending",
+  "validation": {
+    "returncode": 0,
+    "python": "/home/ubuntu/gaoyonghan/gpu/.venv-m12-ultralytics8043/bin/python",
+    "checked_at": "2026-11-10T15:47:11.569873+08:00",
+    "scope": "native help/import/path check only; not full inference"
+  },
+  "smoke_verification": null
+}

@@ -1,0 +1,584 @@
+{
+ "mode": "groups",
+ "_comment": [
+  "170 dima806/medicinal_plants_image_detection 的类别簇映射表。",
+  "模型 52 个输出类里有 6 对是同一株植物的两种拼写，指向 zip 里同一个目录，",
+  "故按 ImageNet 处理同义类的惯例合并成 46 个簇：",
+  "  评测时每簇得分 = logsumexp(该簇各模型类的 logits)（等价于簇内概率求和），",
+  "  再在 46 个簇上 argmax，与写入 parquet 的簇号比对。",
+  "同时给一个 raw 对照口径：先在 52 类里 argmax，再把结果折叠到簇。",
+  "parquet 的 label 写的是【簇号 0..45】，不是模型索引 —— 这是 groups 模式的要求。"
+ ],
+ "model": "dima806/medicinal_plants_image_detection",
+ "dataset_zip": "sydney31/Indian_Medicinal_Plants_and_Leaf_Dataset_Large :: med.zip",
+ "n_model_classes": 52,
+ "n_groups": 46,
+ "model_labels": {
+  "0": "Amla",
+  "1": "Curry",
+  "2": "Betel",
+  "3": "Bamboo",
+  "4": "Palak(Spinach)",
+  "5": "Coriender",
+  "6": "Ashoka",
+  "7": "Seethapala",
+  "8": "Lemon_grass",
+  "9": "Pappaya",
+  "10": "Curry_Leaf",
+  "11": "Lemon",
+  "12": "Nooni",
+  "13": "Henna",
+  "14": "Mango",
+  "15": "Doddpathre",
+  "16": "Amruta_Balli",
+  "17": "Betel_Nut",
+  "18": "Tulsi",
+  "19": "Pomegranate",
+  "20": "Castor",
+  "21": "Jackfruit",
+  "22": "Insulin",
+  "23": "Pepper",
+  "24": "Raktachandini",
+  "25": "Aloevera",
+  "26": "Jasmine",
+  "27": "Doddapatre",
+  "28": "Neem",
+  "29": "Geranium",
+  "30": "Rose",
+  "31": "Gauva",
+  "32": "Hibiscus",
+  "33": "Nithyapushpa",
+  "34": "Wood_sorel",
+  "35": "Tamarind",
+  "36": "Guava",
+  "37": "Bhrami",
+  "38": "Sapota",
+  "39": "Basale",
+  "40": "Avacado",
+  "41": "Ashwagandha",
+  "42": "Nagadali",
+  "43": "Arali",
+  "44": "Ekka",
+  "45": "Ganike",
+  "46": "Tulasi",
+  "47": "Honge",
+  "48": "Mint",
+  "49": "Catharanthus",
+  "50": "Papaya",
+  "51": "Brahmi"
+ },
+ "groups": [
+  {
+   "group": 0,
+   "label": "Amla",
+   "model_idx": [
+    0
+   ],
+   "dir": "all_dataset/Amla-Phyllanthus emlica Linn",
+   "n_images": 214,
+   "confidence": "high",
+   "note": ""
+  },
+  {
+   "group": 1,
+   "label": "Curry / Curry_Leaf",
+   "model_idx": [
+    1,
+    10
+   ],
+   "dir": "all_dataset/Curry Leaf-Murraya koenigii",
+   "n_images": 484,
+   "confidence": "high",
+   "note": "同物异名：Curry / Curry_Leaf 都指咖喱叶"
+  },
+  {
+   "group": 2,
+   "label": "Betel",
+   "model_idx": [
+    2
+   ],
+   "dir": "all_dataset/Betel-Piper betle",
+   "n_images": 441,
+   "confidence": "high",
+   "note": ""
+  },
+  {
+   "group": 3,
+   "label": "Bamboo",
+   "model_idx": [
+    3
+   ],
+   "dir": "all_dataset/Bamboo-Bambusoideae",
+   "n_images": 265,
+   "confidence": "high",
+   "note": ""
+  },
+  {
+   "group": 4,
+   "label": "Palak(Spinach)",
+   "model_idx": [
+    4
+   ],
+   "dir": "all_dataset/Palak(Spinach)-Spinacia oleracea",
+   "n_images": 234,
+   "confidence": "high",
+   "note": ""
+  },
+  {
+   "group": 5,
+   "label": "Coriender",
+   "model_idx": [
+    5
+   ],
+   "dir": "all_dataset/Coriander-Coriandrum sativum",
+   "n_images": 236,
+   "confidence": "high",
+   "note": "模型拼作 Coriender"
+  },
+  {
+   "group": 6,
+   "label": "Ashoka",
+   "model_idx": [
+    6
+   ],
+   "dir": "all_dataset/Ashoka-Saraca asoca",
+   "n_images": 228,
+   "confidence": "high",
+   "note": "注意与 Seethaashoka 是两个目录，模型只标了 Ashoka"
+  },
+  {
+   "group": 7,
+   "label": "Seethapala",
+   "model_idx": [
+    7
+   ],
+   "dir": "all_dataset/Seethapala",
+   "n_images": 115,
+   "confidence": "high",
+   "note": ""
+  },
+  {
+   "group": 8,
+   "label": "Lemon_grass",
+   "model_idx": [
+    8
+   ],
+   "dir": "all_dataset/Lemon grass-Cymbopogon citratus",
+   "n_images": 155,
+   "confidence": "high",
+   "note": ""
+  },
+  {
+   "group": 9,
+   "label": "Pappaya / Papaya",
+   "model_idx": [
+    9,
+    50
+   ],
+   "dir": "all_dataset/Pappaya-Carica papaya",
+   "n_images": 282,
+   "confidence": "high",
+   "note": "同物异名：Pappaya / Papaya"
+  },
+  {
+   "group": 10,
+   "label": "Lemon",
+   "model_idx": [
+    11
+   ],
+   "dir": "all_dataset/Lemon-Citrus limon",
+   "n_images": 327,
+   "confidence": "high",
+   "note": "与 Lemon grass 是两个不同目录"
+  },
+  {
+   "group": 11,
+   "label": "Nooni",
+   "model_idx": [
+    12
+   ],
+   "dir": "all_dataset/Nooni-Morinda citrifolia",
+   "n_images": 219,
+   "confidence": "high",
+   "note": ""
+  },
+  {
+   "group": 12,
+   "label": "Henna",
+   "model_idx": [
+    13
+   ],
+   "dir": "all_dataset/Henna-Lausonia inermis",
+   "n_images": 224,
+   "confidence": "high",
+   "note": ""
+  },
+  {
+   "group": 13,
+   "label": "Mango",
+   "model_idx": [
+    14
+   ],
+   "dir": "all_dataset/Mango_Mangifera indica",
+   "n_images": 312,
+   "confidence": "high",
+   "note": ""
+  },
+  {
+   "group": 14,
+   "label": "Doddpathre / Doddapatre",
+   "model_idx": [
+    15,
+    27
+   ],
+   "dir": "all_dataset/Doddapatre-Plectanthus amboinicus",
+   "n_images": 289,
+   "confidence": "high",
+   "note": "同物异名：Doddpathre / Doddapatre"
+  },
+  {
+   "group": 15,
+   "label": "Amruta_Balli",
+   "model_idx": [
+    16
+   ],
+   "dir": "all_dataset/Amruta Balli-Tinospora cordifolia",
+   "n_images": 237,
+   "confidence": "high",
+   "note": ""
+  },
+  {
+   "group": 16,
+   "label": "Betel_Nut",
+   "model_idx": [
+    17
+   ],
+   "dir": "all_dataset/Betel_Nut_Areca catechu",
+   "n_images": 147,
+   "confidence": "high",
+   "note": "与 Betel 是不同种（槟榔 vs 蒌叶）"
+  },
+  {
+   "group": 17,
+   "label": "Tulsi / Tulasi",
+   "model_idx": [
+    18,
+    46
+   ],
+   "dir": "all_dataset/Tulasi-Ocimum sanctum_Ocimum sanctum (also known as Holy Basil)",
+   "n_images": 376,
+   "confidence": "high",
+   "note": "同物异名：Tulsi / Tulasi；另有 Holy Basil_ / Sweet Basil_ 两个目录未被模型使用"
+  },
+  {
+   "group": 18,
+   "label": "Pomegranate",
+   "model_idx": [
+    19
+   ],
+   "dir": "all_dataset/Pomegranate-Punica granatum",
+   "n_images": 301,
+   "confidence": "high",
+   "note": ""
+  },
+  {
+   "group": 19,
+   "label": "Castor",
+   "model_idx": [
+    20
+   ],
+   "dir": "all_dataset/Castor-Ricinus communis",
+   "n_images": 284,
+   "confidence": "high",
+   "note": ""
+  },
+  {
+   "group": 20,
+   "label": "Jackfruit",
+   "model_idx": [
+    21
+   ],
+   "dir": "all_dataset/Jackfruit-Artocarpus heterophyllus",
+   "n_images": 167,
+   "confidence": "high",
+   "note": ""
+  },
+  {
+   "group": 21,
+   "label": "Insulin",
+   "model_idx": [
+    22
+   ],
+   "dir": "all_dataset/Insulin",
+   "n_images": 236,
+   "confidence": "medium",
+   "note": "目录名无拉丁名，推断为 Insulin plant (Costus igneus)"
+  },
+  {
+   "group": 22,
+   "label": "Pepper",
+   "model_idx": [
+    23
+   ],
+   "dir": "all_dataset/Pepper-Piper nigrum",
+   "n_images": 155,
+   "confidence": "high",
+   "note": ""
+  },
+  {
+   "group": 23,
+   "label": "Raktachandini",
+   "model_idx": [
+    24
+   ],
+   "dir": "all_dataset/Raktachandini_Pterocarpus santalinus",
+   "n_images": 147,
+   "confidence": "high",
+   "note": ""
+  },
+  {
+   "group": 24,
+   "label": "Aloevera",
+   "model_idx": [
+    25
+   ],
+   "dir": "all_dataset/Aloevera-Aloe barbadensis",
+   "n_images": 278,
+   "confidence": "high",
+   "note": ""
+  },
+  {
+   "group": 25,
+   "label": "Jasmine",
+   "model_idx": [
+    26
+   ],
+   "dir": "all_dataset/Jasmine-Jasmium",
+   "n_images": 308,
+   "confidence": "high",
+   "note": ""
+  },
+  {
+   "group": 26,
+   "label": "Neem",
+   "model_idx": [
+    28
+   ],
+   "dir": "all_dataset/Neem_Azadirachta indica",
+   "n_images": 339,
+   "confidence": "high",
+   "note": ""
+  },
+  {
+   "group": 27,
+   "label": "Geranium",
+   "model_idx": [
+    29
+   ],
+   "dir": "all_dataset/Geranium_ Pelargonium spp. (Genus)",
+   "n_images": 147,
+   "confidence": "high",
+   "note": ""
+  },
+  {
+   "group": 28,
+   "label": "Rose",
+   "model_idx": [
+    30
+   ],
+   "dir": "all_dataset/Rose-Rosa",
+   "n_images": 275,
+   "confidence": "high",
+   "note": ""
+  },
+  {
+   "group": 29,
+   "label": "Gauva / Guava",
+   "model_idx": [
+    31,
+    36
+   ],
+   "dir": "all_dataset/Gauva-Psidium guajava",
+   "n_images": 333,
+   "confidence": "high",
+   "note": "同物异名：Gauva / Guava"
+  },
+  {
+   "group": 30,
+   "label": "Hibiscus",
+   "model_idx": [
+    32
+   ],
+   "dir": "all_dataset/Hibiscus-Hibiscus rosa sinensis",
+   "n_images": 320,
+   "confidence": "high",
+   "note": "与 Gongura_Hibiscus sabdariffa 不同种"
+  },
+  {
+   "group": 31,
+   "label": "Nithyapushpa",
+   "model_idx": [
+    33
+   ],
+   "dir": "all_dataset/Nithyapushpa_Vinca rosea",
+   "n_images": 147,
+   "confidence": "high",
+   "note": ""
+  },
+  {
+   "group": 32,
+   "label": "Wood_sorel",
+   "model_idx": [
+    34
+   ],
+   "dir": "all_dataset/Wood_sorel_ Oxalis spp",
+   "n_images": 147,
+   "confidence": "high",
+   "note": ""
+  },
+  {
+   "group": 33,
+   "label": "Tamarind",
+   "model_idx": [
+    35
+   ],
+   "dir": "all_dataset/Tamarind_Tamarindus indica",
+   "n_images": 177,
+   "confidence": "high",
+   "note": ""
+  },
+  {
+   "group": 34,
+   "label": "Bhrami / Brahmi",
+   "model_idx": [
+    37,
+    51
+   ],
+   "dir": "all_dataset/Brahmi-Bacopa monnieri",
+   "n_images": 251,
+   "confidence": "high",
+   "note": "同物异名：Bhrami / Brahmi"
+  },
+  {
+   "group": 35,
+   "label": "Sapota",
+   "model_idx": [
+    38
+   ],
+   "dir": "all_dataset/Sapota-Manikara zapota",
+   "n_images": 192,
+   "confidence": "high",
+   "note": ""
+  },
+  {
+   "group": 36,
+   "label": "Basale",
+   "model_idx": [
+    39
+   ],
+   "dir": "all_dataset/Basale_Basella alba",
+   "n_images": 250,
+   "confidence": "high",
+   "note": "另有 Malabar_Spinach-Basella alba 同种异名目录"
+  },
+  {
+   "group": 37,
+   "label": "Avacado",
+   "model_idx": [
+    40
+   ],
+   "dir": "all_dataset/Avacado_Persea americana",
+   "n_images": 147,
+   "confidence": "high",
+   "note": "模型拼作 Avacado（原目录同样拼错）"
+  },
+  {
+   "group": 38,
+   "label": "Ashwagandha",
+   "model_idx": [
+    41
+   ],
+   "dir": "all_dataset/Ashwagandha_Withania somnifera",
+   "n_images": 147,
+   "confidence": "high",
+   "note": ""
+  },
+  {
+   "group": 39,
+   "label": "Nagadali",
+   "model_idx": [
+    42
+   ],
+   "dir": "all_dataset/Nagadali_Ruta graveolens",
+   "n_images": 153,
+   "confidence": "high",
+   "note": "另有 Common rue(naagdalli)- Ruta graveolens 同种异名目录"
+  },
+  {
+   "group": 40,
+   "label": "Arali",
+   "model_idx": [
+    43
+   ],
+   "dir": "all_dataset/Arali-Nerium oleander",
+   "n_images": 236,
+   "confidence": "high",
+   "note": "另有 Oleander_Nerium oleander 同种异名目录"
+  },
+  {
+   "group": 41,
+   "label": "Ekka",
+   "model_idx": [
+    44
+   ],
+   "dir": "all_dataset/Ekka-Calotropis gigantea",
+   "n_images": 228,
+   "confidence": "high",
+   "note": "另有 Crown flower_Calotropis gigantea 同种异名目录"
+  },
+  {
+   "group": 42,
+   "label": "Ganike",
+   "model_idx": [
+    45
+   ],
+   "dir": "all_dataset/Ganike-Solanum nigrum",
+   "n_images": 287,
+   "confidence": "medium",
+   "note": "另有 Ganigale（不同目录名）"
+  },
+  {
+   "group": 43,
+   "label": "Honge",
+   "model_idx": [
+    47
+   ],
+   "dir": "all_dataset/Honge-Milletia",
+   "n_images": 253,
+   "confidence": "high",
+   "note": ""
+  },
+  {
+   "group": 44,
+   "label": "Mint",
+   "model_idx": [
+    48
+   ],
+   "dir": "all_dataset/Mint-Mentha",
+   "n_images": 414,
+   "confidence": "high",
+   "note": "另有 Mexican Mint_ （Plectranthus，不同种）"
+  },
+  {
+   "group": 45,
+   "label": "Catharanthus",
+   "model_idx": [
+    49
+   ],
+   "dir": "all_dataset/Catharanthus",
+   "n_images": 135,
+   "confidence": "high",
+   "note": "另有 Madagascar Periwinkle_Catharanthus roseus 同种异名目录"
+  }
+ ]
+}

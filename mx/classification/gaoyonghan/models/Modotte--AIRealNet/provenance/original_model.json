@@ -1,0 +1,86 @@
+{
+  "sequence": 181,
+  "model_id": "Modotte/AIRealNet",
+  "task": "image_classification",
+  "task_name": "图像分类",
+  "reported_result": [
+    {
+      "variant": null,
+      "inference_status": "complete",
+      "accuracy": 0.7469,
+      "forward_seconds": 266.7291018333439,
+      "inference_e2e_seconds": 624.9172103805467,
+      "metric_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/results_full.csv",
+      "timing_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/full/m181/timing.json"
+    }
+  ],
+  "reference": {
+    "source": "https://huggingface.co/Modotte/AIRealNet",
+    "local_card_sha256": "4be2bbb03eb9b22c0bd7d456a0c503f81caedb1be97b381a8114eb4a31efb7a9",
+    "model_index": null,
+    "text_report_values": null,
+    "units": "fractions for extracted accuracy/F1; original model-index units as published",
+    "comparison": "Manual protocol review required; no automatic drop calculation",
+    "note": "Model card metrics are embedded as a remote image; numeric values not verified. Accuracy and reference loss are recorded without inventing the reference."
+  },
+  "model_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/model_index/Modotte/AIRealNet",
+  "model_exists_at_build": true,
+  "dataset": {
+    "id": "classification171_181",
+    "relation": "public_replacement",
+    "split": "accepted core/test 5000 real + 5000 fake; seeded cluster sample",
+    "note": [
+      "Local checkpoint and publisher inference components retained. Offline file paths, eval mode, batching, timing observation and reference scoring are external orchestration."
+    ],
+    "index_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/classification171_200_eval/indices/181.jsonl",
+    "data_containers": []
+  },
+  "environment_id": "classification171-shared_hf",
+  "runner_family": "classification171",
+  "final_result_sources": [
+    {
+      "source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m181/metrics-0.json",
+      "sha256": "8d722b04c5b1502476bd8d43197016c4fe31ab881074987b8c23bda1ecd667ba",
+      "selection": "final_171_200_registry",
+      "source_original": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/full/m181/metrics.json"
+    }
+  ],
+  "code": {
+    "source": "/home/ubuntu/Documents/Codex/2026-09-27/codex-threads-01a0de0e-9d72-7fc0-b485/work/reorg/historical171/run_model.py",
+    "sha256": "8b61859273a256a4401a98181b66a0b3a487793a85c3fcf7d1f84491e2e0d5c1",
+    "recorded_sha256": "8b61859273a256a4401a98181b66a0b3a487793a85c3fcf7d1f84491e2e0d5c1",
+    "attestation": "hash_exact",
+    "status_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m181/status.json",
+    "selection": "recovered_exact_code",
+    "archive": "code_archive/8b61859273a256a4_run_model.py"
+  },
+  "support_files": [
+    "run_model.py"
+  ],
+  "final_scorer": null,
+  "backend_package": "classification171_200_eval",
+  "readiness": "code_and_result_identified",
+  "launch_status": "configured",
+  "metadata_warning": null,
+  "final_weight_records": [
+    {
+      "variant": null,
+      "model_revision": "1aeca517d3cf8e5bd9d033a73c0644c36d04143e",
+      "protocol_fingerprint": "8642f904a7820f4ef1f6cfc61c20e5ec58610b0337fe5579c7c27c3369ad2979",
+      "inference_status": "complete",
+      "scoring_kind": "original_run",
+      "review_status": null,
+      "dataset_relation": "public_replacement",
+      "device": "cuda:1",
+      "scored_images": 10000,
+      "forward_seconds": 266.7291018333439,
+      "inference_e2e_seconds": 624.9172103805467,
+      "metric_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/results_full.csv",
+      "detailed_metrics_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/full/m181/metrics.json",
+      "timing_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/full/m181/timing.json",
+      "status_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/full/m181/status.json",
+      "prediction_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/full/m181/predictions.jsonl",
+      "note": null
+    }
+  ]
+}

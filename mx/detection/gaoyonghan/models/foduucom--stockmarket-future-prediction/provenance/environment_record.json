@@ -1,0 +1,9 @@
+{
+  "python": "3.11.16",
+  "requirements": "environments/e26-cu124/requirements.txt",
+  "expected": "environments/e26-cu124/expected.json",
+  "local_packages": [],
+  "original_python": "/home/ubuntu/文档/ChatGPT/idea 2/outputs/launch_audit_20261005/.venv-cu124/bin/python",
+  "torch": "2.5.1+cu124",
+  "python_version_scope": "Pinned to original interpreter version"
+}

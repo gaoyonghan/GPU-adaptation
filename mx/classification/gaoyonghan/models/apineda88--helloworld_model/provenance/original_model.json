@@ -1,0 +1,72 @@
+{
+  "sequence": 98,
+  "model_id": "apineda88/helloworld_model",
+  "task": "image_classification",
+  "task_name": "图像分类",
+  "reported_result": "acc 91.58%",
+  "reference": "未核实同协议模型卡指标",
+  "model_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/model_index/apineda88/helloworld_model",
+  "model_exists_at_build": true,
+  "dataset": {
+    "id": "oxford_pets",
+    "relation": "public_replacement",
+    "split": null,
+    "note": "Oxford-IIIT Pet · test · 3669 图\n非官方评测集：公开替代"
+  },
+  "environment_id": "classification-shared",
+  "runner_family": "classification7",
+  "final_result_sources": [
+    {
+      "source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m098/metrics-0.json",
+      "sha256": "6ae8a4fcea40198ffcfdae472140565d7023b54ec89750bfb729087fed268872",
+      "selection": "workbook_score_match",
+      "data": {
+        "metrics": {
+          "accuracy_percent": 91.57808667211775,
+          "balanced_accuracy_percent": 92.23450137337134,
+          "macro_f1": 0.906885859059981,
+          "dog_precision": 0.9697885196374623,
+          "dog_recall": 0.9038616251005631,
+          "auroc_dog_positive": 0.9736043398398742,
+          "confusion_matrix_cat_dog": [
+            [
+              1113,
+              70
+            ],
+            [
+              239,
+              2247
+            ]
+          ]
+        },
+        "evaluation_images": 3669,
+        "dataset_relation": "public_replacement",
+        "fidelity": "reference_baseline",
+        "reference_check": "not_officially_comparable",
+        "official_reference": null,
+        "run_fingerprint": "64885337bfeb1f2cb415db1ffa6ce49c8214518f1d64a53f50a3b50770b9576f"
+      },
+      "source_original": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification7_pet_v1/m98-helloworld_model/metrics.json"
+    }
+  ],
+  "code": {
+    "source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification7_pet_v1/_source_snapshot/run_model.py",
+    "sha256": "5e6fa483695834fe9625a347656b4ebb896253ebca8fa04984726c5d52d6d727",
+    "recorded_sha256": null,
+    "attestation": "result_batch_snapshot",
+    "status_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m098/status.json",
+    "selection": "same_batch_snapshot",
+    "archive": "code_archive/5e6fa483695834fe_run_model.py"
+  },
+  "support_files": [
+    "models.json",
+    "run_model.py",
+    "setup_env.sh",
+    "run_all.sh"
+  ],
+  "final_scorer": null,
+  "backend_package": "classification8_eval",
+  "readiness": "code_and_result_identified",
+  "launch_status": "configured",
+  "metadata_warning": null
+}

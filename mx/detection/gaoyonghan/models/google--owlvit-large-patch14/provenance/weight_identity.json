@@ -1,0 +1,60 @@
+{
+  "sequence": 70,
+  "files": [
+    {
+      "path": "merges.txt",
+      "bytes": 524619,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "pytorch_model.bin",
+      "bytes": 1735754597,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "config.json",
+      "bytes": 4421,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "preprocessor_config.json",
+      "bytes": 392,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5148,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "vocab.json",
+      "bytes": 1059962,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": ".gitattributes",
+      "bytes": 1173,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "tokenizer_config.json",
+      "bytes": 775,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "special_tokens_map.json",
+      "bytes": 460,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    }
+  ],
+  "mismatches": []
+}

@@ -1,0 +1,77 @@
+{
+  "sequence": 20,
+  "model_id": "kadirnar/Yolov10",
+  "task": "object_detection",
+  "task_name": "目标检测",
+  "reported_result": "38.53",
+  "reference": "38.5",
+  "model_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/model_index/kadirnar/Yolov10",
+  "model_exists_at_build": true,
+  "dataset": {
+    "id": "coco2017_val",
+    "relation": "original_exact",
+    "split": "val2017",
+    "note": "COCO 2017 Detection · val2017 · 5000 图\n官方原集（不代表全协议已对齐）"
+  },
+  "environment_id": "detection-yolov10",
+  "runner_family": "official_detection",
+  "final_result_sources": [
+    {
+      "source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m020/metrics-0.json",
+      "sha256": "b4d798b7fce8c1a35f2307d0c8223fafba7d9aa503ac4caff4ce7dc93f5d6c24",
+      "selection": "workbook_score_match",
+      "data": {
+        "unit": "fraction_0_to_1",
+        "full_dataset": true,
+        "native_metrics": {
+          "precision": 0.6435463887938676,
+          "recall": 0.4880879890961662,
+          "AP50": 0.5324517547747567,
+          "AP": 0.3811398817104831
+        },
+        "coco_metrics": {
+          "AP": 0.38531950274843674,
+          "AP50": 0.5383016064156148,
+          "AP75": 0.41787382607342616,
+          "AP_small": 0.18994682949346697,
+          "AP_medium": 0.42366013002275943,
+          "AP_large": 0.5472639549594412,
+          "AR1": 0.324836875115032,
+          "AR10": 0.5466683117038617,
+          "AR100": 0.6194360311350208,
+          "AR_small": 0.3887022075343451,
+          "AR_medium": 0.682685551865115,
+          "AR_large": 0.8009461176872604
+        },
+        "evaluation_images": 5000,
+        "reference_percent": 38.5,
+        "primary_metric": "AP",
+        "difference_percentage_points": 0.0319502748436733,
+        "reference_check": "numeric_comparison_only_protocol_limitations_apply",
+        "predictions_sha256": "f93688aac43f4d24a5cf8b7ba97b8188ee2a2fb84501fdd970b2433ed8d4ff09"
+      },
+      "source_original": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/native_18_20_21_v1/m20/run_20260914_184546_498917/metrics.json"
+    }
+  ],
+  "code": {
+    "source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/native_18_20_21_v1/m20/run_20260914_184546_498917/run_native_18_20_21.py",
+    "sha256": "6707352c97158c04e7d62e4bceba2faf2a70c00a3f95f10ceb846893e6b7a400",
+    "recorded_sha256": "6707352c97158c04e7d62e4bceba2faf2a70c00a3f95f10ceb846893e6b7a400",
+    "attestation": "hash_exact",
+    "status_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m020/status.json",
+    "selection": "final_special_run",
+    "archive": "code_archive/6707352c97158c04_run_native_18_20_21.py"
+  },
+  "support_files": [
+    "native_options.json",
+    "run_native_18_20_21.py",
+    "run_m07_native.py",
+    "run_native_18_20_21.sh",
+    "native_18_20_21.json"
+  ],
+  "final_scorer": null,
+  "backend_package": "official_object_detection_eval",
+  "readiness": "code_and_result_identified",
+  "launch_status": "configured",
+  "metadata_warning": null
+}

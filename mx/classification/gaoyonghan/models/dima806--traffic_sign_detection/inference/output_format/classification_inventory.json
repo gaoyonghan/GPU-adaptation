@@ -1,0 +1,209 @@
+{
+  "schema": "model-eval/classification-inventory/v1",
+  "scope": "sunyuqiyi contribution; model-local inventory, one entry per model.",
+  "models": [
+    {
+      "sequence": 217,
+      "model_id": "dima806/traffic_sign_detection",
+      "runner_family": "special",
+      "adapter": "native_labels",
+      "state": "integrated",
+      "dataset": {
+        "id": "traffic_signs_tuanai",
+        "relation": "author_native",
+        "split": "test",
+        "note": "作者 Kaggle 原生数据集切分 · test 9252 图 / 45 类\n口径：tuanai（过采样后切分）"
+      },
+      "qualification": "existing_protocol_not_officially_verified",
+      "limitations": [
+        "Test split follows the author's oversample-then-split protocol: 84.1% of test images also appear in train, so accuracy is inflated by leakage.",
+        "Only the tuanai split is registered. The ahemateja cross-dataset run (58->45 class merge) is not registered because class merging is a protocol change, not a format conversion."
+      ],
+      "num_classes": 45,
+      "categories": [
+        {
+          "id": 0,
+          "name": "Bicycles crossing"
+        },
+        {
+          "id": 1,
+          "name": "Children crossing"
+        },
+        {
+          "id": 2,
+          "name": "Danger Ahead"
+        },
+        {
+          "id": 3,
+          "name": "Dangerous curve to the left"
+        },
+        {
+          "id": 4,
+          "name": "Dangerous curve to the right"
+        },
+        {
+          "id": 5,
+          "name": "Dont Go Left"
+        },
+        {
+          "id": 6,
+          "name": "Dont Go Left or Right"
+        },
+        {
+          "id": 7,
+          "name": "Dont Go Right"
+        },
+        {
+          "id": 8,
+          "name": "Dont Go straight"
+        },
+        {
+          "id": 9,
+          "name": "Dont Go straight or left"
+        },
+        {
+          "id": 10,
+          "name": "Dont overtake from Left"
+        },
+        {
+          "id": 11,
+          "name": "Fences"
+        },
+        {
+          "id": 12,
+          "name": "Go Left"
+        },
+        {
+          "id": 13,
+          "name": "Go Left or right"
+        },
+        {
+          "id": 14,
+          "name": "Go Right"
+        },
+        {
+          "id": 15,
+          "name": "Go left or straight"
+        },
+        {
+          "id": 16,
+          "name": "Go right or straight"
+        },
+        {
+          "id": 17,
+          "name": "Go straight"
+        },
+        {
+          "id": 18,
+          "name": "Go straight or right"
+        },
+        {
+          "id": 19,
+          "name": "Heavy Vehicle Accidents"
+        },
+        {
+          "id": 20,
+          "name": "Horn"
+        },
+        {
+          "id": 21,
+          "name": "No Car"
+        },
+        {
+          "id": 22,
+          "name": "No Uturn"
+        },
+        {
+          "id": 23,
+          "name": "No entry"
+        },
+        {
+          "id": 24,
+          "name": "No horn"
+        },
+        {
+          "id": 25,
+          "name": "No stopping"
+        },
+        {
+          "id": 26,
+          "name": "Road Divider"
+        },
+        {
+          "id": 27,
+          "name": "Roundabout mandatory"
+        },
+        {
+          "id": 28,
+          "name": "Speed limit (15km/h)"
+        },
+        {
+          "id": 29,
+          "name": "Speed limit (30km/h)"
+        },
+        {
+          "id": 30,
+          "name": "Speed limit (40km/h)"
+        },
+        {
+          "id": 31,
+          "name": "Speed limit (50km/h)"
+        },
+        {
+          "id": 32,
+          "name": "Speed limit (5km/h)"
+        },
+        {
+          "id": 33,
+          "name": "Speed limit (60km/h)"
+        },
+        {
+          "id": 34,
+          "name": "Speed limit (70km/h)"
+        },
+        {
+          "id": 35,
+          "name": "Train Crossing"
+        },
+        {
+          "id": 36,
+          "name": "Under Construction"
+        },
+        {
+          "id": 37,
+          "name": "Unknown"
+        },
+        {
+          "id": 38,
+          "name": "Uturn"
+        },
+        {
+          "id": 39,
+          "name": "Zebra Crossing"
+        },
+        {
+          "id": 40,
+          "name": "ZigZag Curve"
+        },
+        {
+          "id": 41,
+          "name": "keep Left"
+        },
+        {
+          "id": 42,
+          "name": "keep Right"
+        },
+        {
+          "id": 43,
+          "name": "speed limit (80km/h)"
+        },
+        {
+          "id": 44,
+          "name": "watch out for cars"
+        }
+      ],
+      "expected_images": 9252,
+      "requires_capture_on_next_inference": true
+    }
+  ]
+}

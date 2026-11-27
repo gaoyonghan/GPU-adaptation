@@ -1,0 +1,36 @@
+{
+  "schema": "model-eval/classification-inventory/v1",
+  "scope": "Existing 59 classification models; model 93 is retrieval and excluded.",
+  "models": [
+    {
+      "sequence": 175,
+      "model_id": "gerhardien/face-emotion",
+      "runner_family": "classification171",
+      "adapter": "native_labels",
+      "state": "integrated",
+      "dataset": {
+        "id": "classification171_175",
+        "relation": "original_protocol_incomplete",
+        "split": "Jeneral test; four supported labels",
+        "note": [
+          "Four-class model evaluated only on its supported classes; do not claim full seven-class FER performance.",
+          "Local checkpoint and publisher inference components retained. Offline file paths, eval mode, batching, timing observation and reference scoring are external orchestration."
+        ],
+        "index_source": "__MODEL_ROOT__/inference/native/indices/175.jsonl",
+        "data_containers": [
+          "__DATASET_ROOT__/datasets_171_200/fer2013_jeneral/raw/test.pt"
+        ]
+      },
+      "qualification": "original_protocol_incomplete",
+      "limitations": [],
+      "num_classes": 4,
+      "expected_images": 5212,
+      "category_reference": {
+        "file": "__MODEL_ROOT__/inference/native/models.json",
+        "sequence": 175,
+        "field": "label_mapping"
+      },
+      "gt_index": "__MODEL_ROOT__/inference/native/indices/175.jsonl"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+--- original_inference.py
++++ inference/native/run_m81_fer2013.py
+@@ -26,7 +26,7 @@
+     parser = argparse.ArgumentParser(description=__doc__)
+     parser.add_argument('--csv', type=Path, default=Path(spec['csv_path']))
+     parser.add_argument('--output-root', type=Path,
+-                        default=Path('/home/ubuntu/gaoyonghan/gpu/results/m81_fer2013_v1'))
++                        default=Path('/data2/gaoyonghan/gpu_model_standalone_20261110/release/model/分类/Tanneru--Facial-Emotion-Detection-FER-RAFDB-AffectNet-BEIT-Large/resources/runtime/assets/workspace/results/m81_fer2013_v1'))
+     parser.add_argument('--device', default='cuda:0')
+     parser.add_argument('--max-images', type=int, default=0)
+     parser.add_argument('--preflight', action='store_true')
+@@ -76,6 +76,8 @@
+     full = len(samples) == spec['images']
+     out = args.output_root / ('full' if full else 'smoke') / datetime.now().strftime('run_%Y%m%d_%H%M%S_%f')
+     out.mkdir(parents=True, exist_ok=False)
++    from classification_capture import snapshot_gt
++    snapshot_gt(out, [dict(id=f'fer{index:07d}', target=target) for index, target, pixels in samples])
+     for name in SOURCES:
+         shutil.copy2(HERE / name, out / name)
+     for name in spec['files_sha256']:

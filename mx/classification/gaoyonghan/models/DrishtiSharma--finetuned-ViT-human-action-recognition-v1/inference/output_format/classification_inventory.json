@@ -1,0 +1,99 @@
+{
+  "models": [
+    {
+      "sequence": 162,
+      "model_id": "DrishtiSharma/finetuned-ViT-human-action-recognition-v1",
+      "runner_family": "metax_c500_161_170",
+      "adapter": "native_labels",
+      "state": "integrated",
+      "dataset": {
+        "id": "har_test",
+        "relation": "public_replacement",
+        "split": "dataset/har_test · Bingsu/Human_Action_Recognition official test (5400 images)",
+        "note": [
+          "Bingsu/Human_Action_Recognition 官方 test split（5400 张，非 gated）"
+        ],
+        "index_source": null,
+        "data_containers": []
+      },
+      "qualification": "original_protocol_incomplete",
+      "limitations": [
+        "该 split 全部 5400 张 GT 均为 calling(0)，accuracy 实为「判成 calling 的比例」，不是分类准确率；balanced accuracy 与 macro-F1 在单类 GT 下无意义。",
+        "上传权重为 checkpoint-100（0.13 epoch 的早期检查点），非最终权重。",
+        "只有 Top-1；未保存 Top-5。"
+      ],
+      "num_classes": 15,
+      "expected_images": 5400,
+      "existing_protocol": {
+        "id": "metax_c500_m162_v1",
+        "scope": "5400 images; original inference and alignment done by run_inference.py, this inventory entry only registers the conversion/scoring scope",
+        "expected_inference_images": 5400,
+        "expected_scored_images": 5400,
+        "metrics_path": "m162/metrics.json",
+        "official_reference_comparable": false
+      },
+      "categories": [
+        {
+          "id": 0,
+          "name": "calling"
+        },
+        {
+          "id": 1,
+          "name": "clapping"
+        },
+        {
+          "id": 2,
+          "name": "cycling"
+        },
+        {
+          "id": 3,
+          "name": "dancing"
+        },
+        {
+          "id": 4,
+          "name": "drinking"
+        },
+        {
+          "id": 5,
+          "name": "eating"
+        },
+        {
+          "id": 6,
+          "name": "fighting"
+        },
+        {
+          "id": 7,
+          "name": "hugging"
+        },
+        {
+          "id": 8,
+          "name": "laughing"
+        },
+        {
+          "id": 9,
+          "name": "listening_to_music"
+        },
+        {
+          "id": 10,
+          "name": "running"
+        },
+        {
+          "id": 11,
+          "name": "sitting"
+        },
+        {
+          "id": 12,
+          "name": "sleeping"
+        },
+        {
+          "id": 13,
+          "name": "texting"
+        },
+        {
+          "id": 14,
+          "name": "using_laptop"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "device": "cpu",
+  "dtype": "published ONNX q8",
+  "model_load_seconds": 0.335534067,
+  "warmup_seconds": 0.6904185489999999,
+  "warmup_batches": 10,
+  "timed_images": 10,
+  "forward_seconds": 0.39375529499999995,
+  "actual_batch_sizes": {
+    "1": 10
+  },
+  "resume_segments": 1,
+  "forward_amortized_ms_per_image": 39.37552949999999,
+  "forward_unavailable_reason": null,
+  "inference_e2e_seconds": 0.593569933,
+  "e2e_images_per_second": 16.84721453032224,
+  "forward_method": "CPU monotonic clock around the unchanged async model.forward",
+  "instrumentation_predictions_unchanged_this_segment": true,
+  "comparison_note": "CPU ONNX q8 results must not be mixed with GPU FP32 latency rankings"
+}

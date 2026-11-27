@@ -1,0 +1,22 @@
+{
+  "schema": "model-eval/provenance/mx-layout/v1",
+  "platform": "MetaX C500",
+  "environment": "e07",
+  "model_id": "timm/mobilenetv4_hybrid_medium.ix_e550_r384_in1k",
+  "sequence": 220,
+  "layout": {
+    "model_root": "classification/gaoyonghan/models/timm--mobilenetv4_hybrid_medium.ix_e550_r384_in1k",
+    "weights": "weights/ (offline, local_files_only=True)",
+    "dataset": "dataset/imagenet",
+    "results": "result/<run>/"
+  },
+  "entry": {
+    "wrapper": "classification/gaoyonghan/environment/run-e07.sh",
+    "command": "/opt/model-envs/e07/bin/python classification/gaoyonghan/models/timm--mobilenetv4_hybrid_medium.ix_e550_r384_in1k/inference.py --phase full",
+    "device": "cuda:0",
+    "precision": "fp32",
+    "batch_size": 64
+  },
+  "notes": "MX 侧与 A100 侧共用同一份 native 推理代码与同一份权重，仅设备与数据集根路径不同。",
+  "created": "2026-11-25"
+}

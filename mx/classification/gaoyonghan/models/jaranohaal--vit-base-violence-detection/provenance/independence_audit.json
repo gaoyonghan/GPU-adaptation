@@ -1,0 +1,22 @@
+{
+  "sequence": 94,
+  "model_id": "jaranohaal/vit-base-violence-detection",
+  "source_archive_hash_matches": true,
+  "source_archive_sha256": "885909a2299c1da677e224163723aed8e83002b66d71c3cea8ffeddeb61e3341",
+  "prepared_entry_source_sha256": "c1e023daa40d934b04b1207eb1f05c1cd96f3acfd53e78d1d10b3fec1d4ec803",
+  "local_entry_sha256": "71cc7c73ab12e3f21c3a4ab057dcc671792cbfc0d1fa878a761ffd0b0057f641",
+  "local_entry": "inference/native/run_m94.py",
+  "central_dispatch_in_entry": false,
+  "unexpected_external_links": [],
+  "declared_dataset_links": [],
+  "broken_links": [],
+  "path_template_count": 319,
+  "state": "entrypoint_verified_full_run_pending",
+  "validation": {
+    "returncode": 0,
+    "python": "/home/ubuntu/gaoyonghan/gpu/.venv-m94-timm0916/bin/python",
+    "checked_at": "2026-11-10T15:57:04.289633+08:00",
+    "scope": "native help/import/path check only; not full inference"
+  },
+  "smoke_verification": null
+}

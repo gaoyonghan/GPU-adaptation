@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "sources": {
+    "timm": {
+      "path": "__MODEL_ROOT__/resources/runtime/assets/workspace/171-200/inference_code/pytorch-image-models",
+      "commit": "986e7215e187d850d6bc975b13056675a9fa7885"
+    }
+  },
+  "models": [
+    {
+      "sequence": 193,
+      "model_id": "sgugger/resnet50d",
+      "model_path": "__MODEL_ROOT__/weights/sgugger/resnet50d",
+      "revision": "4b32487424f0f5f2f17ffb60d578b8e5ac7ddc35",
+      "task_type": "image-classification",
+      "status": "not_started",
+      "official_model_card": "https://huggingface.co/sgugger/resnet50d",
+      "official_reference": {
+        "source": "https://huggingface.co/sgugger/resnet50d",
+        "local_card_sha256": "d8467c7a0217aabdd59831db5fd63a8b1b0ecae5d279e3638125beddbfd8f505",
+        "model_index": null,
+        "text_report_values": {
+          "accuracy": 0.8053,
+          "top5_accuracy": 0.9516
+        },
+        "units": "fractions for extracted accuracy/F1; original model-index units as published",
+        "comparison": "Manual protocol review required; no automatic drop calculation",
+        "note": "Card reports retained as provenance, not proof that local data/split/framework exactly reproduces the reported run."
+      },
+      "reference_comparison": "manual_reference_required",
+      "known_differences": [
+        "Native publisher evaluator retained; historical author environment/complete reporting protocol not established, so exact_official is not claimed.",
+        "Local checkpoint and publisher inference components retained. Offline file paths, eval mode, batching, timing observation and reference scoring are external orchestration."
+      ],
+      "config": {
+        "architecture": "resnet50d",
+        "classifier": "fc",
+        "crop_pct": 0.875,
+        "first_conv": "conv1.0",
+        "input_size": [
+          3,
+          224,
+          224
+        ],
+        "interpolation": "bicubic",
+        "mean": [
+          0.485,
+          0.456,
+          0.406
+        ],
+        "num_classes": 1000,
+        "pool_size": [
+          7,
+          7
+        ],
+        "std": [
+          0.229,
+          0.224,
+          0.225
+        ]
+      },
+      "preprocessing": {
+        "architecture": "resnet50d",
+        "classifier": "fc",
+        "crop_pct": 0.875,
+        "first_conv": "conv1.0",
+        "input_size": [
+          3,
+          224,
+          224
+        ],
+        "interpolation": "bicubic",
+        "mean": [
+          0.485,
+          0.456,
+          0.406
+        ],
+        "num_classes": 1000,
+        "pool_size": [
+          7,
+          7
+        ],
+        "std": [
+          0.229,
+          0.224,
+          0.225
+        ]
+      },
+      "architecture": "resnet50d",
+      "files": {
+        "pytorch_model.bin": {
+          "size": 102630875,
+          "sha256": "eba2e1de92fa640fccf0ad56acfd41031b034ef29bdf46e9dcbebb16f713b6e2"
+        },
+        "config.json": {
+          "size": 336,
+          "sha256": "1e76ba4b35cadd9d9a69b43f5e905dd60e364450e988035c7380a9424dfddf56"
+        },
+        "README.md": {
+          "size": 4073,
+          "sha256": "d8467c7a0217aabdd59831db5fd63a8b1b0ecae5d279e3638125beddbfd8f505"
+        }
+      },
+      "weight": "pytorch_model.bin",
+      "backend": "timm_native",
+      "environment": "shared_hf",
+      "dataset_relation": "original_exact",
+      "split": "ImageNet-1K validation",
+      "excluded_source_labels": {},
+      "images": 50000,
+      "covered_target_classes": 1000,
+      "num_output_classes": 1000,
+      "label_mapping": {},
+      "scoring": "native",
+      "evaluator": "timm.validate",
+      "fidelity": "reference_baseline",
+      "case_type": "special",
+      "special_tags": [
+        "framework_numeric_difference"
+      ],
+      "inference_entry": "publisher_transformers_model_and_processor",
+      "default_batch_size": 1,
+      "dtype": "float32",
+      "warmup_batches": 10,
+      "index": "__MODEL_ROOT__/inference/native/indices/193.jsonl",
+      "index_sha256": "092a75803d7c4d07bf697fb7219a8bde2a6d0b9503b8e05dade60c9ca96ef3cf",
+      "data_containers": {},
+      "class_map": "__MODEL_ROOT__/resources/runtime/assets/workspace/171-200/inference_code/pytorch-image-models/timm/data/_info/imagenet_synsets.txt",
+      "class_map_sha256": "70002b0ff5de60a3a17a82dbfcff291931f96225ddf941ad2e182fc39e183d15",
+      "protocol_fingerprint": "7fa60b5bfecf0cb7bfb360fcd15d868e5c2bf22867b38fec6c02f57d5cd6d060"
+    }
+  ],
+  "runtime_defaults": {
+    "batch_size": 1,
+    "device": "cuda:0",
+    "warmup_batches": 10,
+    "workers": 2
+  },
+  "scope": "Each published model retained; 177 includes all five weights; no full GPU inference launched by preparation."
+}

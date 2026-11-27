@@ -1,0 +1,123 @@
+{
+  "sequence": 197,
+  "model_id": "arize-ai/resnet-50-fashion-mnist-quality-drift",
+  "task": "image_classification",
+  "task_name": "图像分类",
+  "reported_result": [
+    {
+      "variant": null,
+      "inference_status": "complete",
+      "accuracy": 0.8246,
+      "forward_seconds": 51.249845753192844,
+      "inference_e2e_seconds": 73.25374425854534,
+      "metric_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/results_full.csv",
+      "timing_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/full/m197/timing.json"
+    }
+  ],
+  "reference": {
+    "source": "https://huggingface.co/arize-ai/resnet-50-fashion-mnist-quality-drift",
+    "local_card_sha256": "b93a61ca6bdf1b1a5c196fdbd98c68862009049ccc887a93a9f3a9445585c787",
+    "model_index": [
+      {
+        "name": "resnet-50-fashion-mnist-quality-drift",
+        "results": [
+          {
+            "task": {
+              "name": "Image Classification",
+              "type": "image-classification"
+            },
+            "dataset": {
+              "name": "fashion_mnist_quality_drift",
+              "type": "fashion_mnist_quality_drift",
+              "config": "default",
+              "split": "training",
+              "args": "default"
+            },
+            "metrics": [
+              {
+                "name": "Accuracy",
+                "type": "accuracy",
+                "value": 0.73
+              },
+              {
+                "name": "F1",
+                "type": "f1",
+                "value": 0.7289360255705818
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "text_report_values": {
+      "accuracy": 0.73,
+      "f1_average_unspecified": 0.7289360255705818,
+      "loss": 0.7473
+    },
+    "units": "fractions for extracted accuracy/F1; original model-index units as published",
+    "comparison": "Manual protocol review required; no automatic drop calculation",
+    "note": "Card F1 averaging is unspecified; record macro/micro/weighted separately. Standard Fashion-MNIST differs from author quality_drift."
+  },
+  "model_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/model_index/arize-ai/resnet-50-fashion-mnist-quality-drift",
+  "model_exists_at_build": true,
+  "dataset": {
+    "id": "classification171_197",
+    "relation": "public_replacement",
+    "split": "standard Fashion-MNIST test, not quality_drift variant",
+    "note": [
+      "Local checkpoint and publisher inference components retained. Offline file paths, eval mode, batching, timing observation and reference scoring are external orchestration."
+    ],
+    "index_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/classification171_200_eval/indices/197.jsonl",
+    "data_containers": [
+      "/data2/gaoyonghan/model inference for GPU adaptation/dataset/fashion_mnist/raw/t10k-images-idx3-ubyte.gz"
+    ]
+  },
+  "environment_id": "classification171-shared_hf",
+  "runner_family": "classification171",
+  "final_result_sources": [
+    {
+      "source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m197/metrics-0.json",
+      "sha256": "e5435e6ec506ddd16102dd31b8cdb38ae443aaf4fb44b7d7069aff68e39f7167",
+      "selection": "final_171_200_registry",
+      "source_original": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/full/m197/metrics.json"
+    }
+  ],
+  "code": {
+    "source": "/home/ubuntu/Documents/Codex/2026-09-27/codex-threads-01a0de0e-9d72-7fc0-b485/work/reorg/historical171/run_model.py",
+    "sha256": "8b61859273a256a4401a98181b66a0b3a487793a85c3fcf7d1f84491e2e0d5c1",
+    "recorded_sha256": "8b61859273a256a4401a98181b66a0b3a487793a85c3fcf7d1f84491e2e0d5c1",
+    "attestation": "hash_exact",
+    "status_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m197/status.json",
+    "selection": "recovered_exact_code",
+    "archive": "code_archive/8b61859273a256a4_run_model.py"
+  },
+  "support_files": [
+    "run_model.py"
+  ],
+  "final_scorer": null,
+  "backend_package": "classification171_200_eval",
+  "readiness": "code_and_result_identified",
+  "launch_status": "configured",
+  "metadata_warning": null,
+  "final_weight_records": [
+    {
+      "variant": null,
+      "model_revision": "104610943e0d62797b614bf6f72b5a2ecbf8f8f9",
+      "protocol_fingerprint": "798360bb285819874bccc971764404190d2dcd42000d0f19681b7d2f435ecbe2",
+      "inference_status": "complete",
+      "scoring_kind": "original_run",
+      "review_status": null,
+      "dataset_relation": "public_replacement",
+      "device": "cuda:1",
+      "scored_images": 10000,
+      "forward_seconds": 51.249845753192844,
+      "inference_e2e_seconds": 73.25374425854534,
+      "metric_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/results_full.csv",
+      "detailed_metrics_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/full/m197/metrics.json",
+      "timing_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/full/m197/timing.json",
+      "status_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/full/m197/status.json",
+      "prediction_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/full/m197/predictions.jsonl",
+      "note": null
+    }
+  ]
+}

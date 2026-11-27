@@ -1,0 +1,60 @@
+{
+  "sequence": 17,
+  "files": [
+    {
+      "path": "model.safetensors",
+      "bytes": 166496396,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "pytorch_model.bin",
+      "bytes": 166637077,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "config.json",
+      "bytes": 1145,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "preprocessor_config.json",
+      "bytes": 302,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4008,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": ".gitattributes",
+      "bytes": 1229,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "onnx/model.onnx",
+      "bytes": 166716921,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "onnx/config.json",
+      "bytes": 1344,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "onnx/preprocessor_config.json",
+      "bytes": 455,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    }
+  ],
+  "mismatches": []
+}

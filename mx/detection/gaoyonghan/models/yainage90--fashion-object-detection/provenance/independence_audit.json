@@ -1,0 +1,22 @@
+{
+  "sequence": 30,
+  "model_id": "yainage90/fashion-object-detection",
+  "source_archive_hash_matches": true,
+  "source_archive_sha256": "2900c0f5973a04a4afd9f780fb46fd836dcb82297b13bf61d4f1c81e3ddb74a0",
+  "prepared_entry_source_sha256": "09c0df5f02f15af93fa4c3847c0e31c169ce318f17d57bfaafc9430d0a755366",
+  "local_entry_sha256": "e05fff3dd15da6fda840340b098abc4823a1cedfd08987199eedf4d7e7f108bc",
+  "local_entry": "inference/native/run_batch8.py",
+  "central_dispatch_in_entry": false,
+  "unexpected_external_links": [],
+  "declared_dataset_links": [],
+  "broken_links": [],
+  "path_template_count": 447,
+  "state": "entrypoint_verified_full_run_pending",
+  "validation": {
+    "returncode": 0,
+    "python": "/home/ubuntu/gaoyonghan/miniconda3/envs/object-detection-hf-v2/bin/python",
+    "checked_at": "2026-11-10T15:38:55.647139+08:00",
+    "scope": "native help/import/path check only; not full inference"
+  },
+  "smoke_verification": null
+}

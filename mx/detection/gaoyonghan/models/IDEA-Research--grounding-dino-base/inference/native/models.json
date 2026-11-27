@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "suite": "top100-zero-shot-object-detection-official-protocol",
+  "fidelity_levels": {
+    "exact_official": "官方代码、官方原生权重和官方环境直接运行。",
+    "official_protocol_adapter": "本地权重是官方发布/转换的另一种格式；适配层逐项复刻官方数据、提示词、预处理、后处理和指标。",
+    "reference_baseline": "官方没有发布与报告表格完全对应的端到端评估入口；只能使用官方组件构造可复现基线，不能宣称复现官方值。"
+  },
+  "datasets": {
+    "coco2017_val": {
+      "name": "COCO 2017 detection",
+      "split": "val2017",
+      "images": 5000,
+      "categories": 80,
+      "annotation_archive": "COCO2017/annotations_trainval2017.zip",
+      "annotation_member": "annotations/instances_val2017.json",
+      "image_archives": [
+        "COCO2017/val2017.zip"
+      ],
+      "metric": "pycocotools COCOeval bbox AP, maxDets=[1,10,100]",
+      "official_url": "https://cocodataset.org/#download"
+    }
+  },
+  "models": [
+    {
+      "sequence": 63,
+      "key": "grounding-dino-base",
+      "repo_id": "IDEA-Research/grounding-dino-base",
+      "hf_revision": "12bdfa3120f3e7ec7b434d90674b3396eccf88eb",
+      "family": "grounding_dino",
+      "runner": "grounding_dino_coco",
+      "dataset": "coco2017_val",
+      "fidelity": "official_protocol_adapter",
+      "weight_format": "Hugging Face PyTorch conversion of the official checkpoint",
+      "official_source": {
+        "repository": "https://github.com/IDEA-Research/GroundingDINO",
+        "revision": "856dde20aee659246248e20734ef9ba5214f5e44",
+        "inference_script": "demo/test_ap_on_coco.py",
+        "native_weight_format": ".pth",
+        "conversion_script": "https://github.com/huggingface/transformers/blob/main/src/transformers/models/grounding_dino/convert_grounding_dino_to_hf.py"
+      },
+      "protocol": {
+        "queries": "80 COCO category names joined with ' .'; official token positive-map",
+        "image_preprocess": "shortest_edge=800, longest_edge=1333, ImageNet normalization",
+        "selection": "global top 300 box-class pairs before COCOeval",
+        "metric": "COCO bbox AP"
+      },
+      "official_reference": {
+        "scope": "exact model/checkpoint family",
+        "metrics_percent": {
+          "AP": 56.7
+        },
+        "source": "https://github.com/IDEA-Research/GroundingDINO#checkpoints"
+      },
+      "known_differences": [
+        "base 权重训练数据包含 COCO，因此这里的 zero-shot 指开放词汇推理方式，不等于从未见过 COCO。",
+        "使用 Transformers 转换权重和算子，而不是原仓库 .pth 与自定义 CUDA 算子；评估语义保持一致。"
+      ],
+      "legacy_result": {
+        "AP_percent": 56.8967,
+        "classification": "matches_reference"
+      }
+    }
+  ]
+}

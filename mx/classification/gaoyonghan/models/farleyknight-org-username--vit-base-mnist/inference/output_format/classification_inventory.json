@@ -1,0 +1,36 @@
+{
+  "schema": "model-eval/classification-inventory/v1",
+  "scope": "One independent MX GPU classification model",
+  "models": [
+    {
+      "sequence": 136,
+      "model_id": "farleyknight-org-username/vit-base-mnist",
+      "dataset": {
+        "id": "MNIST",
+        "split": "test",
+        "note": [
+          "MNIST test\n10,000 张"
+        ],
+        "native_scope": {
+          "name": "MNIST",
+          "split": "test",
+          "image_count": 10000,
+          "class_count": 10
+        },
+        "relation": "native_e07_registered_scope",
+        "index_source": "native loader GT, materialized as classification_annotations.json in the native phase directory",
+        "data_containers": [
+          "dataset/mnist/test-00000-of-00001.parquet"
+        ]
+      },
+      "qualification": "native_registered_scope",
+      "limitations": [
+        "Capture-ready is a code integration state, not a claim that inference has passed.",
+        "Unobserved native Top-5 is unavailable; aggregate scores are not predictions."
+      ],
+      "num_classes": 10,
+      "expected_images": 10000,
+      "adapter": "native_labels"
+    }
+  ]
+}

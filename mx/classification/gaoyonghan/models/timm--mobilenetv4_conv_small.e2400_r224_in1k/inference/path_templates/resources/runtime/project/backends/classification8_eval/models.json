@@ -1,0 +1,134 @@
+{
+  "schema_version": 1,
+  "scope": [
+    71,
+    74,
+    84,
+    87,
+    88,
+    89,
+    91,
+    95
+  ],
+  "model_root": "__MODEL_ROOT__/weights",
+  "dataset_root": "__DATASET_ROOT__",
+  "imagenet_zip": "__DATASET_ROOT__/ImageNet/imagenet-object-localization-challenge.zip",
+  "result_root": "__MODEL_ROOT__/resources/runtime/assets/workspace/results/classification8_v1",
+  "datasets": {
+    "imagenet": {
+      "images": 50000,
+      "classes": 1000,
+      "split": "ILSVRC2012 val",
+      "mapping": "LOC_val_solution.csv synset -> timm ImageNetInfo canonical sorted synsets; HF labels exact verified"
+    }
+  },
+  "versions": {
+    "torch": "2.5.1+cu121",
+    "torchvision": "0.20.1+cu121",
+    "transformers": "4.50.0",
+    "timm": "1.0.15",
+    "numpy": "1.26.4",
+    "Pillow": "11.1.0",
+    "scipy": "1.12.0",
+    "scikit-learn": "1.5.2",
+    "onnxruntime": "1.20.1",
+    "safetensors": "0.5.3",
+    "huggingface-hub": "0.29.3"
+  },
+  "timm_source": {
+    "url": "https://raw.githubusercontent.com/huggingface/pytorch-image-models/v1.0.15/validate.py",
+    "sha256": "1b254648d0bff4655fb78d5a3923cd2faa79edf3407a06670f0a7416944658fb",
+    "version": "v1.0.15"
+  },
+  "models": [
+    {
+      "sequence": 74,
+      "model_id": "timm/mobilenetv4_conv_small.e2400_r224_in1k",
+      "weight_file": "model.safetensors",
+      "files": {
+        "model.safetensors": {
+          "size": 15223016,
+          "sha256": "7a7102ec18f62bbfb555b6fe829bbb5af749516b84174926c29ffdfdfc03aec4",
+          "hf_revision": "331fb803779522b685cf942e15f914fb6741c1eb"
+        },
+        "config.json": {
+          "size": 681,
+          "sha256": "ecd20bcf1287aaa88129a736d188904d0b134c96e152b55b241be895657fe41a",
+          "hf_revision": "331fb803779522b685cf942e15f914fb6741c1eb"
+        },
+        "README.md": {
+          "size": 13066,
+          "sha256": "864651a7a9c0457023728da202cb1119abf3fa0872ded374ba736efde6454eb7",
+          "hf_revision": "331fb803779522b685cf942e15f914fb6741c1eb"
+        }
+      },
+      "config": {
+        "architecture": "mobilenetv4_conv_small",
+        "num_classes": 1000,
+        "pretrained_cfg": {
+          "tag": "e2400_r224_in1k",
+          "custom_load": false,
+          "input_size": [
+            3,
+            224,
+            224
+          ],
+          "test_input_size": [
+            3,
+            256,
+            256
+          ],
+          "fixed_input_size": false,
+          "interpolation": "bicubic",
+          "crop_pct": 0.875,
+          "test_crop_pct": 0.95,
+          "crop_mode": "center",
+          "mean": [
+            0.485,
+            0.456,
+            0.406
+          ],
+          "std": [
+            0.229,
+            0.224,
+            0.225
+          ],
+          "num_classes": 1000,
+          "pool_size": [
+            7,
+            7
+          ],
+          "first_conv": "conv_stem",
+          "classifier": "classifier"
+        }
+      },
+      "preprocessor": null,
+      "model_key": "m74-mobilenetv4_conv_small.e2400_r224_in1k",
+      "task_type": "image-classification",
+      "runner": "timm",
+      "dataset": "imagenet",
+      "dataset_relation": "original_exact",
+      "fidelity": "official_protocol_adapter",
+      "case_type": "special",
+      "special_tags": [
+        "framework_numeric_difference",
+        "label_mapping"
+      ],
+      "official_card": "https://huggingface.co/timm/mobilenetv4_conv_small.e2400_r224_in1k",
+      "official_reference": {
+        "metric": "top1_percent",
+        "value": 74.616,
+        "comparison": "manual_reference_required",
+        "notes": "仅列已确认参考行；运行完成不自动等同官方复现。"
+      },
+      "batch_size": 8,
+      "dtype": "float32",
+      "evaluation": "未修改 timm v1.0.15 validate.py 的 validate 函数",
+      "known_differences": [
+        "未复建作者全部历史依赖，存在框架数值差异。",
+        "冒烟使用 10 图子集；全量使用完整所声明 split。"
+      ],
+      "protocol_notes": "使用模型卡 256px 测试行：test_input_size=256,test_crop_pct=0.95，不使用训练 224px。"
+    }
+  ]
+}

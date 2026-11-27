@@ -1,0 +1,55 @@
+detection_eval:
+  metrics:
+  - COCODet
+  dataset:
+    dataset_name: detection_dataset
+    ground_truth:
+      data_path: /home/ubuntu/文档/ChatGPT/idea 2/outputs/launch_audit_20261005/migration_inputs/datasets/omnidocbench_eval/OmniDocBench.json
+    prediction:
+      data_path: /data2/gaoyonghan/env/model_eval_portable_v4/results/m038/official/full/run_20261007_183154_310122/predictions_omni.json
+  categories:
+    eval_cat:
+      block_level:
+      - title
+      - text
+      - abandon
+      - figure
+      - table
+      - isolate_formula
+      - formula_caption
+    gt_cat_mapping:
+      figure_footnote: figure_footnote
+      figure_caption: figure_caption
+      page_number: abandon
+      header: abandon
+      page_footnote: abandon
+      table_footnote: table_footnote
+      code_txt: figure
+      equation_caption: formula_caption
+      equation_isolated: isolate_formula
+      table: table
+      refernece: text
+      table_caption: table_caption
+      figure: figure
+      title: title
+      text_block: text
+      footer: abandon
+    pred_cat_mapping:
+      doc_title: title
+      paragraph_title: title
+      text: text
+      abstract: text
+      aside_text: text
+      content: text
+      vertical_text: text
+      header: abandon
+      footer: abandon
+      number: abandon
+      footnote: abandon
+      header_image: abandon
+      footer_image: abandon
+      image: figure
+      chart: figure
+      table: table
+      display_formula: isolate_formula
+      formula_number: formula_caption

@@ -1,0 +1,40 @@
+{
+  "sequence": 220,
+  "model_id": "timm/mobilenetv4_hybrid_medium.ix_e550_r384_in1k",
+  "task": "classification",
+  "commands": [
+    {
+      "arguments": [
+        "__PYTHON__",
+        "__MODEL_ROOT__/inference/native/run_model.py",
+        "--output-root",
+        "__OUTPUT_ROOT__/native",
+        "--weights",
+        "__MODEL_ROOT__/weights",
+        "--dataset-path",
+        "__DATASET_ROOT__/ImageNet-1K",
+        "--split",
+        "validation",
+        "--device",
+        "cuda:0",
+        "--batch-size",
+        "64",
+        "--max-images",
+        "0"
+      ],
+      "environment": {
+        "PYTHONNOUSERSITE": "1",
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "HF_HUB_OFFLINE": "1",
+        "TRANSFORMERS_OFFLINE": "1",
+        "HF_DATASETS_OFFLINE": "1",
+        "CUDA_VISIBLE_DEVICES": "0"
+      }
+    }
+  ],
+  "single_model_sample": true,
+  "smoke_commands": [],
+  "state": "runnable",
+  "accepts_max_images": true,
+  "accepts_smoke_flag": false
+}

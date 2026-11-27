@@ -1,0 +1,332 @@
+{
+  "sequence": 177,
+  "model_id": "Anzhc/Race-Classification-FairFace-YOLOv8",
+  "task": "image_classification",
+  "task_name": "图像分类",
+  "reported_result": [
+    {
+      "variant": "Race-CLS-FairFace_yolo11l.pt",
+      "inference_status": "complete",
+      "accuracy": 0.7325177788734436,
+      "forward_seconds": 83.73684778157622,
+      "inference_e2e_seconds": null,
+      "metric_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/results_full.csv",
+      "timing_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/full/m177-Race-CLS-FairFace_yolo11l/timing.json"
+    },
+    {
+      "variant": "Race-CLS-FairFace_yolo11x.pt",
+      "inference_status": "complete",
+      "accuracy": 0.7348001003265381,
+      "forward_seconds": 86.04921780806035,
+      "inference_e2e_seconds": null,
+      "metric_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/results_full.csv",
+      "timing_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/full/m177-Race-CLS-FairFace_yolo11x/timing.json"
+    },
+    {
+      "variant": "Race-CLS-FairFace_yolov8m.pt",
+      "inference_status": "complete",
+      "accuracy": 0.7253057956695557,
+      "forward_seconds": 46.46021816926077,
+      "inference_e2e_seconds": null,
+      "metric_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/results_full.csv",
+      "timing_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/full/m177-Race-CLS-FairFace_yolov8m/timing.json"
+    },
+    {
+      "variant": "Race-CLS-FairFace_yolov8n.pt",
+      "inference_status": "complete",
+      "accuracy": 0.7169983386993408,
+      "forward_seconds": 36.02805550955236,
+      "inference_e2e_seconds": null,
+      "metric_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/results_full.csv",
+      "timing_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/full/m177-Race-CLS-FairFace_yolov8n/timing.json"
+    },
+    {
+      "variant": "Race-CLS-FairFace_yolov8s.pt",
+      "inference_status": "complete",
+      "accuracy": 0.7207412719726562,
+      "forward_seconds": 34.725481716450304,
+      "inference_e2e_seconds": null,
+      "metric_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/results_full.csv",
+      "timing_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/full/m177-Race-CLS-FairFace_yolov8s/timing.json"
+    }
+  ],
+  "reference": {
+    "source": "https://huggingface.co/Anzhc/Race-Classification-FairFace-YOLOv8",
+    "local_card_sha256": "46359d1190f1f0b9ca3d634b037fe96ea5799b2954bd219e68d28938b75d5b56",
+    "model_index": [
+      {
+        "name": "v8n",
+        "results": [
+          {
+            "task": {
+              "type": "Image Classification"
+            },
+            "dataset": {
+              "name": "FairFace",
+              "type": "FairFace"
+            },
+            "metrics": [
+              {
+                "name": "top1_acc",
+                "type": "top1_acc",
+                "value": 0.717
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "v8s",
+        "results": [
+          {
+            "task": {
+              "type": "Image Classification"
+            },
+            "dataset": {
+              "name": "FairFace",
+              "type": "FairFace"
+            },
+            "metrics": [
+              {
+                "name": "top1_acc",
+                "type": "top1_acc",
+                "value": 0.721
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "v8m",
+        "results": [
+          {
+            "task": {
+              "type": "Image Classification"
+            },
+            "dataset": {
+              "name": "FairFace",
+              "type": "FairFace"
+            },
+            "metrics": [
+              {
+                "name": "top1_acc",
+                "type": "top1_acc",
+                "value": 0.725
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "11l",
+        "results": [
+          {
+            "task": {
+              "type": "Image Classification"
+            },
+            "dataset": {
+              "name": "FairFace",
+              "type": "FairFace"
+            },
+            "metrics": [
+              {
+                "name": "top1_acc",
+                "type": "top1_acc",
+                "value": 0.733
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "11x",
+        "results": [
+          {
+            "task": {
+              "type": "Image Classification"
+            },
+            "dataset": {
+              "name": "FairFace",
+              "type": "FairFace"
+            },
+            "metrics": [
+              {
+                "name": "top1_acc",
+                "type": "top1_acc",
+                "value": 0.735
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "text_report_values": null,
+    "units": "fractions for extracted accuracy/F1; original model-index units as published",
+    "comparison": "Manual protocol review required; no automatic drop calculation",
+    "note": "Card reports retained as provenance, not proof that local data/split/framework exactly reproduces the reported run."
+  },
+  "model_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/model_index/Anzhc/Race-Classification-FairFace-YOLOv8",
+  "model_exists_at_build": true,
+  "dataset": {
+    "id": "classification171_177",
+    "relation": "original_exact",
+    "split": "FairFace 0.25 validation",
+    "note": [
+      "Native publisher evaluator retained; historical author environment/complete reporting protocol not established, so exact_official is not claimed.",
+      "Native validator reads class metadata from train; train is a symlink to val, with split=val only and no training or resplitting.",
+      "Local checkpoint and publisher inference components retained. Offline file paths, eval mode, batching, timing observation and reference scoring are external orchestration."
+    ],
+    "index_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/classification171_200_eval/indices/177.jsonl",
+    "data_containers": [
+      "/data2/gaoyonghan/model inference for GPU adaptation/dataset/FairFace/0.25/validation-00000-of-00001-951dbd63c8724ee1.parquet"
+    ]
+  },
+  "environment_id": "classification171-yolo",
+  "runner_family": "classification171",
+  "final_result_sources": [
+    {
+      "source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m177/metrics-0.json",
+      "sha256": "a7ef34e5d2e86b7941dc42a049134ae6bb371d6c3e33da03b99013d3d275e849",
+      "selection": "final_171_200_registry",
+      "source_original": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/full/m177-Race-CLS-FairFace_yolo11l/metrics.json"
+    },
+    {
+      "source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m177/metrics-1.json",
+      "sha256": "4e2cef0d37058aa0cc7d76ec859b327cab8ed340ec02cee99bd25045a2ddd373",
+      "selection": "final_171_200_registry",
+      "source_original": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/full/m177-Race-CLS-FairFace_yolo11x/metrics.json"
+    },
+    {
+      "source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m177/metrics-2.json",
+      "sha256": "eabd36732d62b4bb60eb510c5c4543cd9a6d0d2dad774a9ba53911d3a9223946",
+      "selection": "final_171_200_registry",
+      "source_original": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/full/m177-Race-CLS-FairFace_yolov8m/metrics.json"
+    },
+    {
+      "source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m177/metrics-3.json",
+      "sha256": "5e9cc2fe28b7326388a75da2705bb95fd7aab7f3de0b9494d22b421c33f01be4",
+      "selection": "final_171_200_registry",
+      "source_original": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/full/m177-Race-CLS-FairFace_yolov8n/metrics.json"
+    },
+    {
+      "source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m177/metrics-4.json",
+      "sha256": "9f9b0580cdc094fac265fa26fd64420293b2634a6fedd6ff78ef716b2c52fe20",
+      "selection": "final_171_200_registry",
+      "source_original": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/full/m177-Race-CLS-FairFace_yolov8s/metrics.json"
+    }
+  ],
+  "code": {
+    "source": "/home/ubuntu/Documents/Codex/2026-09-27/codex-threads-01a0de0e-9d72-7fc0-b485/work/reorg/historical171/run_model.py",
+    "sha256": "8b61859273a256a4401a98181b66a0b3a487793a85c3fcf7d1f84491e2e0d5c1",
+    "recorded_sha256": "8b61859273a256a4401a98181b66a0b3a487793a85c3fcf7d1f84491e2e0d5c1",
+    "attestation": "hash_exact",
+    "status_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m177/status.json",
+    "selection": "recovered_exact_code",
+    "archive": "code_archive/8b61859273a256a4_run_model.py"
+  },
+  "support_files": [
+    "run_model.py"
+  ],
+  "final_scorer": null,
+  "backend_package": "classification171_200_eval",
+  "readiness": "code_and_result_identified",
+  "launch_status": "configured",
+  "metadata_warning": null,
+  "final_weight_records": [
+    {
+      "variant": "Race-CLS-FairFace_yolo11l.pt",
+      "model_revision": "67bd9e4cfa604370316fa15e69de59ef697b602e",
+      "protocol_fingerprint": "3a061a84bdbea293ec652c63777ec1a7564fa47c4da4ad72fac64daf35f2754a",
+      "inference_status": "complete",
+      "scoring_kind": "original_run",
+      "review_status": null,
+      "dataset_relation": "original_exact",
+      "device": "cuda:1",
+      "scored_images": 10954,
+      "forward_seconds": 83.73684778157622,
+      "inference_e2e_seconds": null,
+      "metric_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/results_full.csv",
+      "detailed_metrics_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/full/m177-Race-CLS-FairFace_yolo11l/metrics.json",
+      "timing_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/full/m177-Race-CLS-FairFace_yolo11l/timing.json",
+      "status_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/full/m177-Race-CLS-FairFace_yolo11l/status.json",
+      "prediction_source": null,
+      "note": "Forward timing only; end-to-end timing was not recorded"
+    },
+    {
+      "variant": "Race-CLS-FairFace_yolo11x.pt",
+      "model_revision": "67bd9e4cfa604370316fa15e69de59ef697b602e",
+      "protocol_fingerprint": "8d7f835086ac0fc128ef00b828d6fed67e46ec05c746e4e0230f36f545f07d67",
+      "inference_status": "complete",
+      "scoring_kind": "original_run",
+      "review_status": null,
+      "dataset_relation": "original_exact",
+      "device": "cuda:1",
+      "scored_images": 10954,
+      "forward_seconds": 86.04921780806035,
+      "inference_e2e_seconds": null,
+      "metric_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/results_full.csv",
+      "detailed_metrics_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/full/m177-Race-CLS-FairFace_yolo11x/metrics.json",
+      "timing_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/full/m177-Race-CLS-FairFace_yolo11x/timing.json",
+      "status_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/full/m177-Race-CLS-FairFace_yolo11x/status.json",
+      "prediction_source": null,
+      "note": "Forward timing only; end-to-end timing was not recorded"
+    },
+    {
+      "variant": "Race-CLS-FairFace_yolov8m.pt",
+      "model_revision": "67bd9e4cfa604370316fa15e69de59ef697b602e",
+      "protocol_fingerprint": "c918e62b4bd5eb45a35af2155feeb0f340c9a5b3d4c3141626983fcd575e58d1",
+      "inference_status": "complete",
+      "scoring_kind": "original_run",
+      "review_status": null,
+      "dataset_relation": "original_exact",
+      "device": "cuda:1",
+      "scored_images": 10954,
+      "forward_seconds": 46.46021816926077,
+      "inference_e2e_seconds": null,
+      "metric_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/results_full.csv",
+      "detailed_metrics_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/full/m177-Race-CLS-FairFace_yolov8m/metrics.json",
+      "timing_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/full/m177-Race-CLS-FairFace_yolov8m/timing.json",
+      "status_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/full/m177-Race-CLS-FairFace_yolov8m/status.json",
+      "prediction_source": null,
+      "note": "Forward timing only; end-to-end timing was not recorded"
+    },
+    {
+      "variant": "Race-CLS-FairFace_yolov8n.pt",
+      "model_revision": "67bd9e4cfa604370316fa15e69de59ef697b602e",
+      "protocol_fingerprint": "1ba06eb739b17893ff1db875fe6486e23be948ea7452a07dbc612b6781b70bc8",
+      "inference_status": "complete",
+      "scoring_kind": "original_run",
+      "review_status": null,
+      "dataset_relation": "original_exact",
+      "device": "cuda:1",
+      "scored_images": 10954,
+      "forward_seconds": 36.02805550955236,
+      "inference_e2e_seconds": null,
+      "metric_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/results_full.csv",
+      "detailed_metrics_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/full/m177-Race-CLS-FairFace_yolov8n/metrics.json",
+      "timing_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/full/m177-Race-CLS-FairFace_yolov8n/timing.json",
+      "status_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/full/m177-Race-CLS-FairFace_yolov8n/status.json",
+      "prediction_source": null,
+      "note": "Forward timing only; end-to-end timing was not recorded"
+    },
+    {
+      "variant": "Race-CLS-FairFace_yolov8s.pt",
+      "model_revision": "67bd9e4cfa604370316fa15e69de59ef697b602e",
+      "protocol_fingerprint": "eb3f23b18d36a5d2c6967f66d8452de38ade2802c7b4a134d054e9173ae7de6a",
+      "inference_status": "complete",
+      "scoring_kind": "original_run",
+      "review_status": null,
+      "dataset_relation": "original_exact",
+      "device": "cuda:1",
+      "scored_images": 10954,
+      "forward_seconds": 34.725481716450304,
+      "inference_e2e_seconds": null,
+      "metric_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/results_full.csv",
+      "detailed_metrics_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/full/m177-Race-CLS-FairFace_yolov8s/metrics.json",
+      "timing_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/full/m177-Race-CLS-FairFace_yolov8s/timing.json",
+      "status_source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/classification171_200_v1/full/m177-Race-CLS-FairFace_yolov8s/status.json",
+      "prediction_source": null,
+      "note": "Forward timing only; end-to-end timing was not recorded"
+    }
+  ]
+}

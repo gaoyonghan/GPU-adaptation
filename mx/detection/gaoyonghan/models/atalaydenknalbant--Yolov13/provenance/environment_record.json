@@ -1,0 +1,16 @@
+{
+  "python": "3.11.16",
+  "requirements": "environments/e18-yolov13-v2/requirements.txt",
+  "expected": "environments/e18-yolov13-v2/expected.json",
+  "local_packages": [
+    {
+      "name": "ultralytics",
+      "version": "8.3.63",
+      "path": "assets/workspace/official_sources/object_detection/yolov13",
+      "editable": true
+    }
+  ],
+  "original_python": "/home/ubuntu/gaoyonghan/miniconda3/envs/object-detection-yolov13-v2/bin/python",
+  "torch": "2.2.2+cu121",
+  "python_version_scope": "Pinned to original interpreter version"
+}

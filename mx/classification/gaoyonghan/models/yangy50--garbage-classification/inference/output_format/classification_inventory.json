@@ -1,0 +1,46 @@
+{
+  "schema": "model-eval/classification-inventory/v1",
+  "scope": "One independent MX GPU classification model",
+  "models": [
+    {
+      "sequence": 105,
+      "model_id": "yangy50/garbage-classification",
+      "dataset": {
+        "id": "TrashNet",
+        "split": "official test manifest",
+        "note": [
+          "TrashNet\n已发布 test 清单，431 张"
+        ],
+        "native_scope": {
+          "name": "TrashNet",
+          "source": "garythung/trashnet",
+          "split": "official test manifest",
+          "image_count": 431,
+          "class_counts": {
+            "cardboard": 70,
+            "glass": 82,
+            "metal": 68,
+            "paper": 108,
+            "plastic": 74,
+            "trash": 29
+          },
+          "manifest_url": "https://github.com/garythung/trashnet/blob/master/data/one-indexed-files-notrash_test.txt",
+          "split_note": "Uses the repository's published 431-image test manifest; no random split is created."
+        },
+        "relation": "native_e07_registered_scope",
+        "index_source": "native loader GT, materialized as classification_annotations.json in the native phase directory",
+        "data_containers": [
+          "dataset/trashnet"
+        ]
+      },
+      "qualification": "native_registered_scope",
+      "limitations": [
+        "Capture-ready is a code integration state, not a claim that inference has passed.",
+        "Unobserved native Top-5 is unavailable; aggregate scores are not predictions."
+      ],
+      "num_classes": 6,
+      "expected_images": 431,
+      "adapter": "native_labels"
+    }
+  ]
+}

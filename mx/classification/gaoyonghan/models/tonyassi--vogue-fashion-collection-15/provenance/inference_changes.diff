@@ -1,0 +1,20 @@
+--- original_inference.py
++++ inference/native/run_model.py
+@@ -398,6 +398,8 @@
+                 s=json.loads(smoke.read_text())
+                 if s.get('status')!='partial_complete' or s.get('protocol_fingerprint')!=fp:
+                     raise RuntimeError('Matching smoke protocol has not passed')
++            from classification_capture import snapshot_gt
++            snapshot_gt(out, rows)
+             args.segment=str(time.time_ns())
+             if spec['backend']=='timm_native': timing,metrics=native_timm(spec,rows,args,out)
+             elif spec['backend']=='ultralytics_native': timing,metrics=native_yolo(spec,rows,args,out)
+@@ -448,7 +450,7 @@
+     parser.add_argument('--model',type=int,required=True)
+     parser.add_argument('--phase',choices=['preflight','smoke','full'],default='preflight')
+     parser.add_argument('--describe',action='store_true')
+-    parser.add_argument('--output-root',type=Path,default=Path('/home/ubuntu/gaoyonghan/gpu/results/classification171_200_v1'))
++    parser.add_argument('--output-root',type=Path,default=Path('/data2/gaoyonghan/gpu_model_standalone_20261110/release/model/分类/tonyassi--vogue-fashion-collection-15/resources/runtime/assets/workspace/results/classification171_200_v1'))
+     parser.add_argument('--device',default='cuda:0')
+     parser.add_argument('--batch-size',type=int,default=1)
+     parser.add_argument('--warmup',type=int,default=10)

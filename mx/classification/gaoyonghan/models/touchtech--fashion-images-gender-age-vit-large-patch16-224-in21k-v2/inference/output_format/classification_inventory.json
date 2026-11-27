@@ -1,0 +1,59 @@
+{
+  "schema": "model-eval/classification-inventory/v1",
+  "scope": "Existing 59 classification models; model 93 is retrieval and excluded.",
+  "models": [
+    {
+      "sequence": 90,
+      "model_id": "touchtech/fashion-images-gender-age-vit-large-patch16-224-in21k-v2",
+      "runner_family": "special",
+      "adapter": "fashion_proxy",
+      "state": "integrated",
+      "dataset": {
+        "id": "fashion_age_proxy",
+        "relation": null,
+        "split": null,
+        "note": "PA-100K test（监控图，四个人物类别各10张）\nImageNet-1k val（无人物服饰10张，pack）\n替代集，非官方可比"
+      },
+      "qualification": "selected_proxy_scope",
+      "limitations": [
+        "Complete the existing selected proxy protocol, not a full official validation dataset.",
+        "Historical output may contain only Top-1. Missing Top-5 remains unavailable; never reconstruct ranking silently."
+      ],
+      "num_classes": 5,
+      "categories": [
+        {
+          "id": 0,
+          "name": "model-female-adult"
+        },
+        {
+          "id": 1,
+          "name": "model-female-child"
+        },
+        {
+          "id": 2,
+          "name": "model-male-adult"
+        },
+        {
+          "id": 3,
+          "name": "model-male-child"
+        },
+        {
+          "id": 4,
+          "name": "pack"
+        }
+      ],
+      "expected_images": 50,
+      "existing_protocol": {
+        "id": "fashion_age_balanced_proxy50_v1",
+        "scope": "PA-100K人物图与ImageNet服饰图组成的五类各10张代理集",
+        "expected_inference_images": 50,
+        "expected_scored_images": 50,
+        "metrics_path": "metrics.json",
+        "official_reference_comparable": false,
+        "limitations": [
+          "监控人物图与服饰模型存在域差异；不是作者正式测试集"
+        ]
+      }
+    }
+  ]
+}

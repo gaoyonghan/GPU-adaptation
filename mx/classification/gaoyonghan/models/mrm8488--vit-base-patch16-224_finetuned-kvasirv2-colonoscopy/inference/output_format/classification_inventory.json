@@ -1,0 +1,58 @@
+{
+  "schema": "model-eval/classification-inventory/v1",
+  "scope": "One independent MX GPU classification model",
+  "models": [
+    {
+      "sequence": 157,
+      "model_id": "mrm8488/vit-base-patch16-224_finetuned-kvasirv2-colonoscopy",
+      "dataset": {
+        "id": "Kvasir-v2",
+        "split": "local_800_image_test_candidate",
+        "note": [
+          "Kvasir-v2 (San-D/Kvasir_V2)\n本地 train 全部 800 张\n测试候选集，非独立 test"
+        ],
+        "native_scope": {
+          "name": "Kvasir-v2",
+          "source": "San-D/Kvasir_V2",
+          "split": "local_800_image_test_candidate",
+          "image_count": 800,
+          "class_names": [
+            "dyed-lifted-polyps",
+            "dyed-resection-margins",
+            "esophagitis",
+            "normal-cecum",
+            "normal-pylorus",
+            "normal-z-line",
+            "polyps",
+            "ulcerative-colitis"
+          ],
+          "class_support": {
+            "dyed-lifted-polyps": 100,
+            "dyed-resection-margins": 100,
+            "esophagitis": 100,
+            "normal-cecum": 100,
+            "normal-pylorus": 100,
+            "normal-z-line": 100,
+            "polyps": 100,
+            "ulcerative-colitis": 100
+          },
+          "split_note": "The local San-D/Kvasir_V2 repository exposes one train split of 800 images (100 per class); it is not the model card's unreleased 480-image evaluation split.",
+          "original_dataset_note": "Kvasir-v2 is an 8-class endoscopy image dataset from Simula Research Laboratory."
+        },
+        "relation": "native_e07_registered_scope",
+        "index_source": "native loader GT, materialized as classification_annotations.json in the native phase directory",
+        "data_containers": [
+          "dataset/Kvasir_V2"
+        ]
+      },
+      "qualification": "native_registered_scope",
+      "limitations": [
+        "Capture-ready is a code integration state, not a claim that inference has passed.",
+        "Unobserved native Top-5 is unavailable; aggregate scores are not predictions."
+      ],
+      "num_classes": 8,
+      "expected_images": 800,
+      "adapter": "native_labels"
+    }
+  ]
+}

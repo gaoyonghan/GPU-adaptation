@@ -1,0 +1,145 @@
+{
+  "sequence": 55,
+  "model_id": "iitolstykh/YOLO-Face-Person-Detector",
+  "task": "object_detection",
+  "task_name": "目标检测",
+  "reported_result": "1900-03-24 10:48:00",
+  "reference": "未提供可对应准确率表",
+  "model_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/model_index/iitolstykh/YOLO-Face-Person-Detector",
+  "model_exists_at_build": true,
+  "dataset": {
+    "id": "coco_wholebody_val",
+    "relation": "public_replacement",
+    "split": "validation",
+    "note": "COCO-WholeBody v1.0 · validation · 5000 图\n非官方评测集：公开替代"
+  },
+  "environment_id": "detection-yolo",
+  "runner_family": "remaining_detection",
+  "final_result_sources": [
+    {
+      "source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m055/metrics-0.json",
+      "sha256": "580670b74c4c499f9d2d2528af400d3bcbb508f4e242c9eb3087bc037982eef9",
+      "selection": "workbook_score_match",
+      "data": {
+        "metrics": {
+          "AP": 0.45562349442882727,
+          "AP50": 0.844454001387109,
+          "AP75": 0.36895082517498906,
+          "AP_small": 0.2710337341600973,
+          "AP_medium": 0.4975085485588085,
+          "AP_large": 0.6163534217185822,
+          "AR1": 0.22509507535039605,
+          "AR10": 0.48623510425424393,
+          "AR100": 0.5414514362340523,
+          "AR_small": 0.3752812287069693,
+          "AR_medium": 0.5929856862164933,
+          "AR_large": 0.6917495414295677,
+          "per_class_AP": {
+            "person": 0.4939979763686109,
+            "face": 0.41724901248904367
+          }
+        },
+        "unit": "fraction_0_to_1",
+        "coverage": {
+          "model_labels": {
+            "0": "person",
+            "1": "face"
+          },
+          "mapping": {
+            "0": 1,
+            "1": 2
+          },
+          "covered_labels": [
+            "person",
+            "face"
+          ],
+          "missing_labels": [],
+          "covered_count": 2,
+          "total_model_classes": 2,
+          "gt_instances_per_class": {
+            "person": 11004,
+            "face": 11002
+          }
+        },
+        "evaluation_images": 5000,
+        "annotation_sha256": "f420f13b8a4452aa27885c73fc821e50f61340b478d809514e3ad4ae4f6f3a12",
+        "protocol_fingerprint": "4fadfa2fdeef9a85a424b7c88c317ac8ea0ba694957f26b65bf1b1ff055ab0e1",
+        "reference_check": "not_officially_comparable"
+      },
+      "source_original": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/remaining25_v4/m55-yolo-face-person-detector/person_face/metrics.json"
+    }
+  ],
+  "code": {
+    "source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/remaining_detection_eval/run_model.py",
+    "sha256": "79a11b48aadcd2cf5a4d733f752e1dcee2c260e778b9de2a0c787628cbe0c744",
+    "recorded_sha256": null,
+    "attestation": "current_code_unverified",
+    "status_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m055/status.json",
+    "selection": "current_shared_code",
+    "archive": "code_archive/79a11b48aadcd2cf_run_model.py"
+  },
+  "support_files": [
+    "run_m37_native.sh",
+    "environment_versions.json",
+    "models.json",
+    "run_model.py",
+    "run_m37_native.py",
+    "run_m34_native.py",
+    "run_m34_native.sh",
+    "official_comparison.json",
+    "package_sha256.json",
+    "qualcomm_geometry.py",
+    "run_m46_native.sh",
+    "prepare_native_data.py",
+    "setup_env.sh",
+    "run_pp_layout.py",
+    "score_m38_omni_official.sh",
+    "run_m47_native.sh",
+    "run_m46_native.py",
+    "run_m41_omni_four.py",
+    "run_m39_omni.sh",
+    "run_m39_omni.py",
+    "prepare_sku110k.py",
+    "verification.json",
+    "progress.json",
+    "run_ready.sh",
+    "audit_m38_omni.py",
+    "run_adapted.sh",
+    "score_m38_omni_official.py",
+    "adapters.py",
+    "collect_versions.py",
+    "setup_m12_native.sh",
+    "score_pp_v3.py",
+    "run_widerface.py",
+    "summarize.py",
+    "run_anzhc_lapa.py",
+    "数据获取记录.json",
+    "qualcomm_inference.py",
+    "prepare_publaynet.py",
+    "run_m41_omni_four.sh",
+    "run_m38_omni.py",
+    "run_m48_native.sh",
+    "run_m38_omni.sh",
+    "run_qualcomm_coco.py",
+    "verify_results.py",
+    "run_m54_sku_official.sh",
+    "score_m39_omni_official.py",
+    "probe_private_weights.py",
+    "run_sku110k.py",
+    "run_m54_sku_official.py",
+    "run_m47_native.py",
+    "blocker_audit.json",
+    "apply_pp_patch.py",
+    "run_m12_native.py",
+    "run_anzhc_text.py",
+    "run_cmarkea.py",
+    "audit_summary.json",
+    "run_m48_native.py",
+    "build_audit.py"
+  ],
+  "final_scorer": null,
+  "backend_package": "remaining_detection_eval",
+  "readiness": "code_and_result_identified",
+  "launch_status": "configured",
+  "metadata_warning": null
+}

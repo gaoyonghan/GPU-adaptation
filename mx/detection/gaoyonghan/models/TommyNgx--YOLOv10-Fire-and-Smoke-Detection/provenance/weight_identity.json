@@ -1,0 +1,78 @@
+{
+  "sequence": 46,
+  "files": [
+    {
+      "path": "best.pt",
+      "bytes": 64111730,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "model.safetensors",
+      "bytes": 63712832,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "pytorch_model.bin",
+      "bytes": 63988045,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "config.json",
+      "bytes": 414,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "preprocessor_config.json",
+      "bytes": 276,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2257,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": ".gitattributes",
+      "bytes": 152,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 129,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "app.py",
+      "bytes": 1822,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "examples/example1.jpg",
+      "bytes": 38862,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "examples/example3.jpg",
+      "bytes": 64298,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "examples/example2.jpg",
+      "bytes": 47433,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    }
+  ],
+  "mismatches": []
+}

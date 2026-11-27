@@ -1,0 +1,284 @@
+{
+  "purpose": "independent read-only CPU audit; threshold .7 is a usage-example diagnostic, not a claimed official evaluation setting",
+  "archive": "__DATASET_ROOT__/doclaynet_test/DocLayNet_core.zip",
+  "splits": {
+    "train": {
+      "images": 69375,
+      "annotations": 941123,
+      "categories": [
+        {
+          "supercategory": "Caption",
+          "id": 1,
+          "name": "Caption"
+        },
+        {
+          "supercategory": "Footnote",
+          "id": 2,
+          "name": "Footnote"
+        },
+        {
+          "supercategory": "Formula",
+          "id": 3,
+          "name": "Formula"
+        },
+        {
+          "supercategory": "List-item",
+          "id": 4,
+          "name": "List-item"
+        },
+        {
+          "supercategory": "Page-footer",
+          "id": 5,
+          "name": "Page-footer"
+        },
+        {
+          "supercategory": "Page-header",
+          "id": 6,
+          "name": "Page-header"
+        },
+        {
+          "supercategory": "Picture",
+          "id": 7,
+          "name": "Picture"
+        },
+        {
+          "supercategory": "Section-header",
+          "id": 8,
+          "name": "Section-header"
+        },
+        {
+          "supercategory": "Table",
+          "id": 9,
+          "name": "Table"
+        },
+        {
+          "supercategory": "Text",
+          "id": 10,
+          "name": "Text"
+        },
+        {
+          "supercategory": "Title",
+          "id": 11,
+          "name": "Title"
+        }
+      ],
+      "raw_annotation_sha256": "d33686f14d929a97a6a8b01351d36e78929300a328292b728a5b3089b47c38ca",
+      "unique_files": 69375,
+      "unique_docs": 2587,
+      "precedence_images": {
+        "0": 69375
+      },
+      "precedence_annotations": {
+        "0": 941123
+      },
+      "crowd": {
+        "0": 941123
+      },
+      "all_png_present": true
+    },
+    "val": {
+      "images": 6489,
+      "annotations": 99816,
+      "categories": [
+        {
+          "supercategory": "Caption",
+          "id": 1,
+          "name": "Caption"
+        },
+        {
+          "supercategory": "Footnote",
+          "id": 2,
+          "name": "Footnote"
+        },
+        {
+          "supercategory": "Formula",
+          "id": 3,
+          "name": "Formula"
+        },
+        {
+          "supercategory": "List-item",
+          "id": 4,
+          "name": "List-item"
+        },
+        {
+          "supercategory": "Page-footer",
+          "id": 5,
+          "name": "Page-footer"
+        },
+        {
+          "supercategory": "Page-header",
+          "id": 6,
+          "name": "Page-header"
+        },
+        {
+          "supercategory": "Picture",
+          "id": 7,
+          "name": "Picture"
+        },
+        {
+          "supercategory": "Section-header",
+          "id": 8,
+          "name": "Section-header"
+        },
+        {
+          "supercategory": "Table",
+          "id": 9,
+          "name": "Table"
+        },
+        {
+          "supercategory": "Text",
+          "id": 10,
+          "name": "Text"
+        },
+        {
+          "supercategory": "Title",
+          "id": 11,
+          "name": "Title"
+        }
+      ],
+      "raw_annotation_sha256": "eacd2ba2a32e6c2ebe2dc5ea1545f405d8461c46bba53e0c35d9c54fba0bcef6",
+      "unique_files": 6489,
+      "unique_docs": 160,
+      "precedence_images": {
+        "0": 6489
+      },
+      "precedence_annotations": {
+        "0": 99816
+      },
+      "crowd": {
+        "0": 99816
+      },
+      "all_png_present": true,
+      "prediction_rows": 6489,
+      "all_image_ids_exact": true,
+      "prediction_count": 648899,
+      "predictions_json_sha256": "40c3f487c8299305f6fe75fbd84d7942b8d2dc12c18e6ca888170fb50bde49dd",
+      "matches_saved_json": true,
+      "score_range": [
+        0.004681089427322149,
+        0.9526565670967102
+      ],
+      "thresholds": {}
+    },
+    "test": {
+      "images": 4999,
+      "annotations": 66531,
+      "categories": [
+        {
+          "supercategory": "Caption",
+          "id": 1,
+          "name": "Caption"
+        },
+        {
+          "supercategory": "Footnote",
+          "id": 2,
+          "name": "Footnote"
+        },
+        {
+          "supercategory": "Formula",
+          "id": 3,
+          "name": "Formula"
+        },
+        {
+          "supercategory": "List-item",
+          "id": 4,
+          "name": "List-item"
+        },
+        {
+          "supercategory": "Page-footer",
+          "id": 5,
+          "name": "Page-footer"
+        },
+        {
+          "supercategory": "Page-header",
+          "id": 6,
+          "name": "Page-header"
+        },
+        {
+          "supercategory": "Picture",
+          "id": 7,
+          "name": "Picture"
+        },
+        {
+          "supercategory": "Section-header",
+          "id": 8,
+          "name": "Section-header"
+        },
+        {
+          "supercategory": "Table",
+          "id": 9,
+          "name": "Table"
+        },
+        {
+          "supercategory": "Text",
+          "id": 10,
+          "name": "Text"
+        },
+        {
+          "supercategory": "Title",
+          "id": 11,
+          "name": "Title"
+        }
+      ],
+      "raw_annotation_sha256": "37ccce8c7951dcfd9c7c832bbff5aee71cb59c032ed7021e125e6188e6ac4fe1",
+      "unique_files": 4999,
+      "unique_docs": 196,
+      "precedence_images": {
+        "0": 4999
+      },
+      "precedence_annotations": {
+        "0": 66531
+      },
+      "crowd": {
+        "0": 66531
+      },
+      "all_png_present": true,
+      "prediction_rows": 4999,
+      "all_image_ids_exact": true,
+      "prediction_count": 499896,
+      "predictions_json_sha256": "68db66543b7a7d123e845a33dbdf11013f00d486afdb0ffe7030af9ef3a92be1",
+      "matches_saved_json": true,
+      "score_range": [
+        0.00429188646376133,
+        0.9521521329879761
+      ],
+      "thresholds": {
+        "0.0": {
+          "kept_predictions": 499896,
+          "AP": 0.7442089100042552,
+          "AP50": 0.9074214949353159,
+          "AR100": 0.8400443591044167
+        },
+        "0.7": {
+          "kept_predictions": 50085,
+          "AP": 0.581025754782788,
+          "AP50": 0.6905606014069638,
+          "AR100": 0.6196435130190319
+        }
+      },
+      "independent_AP_matches_saved": true
+    }
+  },
+  "overlap": {
+    "train__val": {
+      "id": 5532,
+      "file_name": 0,
+      "doc_name": 0,
+      "doc_page": 0
+    },
+    "train__test": {
+      "id": 4263,
+      "file_name": 0,
+      "doc_name": 0,
+      "doc_page": 0
+    },
+    "val__test": {
+      "id": 4368,
+      "file_name": 0,
+      "doc_name": 0,
+      "doc_page": 0
+    }
+  },
+  "duplicate_image_basenames": 0,
+  "overlap_note": "Numeric image IDs restart in each independent COCO split; overlapping IDs alone do not mean the same image. File names, document names and document-page pairs are disjoint."
+}

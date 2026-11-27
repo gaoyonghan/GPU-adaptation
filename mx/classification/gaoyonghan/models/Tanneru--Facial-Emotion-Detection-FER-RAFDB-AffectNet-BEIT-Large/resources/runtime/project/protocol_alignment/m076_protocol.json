@@ -1,0 +1,15 @@
+{
+  "protocol": "m076_original_3000_relative_content_v1",
+  "samples": 3000,
+  "original_manifest_sha256": "3aee9e7dc1e3c4932336d2c7ded0736acd4a6e65708f73e6af2a3c15c29745e7",
+  "portable_manifest_sha256": "b48bf3b2e1a8245c35ec38465e0c03920f69827aec2c189f98a1298079c58480",
+  "archived_runner_sha256": "436e3789f7a10f9d9136908f6cf911b127b174275194391115bfee6b582495f6",
+  "all_original_and_relocated_image_contents_identical": true,
+  "by_generator": {
+    "human": 1500,
+    "FLUX1": 490,
+    "SDXL": 491,
+    "SD": 519
+  },
+  "sample_identity": "relative_path,label,shard,generator,image_sha256; preserve original order; never resample from absolute paths"
+}

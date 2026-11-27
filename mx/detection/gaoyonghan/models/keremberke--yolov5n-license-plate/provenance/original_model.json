@@ -1,0 +1,82 @@
+{
+  "sequence": 45,
+  "model_id": "keremberke/yolov5n-license-plate",
+  "task": "object_detection",
+  "task_name": "目标检测",
+  "reported_result": "97.010317541848",
+  "reference": "97.8343129499589",
+  "model_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/model_index/keremberke/yolov5n-license-plate",
+  "model_exists_at_build": true,
+  "dataset": {
+    "id": "license_plate_v1_valid",
+    "relation": "original_exact",
+    "split": "validation",
+    "note": "Vehicle Registration Plates v1 · validation · 1765 图\n官方原集（不代表全协议已对齐）"
+  },
+  "environment_id": "detection-yolov5",
+  "runner_family": "official_detection",
+  "final_result_sources": [
+    {
+      "source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m045/metrics-0.json",
+      "sha256": "a6bf27d3e197ec92263c3a775d8ed38db423b9fc198085b135f59ba7fa055d59",
+      "selection": "workbook_score_match",
+      "data": {
+        "metrics": {
+          "AP": 0.6721410535529948,
+          "AP50": 0.9701031754184799,
+          "AP75": 0.8268688316375158,
+          "AP_small": 0.494593824331123,
+          "AP_medium": 0.7087829281115297,
+          "AP_large": 0.7215328123448433,
+          "AR1": 0.6969565217391305,
+          "AR10": 0.7282065217391305,
+          "AR100": 0.7318478260869565,
+          "AR_small": 0.5909883720930232,
+          "AR_medium": 0.7630943931866573,
+          "AR_large": 0.781818181818182
+        },
+        "metrics_percent": {
+          "AP": 67.21410535529948,
+          "AP50": 97.010317541848,
+          "AP75": 82.68688316375157,
+          "AP_small": 49.459382433112296,
+          "AP_medium": 70.87829281115296,
+          "AP_large": 72.15328123448434,
+          "AR1": 69.69565217391305,
+          "AR10": 72.82065217391305,
+          "AR100": 73.18478260869566,
+          "AR_small": 59.098837209302324,
+          "AR_medium": 76.30943931866572,
+          "AR_large": 78.1818181818182
+        },
+        "official_reference": null,
+        "reference_check": {
+          "classification": "manual_reference_required"
+        }
+      },
+      "source_original": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/object_detection_official_v2/m45-yolov5n-license-plate/metrics.json"
+    }
+  ],
+  "code": {
+    "source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/object_detection_official_v2/_source_snapshot/run_model.py",
+    "sha256": "f2fb744cfeffd526f9088df0d3ee7e4b17ce65eeada64030fe37deb96dd485dc",
+    "recorded_sha256": null,
+    "attestation": "result_batch_snapshot",
+    "status_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m045/status.json",
+    "selection": "same_batch_snapshot",
+    "archive": "code_archive/f2fb744cfeffd526_run_model.py"
+  },
+  "support_files": [
+    "download_official_source.py",
+    "models.json",
+    "run_model.py",
+    "setup_env.sh",
+    "run_all.sh",
+    "check_environment.py"
+  ],
+  "final_scorer": null,
+  "backend_package": "remaining_detection_eval",
+  "readiness": "code_and_result_identified",
+  "launch_status": "configured",
+  "metadata_warning": null
+}

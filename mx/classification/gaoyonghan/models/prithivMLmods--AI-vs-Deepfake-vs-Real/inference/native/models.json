@@ -1,0 +1,133 @@
+{
+  "schema_version": 1,
+  "sources": {},
+  "models": [
+    {
+      "sequence": 124,
+      "model_id": "prithivMLmods/AI-vs-Deepfake-vs-Real",
+      "runner_family": "native_script",
+      "adapter": "native_labels",
+      "state": "full_inference_and_public_scoring_verified",
+      "dataset": {
+        "id": "AI-vs-Deepfake-vs-Real",
+        "split": "full_local_dataset",
+        "note": [
+          "AI-vs-Deepfake-vs-Real\n本地全部 9,999 张\n无独立 test"
+        ],
+        "native_scope": {
+          "name": "AI-vs-Deepfake-vs-Real",
+          "source": "prithivMLmods/AI-vs-Deepfake-vs-Real",
+          "split": "full_local_dataset",
+          "split_note": "本地数据集仅提供完整数据，没有独立官方 test split；结果可能与模型训练数据重叠，不应视为独立泛化性能。",
+          "image_count": 9999,
+          "class_count": 3,
+          "class_names": [
+            "Artificial",
+            "Deepfake",
+            "Real"
+          ],
+          "class_counts": {
+            "Artificial": 3333,
+            "Deepfake": 3333,
+            "Real": 3333
+          }
+        },
+        "relation": "native_e07_registered_scope",
+        "index_source": "native loader GT, materialized as classification_annotations.json in the native phase directory",
+        "data_containers": [
+          "dataset/AI-vs-Deepfake-vs-Real/0000.parquet",
+          "dataset/AI-vs-Deepfake-vs-Real/0001.parquet",
+          "dataset/AI-vs-Deepfake-vs-Real/0002.parquet",
+          "dataset/AI-vs-Deepfake-vs-Real/0003.parquet"
+        ]
+      },
+      "qualification": "native_registered_scope",
+      "limitations": [
+        "Capture-ready is a code integration state, not a claim that inference has passed.",
+        "Unobserved native Top-5 is unavailable; aggregate scores are not predictions."
+      ],
+      "num_classes": 3,
+      "expected_images": 9999,
+      "native_script": {
+        "script": "inference/native/run_model.py",
+        "script_sha256": "2354debe21e5439a7d5ceb23aa5ddd234e4192769b5d4d905be0381836a6a0dd",
+        "loop_lineno": 280,
+        "labels": "batch_labels",
+        "prediction": "batch_predictions",
+        "ranking": "batch_top3",
+        "classes": "logits.shape[-1]",
+        "loader_kind": "torch",
+        "label_position": 1,
+        "framework": "torch",
+        "original_script_sha256": "887537d24d49983a50526fe897deae2405f2b32a485fe5da63b74900005d0cf0",
+        "original_loop_lineno": 269,
+        "original_path": "code/ai-vs-deepfake-vs-real-ai-vs-deepfake-vs-real-test.py",
+        "ported_script_sha256": "5abaf0e7dc98bd09e7d650079404fba8bbe9e22f2e0aa6972ec406e9c556364c"
+      },
+      "output_relative_path": "result/run_001/full/m124",
+      "supports_max_samples": false,
+      "runtime": {
+        "batch_size": 128,
+        "workers": 0,
+        "warmup": 3
+      },
+      "weights_files": [
+        {
+          "path": "config.json",
+          "size": 771,
+          "sha256": "dff285912f1eb68bcbd9e7acaef85fc67cdc77be1e268e72f81bcb0c93f1cc23"
+        },
+        {
+          "path": "model.safetensors",
+          "size": 343227052,
+          "sha256": "6dee169b6061d3a920cb063be8019ce6b45f75fe476e8478831d7d9c08e1a917"
+        },
+        {
+          "path": "preprocessor_config.json",
+          "size": 351,
+          "sha256": "445c77049d082004aa07593344d5e1f521f1198228bf586196f70ce7ae021414"
+        }
+      ],
+      "dataset_files": [
+        "AI-vs-Deepfake-vs-Real/0000.parquet",
+        "AI-vs-Deepfake-vs-Real/0001.parquet",
+        "AI-vs-Deepfake-vs-Real/0002.parquet",
+        "AI-vs-Deepfake-vs-Real/0003.parquet"
+      ],
+      "environment": "e07.txt",
+      "native_precision": "FP32",
+      "backend": "transformers",
+      "timing_alignment": {
+        "forward": "Same event/current-stream/synchronize semantics; wrapper preserves exactly one native call. MX runtime differs.",
+        "e2e": "Native DataLoader fetch to CPU prediction availability; worker-prefetch boundary differs from Example. Does not include subsequent metrics or record writes.",
+        "worker_prefetch": false,
+        "starts_after_spider_composition": false,
+        "native_metric_operations_before_prediction_readiness": [],
+        "model_load": "Sum of measured native construction/load/placement blocks, not Example contiguous block.",
+        "warmup": "Native repeated preprocessed first batch; native count retained; synchronized before/after. Unlike Example, preprocessing/transfer/softmax-to-CPU are outside the warmup interval.",
+        "evaluation": "Native aggregate evaluation not measured separately; evaluation_seconds=null. Public scoring duration is outside native timing.",
+        "resume": "No resume; repeated native phase archives previous output; resume_segments=1.",
+        "comparison_valid": false
+      },
+      "label_mapping": [
+        {
+          "id": 0,
+          "name": "output_class_0"
+        },
+        {
+          "id": 1,
+          "name": "output_class_1"
+        },
+        {
+          "id": 2,
+          "name": "output_class_2"
+        }
+      ],
+      "layout_reference": {
+        "branch": "gaoyonghan/mx",
+        "commit": "208733e1562fca75b7128772ca2cd587943d9012",
+        "platform": "mx"
+      }
+    }
+  ]
+}

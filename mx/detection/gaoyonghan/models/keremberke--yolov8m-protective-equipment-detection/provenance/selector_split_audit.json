@@ -1,0 +1,11 @@
+{
+  "sequence": 61,
+  "removed_option": "--models",
+  "changed_functions": [
+    "parse_args",
+    "main"
+  ],
+  "inference_functions_unchanged": true,
+  "before_template_sha256": "055e5e694d3cf12ee5e4e04d34446ee6062347857d576e385cf384fc617da565",
+  "after_template_sha256": "2639344a8f9835af8995d50e6d2f6e4d3baddf01e1d7e6971d79d17d9ee29736"
+}

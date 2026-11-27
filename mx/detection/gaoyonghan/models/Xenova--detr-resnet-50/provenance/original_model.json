@@ -1,0 +1,83 @@
+{
+  "sequence": 53,
+  "model_id": "Xenova/detr-resnet-50",
+  "task": "object_detection",
+  "task_name": "目标检测",
+  "reported_result": "42.0625578463414",
+  "reference": "AP 42%",
+  "model_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/model_index/Xenova/detr-resnet-50",
+  "model_exists_at_build": true,
+  "dataset": {
+    "id": "coco2017_val",
+    "relation": "original_exact",
+    "split": "val2017",
+    "note": "COCO 2017 · val2017 · 5000 图\n官方原集（不代表全协议已对齐）"
+  },
+  "environment_id": "detection-onnx",
+  "runner_family": "official_detection",
+  "final_result_sources": [
+    {
+      "source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m053/metrics-0.json",
+      "sha256": "45bf1add0d95865e0eee7444a6bbfd1a88f3c2912e2d5f62525dbffa93254ee7",
+      "selection": "workbook_score_match",
+      "data": {
+        "metrics": {
+          "AP": 0.4206255784634137,
+          "AP50": 0.6231316859611045,
+          "AP75": 0.4421804656346521,
+          "AP_small": 0.21315276449243423,
+          "AP_medium": 0.4595955786097583,
+          "AP_large": 0.6105266838619932,
+          "AR1": 0.33397159627447953,
+          "AR10": 0.5330054671347237,
+          "AR100": 0.5747039203946942,
+          "AR_small": 0.32023031768578114,
+          "AR_medium": 0.6293594539243633,
+          "AR_large": 0.8047110214253405
+        },
+        "metrics_percent": {
+          "AP": 42.06255784634137,
+          "AP50": 62.313168596110444,
+          "AP75": 44.21804656346521,
+          "AP_small": 21.315276449243424,
+          "AP_medium": 45.95955786097583,
+          "AP_large": 61.052668386199315,
+          "AR1": 33.397159627447955,
+          "AR10": 53.30054671347237,
+          "AR100": 57.47039203946942,
+          "AR_small": 32.023031768578115,
+          "AR_medium": 62.93594539243633,
+          "AR_large": 80.47110214253405
+        },
+        "official_reference": null,
+        "reference_check": {
+          "classification": "manual_reference_required"
+        }
+      },
+      "source_original": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/object_detection_official_v3_repairs/m53-detr-resnet-50/metrics.json"
+    }
+  ],
+  "code": {
+    "source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/object_detection_official_v3_repairs/_source_snapshot/run_model.py",
+    "sha256": "eb619c65fdcd87433e55c96549cf9ebe58931b49a63630443c37014c5690db42",
+    "recorded_sha256": null,
+    "attestation": "result_batch_snapshot",
+    "status_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m053/status.json",
+    "selection": "same_batch_snapshot",
+    "archive": "code_archive/eb619c65fdcd8743_run_model.py"
+  },
+  "support_files": [
+    "download_official_source.py",
+    "models.json",
+    "run_model.py",
+    "setup_repairs.sh",
+    "run_repairs.sh",
+    "retinanet_official.py",
+    "prepare_wilddet_weights.py"
+  ],
+  "final_scorer": null,
+  "backend_package": "remaining_detection_eval",
+  "readiness": "code_and_result_identified",
+  "launch_status": "configured",
+  "metadata_warning": null
+}

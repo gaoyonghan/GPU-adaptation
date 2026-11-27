@@ -1,0 +1,36 @@
+{
+  "schema": "model-eval/classification-inventory/v1",
+  "scope": "Existing 59 classification models; model 93 is retrieval and excluded.",
+  "models": [
+    {
+      "sequence": 185,
+      "model_id": "LishaV01/agriculture-crop-disease-detection",
+      "runner_family": "classification171",
+      "adapter": "native_labels",
+      "state": "integrated",
+      "dataset": {
+        "id": "classification171_185",
+        "relation": "public_replacement",
+        "split": "exact-name supported crop/disease classes only",
+        "note": [
+          "Full ViT state dict is published, no adapter_config or LoRA tensors; load original full checkpoint, no merging. Exclude nonmatching diseases rather than guess.",
+          "Local checkpoint and publisher inference components retained. Offline file paths, eval mode, batching, timing observation and reference scoring are external orchestration."
+        ],
+        "index_source": "__MODEL_ROOT__/inference/native/indices/185.jsonl",
+        "data_containers": [
+          "__DATASET_ROOT__/datasets_171_200/fc45dhlpd/15 Crop 45 Disease and Healthy Leaf dataset.zip"
+        ]
+      },
+      "qualification": "public_replacement",
+      "limitations": [],
+      "num_classes": 20,
+      "expected_images": 9708,
+      "category_reference": {
+        "file": "__MODEL_ROOT__/inference/native/models.json",
+        "sequence": 185,
+        "field": "label_mapping"
+      },
+      "gt_index": "__MODEL_ROOT__/inference/native/indices/185.jsonl"
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "sources": {},
+  "models": [
+    {
+      "sequence": 142,
+      "model_id": "RickyIG/emotion_face_image_classification_v3",
+      "runner_family": "native_script",
+      "adapter": "native_labels",
+      "state": "full_inference_and_public_scoring_verified",
+      "dataset": {
+        "id": "FER+",
+        "split": null,
+        "note": [
+          "FER+ PrivateTest\n多数票标签筛选\n3,153 / 3,589 张"
+        ],
+        "native_scope": {
+          "name": "FER+",
+          "images_source": "FER2013 PrivateTest images from Aaryan333/fer2013_train_publicTest_privateTest",
+          "labels_source": "microsoft/FERPlus fer2013new.csv",
+          "source_split": "PrivateTest",
+          "source_image_count": 3589,
+          "evaluated_image_count": 3153,
+          "evaluated_coverage_pct": 87.8518,
+          "accepted_class_counts": {
+            "contempt": 16,
+            "neutral": 1090,
+            "anger": 273,
+            "happy": 893,
+            "surprise": 396,
+            "fear": 83,
+            "disgust": 18,
+            "sad": 384
+          },
+          "excluded_image_counts": {
+            "unknown_or_non_face": 26,
+            "no_strict_majority": 410
+          },
+          "label_protocol": "Microsoft FER+ majority mode: remove one-vote outliers, require a strict majority (>50% of valid votes), then discard unknown/non-face or ambiguous samples.",
+          "alignment_note": "FER+ annotation rows and FER2013 PrivateTest images are paired by their shared PrivateTest row order; both contain 3589 rows."
+        },
+        "relation": "native_e07_registered_scope",
+        "index_source": "native loader GT, materialized as classification_annotations.json in the native phase directory",
+        "data_containers": [
+          "dataset/fer2013/data/privateTest-00000-of-00001-4b8a0715cf1b7560.parquet"
+        ]
+      },
+      "qualification": "native_registered_scope",
+      "limitations": [
+        "Capture-ready is a code integration state, not a claim that inference has passed.",
+        "Unobserved native Top-5 is unavailable; aggregate scores are not predictions."
+      ],
+      "num_classes": 8,
+      "expected_images": 3153,
+      "native_script": {
+        "script": "inference/native/run_model.py",
+        "script_sha256": "441f9c9f42e73bbcd789a77e00973793bf48d9538afffee2620ee8f9c90387f3",
+        "loop_lineno": 326,
+        "labels": "batch_labels",
+        "prediction": "batch_predictions",
+        "ranking": "batch_top3",
+        "classes": "logits.shape[-1]",
+        "loader_kind": "torch",
+        "label_position": 1,
+        "framework": "torch",
+        "original_script_sha256": "be0db2f42acdd92dfb3ef3c036fbb212f7e4d28c9b5eb18623c15a73315bcc24",
+        "original_loop_lineno": 315,
+        "original_path": "code/emotion-face-image-classification-v3-ferplus-test.py",
+        "ported_script_sha256": "7da643a758186a3de819a17572627e68a4db64254186c5fc748bbaafb1f71439"
+      },
+      "output_relative_path": "result/run_001/full/m142",
+      "supports_max_samples": false,
+      "runtime": {
+        "batch_size": 64,
+        "workers": 0,
+        "warmup": 3
+      },
+      "weights_files": [
+        {
+          "path": "config.json",
+          "size": 957,
+          "sha256": "9fdd283c6c7e318024a86a8a5047b2b3f34fb176bf85499714e0e96dd1d142eb"
+        },
+        {
+          "path": "preprocessor_config.json",
+          "size": 325,
+          "sha256": "a34861a24e781942424ad790b82bc99348404a2e64ea882de88c40905851698d"
+        },
+        {
+          "path": "pytorch_model.bin",
+          "size": 343287149,
+          "sha256": "55ed2ed5d652d008ee1311e51da1045d36a5d7ec7dd6de12ff8b86f4a35aa56b"
+        }
+      ],
+      "dataset_files": [
+        "FERPlus/fer2013new.csv",
+        "fer2013/data/privateTest-00000-of-00001-4b8a0715cf1b7560.parquet"
+      ],
+      "environment": "e07.txt",
+      "native_precision": "FP32",
+      "backend": "transformers",
+      "timing_alignment": {
+        "forward": "Same event/current-stream/synchronize semantics; wrapper preserves exactly one native call. MX runtime differs.",
+        "e2e": "Native DataLoader fetch to CPU prediction availability; worker-prefetch boundary differs from Example. Does not include subsequent metrics or record writes.",
+        "worker_prefetch": false,
+        "starts_after_spider_composition": false,
+        "native_metric_operations_before_prediction_readiness": [],
+        "model_load": "Sum of measured native construction/load/placement blocks, not Example contiguous block.",
+        "warmup": "Native repeated preprocessed first batch; native count retained; synchronized before/after. Unlike Example, preprocessing/transfer/softmax-to-CPU are outside the warmup interval.",
+        "evaluation": "Native aggregate evaluation not measured separately; evaluation_seconds=null. Public scoring duration is outside native timing.",
+        "resume": "No resume; repeated native phase archives previous output; resume_segments=1.",
+        "comparison_valid": false
+      },
+      "label_mapping": [
+        {
+          "id": 0,
+          "name": "output_class_0"
+        },
+        {
+          "id": 1,
+          "name": "output_class_1"
+        },
+        {
+          "id": 2,
+          "name": "output_class_2"
+        },
+        {
+          "id": 3,
+          "name": "output_class_3"
+        },
+        {
+          "id": 4,
+          "name": "output_class_4"
+        },
+        {
+          "id": 5,
+          "name": "output_class_5"
+        },
+        {
+          "id": 6,
+          "name": "output_class_6"
+        },
+        {
+          "id": 7,
+          "name": "output_class_7"
+        }
+      ],
+      "layout_reference": {
+        "branch": "gaoyonghan/mx",
+        "commit": "208733e1562fca75b7128772ca2cd587943d9012",
+        "platform": "mx"
+      }
+    }
+  ]
+}

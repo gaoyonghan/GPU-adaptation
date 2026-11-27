@@ -1,0 +1,51 @@
+{
+  "schema": "model-eval/classification-inventory/v1",
+  "scope": "One independent MX GPU classification model",
+  "models": [
+    {
+      "sequence": 144,
+      "model_id": "angusleung100/bad-anatomy-realism-classifier",
+      "dataset": {
+        "id": "anatomy-classifier",
+        "split": "full_local_dataset",
+        "note": [
+          "anatomy-classifier\n本地全部 200 张，4 类\n无独立 test"
+        ],
+        "native_scope": {
+          "name": "anatomy-classifier",
+          "source": "local image directories and manifest.csv",
+          "manifest_sha256": "b0532bf44bc5a0abf98361401be7fe347280d4a9a925d57a1c9a1051709db916",
+          "split": "full_local_dataset",
+          "image_count": 200,
+          "class_count": 4,
+          "class_counts": {
+            "Realistic_Bad_Anatomy": 50,
+            "Realistic_Good_Anatomy": 50,
+            "Unrealistic_Bad_Anatomy": 50,
+            "Unrealistic_Good_Anatomy": 50
+          },
+          "class_names": [
+            "Realistic_Bad_Anatomy",
+            "Realistic_Good_Anatomy",
+            "Unrealistic_Bad_Anatomy",
+            "Unrealistic_Good_Anatomy"
+          ],
+          "split_note": "本地清单没有独立 test split；使用全部 200 张图片，训练数据重叠未知，结果不等价于独立泛化性能。"
+        },
+        "relation": "native_e07_registered_scope",
+        "index_source": "native loader GT, materialized as classification_annotations.json in the native phase directory",
+        "data_containers": [
+          "dataset/anatomy-classifier"
+        ]
+      },
+      "qualification": "native_registered_scope",
+      "limitations": [
+        "Capture-ready is a code integration state, not a claim that inference has passed.",
+        "Unobserved native Top-5 is unavailable; aggregate scores are not predictions."
+      ],
+      "num_classes": 4,
+      "expected_images": 200,
+      "adapter": "native_labels"
+    }
+  ]
+}

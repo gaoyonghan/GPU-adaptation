@@ -1,0 +1,33 @@
+{
+  "schema": "model-eval/classification-inventory/v1",
+  "scope": "Existing 59 classification models; model 93 is retrieval and excluded.",
+  "models": [
+    {
+      "sequence": 187,
+      "model_id": "Suzana/new-york-tokyo-london",
+      "runner_family": "classification171",
+      "adapter": "native_labels",
+      "state": "integrated",
+      "dataset": {
+        "id": "classification171_187",
+        "relation": "public_replacement",
+        "split": "accepted KartaView 1376, London/New York/Tokyo",
+        "note": [
+          "Local checkpoint and publisher inference components retained. Offline file paths, eval mode, batching, timing observation and reference scoring are external orchestration."
+        ],
+        "index_source": "__MODEL_ROOT__/inference/native/indices/187.jsonl",
+        "data_containers": []
+      },
+      "qualification": "public_replacement",
+      "limitations": [],
+      "num_classes": 3,
+      "expected_images": 1376,
+      "category_reference": {
+        "file": "__MODEL_ROOT__/inference/native/models.json",
+        "sequence": 187,
+        "field": "label_mapping"
+      },
+      "gt_index": "__MODEL_ROOT__/inference/native/indices/187.jsonl"
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "sources": {},
+  "models": [
+    {
+      "sequence": 120,
+      "model_id": "StephanAkkerman/chart-recognizer",
+      "runner_family": "native_script",
+      "adapter": "native_labels",
+      "state": "full_inference_and_public_scoring_verified",
+      "dataset": {
+        "id": "HVPD Chart Identification Subset (CIS)",
+        "split": null,
+        "note": [
+          "HVPD Chart Identification Subset (CIS)\n全部 58,501 张\n无独立 test"
+        ],
+        "native_scope": {
+          "name": "HVPD Chart Identification Subset (CIS)",
+          "source": "WieszczUrsynowa/HVPD-HarmfulVisualPlotsDataset",
+          "archive": "<historical path omitted>",
+          "evaluation_scope": "entire CIS archive; the dataset does not publish a separate test split",
+          "expected_images": 58501,
+          "valid_images": 58501,
+          "invalid_images": 0,
+          "class_counts": {
+            "chart": 20738,
+            "non-chart": 37763
+          },
+          "dvcs_excluded": "DVCS labels deceptive chart properties, which do not match the model's chart/non-chart output."
+        },
+        "relation": "native_e07_registered_scope",
+        "index_source": "native loader GT, materialized as classification_annotations.json in the native phase directory",
+        "data_containers": [
+          "dataset/HVPD/CIS.zip"
+        ]
+      },
+      "qualification": "native_registered_scope",
+      "limitations": [
+        "Capture-ready is a code integration state, not a claim that inference has passed.",
+        "Unobserved native Top-5 is unavailable; aggregate scores are not predictions."
+      ],
+      "num_classes": 2,
+      "expected_images": 58501,
+      "native_script": {
+        "script": "inference/native/run_model.py",
+        "script_sha256": "08d8fe45a987a7839d2ec986a6d3465b6e75952b1bb7f3d7f3d43f1cf2639344",
+        "loop_lineno": 248,
+        "labels": "labels",
+        "prediction": "predictions",
+        "ranking": null,
+        "classes": "logits.shape[-1]",
+        "loader_kind": "torch",
+        "label_position": 1,
+        "framework": "torch",
+        "original_script_sha256": "af16dd7add7fc75c5c02c47041385d2e2b80ec4c2b4b5e305b77383cb4bf015d",
+        "original_loop_lineno": 237,
+        "original_path": "code/chart-recognizer-hvpd-cis-test.py",
+        "ported_script_sha256": "093f008e0a0725d4e13b4f42266495b5ab52ea15c1a695245ba7a8bbe70787e4"
+      },
+      "output_relative_path": "result/run_001/full/m120",
+      "supports_max_samples": false,
+      "runtime": {
+        "batch_size": 256,
+        "workers": 4,
+        "warmup": 5
+      },
+      "weights_files": [
+        {
+          "path": "config.json",
+          "size": 666,
+          "sha256": "29d47a982b91e42a749c33e01c81c20f34b5f0045d485354cfb8daa4f548553d"
+        },
+        {
+          "path": "model.safetensors",
+          "size": 16241624,
+          "sha256": "634431bba70b9a6b88824ed1d3dcfb577c18a23c718a39c5a337545070031356"
+        }
+      ],
+      "dataset_files": [
+        "HVPD/CIS.zip"
+      ],
+      "environment": "e07.txt",
+      "native_precision": "See native metrics and source",
+      "backend": "timm",
+      "timing_alignment": {
+        "forward": "Same event/current-stream/synchronize semantics; wrapper preserves exactly one native call. MX runtime differs.",
+        "e2e": "Native DataLoader fetch to CPU prediction availability; worker-prefetch boundary differs from Example. Does not include subsequent metrics or record writes.",
+        "worker_prefetch": true,
+        "starts_after_spider_composition": false,
+        "native_metric_operations_before_prediction_readiness": [],
+        "model_load": "Sum of measured native construction/load/placement blocks, not Example contiguous block.",
+        "warmup": "Native repeated preprocessed first batch; native count retained; synchronized before/after. Unlike Example, preprocessing/transfer/softmax-to-CPU are outside the warmup interval.",
+        "evaluation": "Native aggregate evaluation not measured separately; evaluation_seconds=null. Public scoring duration is outside native timing.",
+        "resume": "No resume; repeated native phase archives previous output; resume_segments=1.",
+        "comparison_valid": false
+      },
+      "label_mapping": [
+        {
+          "id": 0,
+          "name": "chart"
+        },
+        {
+          "id": 1,
+          "name": "non-chart"
+        }
+      ],
+      "layout_reference": {
+        "branch": "gaoyonghan/mx",
+        "commit": "208733e1562fca75b7128772ca2cd587943d9012",
+        "platform": "mx"
+      }
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "schema": "model-eval/classification-inventory/v1",
+  "scope": "One independent MX GPU classification model",
+  "models": [
+    {
+      "sequence": 151,
+      "model_id": "Bombek1/ai-image-detector-siglip-dinov2",
+      "dataset": {
+        "id": "AIGCDetectionBenchmark",
+        "split": "test",
+        "note": [
+          "AIGCDetectionBenchmark test\n152,598 张"
+        ],
+        "native_scope": {
+          "name": "AIGCDetectionBenchmark",
+          "split": "test",
+          "image_count": 152598,
+          "source_count": 17,
+          "source_image_counts": {
+            "ADM": 12000,
+            "DALLE2": 2000,
+            "Glide": 12000,
+            "Midjourney": 12000,
+            "VQDM": 12000,
+            "biggan": 4000,
+            "cyclegan": 2642,
+            "gaugan": 10000,
+            "progan": 8000,
+            "sd_xl": 4000,
+            "stable_diffusion_v_1_4": 12000,
+            "stable_diffusion_v_1_5": 16000,
+            "stargan": 3998,
+            "stylegan": 11982,
+            "stylegan2": 15976,
+            "whichfaceisreal": 2000,
+            "wukong": 12000
+          },
+          "binary_label_counts": {
+            "Real": 76299,
+            "Fake": 76299
+          },
+          "label_protocol": "0_real and 1_fake directory labels are mapped to Real and Fake."
+        },
+        "relation": "native_e07_registered_scope",
+        "index_source": "native loader GT, materialized as classification_annotations.json in the native phase directory",
+        "data_containers": [
+          "dataset/AIGCDetectionBenchmark"
+        ]
+      },
+      "qualification": "native_registered_scope",
+      "limitations": [
+        "Capture-ready is a code integration state, not a claim that inference has passed.",
+        "Unobserved native Top-5 is unavailable; aggregate scores are not predictions."
+      ],
+      "num_classes": 2,
+      "expected_images": 152598,
+      "adapter": "native_labels"
+    }
+  ]
+}

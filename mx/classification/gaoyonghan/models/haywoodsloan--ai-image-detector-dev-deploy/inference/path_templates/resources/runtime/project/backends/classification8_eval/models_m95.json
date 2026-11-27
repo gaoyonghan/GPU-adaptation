@@ -1,0 +1,56 @@
+{
+  "sequence": 95,
+  "model_id": "haywoodsloan/ai-image-detector-dev-deploy",
+  "model_revision": "3824a1e5fb831d4347cb63dfcb3f2a752d987ef2",
+  "dataset_id": "haywoodsloan/ai-images",
+  "dataset_revision": "c30b2722781a9bc64590005e3bb6975f5940e6d3",
+  "dataset_root": "__DATASET_ROOT__/m95_ai_images_test",
+  "split": "test",
+  "class_to_idx": {
+    "artificial": 0,
+    "real": 1
+  },
+  "source_url": "https://github.com/huggingface/autotrain-advanced/tree/d137c8c3477a52f4a5d9082b50cdf6951470a3e4/src/autotrain/trainers/image_classification",
+  "source_sha256": {
+    "__main__.py": "c8c285ed99a3d0e436f01517dc6727e0322cef403bf8557b9e21310d30ba53f9",
+    "dataset.py": "f8b13d140a4fe2621848d15218a244236f78c8e852c6f15f5032ee2aa0648b2d",
+    "utils.py": "ff496f93a4b7504340ebf0702e3e348fded082aae2d32cbc68fb867db44b09c2",
+    "training_params.json": "56c3e667bb6c35fa3dcc55852e99ff9bd669459ec6190d67327cefc909d86846"
+  },
+  "versions": {
+    "torch": "2.5.1+cu121",
+    "torchvision": "0.20.1+cu121",
+    "transformers": "4.48.0",
+    "accelerate": "1.2.1",
+    "datasets": "3.2.0",
+    "albumentations": "1.4.23",
+    "Pillow": "11.0.0",
+    "scikit-learn": "1.6.0",
+    "numpy": "1.26.4",
+    "opencv-python-headless": "4.10.0.84",
+    "huggingface-hub": "0.29.3"
+  },
+  "official_reference": {
+    "loss": 0.08581268042325974,
+    "accuracy": 0.981488090989126,
+    "f1": 0.9875742669136907,
+    "precision": 0.9817413946399085,
+    "recall": 0.9934768637532133,
+    "auc": 0.9953790023764837
+  },
+  "official_reference_evidence": {
+    "url": "https://huggingface.co/haywoodsloan/ai-image-detector-dev-deploy/blob/3824a1e5fb831d4347cb63dfcb3f2a752d987ef2/checkpoint-23280/trainer_state.json",
+    "epoch": 2.0,
+    "step": 23280,
+    "note": "此评估日志的六个指标与模型卡完全一致；同revision训练参数明确valid_split=test。数据历史版本未固定仍是剩余缺口。"
+  },
+  "fidelity": "official_protocol_adapter",
+  "dataset_relation": "author_test_historical_revision_unverified",
+  "known_differences": [
+    "权重同版本training_params.json已确认data_path和valid_split=test；下载冻结的当前test，不下载train。未证明当前test与2025年6月训练时逐文件相同。",
+    "公开参数未固定AutoTrain安装版本；采用模型日期之前image_classification最后一次变更d137c8c，Transformers4.48.0与权重config记录一致。不是声称完整还原历史环境。",
+    "复用torch2.5.1/torchvision0.20.1，其余关键评测依赖在隔离环境固定。",
+    "仅补离线test文件加载、下载、调度和审计；原样执行AutoTrain process_data、ImageClassificationDataset、_binary_classification_metrics及Transformers Trainer.evaluate，不训练。",
+    "原生二分类F1/Precision/Recall以real=1为正类，AUC以logits[:,1]计算，不替换成AI正类概率AUC。"
+  ]
+}

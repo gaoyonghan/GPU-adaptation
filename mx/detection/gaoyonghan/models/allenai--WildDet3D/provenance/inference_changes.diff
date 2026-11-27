@@ -1,0 +1,18 @@
+--- original_inference.py
++++ inference/native/run_m27_native.py
+@@ -15,11 +15,11 @@
+ from download_official_source import file_hash, verify_bundle
+ 
+ HERE = Path(__file__).resolve().parent
+-SOURCE_ROOT = Path('/home/ubuntu/gaoyonghan/gpu/official_sources/object_detection')
++SOURCE_ROOT = Path('/data2/gaoyonghan/gpu_model_standalone_20261110/release/model/检测/allenai--WildDet3D/resources/runtime/assets/workspace/official_sources/object_detection')
+ SOURCE = SOURCE_ROOT / 'WildDet3D'
+-DATA = Path('/data2/gaoyonghan/gpu/dataset/wilddet3d_val')
+-WEIGHT = Path('/data2/gaoyonghan/gpu/model/allenai/WildDet3D/wilddet3d_alldata_all_prompt_v1.0.pt')
+-OUT = Path('/home/ubuntu/gaoyonghan/gpu/results/m27_native_text_v1')
++DATA = Path('/home/ubuntu/文档/ChatGPT/idea 2/outputs/launch_audit_20261005/migration_inputs/datasets/wilddet3d_val')
++WEIGHT = Path('/data2/gaoyonghan/gpu_model_standalone_20261110/release/model/检测/allenai--WildDet3D/resources/model_index/allenai/WildDet3D/wilddet3d_alldata_all_prompt_v1.0.pt')
++OUT = Path('/data2/gaoyonghan/gpu_model_standalone_20261110/release/model/检测/allenai--WildDet3D/results/run_001/m027')
+ 
+ 
+ def write(path, value):

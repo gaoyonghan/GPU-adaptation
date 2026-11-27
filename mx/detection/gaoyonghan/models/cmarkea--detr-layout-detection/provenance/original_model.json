@@ -1,0 +1,219 @@
+{
+  "sequence": 42,
+  "model_id": "cmarkea/detr-layout-detection",
+  "task": "object_detection",
+  "task_name": "目标检测",
+  "reported_result": "像素F1 / GIoU / 类别Accuracy\n91.27% / 82.47% / 88.43%%（完整4999页）",
+  "reference": "像素F1 / GIoU / 类别Accuracy\n91.27% / 80.66% / 90.46%（原500页）",
+  "model_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/model_index/cmarkea/detr-layout-detection",
+  "model_exists_at_build": true,
+  "dataset": {
+    "id": "doclaynet_test",
+    "relation": "original_protocol_incomplete",
+    "split": "official test used as same-source candidate",
+    "note": "DocLayNet · test · 4999 页\n同源数据：官方评测划分待核实"
+  },
+  "environment_id": "detection-hf",
+  "runner_family": "official_detection",
+  "final_result_sources": [
+    {
+      "source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m042/metrics-0.json",
+      "sha256": "3097ecd9e7f187db5dfd6bee2059cfe232b8297b0adb5fa9098016a2f14424e4",
+      "selection": "workbook_score_match",
+      "data": {
+        "bbox": {
+          "AP": 0.4840862457738713,
+          "AP50": 0.7343497527762437,
+          "AP75": 0.5080147025880516,
+          "AP_small": 0.2089274144336082,
+          "AP_medium": 0.3465066119261748,
+          "AP_large": 0.5444121912159455,
+          "AR1": 0.2910973705257884,
+          "AR10": 0.588724269496113,
+          "AR100": 0.6298562019019615,
+          "AR_small": 0.3218740750403806,
+          "AR_medium": 0.49696386300835255,
+          "AR_large": 0.668345655212529,
+          "per_class_AP": {
+            "Caption": 0.4240292837631132,
+            "Footnote": 0.3450895443684146,
+            "Formula": 0.4418113621103394,
+            "List-item": 0.45508064920902525,
+            "Page-footer": 0.38436550067675335,
+            "Page-header": 0.42444207175796644,
+            "Picture": 0.5218496169839931,
+            "Section-header": 0.44378311295073286,
+            "Table": 0.6874629367643642,
+            "Text": 0.6789980040315821,
+            "Title": 0.5180366208962996
+          }
+        },
+        "semantic_F1": {
+          "Background": 0.9473033002686039,
+          "Caption": 0.8057355123648103,
+          "Footnote": 0.7267249516726743,
+          "Formula": 0.8414041635985219,
+          "List-item": 0.8087355159463254,
+          "Page-footer": 0.786344513878257,
+          "Page-header": 0.6577983593577529,
+          "Picture": 0.824771401728203,
+          "Section-header": 0.7146378170972191,
+          "Table": 0.8457610851504629,
+          "Text": 0.9175251619917932,
+          "Title": 0.6548935868543013
+        },
+        "semantic_macro_foreground_F1": 0.7803938245127565,
+        "pixel_counts": [
+          [
+            2801538758,
+            128351602,
+            183337055
+          ],
+          [
+            16116277,
+            4088508,
+            3682827
+          ],
+          [
+            3817472,
+            619465,
+            2251552
+          ],
+          [
+            40446787,
+            9579041,
+            5668547
+          ],
+          [
+            140730814,
+            45643329,
+            20921836
+          ],
+          [
+            5441771,
+            1575854,
+            1381283
+          ],
+          [
+            8128488,
+            4122260,
+            4334988
+          ],
+          [
+            348995538,
+            92145809,
+            56147400
+          ],
+          [
+            36029381,
+            20330574,
+            8443226
+          ],
+          [
+            381806764,
+            81857968,
+            57399943
+          ],
+          [
+            1048324118,
+            116107614,
+            72356671
+          ],
+          [
+            3930707,
+            2793627,
+            1349068
+          ]
+        ],
+        "evaluation_images": 4999,
+        "protocol_fingerprint": "43935f3be098133df89e1c8aed7785f081d83c6d9c0c63f16e1a96091809d004",
+        "reference_check": "not_officially_comparable",
+        "unit": "fraction_0_to_1"
+      },
+      "source_original": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/remaining25_cmarkea_v1/metrics.json"
+    }
+  ],
+  "code": {
+    "source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/remaining_detection_eval/run_cmarkea.py",
+    "sha256": "c4ede533da033ad71325c4a162b904e832fef9a86f2c1e8cdb81a35081c66325",
+    "recorded_sha256": "c4ede533da033ad71325c4a162b904e832fef9a86f2c1e8cdb81a35081c66325",
+    "attestation": "hash_exact",
+    "status_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m042/status.json",
+    "selection": "final_special_run",
+    "archive": "code_archive/c4ede533da033ad7_run_cmarkea.py"
+  },
+  "support_files": [
+    "run_m37_native.sh",
+    "environment_versions.json",
+    "models.json",
+    "run_model.py",
+    "run_m37_native.py",
+    "run_m34_native.py",
+    "run_m34_native.sh",
+    "official_comparison.json",
+    "package_sha256.json",
+    "qualcomm_geometry.py",
+    "run_m46_native.sh",
+    "prepare_native_data.py",
+    "setup_env.sh",
+    "run_pp_layout.py",
+    "score_m38_omni_official.sh",
+    "run_m47_native.sh",
+    "run_m46_native.py",
+    "run_m41_omni_four.py",
+    "run_m39_omni.sh",
+    "run_m39_omni.py",
+    "prepare_sku110k.py",
+    "verification.json",
+    "progress.json",
+    "run_ready.sh",
+    "audit_m38_omni.py",
+    "run_adapted.sh",
+    "score_m38_omni_official.py",
+    "adapters.py",
+    "collect_versions.py",
+    "setup_m12_native.sh",
+    "score_pp_v3.py",
+    "run_widerface.py",
+    "summarize.py",
+    "run_anzhc_lapa.py",
+    "数据获取记录.json",
+    "qualcomm_inference.py",
+    "prepare_publaynet.py",
+    "run_m41_omni_four.sh",
+    "run_m38_omni.py",
+    "run_m48_native.sh",
+    "run_m38_omni.sh",
+    "run_qualcomm_coco.py",
+    "verify_results.py",
+    "run_m54_sku_official.sh",
+    "score_m39_omni_official.py",
+    "probe_private_weights.py",
+    "run_sku110k.py",
+    "run_m54_sku_official.py",
+    "run_m47_native.py",
+    "blocker_audit.json",
+    "apply_pp_patch.py",
+    "run_m12_native.py",
+    "run_anzhc_text.py",
+    "run_cmarkea.py",
+    "audit_summary.json",
+    "run_m48_native.py",
+    "build_audit.py"
+  ],
+  "final_scorer": null,
+  "backend_package": "remaining_detection_eval",
+  "readiness": "code_and_result_identified",
+  "launch_status": "configured",
+  "metadata_warning": null,
+  "table_comparison_protocol_20261009": {
+    "scorer": "protocol_alignment/score_comparison.py",
+    "comparison_file": "comparison_metrics.json",
+    "semantic_field": "semantic.micro_F1_all_classes_including_background",
+    "bbox_threshold": 0.0,
+    "bbox_fields": [
+      "mean_best_giou",
+      "class_accuracy_at_best_giou"
+    ]
+  }
+}

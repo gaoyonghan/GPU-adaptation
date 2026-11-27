@@ -1,0 +1,22 @@
+{
+  "sequence": 22,
+  "model_id": "nvidia/nemotron-page-elements-v3",
+  "source_archive_hash_matches": true,
+  "source_archive_sha256": "79a11b48aadcd2cf5a4d733f752e1dcee2c260e778b9de2a0c787628cbe0c744",
+  "prepared_entry_source_sha256": "da050b4f778e63ab6a78dbcfc4409d9599a6e7e52412d2bf972955103916b4dc",
+  "local_entry_sha256": "673f4489f64c45061d9a224524035339490624879a01926c640fa2847c69ecd2",
+  "local_entry": "inference/native/run_model.py",
+  "central_dispatch_in_entry": false,
+  "unexpected_external_links": [],
+  "declared_dataset_links": [],
+  "broken_links": [],
+  "path_template_count": 404,
+  "state": "entrypoint_verified_full_run_pending",
+  "validation": {
+    "returncode": 0,
+    "python": "/home/ubuntu/gaoyonghan/miniconda3/envs/object-detection-hf-v2/bin/python",
+    "checked_at": "2026-11-10T15:38:28.543440+08:00",
+    "scope": "native help/import/path check only; not full inference"
+  },
+  "smoke_verification": null
+}

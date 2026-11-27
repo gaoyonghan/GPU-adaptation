@@ -1,0 +1,56 @@
+{
+  "schema": "model-eval/classification-inventory/v1",
+  "scope": "One independent MX GPU classification model",
+  "models": [
+    {
+      "sequence": 135,
+      "model_id": "gianlab/swin-tiny-patch4-window7-224-finetuned-skin-cancer",
+      "dataset": {
+        "id": "HAM10000",
+        "split": null,
+        "note": [
+          "HAM10000\ntrain 分层抽取 20%，seed=42\n2,003 张，非官方 test"
+        ],
+        "native_scope": {
+          "name": "HAM10000",
+          "source": "kuchikihater/HAM10000 (local parquet cache)",
+          "source_split": "train",
+          "evaluated_split": "stratified_holdout",
+          "split_note": "HAM10000 原始数据及本地仓库只有一个带标签 train split；按 seed=42 分层抽取 20% 作为测试 holdout，非官方 test split。",
+          "split_seed": 42,
+          "holdout_fraction": 0.2,
+          "image_count": 2003,
+          "source_image_count": 10015,
+          "class_count": 7,
+          "class_names": [
+            "Actinic-keratoses",
+            "Basal-cell-carcinoma",
+            "Benign-keratosis-like-lesions",
+            "Dermatofibroma",
+            "Melanocytic-nevi",
+            "Melanoma",
+            "Vascular-lesions"
+          ]
+        },
+        "relation": "native_e07_registered_scope",
+        "index_source": "native loader GT, materialized as classification_annotations.json in the native phase directory",
+        "data_containers": [
+          "dataset/HAM10000/data/train-00000-of-00006-6e9cc1f2a2bc29bf.parquet",
+          "dataset/HAM10000/data/train-00001-of-00006-d0e18093f7a3c694.parquet",
+          "dataset/HAM10000/data/train-00002-of-00006-39dedb0b31996810.parquet",
+          "dataset/HAM10000/data/train-00003-of-00006-a910be683ad738f8.parquet",
+          "dataset/HAM10000/data/train-00004-of-00006-7a1958d1ffb42c3f.parquet",
+          "dataset/HAM10000/data/train-00005-of-00006-bcb0987169f383d4.parquet"
+        ]
+      },
+      "qualification": "native_registered_scope",
+      "limitations": [
+        "Capture-ready is a code integration state, not a claim that inference has passed.",
+        "Unobserved native Top-5 is unavailable; aggregate scores are not predictions."
+      ],
+      "num_classes": 7,
+      "expected_images": 2003,
+      "adapter": "native_labels"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+--- original_inference.py
++++ inference/native/eval_m90_proxy.py
+@@ -3,7 +3,7 @@
+ import torch
+ from PIL import Image
+ from transformers import AutoImageProcessor,AutoModelForImageClassification
+-MODEL='/data2/gaoyonghan/gpu/model/touchtech/fashion-images-gender-age-vit-large-patch16-224-in21k-v2'
++MODEL='/data2/gaoyonghan/gpu_model_standalone_20261110/release/model/分类/touchtech--fashion-images-gender-age-vit-large-patch16-224-in21k-v2/resources/model_index/touchtech/fashion-images-gender-age-vit-large-patch16-224-in21k-v2'
+ LABELS=['model-female-adult','model-female-child','model-male-adult','model-male-child','pack']
+ def main():
+  p=argparse.ArgumentParser();p.add_argument('--root',required=True);p.add_argument('--threads',type=int,default=8);p.add_argument('--batch-size',type=int,default=8);args=p.parse_args()

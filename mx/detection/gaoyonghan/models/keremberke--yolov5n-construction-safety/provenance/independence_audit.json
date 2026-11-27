@@ -1,0 +1,27 @@
+{
+  "sequence": 60,
+  "model_id": "keremberke/yolov5n-construction-safety",
+  "source_archive_hash_matches": true,
+  "source_archive_sha256": "c34744b94388c3ba85f893e2b0cc94b71386b11bbb144d9d5ddc9cacc40dab04",
+  "prepared_entry_source_sha256": "d911591a99828299023a4cb0fe275174e4d0d21f191cf8501bb4b50b5afda04c",
+  "local_entry_sha256": "c3c213bc97b05fcc1446c0afbc41e849089cec361bde4e4e0832cf3faf4ec69d",
+  "local_entry": "inference/native/run_m60_native.py",
+  "central_dispatch_in_entry": false,
+  "unexpected_external_links": [],
+  "declared_dataset_links": [
+    {
+      "path": "resources/runtime/assets/workspace/official_sources/object_detection/WildDet3D/data/in_the_wild",
+      "target": "/data2/gaoyonghan/gpu/dataset/wilddet3d_val"
+    }
+  ],
+  "broken_links": [],
+  "path_template_count": 299,
+  "state": "entrypoint_verified_full_run_pending",
+  "validation": {
+    "returncode": 0,
+    "python": "/home/ubuntu/gaoyonghan/miniconda3/envs/object-detection-yolov5-v2/bin/python",
+    "checked_at": "2026-11-10T15:54:03.042262+08:00",
+    "scope": "native help/import/path check only; not full inference"
+  },
+  "smoke_verification": null
+}

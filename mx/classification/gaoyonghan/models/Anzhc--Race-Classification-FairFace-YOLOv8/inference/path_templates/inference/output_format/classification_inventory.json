@@ -1,0 +1,68 @@
+{
+  "schema": "model-eval/classification-inventory/v1",
+  "scope": "Existing 59 classification models; model 93 is retrieval and excluded.",
+  "models": [
+    {
+      "sequence": 177,
+      "model_id": "Anzhc/Race-Classification-FairFace-YOLOv8",
+      "runner_family": "classification171",
+      "adapter": "native_labels",
+      "state": "integrated",
+      "dataset": {
+        "id": "classification171_177",
+        "relation": "original_exact",
+        "split": "FairFace 0.25 validation",
+        "note": [
+          "Native publisher evaluator retained; historical author environment/complete reporting protocol not established, so exact_official is not claimed.",
+          "Native validator reads class metadata from train; train is a symlink to val, with split=val only and no training or resplitting.",
+          "Local checkpoint and publisher inference components retained. Offline file paths, eval mode, batching, timing observation and reference scoring are external orchestration."
+        ],
+        "index_source": "__MODEL_ROOT__/inference/native/indices/177.jsonl",
+        "data_containers": [
+          "__DATASET_ROOT__/FairFace/0.25/validation-00000-of-00001-951dbd63c8724ee1.parquet"
+        ]
+      },
+      "qualification": "original_exact",
+      "limitations": [],
+      "num_classes": 7,
+      "expected_images": 10954,
+      "category_reference": {
+        "file": "__MODEL_ROOT__/inference/native/models.json",
+        "sequence": 177,
+        "field": "label_mapping"
+      },
+      "gt_index": "__MODEL_ROOT__/inference/native/indices/177.jsonl",
+      "categories": [
+        {
+          "id": 0,
+          "name": "Black"
+        },
+        {
+          "id": 1,
+          "name": "East Asian"
+        },
+        {
+          "id": 2,
+          "name": "Indian"
+        },
+        {
+          "id": 3,
+          "name": "Latino_Hispanic"
+        },
+        {
+          "id": 4,
+          "name": "Middle Eastern"
+        },
+        {
+          "id": 5,
+          "name": "Southeast Asian"
+        },
+        {
+          "id": 6,
+          "name": "White"
+        }
+      ],
+      "requires_capture_on_next_inference": true
+    }
+  ]
+}

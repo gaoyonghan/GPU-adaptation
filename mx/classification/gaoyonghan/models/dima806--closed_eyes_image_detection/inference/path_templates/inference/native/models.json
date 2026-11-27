@@ -1,0 +1,149 @@
+{
+  "schema_version": 1,
+  "sources": {},
+  "models": [
+    {
+      "sequence": 171,
+      "model_id": "dima806/closed_eyes_image_detection",
+      "model_path": "__MODEL_ROOT__/weights/dima806/closed_eyes_image_detection",
+      "revision": "8a2180a6c303b7cb42e5a42c43cb8155a6af30a0",
+      "task_type": "image-classification",
+      "status": "not_started",
+      "official_model_card": "https://huggingface.co/dima806/closed_eyes_image_detection",
+      "official_reference": {
+        "source": "https://huggingface.co/dima806/closed_eyes_image_detection",
+        "local_card_sha256": "42db62e59efbfece54ac814152b2cd767641eb3fa82196b0874702d9e3be296e",
+        "model_index": null,
+        "text_report_values": {
+          "accuracy": 0.9905,
+          "macro_f1": 0.9905,
+          "weighted_f1": 0.9905
+        },
+        "units": "fractions for extracted accuracy/F1; original model-index units as published",
+        "comparison": "Manual protocol review required; no automatic drop calculation",
+        "note": "Card reports retained as provenance, not proof that local data/split/framework exactly reproduces the reported run."
+      },
+      "reference_comparison": "manual_reference_required",
+      "known_differences": [
+        "Local checkpoint and publisher inference components retained. Offline file paths, eval mode, batching, timing observation and reference scoring are external orchestration."
+      ],
+      "config": {
+        "_name_or_path": "dima806/closed_eyes_image_detection",
+        "architectures": [
+          "ViTForImageClassification"
+        ],
+        "attention_probs_dropout_prob": 0.0,
+        "encoder_stride": 16,
+        "hidden_act": "gelu",
+        "hidden_dropout_prob": 0.0,
+        "hidden_size": 768,
+        "id2label": {
+          "0": "closeEye",
+          "1": "openEye"
+        },
+        "image_size": 224,
+        "initializer_range": 0.02,
+        "intermediate_size": 3072,
+        "label2id": {
+          "closeEye": 0,
+          "openEye": 1
+        },
+        "layer_norm_eps": 1e-12,
+        "model_type": "vit",
+        "num_attention_heads": 12,
+        "num_channels": 3,
+        "num_hidden_layers": 12,
+        "patch_size": 16,
+        "problem_type": "single_label_classification",
+        "qkv_bias": true,
+        "torch_dtype": "float32",
+        "transformers_version": "4.38.1"
+      },
+      "preprocessing": {
+        "do_normalize": true,
+        "do_rescale": true,
+        "do_resize": true,
+        "image_mean": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "image_processor_type": "ViTImageProcessor",
+        "image_std": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "resample": 2,
+        "rescale_factor": 0.00392156862745098,
+        "size": {
+          "height": 224,
+          "width": 224
+        }
+      },
+      "architecture": [
+        "ViTForImageClassification"
+      ],
+      "files": {
+        "model.safetensors": {
+          "size": 343223968,
+          "sha256": "4c8ee02a898d927996cca335641a1031605297a0bbec21c69e5dc51baebfe911"
+        },
+        "config.json": {
+          "size": 735,
+          "sha256": "c3adf531c23f4bf14e63619126ddd2d2eea4557540b0308a516becc51960ad6e"
+        },
+        "preprocessor_config.json": {
+          "size": 325,
+          "sha256": "a34861a24e781942424ad790b82bc99348404a2e64ea882de88c40905851698d"
+        },
+        "README.md": {
+          "size": 660,
+          "sha256": "42db62e59efbfece54ac814152b2cd767641eb3fa82196b0874702d9e3be296e"
+        }
+      },
+      "weight": "model.safetensors",
+      "backend": "hf_published",
+      "environment": "shared_hf",
+      "dataset_relation": "public_replacement",
+      "split": "publisher PreparedData/test",
+      "excluded_source_labels": {},
+      "images": 4474,
+      "covered_target_classes": 2,
+      "num_output_classes": 2,
+      "label_mapping": {
+        "0": "closeEye",
+        "1": "openEye"
+      },
+      "scoring": "reference",
+      "evaluator": "sklearn reference scoring",
+      "fidelity": "reference_baseline",
+      "case_type": "special",
+      "special_tags": [
+        "framework_numeric_difference",
+        "dataset_replacement",
+        "official_evaluator_missing"
+      ],
+      "inference_entry": "publisher_transformers_model_and_processor",
+      "default_batch_size": 1,
+      "dtype": "float32",
+      "warmup_batches": 10,
+      "index": "__MODEL_ROOT__/inference/native/indices/171.jsonl",
+      "index_sha256": "456f716934192eab65021a13598eab76d0ec50829c4d99a26c2d79a9a5f50eba",
+      "data_containers": {
+        "__DATASET_ROOT__/datasets_171_200/closed_eyes/raw/drivers-drowsiness-detection.zip": {
+          "size": 860422236,
+          "mtime_ns": 1695560087000000000
+        }
+      },
+      "protocol_fingerprint": "18c6a57dd5d2b4747f723023b4bdd40f883e95369cca7f4e080bdf8fd1479152"
+    }
+  ],
+  "runtime_defaults": {
+    "batch_size": 1,
+    "device": "cuda:0",
+    "warmup_batches": 10,
+    "workers": 2
+  },
+  "scope": "Each published model retained; 177 includes all five weights; no full GPU inference launched by preparation."
+}

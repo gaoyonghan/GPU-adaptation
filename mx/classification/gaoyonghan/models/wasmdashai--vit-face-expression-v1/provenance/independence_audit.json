@@ -1,0 +1,22 @@
+{
+  "sequence": 75,
+  "model_id": "wasmdashai/vit-face-expression-v1",
+  "source_archive_hash_matches": true,
+  "source_archive_sha256": "b9e184191792ecbccb77d930718fe340d33bc0ec840ac3061e950c37b5f5871f",
+  "prepared_entry_source_sha256": "5d845387d26f92697c52da98dfee0f5ccf1b3d329323aa1d96384e2d924ef8d7",
+  "local_entry_sha256": "3e57c980eec99e0dfea1ee1eb1dc388a072060988c0fe77b22cde825d330bd41",
+  "local_entry": "inference/native/run_m75_fer2013.py",
+  "central_dispatch_in_entry": false,
+  "unexpected_external_links": [],
+  "declared_dataset_links": [],
+  "broken_links": [],
+  "path_template_count": 318,
+  "state": "entrypoint_verified_full_run_pending",
+  "validation": {
+    "returncode": 0,
+    "python": "/home/ubuntu/gaoyonghan/gpu/classification8_eval/.venv/bin/python",
+    "checked_at": "2026-11-10T15:54:46.133217+08:00",
+    "scope": "native help/import/path check only; not full inference"
+  },
+  "smoke_verification": null
+}

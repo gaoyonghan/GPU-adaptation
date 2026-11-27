@@ -1,0 +1,15 @@
+--- original_inference.py
++++ inference/native/run_anzhc_lapa.py
+@@ -18,9 +18,9 @@
+ from pycocotools.coco import COCO
+ from pycocotools.cocoeval import COCOeval
+ 
+-DATA = Path('/data2/gaoyonghan/gpu/dataset/lapa_candidate/LaPa/test')
+-WEIGHT = Path('/data2/gaoyonghan/gpu/model/Anzhc/Anzhcs_YOLOs/Anzhc Face seg 640 v4 y11n.pt')
+-OUTPUT = Path('/home/ubuntu/gaoyonghan/gpu/results/m08_face_lapa_v1')
++DATA = Path('/home/ubuntu/文档/ChatGPT/idea 2/outputs/launch_audit_20261005/migration_inputs/datasets/lapa_candidate/LaPa/test')
++WEIGHT = Path('/data2/gaoyonghan/gpu_model_standalone_20261110/release/model/检测/Anzhc--Anzhcs_YOLOs/resources/model_index/Anzhc/Anzhcs_YOLOs/Anzhc Face seg 640 v4 y11n.pt')
++OUTPUT = Path('/data2/gaoyonghan/gpu_model_standalone_20261110/release/model/检测/Anzhc--Anzhcs_YOLOs/results/run_001/m008')
+ 
+ 
+ def sha(path):

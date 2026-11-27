@@ -1,0 +1,9 @@
+{
+  "python": "3.11.16",
+  "requirements": "environments/e03-m33x-ultralytics83123/requirements.txt",
+  "expected": "environments/e03-m33x-ultralytics83123/expected.json",
+  "local_packages": [],
+  "original_python": "/home/ubuntu/gaoyonghan/gpu/.venv-m33x-ultralytics83123/bin/python",
+  "torch": "2.5.1+cu121",
+  "python_version_scope": "Pinned to original interpreter version"
+}

@@ -1,0 +1,35 @@
+{
+  "schema": "model-eval/classification-inventory/v1",
+  "scope": "Existing 59 classification models; model 93 is retrieval and excluded.",
+  "models": [
+    {
+      "sequence": 197,
+      "model_id": "arize-ai/resnet-50-fashion-mnist-quality-drift",
+      "runner_family": "classification171",
+      "adapter": "native_labels",
+      "state": "integrated",
+      "dataset": {
+        "id": "classification171_197",
+        "relation": "public_replacement",
+        "split": "standard Fashion-MNIST test, not quality_drift variant",
+        "note": [
+          "Local checkpoint and publisher inference components retained. Offline file paths, eval mode, batching, timing observation and reference scoring are external orchestration."
+        ],
+        "index_source": "__MODEL_ROOT__/inference/native/indices/197.jsonl",
+        "data_containers": [
+          "__DATASET_ROOT__/fashion_mnist/raw/t10k-images-idx3-ubyte.gz"
+        ]
+      },
+      "qualification": "public_replacement",
+      "limitations": [],
+      "num_classes": 10,
+      "expected_images": 10000,
+      "category_reference": {
+        "file": "__MODEL_ROOT__/inference/native/models.json",
+        "sequence": 197,
+        "field": "label_mapping"
+      },
+      "gt_index": "__MODEL_ROOT__/inference/native/indices/197.jsonl"
+    }
+  ]
+}

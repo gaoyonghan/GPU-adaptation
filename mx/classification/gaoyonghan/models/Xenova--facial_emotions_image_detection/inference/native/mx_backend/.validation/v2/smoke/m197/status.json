@@ -1,0 +1,190 @@
+{
+  "sequence": 197,
+  "model_id": "arize-ai/resnet-50-fashion-mnist-quality-drift",
+  "variant": null,
+  "phase": "smoke",
+  "protocol_fingerprint": "e7a943e8dc8933685a940c652d1d398ceed1342115eea5e61dac2977d73d2248",
+  "protocol": {
+    "model": "5442a706e83483baf59f2528372ffecdb7a78df757dca78fbcef81b0f98744f1",
+    "code": {
+      "run_model.py": "b9b7e34d4db126e9495d674a9fd24dea83a732fe2ad0a28cda953f4856831ec8",
+      "common.py": "87e119ea13cd713bb054693dae0e04b7064b4fd683c8479b7715fd9b3883d045",
+      "prepare.py": "bf5bd4e223b181dd89142dbf467f92fe7c09b88ab4c82b061346248019f4ad9b",
+      "dispatch.py": "5d421d08e4b36dc0ad02144dd8540c007b125f4e2c728c490e5e3270375e58cf",
+      "timing.py": "db23cf873121e5e9345f23488d02d7757560a25084f330a56e38d5969d448342",
+      "native_js.mjs": "7ce8d0c8d4119a2ce2a4a0b3b89ffaffea9e4028e1e4196b09d8cdbf922685b1"
+    },
+    "environment": {
+      "python": "3.11.16 (main, Aug 27 2026, 14:44:21) [GCC 14.3.0]",
+      "versions": {
+        "torch": "2.5.1+cu121",
+        "torchvision": "0.20.1+cu121",
+        "transformers": "4.50.0",
+        "timm": "1.0.15",
+        "Pillow": "11.1.0",
+        "numpy": "1.26.4",
+        "scikit-learn": "1.5.2",
+        "pyarrow": "19.0.1"
+      },
+      "cuda_runtime": "12.1",
+      "cuda_available": true
+    },
+    "device": "cuda:1",
+    "batch_size": 1,
+    "warmup": 10,
+    "workers": 2,
+    "variant": null
+  },
+  "model_manifest": {
+    "sequence": 197,
+    "model_id": "arize-ai/resnet-50-fashion-mnist-quality-drift",
+    "model_path": "/project/classification/gaoyonghan/models/Xenova--facial_emotions_image_detection/weights/arize-ai/resnet-50-fashion-mnist-quality-drift",
+    "revision": "104610943e0d62797b614bf6f72b5a2ecbf8f8f9",
+    "task_type": "image-classification",
+    "status": "not_started",
+    "official_model_card": "https://huggingface.co/arize-ai/resnet-50-fashion-mnist-quality-drift",
+    "official_reference": null,
+    "reference_comparison": "manual_reference_required",
+    "known_differences": [],
+    "config": {
+      "_name_or_path": "microsoft/resnet-50",
+      "architectures": [
+        "ResNetForImageClassification"
+      ],
+      "depths": [
+        3,
+        4,
+        6,
+        3
+      ],
+      "downsample_in_first_stage": false,
+      "embedding_size": 64,
+      "hidden_act": "relu",
+      "hidden_sizes": [
+        256,
+        512,
+        1024,
+        2048
+      ],
+      "id2label": {
+        "0": "T-shirt",
+        "1": "Trouser",
+        "2": "Pullover",
+        "3": "Dress",
+        "4": "Coat",
+        "5": "Sandal",
+        "6": "Shirt",
+        "7": "Sneaker",
+        "8": "Bag",
+        "9": "Ankle-boot"
+      },
+      "label2id": {
+        "Ankle-boot": 9,
+        "Bag": 8,
+        "Coat": 4,
+        "Dress": 3,
+        "Pullover": 2,
+        "Sandal": 5,
+        "Shirt": 6,
+        "Sneaker": 7,
+        "T-shirt": 0,
+        "Trouser": 1
+      },
+      "layer_type": "bottleneck",
+      "model_type": "resnet",
+      "num_channels": 3,
+      "output_hidden_states": true,
+      "problem_type": "single_label_classification",
+      "torch_dtype": "float32",
+      "transformers_version": "4.21.0"
+    },
+    "preprocessing": {
+      "crop_pct": 0.875,
+      "do_normalize": true,
+      "do_resize": true,
+      "feature_extractor_type": "ConvNextFeatureExtractor",
+      "image_mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "image_std": [
+        0.229,
+        0.224,
+        0.225
+      ],
+      "resample": 3,
+      "size": 224
+    },
+    "architecture": [
+      "ResNetForImageClassification"
+    ],
+    "files": {
+      "pytorch_model.bin": {
+        "size": 94438209,
+        "sha256": "b7da8f840e12240cb7d147d1b1ee173f5c48ae25aab6d6c2c6763921ee836a1b"
+      },
+      "config.json": {
+        "size": 926,
+        "sha256": "005666311718a6f8aa0ba9f7a2cf2b67d00d650a39c96b33d0fc23a725e151da"
+      },
+      "preprocessor_config.json": {
+        "size": 266,
+        "sha256": "fd575b890da5a949493e1d1e7a70bfcb9e4b99fe444004d2dbfa253add254741"
+      },
+      "README.md": {
+        "size": 2021,
+        "sha256": "b93a61ca6bdf1b1a5c196fdbd98c68862009049ccc887a93a9f3a9445585c787"
+      }
+    },
+    "weight": "pytorch_model.bin",
+    "backend": "hf_published",
+    "environment": "shared_hf",
+    "dataset_relation": "public_replacement",
+    "split": "standard Fashion-MNIST test, not quality_drift variant",
+    "excluded_source_labels": {},
+    "images": 10000,
+    "covered_target_classes": 10,
+    "num_output_classes": 10,
+    "label_mapping": {
+      "0": "T-shirt",
+      "1": "Trouser",
+      "2": "Pullover",
+      "3": "Dress",
+      "4": "Coat",
+      "5": "Sandal",
+      "6": "Shirt",
+      "7": "Sneaker",
+      "8": "Bag",
+      "9": "Ankle-boot"
+    },
+    "scoring": "reference",
+    "evaluator": "sklearn reference scoring",
+    "fidelity": "reference_baseline",
+    "case_type": "special",
+    "special_tags": [
+      "framework_numeric_difference",
+      "dataset_replacement",
+      "official_evaluator_missing"
+    ],
+    "inference_entry": "publisher_transformers_model_and_processor",
+    "default_batch_size": 1,
+    "dtype": "float32",
+    "warmup_batches": 10,
+    "index": "/project/classification/gaoyonghan/models/Xenova--facial_emotions_image_detection/resources/runtime/assets/workspace/classification171_200_eval/indices/197.jsonl",
+    "index_sha256": "59b56c7382cf928579dfb72d10a8a39afc2ea89533bba849d27e78ab4bc7e6cc",
+    "data_containers": {
+      "/project/dataset/fashion_mnist/raw/t10k-images-idx3-ubyte.gz": {
+        "size": 4422102,
+        "mtime_ns": 1789978522935301253
+      }
+    },
+    "protocol_fingerprint": "5442a706e83483baf59f2528372ffecdb7a78df757dca78fbcef81b0f98744f1"
+  },
+  "status": "partial_complete",
+  "gpu_at_start": "0, GPU-edb63bcd-7ac5-4284-b9ea-825830b8ebba, NVIDIA GeForce RTX 4090, 580.126.09, 785 MiB, 22 %\n1, GPU-a11f730c-a975-2bf0-b765-3c24d83b7104, NVIDIA GeForce RTX 4090, 580.126.09, 133 MiB, 13 %",
+  "full_evaluation": false,
+  "images": 10,
+  "timing_file": "/project/classification/gaoyonghan/models/Xenova--facial_emotions_image_detection/resources/runtime/assets/workspace/classification171_200_eval/.validation/v2/smoke/m197/timing.json",
+  "run_wall_seconds_this_segment": 3.3613134580664337
+}

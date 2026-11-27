@@ -1,0 +1,23 @@
+{
+  "schema": "model-eval/classification-inventory/v1",
+  "scope": "Existing 59 classification models; model 93 is retrieval and excluded.",
+  "models": [
+    {
+      "sequence": 88,
+      "model_id": "google/efficientnet-b3",
+      "runner_family": "classification8",
+      "adapter": "native_labels",
+      "state": "integrated",
+      "dataset": {
+        "id": "imagenet",
+        "relation": "original_exact",
+        "split": null,
+        "note": "ImageNet-1K · val · 50000 图\n官方原集（不代表全协议已对齐）"
+      },
+      "qualification": "original_exact",
+      "limitations": [],
+      "num_classes": 1000,
+      "expected_images": 50000
+    }
+  ]
+}

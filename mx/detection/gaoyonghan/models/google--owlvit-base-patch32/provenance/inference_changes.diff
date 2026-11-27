@@ -1,0 +1,15 @@
+--- original_inference.py
++++ inference/native/run_model.py
+@@ -808,9 +808,9 @@
+ def build_parser():
+     parser = argparse.ArgumentParser(description=__doc__)
+     parser.add_argument("--models", default="all")
+-    parser.add_argument("--model-root", type=Path, default=Path("/data2/gaoyonghan/gpu/model"))
+-    parser.add_argument("--dataset-root", type=Path, default=Path("/data2/gaoyonghan/gpu/dataset"))
+-    parser.add_argument("--output-root", type=Path, default=Path("/home/ubuntu/gaoyonghan/gpu/results/zero_shot_official"))
++    parser.add_argument("--model-root", type=Path, default=Path("/data2/gaoyonghan/gpu_model_standalone_20261110/release/model/检测/google--owlvit-base-patch32/resources/model_index"))
++    parser.add_argument("--dataset-root", type=Path, default=Path("/home/ubuntu/文档/ChatGPT/idea 2/outputs/launch_audit_20261005/migration_inputs/datasets"))
++    parser.add_argument("--output-root", type=Path, default=Path("/data2/gaoyonghan/gpu_model_standalone_20261110/release/model/检测/google--owlvit-base-patch32/resources/runtime/assets/workspace/results/zero_shot_official"))
+     parser.add_argument("--device", default="cuda:0")
+     parser.add_argument("--dtype", choices=("float32", "float16"), default="float32")
+     parser.add_argument("--batch-size", type=int, default=1)

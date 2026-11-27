@@ -1,0 +1,171 @@
+{
+  "schema_version": 1,
+  "scope": [
+    77,
+    78,
+    79,
+    80,
+    96,
+    97,
+    98
+  ],
+  "model_root": "__MODEL_ROOT__/weights",
+  "result_root": "__MODEL_ROOT__/resources/runtime/assets/workspace/results/classification7_pet_v1",
+  "versions": {
+    "torch": "2.5.1+cu121",
+    "torchvision": "0.20.1+cu121",
+    "transformers": "4.50.0",
+    "numpy": "1.26.4",
+    "Pillow": "11.1.0",
+    "scikit-learn": "1.5.2",
+    "safetensors": "0.5.3",
+    "huggingface-hub": "0.29.3"
+  },
+  "dataset": {
+    "name": "Oxford-IIIT Pet",
+    "version": "官方 test.txt，压缩包 SHA256 冻结",
+    "root": "__DATASET_ROOT__/oxford_iiit_pet_test",
+    "official_page": "https://www.robots.ox.ac.uk/~vgg/data/pets/",
+    "split": "annotations/test.txt",
+    "images": 3669,
+    "classes": [
+      "cat",
+      "dog"
+    ],
+    "class_counts": {
+      "cat": 1183,
+      "dog": 2486
+    },
+    "mapping": "test.txt 第三列 SPECIES 1:cat / 2:dog -> model index 0/1；不用37类品种编号",
+    "order": "各物种按 SHA256(image_id) 排序并交错，10 图包含5猫5狗；全量集合不变",
+    "preprocessing": "全图 RGB；每模型发布者 ViTFeatureExtractor/AutoImageProcessor 配置：224x224 双线性 resize，mean/std=0.5，1/255 rescale，不使用头部 ROI/trimap",
+    "assets": {
+      "images.tar.gz": {
+        "size": 791918971,
+        "sha256": "67195c5e1c01f1ab5f9b6a5d22b8c27a580d896ece458917e61d459337fa318d"
+      },
+      "annotations.tar.gz": {
+        "size": 19173078,
+        "sha256": "52425fb6de5c424942b7626b428656fcbd798db970a937df61750c0f1d358e91"
+      }
+    },
+    "annotation_sha256": {
+      "test.txt": "a5454003774ffe01f4f322756d3ba5495bae21cb30bb217ab285dbfa2bef245c",
+      "trainval.txt": "408f3f609481b939c94634169e6413414b733a3faeba440cbdcc5c02142eebdc",
+      "README": "e31ae5da0d657c614e055a08c2045c4d49f770f41361321f017ddf15df7ebcd6"
+    },
+    "relation": "public_replacement",
+    "training_overlap": "unknown：仅证明本地 test 与本地 trainval 图像ID无交集，不能证明作者训练未见这些图像。"
+  },
+  "models": [
+    {
+      "sequence": 96,
+      "model_id": "fbarragan/helloworld_model",
+      "weight_file": "pytorch_model.bin",
+      "files": {
+        "pytorch_model.bin": {
+          "size": 343266993,
+          "sha256": "8fb5f7703115de0c0c15e04616bcfcf01d5dba29023a829fb68b5bc82533a75b",
+          "hf_revision": "f9fb017b256c2dc7cd97e25806356f76cf6d1822"
+        },
+        "config.json": {
+          "size": 743,
+          "sha256": "70177e0892c75651cdd959f160ff6cbebd03cd84db18cb313219f27e060f84bc",
+          "hf_revision": "f9fb017b256c2dc7cd97e25806356f76cf6d1822"
+        },
+        "preprocessor_config.json": {
+          "size": 228,
+          "sha256": "af4eb4d79cf61b47010fc0bc9352ee967579c417423b4917188d809b7e048948",
+          "hf_revision": "f9fb017b256c2dc7cd97e25806356f76cf6d1822"
+        },
+        "README.md": {
+          "size": 158,
+          "sha256": "51de18ac88d806f80bb203d76fabe30efd098d5dc93ad5de201c1bfd9feb0cfd",
+          "hf_revision": "f9fb017b256c2dc7cd97e25806356f76cf6d1822"
+        }
+      },
+      "config": {
+        "_name_or_path": "AutoTrain",
+        "architectures": [
+          "ViTForImageClassification"
+        ],
+        "attention_probs_dropout_prob": 0,
+        "encoder_stride": 16,
+        "hidden_act": "gelu",
+        "hidden_dropout_prob": 0,
+        "hidden_size": 768,
+        "id2label": {
+          "0": "cat",
+          "1": "dog"
+        },
+        "image_size": 224,
+        "initializer_range": 0.02,
+        "intermediate_size": 3072,
+        "label2id": {
+          "cat": "0",
+          "dog": "1"
+        },
+        "layer_norm_eps": 1e-12,
+        "max_length": 128,
+        "model_type": "vit",
+        "num_attention_heads": 12,
+        "num_channels": 3,
+        "num_hidden_layers": 12,
+        "padding": "max_length",
+        "patch_size": 16,
+        "problem_type": "single_label_classification",
+        "qkv_bias": true,
+        "torch_dtype": "float32",
+        "transformers_version": "4.22.1"
+      },
+      "preprocessor": {
+        "do_normalize": true,
+        "do_resize": true,
+        "feature_extractor_type": "ViTFeatureExtractor",
+        "image_mean": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "image_std": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "resample": 2,
+        "size": 224
+      },
+      "model_key": "m96-helloworld_model",
+      "task_type": "image-classification",
+      "model_family": "ViT base patch16 224",
+      "runner": "hf",
+      "batch_size": 8,
+      "dtype": "float32",
+      "dataset_relation": "public_replacement",
+      "fidelity": "reference_baseline",
+      "case_type": "special",
+      "special_tags": [
+        "dataset_replacement",
+        "split_uncertain",
+        "label_mapping_required",
+        "official_evaluator_missing",
+        "framework_numeric_difference"
+      ],
+      "official_card": "https://huggingface.co/fbarragan/helloworld_model/blob/f9fb017b256c2dc7cd97e25806356f76cf6d1822/README.md",
+      "official_repository": null,
+      "official_evaluator": null,
+      "paper": null,
+      "official_reference": null,
+      "reference_check": "not_officially_comparable",
+      "base_model": "omarques/autotrain-dogs-and-cats-1527055142",
+      "local_weight_relation": "HF 发布者资产：直接加载当前编号本地文件，不以共同上游权重替换。",
+      "evaluation": "发布者配套 ViT processor/model + 项目数据循环 + scikit-learn 1.5.2",
+      "known_differences": [
+        "Oxford-IIIT Pet test 是公开替代集，未确认作者原独立测试 split，训练/测试重合情况未知。",
+        "作者 config 标注 transformers 4.22.1，本包固定 4.50.0；保留发布者处理器参数。",
+        "未发现与该 ID 原测试指标对应的完整 evaluator；不引用共同上游的 100% 验证准确率作为本模型参考。"
+      ],
+      "weight_identity_note": "七个 ID 的权重张量逐项完全相同（200 个 state_dict 键）；其中六个 bin 文件 SHA256 相同，77 的 safetensors 与它们逐张量 torch.equal 验证相同。仍各自加载、推理、记录，不计为七种独立权重。"
+    }
+  ]
+}

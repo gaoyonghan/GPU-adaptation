@@ -1,0 +1,90 @@
+{
+  "sequence": 62,
+  "model_id": "PekingU/rtdetr_r101vd_coco_o365",
+  "task": "object_detection",
+  "task_name": "目标检测",
+  "reported_result": "56.2192334926641",
+  "reference": "56.2",
+  "model_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/model_index/PekingU/rtdetr_r101vd_coco_o365",
+  "model_exists_at_build": true,
+  "dataset": {
+    "id": "coco2017_val",
+    "relation": "original_exact",
+    "split": "val2017",
+    "note": "COCO 2017 Detection · val2017 · 5000 图\n官方原集（不代表全协议已对齐）"
+  },
+  "environment_id": "detection-hf",
+  "runner_family": "official_detection",
+  "final_result_sources": [
+    {
+      "source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m062/metrics-0.json",
+      "sha256": "3ef308a892bbd12dbfa86d785d5e4058e21a515bd8f2a128745fea756b3567bc",
+      "selection": "workbook_score_match",
+      "data": {
+        "metrics": {
+          "AP": 0.5621923349266408,
+          "AP50": 0.7451872792564783,
+          "AP75": 0.6117238318337356,
+          "AP_small": 0.38410286121153625,
+          "AP_medium": 0.6054919393910494,
+          "AP_large": 0.7347317212511545,
+          "AR1": 0.4066678064705712,
+          "AR10": 0.681982227379831,
+          "AR100": 0.7489861088499794,
+          "AR_small": 0.5940697140885172,
+          "AR_medium": 0.792878884580659,
+          "AR_large": 0.8992142683523834
+        },
+        "metrics_percent": {
+          "AP": 56.21923349266408,
+          "AP50": 74.51872792564784,
+          "AP75": 61.172383183373555,
+          "AP_small": 38.410286121153625,
+          "AP_medium": 60.54919393910494,
+          "AP_large": 73.47317212511545,
+          "AR1": 40.666780647057124,
+          "AR10": 68.1982227379831,
+          "AR100": 74.89861088499794,
+          "AR_small": 59.40697140885172,
+          "AR_medium": 79.28788845806591,
+          "AR_large": 89.92142683523834
+        },
+        "official_reference": {
+          "metric": "AP",
+          "value_percent": 56.2
+        },
+        "reference_check": {
+          "classification": "matches_reference",
+          "metric": "AP",
+          "actual_percent": 56.21923349266408,
+          "reference_percent": 56.2,
+          "difference_percent_points": 0.019233492664078256,
+          "tolerance_percent_points": 1.0
+        }
+      },
+      "source_original": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/object_detection_official_v2/m62-rtdetr-r101vd-coco-o365/metrics.json"
+    }
+  ],
+  "code": {
+    "source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/object_detection_official_v2/_source_snapshot/run_model.py",
+    "sha256": "f2fb744cfeffd526f9088df0d3ee7e4b17ce65eeada64030fe37deb96dd485dc",
+    "recorded_sha256": null,
+    "attestation": "result_batch_snapshot",
+    "status_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m062/status.json",
+    "selection": "same_batch_snapshot",
+    "archive": "code_archive/f2fb744cfeffd526_run_model.py"
+  },
+  "support_files": [
+    "download_official_source.py",
+    "models.json",
+    "run_model.py",
+    "setup_env.sh",
+    "run_all.sh",
+    "check_environment.py"
+  ],
+  "final_scorer": null,
+  "backend_package": "remaining_detection_eval",
+  "readiness": "code_and_result_identified",
+  "launch_status": "configured",
+  "metadata_warning": null
+}

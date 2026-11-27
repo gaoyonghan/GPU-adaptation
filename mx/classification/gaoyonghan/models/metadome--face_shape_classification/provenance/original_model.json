@@ -1,0 +1,75 @@
+{
+  "sequence": 92,
+  "model_id": "metadome/face_shape_classification",
+  "task": "image_classification",
+  "task_name": "图像分类",
+  "reported_result": "acc：52.5%",
+  "reference": "0.8531",
+  "model_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/model_index/metadome/face_shape_classification",
+  "model_exists_at_build": true,
+  "dataset": {
+    "id": "face_shape",
+    "relation": "public_replacement",
+    "split": "testing_set",
+    "note": "Kaggle Face Shape Dataset testing_set 1000 图，公开替代集；已运行，原始官方验证图未知，所选结果 52.3% 与工作簿 52.5% 待核对。"
+  },
+  "environment_id": "classification-shared",
+  "runner_family": "special",
+  "final_result_sources": [
+    {
+      "source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m092/metrics-0.json",
+      "sha256": "bdd2df6956b55e563575dbfb9404979a9ec2d9826e46769659831a23c546cfca",
+      "selection": "requires_metric_review",
+      "data": {
+        "native_val_acc_percent": 52.30000019073486,
+        "native_val_loss": 1.6444249153137207,
+        "exact_top1_accuracy_percent": 52.300000000000004,
+        "correct": 523,
+        "images": 1000,
+        "elapsed_s": 14.208779220934957,
+        "predictions_sha256": "c10a7858512d8ea11c04a856bfccc24eadd4b21719a09c23863eef4736d32af8",
+        "model_number": 92,
+        "fidelity": "reference_baseline",
+        "dataset_relation": "public_replacement",
+        "officially_comparable": false,
+        "official_reference": {
+          "metric": "accuracy",
+          "value": 0.8530884981155396,
+          "percent": 85.30884981155396,
+          "split": null,
+          "directly_comparable": false
+        },
+        "official_difference_pp": null,
+        "baseline_top1_percent": 52.4,
+        "baseline_difference_pp": -0.09999999999999432,
+        "changed_predictions": 1,
+        "protocol_fingerprint": "7ca593b7088055bd93bd4199e0bac8cf08a69775406fe692161d58ae91ee4753"
+      },
+      "source_original": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/m92_huggingpics_native_v1/full/run_20260916_115335_886950/metrics.json"
+    }
+  ],
+  "code": {
+    "source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/m92_huggingpics_native_v1/full/run_20260916_115335_886950/run_m92_native.py",
+    "sha256": "e1396ad28e7dbd834039b5392b1d8459dcd7ce17a13a9e610f59dbbcf61cf180",
+    "recorded_sha256": null,
+    "attestation": "current_code_unverified",
+    "status_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m092/status.json",
+    "selection": "final_special_run",
+    "archive": "code_archive/e1396ad28e7dbd83_run_m92_native.py"
+  },
+  "support_files": [
+    "models_m92.json",
+    "manifest.json",
+    "protocol.json",
+    "run_m92.py",
+    "run_m92_native.py",
+    "models_m92_native.json",
+    "run_m92_native.sh"
+  ],
+  "final_scorer": null,
+  "backend_package": "classification8_eval",
+  "readiness": "needs_metric_review",
+  "launch_status": "configured",
+  "metadata_warning": "数据集列仍写未评测；须按原始结果核对",
+  "dataset_variants": []
+}

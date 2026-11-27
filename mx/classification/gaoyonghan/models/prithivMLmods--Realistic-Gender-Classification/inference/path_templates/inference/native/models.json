@@ -1,0 +1,193 @@
+{
+  "schema_version": 1,
+  "sources": {},
+  "models": [
+    {
+      "sequence": 180,
+      "model_id": "prithivMLmods/Realistic-Gender-Classification",
+      "model_path": "__MODEL_ROOT__/weights/prithivMLmods/Realistic-Gender-Classification",
+      "revision": "f2651e15953b3779aea922a73f6b016c66e8b05b",
+      "task_type": "image-classification",
+      "status": "not_started",
+      "official_model_card": "https://huggingface.co/prithivMLmods/Realistic-Gender-Classification",
+      "official_reference": {
+        "source": "https://huggingface.co/prithivMLmods/Realistic-Gender-Classification",
+        "local_card_sha256": "262d996247dc7c3e7da112ff98016a2894f974b7c311619c6ebb11c640d4ef9f",
+        "model_index": null,
+        "text_report_values": {
+          "accuracy": 0.9706,
+          "macro_f1": 0.9706,
+          "weighted_f1": 0.9706
+        },
+        "units": "fractions for extracted accuracy/F1; original model-index units as published",
+        "comparison": "Manual protocol review required; no automatic drop calculation",
+        "note": "Card reports retained as provenance, not proof that local data/split/framework exactly reproduces the reported run."
+      },
+      "reference_comparison": "manual_reference_required",
+      "known_differences": [
+        "Full-precision probabilities retained for metrics; publisher demo rounds probabilities to three decimals only for Gradio display. Display rounding is not used to rank classes.",
+        "Local checkpoint and publisher inference components retained. Offline file paths, eval mode, batching, timing observation and reference scoring are external orchestration."
+      ],
+      "config": {
+        "architectures": [
+          "SiglipForImageClassification"
+        ],
+        "id2label": {
+          "0": "female portrait",
+          "1": "male portrait"
+        },
+        "initializer_factor": 1.0,
+        "label2id": {
+          "female portrait": 0,
+          "male portrait": 1
+        },
+        "model_type": "siglip",
+        "problem_type": "single_label_classification",
+        "text_config": {
+          "attention_dropout": 0.0,
+          "hidden_act": "gelu_pytorch_tanh",
+          "hidden_size": 768,
+          "intermediate_size": 3072,
+          "layer_norm_eps": 1e-06,
+          "max_position_embeddings": 64,
+          "model_type": "siglip_text_model",
+          "num_attention_heads": 12,
+          "num_hidden_layers": 12,
+          "projection_size": 768,
+          "torch_dtype": "float32",
+          "vocab_size": 256000
+        },
+        "torch_dtype": "float32",
+        "transformers_version": "4.50.0",
+        "vision_config": {
+          "attention_dropout": 0.0,
+          "hidden_act": "gelu_pytorch_tanh",
+          "hidden_size": 768,
+          "image_size": 224,
+          "intermediate_size": 3072,
+          "layer_norm_eps": 1e-06,
+          "model_type": "siglip_vision_model",
+          "num_attention_heads": 12,
+          "num_channels": 3,
+          "num_hidden_layers": 12,
+          "patch_size": 16,
+          "torch_dtype": "float32"
+        }
+      },
+      "preprocessing": {
+        "do_convert_rgb": null,
+        "do_normalize": true,
+        "do_rescale": true,
+        "do_resize": true,
+        "image_mean": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "image_processor_type": "SiglipImageProcessor",
+        "image_std": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "processor_class": "SiglipProcessor",
+        "resample": 2,
+        "rescale_factor": 0.00392156862745098,
+        "size": {
+          "height": 224,
+          "width": 224
+        }
+      },
+      "architecture": [
+        "SiglipForImageClassification"
+      ],
+      "files": {
+        "model.safetensors": {
+          "size": 371567992,
+          "sha256": "1c77b2ee28f2a7dc4dff3adaec8d7fe8efe7bea2491eb14fd61c990cc62b5c4a"
+        },
+        "config.json": {
+          "size": 1147,
+          "sha256": "16951226ce21df7e56c48e0ac21d312fa0f96c031f14a9c02290c5d613262454"
+        },
+        "preprocessor_config.json": {
+          "size": 394,
+          "sha256": "9b36b57ebaf20f09bf4c22100ccc21877ea6bfe5aead0c00c59f8af8ccefacfc"
+        },
+        "README.md": {
+          "size": 3898,
+          "sha256": "262d996247dc7c3e7da112ff98016a2894f974b7c311619c6ebb11c640d4ef9f"
+        }
+      },
+      "weight": "model.safetensors",
+      "backend": "hf_published",
+      "environment": "shared_hf",
+      "dataset_relation": "original_protocol_incomplete",
+      "split": "published Train shards; no independent test",
+      "excluded_source_labels": {},
+      "images": 3200,
+      "covered_target_classes": 2,
+      "num_output_classes": 2,
+      "label_mapping": {
+        "0": "female portrait",
+        "1": "male portrait"
+      },
+      "scoring": "reference",
+      "evaluator": "sklearn reference scoring",
+      "fidelity": "reference_baseline",
+      "case_type": "special",
+      "special_tags": [
+        "framework_numeric_difference",
+        "official_evaluator_missing"
+      ],
+      "inference_entry": "publisher_transformers_model_and_processor",
+      "default_batch_size": 1,
+      "dtype": "float32",
+      "warmup_batches": 10,
+      "index": "__MODEL_ROOT__/inference/native/indices/180.jsonl",
+      "index_sha256": "ff14fc8f6a27c35c4621dfcdb47febe3efa4f9b3c219861ccae5bbe1b2ba3766",
+      "data_containers": {
+        "__DATASET_ROOT__/datasets_171_200/portrait_gender/raw/dataset/Realistic-Portrait-Gender-Train (1).parquet": {
+          "size": 545140122,
+          "mtime_ns": 1790018458381300034
+        },
+        "__DATASET_ROOT__/datasets_171_200/portrait_gender/raw/dataset/Realistic-Portrait-Gender-Train (2).parquet": {
+          "size": 543781034,
+          "mtime_ns": 1790018596481769958
+        },
+        "__DATASET_ROOT__/datasets_171_200/portrait_gender/raw/dataset/Realistic-Portrait-Gender-Train (3).parquet": {
+          "size": 547361727,
+          "mtime_ns": 1790018558455089848
+        },
+        "__DATASET_ROOT__/datasets_171_200/portrait_gender/raw/dataset/Realistic-Portrait-Gender-Train (4).parquet": {
+          "size": 542148285,
+          "mtime_ns": 1790018564443196944
+        },
+        "__DATASET_ROOT__/datasets_171_200/portrait_gender/raw/dataset/Realistic-Portrait-Gender-Train (5).parquet": {
+          "size": 536098009,
+          "mtime_ns": 1790018640712561030
+        },
+        "__DATASET_ROOT__/datasets_171_200/portrait_gender/raw/dataset/Realistic-Portrait-Gender-Train (6).parquet": {
+          "size": 536345918,
+          "mtime_ns": 1790018730536167524
+        },
+        "__DATASET_ROOT__/datasets_171_200/portrait_gender/raw/dataset/Realistic-Portrait-Gender-Train (7).parquet": {
+          "size": 535969374,
+          "mtime_ns": 1790055768389619560
+        },
+        "__DATASET_ROOT__/datasets_171_200/portrait_gender/raw/dataset/Realistic-Portrait-Gender-Train (8).parquet": {
+          "size": 537053705,
+          "mtime_ns": 1790055818868512698
+        }
+      },
+      "protocol_fingerprint": "03f0321d027a19e9ec74643ff098e78687297875e11660b6f1592cb614e08c5f"
+    }
+  ],
+  "runtime_defaults": {
+    "batch_size": 1,
+    "device": "cuda:0",
+    "warmup_batches": 10,
+    "workers": 2
+  },
+  "scope": "Each published model retained; 177 includes all five weights; no full GPU inference launched by preparation."
+}

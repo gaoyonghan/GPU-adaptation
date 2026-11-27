@@ -1,0 +1,111 @@
+{
+  "sequence": 27,
+  "model_id": "allenai/WildDet3D",
+  "task": "object_detection",
+  "task_name": "目标检测",
+  "reported_result": "AP₃D 10.16%（部分论文中的设置原码未实现）",
+  "reference": "AP₃D 22.5%",
+  "model_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/model_index/allenai/WildDet3D",
+  "model_exists_at_build": true,
+  "dataset": {
+    "id": "wilddet3d_val",
+    "relation": "original_exact",
+    "split": "official validation",
+    "note": "计划：WildDet3D-Bench\n未评测，官方对应关系待核实"
+  },
+  "environment_id": "detection-wilddet3d",
+  "runner_family": "official_detection",
+  "final_result_sources": [
+    {
+      "source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m027/metrics-0.json",
+      "sha256": "095704c8eca7b1de55e9a672683fc39731a4d44c2bc4aff65cf5eb17ea2e9ab1",
+      "selection": "workbook_score_match",
+      "data": {
+        "native_metrics": {
+          "detection_bbox_2D": {
+            "2D/AP": 0.23899856898677138,
+            "2D/AP50": 0.3096427354301522,
+            "2D/AP75": 0.259285780015437,
+            "2D/AP95": 0.05598257825849639,
+            "2D/APs": 0.23497464499878187,
+            "2D/APm": 0.22944332171330303,
+            "2D/APl": 0.2998797935120148,
+            "2D/APr": 0.2447430859405848,
+            "2D/APc": 0.24715186897301542,
+            "2D/APf": 0.21186881459589635
+          },
+          "detection_bbox_3D": {
+            "3D/AP": 0.04796470787634475,
+            "3D/AP15": 0.06912206417178644,
+            "3D/AP25": 0.04951246687404554,
+            "3D/AP50": 0.0128960513945757,
+            "3D/APn": 0.06108499938218039,
+            "3D/APm": 0.040529099283045975,
+            "3D/APf": 0.03449755838604851,
+            "3D/ASE": 0.9370523015216329,
+            "3D/AOE": 0.9295842161868434,
+            "3D/AOE_Sym": 0.9260796357219312,
+            "3D/AOE_Canonical": 0.9079847791514001,
+            "3D/APr": 0.06430797531908158,
+            "3D/APc": 0.045765233129300746
+          },
+          "detection_dist_3D": {
+            "3D/AP": 0.10163378363094447,
+            "3D/ATE": 0.8896995660178469,
+            "3D/ASE": 0.8857872810664712,
+            "3D/AOE": 0.8257876278574501,
+            "3D/AOE_Sym": 0.8276656153863408,
+            "3D/AOE_Canonical": 0.7774112003320373,
+            "3D/ODS": 0.1172711459918442,
+            "3D/ODS_Sym": 0.11695814807036242,
+            "3D/ODS_Canonical": 0.12533388391274633,
+            "3D/APr": 0.1242335275428482,
+            "3D/APc": 0.10287406428551837,
+            "3D/APf": 0.07226834702510158
+          }
+        },
+        "AP_unit": "fraction (multiply AP by 100 for percent)",
+        "official_reference": {
+          "AP_percent": 22.6,
+          "APr_percent": 28.3,
+          "APc_percent": 21.6,
+          "APf_percent": 18.7,
+          "url": "https://arxiv.org/html/2604.08626v2",
+          "table": 3,
+          "row": "WildDet3D (All Data), Text",
+          "mapping_status": "candidate; verify native metric definition with result"
+        },
+        "official_match_verified": false
+      },
+      "source_original": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/m27_native_text_v1/full/run_20260914_201515_150647/metrics.json"
+    }
+  ],
+  "code": {
+    "source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/m27_native_text_v1/full/run_20260914_201515_150647/run_m27_native.py",
+    "sha256": "8ff7433d0cc7586a8604977e7c0b03cbd55543182c025c339e8ebe95ca1524db",
+    "recorded_sha256": null,
+    "attestation": "result_batch_snapshot",
+    "status_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m027/status.json",
+    "selection": "same_run_snapshot",
+    "archive": "code_archive/8ff7433d0cc7586a_run_m27_native.py"
+  },
+  "support_files": [
+    "detection_dist_coverage.json",
+    "m27_lingbot_config.json",
+    "m27_native_config.py",
+    "run_m27_native.py",
+    "detection_bbox_3D_metrics.json",
+    "detection_bbox_coverage.json",
+    "protocol.json",
+    "weight_load_audit.json",
+    "expected_ids.json",
+    "detection_bbox_2D_metrics.json",
+    "run_m27_native.sh",
+    "detection_dist_3D_metrics.json"
+  ],
+  "final_scorer": null,
+  "backend_package": "official_object_detection_eval",
+  "readiness": "code_and_result_identified",
+  "launch_status": "configured",
+  "metadata_warning": "数据集列仍写未评测；须按原始结果核对"
+}

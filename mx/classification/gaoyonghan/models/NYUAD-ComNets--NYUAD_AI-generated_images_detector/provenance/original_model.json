@@ -1,0 +1,96 @@
+{
+  "sequence": 72,
+  "model_id": "NYUAD-ComNets/NYUAD_AI-generated_images_detector",
+  "task": "image_classification",
+  "task_name": "图像分类",
+  "reported_result": "81.3333333333333",
+  "reference": "97.36",
+  "model_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/model_index/NYUAD-ComNets/NYUAD_AI-generated_images_detector",
+  "model_exists_at_build": true,
+  "dataset": {
+    "id": null,
+    "relation": null,
+    "split": null,
+    "note": "Synthbuster DALL·E3/SDXL + RAISE · 各300，共900图\n非官方评测集：公开替代"
+  },
+  "environment_id": "classification-shared",
+  "runner_family": "single72",
+  "final_result_sources": [
+    {
+      "source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m072/metrics-0.json",
+      "sha256": "059486b247b1e377fa1416c10a47e6e66f95c86b4035090537fab874bdb40671",
+      "selection": "workbook_score_match",
+      "data": {
+        "sequence": 72,
+        "model_id": "NYUAD-ComNets/NYUAD_AI-generated_images_detector",
+        "images": 900,
+        "protocol_fingerprint": "1192f92cc3f350b912911a9fbc1bab8c6860e1d7df1e8d15c4d4bd588d3866a6",
+        "metrics": {
+          "accuracy_percent": 81.33333333333333,
+          "macro_f1": 0.8067792105785556,
+          "macro_ovr_auroc": 0.9411120370370369,
+          "confusion_matrix": [
+            [
+              287,
+              7,
+              6
+            ],
+            [
+              10,
+              263,
+              27
+            ],
+            [
+              36,
+              82,
+              182
+            ]
+          ],
+          "label_order": [
+            "dalle",
+            "real",
+            "sd"
+          ],
+          "confusion_matrix_axes": "rows=target, columns=prediction",
+          "units": {
+            "accuracy_percent": "%",
+            "macro_f1": "0..1",
+            "macro_ovr_auroc": "0..1"
+          }
+        },
+        "fidelity": "reference_baseline",
+        "dataset_relation": "public_replacement",
+        "official_reference": {
+          "accuracy_percent": 97.36,
+          "loss": 0.0987,
+          "split": "作者未提供可复用测试清单的原验证集",
+          "comparison": "not_officially_comparable",
+          "delta": null
+        },
+        "comparison": "not_officially_comparable",
+        "delta": null
+      },
+      "source_original": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/nyuad72_v1/metrics.json"
+    }
+  ],
+  "code": {
+    "source": "/data2/gaoyonghan/gpu_model_standalone_20261110/build_runtime/assets/workspace/results/nyuad72_v1/_source_snapshot/run_model.py",
+    "sha256": "d382bf5fc759cb26f4c25000f4226ff80b2b910572c65d19b7c5de4cf13ad849",
+    "recorded_sha256": null,
+    "attestation": "result_batch_snapshot",
+    "status_source": "/data2/gaoyonghan/model inference for GPU adaptation/model/_shared/package/history/m072/status.json",
+    "selection": "same_batch_snapshot",
+    "archive": "code_archive/d382bf5fc759cb26_run_model.py"
+  },
+  "support_files": [
+    "models.json",
+    "run_model.py",
+    "setup_env.sh",
+    "run_all.sh"
+  ],
+  "final_scorer": null,
+  "backend_package": "classification8_eval",
+  "readiness": "code_and_result_identified",
+  "launch_status": "configured",
+  "metadata_warning": null
+}

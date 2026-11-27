@@ -1,0 +1,120 @@
+{
+  "generated_at": "2026-09-05T10:58:31.409026+00:00",
+  "total_detection_models": 62,
+  "existing_green_queue": 37,
+  "current_scope_unique_models": 25,
+  "initial_primary_blocker_counts": {
+    "旧替代集类别不全，需核对任务覆盖": 4,
+    "私有数据且缺任务匹配的公开金标": 2,
+    "原协议/划分不明，现有数据可做参考评测": 8,
+    "数据已有，缺任务适配或多权重覆盖": 8,
+    "仅下载了说明/发布链接，实际权重缺失": 2,
+    "数据下载未完成，当前目录为空": 1
+  },
+  "current_state_counts": {
+    "complete": 21,
+    "partial_complete": 3,
+    "blocked": 1
+  },
+  "counting_rule": "Unique model IDs; all required tasks must have complete frozen benchmark metrics. PubTables means the model-blind 1000-image benchmark, not the original 93834-image test. Invalid cmarkea and all superseded Qualcomm v1/v2 results excluded.",
+  "fidelity_counts": {
+    "reference_baseline": 25
+  },
+  "comparison_counts": {
+    "not_officially_comparable": 25
+  },
+  "case_type_counts": {
+    "special": 25
+  },
+  "models": [
+    {
+      "sequence": 12,
+      "model_id": "foduucom/table-detection-and-extraction",
+      "state": "complete",
+      "all_tasks_complete": true,
+      "required_tasks": [
+        "bbox_detection_classification"
+      ],
+      "results": [
+        {
+          "status": "complete",
+          "task": "bbox",
+          "valid_complete": true,
+          "images": 70,
+          "result_directory": "__MODEL_ROOT__/resources/runtime/assets/workspace/results/remaining25_v2/m12-table-detection-and-extraction/bbox",
+          "metrics": {
+            "metrics": {
+              "AP": 0.9150540688645817,
+              "AP50": 0.9504244244495196,
+              "AP75": 0.9446542397726667,
+              "AP_small": null,
+              "AP_medium": 0.7461401355137903,
+              "AP_large": 0.9470659898734124,
+              "AR1": 0.6693629929221437,
+              "AR10": 0.9434782608695654,
+              "AR100": 0.9434782608695654,
+              "AR_small": null,
+              "AR_medium": 0.8440476190476189,
+              "AR_large": 0.964419934640523,
+              "per_class_AP": {
+                "bordered": 0.9586959136562789,
+                "borderless": 0.8714122240728843
+              }
+            },
+            "unit": "fraction_0_to_1",
+            "coverage": {
+              "model_labels": {
+                "0": "bordered",
+                "1": "borderless"
+              },
+              "mapping": {
+                "0": 1,
+                "1": 2
+              },
+              "covered_labels": [
+                "bordered",
+                "borderless"
+              ],
+              "missing_labels": [],
+              "covered_count": 2,
+              "total_model_classes": 2,
+              "gt_instances_per_class": {
+                "bordered": 23,
+                "borderless": 86
+              }
+            },
+            "evaluation_images": 70,
+            "annotation_sha256": "732f4b56b55a4d0a2475cb583a66554e6b7212d5f2aaeea2e6bc48aa024f73df",
+            "protocol_fingerprint": "2fdd27def3ffa2f47aa2d9ba24558b7982249d0153ff9dda05813b403e23854f",
+            "reference_check": "not_officially_comparable"
+          },
+          "coverage": {
+            "model_labels": {
+              "0": "bordered",
+              "1": "borderless"
+            },
+            "mapping": {
+              "0": 1,
+              "1": 2
+            },
+            "covered_labels": [
+              "bordered",
+              "borderless"
+            ],
+            "missing_labels": [],
+            "covered_count": 2,
+            "total_model_classes": 2,
+            "gt_instances_per_class": {
+              "bordered": 23,
+              "borderless": 86
+            }
+          },
+          "error": null
+        }
+      ],
+      "next_action": "运行作者validation 70图；切分未披露，指标相近也不能证明原协议身份。"
+    }
+  ],
+  "supplemental_updated_at": "2026-09-05T15:25:21.596769+00:00",
+  "supplemental_summary": "supplemental_20260905/summary.json"
+}

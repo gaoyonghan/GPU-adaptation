@@ -1,0 +1,97 @@
+{
+  "generated_at": "2026-09-05T10:58:31.409026+00:00",
+  "total_detection_models": 62,
+  "existing_green_queue": 37,
+  "current_scope_unique_models": 25,
+  "initial_primary_blocker_counts": {
+    "旧替代集类别不全，需核对任务覆盖": 4,
+    "私有数据且缺任务匹配的公开金标": 2,
+    "原协议/划分不明，现有数据可做参考评测": 8,
+    "数据已有，缺任务适配或多权重覆盖": 8,
+    "仅下载了说明/发布链接，实际权重缺失": 2,
+    "数据下载未完成，当前目录为空": 1
+  },
+  "current_state_counts": {
+    "complete": 21,
+    "partial_complete": 3,
+    "blocked": 1
+  },
+  "counting_rule": "Unique model IDs; all required tasks must have complete frozen benchmark metrics. PubTables means the model-blind 1000-image benchmark, not the original 93834-image test. Invalid cmarkea and all superseded Qualcomm v1/v2 results excluded.",
+  "fidelity_counts": {
+    "reference_baseline": 25
+  },
+  "comparison_counts": {
+    "not_officially_comparable": 25
+  },
+  "case_type_counts": {
+    "special": 25
+  },
+  "models": [
+    {
+      "sequence": 8,
+      "model_id": "Anzhc/Anzhcs_YOLOs",
+      "state": "partial_complete",
+      "all_tasks_complete": false,
+      "required_tasks": [
+        "face_bbox_mask",
+        "manface_bbox_mask",
+        "womanface_bbox_mask",
+        "eye_bbox_mask",
+        "headhair_bbox_mask",
+        "breast_bbox_mask",
+        "breast_size_detection",
+        "drone_bbox_mask",
+        "anime_score_classification",
+        "text_bbox_mask",
+        "manga_panel_bbox_mask"
+      ],
+      "results": [
+        {
+          "status": "failed",
+          "task": "text_seg",
+          "valid_complete": false,
+          "images": null,
+          "result_directory": "__MODEL_ROOT__/resources/runtime/assets/workspace/results/remaining25_anzhc_v2/text_seg",
+          "metrics": null,
+          "coverage": null,
+          "error": "OutOfMemoryError('CUDA out of memory. Tried to allocate 12.99 GiB. GPU 0 has a total capacity of 23.51 GiB of which 4.64 GiB is free. Including non-PyTorch memory, this process has 17.80 GiB memory in use. Of the allocated memory 16.86 GiB is allocated by PyTorch, and 474.26 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)')"
+        },
+        {
+          "status": "complete",
+          "task": "text_seg",
+          "valid_complete": true,
+          "images": 1651,
+          "result_directory": "__MODEL_ROOT__/resources/runtime/assets/workspace/results/remaining25_anzhc_v3/text_seg",
+          "metrics": {
+            "bbox": {
+              "AP": 0.09395053086753595,
+              "AP50": 0.237758571671096,
+              "AP75": 0.06420203339138512,
+              "AP_small": 0.003288924263362509,
+              "AP_medium": 0.015044672806383034,
+              "AP_large": 0.11880289901787885,
+              "AR1": 0.01880875385425284,
+              "AR10": 0.1259870647514477,
+              "AR100": 0.2842821689102805,
+              "AR_small": 0.0297841726618705,
+              "AR_medium": 0.1676215856095936,
+              "AR_large": 0.31710132735090674,
+              "per_class_AP": {
+                "text": 0.09395053086753595
+              }
+            },
+            "all_model_tasks_complete": false,
+            "unit": "fraction_0_to_1",
+            "segm_AP": 0.07091355083492029,
+            "segm_AP50": 0.20240749017697185
+          },
+          "coverage": null,
+          "error": null
+        }
+      ],
+      "next_action": "21个权重均通过10图推理；普通文字子任务已完成1651页框和mask指标。其余10个任务仍需匹配金标；详情见尚未闭环任务.md。"
+    }
+  ],
+  "supplemental_updated_at": "2026-09-05T15:25:21.596769+00:00",
+  "supplemental_summary": "supplemental_20260905/summary.json"
+}

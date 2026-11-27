@@ -1,0 +1,858 @@
+{
+  "schema_version": 2,
+  "suite": "remaining25-task-coverage-reference-evaluation",
+  "generated_on": "2026-09-03",
+  "source_of_truth": {
+    "workbook": "__MODEL_ROOT__/resources/runtime/assets/workspace/outputs/second_batch_status_update_20260902/100个模型及数据集下载状态_第二批完成更新版.xlsx",
+    "workbook_sha256": "7c6087746f12cd693a9c5fa581fc9817792c003564011bbd973edddf82b7c1d2",
+    "workbook_sheet": "下载状态",
+    "workbook_range": "A1:H101",
+    "master_json": "__MODEL_ROOT__/resources/runtime/assets/workspace/前100模型_评测集下载清单.json",
+    "master_json_sha256": "11adb053a8e0ce139bb1b97864000432cb6ef4560be685659c602744b281673f",
+    "precedence": "workbook protocol/status annotations override stale download states in the master JSON; runtime disk preflight overrides stale negative download cells only when the expected files are present"
+  },
+  "policy": {
+    "official_first": true,
+    "offline_runtime": true,
+    "missing_dataset_action": "record blocked and continue",
+    "smoke_images": 10,
+    "full_images": 0,
+    "default_dtype": "float32",
+    "completed_states": [
+      "complete",
+      "verified_existing"
+    ],
+    "result_root_version": "object_detection_official_v2"
+  },
+  "fidelity_levels": {
+    "exact_official": "Official native weight, code, environment and evaluator.",
+    "official_protocol_adapter": "Official/local converted weight with a thin, audited implementation of the official protocol.",
+    "reference_baseline": "Reproducible baseline where the complete official evaluation chain is unavailable; never presented as an official reproduction."
+  },
+  "datasets": {
+    "coco2017_val": {
+      "name": "COCO 2017 Detection",
+      "relation": "original_exact",
+      "split": "val2017",
+      "expected_images": 5000,
+      "expected_categories": 80,
+      "kind": "coco_archives",
+      "annotation_archive": "COCO2017/annotations_trainval2017.zip",
+      "annotation_member": "annotations/instances_val2017.json",
+      "image_archive": "COCO2017/val2017.zip",
+      "image_prefix": "val2017/",
+      "evaluator": "pycocotools COCOeval bbox; maxDets=[1,10,100]"
+    },
+    "stock_pxex9_eval_clean": {
+      "name": "Stock stock-pxex9 cleaned public replacement",
+      "relation": "public_replacement",
+      "split": "cleaned test",
+      "expected_images": 159,
+      "expected_categories": 6,
+      "kind": "yolo_directory",
+      "path": "stock_pxex9_eval_clean",
+      "split_dir": "test",
+      "evaluator": "pycocotools COCOeval bbox after deterministic YOLO-to-COCO conversion"
+    },
+    "stock_future_build_chart": {
+      "name": "Roboflow build_chart v1 public replacement",
+      "relation": "public_replacement",
+      "split": "test",
+      "expected_images": 249,
+      "expected_categories": 2,
+      "kind": "yolo_directory",
+      "path": "stock_future_build_chart_candidate",
+      "split_dir": "test",
+      "evaluator": "pycocotools COCOeval bbox after deterministic YOLO-to-COCO conversion"
+    },
+    "tablebordernet_valid": {
+      "name": "TableBorderNet",
+      "relation": "original_protocol_incomplete",
+      "split": "validation",
+      "expected_images": 70,
+      "expected_categories": 2,
+      "kind": "yolo_zip",
+      "archive": "tablebordernet_valid/data/valid.zip",
+      "root": "",
+      "split_dir": "valid",
+      "names": [
+        "bordered",
+        "borderless"
+      ],
+      "evaluator": "pycocotools COCOeval bbox; model-card comparison additionally uses AP50"
+    },
+    "ctdar_tracka_test": {
+      "name": "ICDAR 2019 cTDaR Track A",
+      "relation": "original_protocol_incomplete",
+      "split": "official test",
+      "expected_images": 439,
+      "expected_categories": 1,
+      "kind": "delegated",
+      "path": "icdar2019_ctdar_tracka_test",
+      "evaluator": "cTDaR-style IoU 0.6/0.7/0.8/0.9 P/R/F1 adapter in document_layout_table_eval"
+    },
+    "license_plate_v1_valid": {
+      "name": "Vehicle Registration Plates v1",
+      "relation": "original_exact",
+      "split": "validation",
+      "expected_images": 1765,
+      "expected_categories": 1,
+      "kind": "coco_single_zip",
+      "archive": "license_plate_v1_valid/data/valid.zip",
+      "annotation_member": "_annotations.coco.json",
+      "evaluator": "pycocotools COCOeval bbox"
+    },
+    "doclaynet_val_test": {
+      "name": "DocLayNet",
+      "relation": "original_protocol_incomplete",
+      "split": "val + test",
+      "expected_images": 11488,
+      "expected_categories": 11,
+      "kind": "delegated",
+      "archive": "doclaynet_test/DocLayNet_core.zip",
+      "evaluator": "pycocotools COCOeval bbox on both official val and test"
+    },
+    "yoloe_lvis_minival": {
+      "name": "LVIS v1.0 YOLOE minival",
+      "relation": "original_exact",
+      "split": "author minival",
+      "expected_images": 4809,
+      "expected_categories": 1203,
+      "kind": "yoloe_lvis",
+      "path": "yoloe_lvis_minival",
+      "evaluator": "official YOLOE prompt-free open-ended mapping and LVIS Fixed AP",
+      "paths": [
+        "yoloe_lvis_minival/minival.txt",
+        "yoloe_lvis_minival/lvis_v1_val.json.zip",
+        "yoloe_lvis_minival/lvis-labels-segments.zip",
+        "COCO2017/val2017.zip"
+      ],
+      "minival": "yoloe_lvis_minival/minival.txt",
+      "lvis_annotation_zip": "yoloe_lvis_minival/lvis_v1_val.json.zip",
+      "labels_zip": "yoloe_lvis_minival/lvis-labels-segments.zip",
+      "coco_images_zip": "COCO2017/val2017.zip"
+    },
+    "table_extraction_v2_valid": {
+      "name": "Table Extraction PDF v2",
+      "relation": "original_exact",
+      "split": "validation",
+      "expected_images": null,
+      "expected_categories": 2,
+      "kind": "coco_single_zip",
+      "archive": "table_extraction_v2_valid/data/valid.zip",
+      "annotation_member": "_annotations.coco.json",
+      "evaluator": "pycocotools COCOeval bbox"
+    },
+    "roboflow_licenseplates_v2_valid": {
+      "name": "License Plates Recognition v2",
+      "relation": "public_replacement",
+      "split": "validation",
+      "expected_images": null,
+      "expected_categories": 1,
+      "kind": "coco_directory",
+      "path": "roboflow_licenseplates_v2_valid/valid",
+      "annotation": "_annotations.coco.json",
+      "images": ".",
+      "category_collapse": {
+        "0": "license plate",
+        "License-Plates": "license plate"
+      },
+      "evaluator": "pycocotools COCOeval bbox"
+    },
+    "roboflow_licenseplates_v11_test": {
+      "name": "License Plate Recognition v11",
+      "relation": "original_exact",
+      "split": "test",
+      "expected_images": 1020,
+      "expected_categories": 1,
+      "kind": "coco_directory",
+      "path": "roboflow_licenseplates_v11_test/test",
+      "annotation": "_annotations.coco.eval.json",
+      "images": ".",
+      "evaluator": "pycocotools COCOeval bbox; training/test overlap must be disclosed"
+    },
+    "flir_adas_thermal_eval": {
+      "name": "FLIR ADAS Thermal six-class subset",
+      "relation": "public_replacement",
+      "split": "validation",
+      "expected_images": null,
+      "expected_categories": 6,
+      "kind": "coco_directory",
+      "path": "flir_adas_thermal_eval/images_thermal_val",
+      "annotation": "coco.eval6.json",
+      "images": "data",
+      "evaluator": "pycocotools COCOeval bbox"
+    },
+    "dfire_replacement": {
+      "name": "ISFire-4 / D-Fire public replacement",
+      "relation": "public_replacement",
+      "split": "test",
+      "expected_images": null,
+      "expected_categories": 2,
+      "kind": "yolo_zip",
+      "archive": "dfire_test_replacement_isfire4/Dataset.zip",
+      "root": "Dataset",
+      "split_dir": "test",
+      "category_collapse": {
+        "black smoke": "smoke",
+        "white-gray smoke": "smoke",
+        "blue fire": "fire",
+        "yellow-orange fire": "fire"
+      },
+      "evaluator": "pycocotools COCOeval bbox after deterministic YOLO-to-COCO conversion"
+    },
+    "smoke_v4_valid": {
+      "name": "Smoke100 v4",
+      "relation": "original_protocol_incomplete",
+      "split": "validation",
+      "expected_images": null,
+      "expected_categories": 1,
+      "kind": "coco_single_zip",
+      "archive": "smoke_v4_valid/data/valid.zip",
+      "annotation_member": "_annotations.coco.json",
+      "evaluator": "pycocotools COCOeval bbox"
+    },
+    "construction_safety_valid": {
+      "name": "Construction Site Safety v1",
+      "relation": "original_exact",
+      "split": "validation",
+      "expected_images": null,
+      "expected_categories": null,
+      "kind": "coco_single_zip",
+      "archive": "construction_safety_v1_valid/data/valid.zip",
+      "annotation_member": "_annotations.coco.json",
+      "evaluator": "pycocotools COCOeval bbox"
+    },
+    "ppe_v7_valid": {
+      "name": "Personal Protective Equipment v7",
+      "relation": "original_exact",
+      "split": "validation",
+      "expected_images": null,
+      "expected_categories": null,
+      "kind": "coco_single_zip",
+      "archive": "ppe_v7_valid/data/valid.zip",
+      "annotation_member": "_annotations.coco.json",
+      "evaluator": "pycocotools COCOeval bbox"
+    },
+    "coco_wholebody_val": {
+      "name": "COCO-WholeBody v1.0",
+      "relation": "public_replacement",
+      "split": "validation",
+      "expected_images": 5000,
+      "expected_categories": null,
+      "kind": "special",
+      "path": "coco_wholebody_val/coco_wholebody_val_v1.0.json",
+      "evaluator": "task-specific box/keypoint mapping; adapter pending"
+    },
+    "pubtables_detection_test": {
+      "name": "PubTables-1M Detection",
+      "relation": "original_exact",
+      "split": "official test",
+      "expected_images": 57125,
+      "expected_categories": 2,
+      "kind": "pascal_tar",
+      "path": "pubtables_detection_test",
+      "evaluator": "official Table Transformer detection protocol; COCO bbox AP",
+      "annotation_archive": "pubtables_detection_test/PubTables-1M-Detection_Annotations_Test.tar.gz",
+      "image_archive": "pubtables_detection_test/PubTables-1M-Detection_Images_Test.tar.gz",
+      "filelist_archive": "pubtables_detection_test/PubTables-1M-Detection_Filelists.tar.gz",
+      "filelist_member": "test_filelist.txt",
+      "class_names": [
+        "table",
+        "table rotated"
+      ]
+    },
+    "pubtables_structure_test": {
+      "name": "PubTables-1M Structure",
+      "relation": "original_exact",
+      "split": "official test",
+      "expected_images": 93834,
+      "expected_categories": 6,
+      "kind": "pascal_tar_structure",
+      "path": "pubtables_structure_test",
+      "evaluator": "official microsoft/table-transformer GriTS all/simple/complex",
+      "annotation_archive": "pubtables_structure_test/PubTables-1M-Structure_Annotations_Test.tar.gz",
+      "image_archive": "pubtables_structure_test/PubTables-1M-Structure_Images_Test.tar.gz",
+      "filelist_archive": "pubtables_structure_test/PubTables-1M-Structure_Filelists.tar.gz",
+      "words_archive": "pubtables_structure_test/PubTables-1M-Structure_Table_Words.tar.gz",
+      "filelist_member": "test_filelist.txt",
+      "class_names": [
+        "table",
+        "table column",
+        "table row",
+        "table column header",
+        "table projected row header",
+        "table spanning cell"
+      ]
+    },
+    "fashionpedia_val": {
+      "name": "Fashionpedia",
+      "relation": "original_exact",
+      "split": "validation",
+      "expected_images": 1158,
+      "expected_categories": 46,
+      "kind": "parquet_detection",
+      "path": "fashionpedia_val",
+      "evaluator": "pycocotools COCOeval bbox after deterministic Parquet decoding",
+      "paths": [
+        "fashionpedia_val/data/val-00000-of-00001-0b29e85429788213.parquet"
+      ],
+      "bbox_format": "xyxy",
+      "category_index_base": 0,
+      "class_names_from_model_config": "__MODEL_ROOT__/weights/valentinafevu/yolos-fashionpedia/config.json"
+    },
+    "signature_test": {
+      "name": "Signature Detection",
+      "relation": "original_exact",
+      "split": "test",
+      "expected_images": 419,
+      "expected_categories": 1,
+      "kind": "parquet_detection",
+      "path": "signature_test",
+      "evaluator": "pycocotools COCOeval bbox after deterministic Parquet decoding",
+      "paths": [
+        "signature_test/full/test-00000-of-00001.parquet"
+      ],
+      "bbox_format": "xywh",
+      "category_index_base": 0,
+      "class_names": [
+        "signature"
+      ]
+    },
+    "nemotron_public_composite": {
+      "name": "DocLayNet test + InfoDet test",
+      "relation": "public_replacement",
+      "split": "composite public test",
+      "expected_images": null,
+      "expected_categories": 6,
+      "kind": "special",
+      "paths": [
+        "doclaynet_test",
+        "infodet_public_preview/test"
+      ],
+      "evaluator": "per-source/per-class reporting; NVIDIA native post-processing adapter pending"
+    },
+    "webclick_test": {
+      "name": "WebClick",
+      "relation": "original_exact",
+      "split": "test",
+      "expected_images": 1639,
+      "expected_categories": null,
+      "kind": "webclick_parquet",
+      "path": "webclick_test",
+      "evaluator": "detector-only target coverage; official 70.8 additionally requires Gemini 2.5 Pro box selection",
+      "paths": [
+        "webclick_test/test-00000-of-00004.parquet",
+        "webclick_test/test-00001-of-00004.parquet",
+        "webclick_test/test-00002-of-00004.parquet",
+        "webclick_test/test-00003-of-00004.parquet"
+      ],
+      "bbox_format": "relative_xyxy"
+    },
+    "widerface_val": {
+      "name": "WIDER FACE",
+      "relation": "original_exact",
+      "split": "validation easy/medium/hard",
+      "expected_images": 3226,
+      "expected_categories": 1,
+      "kind": "special",
+      "path": "widerface_val",
+      "evaluator": "official WIDER FACE easy/medium/hard evaluator; adapter pending"
+    },
+    "wilddet3d_val": {
+      "name": "WildDet3D-Bench",
+      "relation": "original_exact",
+      "split": "official validation",
+      "expected_images": 2470,
+      "expected_categories": 785,
+      "kind": "wilddet3d_native",
+      "path": "wilddet3d_val",
+      "evaluator": "official WildDet3D center-distance AP through Vis4D",
+      "annotation": "annotations/InTheWild_v3_val.json"
+    },
+    "fashion_mixed_candidate": {
+      "name": "ModaNet + Fashionpedia candidate",
+      "relation": "original_protocol_incomplete",
+      "split": "candidate validation",
+      "expected_images": null,
+      "expected_categories": 7,
+      "kind": "special",
+      "path": "fashionpedia_val",
+      "evaluator": "mapped seven-class bbox metric; exact author split unavailable"
+    },
+    "plantdoc_test": {
+      "name": "PlantDoc Object Detection",
+      "relation": "public_replacement",
+      "split": "test",
+      "expected_images": null,
+      "expected_categories": 13,
+      "kind": "special",
+      "path": "plantdoc_object_detection_test/PlantDoc-Object-Detection-Dataset-master.zip",
+      "evaluator": "common-class bbox only; insufficient 13/46 coverage"
+    },
+    "omnidocbench_eval": {
+      "name": "OmniDocBench",
+      "relation": "public_replacement",
+      "split": "evaluation",
+      "expected_images": null,
+      "expected_categories": null,
+      "kind": "special",
+      "path": "omnidocbench_eval",
+      "evaluator": "mapped-class subset only; adapter pending"
+    },
+    "publaynet_val": {
+      "name": "PubLayNet",
+      "relation": "original_protocol_incomplete",
+      "split": "validation",
+      "expected_images": null,
+      "expected_categories": 5,
+      "kind": "special",
+      "path": "publaynet_val",
+      "evaluator": "COCO bbox AP after parquet decoding; adapter pending"
+    },
+    "doclaynet_test": {
+      "name": "DocLayNet",
+      "relation": "original_protocol_incomplete",
+      "split": "official test used as same-source candidate",
+      "expected_images": 4999,
+      "expected_categories": 11,
+      "kind": "special",
+      "path": "doclaynet_test/DocLayNet_core.zip",
+      "evaluator": "COCO bbox AP; author 500-page subset is not published"
+    },
+    "pmc_chartinfo_eval": {
+      "name": "ICPR 2022 ChartInfo PMC",
+      "relation": "original_exact",
+      "split": "test",
+      "expected_images": 560,
+      "expected_categories": 10,
+      "kind": "special",
+      "path": "pmc_chartinfo_eval",
+      "evaluator": "official PMC chart element bbox evaluator; archive currently incomplete"
+    },
+    "sku110k_test": {
+      "name": "SKU-110K",
+      "relation": "public_replacement",
+      "split": "test",
+      "expected_images": null,
+      "expected_categories": 1,
+      "kind": "special",
+      "path": "sku110k_test/SKU110K_fixed.tar.gz",
+      "evaluator": "official ignore/minimum-box rules; adapter pending"
+    },
+    "unavailable": {
+      "name": "Unavailable or intentionally skipped",
+      "relation": "unavailable",
+      "split": null,
+      "expected_images": null,
+      "expected_categories": null,
+      "kind": "unavailable",
+      "evaluator": null
+    },
+    "doclaynet_val_full": {
+      "kind": "coco_single_zip",
+      "archive": "doclaynet_test/DocLayNet_core.zip",
+      "annotation_member": "COCO/val.json",
+      "split": "val",
+      "expected_images": 6489,
+      "relation": "original_protocol_incomplete"
+    },
+    "doclaynet_test_full": {
+      "kind": "coco_single_zip",
+      "archive": "doclaynet_test/DocLayNet_core.zip",
+      "annotation_member": "COCO/test.json",
+      "split": "test",
+      "expected_images": 4999,
+      "relation": "original_protocol_incomplete"
+    },
+    "ctdar_full": {
+      "kind": "xml_detection",
+      "path": "icdar2019_ctdar_tracka_test",
+      "format": "ctdar",
+      "class_names": [
+        "table"
+      ],
+      "expected_images": 439,
+      "split": "official Track A test; exact model-card split unknown"
+    },
+    "fashionpedia_7": {
+      "name": "Fashionpedia",
+      "relation": "public_replacement",
+      "split": "validation",
+      "expected_images": 1158,
+      "expected_categories": 46,
+      "kind": "parquet_detection",
+      "path": "fashionpedia_val",
+      "evaluator": "pycocotools COCOeval bbox after deterministic Parquet decoding",
+      "paths": [
+        "fashionpedia_val/data/val-00000-of-00001-0b29e85429788213.parquet"
+      ],
+      "bbox_format": "xyxy",
+      "category_index_base": 0,
+      "class_names_from_model_config": "__MODEL_ROOT__/weights/valentinafevu/yolos-fashionpedia/config.json",
+      "category_collapse": {
+        "shirt, blouse": "top",
+        "top, t-shirt, sweatshirt": "top",
+        "sweater": "top",
+        "cardigan": "outer",
+        "jacket": "outer",
+        "vest": "top",
+        "pants": "bottom",
+        "shorts": "bottom",
+        "skirt": "bottom",
+        "coat": "outer",
+        "dress": "dress",
+        "hat": "hat",
+        "shoe": "shoes",
+        "bag, wallet": "bag"
+      }
+    },
+    "plantdoc_species": {
+      "kind": "xml_detection",
+      "archive": "plantdoc_object_detection_test/PlantDoc-Object-Detection-Dataset-master.zip",
+      "prefix": "PlantDoc-Object-Detection-Dataset-master/TEST/",
+      "class_names": [
+        "Apple Scab Leaf",
+        "Apple leaf",
+        "Apple rust leaf",
+        "Bell_pepper leaf",
+        "Bell_pepper leaf spot",
+        "Blueberry leaf",
+        "Cherry leaf",
+        "Corn Gray leaf spot",
+        "Corn leaf blight",
+        "Corn rust leaf",
+        "Peach leaf",
+        "Potato leaf early blight",
+        "Potato leaf late blight",
+        "Raspberry leaf",
+        "Soyabean leaf",
+        "Squash Powdery mildew leaf",
+        "Strawberry leaf",
+        "Tomato Early blight leaf",
+        "Tomato Septoria leaf spot",
+        "Tomato leaf",
+        "Tomato leaf bacterial spot",
+        "Tomato leaf late blight",
+        "Tomato leaf mosaic virus",
+        "Tomato leaf yellow virus",
+        "Tomato mold leaf",
+        "grape leaf",
+        "grape leaf black rot"
+      ],
+      "category_collapse": {
+        "Apple Scab Leaf": "apple",
+        "Apple leaf": "apple",
+        "Apple rust leaf": "apple",
+        "Bell_pepper leaf": "capcicum",
+        "Bell_pepper leaf spot": "capcicum",
+        "Blueberry leaf": "blueberry",
+        "Cherry leaf": "cherry",
+        "Corn Gray leaf spot": "corn",
+        "Corn leaf blight": "corn",
+        "Corn rust leaf": "corn",
+        "Peach leaf": "peach",
+        "Potato leaf early blight": "potato",
+        "Potato leaf late blight": "potato",
+        "Raspberry leaf": "raspberry",
+        "Soyabean leaf": "soyabean",
+        "Squash Powdery mildew leaf": "squash",
+        "Strawberry leaf": "strawberry",
+        "Tomato Early blight leaf": "tomato",
+        "Tomato Septoria leaf spot": "tomato",
+        "Tomato leaf": "tomato",
+        "Tomato leaf bacterial spot": "tomato",
+        "Tomato leaf late blight": "tomato",
+        "Tomato leaf mosaic virus": "tomato",
+        "Tomato leaf yellow virus": "tomato",
+        "Tomato mold leaf": "tomato",
+        "grape leaf": "grape",
+        "grape leaf black rot": "grape"
+      },
+      "relation": "public_replacement",
+      "coordinate_origin": "Pascal VOC one-based minima converted to zero-based",
+      "mapping_note": "Checkpoint predicts plant species, not disease classes; PlantDoc disease variants merge within the same species. Squash has no corresponding model class."
+    },
+    "wholebody_face_person": {
+      "kind": "wholebody_face_person",
+      "annotation": "coco_wholebody_val/coco_wholebody_val_v1.0.json",
+      "image_archive": "COCO2017/val2017.zip",
+      "expected_images": 5000,
+      "split": "val2017",
+      "relation": "public_replacement",
+      "invalid_face_policy": "No positive face label when face_valid=false; enclosing person box treated as face crowd region to ignore unannotated faces."
+    },
+    "nemotron_doclaynet": {
+      "kind": "coco_single_zip",
+      "archive": "doclaynet_test/DocLayNet_core.zip",
+      "annotation_member": "COCO/test.json",
+      "split": "test",
+      "expected_images": 4999,
+      "relation": "public_replacement",
+      "category_collapse": {
+        "Table": "table",
+        "Title": "title",
+        "Section-header": "title",
+        "Page-header": "header_footer",
+        "Page-footer": "header_footer",
+        "Text": "text",
+        "List-item": "text",
+        "Caption": "text",
+        "Footnote": "text"
+      }
+    },
+    "nemotron_infodet": {
+      "kind": "coco_directory",
+      "path": "infodet_public_preview/test",
+      "annotation": "annotations_chart_infographic.json",
+      "images": "images",
+      "expected_images": 432,
+      "relation": "public_replacement",
+      "infographic_gt": "Derived full-image box from the dataset infographic image semantics; not native instance mask or page-region annotation."
+    },
+    "sku110k_prepared": {
+      "kind": "coco_directory",
+      "path": "__MODEL_ROOT__/resources/runtime/assets/workspace/results/remaining25_prepared/sku110k_test",
+      "annotation": "annotations.json",
+      "images": "images",
+      "expected_images": 2936,
+      "relation": "public_replacement",
+      "split": "official SKU110K test",
+      "annotation_policy": "Retain all 431546 positive-size boxes; COCO maxDets=100, prediction cap=300; not original dense-detector protocol."
+    },
+    "publaynet_prepared": {
+      "kind": "coco_directory",
+      "path": "__MODEL_ROOT__/resources/runtime/assets/workspace/results/remaining25_prepared/publaynet_val",
+      "annotation": "annotations.json",
+      "images": "images",
+      "expected_images": 11245,
+      "split": "validation",
+      "relation": "original_protocol_incomplete"
+    },
+    "omni_paper": {
+      "kind": "omni_layout",
+      "annotation": "omnidocbench_eval/OmniDocBench.json",
+      "image_path": "omnidocbench_eval/images",
+      "expected_images": 1651,
+      "category_mapping": {
+        "text_block": "Text",
+        "title": "Title",
+        "figure": "Figure",
+        "figure_caption": "Figure caption",
+        "table": "Table",
+        "table_caption": "Table caption",
+        "header": "Header",
+        "footer": "Footer",
+        "page_number": "Footer",
+        "reference": "Reference",
+        "equation_isolated": "Equation"
+      },
+      "relation": "public_replacement",
+      "split": "local 1651-page snapshot",
+      "limitations": "Mapped-category reference benchmark. Does not reproduce private paper/report textbook benchmarks; unsupported label classes are not scored."
+    },
+    "omni_report": {
+      "kind": "omni_layout",
+      "annotation": "omnidocbench_eval/OmniDocBench.json",
+      "image_path": "omnidocbench_eval/images",
+      "expected_images": 1651,
+      "category_mapping": {
+        "text_block": "Text",
+        "title": "Title",
+        "figure": "Figure",
+        "figure_caption": "Figure caption",
+        "table": "Table",
+        "table_caption": "Table caption",
+        "header": "Header",
+        "footer": "Footer",
+        "page_number": "Footer"
+      },
+      "relation": "public_replacement",
+      "split": "local 1651-page snapshot",
+      "limitations": "Mapped-category reference benchmark. Does not reproduce private paper/report textbook benchmarks; unsupported label classes are not scored."
+    },
+    "omni_jiaocai": {
+      "kind": "omni_layout",
+      "annotation": "omnidocbench_eval/OmniDocBench.json",
+      "image_path": "omnidocbench_eval/images",
+      "expected_images": 1651,
+      "category_mapping": {
+        "text_block": "paragraph",
+        "title": "headline",
+        "figure": "figure",
+        "figure_caption": "figure caption",
+        "table": "table",
+        "table_caption": "table caption",
+        "header": "header",
+        "footer": "footer",
+        "page_number": "page number",
+        "code_txt": "code",
+        "code_txt_caption": "code caption",
+        "equation_isolated": "formula",
+        "page_footnote": "footnote"
+      },
+      "relation": "public_replacement",
+      "split": "local 1651-page snapshot",
+      "limitations": "Mapped-category reference benchmark. Does not reproduce private paper/report textbook benchmarks; unsupported label classes are not scored."
+    },
+    "omni_general6": {
+      "kind": "omni_layout",
+      "annotation": "omnidocbench_eval/OmniDocBench.json",
+      "image_path": "omnidocbench_eval/images",
+      "expected_images": 1651,
+      "category_mapping": {
+        "text_block": "Text",
+        "title": "Title",
+        "figure": "Figure",
+        "figure_caption": "Caption",
+        "table": "Table",
+        "table_caption": "Caption",
+        "equation_isolated": "Equation"
+      },
+      "relation": "public_replacement",
+      "split": "local 1651-page snapshot",
+      "limitations": "Mapped-category reference benchmark. Does not reproduce private paper/report textbook benchmarks; unsupported label classes are not scored."
+    },
+    "pubtables_structure_1000": {
+      "kind": "coco_directory",
+      "annotation": "annotations.json",
+      "expected_images": 1000,
+      "source_manifest": "__MODEL_ROOT__/resources/runtime/assets/workspace/results/remaining25_prepared/pubtables_structure_1000/source.json",
+      "note": "Frozen public replacement. All active model output tasks scored; taxonomy/geometric annotation differences recorded.",
+      "path": "__MODEL_ROOT__/resources/runtime/assets/workspace/results/remaining25_prepared/pubtables_structure_1000",
+      "images": "images"
+    },
+    "chartinfo_text_roles": {
+      "kind": "coco_directory",
+      "annotation": "annotations.json",
+      "expected_images": 1873,
+      "source_manifest": "__MODEL_ROOT__/resources/runtime/assets/workspace/results/remaining25_prepared/chartinfo_text_roles/source.json",
+      "note": "Frozen public replacement. All active model output tasks scored; taxonomy/geometric annotation differences recorded.",
+      "path": "__MODEL_ROOT__/resources/runtime/assets/workspace/results/remaining25_prepared/chartinfo_text_roles",
+      "images": "images"
+    }
+  },
+  "models": [
+    {
+      "sequence": 12,
+      "model_id": "foduucom/table-detection-and-extraction",
+      "model_key": "m12-table-detection-and-extraction",
+      "task_type": "object-detection",
+      "model": {
+        "local_path": "__MODEL_ROOT__/weights/foduucom/table-detection-and-extraction",
+        "weight_file": "best.pt",
+        "weight_size_bytes": 22509112,
+        "weight_sha256": null,
+        "hf_revision": null,
+        "native_weight_relation": "official/model-card local checkpoint"
+      },
+      "official_sources": {
+        "model_card": "https://huggingface.co/foduucom/table-detection-and-extraction",
+        "repository": null,
+        "fixed_revision": null,
+        "paper": null
+      },
+      "dataset": {
+        "id": "tablebordernet_valid",
+        "name": "TableBorderNet",
+        "relation": "original_protocol_incomplete",
+        "version": "tablebordernet_valid: validation候选；作者未明确报告分数使用哪一划分",
+        "split": "validation",
+        "expected_images": 70,
+        "expected_categories": 2,
+        "annotation_sha256": null,
+        "annotation_hash_note": "computed from the resolved/converted annotation and written to status.json at runtime",
+        "spreadsheet_status": "是",
+        "spreadsheet_reason": "本地valid.zip完整：70图/70标签、109框；bordered 23框、borderless 86框。模型卡未写明split，但本地TensorBoard记录的是val/mAP序列，先按validation评测并与模型卡mAP50=0.962对照。"
+      },
+      "protocol": {
+        "runner": "ultralytics_detection",
+        "label_mapping": "model label names matched to dataset category names",
+        "input_size": 640,
+        "resize_crop_pad_normalize": "Ultralytics letterbox and checkpoint defaults",
+        "dtype": "float32 by default; override is recorded",
+        "batch_size": 1,
+        "score_threshold": 0.001,
+        "nms_iou": 0.7,
+        "max_detections": 300,
+        "box_format": "model-native output restored to original pixels, exported as COCO xywh",
+        "evaluator": "pycocotools COCOeval bbox; model-card comparison additionally uses AP50",
+        "metric": "bbox AP@[0.50:0.95] unless official task-specific evaluator is stated",
+        "official_reference": null,
+        "comparison_tolerance_percent": null
+      },
+      "fidelity": "reference_baseline",
+      "case_type": "special",
+      "special_tags": [
+        "split_uncertain"
+      ],
+      "known_differences": [
+        "已定位作者TableBorderNet数据的完整valid.zip；作者没有明确报告分数对应valid还是test，不自动将test与valid混用。",
+        "P1-协议可试评｜模型卡明确数据集为 foduucom/table-detection-yolo，并给出mAP@0.5：all 0.962、bordered 0.961、borderless 0.963。没有独立论文，也未明确写出split；本地TensorBoard指标名称为val/mAP，官方validation 70图最可能是这些数字的来源。先跑validation；若结果接近即可固定协议，同时可把官方test 34图另作外部验证。依据：https://huggingface.co/foduucom/table-detection-and-extraction；https://huggingface.co/datasets/foduucom/table-detection-yolo"
+      ],
+      "official_audit_note": "P1-协议可试评｜模型卡明确数据集为 foduucom/table-detection-yolo，并给出mAP@0.5：all 0.962、bordered 0.961、borderless 0.963。没有独立论文，也未明确写出split；本地TensorBoard指标名称为val/mAP，官方validation 70图最可能是这些数字的来源。先跑validation；若结果接近即可固定协议，同时可把官方test 34图另作外部验证。依据：https://huggingface.co/foduucom/table-detection-and-extraction；https://huggingface.co/datasets/foduucom/table-detection-yolo",
+      "execution_state": "ready",
+      "next_action": "运行作者validation 70图；切分未披露，指标相近也不能证明原协议身份。",
+      "green_dataset_confirmed": false,
+      "environment": null,
+      "required_tasks": [
+        "bbox_detection_classification"
+      ],
+      "tasks": [
+        {
+          "key": "bbox",
+          "dataset_id": "tablebordernet_valid",
+          "runner": "ultralytics_detection",
+          "weight_file": "best.pt",
+          "model_label_aliases": {}
+        }
+      ],
+      "historical_protocol_fingerprint": "5b28e25ede38b77fb55f43604e84fb2e01ce9743926560fc56770a488877ae5e",
+      "protocol_fingerprint_note": "Per-task actual frozen fingerprint is in result status.json; historical value is retained only for source audit."
+    }
+  ],
+  "selection": {
+    "sequences": [
+      3,
+      8,
+      9,
+      12,
+      17,
+      19,
+      22,
+      26,
+      28,
+      30,
+      31,
+      32,
+      34,
+      35,
+      37,
+      38,
+      39,
+      41,
+      42,
+      46,
+      47,
+      48,
+      54,
+      55,
+      58
+    ],
+    "count": 25
+  },
+  "environment_profiles": {
+    "hf": "Transformers/HF + Table Transformer protocol adapters",
+    "yolo": "current Ultralytics and ONNX",
+    "yolov5": "isolated YOLOv5 stack; prevents huggingface-hub conflict",
+    "yolov10": "official THU-MIG/yolov10 source",
+    "yoloe": "official THU-MIG/yoloe source and LVIS evaluator",
+    "yolov13": "official iMoonLab/yolov13 source",
+    "rfdetr": "official RF-DETR package",
+    "tensorflow": "TensorFlow/Keras SavedModel",
+    "onnx": "ONNX Runtime + Transformers preprocessing",
+    "wilddet3d": "official allenai/WildDet3D/Vis4D stack"
+  },
+  "coverage_policy": "全部模型卡任务必须有对应金标和指标；类别子集可评测但必须报告覆盖，缺失类记null；不比较官方排名。",
+  "actual_task_inventory_note": "Anzhc text has 9 classes, drone weight is segmentation. Qualcomm face release includes 468-point submodel; task coverage judged explicitly."
+}

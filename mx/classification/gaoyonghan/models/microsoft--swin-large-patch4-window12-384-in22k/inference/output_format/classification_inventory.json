@@ -1,0 +1,39 @@
+{
+  "schema": "model-eval/classification-inventory/v1",
+  "scope": "Existing 59 classification models; model 93 is retrieval and excluded.",
+  "models": [
+    {
+      "sequence": 85,
+      "model_id": "microsoft/swin-large-patch4-window12-384-in22k",
+      "runner_family": "special",
+      "adapter": "imagenet22k",
+      "state": "integrated",
+      "dataset": {
+        "id": "imagenet1k_to22k",
+        "relation": null,
+        "split": null,
+        "note": "ImageNet-1k val → ImageNet-22k\n999类×5张＝4995张；替代集，非官方可比"
+      },
+      "qualification": "selected_proxy_scope",
+      "limitations": [
+        "Complete the existing selected proxy protocol, not a full official validation dataset."
+      ],
+      "num_classes": 21841,
+      "expected_images": 4995,
+      "existing_protocol": {
+        "id": "imagenet1k_to22k_999x5_v1",
+        "scope": "ImageNet-1k验证集映射到22K输出；999类×5张",
+        "expected_inference_images": 4995,
+        "expected_scored_images": 4995,
+        "metrics_path": "metrics.json",
+        "official_reference_comparable": false,
+        "limitations": [
+          "分别记录全输出类别与受限999类Top1/Top5；不是完整ImageNet-22K评测",
+          "未映射的n04399382不参与评分"
+        ],
+        "per_class_limit": 5,
+        "alternative_protocol_note": "另有1192张/124类原生入口，未选为当前默认；不得混合两分支结果"
+      }
+    }
+  ]
+}

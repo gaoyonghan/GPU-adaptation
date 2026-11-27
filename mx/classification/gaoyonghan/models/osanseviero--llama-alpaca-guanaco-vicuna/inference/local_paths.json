@@ -1,0 +1,50 @@
+{
+  "text_templates": [
+    {
+      "source": "inference/path_templates/inference/native/README.md",
+      "destination": "inference/native/README.md"
+    },
+    {
+      "source": "inference/path_templates/inference/native/VALIDATION.md",
+      "destination": "inference/native/VALIDATION.md"
+    },
+    {
+      "source": "inference/path_templates/inference/native/common.py",
+      "destination": "inference/native/common.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/indices/192.jsonl",
+      "destination": "inference/native/indices/192.jsonl"
+    },
+    {
+      "source": "inference/path_templates/inference/native/models.json",
+      "destination": "inference/native/models.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/prepare.py",
+      "destination": "inference/native/prepare.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/release.json",
+      "destination": "inference/native/release.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/run_model.py",
+      "destination": "inference/native/run_model.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/setup_env.sh",
+      "destination": "inference/native/setup_env.sh"
+    },
+    {
+      "source": "inference/path_templates/inference/output_format/classification_inventory.json",
+      "destination": "inference/output_format/classification_inventory.json"
+    }
+  ],
+  "links": [],
+  "classification_manifests": [
+    "inference/native/models.json"
+  ],
+  "pet_indices": [],
+  "prepared_data_revision": "20261115-frozen-index-relocation"
+}

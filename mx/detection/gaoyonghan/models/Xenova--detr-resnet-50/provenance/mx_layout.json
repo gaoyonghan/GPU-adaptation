@@ -1,0 +1,8 @@
+{
+  "sequence": 53,
+  "source_project": "/mnt/data/shuaige/model_eval_portable_v4",
+  "new_full_inference_executed": false,
+  "environment": "e26",
+  "structure_source": "2026-11-16 model-local entrypoints; MX assets reused",
+  "known_pending": "Task-wide output-conversion issues are not counted as completed inference."
+}

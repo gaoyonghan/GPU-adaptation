@@ -1,0 +1,114 @@
+{
+  "sequence": 189,
+  "files": [
+    {
+      "path": "pytorch_model.bin",
+      "bytes": 343286257,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "config.json",
+      "bytes": 980,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "preprocessor_config.json",
+      "bytes": 228,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3620,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": ".gitattributes",
+      "bytes": 1175,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "images/mid-century_modern_ranch.jpg",
+      "bytes": 29306,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "images/ex_queen_anne_architecture.jpg",
+      "bytes": 174532,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "images/ex_mid-century_modern_ranch.jpg",
+      "bytes": 885113,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "images/ranch_architecture.jpg",
+      "bytes": 79578,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "images/classical_revival_architecture.jpg",
+      "bytes": 37108,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "images/ex_craftsman_bungalow_architecture.jpg",
+      "bytes": 1185589,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "images/craftsman_bungalow_architecture.jpg",
+      "bytes": 85179,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "images/tudor_cottage_architecture.jpg",
+      "bytes": 38313,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "images/ex_tudor_cottage_architecture.jpg",
+      "bytes": 684545,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "images/queen_anne_architecture.jpg",
+      "bytes": 45420,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "images/ex_classical_revival_architecture.jpg",
+      "bytes": 120799,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "runs/events.out.tfevents.1641500469.2c14e00c76d0.72.0",
+      "bytes": 1255,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "runs/events.out.tfevents.1641501908.2c14e00c76d0.72.1",
+      "bytes": 1159,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    }
+  ],
+  "mismatches": []
+}

@@ -1,0 +1,234 @@
+{
+  "sequence": 178,
+  "files": [
+    {
+      "path": "model.safetensors",
+      "bytes": 371580296,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "config.json",
+      "bytes": 757,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "preprocessor_config.json",
+      "bytes": 394,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3533,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "training_args.bin",
+      "bytes": 5304,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": ".gitattributes",
+      "bytes": 1519,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "checkpoint-1932/rng_state.pth",
+      "bytes": 14244,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "checkpoint-1932/model.safetensors",
+      "bytes": 371580296,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "checkpoint-1932/scheduler.pt",
+      "bytes": 1064,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "checkpoint-1932/config.json",
+      "bytes": 757,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "checkpoint-1932/preprocessor_config.json",
+      "bytes": 394,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "checkpoint-1932/trainer_state.json",
+      "bytes": 2479,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "checkpoint-1932/training_args.bin",
+      "bytes": 5304,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "checkpoint-1932/optimizer.pt",
+      "bytes": 686580346,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "checkpoint-966/rng_state.pth",
+      "bytes": 14244,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "checkpoint-966/model.safetensors",
+      "bytes": 371580296,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "checkpoint-966/scheduler.pt",
+      "bytes": 1064,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "checkpoint-966/config.json",
+      "bytes": 757,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "checkpoint-966/preprocessor_config.json",
+      "bytes": 394,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "checkpoint-966/trainer_state.json",
+      "bytes": 1552,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "checkpoint-966/training_args.bin",
+      "bytes": 5304,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "checkpoint-966/optimizer.pt",
+      "bytes": 686580346,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "checkpoint-1449/rng_state.pth",
+      "bytes": 14244,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "checkpoint-1449/model.safetensors",
+      "bytes": 371580296,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "checkpoint-1449/scheduler.pt",
+      "bytes": 1064,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "checkpoint-1449/config.json",
+      "bytes": 757,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "checkpoint-1449/preprocessor_config.json",
+      "bytes": 394,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "checkpoint-1449/trainer_state.json",
+      "bytes": 2017,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "checkpoint-1449/training_args.bin",
+      "bytes": 5304,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "checkpoint-1449/optimizer.pt",
+      "bytes": 686580346,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "checkpoint-483/rng_state.pth",
+      "bytes": 14244,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "checkpoint-483/model.safetensors",
+      "bytes": 371580296,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "checkpoint-483/scheduler.pt",
+      "bytes": 1064,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "checkpoint-483/config.json",
+      "bytes": 757,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "checkpoint-483/preprocessor_config.json",
+      "bytes": 394,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "checkpoint-483/trainer_state.json",
+      "bytes": 1089,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "checkpoint-483/training_args.bin",
+      "bytes": 5304,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "checkpoint-483/optimizer.pt",
+      "bytes": 686580346,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    }
+  ],
+  "mismatches": []
+}

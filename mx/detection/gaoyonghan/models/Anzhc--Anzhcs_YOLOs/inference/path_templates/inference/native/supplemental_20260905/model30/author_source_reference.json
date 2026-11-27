@@ -1,0 +1,16 @@
+{
+  "source_commit": "76c1dcd166ebae50bd1cad5ed1bbf3417e2fcc7c",
+  "source_url": "https://github.com/yainage90/fashion-visual-search/blob/76c1dcd166ebae50bd1cad5ed1bbf3417e2fcc7c/object_detection/train_model.ipynb",
+  "local_path": "__MODEL_ROOT__/resources/runtime/assets/workspace/remaining_detection_eval/review_20260905/sources30/author_7class/object_detection/train_model.ipynb",
+  "sha256": "eba1459af22a81b2e2de3d1564b8b1e7425a5bc29beceeabb940e9c21d958ea8",
+  "evaluation_cells": [
+    7,
+    8,
+    9,
+    10,
+    11,
+    13,
+    14
+  ],
+  "dataset_url": "https://huggingface.co/datasets/yainage90/fashion-object-detection/tree/959476ce2fde6bd870c6578be22183114b0da131"
+}

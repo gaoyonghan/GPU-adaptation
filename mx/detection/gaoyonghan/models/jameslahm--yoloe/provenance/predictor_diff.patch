@@ -1,0 +1,259 @@
+--- before_predictor_refinement.py
++++ inference/native/run_model.py
+@@ -702,69 +702,8 @@
+     return requested
+ 
+ 
+-def load_hf_predictor(spec: dict[str, Any], weight_dir: Path, device: str, dtype: str):
+-    import torch
+-    from transformers import AutoConfig, AutoImageProcessor, AutoModelForObjectDetection
+-
+-    try:
+-        processor = AutoImageProcessor.from_pretrained(weight_dir, local_files_only=True, use_fast=False)
+-    except TypeError:
+-        processor = AutoImageProcessor.from_pretrained(weight_dir, local_files_only=True)
+-    config = AutoConfig.from_pretrained(weight_dir, local_files_only=True)
+-    if hasattr(config, "use_pretrained_backbone"):
+-        config.use_pretrained_backbone = False
+-    model = AutoModelForObjectDetection.from_pretrained(weight_dir, config=config, local_files_only=True)
+-    torch_dtype = {"float32": torch.float32, "float16": torch.float16, "bfloat16": torch.bfloat16}[dtype]
+-    if device == "cpu" and torch_dtype == torch.float16:
+-        raise RuntimeError("CPU 不支持本协议的 float16 推理")
+-    model.to(device=torch.device(device), dtype=torch_dtype)
+-    model.eval()
+-    names = {int(key): str(value) for key, value in model.config.id2label.items()}
+-
+-    def predict(image: Image.Image) -> list[tuple[list[float], float, int]]:
+-        width, height = image.size
+-        inputs = processor(images=image, return_tensors="pt")
+-        inputs = {
+-            key: value.to(device=device, dtype=torch_dtype if value.is_floating_point() else value.dtype)
+-            for key, value in inputs.items()
+-        }
+-        with torch.inference_mode():
+-            outputs = model(**inputs)
+-        target_sizes = torch.tensor([[height, width]], device=device)
+-        result = processor.post_process_object_detection(outputs, threshold=0.0, target_sizes=target_sizes)[0]
+-        ranked = sorted(
+-            zip(result["boxes"].detach().cpu().tolist(), result["scores"].detach().cpu().tolist(), result["labels"].detach().cpu().tolist()),
+-            key=lambda item: item[1], reverse=True,
+-        )
+-        return [(box, float(score), int(label)) for box, score, label in ranked[:300]]
+-
+-    return names, predict
+-
+-
+-def load_ultralytics_predictor(spec: dict[str, Any], weight: Path, device: str, dtype: str):
+-    from ultralytics import YOLO
+-
+-    model = YOLO(str(weight))
+-    names = detector_names(model, weight.parent)
+-    ultra_device = device.split(":", 1)[1] if device.startswith("cuda:") else device
+-
+-    def predict(image: Image.Image) -> list[tuple[list[float], float, int]]:
+-        result = model.predict(
+-            source=image, imgsz=int(spec["protocol"]["input_size"]), conf=0.001, iou=0.7,
+-            max_det=300, device=ultra_device, half=dtype == "float16", verbose=False,
+-        )[0]
+-        if result.boxes is None:
+-            return []
+-        return [
+-            (box, float(score), int(label))
+-            for box, score, label in zip(
+-                result.boxes.xyxy.detach().cpu().tolist(),
+-                result.boxes.conf.detach().cpu().tolist(),
+-                result.boxes.cls.detach().cpu().tolist(),
+-            )
+-        ]
+-
+-    return names, predict
++
++
+ 
+ 
+ def detector_names(model: Any, model_dir: Path) -> dict[int, str]:
+@@ -782,142 +721,12 @@
+     return names
+ 
+ 
+-def load_yolov5_predictor(spec: dict[str, Any], weight: Path, device: str, dtype: str):
+-    if dtype == "bfloat16":
+-        raise RuntimeError("YOLOv5 隔离环境不支持本协议的 bfloat16")
+-    from yolov5 import load
+-
+-    model = load(str(weight), device=device)
+-    model.conf = float(spec["protocol"]["score_threshold"])
+-    model.iou = float(spec["protocol"].get("nms_iou") or 0.7)
+-    model.max_det = int(spec["protocol"]["max_detections"])
+-    if dtype == "float16" and device.startswith("cuda"):
+-        model.model.half()
+-    names = detector_names(model, weight.parent)
+-
+-    def predict(image: Image.Image) -> list[tuple[list[float], float, int]]:
+-        result = model(image, size=int(spec["protocol"]["input_size"]), augment=False)
+-        tensor = result.pred[0].detach().cpu().tolist()
+-        return [(row[:4], float(row[4]), int(row[5])) for row in tensor]
+-
+-    return names, predict
+-
+-
+-def load_yolov10_predictor(spec: dict[str, Any], weight: Path, device: str, dtype: str):
+-    from ultralytics import YOLOv10
+-
+-    model = YOLOv10.from_pretrained(str(weight.parent)) if weight.suffix == ".safetensors" else YOLOv10(str(weight))
+-    names = detector_names(model, weight.parent)
+-    ultra_device = device.split(":", 1)[1] if device.startswith("cuda:") else device
+-
+-    def predict(image: Image.Image) -> list[tuple[list[float], float, int]]:
+-        result = model.predict(
+-            source=image, imgsz=int(spec["protocol"]["input_size"]),
+-            conf=float(spec["protocol"]["score_threshold"]), max_det=int(spec["protocol"]["max_detections"]),
+-            device=ultra_device, half=dtype == "float16", verbose=False,
+-        )[0]
+-        if result.boxes is None:
+-            return []
+-        return [
+-            (box, float(score), int(label))
+-            for box, score, label in zip(
+-                result.boxes.xyxy.detach().cpu().tolist(), result.boxes.conf.detach().cpu().tolist(),
+-                result.boxes.cls.detach().cpu().tolist(),
+-            )
+-        ]
+-
+-    return names, predict
+-
+-
+-def load_onnx_detr_predictor(spec: dict[str, Any], model_dir: Path, weight: Path, device: str, dtype: str):
+-    if dtype != "float32":
+-        raise RuntimeError("Xenova FP32 ONNX 权重冻结为 float32；如需 FP16 必须改权重并使用新结果目录")
+-    import numpy as np
+-    import onnxruntime as ort
+-    from transformers import AutoImageProcessor
+-
+-    processor = AutoImageProcessor.from_pretrained(model_dir, local_files_only=True, use_fast=False)
+-    available = ort.get_available_providers()
+-    providers = ["CUDAExecutionProvider", "CPUExecutionProvider"] if device.startswith("cuda") and "CUDAExecutionProvider" in available else ["CPUExecutionProvider"]
+-    session = ort.InferenceSession(str(weight), providers=providers)
+-    if device.startswith("cuda") and "CUDAExecutionProvider" not in session.get_providers():
+-        raise RuntimeError("ONNX CUDA provider 初始化失败，拒绝静默退回 CPU；请检查本环境的 CUDA/cuDNN 运行库")
+-    input_names = {item.name for item in session.get_inputs()}
+-    mask_input = next((item for item in session.get_inputs() if item.name == "pixel_mask"), None)
+-    if mask_input is not None and (mask_input.shape[-2:] != [64, 64] or mask_input.type != "tensor(int64)"):
+-        raise RuntimeError(f"ONNX mask differs from Transformers.js 2.17.2: {mask_input.shape}, {mask_input.type}")
+-    config = json.loads((model_dir / "config.json").read_text(encoding="utf-8"))
+-    names = {int(key): str(value) for key, value in config["id2label"].items()}
+-
+-    def predict(image: Image.Image) -> list[tuple[list[float], float, int]]:
+-        width, height = image.size
+-        encoded = processor(images=image, return_tensors="np")
+-        feeds = {key: np.asarray(value) for key, value in encoded.items() if key in input_names}
+-        if mask_input is not None:
+-            # Publisher's Transformers.js DetrFeatureExtractor uses a 64x64 all-one mask.
+-            # This is not the image resolution; pixel_values keeps its configured size.
+-            feeds["pixel_mask"] = np.ones((1, 64, 64), dtype=np.int64)
+-        output_names = [item.name for item in session.get_outputs()]
+-        values = session.run(None, feeds)
+-        outputs = dict(zip(output_names, values))
+-        logits = next((value for key, value in outputs.items() if "logits" in key), None)
+-        boxes = next((value for key, value in outputs.items() if "box" in key and value.shape[-1] == 4), None)
+-        if logits is None:
+-            logits = next(value for value in values if value.ndim == 3 and value.shape[-1] != 4)
+-        if boxes is None:
+-            boxes = next(value for value in values if value.ndim == 3 and value.shape[-1] == 4)
+-        shifted = logits[0] - logits[0].max(axis=-1, keepdims=True)
+-        probabilities = np.exp(shifted) / np.exp(shifted).sum(axis=-1, keepdims=True)
+-        scores = probabilities[:, :-1].max(axis=-1)
+-        labels = probabilities[:, :-1].argmax(axis=-1)
+-        results = []
+-        for box, score, label in zip(boxes[0], scores, labels):
+-            cx, cy, bw, bh = [float(value) for value in box]
+-            results.append(([(cx - bw / 2) * width, (cy - bh / 2) * height, (cx + bw / 2) * width, (cy + bh / 2) * height], float(score), int(label)))
+-        return sorted(results, key=lambda item: item[1], reverse=True)[: int(spec["protocol"]["max_detections"])]
+-
+-    return names, predict
+-
+-
+-def load_tensorflow_retinanet_predictor(spec: dict[str, Any], model_dir: Path, device: str, dtype: str):
+-    if dtype != "float32":
+-        raise RuntimeError("Keras SavedModel 官方链路冻结为 float32")
+-    import numpy as np
+-    import tensorflow as tf
+-    from retinanet_official import DecodePredictions, prepare_image
+-
+-    model = tf.saved_model.load(str(model_dir))
+-    infer = model.signatures["serving_default"]
+-    if len(infer.structured_input_signature[1]) != 1:
+-        raise RuntimeError(f"Unexpected RetinaNet inputs: {infer.structured_input_signature}")
+-    input_name = next(iter(infer.structured_input_signature[1]))
+-    decoder = DecodePredictions(
+-        confidence_threshold=float(spec["protocol"]["score_threshold"]),
+-        nms_iou_threshold=float(spec["protocol"]["nms_iou"]),
+-        max_detections=int(spec["protocol"]["max_detections"]),
+-    )
+-
+-    def predict(image: Image.Image) -> list[tuple[list[float], float, int]]:
+-        tensor, ratio = prepare_image(np.asarray(image.convert("RGB"), dtype=np.float32))
+-        outputs = infer(**{input_name: tensor})
+-        if len(outputs) != 1:
+-            raise RuntimeError(f"Unexpected RetinaNet outputs: {list(outputs)}")
+-        raw = next(iter(outputs.values()))
+-        if raw.shape.rank != 3 or raw.shape[-1] != 84:
+-            raise RuntimeError(f"Expected RetinaNet box deltas + 80 logits, got {raw.shape}")
+-        detections = decoder(tensor, raw)
+-        count = int(detections.valid_detections[0])
+-        # Official convert_to_corners returns XYXY (despite TensorFlow NMS naming).
+-        boxes = (detections.nmsed_boxes[0][:count] / ratio).numpy().tolist()
+-        return [
+-            (box, float(score), int(label))
+-            for box, score, label in zip(
+-                boxes, detections.nmsed_scores[0][:count].numpy(),
+-                detections.nmsed_classes[0][:count].numpy(),
+-            )
+-        ]
+-
+-    return dict(enumerate(COCO80_NAMES)), predict
++
++
++
++
++
++
+ 
+ 
+ def coco_metrics(annotation: dict[str, Any], detections: list[dict[str, Any]]) -> dict[str, float]:
+@@ -966,35 +775,6 @@
+ 
+ 
+ 
+-def load_table_structure_predictor(model_dir: Path, device: str, dtype: str):
+-    import torch
+-    from transformers import AutoConfig, AutoModelForObjectDetection
+-    from table_datasets import get_structure_transform
+-
+-    transform = get_structure_transform("val")
+-    config = AutoConfig.from_pretrained(model_dir, local_files_only=True)
+-    if hasattr(config, "use_pretrained_backbone"):
+-        config.use_pretrained_backbone = False
+-    model = AutoModelForObjectDetection.from_pretrained(model_dir, config=config, local_files_only=True)
+-    torch_dtype = {"float32": torch.float32, "float16": torch.float16, "bfloat16": torch.bfloat16}[dtype]
+-    model.to(device=torch.device(device), dtype=torch_dtype).eval()
+-
+-    def predict(image: Image.Image) -> list[tuple[list[float], float, int]]:
+-        width, height = image.size
+-        tensor, _ = transform(image, {"boxes": torch.empty((0, 4))})
+-        encoded = {"pixel_values": tensor.unsqueeze(0).to(device=device, dtype=torch_dtype)}
+-        with torch.inference_mode():
+-            outputs = model(**encoded)
+-        probabilities = outputs.logits[0].softmax(-1)
+-        scores, labels = probabilities.max(-1)
+-        boxes = outputs.pred_boxes[0].detach().cpu().tolist()
+-        results = []
+-        for box, score, label in zip(boxes, scores.detach().cpu().tolist(), labels.detach().cpu().tolist()):
+-            cx, cy, bw, bh = [float(value) for value in box]
+-            results.append(([(cx - bw / 2) * width, (cy - bh / 2) * height, (cx + bw / 2) * width, (cy + bh / 2) * height], float(score), int(label)))
+-        return results
+-
+-    return predict
+ 
+ 
+ def load_table_official_eval(source_root: Path):

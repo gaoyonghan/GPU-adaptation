@@ -1,0 +1,26 @@
+{
+  "python": "3.11.16",
+  "requirements": "environments/e14-wilddet3d-v2/requirements.txt",
+  "expected": "environments/e14-wilddet3d-v2/expected.json",
+  "local_packages": [
+    {
+      "name": "utils3d",
+      "version": "1.7",
+      "path": "assets/wheels/utils3d-1.7-py3-none-any.whl",
+      "editable": false,
+      "sha256": "b8a25f94e30958085f5470a9c061fb11a282e3d70fab5effc8db0774c49e3bc6",
+      "provenance": "Repacked installed wheel payload; native binary unchanged; original source also bundled"
+    },
+    {
+      "name": "vis4d_cuda_ops",
+      "version": "0.0.0",
+      "path": "assets/wheels/vis4d_cuda_ops-0.0.0-cp311-cp311-linux_x86_64.whl",
+      "editable": false,
+      "sha256": "5bd3ced7c52dde15d552ac7863ac315134cbf9d66ab596a10ccf30ca3e188a76",
+      "provenance": "Repacked installed wheel payload; native binary unchanged; original source also bundled"
+    }
+  ],
+  "original_python": "/home/ubuntu/gaoyonghan/miniconda3/envs/object-detection-wilddet3d-v2/bin/python",
+  "torch": "2.5.1+cu121",
+  "python_version_scope": "Pinned to original interpreter version"
+}

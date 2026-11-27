@@ -1,0 +1,124 @@
+{
+  "text_templates": [
+    {
+      "source": "inference/path_templates/inference/native/README.md",
+      "destination": "inference/native/README.md"
+    },
+    {
+      "source": "inference/path_templates/inference/native/audit_completed.py",
+      "destination": "inference/native/audit_completed.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/check_table_repair.py",
+      "destination": "inference/native/check_table_repair.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/m27_native_config.py",
+      "destination": "inference/native/m27_native_config.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/models.json",
+      "destination": "inference/native/models.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/native_18_20_21.json",
+      "destination": "inference/native/native_18_20_21.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/native_options.json",
+      "destination": "inference/native/native_options.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/prepare_wilddet_weights.py",
+      "destination": "inference/native/prepare_wilddet_weights.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/repair_protocol.json",
+      "destination": "inference/native/repair_protocol.json"
+    },
+    {
+      "source": "inference/path_templates/inference/native/run_m07_native.py",
+      "destination": "inference/native/run_m07_native.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/run_m15_native_tight.py",
+      "destination": "inference/native/run_m15_native_tight.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/run_m15_native_tight.sh",
+      "destination": "inference/native/run_m15_native_tight.sh"
+    },
+    {
+      "source": "inference/path_templates/inference/native/run_m24_native.py",
+      "destination": "inference/native/run_m24_native.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/run_m24_native.sh",
+      "destination": "inference/native/run_m24_native.sh"
+    },
+    {
+      "source": "inference/path_templates/inference/native/run_m27_native.py",
+      "destination": "inference/native/run_m27_native.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/run_m27_native.sh",
+      "destination": "inference/native/run_m27_native.sh"
+    },
+    {
+      "source": "inference/path_templates/inference/native/run_m29_native.py",
+      "destination": "inference/native/run_m29_native.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/run_m29_native.sh",
+      "destination": "inference/native/run_m29_native.sh"
+    },
+    {
+      "source": "inference/path_templates/inference/native/run_m33x_native.py",
+      "destination": "inference/native/run_m33x_native.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/run_m33x_native.sh",
+      "destination": "inference/native/run_m33x_native.sh"
+    },
+    {
+      "source": "inference/path_templates/inference/native/run_m60_native.py",
+      "destination": "inference/native/run_m60_native.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/run_m60_native.sh",
+      "destination": "inference/native/run_m60_native.sh"
+    },
+    {
+      "source": "inference/path_templates/inference/native/run_model.py",
+      "destination": "inference/native/run_model.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/run_native_18_20_21.py",
+      "destination": "inference/native/run_native_18_20_21.py"
+    },
+    {
+      "source": "inference/path_templates/inference/native/run_native_18_20_21.sh",
+      "destination": "inference/native/run_native_18_20_21.sh"
+    },
+    {
+      "source": "inference/path_templates/inference/native/run_repairs.sh",
+      "destination": "inference/native/run_repairs.sh"
+    },
+    {
+      "source": "inference/path_templates/inference/native/setup_env.sh",
+      "destination": "inference/native/setup_env.sh"
+    },
+    {
+      "source": "inference/path_templates/inference/output_format/detection_inventory.json",
+      "destination": "inference/output_format/detection_inventory.json"
+    },
+    {
+      "source": "inference/path_templates/inference/output_format/prepare_detection.py",
+      "destination": "inference/output_format/prepare_detection.py"
+    }
+  ],
+  "links": [],
+  "classification_manifests": [],
+  "pet_indices": [],
+  "prepared_data_revision": "20261115-mx-reuse"
+}

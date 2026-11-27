@@ -1,0 +1,78 @@
+{
+  "model_number": 75,
+  "model_id": "wasmdashai/vit-face-expression-v1",
+  "model_path": "__MODEL_ROOT__/weights/wasmdashai/vit-face-expression-v1",
+  "model_files_sha256": {
+    "model.safetensors": "48acf03b1fd90ea45c5e91eb3be2f364cee1c1342639962bd4eae1eac2ad2f93",
+    "config.json": "34c2322175be852ae053e2f2e4682a397ff3d912061ca9bb4b6fbaf51cdb9fc5",
+    "preprocessor_config.json": "ff4f6287fdbe3e1e291b826aa8b7d8e7d7789a1b8a3cc62c817391b5d9e6aa4a",
+    "README.md": "0336368f8274a5ed09f54cee8d56a851ecee96026d9f391a6735762c16608a60"
+  },
+  "dataset": "FER2013 original labels",
+  "csv_path": "__DATASET_ROOT__/fer2013/deadskull7/fer2013.csv",
+  "csv_sha256": "3b8d9617d1017f34733c8f2474d7784c563ce86c40a86ac12c2d37cc968f871b",
+  "dataset_origin": "https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge/data",
+  "dataset_source": "https://www.kaggle.com/datasets/deadskull7/fer2013",
+  "download_provenance": "Known third-party copy identified by local SHA256; original competition file byte equivalence unverified",
+  "protocol_source": "https://arxiv.org/html/1307.0414",
+  "dataset_relation_to_model": "public_replacement_author_test_unverified",
+  "split": "PrivateTest",
+  "original_split_counts": {
+    "Training": 28709,
+    "PublicTest": 3589,
+    "PrivateTest": 3589
+  },
+  "full_test_class_counts": {
+    "angry": 491,
+    "disgust": 55,
+    "fear": 528,
+    "happy": 879,
+    "sad": 594,
+    "surprise": 416,
+    "neutral": 626
+  },
+  "selected_images": 3589,
+  "fer_id_to_name": [
+    "angry",
+    "disgust",
+    "fear",
+    "happy",
+    "sad",
+    "surprise",
+    "neutral"
+  ],
+  "model_id_to_name": [
+    "angry",
+    "disgust",
+    "fear",
+    "happy",
+    "neutral",
+    "sad",
+    "surprise"
+  ],
+  "inference": "local AutoImageProcessor + AutoModelForImageClassification, RGB, FP32, batch16, argmax; no TTA/crop",
+  "metric": "Top-1 accuracy = correct / total; sklearn.metrics.accuracy_score",
+  "code_boundary": "Our CSV/batch/provenance wrapper; published Transformers inference; library scorer implementing dataset accuracy, not Kaggle server source",
+  "official_model_reference": null,
+  "upstream_hint_only": {
+    "id": "trpakov/vit-face-expression",
+    "test_accuracy": 0.7116,
+    "weight_equivalence_verified": false,
+    "directly_comparable": false
+  },
+  "training_test_overlap": "unknown for this checkpoint; no training images evaluated",
+  "versions": {
+    "torch": "2.5.1+cu121",
+    "transformers": "4.50.0",
+    "numpy": "1.26.4",
+    "Pillow": "11.1.0",
+    "scikit-learn": "1.5.2",
+    "safetensors": "0.5.3"
+  },
+  "device": "cuda:0",
+  "source_sha256": {
+    "run_m75_fer2013.py": "b9e184191792ecbccb77d930718fe340d33bc0ec840ac3061e950c37b5f5871f",
+    "run_m75_fer2013.sh": "44fb46b01c8718318143c7981d78eb726eecbda6ad45a595fb581c824d7cd42b",
+    "README_m75.md": "a14c03ac24927ee1431a49ddbb46bee5c82c73ff243777fa9cee462d89309d5f"
+  }
+}

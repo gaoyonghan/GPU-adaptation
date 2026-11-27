@@ -1,0 +1,8 @@
+{
+  "default_images": 560,
+  "raw_images": 560,
+  "default_detections": 11771,
+  "raw_detections": 12179,
+  "images_with_any_difference_after_reapplying_score_gt_0_1": [],
+  "comparison": "Sort by native category,bbox,score; exact float equality after restoring original score>0.1 filter."
+}

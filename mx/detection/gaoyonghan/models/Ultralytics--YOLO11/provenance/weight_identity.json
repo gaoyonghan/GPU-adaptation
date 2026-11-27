@@ -1,0 +1,108 @@
+{
+  "sequence": 7,
+  "files": [
+    {
+      "path": "yolo11x-seg.pt",
+      "bytes": 125090821,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "yolo11s-seg.pt",
+      "bytes": 20669228,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "yolo11x.pt",
+      "bytes": 114636239,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "yolo11n.pt",
+      "bytes": 5613764,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "README.md",
+      "bytes": 25915,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "yolo11n-seg.pt",
+      "bytes": 6182636,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "yolo11s.pt",
+      "bytes": 19313732,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": ".gitattributes",
+      "bytes": 1519,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "yolo11l.pt",
+      "bytes": 51387343,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "yolo11n-pose.pt",
+      "bytes": 6255593,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "yolo11l-seg.pt",
+      "bytes": 56096965,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "yolo11m-pose.pt",
+      "bytes": 42459307,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "yolo11m-seg.pt",
+      "bytes": 45400152,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "yolo11x-pose.pt",
+      "bytes": 118481010,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "yolo11l-pose.pt",
+      "bytes": 53164402,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "yolo11m.pt",
+      "bytes": 40684120,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    },
+    {
+      "path": "yolo11s-pose.pt",
+      "bytes": 20373161,
+      "matches_source": true,
+      "comparison": "identical local inode"
+    }
+  ],
+  "mismatches": []
+}

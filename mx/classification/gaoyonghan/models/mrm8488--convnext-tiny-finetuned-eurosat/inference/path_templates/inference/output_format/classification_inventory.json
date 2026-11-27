@@ -1,0 +1,35 @@
+{
+  "schema": "model-eval/classification-inventory/v1",
+  "scope": "Existing 59 classification models; model 93 is retrieval and excluded.",
+  "models": [
+    {
+      "sequence": 194,
+      "model_id": "mrm8488/convnext-tiny-finetuned-eurosat",
+      "runner_family": "classification171",
+      "adapter": "native_labels",
+      "state": "integrated",
+      "dataset": {
+        "id": "classification171_194",
+        "relation": "original_protocol_incomplete",
+        "split": "EuroSAT demo entire train, 27000; author held-out split unknown",
+        "note": [
+          "Local checkpoint and publisher inference components retained. Offline file paths, eval mode, batching, timing observation and reference scoring are external orchestration."
+        ],
+        "index_source": "__MODEL_ROOT__/inference/native/indices/194.jsonl",
+        "data_containers": [
+          "__DATASET_ROOT__/datasets_171_200/eurosat/raw/data/train-00000-of-00001.parquet"
+        ]
+      },
+      "qualification": "original_protocol_incomplete",
+      "limitations": [],
+      "num_classes": 10,
+      "expected_images": 27000,
+      "category_reference": {
+        "file": "__MODEL_ROOT__/inference/native/models.json",
+        "sequence": 194,
+        "field": "label_mapping"
+      },
+      "gt_index": "__MODEL_ROOT__/inference/native/indices/194.jsonl"
+    }
+  ]
+}
