@@ -1,0 +1,10 @@
+{
+  "source": "caichengrui/models/angusleung100--bad-anatomy-realism-classifier/weights",
+  "delivery_path": "weights/angusleung100/bad-anatomy-realism-classifier",
+  "method": "directory relocation",
+  "files": [
+    "README.md",
+    "config.json",
+    "model.safetensors"
+  ]
+}

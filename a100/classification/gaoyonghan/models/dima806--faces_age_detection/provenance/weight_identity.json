@@ -1,0 +1,11 @@
+{
+  "source": "caichengrui/models/dima806--faces_age_detection/weights",
+  "delivery_path": "weights/dima806/faces_age_detection",
+  "method": "directory relocation",
+  "files": [
+    "README.md",
+    "config.json",
+    "model.safetensors",
+    "preprocessor_config.json"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "source": "caichengrui/models/SriramSridhar78--sriram-car-classifier/weights",
+  "delivery_path": "weights/SriramSridhar78/sriram-car-classifier",
+  "method": "directory relocation",
+  "files": [
+    "README.md",
+    "config.json",
+    "model.safetensors",
+    "preprocessor_config.json"
+  ]
+}

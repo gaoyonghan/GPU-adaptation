@@ -1,0 +1,10 @@
+{
+  "source": "caichengrui/models/skyau--dog-breed-classifier-vit/weights",
+  "delivery_path": "weights/skyau/dog-breed-classifier-vit",
+  "method": "directory relocation",
+  "files": [
+    "config.json",
+    "preprocessor_config.json",
+    "pytorch_model.bin"
+  ]
+}

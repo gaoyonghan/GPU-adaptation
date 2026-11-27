@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "sources": {},
+  "models": [
+    {
+      "sequence": 153,
+      "model_id": "SriramSridhar78/sriram-car-classifier",
+      "runner_family": "native_script",
+      "adapter": "native_labels",
+      "state": "recording_enabled",
+      "dataset": {
+        "id": "Stanford Cars",
+        "split": "test",
+        "note": "Stanford Cars test\n8,041 张"
+      },
+      "qualification": "native_registered_scope",
+      "limitations": [
+        "Capture-ready is a code integration state, not a claim that inference has passed.",
+        "Unobserved native Top-5 is unavailable; aggregate scores are not predictions."
+      ],
+      "num_classes": 196,
+      "expected_images": 8041,
+      "native_script": {
+        "script": "inference/run_model.py",
+        "script_sha256": "4013f3e408906d95f90b6a38581cc834715ba316852365b11d7f85f3b2624d95",
+        "loop_lineno": 241,
+        "labels": "batch_labels",
+        "prediction": "batch_predictions",
+        "ranking": "batch_top5",
+        "classes": "logits.shape[-1]",
+        "loader_kind": "torch",
+        "label_position": 1,
+        "framework": "torch",
+        "original_script_sha256": "3e3524a94b66c3679cb6fbf4755b50e84bbc7bb82429fd91d2695eefc52716ca",
+        "original_loop_lineno": 231,
+        "source_original_path": "code/sriram-car-classifier-stanford-cars-test.py"
+      },
+      "output_relative_path": "result/run_001/full/m153",
+      "supports_max_samples": false,
+      "runtime_defaults": {
+        "batch_size": 64,
+        "workers": 0,
+        "warmup": 3
+      },
+      "capabilities": {
+        "gpu_only": false,
+        "worker_processes": true,
+        "limited_samples": false,
+        "device": [
+          "auto",
+          "cuda",
+          "cuda:N",
+          "cpu"
+        ]
+      },
+      "required_inputs": {
+        "weights": [
+          "config.json",
+          "preprocessor_config.json",
+          "README.md",
+          "model.safetensors"
+        ],
+        "dataset_paths": [
+          "StanfordCars"
+        ]
+      }
+    }
+  ]
+}

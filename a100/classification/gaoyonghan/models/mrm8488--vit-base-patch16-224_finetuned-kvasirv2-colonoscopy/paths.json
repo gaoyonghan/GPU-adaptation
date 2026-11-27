@@ -1,0 +1,4 @@
+{
+  "dataset_root": "../../../../dataset",
+  "weights_root": "weights/mrm8488/vit-base-patch16-224_finetuned-kvasirv2-colonoscopy"
+}

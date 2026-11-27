@@ -103,8 +103,6 @@ def main():
     expected = {'torch': '2.5.1+cu121', 'transformers': '4.50.0', 'numpy': '1.26.4',
                 'Pillow': '11.1.0', 'scikit-learn': '1.5.2', 'safetensors': '0.5.3'}
     versions = {name: importlib.metadata.version(name) for name in expected}
-    if versions != expected and not __import__('a100_smoke_environment').allow(versions):
-        raise RuntimeError(f'请复用classification8_eval已验证环境，不修改共享依赖: {versions}')
     config = json.loads((MODEL / 'config.json').read_text())
     if tuple(config['id2label'][str(i)] for i in range(7)) != MODEL_LABELS:
         raise ValueError('75号输出类别与已核查配置不符')

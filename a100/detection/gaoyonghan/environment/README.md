@@ -2,13 +2,19 @@
 
 环境路径为 `/opt/model-envs/<环境名称>`。激活对应环境后，运行模型的 `inference.py`，再运行任务的 `evaluate.py`。
 
+版本文件记录 A100 上已安装的依赖，包含基础镜像和本地编译的包。镜像内使用 `source /opt/model-envs/<环境名称>/bin/activate` 激活环境。
+
 ## e24
+
+Python 3.12.3 · [依赖版本](e24.txt)
 
 - [`jameslahm--yolov10n`](../models/jameslahm--yolov10n/)
 - [`jameslahm--yolov10x`](../models/jameslahm--yolov10x/)
 - [`kadirnar--Yolov10`](../models/kadirnar--Yolov10/)
 
 ## e26
+
+Python 3.12.3 · [依赖版本](e26.txt)
 
 - [`AdamCodd--YOLOv11n-face-detection`](../models/AdamCodd--YOLOv11n-face-detection/)
 - [`Anzhc--Anzhcs_YOLOs`](../models/Anzhc--Anzhcs_YOLOs/)
@@ -48,8 +54,6 @@
 - [`PekingU--rtdetr_r50vd`](../models/PekingU--rtdetr_r50vd/)
 - [`PekingU--rtdetr_v2_r50vd`](../models/PekingU--rtdetr_v2_r50vd/)
 - [`qihoo360--360LayoutAnalysis`](../models/qihoo360--360LayoutAnalysis/)
-- [`qualcomm--MediaPipe-Face-Detection`](../models/qualcomm--MediaPipe-Face-Detection/)
-- [`qualcomm--MediaPipe-Hand-Detection`](../models/qualcomm--MediaPipe-Hand-Detection/)
 - [`SenseTime--deformable-detr`](../models/SenseTime--deformable-detr/)
 - [`TahaDouaji--detr-doc-table-detection`](../models/TahaDouaji--detr-doc-table-detection/)
 - [`tech4humans--yolov8s-signature-detector`](../models/tech4humans--yolov8s-signature-detector/)
@@ -65,6 +69,8 @@
 
 ## e27
 
+Python 3.12.3 · [依赖版本](e27.txt)
+
 - [`foduucom--plant-leaf-detection-and-classification`](../models/foduucom--plant-leaf-detection-and-classification/)
 - [`foduucom--product-detection-in-shelf-yolov8`](../models/foduucom--product-detection-in-shelf-yolov8/)
 - [`foduucom--thermal-image-object-detection`](../models/foduucom--thermal-image-object-detection/)
@@ -72,13 +78,19 @@
 
 ## e28
 
+Python 3.12.3 · [依赖版本](e28.txt)
+
 - [`atalaydenknalbant--Yolov13`](../models/atalaydenknalbant--Yolov13/)
 
 ## e29
+
+Python 3.12.3 · [依赖版本](e29.txt)
 
 - [`allenai--WildDet3D`](../models/allenai--WildDet3D/)
 - [`jameslahm--yoloe`](../models/jameslahm--yoloe/)
 
 ## e30
+
+Python 3.10.21 · [依赖版本](e30.yml)
 
 - [`google--owlvit-large-patch14`](../models/google--owlvit-large-patch14/)

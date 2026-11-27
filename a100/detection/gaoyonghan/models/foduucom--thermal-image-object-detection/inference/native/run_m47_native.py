@@ -18,7 +18,7 @@ import numpy as np
 HERE = Path(__file__).resolve().parent
 DATA = Path('/mnt/aoss/model inference for GPU adaptation/dataset/flir_adas_thermal_eval/images_thermal_val')
 WEIGHT = Path('/mnt/aoss/model inference for GPU adaptation/detection/gaoyonghan/models/foduucom--thermal-image-object-detection/weights/foduucom/thermal-image-object-detection/best.pt')
-OUT = Path('/mnt/aoss/model inference for GPU adaptation/detection/gaoyonghan/models/foduucom--thermal-image-object-detection/result/a100_clean_environment_20261117/m047')
+OUT = Path('/mnt/aoss/model inference for GPU adaptation/detection/gaoyonghan/models/foduucom--thermal-image-object-detection/result/full_20261121_092030_2cb937/m047')
 NAMES = dict(enumerate(['empty','person','bicycle','car','motorcycle','airplane','bus','train',
                         'truck','boat','traffic light','fire hydrant','stop sign','parking meter']))
 SOURCE_NAMES = {1:'person', 2:'bike', 3:'car', 4:'motor', 6:'bus', 8:'truck', 10:'light', 11:'hydrant'}

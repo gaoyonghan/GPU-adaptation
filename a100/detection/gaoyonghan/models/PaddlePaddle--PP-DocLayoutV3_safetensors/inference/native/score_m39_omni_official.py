@@ -15,8 +15,8 @@ import yaml
 import score_m38_omni_official as shared
 
 HERE = Path(__file__).resolve().parent
-PRED = Path('/mnt/aoss/model inference for GPU adaptation/detection/gaoyonghan/models/PaddlePaddle--PP-DocLayoutV3_safetensors/result/a100_two_step_smoke_v3_20261117/m039/native')
-OUT = Path('/mnt/aoss/model inference for GPU adaptation/detection/gaoyonghan/models/PaddlePaddle--PP-DocLayoutV3_safetensors/result/a100_two_step_smoke_v3_20261117/m039/official')
+PRED = Path('/mnt/aoss/model inference for GPU adaptation/detection/gaoyonghan/models/PaddlePaddle--PP-DocLayoutV3_safetensors/result/full_20261121_092030_2cb937/m039/native')
+OUT = Path('/mnt/aoss/model inference for GPU adaptation/detection/gaoyonghan/models/PaddlePaddle--PP-DocLayoutV3_safetensors/result/full_20261121_092030_2cb937/m039/official')
 BASELINE = Path('/mnt/aoss/model inference for GPU adaptation/detection/gaoyonghan/models/PaddlePaddle--PP-DocLayoutV3_safetensors/resources/runtime/assets/workspace/results/m38_omni_official_v1/full/run_20260914_232048_399395')
 
 

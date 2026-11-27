@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "sources": {},
+  "models": [
+    {
+      "sequence": 124,
+      "model_id": "prithivMLmods/AI-vs-Deepfake-vs-Real",
+      "runner_family": "native_script",
+      "adapter": "native_labels",
+      "state": "recording_enabled",
+      "dataset": {
+        "id": "AI-vs-Deepfake-vs-Real",
+        "split": "full_local_dataset",
+        "note": "AI-vs-Deepfake-vs-Real\n本地全部 9,999 张\n无独立 test"
+      },
+      "qualification": "native_registered_scope",
+      "limitations": [
+        "Capture-ready is a code integration state, not a claim that inference has passed.",
+        "Unobserved native Top-5 is unavailable; aggregate scores are not predictions."
+      ],
+      "num_classes": 3,
+      "expected_images": 9999,
+      "native_script": {
+        "script": "inference/native/run_model.py",
+        "script_sha256": "54b76ca77733833fcf793720050735270a4e016eb29dc94d854eb297cf708e05",
+        "loop_lineno": 270,
+        "labels": "batch_labels",
+        "prediction": "batch_predictions",
+        "ranking": "batch_top3",
+        "classes": "logits.shape[-1]",
+        "loader_kind": "torch",
+        "label_position": 1,
+        "framework": "torch",
+        "original_script_sha256": "ad9b0f4fce8f7ce4e09f91d1586aed9f30bd98d6c5f66d4d4c00cc8097b78314",
+        "original_loop_lineno": 261,
+        "source_original_path": "code/ai-vs-deepfake-vs-real-ai-vs-deepfake-vs-real-test.py"
+      },
+      "output_relative_path": "result/run_001/full/m124",
+      "supports_max_samples": false,
+      "runtime_defaults": {
+        "batch_size": 128,
+        "workers": 0,
+        "warmup": 3
+      },
+      "capabilities": {
+        "gpu_only": false,
+        "worker_processes": true,
+        "limited_samples": false,
+        "device": [
+          "auto",
+          "cuda",
+          "cuda:N",
+          "cpu"
+        ]
+      },
+      "required_inputs": {
+        "weights": [
+          "config.json",
+          "preprocessor_config.json",
+          "README.md",
+          "model.safetensors"
+        ],
+        "dataset_paths": [
+          "AI-vs-Deepfake-vs-Real"
+        ]
+      }
+    }
+  ]
+}

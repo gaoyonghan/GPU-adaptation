@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "sources": {},
+  "models": [
+    {
+      "sequence": 145,
+      "model_id": "ozair23/mobilenet_v2_1.0_224-finetuned-plantdisease",
+      "runner_family": "native_script",
+      "adapter": "native_labels",
+      "state": "recording_enabled",
+      "dataset": {
+        "id": "PlantVillage",
+        "split": "color/test",
+        "note": "PlantVillage color/test\n预定义叶片分组划分\n10,709 张"
+      },
+      "qualification": "native_registered_scope",
+      "limitations": [
+        "Capture-ready is a code integration state, not a claim that inference has passed.",
+        "Unobserved native Top-5 is unavailable; aggregate scores are not predictions."
+      ],
+      "num_classes": 38,
+      "expected_images": 10709,
+      "native_script": {
+        "script": "inference/native/run_model.py",
+        "script_sha256": "4c2fd5330d0b5cea87197936bc9760e5a48a55510b61286fcf6baae17840426f",
+        "loop_lineno": 220,
+        "labels": "labels",
+        "prediction": "top5[:, 0]",
+        "ranking": "top5",
+        "classes": "logits.shape[-1]",
+        "loader_kind": "torch",
+        "label_position": 1,
+        "framework": "torch",
+        "original_script_sha256": "2f9504e98bcc465ef11c11f332aa2b3f63cd83b3d0de5e5b38ada0fc16b610f6",
+        "original_loop_lineno": 212,
+        "source_original_path": "code/mobilenet_v2_1.0_224-finetuned-plantdisease-plantvillage-test.py"
+      },
+      "output_relative_path": "result/run_001/full/m145",
+      "supports_max_samples": false,
+      "runtime_defaults": {
+        "batch_size": 128,
+        "workers": 0,
+        "warmup": 3
+      },
+      "capabilities": {
+        "gpu_only": false,
+        "worker_processes": true,
+        "limited_samples": false,
+        "device": [
+          "auto",
+          "cuda",
+          "cuda:N",
+          "cpu"
+        ]
+      },
+      "required_inputs": {
+        "weights": [
+          "config.json",
+          "preprocessor_config.json",
+          "README.md",
+          "model.safetensors"
+        ],
+        "dataset_paths": [
+          "PlantVillage"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "runtime_resources": {
+    "timing": "resources/runtime/project/timing_runtime"
+  },
+  "text_templates": []
+}

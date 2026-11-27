@@ -1,0 +1,29 @@
+{
+  "sequence": 140,
+  "source_contributor": "caichengrui",
+  "state": "a100_gpu_forward_verified",
+  "native_entries": [
+    "run_model.py"
+  ],
+  "native_sha256": "c3025f869a1c08ba796259bc2cb24bc468f55cae1db3c2512a7cbba7f14d03d6",
+  "resource_paths": [
+    "project/timing_runtime"
+  ],
+  "path_templates": 1,
+  "environment": "/opt/model-envs/e07",
+  "new_project_full_inference_executed": false,
+  "a100_validation": {
+    "model": "m140",
+    "directory": "MBZUAI--swiftformer-xs",
+    "preflight": "passed",
+    "weights": 4,
+    "native_sha256": "c3025f869a1c08ba796259bc2cb24bc468f55cae1db3c2512a7cbba7f14d03d6",
+    "used_local_dataset_cache": false,
+    "gpu_forward": "passed",
+    "gpu": "NVIDIA A100-SXM4-40GB",
+    "predictions": 1,
+    "seconds": 11.6,
+    "log": "result/ccr_alignment_20261120/m140-gpu.log",
+    "data_source": "default shared dataset"
+  }
+}

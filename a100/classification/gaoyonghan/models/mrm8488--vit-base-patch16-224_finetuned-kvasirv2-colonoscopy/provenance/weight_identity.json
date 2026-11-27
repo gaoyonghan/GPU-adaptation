@@ -1,0 +1,11 @@
+{
+  "source": "caichengrui/models/mrm8488--vit-base-patch16-224_finetuned-kvasirv2-colonoscopy/weights",
+  "delivery_path": "weights/mrm8488/vit-base-patch16-224_finetuned-kvasirv2-colonoscopy",
+  "method": "directory relocation",
+  "files": [
+    "README.md",
+    "config.json",
+    "model.safetensors",
+    "preprocessor_config.json"
+  ]
+}

@@ -16,7 +16,7 @@ HERE = Path(__file__).resolve().parent
 OLD = Path('/mnt/aoss/model inference for GPU adaptation/detection/gaoyonghan/models/foduucom--plant-leaf-detection-and-classification/resources/runtime/assets/workspace/results/remaining25_v4/m34-plant-leaf-detection-and-classification/plantdoc_species')
 DATA = Path('/mnt/aoss/model inference for GPU adaptation/dataset')
 MODEL = Path('/mnt/aoss/model inference for GPU adaptation/detection/gaoyonghan/models/foduucom--plant-leaf-detection-and-classification/weights/foduucom/plant-leaf-detection-and-classification')
-OUT = Path('/mnt/aoss/model inference for GPU adaptation/detection/gaoyonghan/models/foduucom--plant-leaf-detection-and-classification/result/a100_clean_environment_20261117/m034')
+OUT = Path('/mnt/aoss/model inference for GPU adaptation/detection/gaoyonghan/models/foduucom--plant-leaf-detection-and-classification/result/full_20261121_092030_2cb937/m034')
 
 
 def sha(path):

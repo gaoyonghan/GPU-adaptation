@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "sources": {},
+  "models": [
+    {
+      "sequence": 149,
+      "model_id": "syntheticbot/clip-face-attribute-classifier",
+      "runner_family": "native_script",
+      "adapter": "native_labels",
+      "state": "recording_enabled",
+      "dataset": {
+        "id": "FairFace",
+        "split": "validation",
+        "note": "FairFace validation\n10,954 张\n标签顺序按模型对齐"
+      },
+      "qualification": "native_registered_scope",
+      "limitations": [
+        "Capture-ready is a code integration state, not a claim that inference has passed.",
+        "Unobserved native Top-5 is unavailable; aggregate scores are not predictions."
+      ],
+      "num_classes": 9,
+      "expected_images": 10954,
+      "native_script": {
+        "script": "inference/native/run_model.py",
+        "script_sha256": "ab403ee0738e856a2cb50501fe574549f5d7d5d12838b46a9f18c257ef7857c7",
+        "loop_lineno": 280,
+        "labels": "labels",
+        "prediction": "predictions",
+        "ranking": null,
+        "classes": "logits.shape[-1]",
+        "loader_kind": "torch",
+        "label_position": 1,
+        "branches": [
+          "age",
+          "gender",
+          "race"
+        ],
+        "framework": "torch",
+        "original_script_sha256": "9521b28b77cef50f44a5c90b07b7a0d2f682724e849fba27a68639957eb723b5",
+        "original_loop_lineno": 270,
+        "source_original_path": "code/clip-face-attribute-classifier-fairface-test.py"
+      },
+      "output_relative_path": "result/run_001/full/m149",
+      "supports_max_samples": false,
+      "runtime_defaults": {
+        "batch_size": 64,
+        "workers": 0,
+        "warmup": 3
+      },
+      "capabilities": {
+        "gpu_only": false,
+        "worker_processes": true,
+        "limited_samples": false,
+        "device": [
+          "auto",
+          "cuda",
+          "cuda:N",
+          "cpu"
+        ]
+      },
+      "required_inputs": {
+        "weights": [
+          "config.json",
+          "preprocessor_config.json",
+          "README.md",
+          "model.safetensors"
+        ],
+        "dataset_paths": [
+          "FairFace"
+        ]
+      }
+    }
+  ]
+}

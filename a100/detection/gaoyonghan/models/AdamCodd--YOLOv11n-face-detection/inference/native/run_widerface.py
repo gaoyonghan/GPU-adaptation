@@ -18,7 +18,7 @@ EVAL=HERE/'assets/widerface_evaluator'
 
 def main():
     parser=argparse.ArgumentParser();parser.add_argument('--max-images',type=int,default=10);parser.add_argument('--device',default='cuda:0');args=parser.parse_args()
-    out=Path('/mnt/aoss/model inference for GPU adaptation/detection/gaoyonghan/models/AdamCodd--YOLOv11n-face-detection/result/a100_delivery_verification_20261117/m026');out.mkdir(parents=True,exist_ok=True)
+    out=Path('/mnt/aoss/model inference for GPU adaptation/detection/gaoyonghan/models/AdamCodd--YOLOv11n-face-detection/result/run_002/m026');out.mkdir(parents=True,exist_ok=True)
     with (out/'.lock').open('w') as lock:
         fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
         weight=Path('/mnt/aoss/model inference for GPU adaptation/detection/gaoyonghan/models/AdamCodd--YOLOv11n-face-detection/weights/AdamCodd/YOLOv11n-face-detection/model.pt')

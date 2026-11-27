@@ -1,0 +1,33 @@
+{
+  "sequence": 115,
+  "source_contributor": "caichengrui",
+  "state": "a100_gpu_forward_verified",
+  "native_entries": [
+    "run_model.py"
+  ],
+  "native_sha256": "f5bf8749c4a71daf9ef33d79d89eacf8c80e5643067bc71a8bd8d59778338b80",
+  "resource_paths": [
+    "project/timing_runtime"
+  ],
+  "path_templates": 1,
+  "environment": "/opt/model-envs/e07",
+  "new_project_full_inference_executed": false,
+  "original_native_sha256": "6462e4f84811ae4a9b1081a3bb22ce536fa6a68e9a8c087f6786150f8fb62f80",
+  "native_changes": [
+    "Use the configured local Hugging Face datasets cache for Parquet loading."
+  ],
+  "a100_validation": {
+    "model": "m115",
+    "directory": "dima806--attractive_faces_celebs_detection",
+    "preflight": "passed",
+    "weights": 4,
+    "native_sha256": "f5bf8749c4a71daf9ef33d79d89eacf8c80e5643067bc71a8bd8d59778338b80",
+    "used_local_dataset_cache": true,
+    "gpu_forward": "passed",
+    "gpu": "NVIDIA A100-SXM4-40GB",
+    "predictions": 1,
+    "seconds": 28.1,
+    "log": "result/ccr_alignment_20261120_cache_retry/m115-gpu.log",
+    "data_source": "default shared dataset"
+  }
+}

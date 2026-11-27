@@ -19,7 +19,7 @@ from run_m07_native import OUT as COCO_OUT, prepare as prepare_coco, sha, write
 
 HERE = Path(__file__).resolve().parent
 MANIFEST = HERE / 'native_18_20_21.json'
-OUT = Path('/mnt/aoss/model inference for GPU adaptation/detection/gaoyonghan/models/keremberke--yolov5m-license-plate/result/a100_delivery_audit_retry_20261117/m018')
+OUT = Path('/mnt/aoss/model inference for GPU adaptation/detection/gaoyonghan/models/keremberke--yolov5m-license-plate/result/full_20261121_092030_2cb937/m018')
 PLATE_ZIP = Path('/mnt/aoss/model inference for GPU adaptation/dataset/license_plate_v1_valid/data/valid.zip')
 
 

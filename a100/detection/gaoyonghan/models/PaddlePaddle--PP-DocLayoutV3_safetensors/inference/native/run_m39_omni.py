@@ -17,7 +17,7 @@ from run_model import core, digest, file_hash
 HERE = Path(__file__).resolve().parent
 MODEL = Path('/mnt/aoss/model inference for GPU adaptation/detection/gaoyonghan/models/PaddlePaddle--PP-DocLayoutV3_safetensors/weights/PaddlePaddle/PP-DocLayoutV3_safetensors')
 DATA = Path('/mnt/aoss/model inference for GPU adaptation/dataset/omnidocbench_eval')
-OUT = Path('/mnt/aoss/model inference for GPU adaptation/detection/gaoyonghan/models/PaddlePaddle--PP-DocLayoutV3_safetensors/result/a100_two_step_smoke_v3_20261117/m039/native')
+OUT = Path('/mnt/aoss/model inference for GPU adaptation/detection/gaoyonghan/models/PaddlePaddle--PP-DocLayoutV3_safetensors/result/full_20261121_092030_2cb937/m039/native')
 THRESHOLD = 0.001
 
 

@@ -1,0 +1,29 @@
+{
+  "sequence": 137,
+  "source_contributor": "caichengrui",
+  "state": "a100_gpu_forward_verified",
+  "native_entries": [
+    "run_model.py"
+  ],
+  "native_sha256": "34c15a24b0953bdf0f0bda33771c062fc6e2ec0bac7f93b9738caf212a8083e1",
+  "resource_paths": [
+    "project/timing_runtime"
+  ],
+  "path_templates": 1,
+  "environment": "/opt/model-envs/e07",
+  "new_project_full_inference_executed": false,
+  "a100_validation": {
+    "model": "m137",
+    "directory": "cafeai--cafe_style",
+    "preflight": "passed",
+    "weights": 4,
+    "native_sha256": "34c15a24b0953bdf0f0bda33771c062fc6e2ec0bac7f93b9738caf212a8083e1",
+    "used_local_dataset_cache": false,
+    "gpu_forward": "passed",
+    "gpu": "NVIDIA A100-SXM4-40GB",
+    "predictions": 1,
+    "seconds": 15.2,
+    "log": "result/ccr_alignment_20261120/m137-gpu.log",
+    "data_source": "default shared dataset"
+  }
+}

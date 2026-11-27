@@ -128,7 +128,7 @@ def main():
             assert (DATA / 'images' / Path(page['page_info']['image_path']).name).is_file()
         subsets[key] = selected[:2] if args.smoke else selected
     mode = 'smoke' if args.smoke else 'full'
-    output = Path('/mnt/aoss/model inference for GPU adaptation/detection/gaoyonghan/models/qihoo360--360LayoutAnalysis/result/a100_delivery_verification_20261117/m041')
+    output = Path('/mnt/aoss/model inference for GPU adaptation/detection/gaoyonghan/models/qihoo360--360LayoutAnalysis/result/full_20261121_092030_2cb937/m041')
     output = output / f'{mode}_{datetime.now():%Y%m%d_%H%M%S_%f}'
     output.mkdir(parents=True)
     print(f'Output: {output}', flush=True)

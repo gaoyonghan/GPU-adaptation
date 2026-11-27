@@ -1,0 +1,10 @@
+{
+  "source": "caichengrui/models/qipchip31--electronic-components-model/weights",
+  "delivery_path": "weights/qipchip31/electronic-components-model",
+  "method": "directory relocation",
+  "files": [
+    "README.md",
+    "config.json",
+    "model.safetensors"
+  ]
+}

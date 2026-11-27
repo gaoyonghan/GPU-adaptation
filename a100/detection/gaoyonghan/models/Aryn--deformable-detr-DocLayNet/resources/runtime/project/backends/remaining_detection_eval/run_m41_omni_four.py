@@ -7,7 +7,7 @@ import json
 from pathlib import Path
 import sys
 
-# Third-party dependencies are installed in the selected Python environment.
+sys.path.append(str(Path(__file__).resolve().parent / '_deps'))
 
 import numpy as np
 import torch

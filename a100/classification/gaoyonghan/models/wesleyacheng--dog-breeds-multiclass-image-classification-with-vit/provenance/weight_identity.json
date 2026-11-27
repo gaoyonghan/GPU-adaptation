@@ -1,0 +1,11 @@
+{
+  "source": "caichengrui/models/wesleyacheng--dog-breeds-multiclass-image-classification-with-vit/weights",
+  "delivery_path": "weights/wesleyacheng/dog-breeds-multiclass-image-classification-with-vit",
+  "method": "directory relocation",
+  "files": [
+    "README.md",
+    "config.json",
+    "model.safetensors",
+    "preprocessor_config.json"
+  ]
+}

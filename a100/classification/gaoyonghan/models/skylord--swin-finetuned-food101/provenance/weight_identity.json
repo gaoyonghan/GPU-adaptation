@@ -1,0 +1,11 @@
+{
+  "source": "caichengrui/models/skylord--swin-finetuned-food101/weights",
+  "delivery_path": "weights/skylord/swin-finetuned-food101",
+  "method": "directory relocation",
+  "files": [
+    "README.md",
+    "config.json",
+    "preprocessor_config.json",
+    "pytorch_model.bin"
+  ]
+}

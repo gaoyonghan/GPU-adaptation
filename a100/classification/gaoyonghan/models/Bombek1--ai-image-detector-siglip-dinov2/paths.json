@@ -1,0 +1,4 @@
+{
+  "dataset_root": "../../../../dataset",
+  "weights_root": "weights/Bombek1/ai-image-detector-siglip-dinov2"
+}

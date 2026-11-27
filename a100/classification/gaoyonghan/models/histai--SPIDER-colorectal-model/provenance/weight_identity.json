@@ -1,0 +1,13 @@
+{
+  "source": "caichengrui/models/histai--SPIDER-colorectal-model/weights",
+  "delivery_path": "weights/histai/SPIDER-colorectal-model",
+  "method": "directory relocation",
+  "files": [
+    "README.md",
+    "config.json",
+    "configuration_spider.py",
+    "model.safetensors",
+    "modeling_spider.py",
+    "preprocessor_config.json"
+  ]
+}

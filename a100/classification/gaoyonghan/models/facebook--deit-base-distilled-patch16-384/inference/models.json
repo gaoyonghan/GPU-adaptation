@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "sources": {},
+  "models": [
+    {
+      "sequence": 129,
+      "model_id": "facebook/deit-base-distilled-patch16-384",
+      "runner_family": "native_script",
+      "adapter": "native_labels",
+      "state": "recording_enabled",
+      "dataset": {
+        "id": "ImageNet-1K val",
+        "split": null,
+        "note": "ImageNet-1K val\n50,000 张"
+      },
+      "qualification": "native_registered_scope",
+      "limitations": [
+        "Capture-ready is a code integration state, not a claim that inference has passed.",
+        "Unobserved native Top-5 is unavailable; aggregate scores are not predictions."
+      ],
+      "num_classes": 1000,
+      "expected_images": 50000,
+      "native_script": {
+        "script": "inference/native/run_model.py",
+        "script_sha256": "ebb67a9c81f3ed126409c4324b675ab816ec9ed67945628cfb428c525bb331f5",
+        "loop_lineno": 256,
+        "labels": "labels",
+        "prediction": "top5_indices[:, 0]",
+        "ranking": "top5_indices",
+        "classes": "logits.shape[-1]",
+        "loader_kind": "torch",
+        "label_position": 1,
+        "framework": "torch",
+        "original_script_sha256": "d43e9e54b11f796a9c9e6acdecfca628d35e817e2594d18cbf524a471792ac6c",
+        "original_loop_lineno": 246,
+        "source_original_path": "code/deit-base-distilled-patch16-384.py"
+      },
+      "output_relative_path": "result/run_001/full/m129",
+      "supports_max_samples": false,
+      "runtime_defaults": {
+        "batch_size": 64,
+        "workers": 8,
+        "warmup": 10
+      },
+      "capabilities": {
+        "gpu_only": false,
+        "worker_processes": true,
+        "limited_samples": false,
+        "device": [
+          "auto",
+          "cuda",
+          "cuda:N",
+          "cpu"
+        ]
+      },
+      "required_inputs": {
+        "weights": [
+          "config.json",
+          "preprocessor_config.json",
+          "README.md",
+          "model.safetensors"
+        ],
+        "dataset_paths": [
+          "ImageNet-1K"
+        ]
+      }
+    }
+  ]
+}

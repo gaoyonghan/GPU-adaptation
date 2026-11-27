@@ -1,0 +1,4 @@
+{
+  "dataset_root": "../../../../dataset",
+  "weights_root": "weights/gianlab/swin-tiny-patch4-window7-224-finetuned-skin-cancer"
+}

@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "sources": {},
+  "models": [
+    {
+      "sequence": 151,
+      "model_id": "Bombek1/ai-image-detector-siglip-dinov2",
+      "runner_family": "native_script",
+      "adapter": "native_labels",
+      "state": "recording_enabled",
+      "dataset": {
+        "id": "AIGCDetectionBenchmark",
+        "split": "test",
+        "note": "AIGCDetectionBenchmark test\n152,598 张"
+      },
+      "qualification": "native_registered_scope",
+      "limitations": [
+        "Capture-ready is a code integration state, not a claim that inference has passed.",
+        "Unobserved native Top-5 is unavailable; aggregate scores are not predictions."
+      ],
+      "num_classes": 2,
+      "expected_images": 152598,
+      "native_script": {
+        "script": "inference/native/run_model.py",
+        "script_sha256": "0cbc354f54b5c7aaa950beb85fd0450d7c53269461479c2239778b8cc12a5d00",
+        "loop_lineno": 376,
+        "labels": "batch_labels",
+        "prediction": "batch_predictions",
+        "ranking": null,
+        "classes": "2",
+        "loader_kind": "torch",
+        "label_position": 2,
+        "framework": "torch",
+        "original_script_sha256": "93e34e88aa1137b33e1d766068aba50428268be99de17aacb30a60bcbc9038cf",
+        "original_loop_lineno": 366,
+        "source_original_path": "code/ai-image-detector-siglip-dinov2-aigcdetectionbenchmark-test.py"
+      },
+      "output_relative_path": "result/run_001/full/m151",
+      "supports_max_samples": false,
+      "runtime_defaults": {
+        "batch_size": 256,
+        "workers": 4,
+        "warmup": 3
+      },
+      "capabilities": {
+        "gpu_only": false,
+        "worker_processes": true,
+        "limited_samples": false,
+        "device": [
+          "auto",
+          "cuda",
+          "cuda:N",
+          "cpu"
+        ]
+      },
+      "required_inputs": {
+        "weights": [
+          "config.json",
+          "README.md",
+          "pytorch_model.pt",
+          "siglip2_config/config.json",
+          "siglip2_config/preprocessor_config.json"
+        ],
+        "dataset_paths": [
+          "AIGCDetectionBenchmark/test"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+# Runtime versions recorded from A100 e07.
+datasets==5.0.0
+numpy==1.26.4
+torch==2.8.0a0+5228986c39.nv25.6
+transformers==4.50.0

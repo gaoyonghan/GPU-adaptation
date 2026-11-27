@@ -1,0 +1,4 @@
+{
+  "dataset_root": "../../../../dataset",
+  "weights_root": "weights/dima806/faces_age_detection"
+}

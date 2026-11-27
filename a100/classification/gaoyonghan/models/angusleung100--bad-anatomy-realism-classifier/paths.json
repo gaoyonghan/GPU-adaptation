@@ -1,0 +1,4 @@
+{
+  "dataset_root": "../../../../dataset",
+  "weights_root": "weights/angusleung100/bad-anatomy-realism-classifier"
+}

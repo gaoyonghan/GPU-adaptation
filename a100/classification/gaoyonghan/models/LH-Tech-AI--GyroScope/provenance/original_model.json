@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "sources": {},
+  "models": [
+    {
+      "sequence": 152,
+      "model_id": "LH-Tech-AI/GyroScope",
+      "runner_family": "native_script",
+      "adapter": "native_labels",
+      "state": "recording_enabled",
+      "dataset": {
+        "id": "ImageNet-1K val × 4 rotations",
+        "split": null,
+        "note": "ImageNet-1K val\n50,000 张 x 4 个旋转方向\n共 200,000 个样本"
+      },
+      "qualification": "native_registered_scope",
+      "limitations": [
+        "Capture-ready is a code integration state, not a claim that inference has passed.",
+        "Unobserved native Top-5 is unavailable; aggregate scores are not predictions."
+      ],
+      "num_classes": 4,
+      "expected_images": 200000,
+      "native_script": {
+        "script": "inference/run_model.py",
+        "script_sha256": "ab5ab37f423731d774847d62ed11a381690afa7cecf4f3bf06d7cd1046ffda68",
+        "loop_lineno": 130,
+        "labels": "labels",
+        "prediction": "predictions",
+        "ranking": null,
+        "classes": "logits.shape[-1]",
+        "loader_kind": "torch",
+        "label_position": 1,
+        "framework": "torch",
+        "original_script_sha256": "40260aa62ca892ad2bf98d531907c4e38d481113306fc0e3a13dbf1961310d83",
+        "original_loop_lineno": 120,
+        "source_original_path": "code/gyro-scope.py"
+      },
+      "output_relative_path": "result/run_001/full/m152",
+      "supports_max_samples": false,
+      "runtime_defaults": {
+        "batch_size": 128,
+        "workers": 4,
+        "warmup": 10
+      },
+      "capabilities": {
+        "gpu_only": false,
+        "worker_processes": true,
+        "limited_samples": false,
+        "device": [
+          "auto",
+          "cuda",
+          "cuda:N",
+          "cpu"
+        ]
+      },
+      "required_inputs": {
+        "weights": [
+          "config.json",
+          "README.md",
+          "model.safetensors"
+        ],
+        "dataset_paths": [
+          "ImageNet-1K"
+        ]
+      }
+    }
+  ]
+}

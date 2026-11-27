@@ -1,0 +1,33 @@
+{
+  "sequence": 113,
+  "source_contributor": "caichengrui",
+  "state": "a100_gpu_forward_verified",
+  "native_entries": [
+    "run_model.py"
+  ],
+  "native_sha256": "af9c0cd4a8fd970719b991db66be476e2b8c5c3b028592e5041d7c9318b7f36a",
+  "resource_paths": [
+    "project/timing_runtime"
+  ],
+  "path_templates": 1,
+  "environment": "/opt/model-envs/e07",
+  "new_project_full_inference_executed": false,
+  "original_native_sha256": "0a6db43c2fcf78696d17144010a205172caa76e0f8e13195a7361b0d1ec0079e",
+  "native_changes": [
+    "Use the configured local Hugging Face datasets cache for Parquet loading."
+  ],
+  "a100_validation": {
+    "model": "m113",
+    "directory": "Xenova--quickdraw-mobilevit-small",
+    "preflight": "passed",
+    "weights": 4,
+    "native_sha256": "af9c0cd4a8fd970719b991db66be476e2b8c5c3b028592e5041d7c9318b7f36a",
+    "used_local_dataset_cache": true,
+    "gpu_forward": "passed",
+    "gpu": "NVIDIA A100-SXM4-40GB",
+    "predictions": 1,
+    "seconds": 11.4,
+    "log": "result/ccr_alignment_20261120_cache_retry/m113-gpu.log",
+    "data_source": "default shared dataset"
+  }
+}

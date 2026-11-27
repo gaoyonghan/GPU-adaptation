@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "sources": {},
+  "models": [
+    {
+      "sequence": 147,
+      "model_id": "nvidia/MambaVision-L3-256-21K",
+      "runner_family": "native_script",
+      "adapter": "native_labels",
+      "state": "recording_enabled",
+      "dataset": {
+        "id": "ImageNet-1K val",
+        "split": null,
+        "note": "ImageNet-1K val\n50,000 张"
+      },
+      "qualification": "native_registered_scope",
+      "limitations": [
+        "Capture-ready is a code integration state, not a claim that inference has passed.",
+        "Unobserved native Top-5 is unavailable; aggregate scores are not predictions."
+      ],
+      "num_classes": 1000,
+      "expected_images": 50000,
+      "native_script": {
+        "script": "inference/native/run_model.py",
+        "script_sha256": "32d2c352bf8c76e85b2bc1b652f54db90652229547b7627d86fcdf19d542b55a",
+        "loop_lineno": 261,
+        "labels": "labels",
+        "prediction": "top5_indices[:, 0]",
+        "ranking": "top5_indices",
+        "classes": "logits.shape[-1]",
+        "loader_kind": "torch",
+        "label_position": 1,
+        "framework": "torch",
+        "original_script_sha256": "94e676006f205c52d8a71c108369ee6fbf0ff15051d4ba72e12e3c438fec93aa",
+        "original_loop_lineno": 251,
+        "source_original_path": "code/MambaVision-L3-256-21K.py"
+      },
+      "output_relative_path": "result/run_001/full/m147",
+      "supports_max_samples": false,
+      "runtime_defaults": {
+        "batch_size": 64,
+        "workers": 8,
+        "warmup": 10
+      },
+      "capabilities": {
+        "gpu_only": false,
+        "worker_processes": true,
+        "limited_samples": false,
+        "device": [
+          "auto",
+          "cuda",
+          "cuda:N",
+          "cpu"
+        ]
+      },
+      "required_inputs": {
+        "weights": [
+          "config.json",
+          "README.md",
+          "LICENSE",
+          "model.safetensors",
+          "configuration_mambavision.py",
+          "modeling_mambavision.py"
+        ],
+        "dataset_paths": [
+          "ImageNet-1K"
+        ]
+      }
+    }
+  ]
+}

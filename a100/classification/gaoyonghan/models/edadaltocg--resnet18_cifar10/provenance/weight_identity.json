@@ -1,0 +1,10 @@
+{
+  "source": "caichengrui/models/edadaltocg--resnet18_cifar10/weights",
+  "delivery_path": "weights/edadaltocg/resnet18_cifar10",
+  "method": "directory relocation",
+  "files": [
+    "README.md",
+    "config.json",
+    "pytorch_model.bin"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "sequence": 116,
+  "source_contributor": "caichengrui",
+  "state": "a100_gpu_forward_verified",
+  "native_entries": [
+    "run_model.py"
+  ],
+  "native_sha256": "b505fa7ae5e347a9b7bc49f8908ed840e8d50f2d754a9150611836ab325bde00",
+  "resource_paths": [
+    "project/timing_runtime"
+  ],
+  "path_templates": 1,
+  "environment": "/opt/model-envs/e07",
+  "new_project_full_inference_executed": false,
+  "original_native_sha256": "1bab06a71d8ea3a191c36bf1242ccc64597303fa4066bb196b264bc2dce0e292",
+  "native_changes": [
+    "Use the configured local Hugging Face datasets cache for Parquet loading."
+  ],
+  "a100_validation": {
+    "model": "m116",
+    "directory": "dima806--faces_age_detection",
+    "preflight": "passed",
+    "weights": 4,
+    "native_sha256": "b505fa7ae5e347a9b7bc49f8908ed840e8d50f2d754a9150611836ab325bde00",
+    "used_local_dataset_cache": true,
+    "gpu_forward": "passed",
+    "gpu": "NVIDIA A100-SXM4-40GB",
+    "predictions": 1,
+    "seconds": 15.1,
+    "log": "result/ccr_alignment_20261120_cache_retry/m116-gpu.log",
+    "data_source": "default shared dataset"
+  }
+}

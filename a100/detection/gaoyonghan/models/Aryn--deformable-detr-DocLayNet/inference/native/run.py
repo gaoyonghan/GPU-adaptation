@@ -20,7 +20,7 @@ from transformers import AutoConfig, AutoImageProcessor, AutoModelForObjectDetec
 HERE = Path(__file__).resolve().parent
 DATA = Path('/mnt/aoss/model inference for GPU adaptation/dataset/supplemental_20260905/model19')
 WEIGHT = Path('/mnt/aoss/model inference for GPU adaptation/detection/gaoyonghan/models/Aryn--deformable-detr-DocLayNet/weights/Aryn/deformable-detr-DocLayNet')
-OUTPUT = Path('/mnt/aoss/model inference for GPU adaptation/detection/gaoyonghan/models/Aryn--deformable-detr-DocLayNet/result/full_e26_ready_20261115_110656/m019/gpu_local_v2')
+OUTPUT = Path('/mnt/aoss/model inference for GPU adaptation/detection/gaoyonghan/models/Aryn--deformable-detr-DocLayNet/result/full_20261121_092030_2cb937/m019/gpu_local_v2')
 
 
 def sha(path):

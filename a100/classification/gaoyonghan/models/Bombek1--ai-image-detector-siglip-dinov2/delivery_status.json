@@ -1,0 +1,29 @@
+{
+  "sequence": 151,
+  "source_contributor": "caichengrui",
+  "state": "a100_gpu_forward_verified",
+  "native_entries": [
+    "run_model.py"
+  ],
+  "native_sha256": "0cbc354f54b5c7aaa950beb85fd0450d7c53269461479c2239778b8cc12a5d00",
+  "resource_paths": [
+    "project/timing_runtime"
+  ],
+  "path_templates": 1,
+  "environment": "/opt/model-envs/e07",
+  "new_project_full_inference_executed": false,
+  "a100_validation": {
+    "model": "m151",
+    "directory": "Bombek1--ai-image-detector-siglip-dinov2",
+    "preflight": "passed",
+    "weights": 5,
+    "native_sha256": "0cbc354f54b5c7aaa950beb85fd0450d7c53269461479c2239778b8cc12a5d00",
+    "used_local_dataset_cache": false,
+    "gpu_forward": "passed",
+    "gpu": "NVIDIA A100-SXM4-40GB",
+    "predictions": 1,
+    "seconds": 47.3,
+    "log": "result/ccr_alignment_20261120_subset/m151-gpu.log",
+    "data_source": "local subset copied from the shared AIGCDetectionBenchmark test set"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "source": "caichengrui/models/prithivMLmods--open-deepfake-detection/weights",
+  "delivery_path": "weights/prithivMLmods/open-deepfake-detection",
+  "method": "directory relocation",
+  "files": [
+    "README.md",
+    "config.json",
+    "model.safetensors",
+    "preprocessor_config.json"
+  ]
+}

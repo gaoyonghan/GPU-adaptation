@@ -1,0 +1,10 @@
+{
+  "source": "caichengrui/models/apple--mobilevit-x-small/weights",
+  "delivery_path": "weights/apple/mobilevit-x-small",
+  "method": "directory relocation",
+  "files": [
+    "config.json",
+    "model.safetensors",
+    "preprocessor_config.json"
+  ]
+}

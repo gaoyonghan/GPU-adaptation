@@ -1,0 +1,11 @@
+{
+  "source": "caichengrui/models/prithivMLmods--AI-vs-Deepfake-vs-Real/weights",
+  "delivery_path": "weights/prithivMLmods/AI-vs-Deepfake-vs-Real",
+  "method": "directory relocation",
+  "files": [
+    "README.md",
+    "config.json",
+    "model.safetensors",
+    "preprocessor_config.json"
+  ]
+}

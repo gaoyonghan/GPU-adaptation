@@ -16,7 +16,7 @@ import zipfile
 MODEL = Path('/mnt/aoss/model inference for GPU adaptation/detection/gaoyonghan/models/foduucom--table-detection-and-extraction/weights/foduucom/table-detection-and-extraction')
 TEST = Path('/mnt/aoss/model inference for GPU adaptation/dataset/tablebordernet_test/test')
 VALID_ZIP = Path('/mnt/aoss/model inference for GPU adaptation/dataset/tablebordernet_valid/data/valid.zip')
-OUT = Path('/mnt/aoss/model inference for GPU adaptation/detection/gaoyonghan/models/foduucom--table-detection-and-extraction/result/a100_delivery_verification_20261117/m012')
+OUT = Path('/mnt/aoss/model inference for GPU adaptation/detection/gaoyonghan/models/foduucom--table-detection-and-extraction/result/full_20261121_092030_2cb937/m012')
 WEIGHT_SHA = '60f9c0d863af2c53c6f8c041bf7c4b7cf80dfb3e0383f03224c3f94b6f939c75'
 
 

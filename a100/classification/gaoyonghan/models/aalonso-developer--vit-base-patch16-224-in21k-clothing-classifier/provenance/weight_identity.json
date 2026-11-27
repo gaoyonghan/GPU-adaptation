@@ -1,0 +1,11 @@
+{
+  "source": "caichengrui/models/aalonso-developer--vit-base-patch16-224-in21k-clothing-classifier/weights",
+  "delivery_path": "weights/aalonso-developer/vit-base-patch16-224-in21k-clothing-classifier",
+  "method": "directory relocation",
+  "files": [
+    "README.md",
+    "config.json",
+    "preprocessor_config.json",
+    "tf_model.h5"
+  ]
+}

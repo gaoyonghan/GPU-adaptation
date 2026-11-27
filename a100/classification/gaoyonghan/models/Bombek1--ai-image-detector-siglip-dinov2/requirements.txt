@@ -1,0 +1,8 @@
+# Runtime versions recorded from A100 e07.
+numpy==1.26.4
+peft==0.15.1
+pillow==11.1.0
+timm==1.0.15
+torch==2.8.0a0+5228986c39.nv25.6
+torchvision==0.22.0a0+95f10a4e
+transformers==4.50.0

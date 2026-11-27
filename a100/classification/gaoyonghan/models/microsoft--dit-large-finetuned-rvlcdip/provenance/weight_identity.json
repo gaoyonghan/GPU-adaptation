@@ -1,0 +1,10 @@
+{
+  "source": "caichengrui/models/microsoft--dit-large-finetuned-rvlcdip/weights",
+  "delivery_path": "weights/microsoft/dit-large-finetuned-rvlcdip",
+  "method": "directory relocation",
+  "files": [
+    "config.json",
+    "preprocessor_config.json",
+    "pytorch_model.bin"
+  ]
+}

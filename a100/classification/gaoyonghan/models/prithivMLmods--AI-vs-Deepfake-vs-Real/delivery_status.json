@@ -1,0 +1,33 @@
+{
+  "sequence": 124,
+  "source_contributor": "caichengrui",
+  "state": "a100_gpu_forward_verified",
+  "native_entries": [
+    "run_model.py"
+  ],
+  "native_sha256": "54b76ca77733833fcf793720050735270a4e016eb29dc94d854eb297cf708e05",
+  "resource_paths": [
+    "project/timing_runtime"
+  ],
+  "path_templates": 1,
+  "environment": "/opt/model-envs/e07",
+  "new_project_full_inference_executed": false,
+  "original_native_sha256": "ad9b0f4fce8f7ce4e09f91d1586aed9f30bd98d6c5f66d4d4c00cc8097b78314",
+  "native_changes": [
+    "Use the configured local Hugging Face datasets cache for Parquet loading."
+  ],
+  "a100_validation": {
+    "model": "m124",
+    "directory": "prithivMLmods--AI-vs-Deepfake-vs-Real",
+    "preflight": "passed",
+    "weights": 4,
+    "native_sha256": "54b76ca77733833fcf793720050735270a4e016eb29dc94d854eb297cf708e05",
+    "used_local_dataset_cache": true,
+    "gpu_forward": "passed",
+    "gpu": "NVIDIA A100-SXM4-40GB",
+    "predictions": 1,
+    "seconds": 37.8,
+    "log": "result/ccr_alignment_20261120_cache_retry/m124-gpu.log",
+    "data_source": "default shared dataset"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "source": "caichengrui/models/LH-Tech-AI--GyroScope/weights",
+  "delivery_path": "weights/LH-Tech-AI/GyroScope",
+  "method": "directory relocation",
+  "files": [
+    "README.md",
+    "config.json",
+    "model.safetensors"
+  ]
+}

@@ -29,9 +29,7 @@
     }
   ],
   "single_model_sample": false,
-  "smoke_commands": [
-    0
-  ],
+  "smoke_commands": [],
   "state": "runnable",
   "accepts_max_images": false,
   "accepts_smoke_flag": false,

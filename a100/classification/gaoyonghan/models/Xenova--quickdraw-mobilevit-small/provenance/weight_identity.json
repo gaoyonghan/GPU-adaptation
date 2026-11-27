@@ -1,0 +1,11 @@
+{
+  "source": "caichengrui/models/Xenova--quickdraw-mobilevit-small/weights",
+  "delivery_path": "weights/Xenova/quickdraw-mobilevit-small",
+  "method": "directory relocation",
+  "files": [
+    "README.md",
+    "config.json",
+    "preprocessor_config.json",
+    "pytorch_model.bin"
+  ]
+}

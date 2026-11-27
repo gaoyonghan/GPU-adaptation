@@ -1,0 +1,13 @@
+{
+  "source": "caichengrui/models/nvidia--MambaVision-L3-256-21K/weights",
+  "delivery_path": "weights/nvidia/MambaVision-L3-256-21K",
+  "method": "directory relocation",
+  "files": [
+    "LICENSE",
+    "README.md",
+    "config.json",
+    "configuration_mambavision.py",
+    "model.safetensors",
+    "modeling_mambavision.py"
+  ]
+}

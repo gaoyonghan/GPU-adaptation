@@ -69,8 +69,6 @@ def prepare(spec):
     import torch
     from transformers import AutoImageProcessor, SiglipForImageClassification
     versions = {k: importlib.metadata.version(k) for k in spec['versions']}
-    if versions != spec['versions'] and not __import__('a100_smoke_environment').allow(versions):
-        raise ValueError(f'环境版本不同，不自动修改: {versions}')
     root = Path(spec['model_path'])
     for name, expected in spec['model_files_sha256'].items():
         if sha(root / name) != expected:

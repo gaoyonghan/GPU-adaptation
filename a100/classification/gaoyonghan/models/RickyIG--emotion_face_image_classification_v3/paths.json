@@ -1,0 +1,4 @@
+{
+  "dataset_root": "../../../../dataset",
+  "weights_root": "weights/RickyIG/emotion_face_image_classification_v3"
+}

@@ -1,0 +1,11 @@
+{
+  "source": "caichengrui/models/JuanMa360--room-classifier/weights",
+  "delivery_path": "weights/JuanMa360/room-classifier",
+  "method": "directory relocation",
+  "files": [
+    "README.md",
+    "config.json",
+    "model.safetensors",
+    "preprocessor_config.json"
+  ]
+}

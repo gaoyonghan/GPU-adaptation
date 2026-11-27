@@ -105,23 +105,18 @@ def load_bundle(bundle):
 
 
 def publish(output, annotation, predictions, metadata):
-    import tempfile
-    import shutil
     output = Path(output)
     require(not output.exists(), "output exists; use a new output directory")
     ids, categories = validate_annotation(annotation)
     require(validate_predictions(predictions, categories) == ids, "prediction/GT coverage mismatch")
     output.parent.mkdir(parents=True, exist_ok=True)
-    temporary = Path(tempfile.mkdtemp(prefix="." + output.name + "-", dir=output.parent))
-    try:
-        write(temporary / "annotations.json", annotation)
-        write(temporary / "predictions.json", predictions)
-        protocol = dict(metadata, schema=SCHEMA, scoring_ready=True, evaluation=POLICY,
-                        completed_sample_ids=sorted(ids), prediction_count=len(predictions),
-                        artifact_sha256={n: file_hash(temporary / n) for n in ("annotations.json", "predictions.json")})
-        write(temporary / "protocol.json", protocol)
-        temporary.rename(output)
-    finally:
-        if temporary.exists():
-            shutil.rmtree(temporary)
+    # Object storage cannot atomically rename a directory. Reserve the new
+    # bundle and publish protocol.json last, after both inputs can be read.
+    output.mkdir()
+    write(output / "annotations.json", annotation)
+    write(output / "predictions.json", predictions)
+    protocol = dict(metadata, schema=SCHEMA, scoring_ready=True, evaluation=POLICY,
+                    completed_sample_ids=sorted(ids), prediction_count=len(predictions),
+                    artifact_sha256={n: file_hash(output / n) for n in ("annotations.json", "predictions.json")})
+    write(output / "protocol.json", protocol)
     return protocol

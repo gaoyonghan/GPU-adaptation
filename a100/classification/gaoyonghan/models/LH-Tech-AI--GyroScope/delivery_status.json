@@ -1,0 +1,29 @@
+{
+  "sequence": 152,
+  "source_contributor": "caichengrui",
+  "state": "a100_gpu_forward_verified",
+  "native_entries": [
+    "run_model.py"
+  ],
+  "native_sha256": "ab5ab37f423731d774847d62ed11a381690afa7cecf4f3bf06d7cd1046ffda68",
+  "resource_paths": [
+    "project/timing_runtime"
+  ],
+  "path_templates": 1,
+  "environment": "/opt/model-envs/e07",
+  "new_project_full_inference_executed": false,
+  "a100_validation": {
+    "model": "m152",
+    "directory": "LH-Tech-AI--GyroScope",
+    "preflight": "passed",
+    "weights": 3,
+    "native_sha256": "ab5ab37f423731d774847d62ed11a381690afa7cecf4f3bf06d7cd1046ffda68",
+    "used_local_dataset_cache": false,
+    "gpu_forward": "passed",
+    "gpu": "NVIDIA A100-SXM4-40GB",
+    "predictions": 1,
+    "seconds": 10.6,
+    "log": "result/ccr_alignment_20261120/m152-gpu.log",
+    "data_source": "default shared dataset"
+  }
+}

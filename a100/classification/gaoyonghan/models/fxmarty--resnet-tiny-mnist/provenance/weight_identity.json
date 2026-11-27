@@ -1,0 +1,11 @@
+{
+  "source": "caichengrui/models/fxmarty--resnet-tiny-mnist/weights",
+  "delivery_path": "weights/fxmarty/resnet-tiny-mnist",
+  "method": "directory relocation",
+  "files": [
+    "README.md",
+    "config.json",
+    "preprocessor_config.json",
+    "pytorch_model.bin"
+  ]
+}

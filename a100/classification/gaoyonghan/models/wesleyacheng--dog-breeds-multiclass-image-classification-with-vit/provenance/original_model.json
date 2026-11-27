@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "sources": {},
+  "models": [
+    {
+      "sequence": 114,
+      "model_id": "wesleyacheng/dog-breeds-multiclass-image-classification-with-vit",
+      "runner_family": "native_script",
+      "adapter": "native_labels",
+      "state": "recording_enabled",
+      "dataset": {
+        "id": "Stanford Dogs",
+        "split": "test",
+        "note": "Stanford Dogs test\n8,580 张"
+      },
+      "qualification": "native_registered_scope",
+      "limitations": [
+        "Capture-ready is a code integration state, not a claim that inference has passed.",
+        "Unobserved native Top-5 is unavailable; aggregate scores are not predictions."
+      ],
+      "num_classes": 120,
+      "expected_images": 8580,
+      "native_script": {
+        "script": "inference/run_model.py",
+        "script_sha256": "36894315dcee43c18b0e0f68af534097c16fe6f0e4f967c901088cd68087fa97",
+        "loop_lineno": 192,
+        "labels": "labels",
+        "prediction": "top5[:, 0]",
+        "ranking": "top5",
+        "classes": "logits.shape[-1]",
+        "loader_kind": "torch",
+        "label_position": 1,
+        "framework": "torch",
+        "original_script_sha256": "1ab369772a0587a62c1c7528b78a257ba3ed0b0f91eba3f647ea56a51dfb8fdc",
+        "original_loop_lineno": 184,
+        "source_original_path": "code/dog-breeds-multiclass-image-classification-with-vit.py"
+      },
+      "output_relative_path": "result/run_001/full/m114",
+      "supports_max_samples": false,
+      "runtime_defaults": {
+        "batch_size": 128,
+        "workers": 4,
+        "warmup": 10
+      },
+      "capabilities": {
+        "gpu_only": false,
+        "worker_processes": true,
+        "limited_samples": false,
+        "device": [
+          "auto",
+          "cuda",
+          "cuda:N",
+          "cpu"
+        ]
+      },
+      "required_inputs": {
+        "weights": [
+          "config.json",
+          "preprocessor_config.json",
+          "README.md",
+          "model.safetensors"
+        ],
+        "dataset_paths": [
+          "stanford-dogs"
+        ]
+      }
+    }
+  ]
+}

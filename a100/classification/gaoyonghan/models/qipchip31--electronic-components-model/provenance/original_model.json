@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "sources": {},
+  "models": [
+    {
+      "sequence": 121,
+      "model_id": "qipchip31/electronic-components-model",
+      "runner_family": "native_script",
+      "adapter": "native_labels",
+      "state": "recording_enabled",
+      "dataset": {
+        "id": "qipchip31/electronic_components",
+        "split": "test",
+        "note": "qipchip31/electronic_components test\n74 张"
+      },
+      "qualification": "native_registered_scope",
+      "limitations": [
+        "Capture-ready is a code integration state, not a claim that inference has passed.",
+        "Unobserved native Top-5 is unavailable; aggregate scores are not predictions."
+      ],
+      "num_classes": 4,
+      "expected_images": 74,
+      "native_script": {
+        "script": "inference/run_model.py",
+        "script_sha256": "3f7e9e1d5c48b11e13e446519f04ae1074eb3aa518b13f52f6ea49c3f98aa505",
+        "loop_lineno": 218,
+        "labels": "batch_labels",
+        "prediction": "batch_predictions",
+        "ranking": "batch_top3",
+        "classes": "logits.shape[-1]",
+        "loader_kind": "torch",
+        "label_position": 1,
+        "framework": "torch",
+        "original_script_sha256": "7c9d70aa20b07e00009aaeae9a5a52258ad261ba461f3487ef846ec8639f7b60",
+        "original_loop_lineno": 208,
+        "source_original_path": "code/electronic-components-model-electronic-components-test.py"
+      },
+      "output_relative_path": "result/run_001/full/m121",
+      "supports_max_samples": false,
+      "runtime_defaults": {
+        "batch_size": 32,
+        "workers": 0,
+        "warmup": 3
+      },
+      "capabilities": {
+        "gpu_only": false,
+        "worker_processes": true,
+        "limited_samples": false,
+        "device": [
+          "auto",
+          "cuda",
+          "cuda:N",
+          "cpu"
+        ]
+      },
+      "required_inputs": {
+        "weights": [
+          "config.json",
+          "README.md",
+          "model.safetensors"
+        ],
+        "dataset_paths": [
+          "electronic_components"
+        ]
+      }
+    }
+  ]
+}

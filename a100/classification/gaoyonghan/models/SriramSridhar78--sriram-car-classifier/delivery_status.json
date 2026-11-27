@@ -1,0 +1,33 @@
+{
+  "sequence": 153,
+  "source_contributor": "caichengrui",
+  "state": "a100_gpu_forward_verified",
+  "native_entries": [
+    "run_model.py"
+  ],
+  "native_sha256": "c9719eaefb5a5d4c1c1b6f0087de3352e1e0b2bffb607a595b48eb57010a9262",
+  "resource_paths": [
+    "project/timing_runtime"
+  ],
+  "path_templates": 1,
+  "environment": "/opt/model-envs/e07",
+  "new_project_full_inference_executed": false,
+  "original_native_sha256": "4013f3e408906d95f90b6a38581cc834715ba316852365b11d7f85f3b2624d95",
+  "native_changes": [
+    "Use the configured local Hugging Face datasets cache for Parquet loading."
+  ],
+  "a100_validation": {
+    "model": "m153",
+    "directory": "SriramSridhar78--sriram-car-classifier",
+    "preflight": "passed",
+    "weights": 4,
+    "native_sha256": "c9719eaefb5a5d4c1c1b6f0087de3352e1e0b2bffb607a595b48eb57010a9262",
+    "used_local_dataset_cache": true,
+    "gpu_forward": "passed",
+    "gpu": "NVIDIA A100-SXM4-40GB",
+    "predictions": 1,
+    "seconds": 26.1,
+    "log": "result/ccr_alignment_20261120_cache_retry/m153-gpu.log",
+    "data_source": "default shared dataset"
+  }
+}

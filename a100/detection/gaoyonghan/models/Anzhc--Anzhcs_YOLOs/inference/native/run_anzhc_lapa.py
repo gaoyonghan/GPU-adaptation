@@ -20,7 +20,7 @@ from pycocotools.cocoeval import COCOeval
 
 DATA = Path('/mnt/aoss/model inference for GPU adaptation/dataset/lapa_candidate/LaPa/test')
 WEIGHT = Path('/mnt/aoss/model inference for GPU adaptation/detection/gaoyonghan/models/Anzhc--Anzhcs_YOLOs/weights/Anzhc/Anzhcs_YOLOs/Anzhc Face seg 640 v4 y11n.pt')
-OUTPUT = Path('/mnt/aoss/model inference for GPU adaptation/detection/gaoyonghan/models/Anzhc--Anzhcs_YOLOs/result/a100_delivery_audit_20261117/m008')
+OUTPUT = Path('/mnt/aoss/model inference for GPU adaptation/detection/gaoyonghan/models/Anzhc--Anzhcs_YOLOs/result/full_20261121_092030_2cb937/m008')
 
 
 def sha(path):

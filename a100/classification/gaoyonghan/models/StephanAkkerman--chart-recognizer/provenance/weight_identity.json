@@ -1,0 +1,10 @@
+{
+  "source": "caichengrui/models/StephanAkkerman--chart-recognizer/weights",
+  "delivery_path": "weights/StephanAkkerman/chart-recognizer",
+  "method": "directory relocation",
+  "files": [
+    "README.md",
+    "config.json",
+    "model.safetensors"
+  ]
+}

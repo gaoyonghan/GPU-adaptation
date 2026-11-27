@@ -1,0 +1,10 @@
+{
+  "source": "caichengrui/models/microsoft--beit-base-patch16-224/weights",
+  "delivery_path": "weights/microsoft/beit-base-patch16-224",
+  "method": "directory relocation",
+  "files": [
+    "config.json",
+    "model.safetensors",
+    "preprocessor_config.json"
+  ]
+}
