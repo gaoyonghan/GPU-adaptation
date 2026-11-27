@@ -9,7 +9,6 @@ model inference for GPU adaptation/
 └── segmentation/
     ├── README.md
     └── qiuchuangxin/
-        ├── README.md
         ├── evaluate.py             # 公共分割评测入口
         ├── run_all_inference.py    # 串行批量入口
         ├── environment/            # 依赖清单和模型环境映射
@@ -47,25 +46,32 @@ python evaluate.py --environment current --bundle "$PWD/result/coco_bundle"
 
 ## 批量运行
 
-从 `segmentation/qiuchuangxin/` 选择所需阶段，默认按模型目录名排序串行运行，并复用符合断点规则的已有结果。
+进入 `segmentation/qiuchuangxin/`，用 `python --version` 确认当前解释器是 Python 3.10，且与项目虚拟环境版本匹配。批量脚本按模型目录名排序串行运行。
+
+如需重测，可以分步执行以下命令。推理成功后再导出，导出成功后再评测。导出需要对应模型有完整且兼容的预测缓存。
 
 ```bash
 cd '/data/model inference for GPU adaptation/segmentation/qiuchuangxin'
 
-# 只推理，生成预测缓存
-/usr/bin/python3 -I -S -B run_all_inference.py --venv auto --mode inference
+# 重新推理，替换当前预测缓存
+python -I -S -B run_all_inference.py --venv auto --mode inference --force
 
-# 从缓存导出 COCO 评测包
-/usr/bin/python3 -I -S -B run_all_inference.py --venv auto --mode export
+# 从新缓存导出，替换当前 COCO 评测包
+python -I -S -B run_all_inference.py --venv auto --mode export --force
 
 # 使用公共入口评测已有评测包
-/usr/bin/python3 -I -S -B evaluate.py --venv venv
-
-# 完整执行推理、导出和评测
-/usr/bin/python3 -I -S -B run_all_inference.py --venv auto --mode full
+python -I -S -B evaluate.py --venv venv
 ```
 
-批量脚本也支持 `--mode evaluation`。用 `--model <模型名>` 选定模型，或用 `--start-from <模型名>` 从指定模型起继续运行，二者择一。`--force` 重新执行所选阶段，`--dry-run` 查看运行计划。
+也可以在同一目录用一条命令完成这三个阶段。
+
+```bash
+python -I -S -B run_all_inference.py --venv auto --mode full --force
+```
+
+新缓存或评测包通过校验后会成为当前结果，被替换的文件保存在各模型的 `result/.history-*/` 下。省略 `--force` 时，脚本会尝试复用通过校验的已有结果。
+
+批量脚本也支持 `--mode evaluation`。用 `--model <模型名>` 选定模型，或用 `--start-from <模型名>` 从指定模型起继续运行，二者择一。`--dry-run` 可查看运行计划。
 
 ## 环境与依赖
 
