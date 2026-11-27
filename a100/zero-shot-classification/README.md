@@ -1,6 +1,6 @@
 # 零样本图像分类项目说明
 
-`zero-shot-classification/zhoujianjie/` 存放周建杰负责的首批 62 个模型代码、环境清单及评测入口。目录层级与同分支的 `segmentation/` 一致：任务目录维护项目说明，每位贡献者在自己的子文件夹中维护实现。
+`zero-shot-classification/zhoujianjie/` 存放首批 62 个模型代码、环境清单及评测入口。目录层级与同分支的 `segmentation/` 一致：任务目录维护项目说明，每位贡献者在自己的子文件夹中维护实现。
 
 ```text
 a100/
