@@ -1,0 +1,14 @@
+{
+  "model_id": "BAAI/AltCLIP",
+  "launcher": "run_altclip_native.py",
+  "args": [],
+  "native_task": "retrieval",
+  "public_evaluator": "unsupported_original_retrieval",
+  "bounded_smoke_supported": true,
+  "required_weights": [
+    "download_receipt.json"
+  ],
+  "required_data": [],
+  "minimum_smoke_images": 10,
+  "smoke_scope": "fixed prefix Flickr30K corpus; original metric functions; not full-gallery Recall comparison"
+}

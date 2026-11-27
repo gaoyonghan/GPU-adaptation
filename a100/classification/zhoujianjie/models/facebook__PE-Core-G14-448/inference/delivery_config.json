@@ -1,0 +1,17 @@
+{
+  "model_id": "facebook/PE-Core-G14-448",
+  "launcher": "run_pe_native.py",
+  "args": [
+    "facebook/PE-Core-G14-448"
+  ],
+  "native_task": "single_label_classification",
+  "public_evaluator": "supported_pending_validation",
+  "bounded_smoke_supported": true,
+  "required_weights": [
+    "download_receipt.json"
+  ],
+  "required_data": [
+    "raw/imagenet_a_1/dataset_infos.json",
+    "raw/imagenet_a_2"
+  ]
+}

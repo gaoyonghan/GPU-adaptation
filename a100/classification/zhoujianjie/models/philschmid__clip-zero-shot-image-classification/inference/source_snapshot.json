@@ -1,0 +1,14 @@
+{
+  "verification": "exact portable file hashes; revision provenance from original A100 evaluator; no fabricated .git directory",
+  "repositories": {
+    "big_vision": {
+      "revision": "not_recorded",
+      "portable_files": {
+        "big_vision/requirements.txt": "b8cd5a1dc1698afa09ef816b97ab85e89e15d12c31e2a62fec2480cbb34ff40b",
+        "big_vision/evaluators/proj/image_text/prompt_engineering_constants.py": "08b6bfd94da4ad774a87246c615bae191ecf7db47477c4b98e8b7a759aff00d2",
+        "big_vision/datasets/imagenet/class_names.py": "314a107b4fe15bc163030517d1191d8e6eef4d474fbaf09472323ced989cd46a",
+        "LICENSE": "43070e2d4e532684de521b885f385d0841030efa2b1a20bafb76133a5e1379c1"
+      }
+    }
+  }
+}

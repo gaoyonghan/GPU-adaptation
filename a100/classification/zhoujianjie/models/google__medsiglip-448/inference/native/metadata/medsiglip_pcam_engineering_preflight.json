@@ -1,0 +1,179 @@
+{
+  "generated_at": "2026-09-14T15:21:24+08:00",
+  "status": "passed",
+  "evaluation_class": "custom_engineering_diagnostic_only",
+  "strict_official_acceptance": false,
+  "changes_strict_acceptance_count": false,
+  "rtx4090_stage1_engineering_only": true,
+  "model": {
+    "model_id": "google/medsiglip-448",
+    "revision": "9cea28a1a1195f665105faa6e8544c112fd960a4",
+    "local_root": "models/google/medsiglip-448",
+    "checkpoint_sha256": "3e1722b8100cca8b87cfe16e42140737aa6d312854e9e6bc24dff6db70e21d72"
+  },
+  "dataset": {
+    "name": "PatchCamelyon (PCam)",
+    "source": "Zenodo record 2546921",
+    "selection_split": "official validation, all 32,768 patches",
+    "final_split": "official test, all 32,768 patches, evaluated once after selection",
+    "files": {
+      "valid": {
+        "x_path": "datasets/evaluation/biomedclip_pcam_official_original/camelyonpatch_level_2_split_valid_x.h5",
+        "y_path": "datasets/evaluation/biomedclip_pcam_official_original/camelyonpatch_level_2_split_valid_y.h5",
+        "x_bytes": 906040528,
+        "y_bytes": 34816,
+        "x_sha256": "f8b631c22de2896b53c5c655b72c0676c38d778bbc78d348d76deda81d562372",
+        "y_sha256": "7fcffec376ea1a2ef9127fe20167f20185ead7620f1bc6214e23443603927acf",
+        "image_shape": [
+          32768,
+          96,
+          96,
+          3
+        ],
+        "label_counts": [
+          16399,
+          16369
+        ]
+      },
+      "test": {
+        "x_path": "datasets/evaluation/biomedclip_pcam_official_original/camelyonpatch_level_2_split_test_x.h5",
+        "y_path": "datasets/evaluation/biomedclip_pcam_official_original/camelyonpatch_level_2_split_test_y.h5",
+        "x_bytes": 906040528,
+        "y_bytes": 34816,
+        "x_sha256": "32413335a1948b2b8ef43ec821c6df8550ece80d556c5837ac6c31ad595a511b",
+        "y_sha256": "5fe68b316e2f04fa81c142504eb0e48056693d63440dd956d19fccfeffed2ed4",
+        "image_shape": [
+          32768,
+          96,
+          96,
+          3
+        ],
+        "label_counts": [
+          16391,
+          16377
+        ]
+      }
+    }
+  },
+  "protocol": {
+    "task": "zero-shot binary image classification",
+    "selection_metric": "validation AUROC",
+    "threshold_selection": "validation Youden J (maximizes sensitivity + specificity - 1)",
+    "final_metrics": [
+      "AUROC",
+      "accuracy",
+      "balanced accuracy",
+      "macro F1",
+      "sensitivity",
+      "specificity"
+    ],
+    "prompt_registry_sha256": "72fe668521c590a5dd25974c746c94d9be2ef7de453b2a39e9bd3d941334fffd",
+    "prompt_candidates": {
+      "legacy_proxy": {
+        "source": "previous local MedSigLIP proxy diagnostic",
+        "negative": [
+          "a histopathology image without metastatic tumor tissue",
+          "benign lymph node tissue"
+        ],
+        "positive": [
+          "a histopathology image containing metastatic tumor tissue",
+          "metastatic tumor tissue"
+        ]
+      },
+      "clip_benchmark_pcam": {
+        "source": "CLIP benchmark PCam class names and English templates",
+        "negative": [
+          "a histopathology slide showing lymph node",
+          "histopathology image of lymph node"
+        ],
+        "positive": [
+          "a histopathology slide showing lymph node containing metastatic tumor tissue",
+          "histopathology image of lymph node containing metastatic tumor tissue"
+        ]
+      },
+      "biomedclip_pcam": {
+        "source": "BiomedCLIP paper Supplementary Table 10 PCam route",
+        "negative": [
+          "this is an image of normal lymph node",
+          "normal lymph node presented in image"
+        ],
+        "positive": [
+          "this is an image of lymph node metastasis",
+          "lymph node metastasis presented in image"
+        ]
+      },
+      "direct_tissue": {
+        "source": "predeclared engineering prompt pair",
+        "negative": [
+          "normal lymph node tissue",
+          "benign lymph node tissue"
+        ],
+        "positive": [
+          "lymph node metastasis",
+          "lymph node tissue containing metastatic tumor"
+        ]
+      },
+      "breast_carcinoma": {
+        "source": "predeclared engineering prompt pair using PCam clinical context",
+        "negative": [
+          "benign lymph node without metastatic breast carcinoma",
+          "normal lymph node histopathology"
+        ],
+        "positive": [
+          "metastatic breast carcinoma in a lymph node",
+          "lymph node histopathology with metastatic carcinoma"
+        ]
+      },
+      "pathology_finding": {
+        "source": "predeclared engineering prompt pair",
+        "negative": [
+          "histopathology of benign lymph node tissue",
+          "histopathology negative for metastatic carcinoma"
+        ],
+        "positive": [
+          "histopathology of metastatic tumor in lymph node tissue",
+          "histopathology positive for metastatic carcinoma"
+        ]
+      },
+      "direct_ensemble": {
+        "source": "predeclared union of direct PCam descriptions",
+        "negative": [
+          "normal lymph node tissue",
+          "benign lymph node tissue",
+          "normal lymph node histopathology",
+          "histopathology of benign lymph node tissue"
+        ],
+        "positive": [
+          "lymph node metastasis",
+          "lymph node tissue containing metastatic tumor",
+          "metastatic breast carcinoma in a lymph node",
+          "histopathology of metastatic tumor in lymph node tissue"
+        ]
+      }
+    },
+    "preprocessing_candidates": {
+      "transformers_pil_bicubic": {
+        "description": "checkpoint's Transformers processor default: PIL bicubic resize to 448",
+        "model_card_exact": false
+      },
+      "model_card_bilinear_no_antialias_torch_compatible": {
+        "description": "448px bilinear resize, antialias disabled, half-pixel coordinates and uint8 quantization; PyTorch-compatible implementation because TensorFlow is unavailable",
+        "model_card_exact": false,
+        "difference_from_model_card": "resize engine is PyTorch rather than tf.image.resize"
+      }
+    },
+    "test_set_tuning_forbidden": true
+  },
+  "official_evidence_gap": {
+    "same_checkpoint_official_pcam_reference": null,
+    "reason": "MedSigLIP's model card reports other private/unspecified medical evaluation tasks; it does not publish a same-checkpoint PCam reference and complete PCam protocol",
+    "model_card_path": "models/google/medsiglip-448/README.md",
+    "published_pathology_auc_range_diagnostic_context_only": [
+      0.721,
+      0.933
+    ],
+    "published_pathology_average_auc_diagnostic_context_only": 0.87
+  },
+  "user_decision": "When no public same-protocol metric exists, retain the RTX 4090 result as a self-defined stage-one engineering baseline with an explicit note",
+  "errors": []
+}

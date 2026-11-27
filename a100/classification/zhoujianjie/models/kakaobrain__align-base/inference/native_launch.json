@@ -1,0 +1,7 @@
+{
+  "model": "kakaobrain/align-base",
+  "historical_command": null,
+  "native_evaluator": "evaluation_audit/evaluate_kakao_align_flickr30k_official.py",
+  "historical_a100_environment": null,
+  "purpose": "provenance only; not a central task registry"
+}

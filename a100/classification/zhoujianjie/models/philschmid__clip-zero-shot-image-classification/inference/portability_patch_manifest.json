@@ -1,0 +1,107 @@
+[
+  {
+    "file": "inference/native/evaluate_imagenet1k_official.py",
+    "source_sha256": "f064be1ef714a011b32e5b8ca845d8a9848d391ac1160e24a5993bb4a2933847",
+    "path_expression_edits": 7,
+    "path_mapping_stage_sha256": "671aec10a2f45654862fcfa417848cfec63f89a8de2c4cc7106d373159377508",
+    "final_delivery_sha256": "671aec10a2f45654862fcfa417848cfec63f89a8de2c4cc7106d373159377508"
+  },
+  {
+    "file": "inference/native/native_mme5_python.py",
+    "source_sha256": "c05a7a4cbd7985c816b65773c558c1b3618d46cb41f2464a4b12150cb37623be",
+    "path_expression_edits": 2,
+    "path_mapping_stage_sha256": "222da15204400a4c7fd71daf2ca243fc0d9594d446b56bad36c634ece92799d7",
+    "final_delivery_sha256": "222da15204400a4c7fd71daf2ca243fc0d9594d446b56bad36c634ece92799d7"
+  },
+  {
+    "file": "inference/native/run_imagenet_remaining.py",
+    "source_sha256": "9ab6f75f4179f7f67aee081ccb6b46f84f8e0b4d6c32609cbe91eee08e000798",
+    "path_expression_edits": 7,
+    "path_mapping_stage_sha256": "23884ea90aab5c57c4a842138f21a01f3bf744cf1915f42603a898713f14360f",
+    "final_delivery_sha256": "23884ea90aab5c57c4a842138f21a01f3bf744cf1915f42603a898713f14360f"
+  },
+  {
+    "file": "inference/native/evaluate_b01.py",
+    "source_sha256": "77c61ebb4808aa2796a911ed99cee26c9262aebb0884c40e03ce0b6c7a81897e",
+    "path_expression_edits": 8,
+    "path_mapping_stage_sha256": "c1df3edca32ead824488dd15fc1b9ed828c540c38e9f751d1a55490a3a5ed5c5",
+    "final_delivery_sha256": "c1df3edca32ead824488dd15fc1b9ed828c540c38e9f751d1a55490a3a5ed5c5"
+  },
+  {
+    "file": "inference/native/native_fgclip_python.py",
+    "source_sha256": "85db4a246d109f7cf518835afcd67482684f256765ec1a784698966036597228",
+    "path_expression_edits": 6,
+    "path_mapping_stage_sha256": "223e2d938be89d706e31a4fc0ff343bfeb861a7ddaed6dd6b98c3547d9e8dfc5",
+    "final_delivery_sha256": "223e2d938be89d706e31a4fc0ff343bfeb861a7ddaed6dd6b98c3547d9e8dfc5"
+  },
+  {
+    "file": "inference/native/imagenet_native_a100.py",
+    "source_sha256": "f1eba1af9835211ddf77d5ce154258d55fbc1f9596252ad49573a641476c42e4",
+    "path_expression_edits": 15,
+    "path_mapping_stage_sha256": "97c60acebe1528a2b6c60867aa1a7c1f38bc7c080c20455a7e757a5394aa51df",
+    "final_delivery_sha256": "971797bb3f05f8fb91f47e422c43aa2b2ffa2d8f0309cbea3f3431c5d70db555"
+  },
+  {
+    "file": "inference/native/official_22_models.py",
+    "source_sha256": "4cec0a47a0479e2c4ae9634e5c58af1979a84340d3fa96e4fcf33de9f1fcc3b8",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "4cec0a47a0479e2c4ae9634e5c58af1979a84340d3fa96e4fcf33de9f1fcc3b8",
+    "final_delivery_sha256": "4cec0a47a0479e2c4ae9634e5c58af1979a84340d3fa96e4fcf33de9f1fcc3b8"
+  },
+  {
+    "file": "inference/native/imagenet1k_official_spec.py",
+    "source_sha256": "3aeb7f0134ee4b55a4a8b2e3aed4d176f76bc892ef1e908bb2fe209e045a43bb",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "3aeb7f0134ee4b55a4a8b2e3aed4d176f76bc892ef1e908bb2fe209e045a43bb",
+    "final_delivery_sha256": "3aeb7f0134ee4b55a4a8b2e3aed4d176f76bc892ef1e908bb2fe209e045a43bb"
+  },
+  {
+    "file": "inference/native/validate_stage2_models.py",
+    "source_sha256": "4807fc3d8ef9312bb369da6425ff32b1f16c27d640c0f63662323793f351a75b",
+    "path_expression_edits": 6,
+    "path_mapping_stage_sha256": "ff5786eda1c1319d5f32b846674c5e458188d98346b22544d9bc3de9cf2577e1",
+    "final_delivery_sha256": "ff5786eda1c1319d5f32b846674c5e458188d98346b22544d9bc3de9cf2577e1"
+  },
+  {
+    "file": "inference/native/xenova_native_a100.py",
+    "source_sha256": "87677449477e54e09634e5999e8c8a5e8172c708d8823801c864fa52367c7bea",
+    "path_expression_edits": 9,
+    "path_mapping_stage_sha256": "4225be0607e90b11a532562a8957a6123c2c621e7d8e1a70a4d2c5d29dbf3c03",
+    "final_delivery_sha256": "5a8a45c7ecacbfb6b4220a6872677c15a96a1887be914565c567df9fb52a2a3f"
+  },
+  {
+    "file": "inference/native/native_python.py",
+    "source_sha256": "ea047f7906c92e5d0173ccd6195c3d183645560aa19bcf826d028044e623005c",
+    "path_expression_edits": 6,
+    "path_mapping_stage_sha256": "2b4b7632421ea8f9b220db6446d5eb9c2892a1c1d13a97a4eda4bdb71a6fef28",
+    "final_delivery_sha256": "1bb949be95f07a3bf556d0290dd9001724efabfae9951668fc5e71896516a5b0"
+  },
+  {
+    "file": "inference/native/sitecustomize.py",
+    "source_sha256": "6eda9fd629a259c259dbd87d1f55fb4004ca20890677a7dee5745f2d7633016b",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "6eda9fd629a259c259dbd87d1f55fb4004ca20890677a7dee5745f2d7633016b",
+    "final_delivery_sha256": "962ac551ad22f7854811868a13cdd4b758c316d57acca6fa2fddea9752ce153b"
+  },
+  {
+    "file": "inference/native/model_paths.py",
+    "source_sha256": "d39241a382eaffe4ca202ac8d47cf9684c09603cc558b7d37519def06614896d",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "d39241a382eaffe4ca202ac8d47cf9684c09603cc558b7d37519def06614896d",
+    "final_delivery_sha256": "d39241a382eaffe4ca202ac8d47cf9684c09603cc558b7d37519def06614896d"
+  },
+  {
+    "file": "inference/native/reference_code/big_vision/big_vision/evaluators/proj/image_text/prompt_engineering_constants.py",
+    "source_sha256": "08b6bfd94da4ad774a87246c615bae191ecf7db47477c4b98e8b7a759aff00d2",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "08b6bfd94da4ad774a87246c615bae191ecf7db47477c4b98e8b7a759aff00d2",
+    "final_delivery_sha256": "08b6bfd94da4ad774a87246c615bae191ecf7db47477c4b98e8b7a759aff00d2"
+  },
+  {
+    "file": "inference/native/reference_code/big_vision/big_vision/datasets/imagenet/class_names.py",
+    "source_sha256": "314a107b4fe15bc163030517d1191d8e6eef4d474fbaf09472323ced989cd46a",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "314a107b4fe15bc163030517d1191d8e6eef4d474fbaf09472323ced989cd46a",
+    "final_delivery_sha256": "314a107b4fe15bc163030517d1191d8e6eef4d474fbaf09472323ced989cd46a"
+  }
+]

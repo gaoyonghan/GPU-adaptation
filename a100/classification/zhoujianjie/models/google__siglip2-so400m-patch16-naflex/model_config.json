@@ -1,0 +1,73 @@
+{
+  "model_id": "google/siglip2-so400m-patch16-naflex",
+  "revision": "cc24074f717b612951c2dead130904ab9b65a81e",
+  "scope": "user_decision_all_77_top20",
+  "historical_task": "ImageNet-1K严格评测器",
+  "backend": "Transformers AutoModel/AutoProcessor",
+  "runtime_backend": "Transformers AutoModel/AutoProcessor",
+  "handoff_status": "first_batch_framework_prepared",
+  "historical_acceptance": "严格官方指标对齐",
+  "official_datasets": "ImageNet-1k validation",
+  "native_evaluator": "evaluation_audit/evaluate_imagenet1k_official.py",
+  "native_evaluator_sha256": "f064be1ef714a011b32e5b8ca845d8a9848d391ac1160e24a5993bb4a2933847",
+  "weight_reference": "classification/zhoujianjie/models/google__siglip2-so400m-patch16-naflex/weights",
+  "evidence": [
+    {
+      "source": "results/imagenet1k_official/google/siglip2-so400m-patch16-naflex/summary.json",
+      "snapshot": "history/evidence_01.json",
+      "sha256": "7164d22fde01b344b64153184829cfcaa4529b650e5a738f57ddfc9211d4c6a4"
+    }
+  ],
+  "official_dataset": {
+    "repo_id": "ILSVRC/imagenet-1k",
+    "revision": "49e2ee26f3810fb5a7536bbf732a7b07389a47b5",
+    "split": "validation",
+    "rows": 50000,
+    "parquet_shards": 14
+  },
+  "standard_dataset": "dataset/standardized/imagenet1k_validation",
+  "primary_metrics": [
+    "top1_accuracy"
+  ],
+  "metric_unit": "fraction",
+  "classification_protocol_status": "frozen_official_imagenet",
+  "official_claim": {
+    "protocol": "bigvision_naflex_256",
+    "resolution": "variable",
+    "max_num_patches": 256,
+    "official_top1_percent": 83.5,
+    "reference_status": "verified",
+    "evidence": "official Big Vision SigLIP 2 README (NaFlex SO400M/16, sequence length 256)"
+  },
+  "model_asset_sha256": {
+    "config.json": "c633ddede50ec15d5818e04325bc4a5ac47c2762194a02486baee7d2a3a3dbc5",
+    "download_receipt.json": "2676c6eebdc37ce53ef03c52943fa705c1c57cf54b005c61357bd5cdbd816c4e",
+    "preprocessor_config.json": "1125703e5446d5b6ff4d5893a33bac128cdd21dc12e3dad2469a648fb0ae3bf7",
+    "special_tokens_map.json": "baec30ea10906f16adb8c18af7a34023002c1746542612b8b41c9f09e1351351",
+    "tokenizer_config.json": "d2343400f0f86133053325951b696df8fd0f53a007cf6a546e6c2b4361344f47"
+  },
+  "framework_sha256": {
+    "classification/zhoujianjie/models/google__siglip2-so400m-patch16-naflex/inference/shared/__init__.py": "ac530da703ede9365e51055357b2227002a9de0097e365da28ac1cd002680710",
+    "classification/zhoujianjie/models/google__siglip2-so400m-patch16-naflex/inference/shared/classification_contract.py": "a4c1f76d0d476ad5a51ba8e66dab28ba94903b62391cfd5addd762a59d53ab0b",
+    "classification/zhoujianjie/models/google__siglip2-so400m-patch16-naflex/inference/shared/classification_metrics.py": "623580d4254977e67cbfcce6c45a6e9f8eedab927e4ec692d26d63f474f49bbb",
+    "classification/zhoujianjie/models/google__siglip2-so400m-patch16-naflex/inference/shared/handoff_runtime.py": "4de24cfbb2ddb1f045a0e4d795785034be3f9a6f80cee367d9242cc1e73bdb54",
+    "classification/zhoujianjie/models/google__siglip2-so400m-patch16-naflex/inference/shared/legacy/class_names.py": "314a107b4fe15bc163030517d1191d8e6eef4d474fbaf09472323ced989cd46a",
+    "classification/zhoujianjie/models/google__siglip2-so400m-patch16-naflex/inference/shared/legacy/evaluate_b01.py": "7d71c5d270ef59a17d9148b200b6b32e0943cd10c82686b87692fd0211056ab8",
+    "classification/zhoujianjie/models/google__siglip2-so400m-patch16-naflex/inference/shared/legacy/evaluate_imagenet1k_official.py": "ee2b1d5af45da948549b811d911325bc94bc8be656be9ed0f9163bd96e2c3a01",
+    "classification/zhoujianjie/models/google__siglip2-so400m-patch16-naflex/inference/shared/legacy/imagenet1k_official_spec.py": "3aeb7f0134ee4b55a4a8b2e3aed4d176f76bc892ef1e908bb2fe209e045a43bb",
+    "classification/zhoujianjie/models/google__siglip2-so400m-patch16-naflex/inference/shared/legacy/official_22_models.py": "4cec0a47a0479e2c4ae9634e5c58af1979a84340d3fa96e4fcf33de9f1fcc3b8",
+    "classification/zhoujianjie/models/google__siglip2-so400m-patch16-naflex/inference/shared/legacy/prompt_engineering_constants.py": "08b6bfd94da4ad774a87246c615bae191ecf7db47477c4b98e8b7a759aff00d2",
+    "classification/zhoujianjie/models/google__siglip2-so400m-patch16-naflex/inference/shared/legacy/validate_stage2_models.py": "a4436f1e241f2bc98ec48661fdcee76369b2c73e1bc7b16b14a01cb84a65532a",
+    "classification/zhoujianjie/models/google__siglip2-so400m-patch16-naflex/inference/shared/standard_dataset.py": "9ef01e01d024a5e3897e14e51fe099238701ab6a9c7623946411db892e278098",
+    "classification/zhoujianjie/models/google__siglip2-so400m-patch16-naflex/inference/shared/standard_scoring.py": "b47dfa18dec99f68e0dd35965aee27f116a5ca48f8925bb1ea0847d8cd6c29e8",
+    "classification/zhoujianjie/models/google__siglip2-so400m-patch16-naflex/inference/Dataset_Coco/__init__.py": "bc5bb4e4e38cf7a2445eb919778d69361ca2f0cb10db241651d80a217bcf6b85",
+    "classification/zhoujianjie/models/google__siglip2-so400m-patch16-naflex/inference/Dataset_Coco/coco_bundle.py": "965397e6f697e414bca59d987660d394af5e5cad0be145cdd5d9224cfcc06263"
+  },
+  "weight_reference_before_packaging": "models/google/siglip2-so400m-patch16-naflex",
+  "a100_historical_status": "completed",
+  "submission_gpu_retested": false,
+  "submission_required_dataset_directories": [
+    "raw/imagenet1k_validation/data",
+    "standardized/imagenet1k_validation"
+  ]
+}

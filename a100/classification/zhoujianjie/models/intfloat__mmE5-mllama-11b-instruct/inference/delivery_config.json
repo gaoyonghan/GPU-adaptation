@@ -1,0 +1,19 @@
+{
+  "model_id": "intfloat/mmE5-mllama-11b-instruct",
+  "launcher": "run_special_native.py",
+  "args": [
+    "intfloat/mmE5-mllama-11b-instruct"
+  ],
+  "native_task": "single_label_classification",
+  "public_evaluator": "supported_pending_validation",
+  "bounded_smoke_supported": true,
+  "required_weights": [
+    "download_receipt.json"
+  ],
+  "required_data": [
+    "raw/mmeb_country_1/test-00000-of-00001.parquet",
+    "raw/mmeb_runtime/Country211",
+    "raw/mmeb_country_2"
+  ],
+  "smoke_scope": "fixed prefix queries; all original 211 text candidates retained"
+}

@@ -1,0 +1,21 @@
+{
+  "checks": {
+    "model_directories": 77,
+    "environment_mappings": 77,
+    "entry_help_checks": 154,
+    "empty_resource_fail_closed_checks": 77,
+    "symlinks": 0,
+    "utf8_text_files_checked": 6192,
+    "shared_evaluator_contract_fixtures": 3,
+    "code_bytes": 55225572,
+    "relocated_framework_hash_entries_verified": 465
+  },
+  "errors": [],
+  "gpu_inference_executed": false,
+  "scope": "directory, UTF-8 Python syntax of active entries, source hashes, CLI, missing resources, output contract only",
+  "does_not_prove": "fresh environment installation, independent entry GPU accuracy/latency, completion of remaining native entry integration",
+  "submission_status_counts": {
+    "independent_entry_prepared": 31,
+    "native_source_preserved_pending_integration": 46
+  }
+}

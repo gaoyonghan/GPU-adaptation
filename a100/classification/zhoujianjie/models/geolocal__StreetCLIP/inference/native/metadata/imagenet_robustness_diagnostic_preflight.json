@@ -1,0 +1,181 @@
+{
+  "generated_at": "2026-09-07T20:57:29+08:00",
+  "purpose": "multi_model_diagnostic_preflight",
+  "strict_official_acceptance": false,
+  "datasets": {
+    "imagenetv2": {
+      "name": "ImageNetV2 matched-frequency",
+      "hf_repo": "vaishaal/ImageNetV2",
+      "revision": "d626240be2538720e83103a0e1178d24aca8b12c",
+      "rows": 10000,
+      "files": [
+        {
+          "path": "datasets/evaluation/imagenetv2_hf/imagenetv2-matched-frequency.tar.gz",
+          "bytes": 1264079360,
+          "sha256": "f0c37fdf925916b19ea1323cd9a2208cdb6959ba2c32eef2a7fc393835c9ca7c",
+          "expected_lfs_sha256": "f0c37fdf925916b19ea1323cd9a2208cdb6959ba2c32eef2a7fc393835c9ca7c",
+          "sha256_verified": true,
+          "archive_format": "POSIX tar (despite .tar.gz suffix)",
+          "images": 10000
+        }
+      ]
+    }
+  },
+  "model_to_dataset_to_reference": [
+    {
+      "model_id": "zer0int/CLIP-GmP-ViT-L-14",
+      "checkpoint_revision": "0b0bcd1f834709cca4b197dceacd9a04858077de",
+      "backend": "Transformers AutoModel/AutoProcessor",
+      "dataset": "imagenetv2",
+      "dataset_revision": "d626240be2538720e83103a0e1178d24aca8b12c",
+      "protocol": "PE bundled CLIP Benchmark ImageNet classnames + 80-template ensemble",
+      "metric": "top-1 and top-5 accuracy",
+      "same_checkpoint_official_reference": null,
+      "scope": "diagnostic_only_not_official_acceptance"
+    },
+    {
+      "model_id": "zer0int/LongCLIP-GmP-ViT-L-14",
+      "checkpoint_revision": "b476fa98520cd6af531f6b612443e72e41b6fb79",
+      "backend": "Transformers AutoModel/AutoProcessor",
+      "dataset": "imagenetv2",
+      "dataset_revision": "d626240be2538720e83103a0e1178d24aca8b12c",
+      "protocol": "PE bundled CLIP Benchmark ImageNet classnames + 80-template ensemble",
+      "metric": "top-1 and top-5 accuracy",
+      "same_checkpoint_official_reference": null,
+      "scope": "diagnostic_only_not_official_acceptance"
+    },
+    {
+      "model_id": "zer0int/CLIP-SAE-ViT-L-14",
+      "checkpoint_revision": "acd29db306c3a1c81b9adb87292aa788ca2cb4dc",
+      "backend": "Transformers AutoModel/AutoProcessor",
+      "dataset": "imagenetv2",
+      "dataset_revision": "d626240be2538720e83103a0e1178d24aca8b12c",
+      "protocol": "PE bundled CLIP Benchmark ImageNet classnames + 80-template ensemble",
+      "metric": "top-1 and top-5 accuracy",
+      "same_checkpoint_official_reference": null,
+      "scope": "diagnostic_only_not_official_acceptance"
+    },
+    {
+      "model_id": "zer0int/LongCLIP-SAE-ViT-L-14",
+      "checkpoint_revision": "c3ff41c380556052e286df9c3cc034ee3b2b5b2b",
+      "backend": "Transformers AutoModel/AutoProcessor",
+      "dataset": "imagenetv2",
+      "dataset_revision": "d626240be2538720e83103a0e1178d24aca8b12c",
+      "protocol": "PE bundled CLIP Benchmark ImageNet classnames + 80-template ensemble",
+      "metric": "top-1 and top-5 accuracy",
+      "same_checkpoint_official_reference": null,
+      "scope": "diagnostic_only_not_official_acceptance"
+    },
+    {
+      "model_id": "geolocal/StreetCLIP",
+      "checkpoint_revision": "e3561ba2ad9bf14c9efd6b0092607b8497efbfea",
+      "backend": "Transformers AutoModel/AutoProcessor",
+      "dataset": "imagenetv2",
+      "dataset_revision": "d626240be2538720e83103a0e1178d24aca8b12c",
+      "protocol": "PE bundled CLIP Benchmark ImageNet classnames + 80-template ensemble",
+      "metric": "top-1 and top-5 accuracy",
+      "same_checkpoint_official_reference": null,
+      "scope": "diagnostic_only_not_official_acceptance"
+    },
+    {
+      "model_id": "google/siglip-so400m-patch14-224",
+      "checkpoint_revision": "d04cf29fca7b6374f74d8bea1969314492266b5e",
+      "backend": "Transformers AutoModel/AutoProcessor",
+      "dataset": "imagenetv2",
+      "dataset_revision": "d626240be2538720e83103a0e1178d24aca8b12c",
+      "protocol": "PE bundled CLIP Benchmark ImageNet classnames + 80-template ensemble",
+      "metric": "top-1 and top-5 accuracy",
+      "same_checkpoint_official_reference": null,
+      "scope": "diagnostic_only_not_official_acceptance"
+    },
+    {
+      "model_id": "HuggingFaceM4/siglip-so400m-14-980-flash-attn2-navit",
+      "checkpoint_revision": "d66538faeba44480d0bfaa42145eef26f9423199",
+      "backend": "audited_local_navit",
+      "dataset": "imagenetv2",
+      "dataset_revision": "d626240be2538720e83103a0e1178d24aca8b12c",
+      "protocol": "PE bundled CLIP Benchmark ImageNet classnames + 80-template ensemble",
+      "metric": "top-1 and top-5 accuracy",
+      "same_checkpoint_official_reference": null,
+      "scope": "diagnostic_only_not_official_acceptance"
+    },
+    {
+      "model_id": "google/siglip-base-patch16-256-multilingual",
+      "checkpoint_revision": "8952a4eafcde3cb7ab46b1dd629b33f8784ca9c6",
+      "backend": "Transformers AutoModel/AutoProcessor",
+      "dataset": "imagenetv2",
+      "dataset_revision": "d626240be2538720e83103a0e1178d24aca8b12c",
+      "protocol": "PE bundled CLIP Benchmark ImageNet classnames + 80-template ensemble",
+      "metric": "top-1 and top-5 accuracy",
+      "same_checkpoint_official_reference": null,
+      "scope": "diagnostic_only_not_official_acceptance"
+    },
+    {
+      "model_id": "google/siglip-so400m-patch16-256-i18n",
+      "checkpoint_revision": "365d321c0cfdea96bc28e3a29787a11a062681a1",
+      "backend": "Transformers AutoModel/AutoProcessor",
+      "dataset": "imagenetv2",
+      "dataset_revision": "d626240be2538720e83103a0e1178d24aca8b12c",
+      "protocol": "PE bundled CLIP Benchmark ImageNet classnames + 80-template ensemble",
+      "metric": "top-1 and top-5 accuracy",
+      "same_checkpoint_official_reference": null,
+      "scope": "diagnostic_only_not_official_acceptance"
+    },
+    {
+      "model_id": "woweenie/open-clip-vit-h-nsfw-finetune",
+      "checkpoint_revision": "8e9492ce2c49615ede3643ecae7414faf62f556c",
+      "backend": "OpenCLIP",
+      "dataset": "imagenetv2",
+      "dataset_revision": "d626240be2538720e83103a0e1178d24aca8b12c",
+      "protocol": "PE bundled CLIP Benchmark ImageNet classnames + 80-template ensemble",
+      "metric": "top-1 and top-5 accuracy",
+      "same_checkpoint_official_reference": null,
+      "scope": "diagnostic_only_not_official_acceptance"
+    },
+    {
+      "model_id": "flaviagiammarino/pubmed-clip-vit-base-patch32",
+      "checkpoint_revision": "26c0c67f6da303ad2a38909130bd35744ea93517",
+      "backend": "Transformers AutoModel/AutoProcessor",
+      "dataset": "imagenetv2",
+      "dataset_revision": "d626240be2538720e83103a0e1178d24aca8b12c",
+      "protocol": "PE bundled CLIP Benchmark ImageNet classnames + 80-template ensemble",
+      "metric": "top-1 and top-5 accuracy",
+      "same_checkpoint_official_reference": null,
+      "scope": "diagnostic_only_not_official_acceptance"
+    },
+    {
+      "model_id": "lyua1225/clip-huge-zh-75k-steps-bs4096",
+      "checkpoint_revision": "4db247309b7598ab786b09a84bd5a2f57b20a048",
+      "backend": "Transformers AutoModel/AutoProcessor",
+      "dataset": "imagenetv2",
+      "dataset_revision": "d626240be2538720e83103a0e1178d24aca8b12c",
+      "protocol": "PE bundled CLIP Benchmark ImageNet classnames + 80-template ensemble",
+      "metric": "top-1 and top-5 accuracy",
+      "same_checkpoint_official_reference": null,
+      "scope": "diagnostic_only_not_official_acceptance"
+    },
+    {
+      "model_id": "Bingsu/clip-vit-large-patch14-ko",
+      "checkpoint_revision": "278fc4af1db3edde1f73a501f167600832d0d554",
+      "backend": "Transformers AutoModel/AutoProcessor",
+      "dataset": "imagenetv2",
+      "dataset_revision": "d626240be2538720e83103a0e1178d24aca8b12c",
+      "protocol": "PE bundled CLIP Benchmark ImageNet classnames + 80-template ensemble",
+      "metric": "top-1 and top-5 accuracy",
+      "same_checkpoint_official_reference": null,
+      "scope": "diagnostic_only_not_official_acceptance"
+    },
+    {
+      "model_id": "OysterQAQ/DanbooruCLIP",
+      "checkpoint_revision": "aa2e603035bdf3e414e349f98ab2f9d3f6b43c5d",
+      "backend": "Transformers AutoModel/AutoProcessor",
+      "dataset": "imagenetv2",
+      "dataset_revision": "d626240be2538720e83103a0e1178d24aca8b12c",
+      "protocol": "PE bundled CLIP Benchmark ImageNet classnames + 80-template ensemble",
+      "metric": "top-1 and top-5 accuracy",
+      "same_checkpoint_official_reference": null,
+      "scope": "diagnostic_only_not_official_acceptance"
+    }
+  ],
+  "status": "PASS_DIAGNOSTIC"
+}

@@ -1,0 +1,38 @@
+{
+  "verification": "exact portable file hashes; revision provenance from original A100 evaluator; no fabricated .git directory",
+  "repositories": {
+    "marqo-FashionCLIP": {
+      "revision": "not_recorded",
+      "portable_files": {
+        "requirements.txt": "c039e524f27d36214aca65fc17cdbe13111d33d62ac8c207a0f4beb32eb1f7f2",
+        "summarize_results.py": "34e8b649bc4da234f17a3e96fb4cbc2df1113b0e3fe58bae708ecbb74988f04b",
+        "eval.py": "1b9a2fb135a5c23a42e2b534f9f5eb96eea916b22b02ef890aeeebe20ea1559a",
+        "LEADERBOARD.md": "8fb2baf7ac833efb07d224e6edc3beecb86f9246c818f939c8f49f35b321e31d",
+        "README.md": "9274b50ec13454febdc2fe317acb1c59d156778652140fd234f07c959ac58304",
+        "data/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "data/utils.py": "fc3938f02394285dd9e9fd13a1eeb9f9a3af96686400d949e59296fbe9d23552",
+        "scripts/fashionCLIP2.sh": "602b7f093e28eb30cec6b197dbaa9fd45b2a636527a160307433c97d6fde9295",
+        "scripts/openfashionCLIP.sh": "bccacf560061bc1830342b04b8c1b2628d10761404aba48893e74144abc8ef9e",
+        "scripts/vitb16_laion2b_s34b_b88k.sh": "4e2b3bb607c00aba99374395455c1c704388d6f641e70ef04f38eb62cc28237e",
+        "scripts/marqo_fashionCLIP.sh": "83b413adffb196d00b2707895227c0429ae59ccb9c9d0fa0f8521bb6e7c4ac95",
+        "scripts/vitb16_siglip_webli.sh": "33f9ec8194e04db184209df29efcdaa9610c42bb25ab7140d46dcd5c2b827444",
+        "scripts/marqo_fashionSigLIP.sh": "4bf5bb5169906b6727a3e2700844dae403c11f86aebf0bcbd53cd83c1ecfd66a",
+        "models/__init__.py": "cd92784484a7d653abbdfb75d37b841f88f66439406a9b36665bef4419cffcf0",
+        "models/open_clip_model.py": "dd2b6074f01dcea0e3e95748e63d100f7b2bf74233668885749f0ce33f4fbd70",
+        "models/hf_models.py": "4c5043f8b7c7b099aafbf4965551209d86c9d5648faffe29daecbba0928c4f78",
+        "configs/iMaterialist.json": "691b95ebbaf22a66d2d1eb87867a348557521942c7f04b2ccfe5bdc94f7f61e8",
+        "configs/polyvore.json": "81b21be57ec20af09cf3520cfdbf7544e8684398f79ae47e97736a84fce725b1",
+        "configs/deepfashion_inshop.json": "ac6fd030edf43205b333b1ea11a2f6dfec397342d223f09c2fde8906affbf5c7",
+        "configs/KAGL.json": "620af93726196fba990113d2c7d0807ea3e9820b2c0db7843abf56df9d65257e",
+        "configs/deepfashion_multimodal.json": "bedc2496bab703008fde7dbe4fd87ee8b99c74578c9161cf778121fa2b1e2b87",
+        "configs/fashion200k.json": "c63a649b4200016f25aed42b9813e8df8fa3219a09b11897432ab755d439a9c0",
+        "configs/atlas.json": "9f00f1d09787175adf5104a1476c4cd6a50d8e62d2e4b196639b76d759921f26",
+        "utils/retrieval.py": "435770b57392cf1d6dad8cc12591b182271b0ed3e41ab99c9f7da9b7c5cc4038",
+        "utils/__init__.py": "40a2f38db7fc58b7b934c61c50daa48bb57ae8d8eb54bb256b227056d39ff38d",
+        "utils/logger.py": "87ee7b243d8c395925b5a6374d83e938390c6ef679f4ba8884b81eb1e13210c1",
+        "utils/metrics.py": "c47122b2e9b642f3aa8c77dc443b6a2e8dcda1920cc32a05dbd6348f54612218",
+        "LICENSE": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+      }
+    }
+  }
+}

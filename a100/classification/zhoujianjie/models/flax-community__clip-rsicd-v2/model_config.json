@@ -1,0 +1,61 @@
+{
+  "model_id": "flax-community/clip-rsicd-v2",
+  "revision": "fbe163da0609a2f185c22bb3af7b54ebad5a1800",
+  "scope": "user_decision_all_77_top20",
+  "historical_task": "RSICD官方评测器",
+  "backend": "Transformers AutoModel/AutoProcessor",
+  "runtime_backend": "Transformers AutoModel/AutoProcessor",
+  "handoff_status": "catalogued_native_protocol_port_pending",
+  "historical_acceptance": "严格官方指标对齐",
+  "official_datasets": "RSICD official test",
+  "native_evaluator": "evaluation_audit/evaluate_clip_rsicd_official.py",
+  "native_evaluator_sha256": "e1830127b66469c13006e194fbcfa26c250567e111c2be781a362d823f9ec9df",
+  "weight_reference": "classification/zhoujianjie/models/flax-community__clip-rsicd-v2/weights",
+  "evidence": [
+    {
+      "source": "results/clip_rsicd_official/flax-community/clip-rsicd-v2/summary.json",
+      "snapshot": "history/evidence_01.json",
+      "sha256": "fd1c3e2c1aa0f6b414c0bbebed009102de4caff908aebe3969783b6aa6216789"
+    }
+  ],
+  "official_dataset": null,
+  "standard_dataset": null,
+  "primary_metrics": [
+    "top1_accuracy"
+  ],
+  "metric_unit": "fraction",
+  "classification_protocol_status": "requires_native_protocol_review_before_top1",
+  "official_claim": null,
+  "model_asset_sha256": {
+    "config.json": "e3a84d2f979775788749c0c66bd659258c84ebd599a187d88b190b1e1c787861",
+    "download_receipt.json": "430e951ac3fc53c18a9a68533106d5bd9a9353d1976489e32395ec28cad62b05",
+    "merges.txt": "f526393189112391ce6f9795d4695f704121ce452c3aad1f5335cc41337eba85",
+    "preprocessor_config.json": "20882a3f366cf91fe2e567ccd9520659ef701dfe2228aff23289c10cf4274676",
+    "special_tokens_map.json": "f8c0d6c39aee3f8431078ef6646567b0aba7f2246e9c54b8b99d55c22b707cbf",
+    "tokenizer_config.json": "2bcf489fa53614a63bf4715b91e462b6805ce02a95abebfdf0f47c8f1c6147f7",
+    "vocab.json": "5047b556ce86ccaf6aa22b3ffccfc52d391ea4accdab9c2f2407da5b742d4363"
+  },
+  "framework_sha256": {
+    "classification/zhoujianjie/shared/__init__.py": "ac530da703ede9365e51055357b2227002a9de0097e365da28ac1cd002680710",
+    "classification/zhoujianjie/shared/classification_contract.py": "a4c1f76d0d476ad5a51ba8e66dab28ba94903b62391cfd5addd762a59d53ab0b",
+    "classification/zhoujianjie/shared/handoff_runtime.py": "691077a04b3d8ff962f59255d4771dcbf3f13818828f587ea979c9491a7e755c",
+    "classification/zhoujianjie/shared/classification_metrics.py": "623580d4254977e67cbfcce6c45a6e9f8eedab927e4ec692d26d63f474f49bbb",
+    "classification/zhoujianjie/shared/standard_scoring.py": "b47dfa18dec99f68e0dd35965aee27f116a5ca48f8925bb1ea0847d8cd6c29e8",
+    "classification/zhoujianjie/shared/standard_dataset.py": "9ef01e01d024a5e3897e14e51fe099238701ab6a9c7623946411db892e278098",
+    "classification/zhoujianjie/shared/legacy/evaluate_imagenet1k_official.py": "ee2b1d5af45da948549b811d911325bc94bc8be656be9ed0f9163bd96e2c3a01",
+    "classification/zhoujianjie/shared/legacy/evaluate_b01.py": "7d71c5d270ef59a17d9148b200b6b32e0943cd10c82686b87692fd0211056ab8",
+    "classification/zhoujianjie/shared/legacy/official_22_models.py": "4cec0a47a0479e2c4ae9634e5c58af1979a84340d3fa96e4fcf33de9f1fcc3b8",
+    "classification/zhoujianjie/shared/legacy/imagenet1k_official_spec.py": "3aeb7f0134ee4b55a4a8b2e3aed4d176f76bc892ef1e908bb2fe209e045a43bb",
+    "classification/zhoujianjie/shared/legacy/validate_stage2_models.py": "a4436f1e241f2bc98ec48661fdcee76369b2c73e1bc7b16b14a01cb84a65532a",
+    "classification/zhoujianjie/shared/legacy/prompt_engineering_constants.py": "08b6bfd94da4ad774a87246c615bae191ecf7db47477c4b98e8b7a759aff00d2",
+    "classification/zhoujianjie/shared/legacy/class_names.py": "314a107b4fe15bc163030517d1191d8e6eef4d474fbaf09472323ced989cd46a",
+    "classification/zhoujianjie/Dataset_Coco/coco_bundle.py": "965397e6f697e414bca59d987660d394af5e5cad0be145cdd5d9224cfcc06263",
+    "classification/zhoujianjie/Dataset_Coco/__init__.py": "bc5bb4e4e38cf7a2445eb919778d69361ca2f0cb10db241651d80a217bcf6b85"
+  },
+  "weight_reference_before_packaging": "models/flax-community/clip-rsicd-v2",
+  "a100_historical_status": "completed",
+  "submission_gpu_retested": false,
+  "remaining_work": [
+    "本模型的原生入口尚依赖旧工程路径/外部源码，需完成独立化和标准输出接入。"
+  ]
+}

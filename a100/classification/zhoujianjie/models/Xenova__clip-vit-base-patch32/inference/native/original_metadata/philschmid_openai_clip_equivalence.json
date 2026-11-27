@@ -1,0 +1,21 @@
+{
+  "purpose": "exact_checkpoint_and_preprocessing_equivalence",
+  "generated_at": "2026-09-05T23:19:33+08:00",
+  "fork_model": "philschmid/clip-zero-shot-image-classification@6b7bcddb54223369dc82ddd675135ff2cfa44fd4",
+  "source_model": "openai/clip-vit-base-patch32@3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268",
+  "publisher_claim": "model card identifies the repository as a fork of openai/clip-vit-base-patch32 for a custom inference endpoint",
+  "fork_pytorch_bin_sha256": "a63082132ba4f97a80bea76823f544493bffa8082296d62d71581a4feff1576f",
+  "recorded_openai_source_bin_sha256": "a63082132ba4f97a80bea76823f544493bffa8082296d62d71581a4feff1576f",
+  "openai_local_safetensors_sha256": "99d28a652e6ec46629ab7047a0ac82c69b1fe11e0ce672c43af65d3a9a3fc05d",
+  "artifact_checks": {
+    "fork_bin_matches_recorded_openai_source_bin": true,
+    "tensor_key_sets_equal": true,
+    "tensor_count": 400,
+    "tensor_value_mismatch_count": 0,
+    "preprocessor_byte_identical": true,
+    "tokenizer_json_byte_identical": true,
+    "merges_byte_identical": true,
+    "vocab_byte_identical": true
+  },
+  "status": "passed"
+}

@@ -1,0 +1,8 @@
+{
+  "model": "HuggingFaceM4/siglip-so400m-14-980-flash-attn2-navit",
+  "historical_a100_status": "completed",
+  "submission_entry_status": "native_port_prepared_pending_validation",
+  "gpu_retested_in_submission": false,
+  "reason": null,
+  "public_evaluator": "unsupported_original_retrieval"
+}

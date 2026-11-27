@@ -1,0 +1,62 @@
+{
+  "model_id": "philschmid/clip-zero-shot-image-classification",
+  "revision": "6b7bcddb54223369dc82ddd675135ff2cfa44fd4",
+  "scope": "user_decision_all_77_top20",
+  "historical_task": "ImageNet-1K严格评测器",
+  "backend": "Transformers AutoModel/AutoProcessor",
+  "runtime_backend": "Transformers AutoModel/AutoProcessor",
+  "handoff_status": "catalogued_native_protocol_port_pending",
+  "historical_acceptance": "严格官方指标对齐",
+  "official_datasets": "ImageNet-1k validation",
+  "native_evaluator": "evaluation_audit/evaluate_imagenet1k_official.py",
+  "native_evaluator_sha256": "f064be1ef714a011b32e5b8ca845d8a9848d391ac1160e24a5993bb4a2933847",
+  "weight_reference": "classification/zhoujianjie/models/philschmid__clip-zero-shot-image-classification/weights",
+  "evidence": [
+    {
+      "source": "results/imagenet1k_official/philschmid/clip-zero-shot-image-classification/summary.json",
+      "snapshot": "history/evidence_01.json",
+      "sha256": "483faf57e00fb327eb9385e30a38fc83da3fa68b2eed87e242752f381aa7b560"
+    }
+  ],
+  "official_dataset": null,
+  "standard_dataset": null,
+  "primary_metrics": [
+    "top1_accuracy"
+  ],
+  "metric_unit": "fraction",
+  "classification_protocol_status": "requires_native_protocol_review_before_top1",
+  "official_claim": null,
+  "model_asset_sha256": {
+    "config.json": "a2ba4327b21af6b47f22100258c8682a75240d340cc3296a5b0f850f2d178aa0",
+    "download_receipt.json": "143d10f0cd479b9ba1084c1bc0d74a64f93398957c3c3a1f1106a3a11cb8abb1",
+    "merges.txt": "f526393189112391ce6f9795d4695f704121ce452c3aad1f5335cc41337eba85",
+    "preprocessor_config.json": "910e70b3956ac9879ebc90b22fb3bc8a75b6a0677814500101a4c072bd7857bd",
+    "special_tokens_map.json": "f8c0d6c39aee3f8431078ef6646567b0aba7f2246e9c54b8b99d55c22b707cbf",
+    "tokenizer.json": "b556ac8c99757ffb677208af34bc8c6721572114111a6e0aaf5fa69ff0b8d842",
+    "tokenizer_config.json": "cbcdcf14cede6b5c3a6841f37961364357d82bef3079beb115e95f27252526a0",
+    "vocab.json": "5047b556ce86ccaf6aa22b3ffccfc52d391ea4accdab9c2f2407da5b742d4363"
+  },
+  "framework_sha256": {
+    "classification/zhoujianjie/shared/__init__.py": "ac530da703ede9365e51055357b2227002a9de0097e365da28ac1cd002680710",
+    "classification/zhoujianjie/shared/classification_contract.py": "a4c1f76d0d476ad5a51ba8e66dab28ba94903b62391cfd5addd762a59d53ab0b",
+    "classification/zhoujianjie/shared/handoff_runtime.py": "691077a04b3d8ff962f59255d4771dcbf3f13818828f587ea979c9491a7e755c",
+    "classification/zhoujianjie/shared/classification_metrics.py": "623580d4254977e67cbfcce6c45a6e9f8eedab927e4ec692d26d63f474f49bbb",
+    "classification/zhoujianjie/shared/standard_scoring.py": "b47dfa18dec99f68e0dd35965aee27f116a5ca48f8925bb1ea0847d8cd6c29e8",
+    "classification/zhoujianjie/shared/standard_dataset.py": "9ef01e01d024a5e3897e14e51fe099238701ab6a9c7623946411db892e278098",
+    "classification/zhoujianjie/shared/legacy/evaluate_imagenet1k_official.py": "ee2b1d5af45da948549b811d911325bc94bc8be656be9ed0f9163bd96e2c3a01",
+    "classification/zhoujianjie/shared/legacy/evaluate_b01.py": "7d71c5d270ef59a17d9148b200b6b32e0943cd10c82686b87692fd0211056ab8",
+    "classification/zhoujianjie/shared/legacy/official_22_models.py": "4cec0a47a0479e2c4ae9634e5c58af1979a84340d3fa96e4fcf33de9f1fcc3b8",
+    "classification/zhoujianjie/shared/legacy/imagenet1k_official_spec.py": "3aeb7f0134ee4b55a4a8b2e3aed4d176f76bc892ef1e908bb2fe209e045a43bb",
+    "classification/zhoujianjie/shared/legacy/validate_stage2_models.py": "a4436f1e241f2bc98ec48661fdcee76369b2c73e1bc7b16b14a01cb84a65532a",
+    "classification/zhoujianjie/shared/legacy/prompt_engineering_constants.py": "08b6bfd94da4ad774a87246c615bae191ecf7db47477c4b98e8b7a759aff00d2",
+    "classification/zhoujianjie/shared/legacy/class_names.py": "314a107b4fe15bc163030517d1191d8e6eef4d474fbaf09472323ced989cd46a",
+    "classification/zhoujianjie/Dataset_Coco/coco_bundle.py": "965397e6f697e414bca59d987660d394af5e5cad0be145cdd5d9224cfcc06263",
+    "classification/zhoujianjie/Dataset_Coco/__init__.py": "bc5bb4e4e38cf7a2445eb919778d69361ca2f0cb10db241651d80a217bcf6b85"
+  },
+  "weight_reference_before_packaging": "models/philschmid/clip-zero-shot-image-classification",
+  "a100_historical_status": "completed",
+  "submission_gpu_retested": false,
+  "remaining_work": [
+    "本模型的原生入口尚依赖旧工程路径/外部源码，需完成独立化和标准输出接入。"
+  ]
+}

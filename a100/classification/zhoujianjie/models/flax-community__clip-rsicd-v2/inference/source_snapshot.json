@@ -1,0 +1,24 @@
+{
+  "verification": "exact portable file hashes; revision provenance from original A100 evaluator; no fabricated .git directory",
+  "repositories": {
+    "CLIP-rsicd": {
+      "revision": "not_recorded",
+      "portable_files": {
+        "requirements.txt": "66cbe6cb617df9ecfa7c74175cf1c315a13da0ef3b67644e23d0a6dc21380b04",
+        "sweep.yaml": "a03410504634fcf2ffb526210b668d05a70d09e858bf4e755073d2e431d0a416",
+        "run_clip_flax.py": "a2d9c923bec252a7552ac6dd2de665ed7ca745dccb9900f23f5895a5c0caf224",
+        "run_clip_training_tv.sh": "bbf95dc5a0bfa46cb38edead8306605658be6c96d6566a764c0cacb0ae1a4513",
+        "rsicd.py": "898d2941a411afb91445f887ee0017aec20f885a8edb1a1ea4ec682a7eae36b0",
+        "run_clip_flax_tv.py": "d03056657733ccb805637ec21dcbb6681b6c70fe9aa4baab11a525cef969f585",
+        "README.md": "be48e5ab2910703574d5540190992601bd809200d3196ef00e3b4da7b3b6fbe6",
+        "run_clip_eval.py": "b7424d1ea7eb05e536413ecf877a3b7bcfb5f6244e693d2f46e70bbd0b71f1aa",
+        "run_clip_training.sh": "6f30b939d2c605ec7849f6556f6a82f553ffb77f0d422a0f4341b7773fdc3487",
+        "docs/fine-tune-clip-rsicd..md": "48a28566f159b66f448cc889a56545087143a2c5d9ec560dee642c419588fbe5",
+        "utils/flax2pt.py": "23654fd37d45d73bf9fd44b5027a0a9ce84dd576a4e0a95cdeacf65edf5099fd",
+        "utils/add_processor.py": "ad605f1dfc934a0b3a51efc89cfb39914250943f5e113f0c9323e6044fb9dafa",
+        "utils/data.py": "5e219dbfe681a5103bf996dde868a07bd47eda643f03b6977e8a849ce15f3296",
+        "LICENSE": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+      }
+    }
+  }
+}

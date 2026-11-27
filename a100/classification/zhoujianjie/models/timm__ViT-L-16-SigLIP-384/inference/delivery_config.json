@@ -1,0 +1,14 @@
+{
+  "model_id": "timm/ViT-L-16-SigLIP-384",
+  "launcher": "run_openclip_native.py",
+  "args": [
+    "timm/ViT-L-16-SigLIP-384"
+  ],
+  "native_task": "single_label_classification",
+  "public_evaluator": "supported_pending_validation",
+  "bounded_smoke_supported": true,
+  "required_weights": [
+    "download_receipt.json"
+  ],
+  "required_data": []
+}

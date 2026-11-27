@@ -1,0 +1,352 @@
+[
+  {
+    "file": "inference/original_sources/evaluate_chinese_clip_original_official.py",
+    "sha256": "5ee6216d1c44ad6f609d8bfc4abdb5f776334ecd1583f61cb9a9540efac13e5b",
+    "source": "4090 original evaluator"
+  },
+  {
+    "file": "inference/original_sources/reference_code/Chinese-CLIP/.github/workflows/dependency-review.yml",
+    "sha256": "33bb27d4d20634629d79fc6c0d2a06305fbe0019a915746ae41660ccd22e8e0e",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/Chinese-CLIP/README.md",
+    "sha256": "235164fdbdc4c02662204a71bba8e53d43b82ff4528be88c3fc10c39bbd5b0fb",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/Chinese-CLIP/README_En.md",
+    "sha256": "46507f7f7e93730d2f90d60854f9b2dbf0ceb99ade39b9da5e4ff74768d12885",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/Chinese-CLIP/Results.md",
+    "sha256": "eb0e9264c832f27fa7466b6c6f65b9fe160feff187600f30f9b5c9876473a27f",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/Chinese-CLIP/cn_clip/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/Chinese-CLIP/cn_clip/clip/__init__.py",
+    "sha256": "92ab57999ef5e474cac4feeea22aad56528a2ba98650fcb271bb8cdc7b047b97",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/Chinese-CLIP/cn_clip/clip/bert_tokenizer.py",
+    "sha256": "584f8572b41900c5b138853e1d64d3c89d788bbc346faed84728346e7c2e0d74",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/Chinese-CLIP/cn_clip/clip/configuration_bert.py",
+    "sha256": "f3c0a8fd537f13edeb2f5a82a61bb4e7f0a868c7ac36f91ac83ab79d9fe0ece0",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/Chinese-CLIP/cn_clip/clip/model.py",
+    "sha256": "9887ae2feda606a920bf2d41fa39cb9c3209bc627761f21524f9a6dc0d995e5e",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/Chinese-CLIP/cn_clip/clip/model_configs/RBT3-chinese.json",
+    "sha256": "05902f9b928bfef67c7540acb7ab974c9d570935a27fe25e371fd5d5d6185704",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/Chinese-CLIP/cn_clip/clip/model_configs/RN50.json",
+    "sha256": "33d67ceefafa740e13e6254cf4b568342e5b254876222a457e9468be7b162107",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/Chinese-CLIP/cn_clip/clip/model_configs/RoBERTa-wwm-ext-base-chinese.json",
+    "sha256": "c011e9e0e6b1822a9656a50714f9aa93d1235b6715637d9ba3359efc3c588519",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/Chinese-CLIP/cn_clip/clip/model_configs/RoBERTa-wwm-ext-large-chinese.json",
+    "sha256": "b0d960f6f874dfab897eaa532998eed5b3c8ce4a5a8a4e554ba3418ebdc121be",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/Chinese-CLIP/cn_clip/clip/model_configs/ViT-B-16.json",
+    "sha256": "01c1c8795884b64e7ee5ee0e6185189c63c48e41cd666553a22b36940fa3998a",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/Chinese-CLIP/cn_clip/clip/model_configs/ViT-B-32.json",
+    "sha256": "dd285c2676b061ed0580f6ab025825bb534b7b9a8a2142711d1558e68e1e2faa",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/Chinese-CLIP/cn_clip/clip/model_configs/ViT-H-14.json",
+    "sha256": "6dc042544c554390a58594f733e4da895a61c46ced0cdb5ceeeaab89f4b2c239",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/Chinese-CLIP/cn_clip/clip/model_configs/ViT-L-14-336.json",
+    "sha256": "4274d145891e6be0ca66999d7ed9247f539480b5a357f210ae096d44650c1a15",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/Chinese-CLIP/cn_clip/clip/model_configs/ViT-L-14.json",
+    "sha256": "77d22656e4625dc4faf81a3b896635dca72312064843b616e9f45959b7df59bc",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/Chinese-CLIP/cn_clip/clip/modeling_bert.py",
+    "sha256": "95b3dbb325b5f12f31bc89f67592ec8f02f86f71cabaf72667d909b13c0a7d77",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/Chinese-CLIP/cn_clip/clip/utils.py",
+    "sha256": "a14ba360b0be9f364c5135653ae079429dcf8c6fb87d522deb74aa3ea346b959",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/Chinese-CLIP/cn_clip/deploy/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/Chinese-CLIP/cn_clip/deploy/benchmark_utils.py",
+    "sha256": "0730974de005cbe64cd08d257780dbdc6fe95591735f7a0c4390adadec21fd4f",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/Chinese-CLIP/cn_clip/deploy/onnx_to_tensorrt.py",
+    "sha256": "144e002090295615c78d86cd3c99dca05d43fff542f29a640b4324accbfa4be3",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/Chinese-CLIP/cn_clip/deploy/pytorch_to_coreml.py",
+    "sha256": "ff1af5c49904bb02c1ac754d0249e9f31da0bd3cd4ee7a7f62942e142bf86981",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/Chinese-CLIP/cn_clip/deploy/pytorch_to_onnx.py",
+    "sha256": "895307427981dcfc8a6725805bb7f5b7fc0b1e7fa17f5021720564412ca45c90",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/Chinese-CLIP/cn_clip/deploy/speed_benchmark.py",
+    "sha256": "9109aa5702d0fae698bbb6d2cc19a3b0c9d6cdc56f4a8aea9c6f9672567f3a13",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/Chinese-CLIP/cn_clip/deploy/tensorrt_utils.py",
+    "sha256": "e7b82e03f65c72a2afc1b317b62cfc7e623093f8a6da7d869254fb1872a37914",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/Chinese-CLIP/cn_clip/eval/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/Chinese-CLIP/cn_clip/eval/cvinw_zeroshot_templates.py",
+    "sha256": "ae3324fae56ada29571f1aafb2b42179bc4c67729558b89afebe36df9d795629",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/Chinese-CLIP/cn_clip/eval/data.py",
+    "sha256": "bbb99824f6a2e2adceefb9d86d19b0a7ac3edc0eb670846b768dceb04f706f7d",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/Chinese-CLIP/cn_clip/eval/evaluation.py",
+    "sha256": "606227e1f1f7ddc8521a680919aaf73c4453f8a69e4734a2c1a6f38db6cd98af",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/Chinese-CLIP/cn_clip/eval/evaluation_tr.py",
+    "sha256": "75f78c2a3e4297dc3f326072bb237a8e031ccad621d306a916ef67303f29d912",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/Chinese-CLIP/cn_clip/eval/extract_features.py",
+    "sha256": "5394e0e842d3f47d9db367a9a3a33e73a06846f6ab533b535e6c778902b8bb0d",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/Chinese-CLIP/cn_clip/eval/extract_features_onnx.py",
+    "sha256": "c80a1746026fcefb44c1e8653042765ced1e1903cf66eb4959b2105e87a888de",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/Chinese-CLIP/cn_clip/eval/extract_features_tensorrt.py",
+    "sha256": "5f44a1fc027b09a1d8da658c1f9cc0b6d539dadf60c5410fefdfbaf321fa3719",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/Chinese-CLIP/cn_clip/eval/imagenet_zeroshot_templates.py",
+    "sha256": "c99c229eae79991677f4172be6a957b3420a8fcaade6328f9b941e1a9784ac92",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/Chinese-CLIP/cn_clip/eval/make_topk_predictions.py",
+    "sha256": "8161b05c317d7001cf4d636617561592d885bf29a92a227fd9e3b7b54ab1a5ef",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/Chinese-CLIP/cn_clip/eval/make_topk_predictions_tr.py",
+    "sha256": "3bf3c21dbc882a35623d86a1990b81c19ebdc68e43bfe98ea96bfc31c22373e3",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/Chinese-CLIP/cn_clip/eval/transform_ir_annotation_to_tr.py",
+    "sha256": "9cd4139a2ccbd8979ac2a16386e7127154bbde5507ffc13897e62efadae6027d",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/Chinese-CLIP/cn_clip/eval/zeroshot_evaluation.py",
+    "sha256": "20f5f2e4075bcc4fe03c3e9b31162b3022b133430ac3b184319b170b444bffc1",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/Chinese-CLIP/cn_clip/preprocess/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/Chinese-CLIP/cn_clip/preprocess/build_lmdb_dataset.py",
+    "sha256": "e271f3a92439fbfb5b2f8ee6955547bcb0ba8c0a70f7b350456cec30a7ba2477",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/Chinese-CLIP/cn_clip/preprocess/transform_openai_pretrain_weights.py",
+    "sha256": "1aaf04b879dedbed38c3d330f81145634b9b8a91d2ce8441357c967930d16c41",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/Chinese-CLIP/cn_clip/training/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/Chinese-CLIP/cn_clip/training/data.py",
+    "sha256": "5a52cf4defd7d2583d6611fc1ccf0aacbb9fe16c9673a64b21c7c1a58879df9e",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/Chinese-CLIP/cn_clip/training/logger.py",
+    "sha256": "8d14370f340e29e292f3c79126f9984b2d6f40e9578a914c8b6afd785a2ba2be",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/Chinese-CLIP/cn_clip/training/main.py",
+    "sha256": "37737135c3bbf4094d1b6a75d04c34bead73409de1cc057b94e56e1c65f0bd62",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/Chinese-CLIP/cn_clip/training/params.py",
+    "sha256": "29046874d0063b9e495062f40c661a70f6579348c1e6ac1c15a106a153f8fc94",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/Chinese-CLIP/cn_clip/training/scheduler.py",
+    "sha256": "89ab7ff5270d2e142a8f3e22fc2e682374b4f080f04e187c67f88fbcc2d06d59",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/Chinese-CLIP/cn_clip/training/train.py",
+    "sha256": "57d0218d4a2fa0c64e606883f5cfb40f02a6e83931992d65a1fc42fa8eaf5ba3",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/Chinese-CLIP/dataset_transform.py",
+    "sha256": "f312910cebe3e8ac62a309f47b06baa88c898d91634ae98d260321ad9b2233f1",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/Chinese-CLIP/deployment.md",
+    "sha256": "556fa2d786946f7fbeda5a0825836dca6f81f5eb018343b23d8697cb8b8fe03b",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/Chinese-CLIP/deployment_En.md",
+    "sha256": "c261bddd913933a9333798f3a9b36c275cde45a5497118c778e44cfcf15cd327",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/Chinese-CLIP/distillation.md",
+    "sha256": "f80fa57ac017ddb94ebc5b0cbd5b0fe461f26491fdb94ac05319d9cc2d53e1d5",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/Chinese-CLIP/distillation_En.md",
+    "sha256": "22859461a1942f3513a980898737251a2f1f390935de4be72954cf86247dff03",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/Chinese-CLIP/flash_attention.md",
+    "sha256": "f85d8f2733d51fd4c6557d79d138e7daba2d5ac7a66c12f844e1ebe585ddd04b",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/Chinese-CLIP/flash_attention_En.md",
+    "sha256": "94fb1374cfd069297a9941bf1976f5af3af9ae655fa44260a83eaa566717a6bc",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/Chinese-CLIP/requirements.txt",
+    "sha256": "ec798d858110a574e1f4ccf425beac41c0b9ceadb4875f6953661d67bf1f5267",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/Chinese-CLIP/run_scripts/coco-cn_finetune_vit-b-16_rbt-base.sh",
+    "sha256": "383eeb012ff0ccc536a5b061c8d0be6bd26dc4da34110965cb0f4d0442fbce8e",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/Chinese-CLIP/run_scripts/flickr30k_finetune_vit-b-16_rbt-base.sh",
+    "sha256": "5650b872652a4e83832d73b1c69752fb4855d08ae397ef0cd137e3fdfb764795",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/Chinese-CLIP/run_scripts/flickr30k_finetune_vit-b-16_rbt-base_flip.sh",
+    "sha256": "3de963f531b7bc9dbc4b27c3930449c5661c9d90ffe36f9eb7333332474d6e4b",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/Chinese-CLIP/run_scripts/muge_finetune_vit-b-16_rbt-base.sh",
+    "sha256": "8bf99a13914a141ef698779c30cc9f8e36790b9e290892c4e771f8a9cb473025",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/Chinese-CLIP/run_scripts/muge_finetune_vit-b-16_rbt-base_distillation.sh",
+    "sha256": "51cc91e171f2da3da864fd2241603b483c0f7f0d286ba7c16d37b92574789cce",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/Chinese-CLIP/run_scripts/muge_finetune_vit-b-16_rbt-base_flashattn.sh",
+    "sha256": "c233e0478a3589d8b8024ebb80c1b0f186a5ce58dff74c59b5405e22b7a278eb",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/Chinese-CLIP/run_scripts/muge_finetune_vit-b-16_rbt-base_flip.sh",
+    "sha256": "98a7e8afae43bdb90ebfc5d3da8bf75142ca09a69c03f4b9b3113a5905c4ec28",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/Chinese-CLIP/run_scripts/zeroshot_eval.sh",
+    "sha256": "cdd627a3b179adbb795e71ee045162e4e63a5434c57554d6c115c52490ddebbe",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/Chinese-CLIP/setup.py",
+    "sha256": "2e845e5890260ab27d0bece8ff431d83d17ffa894a283d1d946fa83b40401ac0",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/Chinese-CLIP/zeroshot_dataset.md",
+    "sha256": "591b894835e28a53df02191b5711a1d4f46c01078860cf1d8417d81d0175e5e8",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/Chinese-CLIP/zeroshot_dataset_en.md",
+    "sha256": "8a502188d9f10dda1447015261a0a9c4bc910f5671bfdaf3a23984e082018197",
+    "source": "A100 native source snapshot; license retained"
+  }
+]

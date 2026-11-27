@@ -1,0 +1,16 @@
+{
+  "generated_at": "2026-09-10T14:23:20+08:00",
+  "status": "PASS_DIAGNOSTIC_PREFLIGHT",
+  "errors": [],
+  "model_to_dataset_to_reference": {
+    "checkpoint": "HuggingFaceM4/siglip-so400m-14-980-flash-attn2-navit@d66538faeba44480d0bfaa42145eef26f9423199",
+    "comparison_checkpoint": "google/siglip-so400m-patch14-384@9fdffc58afc957d1a03a25b10dba0329ab15c2a3",
+    "dataset": "mteb/flickr30kt2i@e819702b287bfbe084e129a61f308a802b7c108e",
+    "split": "test: 5,000 caption queries against 1,000 images",
+    "protocol": "MTEB Flickr30kT2IRetrieval; exact 384px processor; cosine",
+    "metrics": "nDCG@10 and Recall@1/5/10",
+    "same_checkpoint_official_reference": null
+  },
+  "strict_official_acceptance": false,
+  "user_decision": "run a frozen substitute/variant comparison despite the missing same-checkpoint reference"
+}

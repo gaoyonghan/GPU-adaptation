@@ -1,0 +1,12 @@
+{
+  "model": "geolocal/StreetCLIP",
+  "historical_command": [
+    "python",
+    "-u",
+    "environment_setup/run_three_native.py",
+    "geolocal/StreetCLIP"
+  ],
+  "native_evaluator": "evaluation_audit/evaluate_remaining7_control_comparisons.py",
+  "historical_a100_environment": "/data/zhoujianjie/environment_setup/native_python.py",
+  "purpose": "provenance only; not a central task registry"
+}

@@ -1,0 +1,142 @@
+[
+  {
+    "file": "inference/native/native_mme5_python.py",
+    "source_sha256": "c05a7a4cbd7985c816b65773c558c1b3618d46cb41f2464a4b12150cb37623be",
+    "path_expression_edits": 2,
+    "path_mapping_stage_sha256": "222da15204400a4c7fd71daf2ca243fc0d9594d446b56bad36c634ece92799d7",
+    "final_delivery_sha256": "222da15204400a4c7fd71daf2ca243fc0d9594d446b56bad36c634ece92799d7"
+  },
+  {
+    "file": "inference/native/native_fgclip_python.py",
+    "source_sha256": "85db4a246d109f7cf518835afcd67482684f256765ec1a784698966036597228",
+    "path_expression_edits": 6,
+    "path_mapping_stage_sha256": "223e2d938be89d706e31a4fc0ff343bfeb861a7ddaed6dd6b98c3547d9e8dfc5",
+    "final_delivery_sha256": "223e2d938be89d706e31a4fc0ff343bfeb861a7ddaed6dd6b98c3547d9e8dfc5"
+  },
+  {
+    "file": "inference/native/evaluate_marqo_atlas_official.py",
+    "source_sha256": "be4a5aed1e92d15b04329ab24bc99a5265258477562328e4000038cc4896727d",
+    "path_expression_edits": 10,
+    "path_mapping_stage_sha256": "59e2c2460cdc78134998c542158439be7bcdb7a8f4c4d4efdc01052e91d29198",
+    "final_delivery_sha256": "59e2c2460cdc78134998c542158439be7bcdb7a8f4c4d4efdc01052e91d29198"
+  },
+  {
+    "file": "inference/native/run_fashion_native.py",
+    "source_sha256": "5a8eb7386ebbbaa41e4e87f4c4e82fde553c67f29c4ebc1c636ef7e6bf3839b2",
+    "path_expression_edits": 5,
+    "path_mapping_stage_sha256": "4af828e93fb0971005d039949f0eb877b8c74936a865834011a851f991d32307",
+    "final_delivery_sha256": "d4b41647b91115f9d785fdc133763b36c2cba4127bc6776cf097842ff1a83ef8"
+  },
+  {
+    "file": "inference/native/fashion_native_a100.py",
+    "source_sha256": "dbc7001969abb7314b066782652d8dc4b7403c82dfb93e3beffc737c904fc496",
+    "path_expression_edits": 8,
+    "path_mapping_stage_sha256": "a9b83c7957d2a9196c3dafbcb3ce201d719f898cf7abd2df25040d8c7ec4a5f2",
+    "final_delivery_sha256": "a9b83c7957d2a9196c3dafbcb3ce201d719f898cf7abd2df25040d8c7ec4a5f2"
+  },
+  {
+    "file": "inference/native/native_python.py",
+    "source_sha256": "ea047f7906c92e5d0173ccd6195c3d183645560aa19bcf826d028044e623005c",
+    "path_expression_edits": 6,
+    "path_mapping_stage_sha256": "2b4b7632421ea8f9b220db6446d5eb9c2892a1c1d13a97a4eda4bdb71a6fef28",
+    "final_delivery_sha256": "1bb949be95f07a3bf556d0290dd9001724efabfae9951668fc5e71896516a5b0"
+  },
+  {
+    "file": "inference/native/sitecustomize.py",
+    "source_sha256": "6eda9fd629a259c259dbd87d1f55fb4004ca20890677a7dee5745f2d7633016b",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "6eda9fd629a259c259dbd87d1f55fb4004ca20890677a7dee5745f2d7633016b",
+    "final_delivery_sha256": "962ac551ad22f7854811868a13cdd4b758c316d57acca6fa2fddea9752ce153b"
+  },
+  {
+    "file": "inference/native/evaluate_marqo_deepfashion_official.py",
+    "source_sha256": "f36e4ecb1dbb418cb914782f696262e87df85895b17d397ccac9cd2d08755751",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "f36e4ecb1dbb418cb914782f696262e87df85895b17d397ccac9cd2d08755751",
+    "final_delivery_sha256": "f36e4ecb1dbb418cb914782f696262e87df85895b17d397ccac9cd2d08755751"
+  },
+  {
+    "file": "inference/native/model_paths.py",
+    "source_sha256": "d39241a382eaffe4ca202ac8d47cf9684c09603cc558b7d37519def06614896d",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "d39241a382eaffe4ca202ac8d47cf9684c09603cc558b7d37519def06614896d",
+    "final_delivery_sha256": "d39241a382eaffe4ca202ac8d47cf9684c09603cc558b7d37519def06614896d"
+  },
+  {
+    "file": "inference/native/reference_code/marqo-FashionCLIP/summarize_results.py",
+    "source_sha256": "34e8b649bc4da234f17a3e96fb4cbc2df1113b0e3fe58bae708ecbb74988f04b",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "34e8b649bc4da234f17a3e96fb4cbc2df1113b0e3fe58bae708ecbb74988f04b",
+    "final_delivery_sha256": "34e8b649bc4da234f17a3e96fb4cbc2df1113b0e3fe58bae708ecbb74988f04b"
+  },
+  {
+    "file": "inference/native/reference_code/marqo-FashionCLIP/eval.py",
+    "source_sha256": "1b9a2fb135a5c23a42e2b534f9f5eb96eea916b22b02ef890aeeebe20ea1559a",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "1b9a2fb135a5c23a42e2b534f9f5eb96eea916b22b02ef890aeeebe20ea1559a",
+    "final_delivery_sha256": "1b9a2fb135a5c23a42e2b534f9f5eb96eea916b22b02ef890aeeebe20ea1559a"
+  },
+  {
+    "file": "inference/native/reference_code/marqo-FashionCLIP/data/__init__.py",
+    "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "final_delivery_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "inference/native/reference_code/marqo-FashionCLIP/data/utils.py",
+    "source_sha256": "fc3938f02394285dd9e9fd13a1eeb9f9a3af96686400d949e59296fbe9d23552",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "fc3938f02394285dd9e9fd13a1eeb9f9a3af96686400d949e59296fbe9d23552",
+    "final_delivery_sha256": "fc3938f02394285dd9e9fd13a1eeb9f9a3af96686400d949e59296fbe9d23552"
+  },
+  {
+    "file": "inference/native/reference_code/marqo-FashionCLIP/models/__init__.py",
+    "source_sha256": "cd92784484a7d653abbdfb75d37b841f88f66439406a9b36665bef4419cffcf0",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "cd92784484a7d653abbdfb75d37b841f88f66439406a9b36665bef4419cffcf0",
+    "final_delivery_sha256": "cd92784484a7d653abbdfb75d37b841f88f66439406a9b36665bef4419cffcf0"
+  },
+  {
+    "file": "inference/native/reference_code/marqo-FashionCLIP/models/open_clip_model.py",
+    "source_sha256": "dd2b6074f01dcea0e3e95748e63d100f7b2bf74233668885749f0ce33f4fbd70",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "dd2b6074f01dcea0e3e95748e63d100f7b2bf74233668885749f0ce33f4fbd70",
+    "final_delivery_sha256": "dd2b6074f01dcea0e3e95748e63d100f7b2bf74233668885749f0ce33f4fbd70"
+  },
+  {
+    "file": "inference/native/reference_code/marqo-FashionCLIP/models/hf_models.py",
+    "source_sha256": "4c5043f8b7c7b099aafbf4965551209d86c9d5648faffe29daecbba0928c4f78",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "4c5043f8b7c7b099aafbf4965551209d86c9d5648faffe29daecbba0928c4f78",
+    "final_delivery_sha256": "4c5043f8b7c7b099aafbf4965551209d86c9d5648faffe29daecbba0928c4f78"
+  },
+  {
+    "file": "inference/native/reference_code/marqo-FashionCLIP/utils/retrieval.py",
+    "source_sha256": "435770b57392cf1d6dad8cc12591b182271b0ed3e41ab99c9f7da9b7c5cc4038",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "435770b57392cf1d6dad8cc12591b182271b0ed3e41ab99c9f7da9b7c5cc4038",
+    "final_delivery_sha256": "435770b57392cf1d6dad8cc12591b182271b0ed3e41ab99c9f7da9b7c5cc4038"
+  },
+  {
+    "file": "inference/native/reference_code/marqo-FashionCLIP/utils/__init__.py",
+    "source_sha256": "40a2f38db7fc58b7b934c61c50daa48bb57ae8d8eb54bb256b227056d39ff38d",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "40a2f38db7fc58b7b934c61c50daa48bb57ae8d8eb54bb256b227056d39ff38d",
+    "final_delivery_sha256": "40a2f38db7fc58b7b934c61c50daa48bb57ae8d8eb54bb256b227056d39ff38d"
+  },
+  {
+    "file": "inference/native/reference_code/marqo-FashionCLIP/utils/logger.py",
+    "source_sha256": "87ee7b243d8c395925b5a6374d83e938390c6ef679f4ba8884b81eb1e13210c1",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "87ee7b243d8c395925b5a6374d83e938390c6ef679f4ba8884b81eb1e13210c1",
+    "final_delivery_sha256": "87ee7b243d8c395925b5a6374d83e938390c6ef679f4ba8884b81eb1e13210c1"
+  },
+  {
+    "file": "inference/native/reference_code/marqo-FashionCLIP/utils/metrics.py",
+    "source_sha256": "c47122b2e9b642f3aa8c77dc443b6a2e8dcda1920cc32a05dbd6348f54612218",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "c47122b2e9b642f3aa8c77dc443b6a2e8dcda1920cc32a05dbd6348f54612218",
+    "final_delivery_sha256": "c47122b2e9b642f3aa8c77dc443b6a2e8dcda1920cc32a05dbd6348f54612218"
+  }
+]

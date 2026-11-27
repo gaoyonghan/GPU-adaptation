@@ -1,0 +1,15 @@
+# A100 installed overlay snapshot; requires recorded base environment.
+accelerate==1.6.0
+et_xmlfile==2.0.0
+ftfy==6.3.1
+hf-xet==1.8.0
+huggingface_hub==0.36.2
+numpy==1.26.4
+open_clip_torch==2.32.0
+openpyxl==3.1.5
+pillow==10.3.0
+pyarrow==23.0.1
+safetensors==0.7.0
+timm==1.0.19
+tokenizers==0.21.4
+transformers==4.51.3

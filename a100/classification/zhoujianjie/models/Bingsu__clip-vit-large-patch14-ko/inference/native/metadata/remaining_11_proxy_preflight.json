@@ -1,0 +1,206 @@
+{
+  "generated_at": "2026-09-09T13:52:59+08:00",
+  "status": "PASS_DIAGNOSTIC_PREFLIGHT",
+  "purpose": "multi-model proxy diagnostic; explicitly not official metric acceptance",
+  "strict_acceptance_count_before_run": "60/77",
+  "user_relaxed_acceptance_count_before_run": "66/77",
+  "seed": 20260909,
+  "datasets": {
+    "pcam": {
+      "x": "/home/dell/Projects/hengxiang/datasets/evaluation/biomedclip_pcam_official_original/camelyonpatch_level_2_split_test_x.h5",
+      "y": "/home/dell/Projects/hengxiang/datasets/evaluation/biomedclip_pcam_official_original/camelyonpatch_level_2_split_test_y.h5",
+      "rows": 32768
+    },
+    "country211": {
+      "revision": "2f069730be515ea60778413777816b53e2d2a697",
+      "sha256": "4f274602ff79f57efaa0033aa6769f8428c81bd2c72ebe60b511715861f911a1",
+      "rows": 1000
+    },
+    "imagenetv2": {
+      "name": "ImageNetV2 matched-frequency",
+      "hf_repo": "vaishaal/ImageNetV2",
+      "revision": "d626240be2538720e83103a0e1178d24aca8b12c",
+      "rows": 10000,
+      "files": [
+        {
+          "path": "datasets/evaluation/imagenetv2_hf/imagenetv2-matched-frequency.tar.gz",
+          "bytes": 1264079360,
+          "sha256": "f0c37fdf925916b19ea1323cd9a2208cdb6959ba2c32eef2a7fc393835c9ca7c",
+          "expected_lfs_sha256": "f0c37fdf925916b19ea1323cd9a2208cdb6959ba2c32eef2a7fc393835c9ca7c",
+          "sha256_verified": true,
+          "archive_format": "POSIX tar (despite .tar.gz suffix)",
+          "images": 10000
+        }
+      ]
+    },
+    "xtd10": {
+      "revision": "63227af6ee1d13951d244b979254154d7babe463",
+      "languages": [
+        "es",
+        "it",
+        "ko",
+        "pl",
+        "ru",
+        "tr",
+        "zh"
+      ],
+      "pairs_per_language": 999
+    },
+    "anime_dbrating": {
+      "revision": "de982f3a388fc78f6b7dd6429f0f8ee0be62e2f9",
+      "seed": 20260909,
+      "sample_count": 128,
+      "manifest": "/tmp/anime_dbrating_proxy/manifest.json"
+    },
+    "ct_chest": {
+      "path": "/tmp/colipri_CT_chest.nrrd",
+      "sha256": "4507b664690840abb6cb9af2d919377ffc4ef75b167cb6fd0f747befdb12e38e",
+      "unlabeled": true
+    }
+  },
+  "model_to_dataset_to_reference": [
+    {
+      "model_id": "geolocal/StreetCLIP",
+      "checkpoint_revision": "e3561ba2ad9bf14c9efd6b0092607b8497efbfea",
+      "backend": "Transformers AutoModel/AutoProcessor",
+      "proxy_dataset": "TIGER-Lab/MMEB-eval Country211 test",
+      "proxy_split": "test, 1,000 images",
+      "protocol": "country211",
+      "metric": "zero-shot country top-1/top-5 accuracy",
+      "same_checkpoint_official_reference": null,
+      "strict_official_acceptance": false,
+      "acceptance_effect": "none_pending_user_review",
+      "user_decision": "run a frozen substitute dataset/protocol first when official evidence is unavailable"
+    },
+    {
+      "model_id": "google/siglip-base-patch16-256-multilingual",
+      "checkpoint_revision": "8952a4eafcde3cb7ab46b1dd629b33f8784ca9c6",
+      "backend": "Transformers AutoModel/AutoProcessor",
+      "proxy_dataset": "Haon-Chen/XTD-10",
+      "proxy_split": "test, 999 pairs per language",
+      "protocol": "xtd10",
+      "metric": "text-to-image Recall@1/5/10 by language and macro mean",
+      "same_checkpoint_official_reference": null,
+      "strict_official_acceptance": false,
+      "acceptance_effect": "none_pending_user_review",
+      "user_decision": "run a frozen substitute dataset/protocol first when official evidence is unavailable"
+    },
+    {
+      "model_id": "google/siglip-so400m-patch16-256-i18n",
+      "checkpoint_revision": "365d321c0cfdea96bc28e3a29787a11a062681a1",
+      "backend": "Transformers AutoModel/AutoProcessor",
+      "proxy_dataset": "Haon-Chen/XTD-10",
+      "proxy_split": "test, 999 pairs per language",
+      "protocol": "xtd10",
+      "metric": "text-to-image Recall@1/5/10 by language and macro mean",
+      "same_checkpoint_official_reference": null,
+      "strict_official_acceptance": false,
+      "acceptance_effect": "none_pending_user_review",
+      "user_decision": "run a frozen substitute dataset/protocol first when official evidence is unavailable"
+    },
+    {
+      "model_id": "lyua1225/clip-huge-zh-75k-steps-bs4096",
+      "checkpoint_revision": "4db247309b7598ab786b09a84bd5a2f57b20a048",
+      "backend": "Transformers AutoModel/AutoProcessor",
+      "proxy_dataset": "Haon-Chen/XTD-10",
+      "proxy_split": "Chinese test, 999 pairs",
+      "protocol": "xtd10",
+      "metric": "text-to-image Recall@1/5/10",
+      "same_checkpoint_official_reference": null,
+      "strict_official_acceptance": false,
+      "acceptance_effect": "none_pending_user_review",
+      "user_decision": "run a frozen substitute dataset/protocol first when official evidence is unavailable"
+    },
+    {
+      "model_id": "Bingsu/clip-vit-large-patch14-ko",
+      "checkpoint_revision": "278fc4af1db3edde1f73a501f167600832d0d554",
+      "backend": "Transformers AutoModel/AutoProcessor",
+      "proxy_dataset": "Haon-Chen/XTD-10",
+      "proxy_split": "Korean test, 999 pairs",
+      "protocol": "xtd10",
+      "metric": "text-to-image Recall@1/5/10",
+      "same_checkpoint_official_reference": null,
+      "strict_official_acceptance": false,
+      "acceptance_effect": "none_pending_user_review",
+      "user_decision": "run a frozen substitute dataset/protocol first when official evidence is unavailable"
+    },
+    {
+      "model_id": "google/siglip-so400m-patch14-224",
+      "checkpoint_revision": "d04cf29fca7b6374f74d8bea1969314492266b5e",
+      "backend": "Transformers AutoModel/AutoProcessor",
+      "proxy_dataset": "ImageNetV2 matched-frequency",
+      "proxy_split": "10,000-image validation-style robustness set",
+      "protocol": "imagenetv2",
+      "metric": "top-1/top-5 accuracy",
+      "same_checkpoint_official_reference": null,
+      "strict_official_acceptance": false,
+      "acceptance_effect": "none_pending_user_review",
+      "user_decision": "run a frozen substitute dataset/protocol first when official evidence is unavailable"
+    },
+    {
+      "model_id": "HuggingFaceM4/siglip-so400m-14-980-flash-attn2-navit",
+      "checkpoint_revision": "d66538faeba44480d0bfaa42145eef26f9423199",
+      "backend": "仓库自定义代码（先审查）",
+      "proxy_dataset": "ImageNetV2 matched-frequency",
+      "proxy_split": "10,000-image validation-style robustness set",
+      "protocol": "imagenetv2",
+      "metric": "top-1/top-5 accuracy",
+      "same_checkpoint_official_reference": null,
+      "strict_official_acceptance": false,
+      "acceptance_effect": "none_pending_user_review",
+      "user_decision": "run a frozen substitute dataset/protocol first when official evidence is unavailable"
+    },
+    {
+      "model_id": "woweenie/open-clip-vit-h-nsfw-finetune",
+      "checkpoint_revision": "8e9492ce2c49615ede3643ecae7414faf62f556c",
+      "backend": "OpenCLIP",
+      "proxy_dataset": "deepghs/anime_dbrating proxy subset",
+      "proxy_split": "deterministic train-archive sample, 32 images per rating",
+      "protocol": "anime_binary",
+      "metric": "SFW/NSFW zero-shot accuracy, balanced accuracy, macro-F1",
+      "same_checkpoint_official_reference": null,
+      "strict_official_acceptance": false,
+      "acceptance_effect": "none_pending_user_review",
+      "user_decision": "run a frozen substitute dataset/protocol first when official evidence is unavailable"
+    },
+    {
+      "model_id": "OysterQAQ/DanbooruCLIP",
+      "checkpoint_revision": "aa2e603035bdf3e414e349f98ab2f9d3f6b43c5d",
+      "backend": "Transformers AutoModel/AutoProcessor",
+      "proxy_dataset": "deepghs/anime_dbrating proxy subset",
+      "proxy_split": "deterministic train-archive sample, 32 images per rating",
+      "protocol": "anime_rating",
+      "metric": "four-rating zero-shot top-1 accuracy and macro-F1",
+      "same_checkpoint_official_reference": null,
+      "strict_official_acceptance": false,
+      "acceptance_effect": "none_pending_user_review",
+      "user_decision": "run a frozen substitute dataset/protocol first when official evidence is unavailable"
+    },
+    {
+      "model_id": "google/medsiglip-448",
+      "checkpoint_revision": "9cea28a1a1195f665105faa6e8544c112fd960a4",
+      "backend": "Transformers AutoModel/AutoProcessor",
+      "proxy_dataset": "PatchCamelyon original test split",
+      "proxy_split": "test, 32,768 pathology patches",
+      "protocol": "pcam",
+      "metric": "zero-shot accuracy, balanced accuracy, AUROC",
+      "same_checkpoint_official_reference": null,
+      "strict_official_acceptance": false,
+      "acceptance_effect": "none_pending_user_review",
+      "user_decision": "run a frozen substitute dataset/protocol first when official evidence is unavailable"
+    },
+    {
+      "model_id": "microsoft/colipri",
+      "checkpoint_revision": "be872ebec5c62894cf183b09835ec6fd7be537f5",
+      "backend": "COLIPRI official package",
+      "proxy_dataset": "3D Slicer CTChest sample",
+      "proxy_split": "one unlabeled public example CT",
+      "protocol": "ct_prompt",
+      "metric": "frozen clinical prompt similarities/ranking",
+      "same_checkpoint_official_reference": null,
+      "strict_official_acceptance": false,
+      "acceptance_effect": "none_pending_user_review",
+      "user_decision": "run a frozen substitute dataset/protocol first when official evidence is unavailable"
+    }
+  ]
+}

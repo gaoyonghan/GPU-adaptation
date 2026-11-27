@@ -1,0 +1,11 @@
+# A100 installed overlay snapshot; requires recorded base environment.
+Pygments==2.21.0
+asttokens==3.0.2
+colorama==0.4.6
+et_xmlfile==2.0.0
+executing==2.2.1
+icecream==2.2.0
+numpy==1.26.4
+openpyxl==3.1.5
+tokenizers==0.15.2
+transformers==4.36.1

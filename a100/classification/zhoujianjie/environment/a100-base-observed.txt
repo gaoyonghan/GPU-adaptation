@@ -1,0 +1,17 @@
+# Selected dependency versions observed with A100 system pip freeze on 2026-11-26.
+# Not the full shared server freeze; never install into the shared system environment.
+PyYAML==6.0.1
+datasets==2.19.2
+einops==0.7.0
+h5py==3.14.0
+onnxruntime-gpu==1.20.2
+packaging==26.3
+pyarrow-hotfix==0.6
+regex==2023.12.25
+requests==2.32.3
+scikit-learn==1.5.2
+scipy==1.12.0
+sentencepiece==0.2.0
+torch==2.6.0+cu124
+torchvision==0.21.0+cu124
+tqdm==4.66.2

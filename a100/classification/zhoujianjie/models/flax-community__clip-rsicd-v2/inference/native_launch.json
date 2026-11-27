@@ -1,0 +1,7 @@
+{
+  "model": "flax-community/clip-rsicd-v2",
+  "historical_command": null,
+  "native_evaluator": "evaluation_audit/evaluate_clip_rsicd_official.py",
+  "historical_a100_environment": null,
+  "purpose": "provenance only; not a central task registry"
+}

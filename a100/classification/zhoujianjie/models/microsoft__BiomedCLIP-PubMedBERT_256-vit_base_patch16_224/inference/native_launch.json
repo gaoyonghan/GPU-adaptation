@@ -1,0 +1,10 @@
+{
+  "model": "microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224",
+  "historical_command": [
+    "python",
+    "inference.py"
+  ],
+  "native_evaluator": "evaluation_audit/evaluate_biomedclip_pcam_official.py",
+  "historical_a100_environment": null,
+  "purpose": "provenance only; not a central task registry"
+}

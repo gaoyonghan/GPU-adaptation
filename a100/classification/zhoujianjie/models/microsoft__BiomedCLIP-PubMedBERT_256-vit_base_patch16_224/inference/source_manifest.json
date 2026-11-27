@@ -1,0 +1,12 @@
+[
+  {
+    "file": "inference/original_sources/run_model.py",
+    "sha256": "6b1c88c470bca26caa104a544237e7767663372ef01a80f26a4637ef1715261d",
+    "source": "A100 snapshot"
+  },
+  {
+    "file": "inference/original_sources/evaluate_biomedclip_pcam_official.py",
+    "sha256": "6cd821731bfbd4d9d55637aca3e198f960335a821335aabb53db11c47787a19a",
+    "source": "4090 original evaluator"
+  }
+]

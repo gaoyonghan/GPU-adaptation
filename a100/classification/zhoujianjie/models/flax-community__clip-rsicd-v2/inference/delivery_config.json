@@ -1,0 +1,14 @@
+{
+  "model_id": "flax-community/clip-rsicd-v2",
+  "launcher": "run_rsicd_native.py",
+  "args": [],
+  "native_task": "single_label_classification",
+  "public_evaluator": "supported_pending_validation",
+  "bounded_smoke_supported": true,
+  "required_weights": [
+    "download_receipt.json"
+  ],
+  "required_data": [
+    "raw/rsicd_test_labeled"
+  ]
+}

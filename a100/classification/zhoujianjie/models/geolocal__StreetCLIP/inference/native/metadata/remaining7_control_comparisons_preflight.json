@@ -1,0 +1,57 @@
+{
+  "generated_at": "2026-09-10T13:14:56+08:00",
+  "status": "PASS_DIAGNOSTIC_PREFLIGHT",
+  "errors": [],
+  "model_to_dataset_to_reference": [
+    {
+      "target": "geolocal/StreetCLIP@e3561ba2ad9bf14c9efd6b0092607b8497efbfea",
+      "control": "openai/clip-vit-large-patch14@32bd64288804d66eefd0ccbe215aa642df71cc41",
+      "dataset_split": "TIGER-Lab/MMEB-eval Country211 test, 1,000 images",
+      "protocol_metric": "identical 211-country prompts; top-1/top-5 accuracy",
+      "same_checkpoint_official_reference": null
+    },
+    {
+      "target": "lyua1225/clip-huge-zh-75k-steps-bs4096@4db247309b7598ab786b09a84bd5a2f57b20a048",
+      "control": "openai/clip-vit-large-patch14@32bd64288804d66eefd0ccbe215aa642df71cc41",
+      "dataset_split": "Haon-Chen/XTD-10 Chinese test, 999 image-caption pairs",
+      "protocol_metric": "raw captions; text-to-image Recall@1/5/10",
+      "same_checkpoint_official_reference": null
+    },
+    {
+      "target": "Bingsu/clip-vit-large-patch14-ko@278fc4af1db3edde1f73a501f167600832d0d554",
+      "control": "openai/clip-vit-large-patch14@32bd64288804d66eefd0ccbe215aa642df71cc41",
+      "dataset_split": "Haon-Chen/XTD-10 Korean test, 999 image-caption pairs",
+      "protocol_metric": "raw captions; text-to-image Recall@1/5/10",
+      "same_checkpoint_official_reference": null
+    },
+    {
+      "target": "google/medsiglip-448@9cea28a1a1195f665105faa6e8544c112fd960a4",
+      "control": "google/siglip-so400m-patch14-384@9fdffc58afc957d1a03a25b10dba0329ab15c2a3",
+      "dataset_split": "PatchCamelyon original test, all 32,768 patches",
+      "protocol_metric": "identical frozen pathology prompts; accuracy/balanced accuracy/macro-F1/AUROC",
+      "same_checkpoint_official_reference": null
+    }
+  ],
+  "strict_official_acceptance": false,
+  "user_decision": "use substitute datasets and self-defined matched controls when official evidence is unavailable",
+  "assets": {
+    "pcam": {
+      "x": "/home/dell/Projects/hengxiang/datasets/evaluation/biomedclip_pcam_official_original/camelyonpatch_level_2_split_test_x.h5",
+      "y": "/home/dell/Projects/hengxiang/datasets/evaluation/biomedclip_pcam_official_original/camelyonpatch_level_2_split_test_y.h5",
+      "rows": 32768
+    },
+    "country211": {
+      "revision": "2f069730be515ea60778413777816b53e2d2a697",
+      "sha256": "4f274602ff79f57efaa0033aa6769f8428c81bd2c72ebe60b511715861f911a1",
+      "rows": 1000
+    },
+    "xtd10": {
+      "revision": "63227af6ee1d13951d244b979254154d7babe463",
+      "languages": [
+        "ko",
+        "zh"
+      ],
+      "pairs_per_language": 999
+    }
+  }
+}

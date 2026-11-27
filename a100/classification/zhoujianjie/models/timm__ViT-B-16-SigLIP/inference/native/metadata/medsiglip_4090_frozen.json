@@ -1,0 +1,760 @@
+{
+  "status": "completed_engineering_diagnostic_only",
+  "strict_official_acceptance": false,
+  "changes_strict_acceptance_count": false,
+  "rtx4090_stage1_engineering_baseline": true,
+  "model_id": "google/medsiglip-448",
+  "model_revision": "9cea28a1a1195f665105faa6e8544c112fd960a4",
+  "seed": 20260914,
+  "started_at": "2026-09-14T15:21:34+08:00",
+  "finished_at": "2026-09-14T15:46:16+08:00",
+  "preflight": "evaluation_audit/medsiglip_pcam_engineering_preflight.json",
+  "preflight_status": "passed",
+  "prompt_registry_sha256": "72fe668521c590a5dd25974c746c94d9be2ef7de453b2a39e9bd3d941334fffd",
+  "selection": {
+    "split": "PCam official validation",
+    "primary_metric": "AUROC",
+    "selected_preprocessing": "transformers_pil_bicubic",
+    "selected_prompt": "breast_carcinoma",
+    "selected_prompts": {
+      "source": "predeclared engineering prompt pair using PCam clinical context",
+      "negative": [
+        "benign lymph node without metastatic breast carcinoma",
+        "normal lymph node histopathology"
+      ],
+      "positive": [
+        "metastatic breast carcinoma in a lymph node",
+        "lymph node histopathology with metastatic carcinoma"
+      ]
+    },
+    "selected_threshold_from_validation_youden_j": 0.13916626572608948
+  },
+  "validation_candidates": {
+    "transformers_pil_bicubic": {
+      "elapsed_seconds": 583.1619,
+      "prompts": {
+        "legacy_proxy": {
+          "auroc_fraction": 0.8322589332545549,
+          "auroc_percent": 83.2259,
+          "hanley_mcneil_95ci_low_percent": 82.7834,
+          "hanley_mcneil_95ci_high_percent": 83.6684,
+          "auroc_above_random_at_95_percent_confidence": true,
+          "zero_threshold": {
+            "threshold": 0.0,
+            "accuracy_percent": 64.6912,
+            "balanced_accuracy_percent": 64.7225,
+            "macro_f1_percent": 60.0338,
+            "specificity_percent": 30.5263,
+            "sensitivity_percent": 98.9187,
+            "predicted_positive_percent": 84.1827,
+            "confusion_matrix_rows_target_columns_prediction": [
+              [
+                5006,
+                11393
+              ],
+              [
+                177,
+                16192
+              ]
+            ]
+          },
+          "validation_selected_threshold": {
+            "threshold": 0.0662209689617157,
+            "accuracy_percent": 75.1862,
+            "balanced_accuracy_percent": 75.188,
+            "macro_f1_percent": 75.1771,
+            "specificity_percent": 73.2057,
+            "sensitivity_percent": 77.1703,
+            "predicted_positive_percent": 51.9592,
+            "confusion_matrix_rows_target_columns_prediction": [
+              [
+                12005,
+                4394
+              ],
+              [
+                3737,
+                12632
+              ]
+            ]
+          },
+          "youden_j": 0.50375944
+        },
+        "clip_benchmark_pcam": {
+          "auroc_fraction": 0.8745334288851228,
+          "auroc_percent": 87.4533,
+          "hanley_mcneil_95ci_low_percent": 87.0676,
+          "hanley_mcneil_95ci_high_percent": 87.8391,
+          "auroc_above_random_at_95_percent_confidence": true,
+          "zero_threshold": {
+            "threshold": 0.0,
+            "accuracy_percent": 63.9832,
+            "balanced_accuracy_percent": 64.0147,
+            "macro_f1_percent": 59.1336,
+            "specificity_percent": 29.5079,
+            "sensitivity_percent": 98.5216,
+            "predicted_positive_percent": 84.494,
+            "confusion_matrix_rows_target_columns_prediction": [
+              [
+                4839,
+                11560
+              ],
+              [
+                242,
+                16127
+              ]
+            ]
+          },
+          "validation_selected_threshold": {
+            "threshold": 0.059376060962677,
+            "accuracy_percent": 79.5471,
+            "balanced_accuracy_percent": 79.5445,
+            "macro_f1_percent": 79.5294,
+            "specificity_percent": 82.4136,
+            "sensitivity_percent": 76.6754,
+            "predicted_positive_percent": 47.1039,
+            "confusion_matrix_rows_target_columns_prediction": [
+              [
+                13515,
+                2884
+              ],
+              [
+                3818,
+                12551
+              ]
+            ]
+          },
+          "youden_j": 0.59088985
+        },
+        "biomedclip_pcam": {
+          "auroc_fraction": 0.8127260240292378,
+          "auroc_percent": 81.2726,
+          "hanley_mcneil_95ci_low_percent": 80.8074,
+          "hanley_mcneil_95ci_high_percent": 81.7378,
+          "auroc_above_random_at_95_percent_confidence": true,
+          "zero_threshold": {
+            "threshold": 0.0,
+            "accuracy_percent": 71.1853,
+            "balanced_accuracy_percent": 71.1731,
+            "macro_f1_percent": 70.6592,
+            "specificity_percent": 84.4991,
+            "sensitivity_percent": 57.8472,
+            "predicted_positive_percent": 36.6547,
+            "confusion_matrix_rows_target_columns_prediction": [
+              [
+                13857,
+                2542
+              ],
+              [
+                6900,
+                9469
+              ]
+            ]
+          },
+          "validation_selected_threshold": {
+            "threshold": -0.027381762862205505,
+            "accuracy_percent": 74.057,
+            "balanced_accuracy_percent": 74.0605,
+            "macro_f1_percent": 74.0201,
+            "specificity_percent": 70.2238,
+            "sensitivity_percent": 77.8972,
+            "predicted_positive_percent": 53.8147,
+            "confusion_matrix_rows_target_columns_prediction": [
+              [
+                11516,
+                4883
+              ],
+              [
+                3618,
+                12751
+              ]
+            ]
+          },
+          "youden_j": 0.48121039
+        },
+        "direct_tissue": {
+          "auroc_fraction": 0.8817362688133884,
+          "auroc_percent": 88.1736,
+          "hanley_mcneil_95ci_low_percent": 87.7988,
+          "hanley_mcneil_95ci_high_percent": 88.5485,
+          "auroc_above_random_at_95_percent_confidence": true,
+          "zero_threshold": {
+            "threshold": 0.0,
+            "accuracy_percent": 59.4757,
+            "balanced_accuracy_percent": 59.5127,
+            "macro_f1_percent": 51.6074,
+            "specificity_percent": 19.1353,
+            "sensitivity_percent": 99.89,
+            "predicted_positive_percent": 90.3687,
+            "confusion_matrix_rows_target_columns_prediction": [
+              [
+                3138,
+                13261
+              ],
+              [
+                18,
+                16351
+              ]
+            ]
+          },
+          "validation_selected_threshold": {
+            "threshold": 0.10150440037250519,
+            "accuracy_percent": 80.5695,
+            "balanced_accuracy_percent": 80.5719,
+            "macro_f1_percent": 80.5569,
+            "specificity_percent": 77.956,
+            "sensitivity_percent": 83.1877,
+            "predicted_positive_percent": 52.5879,
+            "confusion_matrix_rows_target_columns_prediction": [
+              [
+                12784,
+                3615
+              ],
+              [
+                2752,
+                13617
+              ]
+            ]
+          },
+          "youden_j": 0.61143706
+        },
+        "breast_carcinoma": {
+          "auroc_fraction": 0.914310234486322,
+          "auroc_percent": 91.431,
+          "hanley_mcneil_95ci_low_percent": 91.1112,
+          "hanley_mcneil_95ci_high_percent": 91.7509,
+          "auroc_above_random_at_95_percent_confidence": true,
+          "zero_threshold": {
+            "threshold": 0.0,
+            "accuracy_percent": 52.1149,
+            "balanced_accuracy_percent": 52.1586,
+            "macro_f1_percent": 37.9855,
+            "specificity_percent": 4.3783,
+            "sensitivity_percent": 99.9389,
+            "predicted_positive_percent": 97.7783,
+            "confusion_matrix_rows_target_columns_prediction": [
+              [
+                718,
+                15681
+              ],
+              [
+                10,
+                16359
+              ]
+            ]
+          },
+          "validation_selected_threshold": {
+            "threshold": 0.13916626572608948,
+            "accuracy_percent": 83.844,
+            "balanced_accuracy_percent": 83.8422,
+            "macro_f1_percent": 83.8372,
+            "specificity_percent": 85.8223,
+            "sensitivity_percent": 81.8621,
+            "predicted_positive_percent": 47.9889,
+            "confusion_matrix_rows_target_columns_prediction": [
+              [
+                14074,
+                2325
+              ],
+              [
+                2969,
+                13400
+              ]
+            ]
+          },
+          "youden_j": 0.67684363
+        },
+        "pathology_finding": {
+          "auroc_fraction": 0.8001935371888648,
+          "auroc_percent": 80.0194,
+          "hanley_mcneil_95ci_low_percent": 79.5406,
+          "hanley_mcneil_95ci_high_percent": 80.4981,
+          "auroc_above_random_at_95_percent_confidence": true,
+          "zero_threshold": {
+            "threshold": 0.0,
+            "accuracy_percent": 51.297,
+            "balanced_accuracy_percent": 51.3411,
+            "macro_f1_percent": 36.6141,
+            "specificity_percent": 3.1648,
+            "sensitivity_percent": 99.5174,
+            "predicted_positive_percent": 98.175,
+            "confusion_matrix_rows_target_columns_prediction": [
+              [
+                519,
+                15880
+              ],
+              [
+                79,
+                16290
+              ]
+            ]
+          },
+          "validation_selected_threshold": {
+            "threshold": 0.05063021183013916,
+            "accuracy_percent": 72.3572,
+            "balanced_accuracy_percent": 72.3573,
+            "macro_f1_percent": 72.3572,
+            "specificity_percent": 72.2605,
+            "sensitivity_percent": 72.454,
+            "predicted_positive_percent": 50.0763,
+            "confusion_matrix_rows_target_columns_prediction": [
+              [
+                11850,
+                4549
+              ],
+              [
+                4509,
+                11860
+              ]
+            ]
+          },
+          "youden_j": 0.44714533
+        },
+        "direct_ensemble": {
+          "auroc_fraction": 0.9095369731851628,
+          "auroc_percent": 90.9537,
+          "hanley_mcneil_95ci_low_percent": 90.6251,
+          "hanley_mcneil_95ci_high_percent": 91.2823,
+          "auroc_above_random_at_95_percent_confidence": true,
+          "zero_threshold": {
+            "threshold": 0.0,
+            "accuracy_percent": 60.1257,
+            "balanced_accuracy_percent": 60.162,
+            "macro_f1_percent": 52.7209,
+            "specificity_percent": 20.5317,
+            "sensitivity_percent": 99.7923,
+            "predicted_positive_percent": 89.621,
+            "confusion_matrix_rows_target_columns_prediction": [
+              [
+                3367,
+                13032
+              ],
+              [
+                34,
+                16335
+              ]
+            ]
+          },
+          "validation_selected_threshold": {
+            "threshold": 0.1075691431760788,
+            "accuracy_percent": 82.9742,
+            "balanced_accuracy_percent": 82.9762,
+            "macro_f1_percent": 82.9671,
+            "specificity_percent": 80.8464,
+            "sensitivity_percent": 85.106,
+            "predicted_positive_percent": 52.0996,
+            "confusion_matrix_rows_target_columns_prediction": [
+              [
+                13258,
+                3141
+              ],
+              [
+                2438,
+                13931
+              ]
+            ]
+          },
+          "youden_j": 0.65952386
+        }
+      }
+    },
+    "model_card_bilinear_no_antialias_torch_compatible": {
+      "elapsed_seconds": 307.7415,
+      "prompts": {
+        "legacy_proxy": {
+          "auroc_fraction": 0.8157130592891513,
+          "auroc_percent": 81.5713,
+          "hanley_mcneil_95ci_low_percent": 81.1095,
+          "hanley_mcneil_95ci_high_percent": 82.0332,
+          "auroc_above_random_at_95_percent_confidence": true,
+          "zero_threshold": {
+            "threshold": 0.0,
+            "accuracy_percent": 64.0564,
+            "balanced_accuracy_percent": 64.0887,
+            "macro_f1_percent": 58.9592,
+            "specificity_percent": 28.7883,
+            "sensitivity_percent": 99.3891,
+            "predicted_positive_percent": 85.2875,
+            "confusion_matrix_rows_target_columns_prediction": [
+              [
+                4721,
+                11678
+              ],
+              [
+                100,
+                16269
+              ]
+            ]
+          },
+          "validation_selected_threshold": {
+            "threshold": 0.0640026107430458,
+            "accuracy_percent": 73.6206,
+            "balanced_accuracy_percent": 73.6269,
+            "macro_f1_percent": 73.4968,
+            "specificity_percent": 66.7236,
+            "sensitivity_percent": 80.5303,
+            "predicted_positive_percent": 56.8817,
+            "confusion_matrix_rows_target_columns_prediction": [
+              [
+                10942,
+                5457
+              ],
+              [
+                3187,
+                13182
+              ]
+            ]
+          },
+          "youden_j": 0.47253851
+        },
+        "clip_benchmark_pcam": {
+          "auroc_fraction": 0.8487098271388973,
+          "auroc_percent": 84.871,
+          "hanley_mcneil_95ci_low_percent": 84.4492,
+          "hanley_mcneil_95ci_high_percent": 85.2927,
+          "auroc_above_random_at_95_percent_confidence": true,
+          "zero_threshold": {
+            "threshold": 0.0,
+            "accuracy_percent": 63.8977,
+            "balanced_accuracy_percent": 63.9297,
+            "macro_f1_percent": 58.8906,
+            "specificity_percent": 28.9713,
+            "sensitivity_percent": 98.8881,
+            "predicted_positive_percent": 84.9457,
+            "confusion_matrix_rows_target_columns_prediction": [
+              [
+                4751,
+                11648
+              ],
+              [
+                182,
+                16187
+              ]
+            ]
+          },
+          "validation_selected_threshold": {
+            "threshold": 0.058615460991859436,
+            "accuracy_percent": 76.4862,
+            "balanced_accuracy_percent": 76.4843,
+            "macro_f1_percent": 76.4757,
+            "specificity_percent": 78.5292,
+            "sensitivity_percent": 74.4395,
+            "predicted_positive_percent": 47.9309,
+            "confusion_matrix_rows_target_columns_prediction": [
+              [
+                12878,
+                3521
+              ],
+              [
+                4184,
+                12185
+              ]
+            ]
+          },
+          "youden_j": 0.52968668
+        },
+        "biomedclip_pcam": {
+          "auroc_fraction": 0.8280964151832961,
+          "auroc_percent": 82.8096,
+          "hanley_mcneil_95ci_low_percent": 82.3621,
+          "hanley_mcneil_95ci_high_percent": 83.2571,
+          "auroc_above_random_at_95_percent_confidence": true,
+          "zero_threshold": {
+            "threshold": 0.0,
+            "accuracy_percent": 73.9563,
+            "balanced_accuracy_percent": 73.9509,
+            "macro_f1_percent": 73.8645,
+            "specificity_percent": 79.8097,
+            "sensitivity_percent": 68.0921,
+            "predicted_positive_percent": 44.1193,
+            "confusion_matrix_rows_target_columns_prediction": [
+              [
+                13088,
+                3311
+              ],
+              [
+                5223,
+                11146
+              ]
+            ]
+          },
+          "validation_selected_threshold": {
+            "threshold": -0.01961876079440117,
+            "accuracy_percent": 75.0031,
+            "balanced_accuracy_percent": 75.0093,
+            "macro_f1_percent": 74.8873,
+            "specificity_percent": 68.1505,
+            "sensitivity_percent": 81.8682,
+            "predicted_positive_percent": 56.8359,
+            "confusion_matrix_rows_target_columns_prediction": [
+              [
+                11176,
+                5223
+              ],
+              [
+                2968,
+                13401
+              ]
+            ]
+          },
+          "youden_j": 0.50018662
+        },
+        "direct_tissue": {
+          "auroc_fraction": 0.8546533819176664,
+          "auroc_percent": 85.4653,
+          "hanley_mcneil_95ci_low_percent": 85.0515,
+          "hanley_mcneil_95ci_high_percent": 85.8792,
+          "auroc_above_random_at_95_percent_confidence": true,
+          "zero_threshold": {
+            "threshold": 0.0,
+            "accuracy_percent": 59.314,
+            "balanced_accuracy_percent": 59.3511,
+            "macro_f1_percent": 51.3153,
+            "specificity_percent": 18.7633,
+            "sensitivity_percent": 99.9389,
+            "predicted_positive_percent": 90.5792,
+            "confusion_matrix_rows_target_columns_prediction": [
+              [
+                3077,
+                13322
+              ],
+              [
+                10,
+                16359
+              ]
+            ]
+          },
+          "validation_selected_threshold": {
+            "threshold": 0.10705225169658661,
+            "accuracy_percent": 77.7222,
+            "balanced_accuracy_percent": 77.727,
+            "macro_f1_percent": 77.6613,
+            "specificity_percent": 72.4373,
+            "sensitivity_percent": 83.0167,
+            "predicted_positive_percent": 55.2643,
+            "confusion_matrix_rows_target_columns_prediction": [
+              [
+                11879,
+                4520
+              ],
+              [
+                2780,
+                13589
+              ]
+            ]
+          },
+          "youden_j": 0.55454022
+        },
+        "breast_carcinoma": {
+          "auroc_fraction": 0.9043915103677282,
+          "auroc_percent": 90.4392,
+          "hanley_mcneil_95ci_low_percent": 90.1014,
+          "hanley_mcneil_95ci_high_percent": 90.7769,
+          "auroc_above_random_at_95_percent_confidence": true,
+          "zero_threshold": {
+            "threshold": 0.0,
+            "accuracy_percent": 51.9714,
+            "balanced_accuracy_percent": 52.0153,
+            "macro_f1_percent": 37.6749,
+            "specificity_percent": 4.0734,
+            "sensitivity_percent": 99.9572,
+            "predicted_positive_percent": 97.9401,
+            "confusion_matrix_rows_target_columns_prediction": [
+              [
+                668,
+                15731
+              ],
+              [
+                7,
+                16362
+              ]
+            ]
+          },
+          "validation_selected_threshold": {
+            "threshold": 0.13821418583393097,
+            "accuracy_percent": 82.9834,
+            "balanced_accuracy_percent": 82.9848,
+            "macro_f1_percent": 82.9797,
+            "specificity_percent": 81.4257,
+            "sensitivity_percent": 84.544,
+            "predicted_positive_percent": 51.5289,
+            "confusion_matrix_rows_target_columns_prediction": [
+              [
+                13353,
+                3046
+              ],
+              [
+                2530,
+                13839
+              ]
+            ]
+          },
+          "youden_j": 0.65969652
+        },
+        "pathology_finding": {
+          "auroc_fraction": 0.7728313277924387,
+          "auroc_percent": 77.2831,
+          "hanley_mcneil_95ci_low_percent": 76.7774,
+          "hanley_mcneil_95ci_high_percent": 77.7889,
+          "auroc_above_random_at_95_percent_confidence": true,
+          "zero_threshold": {
+            "threshold": 0.0,
+            "accuracy_percent": 51.944,
+            "balanced_accuracy_percent": 51.9875,
+            "macro_f1_percent": 37.9324,
+            "specificity_percent": 4.4271,
+            "sensitivity_percent": 99.5479,
+            "predicted_positive_percent": 97.5586,
+            "confusion_matrix_rows_target_columns_prediction": [
+              [
+                726,
+                15673
+              ],
+              [
+                74,
+                16295
+              ]
+            ]
+          },
+          "validation_selected_threshold": {
+            "threshold": 0.05027322843670845,
+            "accuracy_percent": 70.1691,
+            "balanced_accuracy_percent": 70.1724,
+            "macro_f1_percent": 70.1304,
+            "specificity_percent": 66.5102,
+            "sensitivity_percent": 73.8347,
+            "predicted_positive_percent": 53.6438,
+            "confusion_matrix_rows_target_columns_prediction": [
+              [
+                10907,
+                5492
+              ],
+              [
+                4283,
+                12086
+              ]
+            ]
+          },
+          "youden_j": 0.40344841
+        },
+        "direct_ensemble": {
+          "auroc_fraction": 0.8857228971557762,
+          "auroc_percent": 88.5723,
+          "hanley_mcneil_95ci_low_percent": 88.2036,
+          "hanley_mcneil_95ci_high_percent": 88.9409,
+          "auroc_above_random_at_95_percent_confidence": true,
+          "zero_threshold": {
+            "threshold": 0.0,
+            "accuracy_percent": 59.5581,
+            "balanced_accuracy_percent": 59.595,
+            "macro_f1_percent": 51.7469,
+            "specificity_percent": 19.3061,
+            "sensitivity_percent": 99.8839,
+            "predicted_positive_percent": 90.2802,
+            "confusion_matrix_rows_target_columns_prediction": [
+              [
+                3166,
+                13233
+              ],
+              [
+                19,
+                16350
+              ]
+            ]
+          },
+          "validation_selected_threshold": {
+            "threshold": 0.11783447116613388,
+            "accuracy_percent": 80.5359,
+            "balanced_accuracy_percent": 80.539,
+            "macro_f1_percent": 80.515,
+            "specificity_percent": 77.1937,
+            "sensitivity_percent": 83.8842,
+            "predicted_positive_percent": 53.3173,
+            "confusion_matrix_rows_target_columns_prediction": [
+              [
+                12659,
+                3740
+              ],
+              [
+                2638,
+                13731
+              ]
+            ]
+          },
+          "youden_j": 0.61077903
+        }
+      }
+    }
+  },
+  "test": {
+    "auroc_fraction": 0.8713366135786998,
+    "auroc_percent": 87.1337,
+    "hanley_mcneil_95ci_low_percent": 86.7433,
+    "hanley_mcneil_95ci_high_percent": 87.5241,
+    "auroc_above_random_at_95_percent_confidence": true,
+    "zero_threshold": {
+      "threshold": 0.0,
+      "accuracy_percent": 52.4231,
+      "balanced_accuracy_percent": 52.4434,
+      "macro_f1_percent": 38.5857,
+      "specificity_percent": 4.9539,
+      "sensitivity_percent": 99.9328,
+      "predicted_positive_percent": 97.4884,
+      "confusion_matrix_rows_target_columns_prediction": [
+        [
+          812,
+          15579
+        ],
+        [
+          11,
+          16366
+        ]
+      ]
+    },
+    "validation_frozen_threshold": {
+      "threshold": 0.13916626572608948,
+      "accuracy_percent": 78.9551,
+      "balanced_accuracy_percent": 78.9525,
+      "macro_f1_percent": 78.8776,
+      "specificity_percent": 84.9735,
+      "sensitivity_percent": 72.9316,
+      "predicted_positive_percent": 43.9667,
+      "confusion_matrix_rows_target_columns_prediction": [
+        [
+          13928,
+          2463
+        ],
+        [
+          4433,
+          11944
+        ]
+      ]
+    },
+    "elapsed_seconds": 582.6893,
+    "evaluated_once_after_selection": true
+  },
+  "comparison_to_previous_local_proxy": {
+    "previous_test_auroc_percent": 76.7946,
+    "optimized_test_auroc_percent": 87.1337,
+    "absolute_delta_percentage_points": 10.3391,
+    "caution": "the old route did not use validation selection and used only default preprocessing"
+  },
+  "random_baseline_assessment": {
+    "auroc_random_percent": 50.0,
+    "test_auroc_95ci_excludes_random": true,
+    "engineering_effect_is_significant": true
+  },
+  "limitations": [
+    "PCam is not a published same-checkpoint MedSigLIP evaluation route.",
+    "The TensorFlow resize package is unavailable; the model-card-like candidate uses the compatible PyTorch operation.",
+    "Validation-selected prompt and threshold must be frozen unchanged for the later P800 comparison."
+  ],
+  "environment": {
+    "python": "3.10.14",
+    "torch": "2.4.0+cu124",
+    "cuda_runtime": "12.4",
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "batch_size": 32,
+    "peak_gpu_memory_mb": 2680.94
+  },
+  "elapsed_seconds": 1482.5929
+}

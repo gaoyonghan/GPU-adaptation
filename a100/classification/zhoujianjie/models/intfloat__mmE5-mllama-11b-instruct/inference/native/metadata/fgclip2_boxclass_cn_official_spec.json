@@ -1,0 +1,52 @@
+{
+  "status": "strict_official_mapping",
+  "model": {
+    "model_id": "qihoo360/fg-clip2-base",
+    "revision": "430fbc8a912c86fd4de601381b6245a0edab22f0",
+    "backbone": "ViT-B/16",
+    "local_dir": "models/qihoo360/fg-clip2-base"
+  },
+  "dataset": {
+    "repo_id": "qihoo360/BoxClass-CN",
+    "revision": "0f448205fd23effb68b3486c8f83c1eb2cd72500",
+    "split": "validation",
+    "local_root": "datasets/evaluation/fgclip2_boxclass_cn_official",
+    "manifest": "evaluation_audit/fgclip2_boxclass_cn_manifest.json",
+    "images": 24221,
+    "annotations": 66258,
+    "categories": 566
+  },
+  "evaluator": {
+    "repo": "https://github.com/360CVGroup/FG-CLIP",
+    "commit": "b1af1cda8ae62089664251670c7819b25e07a0bc",
+    "local_dir": "evaluation_audit/reference_code/FG-CLIP",
+    "script": "fgclip2/eval/in1k/laion_cn_box_cls_ddp.py"
+  },
+  "protocol": {
+    "task": "zero-shot bounding-box classification",
+    "class_text": "the raw Chinese category name; no prompt template",
+    "tokenizer": "padding=max_length, max_length=64, truncation=true",
+    "text_walk_type": "box",
+    "image_preprocessing": "official Fgclip2ImageProcessor with NaFlex",
+    "region_preprocessing": "normalize each COCO bbox to the processor spatial_shapes grid and call get_image_box_roi_features",
+    "similarity": "softmax(100 * normalized_region_feature @ normalized_text_feature.T)",
+    "category_index": "category_id - 1, exactly as the official script"
+  },
+  "metrics": {
+    "Top-1 accuracy": {
+      "official_evaluator_output": true,
+      "same_checkpoint_reference_percent": 60.7,
+      "acceptance_status": "official_validation"
+    },
+    "Top-5 accuracy": {
+      "official_evaluator_output": true,
+      "same_checkpoint_reference_percent": null,
+      "acceptance_status": "diagnostic_only",
+      "reason": "The official script reports Top-5, but the official BoxClass-CN model table publishes only Top-1 for FG-CLIP 2 ViT-B/16."
+    }
+  },
+  "official_reference_sources": [
+    "https://huggingface.co/datasets/qihoo360/BoxClass-CN",
+    "https://arxiv.org/abs/2510.10921"
+  ]
+}

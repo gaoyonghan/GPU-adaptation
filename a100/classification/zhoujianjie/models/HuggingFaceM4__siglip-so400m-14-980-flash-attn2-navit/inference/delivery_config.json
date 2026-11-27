@@ -1,0 +1,13 @@
+{
+  "model_id": "HuggingFaceM4/siglip-so400m-14-980-flash-attn2-navit",
+  "launcher": "run_navit_native.py",
+  "args": [],
+  "native_task": "retrieval",
+  "public_evaluator": "unsupported_original_retrieval",
+  "bounded_smoke_supported": true,
+  "required_weights": [
+    "download_receipt.json"
+  ],
+  "required_data": [],
+  "smoke_scope": "original encoders/metric functions on fixed prefix corpus; not comparable to full-gallery Recall"
+}

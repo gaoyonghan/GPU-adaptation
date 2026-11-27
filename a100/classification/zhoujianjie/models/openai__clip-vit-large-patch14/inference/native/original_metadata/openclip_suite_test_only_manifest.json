@@ -1,0 +1,126 @@
+{
+  "generated_at": "2026-09-03T00:00:00+08:00",
+  "source_code": {
+    "repo": "LAION-AI/CLIP_benchmark",
+    "commit": "ee14a9a8a9bcde09d51f4a4b1dff5a75182a3596",
+    "local_path": "evaluation_audit/reference_code/CLIP_benchmark"
+  },
+  "official_reference_table": {
+    "path": "evaluation_audit/reference_code/open_clip/docs/openclip_classification_results.csv",
+    "repo_commit": "4a4e060bb2a5afbb9c59b882f09edb78f65a3b38"
+  },
+  "download_policy": "test split plus class names and official prompt templates only; train paths excluded",
+  "official_main_metric_by_dataset": {
+    "Caltech-101": "mean_per_class_recall",
+    "GTSRB": "acc1",
+    "Rendered SST2": "acc1",
+    "STL-10": "acc1",
+    "SVHN": "acc1",
+    "Oxford Flowers-102": "mean_per_class_recall",
+    "Oxford-IIIT Pet": "mean_per_class_recall",
+    "RESISC45": "acc1",
+    "Stanford Cars": "acc1",
+    "MNIST": "acc1",
+    "FGVC Aircraft": "mean_per_class_recall"
+  },
+  "datasets": [
+    {
+      "name": "Caltech-101",
+      "repo": "clip-benchmark/wds_vtab-caltech101",
+      "revision": "96c3ed2decb80d5fe120fb8a0179f25c82cbee78",
+      "images": 6085,
+      "bytes": 439349683,
+      "aggregate_sha256": "c0b1acf5e57b176d16edc6d50dded7e8f9d07f743555bb88b1c8e9e3d9be8429"
+    },
+    {
+      "name": "GTSRB",
+      "repo": "clip-benchmark/wds_gtsrb",
+      "revision": "1c13eff0803d2b02c9dc8dfe85e67770b3f0f3c5",
+      "images": 12630,
+      "bytes": 104851688,
+      "aggregate_sha256": "872164aa4537317fdc115a8ca3a64d37931bab78e410fe25c92185c934ce08e6"
+    },
+    {
+      "name": "Rendered SST2",
+      "repo": "clip-benchmark/wds_renderedsst2",
+      "revision": "66b9a461eda025201dd147e5f390f5984c33643a",
+      "images": 1821,
+      "bytes": 34091152,
+      "aggregate_sha256": "c17e911679ab3f4b1389c205a7c6b43659a85224df1d1330ce795641e527bb50"
+    },
+    {
+      "name": "STL-10",
+      "repo": "clip-benchmark/wds_stl10",
+      "revision": "dbb81ea4b357baa2138e30eb945d90715e928833",
+      "images": 8000,
+      "bytes": 141598956,
+      "aggregate_sha256": "2a682efa3fcb4e428c51773fdbbd5bcd30990721b98b2670c42cc7478516746d"
+    },
+    {
+      "name": "SVHN",
+      "repo": "clip-benchmark/wds_vtab-svhn",
+      "revision": "d6a7f60bb3cc618822299cc0d0e1951f104204df",
+      "images": 26032,
+      "bytes": 130512647,
+      "aggregate_sha256": "c5422f64822323861cc97942a922893ecbd6eb05c1cf65527ec8323e38e24026"
+    },
+    {
+      "name": "Oxford Flowers-102",
+      "repo": "clip-benchmark/wds_vtab-flowers",
+      "revision": "3bb9230797bb5a09d4ac7ea4ae311294571f51f4",
+      "images": 6149,
+      "bytes": 1781935419,
+      "aggregate_sha256": "e54e45d52ccae9f58a10bdb67693a132f5e13166bad5e2caa18f0f8ae55bdd1b"
+    },
+    {
+      "name": "Oxford-IIIT Pet",
+      "repo": "clip-benchmark/wds_vtab-pets",
+      "revision": "3fbd1f21f076311402bb2bf2a9d1a04b72a4266d",
+      "images": 3669,
+      "bytes": 888986104,
+      "aggregate_sha256": "e4a8192d81bb55e5150976159b0a92a0fb059f2ed3336e4f13124c7f7bbae939"
+    },
+    {
+      "name": "RESISC45",
+      "repo": "clip-benchmark/wds_vtab-resisc45",
+      "revision": "bede752d93059bf4df1102caf39fa03c570ec0d4",
+      "images": 6300,
+      "bytes": 421950031,
+      "aggregate_sha256": "1b885061dfca37d04a4a7dd1674c49c622128a5b48b17e9f93e090046e5293d4"
+    },
+    {
+      "name": "Stanford Cars",
+      "repo": "clip-benchmark/wds_cars",
+      "revision": "25cfe61abf8373d833d400d76983a9b389ebcdba",
+      "images": 8041,
+      "bytes": 1008717304,
+      "aggregate_sha256": "17ba6b49a24a2ace3b2dd4f179fa4fee6bcc1f1af622a0320d27c2695d54c161"
+    },
+    {
+      "name": "MNIST",
+      "repo": "clip-benchmark/wds_mnist",
+      "revision": "ba1491816962d0a3e81e178cf5f857f8ea5ebe1b",
+      "images": 10000,
+      "bytes": 40980532,
+      "aggregate_sha256": "c049b1775b44eb508724cad06d658fcb278cdcf5223a945d52679ef4fad602bd"
+    },
+    {
+      "name": "FGVC Aircraft",
+      "repo": "clip-benchmark/wds_fgvc_aircraft",
+      "revision": "bd35bca4c724d2e238552c6ced7fc331d749e3ef",
+      "images": 3333,
+      "bytes": 928881566,
+      "aggregate_sha256": "0cfb4f40ccd4a00d689c9dc4e7b96bf5bf31ad9cdb661982d25807294b109473"
+    }
+  ],
+  "official_percent_references": {
+    "laion/CLIP-ViT-H-14-laion2B-s32B-b79K": {"Caltech-101": 94.21, "GTSRB": 58.32, "Rendered SST2": 63.92, "STL-10": 98.48, "SVHN": 52.52, "Oxford Flowers-102": 79.82, "Oxford-IIIT Pet": 94.38, "RESISC45": 69.95, "Stanford Cars": 93.38, "MNIST": 72.84, "FGVC Aircraft": 42.65},
+    "laion/CLIP-ViT-bigG-14-laion2B-39B-b160k": {"Caltech-101": 94.84, "GTSRB": 62.44, "Rendered SST2": 65.35, "STL-10": 98.50, "SVHN": 69.61, "Oxford Flowers-102": 81.63, "Oxford-IIIT Pet": 95.29, "RESISC45": 72.35, "Stanford Cars": 94.60, "MNIST": 71.57, "FGVC Aircraft": 49.53},
+    "laion/CLIP-ViT-B-32-laion2B-s34B-b79K": {"Caltech-101": 91.05, "GTSRB": 49.33, "Rendered SST2": 57.28, "STL-10": 96.56, "SVHN": 42.57, "Oxford Flowers-102": 70.24, "Oxford-IIIT Pet": 90.76, "RESISC45": 61.06, "Stanford Cars": 86.07, "MNIST": 69.96, "FGVC Aircraft": 24.53},
+    "laion/CLIP-ViT-L-14-DataComp.XL-s13B-b90K": {"Caltech-101": 94.65, "GTSRB": 58.53, "Rendered SST2": 61.01, "STL-10": 99.25, "SVHN": 67.69, "Oxford Flowers-102": 82.62, "Oxford-IIIT Pet": 95.06, "RESISC45": 69.41, "Stanford Cars": 93.05, "MNIST": 86.61, "FGVC Aircraft": 47.50},
+    "laion/CLIP-ViT-L-14-laion2B-s32B-b82K": {"Caltech-101": 93.88, "GTSRB": 56.18, "Rendered SST2": 59.25, "STL-10": 98.85, "SVHN": 40.87, "Oxford Flowers-102": 74.79, "Oxford-IIIT Pet": 93.09, "RESISC45": 66.87, "Stanford Cars": 92.63, "MNIST": 54.10, "FGVC Aircraft": 36.52},
+    "laion/CLIP-ViT-B-16-laion2B-s34B-b88K": {"Caltech-101": 92.87, "GTSRB": 48.26, "Rendered SST2": 59.69, "STL-10": 97.86, "SVHN": 50.02, "Oxford Flowers-102": 70.84, "Oxford-IIIT Pet": 90.48, "RESISC45": 62.75, "Stanford Cars": 88.48, "MNIST": 65.77, "FGVC Aircraft": 26.95},
+    "laion/CLIP-ViT-g-14-laion2B-s34B-b88K": {"Caltech-101": 94.52, "GTSRB": 49.64, "Rendered SST2": 56.78, "STL-10": 98.93, "SVHN": 56.11, "Oxford Flowers-102": 80.10, "Oxford-IIIT Pet": 93.79, "RESISC45": 69.60, "Stanford Cars": 93.94, "MNIST": 71.91, "FGVC Aircraft": 44.41},
+    "laion/CLIP-convnext_xxlarge-laion2B-s34B-b82K-augreg-soup": {"Caltech-101": 94.48, "GTSRB": 55.08, "Rendered SST2": 69.52, "STL-10": 98.10, "SVHN": 62.54, "Oxford Flowers-102": 82.41, "Oxford-IIIT Pet": 94.45, "RESISC45": 71.90, "Stanford Cars": 94.09, "MNIST": 82.77, "FGVC Aircraft": 44.34}
+  }
+}

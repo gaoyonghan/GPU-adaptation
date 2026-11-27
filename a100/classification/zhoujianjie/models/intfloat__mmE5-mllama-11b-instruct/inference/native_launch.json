@@ -1,0 +1,12 @@
+{
+  "model": "intfloat/mmE5-mllama-11b-instruct",
+  "historical_command": [
+    "python",
+    "-u",
+    "environment_setup/run_special_native.py",
+    "intfloat/mmE5-mllama-11b-instruct"
+  ],
+  "native_evaluator": "evaluation_audit/evaluate_mme5_country211_official.py",
+  "historical_a100_environment": "/data/zhoujianjie/environment_setup/native_python.py",
+  "purpose": "provenance only; not a central task registry"
+}

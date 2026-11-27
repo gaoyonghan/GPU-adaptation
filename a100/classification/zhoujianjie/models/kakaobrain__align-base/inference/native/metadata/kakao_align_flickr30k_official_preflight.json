@@ -1,0 +1,38 @@
+{
+  "generated_at": "2026-09-06T14:22:40+08:00",
+  "status": "passed",
+  "mapping": {
+    "model": "kakaobrain/align-base",
+    "target_revision": "e96a37facc7b1f59090ece82293226b817afd6ba",
+    "original_checkpoint": "kakaobrain/coyo-align-b7-base@248f3b899593e489d73ed6ddf88469ad042ccbe1",
+    "checkpoint_equivalence": "evaluation_audit/kakao_align_checkpoint_conversion_evidence.json",
+    "dataset": "Flickr30K Karpathy test",
+    "dataset_split": "test: 1,000 images, 5,000 raw captions",
+    "dataset_revision": "f8af3ceee1b944bf761340682621dfafd23974d2",
+    "protocol": "COYO-ALIGN official raw-caption dual-encoder cosine retrieval; R@1 over the full split; image resize 346 then center crop 289; BERT uncased max length 64",
+    "official_reference": {
+      "image_to_text_recall_at_1_percent": 88.1,
+      "text_to_image_recall_at_1_percent": 73.2
+    },
+    "reference_source": "COYO-ALIGN README result table at official repository commit",
+    "official_code_commit": "8cea82e5381b7c4806967746473c6053b6817905",
+    "metric_code": "evaluate/eval_retrieval.py: cosine similarity and R@1 exact image/caption-id match"
+  },
+  "checks": {
+    "model_revision_fixed": true,
+    "checkpoint_exact_lossless_conversion": true,
+    "dataset_revision_fixed": true,
+    "dataset_shards_verified": true,
+    "karpathy_test_image_count_1000": true,
+    "five_captions_each": true,
+    "captions_and_order_exactly_match_frozen_karpathy_test": true,
+    "official_evaluator_present": true,
+    "official_reference_values_present": true
+  },
+  "frozen_assets": {
+    "dataset_manifest_sha256": "26c38c8f350994d98c31f67a659afdb13de6bcf2f68e45c26faffe8aab4bef0c",
+    "karpathy_test_json_sha256": "5d2a8e7365ff2220cf885e3fb656dd33b72b3a8f8c761067deebb0b22718806d",
+    "preprocessor_config_sha256": "6ef1d9b167c8143ebf0c7a4153b05547ba20348044cff8082e17bebeb4563175",
+    "official_eval_retrieval_sha256": "40c10c009906a3cf9f69262609b61741979701946915ce06bcd3992b5725c561"
+  }
+}

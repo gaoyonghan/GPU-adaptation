@@ -1,0 +1,12 @@
+{
+  "model": "lyua1225/clip-huge-zh-75k-steps-bs4096",
+  "historical_command": [
+    "python",
+    "-u",
+    "environment_setup/run_three_native.py",
+    "lyua1225/clip-huge-zh-75k-steps-bs4096"
+  ],
+  "native_evaluator": "evaluation_audit/evaluate_remaining_11_proxy_diagnostics.py",
+  "historical_a100_environment": "/data/zhoujianjie/environment_setup/native_python.py",
+  "purpose": "provenance only; not a central task registry"
+}

@@ -1,0 +1,7 @@
+{
+  "model": "facebook/metaclip-h14-fullcc2.5b",
+  "historical_a100_status": "completed",
+  "submission_entry_status": "independent_entry_prepared",
+  "gpu_retested_in_submission": false,
+  "reason": null
+}

@@ -1,0 +1,1017 @@
+[
+  {
+    "file": "inference/native/native_mme5_python.py",
+    "source_sha256": "c05a7a4cbd7985c816b65773c558c1b3618d46cb41f2464a4b12150cb37623be",
+    "path_expression_edits": 2,
+    "path_mapping_stage_sha256": "222da15204400a4c7fd71daf2ca243fc0d9594d446b56bad36c634ece92799d7",
+    "final_delivery_sha256": "222da15204400a4c7fd71daf2ca243fc0d9594d446b56bad36c634ece92799d7"
+  },
+  {
+    "file": "inference/native/native_fgclip_python.py",
+    "source_sha256": "85db4a246d109f7cf518835afcd67482684f256765ec1a784698966036597228",
+    "path_expression_edits": 6,
+    "path_mapping_stage_sha256": "223e2d938be89d706e31a4fc0ff343bfeb861a7ddaed6dd6b98c3547d9e8dfc5",
+    "final_delivery_sha256": "223e2d938be89d706e31a4fc0ff343bfeb861a7ddaed6dd6b98c3547d9e8dfc5"
+  },
+  {
+    "file": "inference/native/run_pe_native.py",
+    "source_sha256": "01f6da933fe87d7e447e0883bad48a2cdc98990a11cd8c15bf29de1c0bc02f67",
+    "path_expression_edits": 3,
+    "path_mapping_stage_sha256": "f4b6c40c0a18d60a8ac741597286e4ec284b08e0f5f30da46fd7dff009eec0cc",
+    "final_delivery_sha256": "f4b6c40c0a18d60a8ac741597286e4ec284b08e0f5f30da46fd7dff009eec0cc"
+  },
+  {
+    "file": "inference/native/evaluate_pe_core_imagenet_a.py",
+    "source_sha256": "6e0798b279ed05cab424134f49435d83d54fcb387468d863c0e2600e92575669",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "6e0798b279ed05cab424134f49435d83d54fcb387468d863c0e2600e92575669",
+    "final_delivery_sha256": "6e0798b279ed05cab424134f49435d83d54fcb387468d863c0e2600e92575669"
+  },
+  {
+    "file": "inference/native/pe_native_a100.py",
+    "source_sha256": "dca712246b9a58c96db03cfecc019f79d4a60c0c1eb3b5ac44f9cb36f32974a3",
+    "path_expression_edits": 13,
+    "path_mapping_stage_sha256": "52f00bd5ce6d8ea9156d7be51d4ae4d4bb411d9c3284be8792b73d4977c393dc",
+    "final_delivery_sha256": "19b960dbf28dbefb107e914fc23a9ce0164beac574fb581d6c88c4964b9e74ad"
+  },
+  {
+    "file": "inference/native/native_python.py",
+    "source_sha256": "ea047f7906c92e5d0173ccd6195c3d183645560aa19bcf826d028044e623005c",
+    "path_expression_edits": 6,
+    "path_mapping_stage_sha256": "2b4b7632421ea8f9b220db6446d5eb9c2892a1c1d13a97a4eda4bdb71a6fef28",
+    "final_delivery_sha256": "1bb949be95f07a3bf556d0290dd9001724efabfae9951668fc5e71896516a5b0"
+  },
+  {
+    "file": "inference/native/sitecustomize.py",
+    "source_sha256": "6eda9fd629a259c259dbd87d1f55fb4004ca20890677a7dee5745f2d7633016b",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "6eda9fd629a259c259dbd87d1f55fb4004ca20890677a7dee5745f2d7633016b",
+    "final_delivery_sha256": "962ac551ad22f7854811868a13cdd4b758c316d57acca6fa2fddea9752ce153b"
+  },
+  {
+    "file": "inference/native/model_paths.py",
+    "source_sha256": "d39241a382eaffe4ca202ac8d47cf9684c09603cc558b7d37519def06614896d",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "d39241a382eaffe4ca202ac8d47cf9684c09603cc558b7d37519def06614896d",
+    "final_delivery_sha256": "d39241a382eaffe4ca202ac8d47cf9684c09603cc558b7d37519def06614896d"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/setup.py",
+    "source_sha256": "7f541601558551b924060f813e8c5bc4d45c19b53884ca21b0559a5ea31fcf3c",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "7f541601558551b924060f813e8c5bc4d45c19b53884ca21b0559a5ea31fcf3c",
+    "final_delivery_sha256": "7f541601558551b924060f813e8c5bc4d45c19b53884ca21b0559a5ea31fcf3c"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/core/__init__.py",
+    "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "final_delivery_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/core/probe.py",
+    "source_sha256": "10b8dff89b31cc65bcb36f4d711f9d5cbcf6c9ff3ee65ccf26b3273a12d49c19",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "10b8dff89b31cc65bcb36f4d711f9d5cbcf6c9ff3ee65ccf26b3273a12d49c19",
+    "final_delivery_sha256": "10b8dff89b31cc65bcb36f4d711f9d5cbcf6c9ff3ee65ccf26b3273a12d49c19"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/core/tokenizer.py",
+    "source_sha256": "38b6953e42eb5427b929ce7639e3da8a9ef7b11a0330955e1abc4d07e864f4ef",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "38b6953e42eb5427b929ce7639e3da8a9ef7b11a0330955e1abc4d07e864f4ef",
+    "final_delivery_sha256": "38b6953e42eb5427b929ce7639e3da8a9ef7b11a0330955e1abc4d07e864f4ef"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/core/stool.py",
+    "source_sha256": "328180109eb8c0a887c9ed79bfa653747ef8bb034ea5371b336c80119d984826",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "328180109eb8c0a887c9ed79bfa653747ef8bb034ea5371b336c80119d984826",
+    "final_delivery_sha256": "328180109eb8c0a887c9ed79bfa653747ef8bb034ea5371b336c80119d984826"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/core/checkpoint.py",
+    "source_sha256": "93ca3f45bd5fd15d0b6be7ea71d8de5d9dd5f166478b923cb9e424a8aa3660ad",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "93ca3f45bd5fd15d0b6be7ea71d8de5d9dd5f166478b923cb9e424a8aa3660ad",
+    "final_delivery_sha256": "93ca3f45bd5fd15d0b6be7ea71d8de5d9dd5f166478b923cb9e424a8aa3660ad"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/core/args.py",
+    "source_sha256": "baf2786505a1967f7262c49feca84145c8b1613ac0e4e63fb266419c4fbddae6",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "baf2786505a1967f7262c49feca84145c8b1613ac0e4e63fb266419c4fbddae6",
+    "final_delivery_sha256": "baf2786505a1967f7262c49feca84145c8b1613ac0e4e63fb266419c4fbddae6"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/core/optim.py",
+    "source_sha256": "d3bc29d8bcefec0ea44ce32c9ff94c3b45d8060f12d809ff2c177dc18e5c1e06",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "d3bc29d8bcefec0ea44ce32c9ff94c3b45d8060f12d809ff2c177dc18e5c1e06",
+    "final_delivery_sha256": "d3bc29d8bcefec0ea44ce32c9ff94c3b45d8060f12d809ff2c177dc18e5c1e06"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/core/distributed.py",
+    "source_sha256": "cc4d99d6186563e21f84970a47f6f6bdc860bf90d91c0140926612d5bb2ce8da",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "cc4d99d6186563e21f84970a47f6f6bdc860bf90d91c0140926612d5bb2ce8da",
+    "final_delivery_sha256": "cc4d99d6186563e21f84970a47f6f6bdc860bf90d91c0140926612d5bb2ce8da"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/core/profiling.py",
+    "source_sha256": "553cd7f9650c9ded681bad3435d9314ec587752233f0421ea3ecf067df3cfd09",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "553cd7f9650c9ded681bad3435d9314ec587752233f0421ea3ecf067df3cfd09",
+    "final_delivery_sha256": "553cd7f9650c9ded681bad3435d9314ec587752233f0421ea3ecf067df3cfd09"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/core/transformer.py",
+    "source_sha256": "0743d4305b08923968f306bee553355c36ba11f056ce69d8cf48d24628967fa5",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "0743d4305b08923968f306bee553355c36ba11f056ce69d8cf48d24628967fa5",
+    "final_delivery_sha256": "0743d4305b08923968f306bee553355c36ba11f056ce69d8cf48d24628967fa5"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/core/logger.py",
+    "source_sha256": "b545ec76e3356bd5df85a8fadffe7671f21ec19098f351a6bc8799b7e282450e",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "b545ec76e3356bd5df85a8fadffe7671f21ec19098f351a6bc8799b7e282450e",
+    "final_delivery_sha256": "b545ec76e3356bd5df85a8fadffe7671f21ec19098f351a6bc8799b7e282450e"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/core/metrics.py",
+    "source_sha256": "89656e8efcbeabd86fc26d329942298e15cf21d01a4423e9ef592bd8235f64ac",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "89656e8efcbeabd86fc26d329942298e15cf21d01a4423e9ef592bd8235f64ac",
+    "final_delivery_sha256": "89656e8efcbeabd86fc26d329942298e15cf21d01a4423e9ef592bd8235f64ac"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/core/utils.py",
+    "source_sha256": "69bc3c4e5fa117161a8ec86c95b6b091356f22d7052ab401b4f8853c07fc1d0a",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "69bc3c4e5fa117161a8ec86c95b6b091356f22d7052ab401b4f8853c07fc1d0a",
+    "final_delivery_sha256": "69bc3c4e5fa117161a8ec86c95b6b091356f22d7052ab401b4f8853c07fc1d0a"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/core/data/conversation.py",
+    "source_sha256": "be155bcbbf8b27950fa1e4bce56a74cb6621223b10fc6ac8e0c1da6a977b3855",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "be155bcbbf8b27950fa1e4bce56a74cb6621223b10fc6ac8e0c1da6a977b3855",
+    "final_delivery_sha256": "be155bcbbf8b27950fa1e4bce56a74cb6621223b10fc6ac8e0c1da6a977b3855"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/core/data/__init__.py",
+    "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "final_delivery_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/core/data/preprocessor.py",
+    "source_sha256": "34684e03706f9024df29e63813951e9abfe690ca0e3a20b3002103e7e28a47e4",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "34684e03706f9024df29e63813951e9abfe690ca0e3a20b3002103e7e28a47e4",
+    "final_delivery_sha256": "34684e03706f9024df29e63813951e9abfe690ca0e3a20b3002103e7e28a47e4"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/core/data/data.py",
+    "source_sha256": "4fe00e6c27b4f61e6511a4cfd89e9c8b8b8f71a609f3743a27e68d8c286c59b9",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "4fe00e6c27b4f61e6511a4cfd89e9c8b8b8f71a609f3743a27e68d8c286c59b9",
+    "final_delivery_sha256": "4fe00e6c27b4f61e6511a4cfd89e9c8b8b8f71a609f3743a27e68d8c286c59b9"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/core/data/data_mixer.py",
+    "source_sha256": "00d09c9eef83efe7fc6a921e94928bbeed156ceef19c3d80bf01ab2b5483f8f6",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "00d09c9eef83efe7fc6a921e94928bbeed156ceef19c3d80bf01ab2b5483f8f6",
+    "final_delivery_sha256": "00d09c9eef83efe7fc6a921e94928bbeed156ceef19c3d80bf01ab2b5483f8f6"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/core/data/data_collators.py",
+    "source_sha256": "abddd0f52a599152d6a179977f47a8e0b6c9432da66261edd193ee4f87c8a74c",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "abddd0f52a599152d6a179977f47a8e0b6c9432da66261edd193ee4f87c8a74c",
+    "final_delivery_sha256": "abddd0f52a599152d6a179977f47a8e0b6c9432da66261edd193ee4f87c8a74c"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/core/data/dataloader.py",
+    "source_sha256": "3b67713e075937f47c14fd8d29cf22f48027df92a1a661868a4956023660f621",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "3b67713e075937f47c14fd8d29cf22f48027df92a1a661868a4956023660f621",
+    "final_delivery_sha256": "3b67713e075937f47c14fd8d29cf22f48027df92a1a661868a4956023660f621"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/core/vision_encoder/__init__.py",
+    "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "final_delivery_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/core/vision_encoder/tokenizer.py",
+    "source_sha256": "42db8b142e1fe7a9b7d294049e063c8bd454e6902e94af2eebf3769c3927186d",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "42db8b142e1fe7a9b7d294049e063c8bd454e6902e94af2eebf3769c3927186d",
+    "final_delivery_sha256": "42db8b142e1fe7a9b7d294049e063c8bd454e6902e94af2eebf3769c3927186d"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/core/vision_encoder/rope.py",
+    "source_sha256": "85a16113138f26389ea35fccd313f2aca12945c7ed2eb24e5d52dbe680dad121",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "85a16113138f26389ea35fccd313f2aca12945c7ed2eb24e5d52dbe680dad121",
+    "final_delivery_sha256": "85a16113138f26389ea35fccd313f2aca12945c7ed2eb24e5d52dbe680dad121"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/core/vision_encoder/transforms.py",
+    "source_sha256": "ded9fdbd3a2e3a1d46e05d83f64074281e9c3b6f630257d051308d27e74bd7d3",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "ded9fdbd3a2e3a1d46e05d83f64074281e9c3b6f630257d051308d27e74bd7d3",
+    "final_delivery_sha256": "ded9fdbd3a2e3a1d46e05d83f64074281e9c3b6f630257d051308d27e74bd7d3"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/core/vision_encoder/pe.py",
+    "source_sha256": "36b62204c4cf12a709946facce2df8980e0880bf06deb6e49a2aa288158c3d53",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "36b62204c4cf12a709946facce2df8980e0880bf06deb6e49a2aa288158c3d53",
+    "final_delivery_sha256": "36b62204c4cf12a709946facce2df8980e0880bf06deb6e49a2aa288158c3d53"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/core/vision_encoder/config.py",
+    "source_sha256": "37c10ea7b68889241c8d9ebce27c62577c7379a33c444f9b0129bc90946aaff5",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "37c10ea7b68889241c8d9ebce27c62577c7379a33c444f9b0129bc90946aaff5",
+    "final_delivery_sha256": "37c10ea7b68889241c8d9ebce27c62577c7379a33c444f9b0129bc90946aaff5"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/core/tests/dataloader_test.py",
+    "source_sha256": "c7065d58447d0c57f85213ffb63b7d853e250e35bc853ab96e5351b820d93f4b",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "c7065d58447d0c57f85213ffb63b7d853e250e35bc853ab96e5351b820d93f4b",
+    "final_delivery_sha256": "c7065d58447d0c57f85213ffb63b7d853e250e35bc853ab96e5351b820d93f4b"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/core/tests/llama3_tokenizer_test.py",
+    "source_sha256": "565c2a8d75282d2a62216034e6dfe8f85466612437e1ad1c71cc04ca24e93f13",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "565c2a8d75282d2a62216034e6dfe8f85466612437e1ad1c71cc04ca24e93f13",
+    "final_delivery_sha256": "565c2a8d75282d2a62216034e6dfe8f85466612437e1ad1c71cc04ca24e93f13"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/core/audio_visual_encoder/__init__.py",
+    "source_sha256": "5344a25c7daef5796dadec2d2fccec07b2915cf5009f418dd0c7bea8b898deb9",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "5344a25c7daef5796dadec2d2fccec07b2915cf5009f418dd0c7bea8b898deb9",
+    "final_delivery_sha256": "5344a25c7daef5796dadec2d2fccec07b2915cf5009f418dd0c7bea8b898deb9"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/core/audio_visual_encoder/aligner.py",
+    "source_sha256": "5ebce9cedd7b426f84cb3468f148c04f986dfea7e069d96898db2ea4674ba26a",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "5ebce9cedd7b426f84cb3468f148c04f986dfea7e069d96898db2ea4674ba26a",
+    "final_delivery_sha256": "5ebce9cedd7b426f84cb3468f148c04f986dfea7e069d96898db2ea4674ba26a"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/core/audio_visual_encoder/patcher.py",
+    "source_sha256": "a020da0afa0bb81be037532de13f29cd175ffd9959a5b1ae905238bba52d76d9",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "a020da0afa0bb81be037532de13f29cd175ffd9959a5b1ae905238bba52d76d9",
+    "final_delivery_sha256": "a020da0afa0bb81be037532de13f29cd175ffd9959a5b1ae905238bba52d76d9"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/core/audio_visual_encoder/transforms.py",
+    "source_sha256": "6d97bf7b1dbccbb7edf8dedb6fb36db30a73958e80c04b37a95f9bebc9686226",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "6d97bf7b1dbccbb7edf8dedb6fb36db30a73958e80c04b37a95f9bebc9686226",
+    "final_delivery_sha256": "6d97bf7b1dbccbb7edf8dedb6fb36db30a73958e80c04b37a95f9bebc9686226"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/core/audio_visual_encoder/audio_codec.py",
+    "source_sha256": "c25b40a982a2d211e366b4c41c9e02108e65b1d46880cd40fc8595736e8afd50",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "c25b40a982a2d211e366b4c41c9e02108e65b1d46880cd40fc8595736e8afd50",
+    "final_delivery_sha256": "c25b40a982a2d211e366b4c41c9e02108e65b1d46880cd40fc8595736e8afd50"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/core/audio_visual_encoder/transformer.py",
+    "source_sha256": "8dd6df9a677f1c416c7ee3df9b8927aaae08d596984c1720326c38943bcb7eb2",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "8dd6df9a677f1c416c7ee3df9b8927aaae08d596984c1720326c38943bcb7eb2",
+    "final_delivery_sha256": "8dd6df9a677f1c416c7ee3df9b8927aaae08d596984c1720326c38943bcb7eb2"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/core/audio_visual_encoder/pe.py",
+    "source_sha256": "46a45c039f489b91bb890bb961373f9dae9c499dcba45f1d149636cf474263b3",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "46a45c039f489b91bb890bb961373f9dae9c499dcba45f1d149636cf474263b3",
+    "final_delivery_sha256": "46a45c039f489b91bb890bb961373f9dae9c499dcba45f1d149636cf474263b3"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/core/audio_visual_encoder/config.py",
+    "source_sha256": "fd2587905b491e00597e6b87cb28affba41e02e4227e9ef14410e94ab33c59c1",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "fd2587905b491e00597e6b87cb28affba41e02e4227e9ef14410e94ab33c59c1",
+    "final_delivery_sha256": "fd2587905b491e00597e6b87cb28affba41e02e4227e9ef14410e94ab33c59c1"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/core/transforms/__init__.py",
+    "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "final_delivery_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/core/transforms/region_transform.py",
+    "source_sha256": "379ee4db65639de34a96e094a5afa88a62020b9030ac5cc609d2450f1d77384d",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "379ee4db65639de34a96e094a5afa88a62020b9030ac5cc609d2450f1d77384d",
+    "final_delivery_sha256": "379ee4db65639de34a96e094a5afa88a62020b9030ac5cc609d2450f1d77384d"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/core/transforms/video_transform.py",
+    "source_sha256": "36e1baa4323b1e43ee6718e087196b47f5514246b9f200ff3977471a7cec7145",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "36e1baa4323b1e43ee6718e087196b47f5514246b9f200ff3977471a7cec7145",
+    "final_delivery_sha256": "36e1baa4323b1e43ee6718e087196b47f5514246b9f200ff3977471a7cec7145"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/core/transforms/image_transform.py",
+    "source_sha256": "8e5b1363e6a77c6f17427d11794ba975759256e14e014ddef35e40167857e5fd",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "8e5b1363e6a77c6f17427d11794ba975759256e14e014ddef35e40167857e5fd",
+    "final_delivery_sha256": "8e5b1363e6a77c6f17427d11794ba975759256e14e014ddef35e40167857e5fd"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/core/vision_projector/__init__.py",
+    "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "final_delivery_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/core/vision_projector/mlp.py",
+    "source_sha256": "1c3cd95ee92f16f3921b2e3d61d7711820e12516d0273fa1fb8849d55d3bc07e",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "1c3cd95ee92f16f3921b2e3d61d7711820e12516d0273fa1fb8849d55d3bc07e",
+    "final_delivery_sha256": "1c3cd95ee92f16f3921b2e3d61d7711820e12516d0273fa1fb8849d55d3bc07e"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/core/vision_projector/base.py",
+    "source_sha256": "ee25a00ca1ca28a6bcc9a4a5a8a041b3268a01f60d9af8d2c48a30767317e52f",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "ee25a00ca1ca28a6bcc9a4a5a8a041b3268a01f60d9af8d2c48a30767317e52f",
+    "final_delivery_sha256": "ee25a00ca1ca28a6bcc9a4a5a8a041b3268a01f60d9af8d2c48a30767317e52f"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/plm/generate.py",
+    "source_sha256": "1329353eb379d81108442d3264175da20cf9ff67c8c4eee52fbfd5c66691fbfe",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "1329353eb379d81108442d3264175da20cf9ff67c8c4eee52fbfd5c66691fbfe",
+    "final_delivery_sha256": "1329353eb379d81108442d3264175da20cf9ff67c8c4eee52fbfd5c66691fbfe"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/plm/tokenizer.py",
+    "source_sha256": "e05463a7b810607b5c8f27e609e7ced8447d61a9af9b8d88aaee9ae332fb9710",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "e05463a7b810607b5c8f27e609e7ced8447d61a9af9b8d88aaee9ae332fb9710",
+    "final_delivery_sha256": "e05463a7b810607b5c8f27e609e7ced8447d61a9af9b8d88aaee9ae332fb9710"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/plm/train.py",
+    "source_sha256": "c747a1fd9c9f8b4d5e9093b936d78364aa2ea0989c98f03c623831fa47cd5e86",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "c747a1fd9c9f8b4d5e9093b936d78364aa2ea0989c98f03c623831fa47cd5e86",
+    "final_delivery_sha256": "c747a1fd9c9f8b4d5e9093b936d78364aa2ea0989c98f03c623831fa47cd5e86"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/plm/dataset_conf.py",
+    "source_sha256": "79b1cbf38c496bade0c3254a8e4e3baa87affab15e2b7d856675d85326a48059",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "79b1cbf38c496bade0c3254a8e4e3baa87affab15e2b7d856675d85326a48059",
+    "final_delivery_sha256": "79b1cbf38c496bade0c3254a8e4e3baa87affab15e2b7d856675d85326a48059"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/plm/transformer.py",
+    "source_sha256": "c533e678346eb4fa724550d46c5bdbeb4b3334cb40493a7320f61e4d8e3e5682",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "c533e678346eb4fa724550d46c5bdbeb4b3334cb40493a7320f61e4d8e3e5682",
+    "final_delivery_sha256": "c533e678346eb4fa724550d46c5bdbeb4b3334cb40493a7320f61e4d8e3e5682"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/plm/consolidate.py",
+    "source_sha256": "b1eca632099f05a14d2aa94324b6320784b6d94df091e2ad2c0a790455216c81",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "b1eca632099f05a14d2aa94324b6320784b6d94df091e2ad2c0a790455216c81",
+    "final_delivery_sha256": "b1eca632099f05a14d2aa94324b6320784b6d94df091e2ad2c0a790455216c81"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/plm/interpolate_PE_pos_embed.py",
+    "source_sha256": "b108d44a628e5fa684f71ebee1777f741e4e89d517d017bfd42a3203e306e53d",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "b108d44a628e5fa684f71ebee1777f741e4e89d517d017bfd42a3203e306e53d",
+    "final_delivery_sha256": "b108d44a628e5fa684f71ebee1777f741e4e89d517d017bfd42a3203e306e53d"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/detection/detectron2_pe/__init__.py",
+    "source_sha256": "1fac38e23be9390db89e05ac450b83672a91db485e5b9fd102c16097d45f540a",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "1fac38e23be9390db89e05ac450b83672a91db485e5b9fd102c16097d45f540a",
+    "final_delivery_sha256": "1fac38e23be9390db89e05ac450b83672a91db485e5b9fd102c16097d45f540a"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/detection/tools/lazyconfig_train_net_pe_slurm.py",
+    "source_sha256": "1b785edfbb08d106a85912b56e9bd09449e3b68bdc6c1d11da440283a07f7dea",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "1b785edfbb08d106a85912b56e9bd09449e3b68bdc6c1d11da440283a07f7dea",
+    "final_delivery_sha256": "1b785edfbb08d106a85912b56e9bd09449e3b68bdc6c1d11da440283a07f7dea"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/detection/tools/lazyconfig_train_net_pe.py",
+    "source_sha256": "1dc5fea96d263cf8c853f7459991965d3522230d8fb99099a3bf3f59607daac2",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "1dc5fea96d263cf8c853f7459991965d3522230d8fb99099a3bf3f59607daac2",
+    "final_delivery_sha256": "1dc5fea96d263cf8c853f7459991965d3522230d8fb99099a3bf3f59607daac2"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/detection/tools/convert_d2.py",
+    "source_sha256": "6ff17cc3870db30523e473aa576de5ebb579cd609e90238ad803f117f7a0c697",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "6ff17cc3870db30523e473aa576de5ebb579cd609e90238ad803f117f7a0c697",
+    "final_delivery_sha256": "6ff17cc3870db30523e473aa576de5ebb579cd609e90238ad803f117f7a0c697"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/detection/DETA_pe/engine_tta.py",
+    "source_sha256": "138560f2985b4c2f4169b181ec7e38c755c0d457bf95baf69e033925ac4c5c9f",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "138560f2985b4c2f4169b181ec7e38c755c0d457bf95baf69e033925ac4c5c9f",
+    "final_delivery_sha256": "138560f2985b4c2f4169b181ec7e38c755c0d457bf95baf69e033925ac4c5c9f"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/detection/DETA_pe/engine.py",
+    "source_sha256": "8e585df0dca8ea72d900a77af948cd6cffd19e7df11fdc84b6a1081cd8aef075",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "8e585df0dca8ea72d900a77af948cd6cffd19e7df11fdc84b6a1081cd8aef075",
+    "final_delivery_sha256": "8e585df0dca8ea72d900a77af948cd6cffd19e7df11fdc84b6a1081cd8aef075"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/detection/DETA_pe/main.py",
+    "source_sha256": "1d1009c5ab7700b56374c11165d4f6d2e4a78d5ac9ffe3d06c52ec4d72b46895",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "1d1009c5ab7700b56374c11165d4f6d2e4a78d5ac9ffe3d06c52ec4d72b46895",
+    "final_delivery_sha256": "1d1009c5ab7700b56374c11165d4f6d2e4a78d5ac9ffe3d06c52ec4d72b46895"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/detection/DETA_pe/datasets/__init__.py",
+    "source_sha256": "f4fc9b60d3ccfa99a6beae5f2ed15927acc615b717183b92c6a5c629586de471",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "f4fc9b60d3ccfa99a6beae5f2ed15927acc615b717183b92c6a5c629586de471",
+    "final_delivery_sha256": "f4fc9b60d3ccfa99a6beae5f2ed15927acc615b717183b92c6a5c629586de471"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/detection/DETA_pe/datasets/coco_eval.py",
+    "source_sha256": "a7ea9dd5728e5658e187429e4576da59fc348e30d7affc5d893308a5a26c290b",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "a7ea9dd5728e5658e187429e4576da59fc348e30d7affc5d893308a5a26c290b",
+    "final_delivery_sha256": "a7ea9dd5728e5658e187429e4576da59fc348e30d7affc5d893308a5a26c290b"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/detection/DETA_pe/datasets/coco_panoptic.py",
+    "source_sha256": "4f892f3e21a24dc8c7d3feffdd2d60c0351473a3aa11c8cc7d2d9ebcbbc328cf",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "4f892f3e21a24dc8c7d3feffdd2d60c0351473a3aa11c8cc7d2d9ebcbbc328cf",
+    "final_delivery_sha256": "4f892f3e21a24dc8c7d3feffdd2d60c0351473a3aa11c8cc7d2d9ebcbbc328cf"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/detection/DETA_pe/datasets/transforms.py",
+    "source_sha256": "2fa4c927e90570c211974168d4ea589817ce484c28744018251cbc04a627e486",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "2fa4c927e90570c211974168d4ea589817ce484c28744018251cbc04a627e486",
+    "final_delivery_sha256": "2fa4c927e90570c211974168d4ea589817ce484c28744018251cbc04a627e486"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/detection/DETA_pe/datasets/objects365.py",
+    "source_sha256": "34228157d86677339a576e4ca4f029ffed79085b71dace8f7f0cd4833bc10d51",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "34228157d86677339a576e4ca4f029ffed79085b71dace8f7f0cd4833bc10d51",
+    "final_delivery_sha256": "34228157d86677339a576e4ca4f029ffed79085b71dace8f7f0cd4833bc10d51"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/detection/DETA_pe/datasets/data_prefetcher.py",
+    "source_sha256": "57b79dadba7c13522fc6a2c89bb637aefc921b2489e0a0713de85d93a7921c76",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "57b79dadba7c13522fc6a2c89bb637aefc921b2489e0a0713de85d93a7921c76",
+    "final_delivery_sha256": "57b79dadba7c13522fc6a2c89bb637aefc921b2489e0a0713de85d93a7921c76"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/detection/DETA_pe/datasets/coco.py",
+    "source_sha256": "7cca958c277fa8c350ab1c39a6cb607db671c2dda3603252c1a271d90028e56d",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "7cca958c277fa8c350ab1c39a6cb607db671c2dda3603252c1a271d90028e56d",
+    "final_delivery_sha256": "7cca958c277fa8c350ab1c39a6cb607db671c2dda3603252c1a271d90028e56d"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/detection/DETA_pe/datasets/panoptic_eval.py",
+    "source_sha256": "ee2263b5ea673904f3a225256c29a9b1e1314a26bc231b0785115260e363ae10",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "ee2263b5ea673904f3a225256c29a9b1e1314a26bc231b0785115260e363ae10",
+    "final_delivery_sha256": "ee2263b5ea673904f3a225256c29a9b1e1314a26bc231b0785115260e363ae10"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/detection/DETA_pe/datasets/samplers.py",
+    "source_sha256": "cc15bbff957ae30cda9e71169854d8ba8fc450db99f9ea046a999a590e1172d1",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "cc15bbff957ae30cda9e71169854d8ba8fc450db99f9ea046a999a590e1172d1",
+    "final_delivery_sha256": "cc15bbff957ae30cda9e71169854d8ba8fc450db99f9ea046a999a590e1172d1"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/detection/DETA_pe/models/assigner.py",
+    "source_sha256": "3c2d547794ce6dfc7a236a1ad72e77d6f421a1cc56553733c3814e628dd8fecd",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "3c2d547794ce6dfc7a236a1ad72e77d6f421a1cc56553733c3814e628dd8fecd",
+    "final_delivery_sha256": "3c2d547794ce6dfc7a236a1ad72e77d6f421a1cc56553733c3814e628dd8fecd"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/detection/DETA_pe/models/__init__.py",
+    "source_sha256": "c22117d2e50dda66041fbe6882c465f0ea163ca37b328afae26f6c5eaf705a42",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "c22117d2e50dda66041fbe6882c465f0ea163ca37b328afae26f6c5eaf705a42",
+    "final_delivery_sha256": "c22117d2e50dda66041fbe6882c465f0ea163ca37b328afae26f6c5eaf705a42"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/detection/DETA_pe/models/segmentation.py",
+    "source_sha256": "04f68988fe053e1aeba6a074070d057bf38aa7df61ae779fc6cf2295e2b30a08",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "04f68988fe053e1aeba6a074070d057bf38aa7df61ae779fc6cf2295e2b30a08",
+    "final_delivery_sha256": "04f68988fe053e1aeba6a074070d057bf38aa7df61ae779fc6cf2295e2b30a08"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/detection/DETA_pe/models/swin.py",
+    "source_sha256": "f2a8be16d2834a3996eb17d6e3b4dd6cc55df5c8052e5dc1293b4a3e4b858cf5",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "f2a8be16d2834a3996eb17d6e3b4dd6cc55df5c8052e5dc1293b4a3e4b858cf5",
+    "final_delivery_sha256": "f2a8be16d2834a3996eb17d6e3b4dd6cc55df5c8052e5dc1293b4a3e4b858cf5"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/detection/DETA_pe/models/pev1.py",
+    "source_sha256": "2d3c4adea5b751f55b29a19ad6cb5656a42bcbb3f8f1da80cdf8abbdc1166066",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "2d3c4adea5b751f55b29a19ad6cb5656a42bcbb3f8f1da80cdf8abbdc1166066",
+    "final_delivery_sha256": "2d3c4adea5b751f55b29a19ad6cb5656a42bcbb3f8f1da80cdf8abbdc1166066"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/detection/DETA_pe/models/matcher.py",
+    "source_sha256": "b0a75118b3870e4cef7006e91292229dd9b711cf04177d52f8534bfc48360c99",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "b0a75118b3870e4cef7006e91292229dd9b711cf04177d52f8534bfc48360c99",
+    "final_delivery_sha256": "b0a75118b3870e4cef7006e91292229dd9b711cf04177d52f8534bfc48360c99"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/detection/DETA_pe/models/utils_softnms.py",
+    "source_sha256": "51ec2ce948485039d9e83ea7bf674e6151bc46d9e5fe2126a37de22c81610dc6",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "51ec2ce948485039d9e83ea7bf674e6151bc46d9e5fe2126a37de22c81610dc6",
+    "final_delivery_sha256": "51ec2ce948485039d9e83ea7bf674e6151bc46d9e5fe2126a37de22c81610dc6"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/detection/DETA_pe/models/utils_fed_loss.py",
+    "source_sha256": "a9b1e23973d06bbd7c02dca36a1a8b24de3a29c6fc72f5f0db4b0b9fda65c04e",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "a9b1e23973d06bbd7c02dca36a1a8b24de3a29c6fc72f5f0db4b0b9fda65c04e",
+    "final_delivery_sha256": "a9b1e23973d06bbd7c02dca36a1a8b24de3a29c6fc72f5f0db4b0b9fda65c04e"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/detection/DETA_pe/models/utils_d2.py",
+    "source_sha256": "3be2ae09fdaced380206beab220dacabe65e729c6ab20e86a6b1177a57e58c3d",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "3be2ae09fdaced380206beab220dacabe65e729c6ab20e86a6b1177a57e58c3d",
+    "final_delivery_sha256": "3be2ae09fdaced380206beab220dacabe65e729c6ab20e86a6b1177a57e58c3d"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/detection/DETA_pe/models/deformable_transformer.py",
+    "source_sha256": "cb9b14fd9e07b14bab4a6be544047750318846753d0cdd7aa38fe214c5ac8309",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "cb9b14fd9e07b14bab4a6be544047750318846753d0cdd7aa38fe214c5ac8309",
+    "final_delivery_sha256": "cb9b14fd9e07b14bab4a6be544047750318846753d0cdd7aa38fe214c5ac8309"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/detection/DETA_pe/models/position_encoding.py",
+    "source_sha256": "fa32b437513885daf4649aea1f3ba847b62d22de7625e4d3ad2fc6cabd81733f",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "fa32b437513885daf4649aea1f3ba847b62d22de7625e4d3ad2fc6cabd81733f",
+    "final_delivery_sha256": "fa32b437513885daf4649aea1f3ba847b62d22de7625e4d3ad2fc6cabd81733f"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/detection/DETA_pe/models/deformable_detr.py",
+    "source_sha256": "356e21082ac12ed6e0f782c587d5faef89a790dbe074b52cfcdd3072f4435f4e",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "356e21082ac12ed6e0f782c587d5faef89a790dbe074b52cfcdd3072f4435f4e",
+    "final_delivery_sha256": "356e21082ac12ed6e0f782c587d5faef89a790dbe074b52cfcdd3072f4435f4e"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/detection/DETA_pe/models/backbone.py",
+    "source_sha256": "6eecbd402746ac6fdadcda61b79be1b9b167f258d614f1775894df6680b89b80",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "6eecbd402746ac6fdadcda61b79be1b9b167f258d614f1775894df6680b89b80",
+    "final_delivery_sha256": "6eecbd402746ac6fdadcda61b79be1b9b167f258d614f1775894df6680b89b80"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/detection/DETA_pe/util/box_ops.py",
+    "source_sha256": "8f3f9128d14f6a5854c40c66c1602c020656d4e12a436fee1e2d13937e51d5fb",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "8f3f9128d14f6a5854c40c66c1602c020656d4e12a436fee1e2d13937e51d5fb",
+    "final_delivery_sha256": "8f3f9128d14f6a5854c40c66c1602c020656d4e12a436fee1e2d13937e51d5fb"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/detection/DETA_pe/util/__init__.py",
+    "source_sha256": "981f3946f46aa50571bb2c33c0b0c183800f30c7c591d698398e374912ec2ce7",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "981f3946f46aa50571bb2c33c0b0c183800f30c7c591d698398e374912ec2ce7",
+    "final_delivery_sha256": "981f3946f46aa50571bb2c33c0b0c183800f30c7c591d698398e374912ec2ce7"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/detection/DETA_pe/util/plot_utils.py",
+    "source_sha256": "389ab44a545f553fbd99e838acfebb90adbb5819ba7668d0b895b5a317a057ae",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "389ab44a545f553fbd99e838acfebb90adbb5819ba7668d0b895b5a317a057ae",
+    "final_delivery_sha256": "389ab44a545f553fbd99e838acfebb90adbb5819ba7668d0b895b5a317a057ae"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/detection/DETA_pe/util/ema.py",
+    "source_sha256": "4d9329cc4652be3bd70e3067ffa914c2f331c15889415e4897a7a87d22feee2c",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "4d9329cc4652be3bd70e3067ffa914c2f331c15889415e4897a7a87d22feee2c",
+    "final_delivery_sha256": "4d9329cc4652be3bd70e3067ffa914c2f331c15889415e4897a7a87d22feee2c"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/detection/DETA_pe/util/misc.py",
+    "source_sha256": "fe7df158de91454d6aa41d0a5fadb003886c642e9b7c555c643abac0e5a16975",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "fe7df158de91454d6aa41d0a5fadb003886c642e9b7c555c643abac0e5a16975",
+    "final_delivery_sha256": "fe7df158de91454d6aa41d0a5fadb003886c642e9b7c555c643abac0e5a16975"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/detection/DETA_pe/models/ops/test.py",
+    "source_sha256": "6066519322d749265c9983117ba8b012b35b6fbd46505d5b7842751eeb706942",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "6066519322d749265c9983117ba8b012b35b6fbd46505d5b7842751eeb706942",
+    "final_delivery_sha256": "6066519322d749265c9983117ba8b012b35b6fbd46505d5b7842751eeb706942"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/detection/DETA_pe/models/ops/setup.py",
+    "source_sha256": "167e8f8ffa224514c1f195b5091b5ed6f7cfcabfe8b967719ddede3c402a103f",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "167e8f8ffa224514c1f195b5091b5ed6f7cfcabfe8b967719ddede3c402a103f",
+    "final_delivery_sha256": "167e8f8ffa224514c1f195b5091b5ed6f7cfcabfe8b967719ddede3c402a103f"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/detection/DETA_pe/models/ops/modules/__init__.py",
+    "source_sha256": "3a40cdcd146fc93c3f4ba9702924582f6502e5fcd1ceccf687e9d0e6ff2d7b5f",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "3a40cdcd146fc93c3f4ba9702924582f6502e5fcd1ceccf687e9d0e6ff2d7b5f",
+    "final_delivery_sha256": "3a40cdcd146fc93c3f4ba9702924582f6502e5fcd1ceccf687e9d0e6ff2d7b5f"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/detection/DETA_pe/models/ops/modules/ms_deform_attn.py",
+    "source_sha256": "15064936f04b836e66c42efd294028c54a680cc7c1ebc9f207dd60dcc6247779",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "15064936f04b836e66c42efd294028c54a680cc7c1ebc9f207dd60dcc6247779",
+    "final_delivery_sha256": "15064936f04b836e66c42efd294028c54a680cc7c1ebc9f207dd60dcc6247779"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/detection/DETA_pe/models/ops/functions/__init__.py",
+    "source_sha256": "8b56bbd5918269736e5f588f5834efaa569f0e9e9968e8147838e7fee21437fa",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "8b56bbd5918269736e5f588f5834efaa569f0e9e9968e8147838e7fee21437fa",
+    "final_delivery_sha256": "8b56bbd5918269736e5f588f5834efaa569f0e9e9968e8147838e7fee21437fa"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/detection/DETA_pe/models/ops/functions/ms_deform_attn_func.py",
+    "source_sha256": "b788c2195637c647fcd28cc081b739350c2151eed8ea51de1c4ab0705fa87f58",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "b788c2195637c647fcd28cc081b739350c2151eed8ea51de1c4ab0705fa87f58",
+    "final_delivery_sha256": "b788c2195637c647fcd28cc081b739350c2151eed8ea51de1c4ab0705fa87f58"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/detection/DETA_pe/datasets/torchvision_datasets/__init__.py",
+    "source_sha256": "ff554716f31b43c6e05cb0e6a6e4d04c0df392181a5bb43e7f6e6af07a5f3bb1",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "ff554716f31b43c6e05cb0e6a6e4d04c0df392181a5bb43e7f6e6af07a5f3bb1",
+    "final_delivery_sha256": "ff554716f31b43c6e05cb0e6a6e4d04c0df392181a5bb43e7f6e6af07a5f3bb1"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/detection/DETA_pe/datasets/torchvision_datasets/coco.py",
+    "source_sha256": "3ef976cc4c1ba8cb483af6a636f9dbafde7db13ce8c57998d65e2ca419359b95",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "3ef976cc4c1ba8cb483af6a636f9dbafde7db13ce8c57998d65e2ca419359b95",
+    "final_delivery_sha256": "3ef976cc4c1ba8cb483af6a636f9dbafde7db13ce8c57998d65e2ca419359b95"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/detection/detectron2_pe/modeling/__init__.py",
+    "source_sha256": "593ccf83ea8ef4c6de29ccd2a30313369004fc92e6d60ee2c70e5dd736b3dddc",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "593ccf83ea8ef4c6de29ccd2a30313369004fc92e6d60ee2c70e5dd736b3dddc",
+    "final_delivery_sha256": "593ccf83ea8ef4c6de29ccd2a30313369004fc92e6d60ee2c70e5dd736b3dddc"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/detection/detectron2_pe/checkpoint/__init__.py",
+    "source_sha256": "be4d24df56456670233534c04dd6fabde75ff640b82c49a0dbab5fa817434d35",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "be4d24df56456670233534c04dd6fabde75ff640b82c49a0dbab5fa817434d35",
+    "final_delivery_sha256": "be4d24df56456670233534c04dd6fabde75ff640b82c49a0dbab5fa817434d35"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/detection/detectron2_pe/checkpoint/detection_checkpoint.py",
+    "source_sha256": "76134cdcdd92a4adc72ada271a7aff5f55c991b4117b4a83d5a361be2dd74f4b",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "76134cdcdd92a4adc72ada271a7aff5f55c991b4117b4a83d5a361be2dd74f4b",
+    "final_delivery_sha256": "76134cdcdd92a4adc72ada271a7aff5f55c991b4117b4a83d5a361be2dd74f4b"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/detection/detectron2_pe/modeling/backbone/__init__.py",
+    "source_sha256": "42d97de6d0865f8159b33814f5ed98c4816938f20c4bc2b47ce12b2ac7101bd6",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "42d97de6d0865f8159b33814f5ed98c4816938f20c4bc2b47ce12b2ac7101bd6",
+    "final_delivery_sha256": "42d97de6d0865f8159b33814f5ed98c4816938f20c4bc2b47ce12b2ac7101bd6"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/detection/detectron2_pe/modeling/backbone/pev1_det.py",
+    "source_sha256": "6675cff5b07eefa28c02b61a9d6c14a901a2babdbd39616d924f562156149513",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "6675cff5b07eefa28c02b61a9d6c14a901a2babdbd39616d924f562156149513",
+    "final_delivery_sha256": "6675cff5b07eefa28c02b61a9d6c14a901a2babdbd39616d924f562156149513"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/detection/projects/ViTDet/configs/COCO/mask_rcnn_PEcore_G_coco75ep.py",
+    "source_sha256": "3f6588d9fb0ba2ba015b60e5aa5a98702425a4a4c87838084e471101a4454981",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "3f6588d9fb0ba2ba015b60e5aa5a98702425a4a4c87838084e471101a4454981",
+    "final_delivery_sha256": "3f6588d9fb0ba2ba015b60e5aa5a98702425a4a4c87838084e471101a4454981"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/detection/projects/ViTDet/configs/COCO/mask_rcnn_PEspatial_G_coco36ep.py",
+    "source_sha256": "498ee73049c3b353262d159a96c9ac94fc7ad6246f0a8259849e8012e28cd277",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "498ee73049c3b353262d159a96c9ac94fc7ad6246f0a8259849e8012e28cd277",
+    "final_delivery_sha256": "498ee73049c3b353262d159a96c9ac94fc7ad6246f0a8259849e8012e28cd277"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/detection/projects/ViTDet/configs/COCO/mask_rcnn_vitdet_b_100ep.py",
+    "source_sha256": "427a5253f9ce651966d9e45fb0585b4027843c4c608ca16eff315f926d37b413",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "427a5253f9ce651966d9e45fb0585b4027843c4c608ca16eff315f926d37b413",
+    "final_delivery_sha256": "427a5253f9ce651966d9e45fb0585b4027843c4c608ca16eff315f926d37b413"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/detection/projects/ViTDet/configs/common/coco_loader_lsj.py",
+    "source_sha256": "40f45b662e26e45f5f969f4fac594f5f1a39b8f1f42a55694cd68428add292b6",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "40f45b662e26e45f5f969f4fac594f5f1a39b8f1f42a55694cd68428add292b6",
+    "final_delivery_sha256": "40f45b662e26e45f5f969f4fac594f5f1a39b8f1f42a55694cd68428add292b6"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/detection/projects/ViTDet/configs/LVIS/mask_rcnn_PEcore_G_lvis75ep.py",
+    "source_sha256": "a8759927a9bb44a779ee36c10be4de38b52948bacd712c7d301f2ce9dd4aa015",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "a8759927a9bb44a779ee36c10be4de38b52948bacd712c7d301f2ce9dd4aa015",
+    "final_delivery_sha256": "a8759927a9bb44a779ee36c10be4de38b52948bacd712c7d301f2ce9dd4aa015"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/detection/projects/ViTDet/configs/LVIS/mask_rcnn_PEspatial_G_lvis75ep.py",
+    "source_sha256": "eb2c2d4db3e9f5759135a5828441260adcced524fc42e9d553d480e31cd368b3",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "eb2c2d4db3e9f5759135a5828441260adcced524fc42e9d553d480e31cd368b3",
+    "final_delivery_sha256": "eb2c2d4db3e9f5759135a5828441260adcced524fc42e9d553d480e31cd368b3"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/pe/clip_benchmark/__init__.py",
+    "source_sha256": "91741f9c561003b78aca9109412bfa6fd8bc06bbed97f7845fe0bec040d5c59a",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "91741f9c561003b78aca9109412bfa6fd8bc06bbed97f7845fe0bec040d5c59a",
+    "final_delivery_sha256": "91741f9c561003b78aca9109412bfa6fd8bc06bbed97f7845fe0bec040d5c59a"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/pe/clip_benchmark/cli.py",
+    "source_sha256": "d703d0d76785d448f10ef7b6be06490c0f796a9cd14f50feb74e192d21daf441",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "d703d0d76785d448f10ef7b6be06490c0f796a9cd14f50feb74e192d21daf441",
+    "final_delivery_sha256": "d703d0d76785d448f10ef7b6be06490c0f796a9cd14f50feb74e192d21daf441"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/pe/clip_benchmark/webdataset_builder.py",
+    "source_sha256": "a97d13789b86d9c8c75b3bdad1a6e558a281620eae310c8b3fd9dd580c4520bc",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "a97d13789b86d9c8c75b3bdad1a6e558a281620eae310c8b3fd9dd580c4520bc",
+    "final_delivery_sha256": "a97d13789b86d9c8c75b3bdad1a6e558a281620eae310c8b3fd9dd580c4520bc"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/pe/clip_benchmark/model_collection.py",
+    "source_sha256": "6102a7e86558580a0931719ea5907fc374ef50ac91deedfd1f146ab3f104c696",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "6102a7e86558580a0931719ea5907fc374ef50ac91deedfd1f146ab3f104c696",
+    "final_delivery_sha256": "6102a7e86558580a0931719ea5907fc374ef50ac91deedfd1f146ab3f104c696"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/pe/clip_benchmark/datasets/pos_neg_caption_dataset.py",
+    "source_sha256": "a83c2959d9828e018e41fb146e6ad044badc45477df312ee02ac4025146d06f3",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "a83c2959d9828e018e41fb146e6ad044badc45477df312ee02ac4025146d06f3",
+    "final_delivery_sha256": "a83c2959d9828e018e41fb146e6ad044badc45477df312ee02ac4025146d06f3"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/pe/clip_benchmark/datasets/__init__.py",
+    "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "final_delivery_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/pe/clip_benchmark/datasets/babel_imagenet.py",
+    "source_sha256": "1e0d1c33d6e8a813156a90ed27bb35fa552be2648740d9fe3dc13008cd1bf690",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "1e0d1c33d6e8a813156a90ed27bb35fa552be2648740d9fe3dc13008cd1bf690",
+    "final_delivery_sha256": "1e0d1c33d6e8a813156a90ed27bb35fa552be2648740d9fe3dc13008cd1bf690"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/pe/clip_benchmark/datasets/crossmodal3600.py",
+    "source_sha256": "b1ff7b85de6f81d671e2657451ab1e2c03f9a7ef6909a0a55d6e2e19ee86d874",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "b1ff7b85de6f81d671e2657451ab1e2c03f9a7ef6909a0a55d6e2e19ee86d874",
+    "final_delivery_sha256": "b1ff7b85de6f81d671e2657451ab1e2c03f9a7ef6909a0a55d6e2e19ee86d874"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/pe/clip_benchmark/datasets/audiocaps.py",
+    "source_sha256": "2712633a6d079d23f0ebc142d63b14d9ce69e1793c9f0ccec2d5a39ee5a0f4e7",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "2712633a6d079d23f0ebc142d63b14d9ce69e1793c9f0ccec2d5a39ee5a0f4e7",
+    "final_delivery_sha256": "2712633a6d079d23f0ebc142d63b14d9ce69e1793c9f0ccec2d5a39ee5a0f4e7"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/pe/clip_benchmark/datasets/objectnet.py",
+    "source_sha256": "f68ae4d5d3381eb2053548ebd747c157c73c5c73a6246597b78d3be804d680d1",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "f68ae4d5d3381eb2053548ebd747c157c73c5c73a6246597b78d3be804d680d1",
+    "final_delivery_sha256": "f68ae4d5d3381eb2053548ebd747c157c73c5c73a6246597b78d3be804d680d1"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/pe/clip_benchmark/datasets/multilingual_mscoco.py",
+    "source_sha256": "ce42a7ae04ec3300ee5d27e0b1d4fd59010a5f82f1fbaae96b68cf7b8f5e1a57",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "ce42a7ae04ec3300ee5d27e0b1d4fd59010a5f82f1fbaae96b68cf7b8f5e1a57",
+    "final_delivery_sha256": "ce42a7ae04ec3300ee5d27e0b1d4fd59010a5f82f1fbaae96b68cf7b8f5e1a57"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/pe/clip_benchmark/datasets/tfds.py",
+    "source_sha256": "5c9027db5f527f5ba659a7b26e1f5fd1c5fe155b8932a3a9c40b96c5503f6065",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "5c9027db5f527f5ba659a7b26e1f5fd1c5fe155b8932a3a9c40b96c5503f6065",
+    "final_delivery_sha256": "5c9027db5f527f5ba659a7b26e1f5fd1c5fe155b8932a3a9c40b96c5503f6065"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/pe/clip_benchmark/datasets/flores_langs.py",
+    "source_sha256": "6aa70ba5579393d32a503cd55bbadfb478aa58c98170b17bd9899c04a9241961",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "6aa70ba5579393d32a503cd55bbadfb478aa58c98170b17bd9899c04a9241961",
+    "final_delivery_sha256": "6aa70ba5579393d32a503cd55bbadfb478aa58c98170b17bd9899c04a9241961"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/pe/clip_benchmark/datasets/caltech101.py",
+    "source_sha256": "013e524876c9f1c90c9af63ce64948abea6c6ff27816f02f29a7829e7e4ad788",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "013e524876c9f1c90c9af63ce64948abea6c6ff27816f02f29a7829e7e4ad788",
+    "final_delivery_sha256": "013e524876c9f1c90c9af63ce64948abea6c6ff27816f02f29a7829e7e4ad788"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/pe/clip_benchmark/datasets/flickr.py",
+    "source_sha256": "cacfa57192475709af5e8f2201ce3b6280663375dd3462d2353de6f2afa818c2",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "cacfa57192475709af5e8f2201ce3b6280663375dd3462d2353de6f2afa818c2",
+    "final_delivery_sha256": "cacfa57192475709af5e8f2201ce3b6280663375dd3462d2353de6f2afa818c2"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/pe/clip_benchmark/datasets/builder.py",
+    "source_sha256": "fd0f81273bfd2886747e7e6ce67f2c82f8c0f0e7d139ba72d0d7c36b4277946e",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "fd0f81273bfd2886747e7e6ce67f2c82f8c0f0e7d139ba72d0d7c36b4277946e",
+    "final_delivery_sha256": "fd0f81273bfd2886747e7e6ce67f2c82f8c0f0e7d139ba72d0d7c36b4277946e"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/pe/clip_benchmark/datasets/flickr30k_200.py",
+    "source_sha256": "e663d4255fa8eb159d1e703e52a7d4c1ac5718d288b15cb213e98ab7e1ccd11d",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "e663d4255fa8eb159d1e703e52a7d4c1ac5718d288b15cb213e98ab7e1ccd11d",
+    "final_delivery_sha256": "e663d4255fa8eb159d1e703e52a7d4c1ac5718d288b15cb213e98ab7e1ccd11d"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/pe/clip_benchmark/datasets/clotho_v2.py",
+    "source_sha256": "59c1c14bda057c7d3fcaf3cfe0a8c06c12c8ea8584cf2af4481cbca79ef135dc",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "59c1c14bda057c7d3fcaf3cfe0a8c06c12c8ea8584cf2af4481cbca79ef135dc",
+    "final_delivery_sha256": "59c1c14bda057c7d3fcaf3cfe0a8c06c12c8ea8584cf2af4481cbca79ef135dc"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/pe/clip_benchmark/datasets/video_retrieval_dataset.py",
+    "source_sha256": "00c7b1c3579bc68803d8db3175dc7154334a79eaf60b04b3419ca55113a71436",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "00c7b1c3579bc68803d8db3175dc7154334a79eaf60b04b3419ca55113a71436",
+    "final_delivery_sha256": "00c7b1c3579bc68803d8db3175dc7154334a79eaf60b04b3419ca55113a71436"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/pe/clip_benchmark/datasets/video_classification_dataset.py",
+    "source_sha256": "f940fdfb35ad860772fce522bc9093a1e5a5ccdca5b7d8fe229626ad6c7b350d",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "f940fdfb35ad860772fce522bc9093a1e5a5ccdca5b7d8fe229626ad6c7b350d",
+    "final_delivery_sha256": "f940fdfb35ad860772fce522bc9093a1e5a5ccdca5b7d8fe229626ad6c7b350d"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/pe/clip_benchmark/datasets/voc2007.py",
+    "source_sha256": "0dc343c241e55aebbf4000e4d7665e0bdfbf2e054adb33c989ba4bfbe8b4baf7",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "0dc343c241e55aebbf4000e4d7665e0bdfbf2e054adb33c989ba4bfbe8b4baf7",
+    "final_delivery_sha256": "0dc343c241e55aebbf4000e4d7665e0bdfbf2e054adb33c989ba4bfbe8b4baf7"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/pe/clip_benchmark/datasets/imagenetv2.py",
+    "source_sha256": "6814f00740dc7ffbd2f879b2ffbbebccd43f208e59bed9077b2d49151286681a",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "6814f00740dc7ffbd2f879b2ffbbebccd43f208e59bed9077b2d49151286681a",
+    "final_delivery_sha256": "6814f00740dc7ffbd2f879b2ffbbebccd43f208e59bed9077b2d49151286681a"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/pe/clip_benchmark/datasets/winoground.py",
+    "source_sha256": "53b862cc1b957d3a4715323c39709b1c7b6b5917c481d28c8ff5faf98bce9f97",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "53b862cc1b957d3a4715323c39709b1c7b6b5917c481d28c8ff5faf98bce9f97",
+    "final_delivery_sha256": "53b862cc1b957d3a4715323c39709b1c7b6b5917c481d28c8ff5faf98bce9f97"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/pe/clip_benchmark/datasets/kitti.py",
+    "source_sha256": "4cf414face1c11d4e4ee9ba680a6ae8650c0612c363535f5b7d0281d10ef8410",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "4cf414face1c11d4e4ee9ba680a6ae8650c0612c363535f5b7d0281d10ef8410",
+    "final_delivery_sha256": "4cf414face1c11d4e4ee9ba680a6ae8650c0612c363535f5b7d0281d10ef8410"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/pe/clip_benchmark/datasets/xtd200.py",
+    "source_sha256": "9d4c8e1c39e9af4c823b7568d9e65613571344812871e256c302e90601527c0e",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "9d4c8e1c39e9af4c823b7568d9e65613571344812871e256c302e90601527c0e",
+    "final_delivery_sha256": "9d4c8e1c39e9af4c823b7568d9e65613571344812871e256c302e90601527c0e"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/pe/clip_benchmark/metrics/linear_probe.py",
+    "source_sha256": "22871e4b63aa143e52b59b8d2b06eed2e59d256dcb766bcab813396e56f7ea5b",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "22871e4b63aa143e52b59b8d2b06eed2e59d256dcb766bcab813396e56f7ea5b",
+    "final_delivery_sha256": "22871e4b63aa143e52b59b8d2b06eed2e59d256dcb766bcab813396e56f7ea5b"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/pe/clip_benchmark/metrics/__captioning.py",
+    "source_sha256": "c217793f1b55922e2b0bbd38f5ec597064bce5160f1954cb4823a13172cc800a",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "c217793f1b55922e2b0bbd38f5ec597064bce5160f1954cb4823a13172cc800a",
+    "final_delivery_sha256": "c217793f1b55922e2b0bbd38f5ec597064bce5160f1954cb4823a13172cc800a"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/pe/clip_benchmark/metrics/__init__.py",
+    "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "final_delivery_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/pe/clip_benchmark/metrics/image_caption_selection.py",
+    "source_sha256": "5302f2a4acf0bdf21de58ab17c0575d0a3380c0452ecc678891d6d81e4d0dacd",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "5302f2a4acf0bdf21de58ab17c0575d0a3380c0452ecc678891d6d81e4d0dacd",
+    "final_delivery_sha256": "5302f2a4acf0bdf21de58ab17c0575d0a3380c0452ecc678891d6d81e4d0dacd"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/pe/clip_benchmark/metrics/multiclass_retrieval.py",
+    "source_sha256": "d58b20fc7f020347f9deb074bfd94a74a1d095fae222b4e80e4d2de65a48daa8",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "d58b20fc7f020347f9deb074bfd94a74a1d095fae222b4e80e4d2de65a48daa8",
+    "final_delivery_sha256": "d58b20fc7f020347f9deb074bfd94a74a1d095fae222b4e80e4d2de65a48daa8"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/pe/clip_benchmark/metrics/zeroshot_classification.py",
+    "source_sha256": "19f1004b128482076791f7f32a8e9de24aaf88303e1af6fce09ce724537b77de",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "19f1004b128482076791f7f32a8e9de24aaf88303e1af6fce09ce724537b77de",
+    "final_delivery_sha256": "19f1004b128482076791f7f32a8e9de24aaf88303e1af6fce09ce724537b77de"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/pe/clip_benchmark/metrics/zeroshot_retrieval.py",
+    "source_sha256": "4f98920ae8b28f2b3ab7582b68173c1c21ee6ffc9942dcdfb29c61a96e09eb67",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "4f98920ae8b28f2b3ab7582b68173c1c21ee6ffc9942dcdfb29c61a96e09eb67",
+    "final_delivery_sha256": "4f98920ae8b28f2b3ab7582b68173c1c21ee6ffc9942dcdfb29c61a96e09eb67"
+  },
+  {
+    "file": "inference/native/reference_code/perception_models/apps/pe/clip_benchmark/metrics/visualization.py",
+    "source_sha256": "1a9866b7028e0487c93785e1a8936741035a973599f18e84c58ee8471d084d1c",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "1a9866b7028e0487c93785e1a8936741035a973599f18e84c58ee8471d084d1c",
+    "final_delivery_sha256": "1a9866b7028e0487c93785e1a8936741035a973599f18e84c58ee8471d084d1c"
+  }
+]

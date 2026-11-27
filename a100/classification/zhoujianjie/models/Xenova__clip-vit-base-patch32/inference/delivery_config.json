@@ -1,0 +1,14 @@
+{
+  "model_id": "Xenova/clip-vit-base-patch32",
+  "launcher": "run_imagenet_remaining.py",
+  "args": [
+    "Xenova/clip-vit-base-patch32"
+  ],
+  "native_task": "single_label_classification",
+  "public_evaluator": "supported_pending_validation",
+  "bounded_smoke_supported": true,
+  "required_weights": [
+    "download_receipt.json"
+  ],
+  "required_data": []
+}

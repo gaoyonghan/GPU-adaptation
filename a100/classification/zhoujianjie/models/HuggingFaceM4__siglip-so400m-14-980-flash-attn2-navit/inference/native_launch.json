@@ -1,0 +1,11 @@
+{
+  "model": "HuggingFaceM4/siglip-so400m-14-980-flash-attn2-navit",
+  "historical_command": [
+    "python",
+    "-u",
+    "environment_setup/run_navit_native.py"
+  ],
+  "native_evaluator": "evaluation_audit/evaluate_navit_mteb_flickr30k_diagnostic.py",
+  "historical_a100_environment": "/data/zhoujianjie/environment_setup/native_python.py",
+  "purpose": "provenance only; not a central task registry"
+}

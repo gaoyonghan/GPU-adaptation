@@ -1,0 +1,12 @@
+{
+  "model": "imageomics/bioclip-2",
+  "historical_command": [
+    "python",
+    "-u",
+    "environment_setup/run_bioclip_native.py",
+    "imageomics/bioclip-2"
+  ],
+  "native_evaluator": "evaluation_audit/evaluate_bioclip_meta_album_official.py",
+  "historical_a100_environment": "/data/zhoujianjie/environment_setup/native_python.py",
+  "purpose": "provenance only; not a central task registry"
+}

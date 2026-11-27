@@ -1,0 +1,32 @@
+[
+  {
+    "file": "inference/original_sources/run_model.py",
+    "sha256": "6b1c88c470bca26caa104a544237e7767663372ef01a80f26a4637ef1715261d",
+    "source": "A100 snapshot"
+  },
+  {
+    "file": "inference/original_sources/evaluate_b01.py",
+    "sha256": "77c61ebb4808aa2796a911ed99cee26c9262aebb0884c40e03ce0b6c7a81897e",
+    "source": "4090 original evaluator"
+  },
+  {
+    "file": "inference/original_sources/evaluate_imagenet1k_official.py",
+    "sha256": "f064be1ef714a011b32e5b8ca845d8a9848d391ac1160e24a5993bb4a2933847",
+    "source": "4090 original evaluator"
+  },
+  {
+    "file": "inference/original_sources/imagenet1k_official_spec.py",
+    "sha256": "3aeb7f0134ee4b55a4a8b2e3aed4d176f76bc892ef1e908bb2fe209e045a43bb",
+    "source": "4090 original evaluator"
+  },
+  {
+    "file": "inference/original_sources/official_22_models.py",
+    "sha256": "4cec0a47a0479e2c4ae9634e5c58af1979a84340d3fa96e4fcf33de9f1fcc3b8",
+    "source": "4090 original evaluator"
+  },
+  {
+    "file": "inference/original_sources/validate_stage2_models.py",
+    "sha256": "4807fc3d8ef9312bb369da6425ff32b1f16c27d640c0f63662323793f351a75b",
+    "source": "4090 original evaluator"
+  }
+]

@@ -1,0 +1,27 @@
+{
+  "verification": "exact portable file hashes; revision provenance from original A100 evaluator; no fabricated .git directory",
+  "repositories": {
+    "coyo-align": {
+      "revision": "8cea82e5381b7c4806967746473c6053b6817905",
+      "portable_files": {
+        "warmup_lr.py": "01d419bf6248b851190c10c931abb4c3576e34f2c2abf927f4853a0e93bd0f15",
+        "requirements.txt": "1303eede30a275122be3adfbd3d512033e7abbf94a273d51770f51b9fde045f6",
+        "tensorboard_callback.py": "29fbd46b960a6f6a5f689f029f1e3ef7ecdc4e88cfd336d01ca0a07c43621701",
+        "README.md": "0e3e952f936b609c0a14d23ea0507a57a2fd94f00d2271d3cd8ab12c546499ed",
+        "main.py": "0254be3c6ab87c105c53cc2bd416f041b7c5eb44399568760db0e5eea7131606",
+        "align.py": "f0fd84aaa875d94380bc9ee0a64217a8663144760b0aa7dced69c5de09df3767",
+        "datasets/image_preprocessor.py": "a67c9f063af048afd9b3170b618e1821a895df3ade0ec341631c578411244772",
+        "datasets/imgtxt_dataset.py": "6741671090f51463d42c7732403c4a1fff75be3546e97bc1cfd8f565271874f4",
+        "datasets/text_preprocessor.py": "af1ac66107dd2de78a81e8ce4a3b60f5dad2401a0f72ed24a3dd68b997200cbd",
+        "models/efficientnet.py": "62a93c724e18423c387756b4974b9f0866e092f9593e69d5aadfb832c5a62972",
+        "evaluate/create_tfrecords.py": "9f9845123527b54479b650accbd96c3b4b6e8ecd61a87fa15b37244e3e8d61fb",
+        "evaluate/eval_knn.py": "4524f17de93a9a4a16e63f56441a43b8d4b44a9682d8ef70016325a400f437de",
+        "evaluate/imagenet_dataset.py": "4a38ce391ecd9ed59836c402eec1a24e1bb4273fb9df5afe2d408ce414f94fcf",
+        "evaluate/eval_retrieval.py": "40c10c009906a3cf9f69262609b61741979701946915ce06bcd3992b5725c561",
+        "evaluate/retrieval_dataset.py": "58cc2ef8292dfe0522f0fff07cc80d14ec1402da9ce330f47c2f89c0f25b485d",
+        "evaluate/eval_all.py": "78072bcf349339c00766ebd35759fe071d5216898a052e1a240fa86a2201086b",
+        "LICENSE": "43070e2d4e532684de521b885f385d0841030efa2b1a20bafb76133a5e1379c1"
+      }
+    }
+  }
+}

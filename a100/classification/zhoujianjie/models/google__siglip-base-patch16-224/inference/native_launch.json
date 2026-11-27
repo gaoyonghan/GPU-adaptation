@@ -1,0 +1,10 @@
+{
+  "model": "google/siglip-base-patch16-224",
+  "historical_command": [
+    "python",
+    "inference.py"
+  ],
+  "native_evaluator": "evaluation_audit/evaluate_imagenet1k_official.py",
+  "historical_a100_environment": null,
+  "purpose": "provenance only; not a central task registry"
+}

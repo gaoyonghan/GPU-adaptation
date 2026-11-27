@@ -1,0 +1,309 @@
+{
+  "generated_at": "2026-09-03T21:13:36.827540+08:00",
+  "policy": "official WDS test split only; no training files",
+  "official_code": {
+    "repo": "LAION-AI/CLIP_benchmark",
+    "commit": "ee14a9a8a9bcde09d51f4a4b1dff5a75182a3596",
+    "local_path": "evaluation_audit/reference_code/CLIP_benchmark"
+  },
+  "official_reference_table": {
+    "path": "evaluation_audit/reference_code/open_clip/docs/openclip_classification_results.csv",
+    "open_clip_commit": "4a4e060bb2a5afbb9c59b882f09edb78f65a3b38"
+  },
+  "datasets": [
+    {
+      "local_name": "imagenet_o",
+      "official_name": "ImageNet-O",
+      "repo": "clip-benchmark/wds_imagenet-o",
+      "revision": "72f1c9a3ef31ee2bdd775cce9b6c80b1e15e5636",
+      "split": "test",
+      "shards": 4,
+      "images": 2000,
+      "bytes": 179558400,
+      "files": [
+        {
+          "name": "0.tar",
+          "bytes": 46080000,
+          "sha256": "51ed3c7703b0871fdd914deb4386415371e5c94759efe4665122341511216dbd",
+          "images": 500
+        },
+        {
+          "name": "1.tar",
+          "bytes": 38809600,
+          "sha256": "61d6c511fedbd47c1ec600c82c91355045c2ea9dba12b47c9331952520545e14",
+          "images": 500
+        },
+        {
+          "name": "2.tar",
+          "bytes": 40652800,
+          "sha256": "6e0e93fc2d4947be3bfa4912779e4772096d9313b9fea5a35c8c12e61a3244da",
+          "images": 500
+        },
+        {
+          "name": "3.tar",
+          "bytes": 54016000,
+          "sha256": "4746d72b4ec5c33ee9bfb55f1b90a6be5d83e7cc26553f5167e5d274f95b9348",
+          "images": 500
+        }
+      ]
+    },
+    {
+      "local_name": "country211",
+      "official_name": "Country211",
+      "repo": "clip-benchmark/wds_country211",
+      "revision": "1699f138f0558342a1cbf99f7cf36b4361bb5ebc",
+      "split": "test",
+      "shards": 4,
+      "images": 21100,
+      "bytes": 3834112000,
+      "files": [
+        {
+          "name": "0.tar",
+          "bytes": 966103040,
+          "sha256": "c669fe3f35a8937a69c6f92edc8ecdb332de0936da6ca28ed1a70ce41e571ae5",
+          "images": 5300
+        },
+        {
+          "name": "1.tar",
+          "bytes": 956651520,
+          "sha256": "5121590feb8c5ca7f96cbdd180149c9888a65feca2018032be9088669a0f8433",
+          "images": 5300
+        },
+        {
+          "name": "2.tar",
+          "bytes": 954634240,
+          "sha256": "d872a569c8f60417f26933751e7cc20e4bf7127dbf9f5425ae97d85469b18866",
+          "images": 5300
+        },
+        {
+          "name": "3.tar",
+          "bytes": 956723200,
+          "sha256": "16835c4a0d6448be6f640d60e6f93e6c20cd365390288fcc4c2e92e59d3c4b67",
+          "images": 5200
+        }
+      ]
+    },
+    {
+      "local_name": "clevr_count_all",
+      "official_name": "CLEVR Counts",
+      "repo": "clip-benchmark/wds_vtab-clevr_count_all",
+      "revision": "8b5dce4d5393a04fb58b9261b22a881b02e379b1",
+      "split": "test",
+      "shards": 5,
+      "images": 15000,
+      "bytes": 1510256640,
+      "files": [
+        {
+          "name": "0.tar",
+          "bytes": 302776320,
+          "sha256": "7fab68da7581e9a820ed18649c65f88733ea08fa4ceeb737cef34db94aaef4a7",
+          "images": 3000
+        },
+        {
+          "name": "1.tar",
+          "bytes": 301772800,
+          "sha256": "4593fa4dfcda17288a8ce276686896061ac54055fc82bd534c1d64831c98fab9",
+          "images": 3000
+        },
+        {
+          "name": "2.tar",
+          "bytes": 301445120,
+          "sha256": "b8b1d1486c92a8028b2c57bc1bda8fd6abe5fe34cd5143b8ad8a2b1a9dcd5f31",
+          "images": 3000
+        },
+        {
+          "name": "3.tar",
+          "bytes": 302059520,
+          "sha256": "a4f5ff3f832b30c609bed5dab78f102243d871a86e632c51998293013e8f0692",
+          "images": 3000
+        },
+        {
+          "name": "4.tar",
+          "bytes": 302202880,
+          "sha256": "7566c20d5368ef53f139a1765aa4355731809cfec656ef8515ff283345fae780",
+          "images": 3000
+        }
+      ]
+    },
+    {
+      "local_name": "clevr_closest_object_distance",
+      "official_name": "CLEVR Distance",
+      "repo": "clip-benchmark/wds_vtab-clevr_closest_object_distance",
+      "revision": "ec9c04224a95836ca0344a6000ec8d8bc8a6d4f2",
+      "split": "test",
+      "shards": 5,
+      "images": 15000,
+      "bytes": 1510256640,
+      "files": [
+        {
+          "name": "0.tar",
+          "bytes": 302776320,
+          "sha256": "7f158545bf20924dd47695a478ddf8a33a7138bc2b47a1951a611c7c064da11c",
+          "images": 3000
+        },
+        {
+          "name": "1.tar",
+          "bytes": 301772800,
+          "sha256": "418219b98b321f482c58d191254d39916a4b98c38759a5960ef7e7848c9075cb",
+          "images": 3000
+        },
+        {
+          "name": "2.tar",
+          "bytes": 301445120,
+          "sha256": "6dc220442c9b8f178fff4c48dafb49fd3aed8dff55994074dc366567f845d12f",
+          "images": 3000
+        },
+        {
+          "name": "3.tar",
+          "bytes": 302059520,
+          "sha256": "b2721fe05e0bc44424a5d19eac10f64615e6afe7c3051d257f749ec6627c6715",
+          "images": 3000
+        },
+        {
+          "name": "4.tar",
+          "bytes": 302202880,
+          "sha256": "661b578028c7d17f57c2ee9bd69bb6812b2525c27231fdf8c0ac4b66518c8551",
+          "images": 3000
+        }
+      ]
+    },
+    {
+      "local_name": "food101",
+      "official_name": "Food-101",
+      "repo": "clip-benchmark/wds_food101",
+      "revision": "147a52fcbbb4f9d14293f9e2d821744d6883efef",
+      "split": "test",
+      "shards": 5,
+      "images": 25250,
+      "bytes": 1371883520,
+      "files": [
+        {
+          "name": "0.tar",
+          "bytes": 342620160,
+          "sha256": "7b8fc315e34d9efa30985a2e3fbe9912150287b6dd3db66b753d9e704174116f",
+          "images": 6300
+        },
+        {
+          "name": "1.tar",
+          "bytes": 343777280,
+          "sha256": "0c0a4e962a595b8a5e8a3237e0518b872956f6eedfea673c3a261f44f833b24d",
+          "images": 6300
+        },
+        {
+          "name": "2.tar",
+          "bytes": 338769920,
+          "sha256": "2cf2fb199815d3aa7973610e438373fe0a4cdea1a1bc5fb9ecf733ce97899b97",
+          "images": 6300
+        },
+        {
+          "name": "3.tar",
+          "bytes": 343787520,
+          "sha256": "07d4aadba438695d19cb4ec5777ebb392f4d2ea1a39638d557a4f78143d94ad7",
+          "images": 6300
+        },
+        {
+          "name": "4.tar",
+          "bytes": 2928640,
+          "sha256": "e9078cf9c0ebedc71757cd2b8f633c64b4fff84457eebf03ee7696d8017df189",
+          "images": 50
+        }
+      ]
+    }
+  ],
+  "model_protocol_mapping": {
+    "openai/clip-vit-large-patch14": {
+      "architecture": "ViT-L-14",
+      "pretrained": "openai",
+      "metric": "Top-1 accuracy"
+    },
+    "timm/ViT-B-16-SigLIP": {
+      "architecture": "ViT-B-16-SigLIP",
+      "pretrained": "webli",
+      "metric": "Top-1 accuracy"
+    },
+    "timm/ViT-L-16-SigLIP-384": {
+      "architecture": "ViT-L-16-SigLIP-384",
+      "pretrained": "webli",
+      "metric": "Top-1 accuracy"
+    },
+    "timm/ViT-SO400M-14-SigLIP": {
+      "architecture": "ViT-SO400M-14-SigLIP",
+      "pretrained": "webli",
+      "metric": "Top-1 accuracy"
+    },
+    "timm/ViT-SO400M-14-SigLIP-384": {
+      "architecture": "ViT-SO400M-14-SigLIP-384",
+      "pretrained": "webli",
+      "metric": "Top-1 accuracy"
+    }
+  },
+  "official_percent_references": {
+    "laion/CLIP-ViT-H-14-laion2B-s32B-b79K": {
+      "ImageNet-O": 38.25, "Country211": 29.86, "CLEVR Counts": 26.76,
+      "CLEVR Distance": 23.58, "Food-101": 92.73
+    },
+    "laion/CLIP-ViT-bigG-14-laion2B-39B-b160k": {
+      "ImageNet-O": 37.85, "Country211": 33.79, "CLEVR Counts": 29.89,
+      "CLEVR Distance": 20.02, "Food-101": 93.09
+    },
+    "laion/CLIP-ViT-B-32-laion2B-s34B-b79K": {
+      "ImageNet-O": 49.95, "Country211": 16.67, "CLEVR Counts": 15.35,
+      "CLEVR Distance": 24.51, "Food-101": 82.69
+    },
+    "laion/CLIP-ViT-L-14-DataComp.XL-s13B-b90K": {
+      "ImageNet-O": 32.55, "Country211": 31.57, "CLEVR Counts": 35.55,
+      "CLEVR Distance": 24.43, "Food-101": 94.52
+    },
+    "laion/CLIP-ViT-L-14-laion2B-s32B-b82K": {
+      "ImageNet-O": 38.70, "Country211": 26.31, "CLEVR Counts": 31.23,
+      "CLEVR Distance": 22.34, "Food-101": 91.00
+    },
+    "laion/CLIP-ViT-B-16-laion2B-s34B-b88K": {
+      "ImageNet-O": 46.25, "Country211": 20.29, "CLEVR Counts": 21.49,
+      "CLEVR Distance": 24.55, "Food-101": 86.63
+    },
+    "laion/CLIP-ViT-g-14-laion2B-s34B-b88K": {
+      "ImageNet-O": 37.05, "Country211": 30.91, "CLEVR Counts": 37.68,
+      "CLEVR Distance": 18.70, "Food-101": 92.41
+    },
+    "laion/CLIP-convnext_xxlarge-laion2B-s34B-b82K-augreg-soup": {
+      "ImageNet-O": 40.60, "Country211": 31.70, "CLEVR Counts": 14.54,
+      "CLEVR Distance": 23.65, "Food-101": 93.21
+    },
+    "openai/clip-vit-large-patch14": {
+      "ImageNet-O": 32.35,
+      "Country211": 31.87,
+      "CLEVR Counts": 19.43,
+      "CLEVR Distance": 20.21,
+      "Food-101": 93.05
+    },
+    "timm/ViT-B-16-SigLIP": {
+      "ImageNet-O": 38.15,
+      "Country211": 15.94,
+      "CLEVR Counts": 23.73,
+      "CLEVR Distance": 24.09,
+      "Food-101": 91.62
+    },
+    "timm/ViT-L-16-SigLIP-384": {
+      "ImageNet-O": 31.3,
+      "Country211": 24.7,
+      "CLEVR Counts": 32.75,
+      "CLEVR Distance": 20.77,
+      "Food-101": 95.64
+    },
+    "timm/ViT-SO400M-14-SigLIP": {
+      "ImageNet-O": 29.6,
+      "Country211": 32.43,
+      "CLEVR Counts": 42.1,
+      "CLEVR Distance": 22.13,
+      "Food-101": 95.56
+    },
+    "timm/ViT-SO400M-14-SigLIP-384": {
+      "ImageNet-O": 27.75,
+      "Country211": 36.45,
+      "CLEVR Counts": 40.71,
+      "CLEVR Distance": 22.46,
+      "Food-101": 96.35
+    }
+  }
+}

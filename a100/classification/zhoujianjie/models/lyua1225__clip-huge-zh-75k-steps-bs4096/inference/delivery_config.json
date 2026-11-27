@@ -1,0 +1,16 @@
+{
+  "model_id": "lyua1225/clip-huge-zh-75k-steps-bs4096",
+  "launcher": "run_three_native.py",
+  "args": [
+    "lyua1225/clip-huge-zh-75k-steps-bs4096"
+  ],
+  "native_task": "retrieval",
+  "public_evaluator": "unsupported_original_retrieval",
+  "bounded_smoke_supported": true,
+  "required_weights": [
+    "download_receipt.json"
+  ],
+  "required_data": [],
+  "minimum_smoke_images": 10,
+  "smoke_scope": "fixed prefix candidates; full-gallery Recall comparison is not claimed"
+}

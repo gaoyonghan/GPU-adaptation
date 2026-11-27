@@ -1,0 +1,77 @@
+[
+  {
+    "file": "inference/original_sources/run_model.py",
+    "sha256": "6b1c88c470bca26caa104a544237e7767663372ef01a80f26a4637ef1715261d",
+    "source": "A100 snapshot"
+  },
+  {
+    "file": "inference/original_sources/run_three_native.py",
+    "sha256": "b2ba5dc67d048c3df179020b5bf4654624ca897589af492b623dfb032fdff24a",
+    "source": "A100 snapshot"
+  },
+  {
+    "file": "inference/original_sources/three_native_a100.py",
+    "sha256": "6582bff2bbf0f82bfd01212196b2f2628d9a5095ced6ff0b932d755f03bab05d",
+    "source": "A100 snapshot"
+  },
+  {
+    "file": "inference/original_sources/evaluate_b01.py",
+    "sha256": "77c61ebb4808aa2796a911ed99cee26c9262aebb0884c40e03ce0b6c7a81897e",
+    "source": "4090 original evaluator"
+  },
+  {
+    "file": "inference/original_sources/evaluate_downloaded_imagenet_robustness.py",
+    "sha256": "8f18d9a73f1dab8c914706014893185adaf1a4bdd58504ff9fb6c5cad2363607",
+    "source": "4090 original evaluator"
+  },
+  {
+    "file": "inference/original_sources/evaluate_pe_core_imagenet_a.py",
+    "sha256": "6e0798b279ed05cab424134f49435d83d54fcb387468d863c0e2600e92575669",
+    "source": "4090 original evaluator"
+  },
+  {
+    "file": "inference/original_sources/evaluate_remaining7_control_comparisons.py",
+    "sha256": "01843abea55de5368670850505e088e813cb74b3bb158bb5b05a6c37fa935de0",
+    "source": "4090 original evaluator"
+  },
+  {
+    "file": "inference/original_sources/evaluate_remaining_11_proxy_diagnostics.py",
+    "sha256": "abd784959cafd138302544b2fe120d0495283d2a2beda4c5112b99e403d35169",
+    "source": "4090 original evaluator"
+  },
+  {
+    "file": "inference/original_sources/evaluate_xtd10_clip.py",
+    "sha256": "5939be9c8b3ac1343bd2a393100daf60f3e87e96977b81de9f17e20bf653f039",
+    "source": "4090 original evaluator"
+  },
+  {
+    "file": "inference/original_sources/official_22_models.py",
+    "sha256": "4cec0a47a0479e2c4ae9634e5c58af1979a84340d3fa96e4fcf33de9f1fcc3b8",
+    "source": "4090 original evaluator"
+  },
+  {
+    "file": "inference/original_sources/validate_stage2_models.py",
+    "sha256": "4807fc3d8ef9312bb369da6425ff32b1f16c27d640c0f63662323793f351a75b",
+    "source": "4090 original evaluator"
+  },
+  {
+    "file": "inference/original_sources/original_metadata/imagenet_robustness_diagnostic_preflight.json",
+    "sha256": "98458e1be449d08b28184689abcddf5abba0f70b57d01ae24bd7e4c5c93645c9",
+    "source": "frozen original protocol metadata"
+  },
+  {
+    "file": "inference/original_sources/original_metadata/remaining7_control_comparisons_preflight.json",
+    "sha256": "1459df1c71f1a83e81ddabfbe2fc086e24e821c96cb77b0175f2f7bb1b94ce55",
+    "source": "frozen original protocol metadata"
+  },
+  {
+    "file": "inference/original_sources/original_metadata/remaining_11_proxy_preflight.json",
+    "sha256": "f03b3f8055d9b463cc0bd0275f4b9b655a1a7fd576f529dc7e731c5f83b84f0f",
+    "source": "frozen original protocol metadata"
+  },
+  {
+    "file": "inference/original_sources/original_metadata/remaining_11_proxy_results.json",
+    "sha256": "5b0eb3bda1906225e313a6411e2f3d05a623dff659f8c841b94932b65d1e2791",
+    "source": "frozen original protocol metadata"
+  }
+]

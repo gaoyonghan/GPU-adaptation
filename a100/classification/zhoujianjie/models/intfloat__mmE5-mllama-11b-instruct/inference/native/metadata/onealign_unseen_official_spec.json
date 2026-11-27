@@ -1,0 +1,89 @@
+{
+  "status": "strict_official_mapping",
+  "model": {
+    "model_id": "q-future/one-align",
+    "revision": "dcc603b95aa0ebd82afa696d4a1e20d11fc80ddb",
+    "local_dir": "models/q-future/one-align",
+    "official_reference_source": "models/q-future/one-align/README.md",
+    "official_reference_table": "IQA Results (Spearman/Pearson/Kendall), OneAlign (IQA+IAA+VQA) row"
+  },
+  "dataset": {
+    "repo_id": "q-future/q-align-datasets",
+    "revision": "3da8831b98d683a024b1216720df0cc8a832e376",
+    "local_root": "datasets/evaluation/onealign_unseen_official",
+    "manifest": "evaluation_audit/onealign_unseen_tests_manifest.json",
+    "split": "the exact test JSONs shipped by the official evaluator"
+  },
+  "evaluator": {
+    "repo": "https://github.com/Q-Future/Q-Align",
+    "commit": "fd0c3def92da21cd124f8301722b6b83bb75eccd",
+    "local_dir": "evaluation_audit/reference_code/Q-Align",
+    "official_iqa_script": "q_align/evaluate/iqa_eval.py",
+    "official_scorer": "q_align/evaluate/scorer.py"
+  },
+  "protocol": {
+    "conversation_template": "mplug_owl2",
+    "question": "How would you rate the quality of this image?",
+    "answer_prefix": "The quality of the image is",
+    "logged_tokens": [
+      "good",
+      "poor",
+      "high",
+      "fair",
+      "low",
+      "excellent",
+      "bad",
+      "fine",
+      "moderate",
+      "decent",
+      "average",
+      "medium",
+      "acceptable"
+    ],
+    "score_tokens_in_order": ["excellent", "good", "fair", "poor", "bad"],
+    "score_weights": [1.0, 0.75, 0.5, 0.25, 0.0],
+    "score_definition": "softmax over the five score-token logits followed by their weighted sum",
+    "preprocessing": "RGB; expand to square using image_processor.image_mean*255 background; official image_processor.preprocess; FP16",
+    "official_batch_size": 8,
+    "metrics": {
+      "SRCC": "Spearman rank correlation between predicted scores and gt_score",
+      "PLCC": "Pearson correlation between predicted scores and gt_score",
+      "KRCC": "Kendall tau-b correlation between predicted scores and gt_score",
+      "reporting_direction": "Report correlation magnitude, as in the official positive-valued IQA table; retain raw signed correlation to expose MOS/DMOS label direction"
+    }
+  },
+  "official_reference": {
+    "livec": {
+      "name": "LIVE-C",
+      "images": 1169,
+      "SRCC": 0.881,
+      "PLCC": 0.894,
+      "KRCC": 0.699
+    },
+    "live": {
+      "name": "LIVE",
+      "images": 982,
+      "SRCC": 0.887,
+      "PLCC": 0.856,
+      "KRCC": 0.699
+    },
+    "csiq": {
+      "name": "CSIQ",
+      "images": 750,
+      "SRCC": 0.881,
+      "PLCC": 0.906,
+      "KRCC": 0.699
+    },
+    "agi": {
+      "name": "AGIQA",
+      "images": 2982,
+      "SRCC": 0.801,
+      "PLCC": 0.838,
+      "KRCC": 0.602
+    }
+  },
+  "excluded": {
+    "seen_or_training_datasets": ["KonIQ-10k", "SPAQ", "KADID-10k", "AVA", "LSVQ"],
+    "reason": "The user requested official evaluation data only; these sets are marked seen or are used for OneAlign training."
+  }
+}
