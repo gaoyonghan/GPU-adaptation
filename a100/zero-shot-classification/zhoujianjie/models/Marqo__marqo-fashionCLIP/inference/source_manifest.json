@@ -1,0 +1,162 @@
+[
+  {
+    "file": "inference/original_sources/evaluate_marqo_atlas_official.py",
+    "sha256": "be4a5aed1e92d15b04329ab24bc99a5265258477562328e4000038cc4896727d",
+    "source": "A100 snapshot"
+  },
+  {
+    "file": "inference/original_sources/fashion_native_a100.py",
+    "sha256": "dbc7001969abb7314b066782652d8dc4b7403c82dfb93e3beffc737c904fc496",
+    "source": "A100 snapshot"
+  },
+  {
+    "file": "inference/original_sources/run_fashion_native.py",
+    "sha256": "5a8eb7386ebbbaa41e4e87f4c4e82fde553c67f29c4ebc1c636ef7e6bf3839b2",
+    "source": "A100 snapshot"
+  },
+  {
+    "file": "inference/original_sources/run_model.py",
+    "sha256": "6b1c88c470bca26caa104a544237e7767663372ef01a80f26a4637ef1715261d",
+    "source": "A100 snapshot"
+  },
+  {
+    "file": "inference/original_sources/evaluate_marqo_deepfashion_official.py",
+    "sha256": "f36e4ecb1dbb418cb914782f696262e87df85895b17d397ccac9cd2d08755751",
+    "source": "4090 original evaluator"
+  },
+  {
+    "file": "inference/original_sources/reference_code/marqo-FashionCLIP/LEADERBOARD.md",
+    "sha256": "8fb2baf7ac833efb07d224e6edc3beecb86f9246c818f939c8f49f35b321e31d",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/marqo-FashionCLIP/README.md",
+    "sha256": "9274b50ec13454febdc2fe317acb1c59d156778652140fd234f07c959ac58304",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/marqo-FashionCLIP/configs/KAGL.json",
+    "sha256": "620af93726196fba990113d2c7d0807ea3e9820b2c0db7843abf56df9d65257e",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/marqo-FashionCLIP/configs/atlas.json",
+    "sha256": "9f00f1d09787175adf5104a1476c4cd6a50d8e62d2e4b196639b76d759921f26",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/marqo-FashionCLIP/configs/deepfashion_inshop.json",
+    "sha256": "ac6fd030edf43205b333b1ea11a2f6dfec397342d223f09c2fde8906affbf5c7",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/marqo-FashionCLIP/configs/deepfashion_multimodal.json",
+    "sha256": "bedc2496bab703008fde7dbe4fd87ee8b99c74578c9161cf778121fa2b1e2b87",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/marqo-FashionCLIP/configs/fashion200k.json",
+    "sha256": "c63a649b4200016f25aed42b9813e8df8fa3219a09b11897432ab755d439a9c0",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/marqo-FashionCLIP/configs/iMaterialist.json",
+    "sha256": "691b95ebbaf22a66d2d1eb87867a348557521942c7f04b2ccfe5bdc94f7f61e8",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/marqo-FashionCLIP/configs/polyvore.json",
+    "sha256": "81b21be57ec20af09cf3520cfdbf7544e8684398f79ae47e97736a84fce725b1",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/marqo-FashionCLIP/data/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/marqo-FashionCLIP/data/utils.py",
+    "sha256": "fc3938f02394285dd9e9fd13a1eeb9f9a3af96686400d949e59296fbe9d23552",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/marqo-FashionCLIP/eval.py",
+    "sha256": "1b9a2fb135a5c23a42e2b534f9f5eb96eea916b22b02ef890aeeebe20ea1559a",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/marqo-FashionCLIP/models/__init__.py",
+    "sha256": "cd92784484a7d653abbdfb75d37b841f88f66439406a9b36665bef4419cffcf0",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/marqo-FashionCLIP/models/hf_models.py",
+    "sha256": "4c5043f8b7c7b099aafbf4965551209d86c9d5648faffe29daecbba0928c4f78",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/marqo-FashionCLIP/models/open_clip_model.py",
+    "sha256": "dd2b6074f01dcea0e3e95748e63d100f7b2bf74233668885749f0ce33f4fbd70",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/marqo-FashionCLIP/requirements.txt",
+    "sha256": "c039e524f27d36214aca65fc17cdbe13111d33d62ac8c207a0f4beb32eb1f7f2",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/marqo-FashionCLIP/scripts/fashionCLIP2.sh",
+    "sha256": "602b7f093e28eb30cec6b197dbaa9fd45b2a636527a160307433c97d6fde9295",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/marqo-FashionCLIP/scripts/marqo_fashionCLIP.sh",
+    "sha256": "83b413adffb196d00b2707895227c0429ae59ccb9c9d0fa0f8521bb6e7c4ac95",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/marqo-FashionCLIP/scripts/marqo_fashionSigLIP.sh",
+    "sha256": "4bf5bb5169906b6727a3e2700844dae403c11f86aebf0bcbd53cd83c1ecfd66a",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/marqo-FashionCLIP/scripts/openfashionCLIP.sh",
+    "sha256": "bccacf560061bc1830342b04b8c1b2628d10761404aba48893e74144abc8ef9e",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/marqo-FashionCLIP/scripts/vitb16_laion2b_s34b_b88k.sh",
+    "sha256": "4e2b3bb607c00aba99374395455c1c704388d6f641e70ef04f38eb62cc28237e",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/marqo-FashionCLIP/scripts/vitb16_siglip_webli.sh",
+    "sha256": "33f9ec8194e04db184209df29efcdaa9610c42bb25ab7140d46dcd5c2b827444",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/marqo-FashionCLIP/summarize_results.py",
+    "sha256": "34e8b649bc4da234f17a3e96fb4cbc2df1113b0e3fe58bae708ecbb74988f04b",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/marqo-FashionCLIP/utils/__init__.py",
+    "sha256": "40a2f38db7fc58b7b934c61c50daa48bb57ae8d8eb54bb256b227056d39ff38d",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/marqo-FashionCLIP/utils/logger.py",
+    "sha256": "87ee7b243d8c395925b5a6374d83e938390c6ef679f4ba8884b81eb1e13210c1",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/marqo-FashionCLIP/utils/metrics.py",
+    "sha256": "c47122b2e9b642f3aa8c77dc443b6a2e8dcda1920cc32a05dbd6348f54612218",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/marqo-FashionCLIP/utils/retrieval.py",
+    "sha256": "435770b57392cf1d6dad8cc12591b182271b0ed3e41ab99c9f7da9b7c5cc4038",
+    "source": "A100 native source snapshot; license retained"
+  }
+]

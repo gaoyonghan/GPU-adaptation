@@ -1,0 +1,12 @@
+{
+  "model_id": "facebook/metaclip-2-worldwide-huge-quickgelu",
+  "launcher": "run_metaclip2_native.py",
+  "args": [],
+  "native_task": "single_label_classification",
+  "public_evaluator": "supported_pending_validation",
+  "bounded_smoke_supported": true,
+  "required_weights": [
+    "download_receipt.json"
+  ],
+  "required_data": []
+}

@@ -1,0 +1,12 @@
+[
+  {
+    "file": "inference/original_sources/run_model.py",
+    "sha256": "6b1c88c470bca26caa104a544237e7767663372ef01a80f26a4637ef1715261d",
+    "source": "A100 snapshot"
+  },
+  {
+    "file": "inference/original_sources/evaluate_plip_kather_official.py",
+    "sha256": "1409841d5feeb2f74e16859e58a61f41e62146126059ed80bd0b2e95e2478bc5",
+    "source": "4090 original evaluator"
+  }
+]

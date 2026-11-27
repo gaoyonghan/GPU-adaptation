@@ -1,0 +1,14 @@
+{
+  "model_id": "imageomics/bioclip-2",
+  "launcher": "run_bioclip_native.py",
+  "args": [
+    "imageomics/bioclip-2"
+  ],
+  "native_task": "single_label_classification",
+  "public_evaluator": "supported_pending_validation",
+  "bounded_smoke_supported": true,
+  "required_weights": [
+    "download_receipt.json"
+  ],
+  "required_data": []
+}

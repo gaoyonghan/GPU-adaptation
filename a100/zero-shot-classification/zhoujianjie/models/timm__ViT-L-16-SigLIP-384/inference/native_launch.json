@@ -1,0 +1,12 @@
+{
+  "model": "timm/ViT-L-16-SigLIP-384",
+  "historical_command": [
+    "python",
+    "-u",
+    "environment_setup/run_openclip_native.py",
+    "timm/ViT-L-16-SigLIP-384"
+  ],
+  "native_evaluator": "evaluation_audit/evaluate_openclip_new_suite_official.py",
+  "historical_a100_environment": "/data/zhoujianjie/environment_setup/native_python.py",
+  "purpose": "provenance only; not a central task registry"
+}

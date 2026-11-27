@@ -1,0 +1,14 @@
+{
+  "model_id": "philschmid/clip-zero-shot-image-classification",
+  "launcher": "run_imagenet_remaining.py",
+  "args": [
+    "philschmid/clip-zero-shot-image-classification"
+  ],
+  "native_task": "single_label_classification",
+  "public_evaluator": "supported_pending_validation",
+  "bounded_smoke_supported": true,
+  "required_weights": [
+    "download_receipt.json"
+  ],
+  "required_data": []
+}

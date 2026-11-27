@@ -1,0 +1,14 @@
+{
+  "model_id": "geolocal/StreetCLIP",
+  "launcher": "run_three_native.py",
+  "args": [
+    "geolocal/StreetCLIP"
+  ],
+  "native_task": "single_label_classification",
+  "public_evaluator": "supported_pending_validation",
+  "bounded_smoke_supported": true,
+  "required_weights": [
+    "download_receipt.json"
+  ],
+  "required_data": []
+}

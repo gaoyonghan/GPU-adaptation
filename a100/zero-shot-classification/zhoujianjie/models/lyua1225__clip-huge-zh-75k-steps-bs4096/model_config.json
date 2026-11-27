@@ -1,0 +1,62 @@
+{
+  "model_id": "lyua1225/clip-huge-zh-75k-steps-bs4096",
+  "revision": "4db247309b7598ab786b09a84bd5a2f57b20a048",
+  "scope": "user_decision_all_77_top20",
+  "historical_task": "XTD-10检索评测器",
+  "backend": "Transformers CLIPModel + audited local tokenizer",
+  "runtime_backend": "Transformers CLIPModel + audited local tokenizer",
+  "handoff_status": "catalogued_native_protocol_port_pending",
+  "historical_acceptance": "无同checkpoint官方指标，冻结4090实测值",
+  "official_datasets": "—",
+  "native_evaluator": "evaluation_audit/evaluate_remaining_11_proxy_diagnostics.py",
+  "native_evaluator_sha256": "abd784959cafd138302544b2fe120d0495283d2a2beda4c5112b99e403d35169",
+  "weight_reference": "classification/zhoujianjie/models/lyua1225__clip-huge-zh-75k-steps-bs4096/weights",
+  "evidence": [
+    {
+      "source": "evaluation_audit/self_defined_baseline_registry.json",
+      "snapshot": "history/evidence_01.json",
+      "sha256": "9640a7f05bf2cc331f1012a6bde0c5c31e28a2ff71c86151123e7951a1e77278"
+    }
+  ],
+  "official_dataset": null,
+  "standard_dataset": null,
+  "primary_metrics": [
+    "top1_accuracy"
+  ],
+  "metric_unit": "fraction",
+  "classification_protocol_status": "requires_native_protocol_review_before_top1",
+  "official_claim": null,
+  "model_asset_sha256": {
+    "added_tokens.json": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "config.json": "fcf768b8558e3f3984673136d3e6c655f7ff7338e104ec2e716efc7474df67c4",
+    "download_receipt.json": "6e81b6118a078eb5b3429c21ac5597e29d6b425dc694ab7c54fbe2d9f0932dfb",
+    "preprocessor_config.json": "2a1da83b5e1032aaeef397552ddb408dca0d8cd1dc58f61bf6abf38d6f33a0a2",
+    "special_tokens_map.json": "303df45a03609e4ead04bc3dc1536d0ab19b5358db685b6f3da123d05ec200e3",
+    "tokenizer.json": "53ff61207898738bbdc000f38abebef01041c8d23b6270c11855fc692d0a3ad6",
+    "tokenizer_config.json": "77fae97c6a72b3db0f4c76622fcdefbac52e3e7ba4e0f6a0eff12bcd117bf974",
+    "vocab.txt": "45bbac6b341c319adc98a532532882e91a9cefc0329aa57bac9ae761c27b291c"
+  },
+  "framework_sha256": {
+    "zero-shot-classification/zhoujianjie/shared/__init__.py": "ac530da703ede9365e51055357b2227002a9de0097e365da28ac1cd002680710",
+    "zero-shot-classification/zhoujianjie/shared/classification_contract.py": "a4c1f76d0d476ad5a51ba8e66dab28ba94903b62391cfd5addd762a59d53ab0b",
+    "zero-shot-classification/zhoujianjie/shared/handoff_runtime.py": "691077a04b3d8ff962f59255d4771dcbf3f13818828f587ea979c9491a7e755c",
+    "zero-shot-classification/zhoujianjie/shared/classification_metrics.py": "623580d4254977e67cbfcce6c45a6e9f8eedab927e4ec692d26d63f474f49bbb",
+    "zero-shot-classification/zhoujianjie/shared/standard_scoring.py": "b47dfa18dec99f68e0dd35965aee27f116a5ca48f8925bb1ea0847d8cd6c29e8",
+    "zero-shot-classification/zhoujianjie/shared/standard_dataset.py": "9ef01e01d024a5e3897e14e51fe099238701ab6a9c7623946411db892e278098",
+    "zero-shot-classification/zhoujianjie/shared/legacy/evaluate_imagenet1k_official.py": "ee2b1d5af45da948549b811d911325bc94bc8be656be9ed0f9163bd96e2c3a01",
+    "zero-shot-classification/zhoujianjie/shared/legacy/evaluate_b01.py": "7d71c5d270ef59a17d9148b200b6b32e0943cd10c82686b87692fd0211056ab8",
+    "zero-shot-classification/zhoujianjie/shared/legacy/official_22_models.py": "4cec0a47a0479e2c4ae9634e5c58af1979a84340d3fa96e4fcf33de9f1fcc3b8",
+    "zero-shot-classification/zhoujianjie/shared/legacy/imagenet1k_official_spec.py": "3aeb7f0134ee4b55a4a8b2e3aed4d176f76bc892ef1e908bb2fe209e045a43bb",
+    "zero-shot-classification/zhoujianjie/shared/legacy/validate_stage2_models.py": "a4436f1e241f2bc98ec48661fdcee76369b2c73e1bc7b16b14a01cb84a65532a",
+    "zero-shot-classification/zhoujianjie/shared/legacy/prompt_engineering_constants.py": "08b6bfd94da4ad774a87246c615bae191ecf7db47477c4b98e8b7a759aff00d2",
+    "zero-shot-classification/zhoujianjie/shared/legacy/class_names.py": "314a107b4fe15bc163030517d1191d8e6eef4d474fbaf09472323ced989cd46a",
+    "zero-shot-classification/zhoujianjie/Dataset_Coco/coco_bundle.py": "965397e6f697e414bca59d987660d394af5e5cad0be145cdd5d9224cfcc06263",
+    "zero-shot-classification/zhoujianjie/Dataset_Coco/__init__.py": "bc5bb4e4e38cf7a2445eb919778d69361ca2f0cb10db241651d80a217bcf6b85"
+  },
+  "weight_reference_before_packaging": "models/lyua1225/clip-huge-zh-75k-steps-bs4096",
+  "a100_historical_status": "completed",
+  "submission_gpu_retested": false,
+  "remaining_work": [
+    "本模型的原生入口尚依赖旧工程路径/外部源码，需完成独立化和标准输出接入。"
+  ]
+}

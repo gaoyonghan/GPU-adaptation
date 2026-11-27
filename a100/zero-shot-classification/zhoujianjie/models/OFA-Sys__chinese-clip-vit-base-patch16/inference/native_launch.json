@@ -1,0 +1,7 @@
+{
+  "model": "OFA-Sys/chinese-clip-vit-base-patch16",
+  "historical_command": null,
+  "native_evaluator": "evaluation_audit/evaluate_chinese_clip_original_official.py",
+  "historical_a100_environment": null,
+  "purpose": "provenance only; not a central task registry"
+}

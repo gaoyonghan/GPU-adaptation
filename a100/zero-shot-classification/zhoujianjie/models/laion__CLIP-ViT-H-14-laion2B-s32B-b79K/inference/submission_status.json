@@ -1,0 +1,7 @@
+{
+  "model": "laion/CLIP-ViT-H-14-laion2B-s32B-b79K",
+  "historical_a100_status": "completed",
+  "submission_entry_status": "independent_entry_prepared",
+  "gpu_retested_in_submission": false,
+  "reason": null
+}

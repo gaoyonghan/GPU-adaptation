@@ -1,0 +1,8 @@
+{
+  "model": "lyua1225/clip-huge-zh-75k-steps-bs4096",
+  "historical_a100_status": "completed",
+  "submission_entry_status": "native_port_prepared_pending_validation",
+  "gpu_retested_in_submission": false,
+  "reason": null,
+  "public_evaluator": "unsupported_original_retrieval"
+}

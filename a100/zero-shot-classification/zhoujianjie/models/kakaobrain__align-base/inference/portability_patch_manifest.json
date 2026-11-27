@@ -1,0 +1,156 @@
+[
+  {
+    "file": "inference/native/native_mme5_python.py",
+    "source_sha256": "c05a7a4cbd7985c816b65773c558c1b3618d46cb41f2464a4b12150cb37623be",
+    "path_expression_edits": 2,
+    "path_mapping_stage_sha256": "222da15204400a4c7fd71daf2ca243fc0d9594d446b56bad36c634ece92799d7",
+    "final_delivery_sha256": "222da15204400a4c7fd71daf2ca243fc0d9594d446b56bad36c634ece92799d7"
+  },
+  {
+    "file": "inference/native/native_fgclip_python.py",
+    "source_sha256": "85db4a246d109f7cf518835afcd67482684f256765ec1a784698966036597228",
+    "path_expression_edits": 6,
+    "path_mapping_stage_sha256": "223e2d938be89d706e31a4fc0ff343bfeb861a7ddaed6dd6b98c3547d9e8dfc5",
+    "final_delivery_sha256": "223e2d938be89d706e31a4fc0ff343bfeb861a7ddaed6dd6b98c3547d9e8dfc5"
+  },
+  {
+    "file": "inference/native/align_native_a100.py",
+    "source_sha256": "c0f8f5f87db07e4dc39303a8515866e0a978a143d02b183fb1e6a39db75ff090",
+    "path_expression_edits": 14,
+    "path_mapping_stage_sha256": "526a5c5d6dcad97bce0899f44f88b9715d19ff1bc0d91b657c7258974dc874e2",
+    "final_delivery_sha256": "526a5c5d6dcad97bce0899f44f88b9715d19ff1bc0d91b657c7258974dc874e2"
+  },
+  {
+    "file": "inference/native/evaluate_kakao_align_flickr30k_official.py",
+    "source_sha256": "1ee455b85a4cb85437aca4a038d2fc4b53313afaee041b956480cf0a586e3a5f",
+    "path_expression_edits": 1,
+    "path_mapping_stage_sha256": "3d74574e494e7121ff54b883d16edfdfb8f1d0f3d3d5477e1f5da6a4bde819d6",
+    "final_delivery_sha256": "3d74574e494e7121ff54b883d16edfdfb8f1d0f3d3d5477e1f5da6a4bde819d6"
+  },
+  {
+    "file": "inference/native/native_python.py",
+    "source_sha256": "ea047f7906c92e5d0173ccd6195c3d183645560aa19bcf826d028044e623005c",
+    "path_expression_edits": 6,
+    "path_mapping_stage_sha256": "2b4b7632421ea8f9b220db6446d5eb9c2892a1c1d13a97a4eda4bdb71a6fef28",
+    "final_delivery_sha256": "1bb949be95f07a3bf556d0290dd9001724efabfae9951668fc5e71896516a5b0"
+  },
+  {
+    "file": "inference/native/sitecustomize.py",
+    "source_sha256": "6eda9fd629a259c259dbd87d1f55fb4004ca20890677a7dee5745f2d7633016b",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "6eda9fd629a259c259dbd87d1f55fb4004ca20890677a7dee5745f2d7633016b",
+    "final_delivery_sha256": "962ac551ad22f7854811868a13cdd4b758c316d57acca6fa2fddea9752ce153b"
+  },
+  {
+    "file": "inference/native/run_align_native.py",
+    "source_sha256": "ea867b319ec1369726835abdfd10a87ea25e419b2e2bbf223312b8079c1b62e8",
+    "path_expression_edits": 4,
+    "path_mapping_stage_sha256": "a3b67f5fb94b0c47495c26b903cd031304b77c48b8d77333fa250e02f801e5c6",
+    "final_delivery_sha256": "a3b67f5fb94b0c47495c26b903cd031304b77c48b8d77333fa250e02f801e5c6"
+  },
+  {
+    "file": "inference/native/model_paths.py",
+    "source_sha256": "d39241a382eaffe4ca202ac8d47cf9684c09603cc558b7d37519def06614896d",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "d39241a382eaffe4ca202ac8d47cf9684c09603cc558b7d37519def06614896d",
+    "final_delivery_sha256": "d39241a382eaffe4ca202ac8d47cf9684c09603cc558b7d37519def06614896d"
+  },
+  {
+    "file": "inference/native/reference_code/coyo-align/warmup_lr.py",
+    "source_sha256": "01d419bf6248b851190c10c931abb4c3576e34f2c2abf927f4853a0e93bd0f15",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "01d419bf6248b851190c10c931abb4c3576e34f2c2abf927f4853a0e93bd0f15",
+    "final_delivery_sha256": "01d419bf6248b851190c10c931abb4c3576e34f2c2abf927f4853a0e93bd0f15"
+  },
+  {
+    "file": "inference/native/reference_code/coyo-align/tensorboard_callback.py",
+    "source_sha256": "29fbd46b960a6f6a5f689f029f1e3ef7ecdc4e88cfd336d01ca0a07c43621701",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "29fbd46b960a6f6a5f689f029f1e3ef7ecdc4e88cfd336d01ca0a07c43621701",
+    "final_delivery_sha256": "29fbd46b960a6f6a5f689f029f1e3ef7ecdc4e88cfd336d01ca0a07c43621701"
+  },
+  {
+    "file": "inference/native/reference_code/coyo-align/main.py",
+    "source_sha256": "0254be3c6ab87c105c53cc2bd416f041b7c5eb44399568760db0e5eea7131606",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "0254be3c6ab87c105c53cc2bd416f041b7c5eb44399568760db0e5eea7131606",
+    "final_delivery_sha256": "0254be3c6ab87c105c53cc2bd416f041b7c5eb44399568760db0e5eea7131606"
+  },
+  {
+    "file": "inference/native/reference_code/coyo-align/align.py",
+    "source_sha256": "f0fd84aaa875d94380bc9ee0a64217a8663144760b0aa7dced69c5de09df3767",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "f0fd84aaa875d94380bc9ee0a64217a8663144760b0aa7dced69c5de09df3767",
+    "final_delivery_sha256": "f0fd84aaa875d94380bc9ee0a64217a8663144760b0aa7dced69c5de09df3767"
+  },
+  {
+    "file": "inference/native/reference_code/coyo-align/datasets/image_preprocessor.py",
+    "source_sha256": "a67c9f063af048afd9b3170b618e1821a895df3ade0ec341631c578411244772",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "a67c9f063af048afd9b3170b618e1821a895df3ade0ec341631c578411244772",
+    "final_delivery_sha256": "a67c9f063af048afd9b3170b618e1821a895df3ade0ec341631c578411244772"
+  },
+  {
+    "file": "inference/native/reference_code/coyo-align/datasets/imgtxt_dataset.py",
+    "source_sha256": "6741671090f51463d42c7732403c4a1fff75be3546e97bc1cfd8f565271874f4",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "6741671090f51463d42c7732403c4a1fff75be3546e97bc1cfd8f565271874f4",
+    "final_delivery_sha256": "6741671090f51463d42c7732403c4a1fff75be3546e97bc1cfd8f565271874f4"
+  },
+  {
+    "file": "inference/native/reference_code/coyo-align/datasets/text_preprocessor.py",
+    "source_sha256": "af1ac66107dd2de78a81e8ce4a3b60f5dad2401a0f72ed24a3dd68b997200cbd",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "af1ac66107dd2de78a81e8ce4a3b60f5dad2401a0f72ed24a3dd68b997200cbd",
+    "final_delivery_sha256": "af1ac66107dd2de78a81e8ce4a3b60f5dad2401a0f72ed24a3dd68b997200cbd"
+  },
+  {
+    "file": "inference/native/reference_code/coyo-align/models/efficientnet.py",
+    "source_sha256": "62a93c724e18423c387756b4974b9f0866e092f9593e69d5aadfb832c5a62972",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "62a93c724e18423c387756b4974b9f0866e092f9593e69d5aadfb832c5a62972",
+    "final_delivery_sha256": "62a93c724e18423c387756b4974b9f0866e092f9593e69d5aadfb832c5a62972"
+  },
+  {
+    "file": "inference/native/reference_code/coyo-align/evaluate/create_tfrecords.py",
+    "source_sha256": "9f9845123527b54479b650accbd96c3b4b6e8ecd61a87fa15b37244e3e8d61fb",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "9f9845123527b54479b650accbd96c3b4b6e8ecd61a87fa15b37244e3e8d61fb",
+    "final_delivery_sha256": "9f9845123527b54479b650accbd96c3b4b6e8ecd61a87fa15b37244e3e8d61fb"
+  },
+  {
+    "file": "inference/native/reference_code/coyo-align/evaluate/eval_knn.py",
+    "source_sha256": "4524f17de93a9a4a16e63f56441a43b8d4b44a9682d8ef70016325a400f437de",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "4524f17de93a9a4a16e63f56441a43b8d4b44a9682d8ef70016325a400f437de",
+    "final_delivery_sha256": "4524f17de93a9a4a16e63f56441a43b8d4b44a9682d8ef70016325a400f437de"
+  },
+  {
+    "file": "inference/native/reference_code/coyo-align/evaluate/imagenet_dataset.py",
+    "source_sha256": "4a38ce391ecd9ed59836c402eec1a24e1bb4273fb9df5afe2d408ce414f94fcf",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "4a38ce391ecd9ed59836c402eec1a24e1bb4273fb9df5afe2d408ce414f94fcf",
+    "final_delivery_sha256": "4a38ce391ecd9ed59836c402eec1a24e1bb4273fb9df5afe2d408ce414f94fcf"
+  },
+  {
+    "file": "inference/native/reference_code/coyo-align/evaluate/eval_retrieval.py",
+    "source_sha256": "40c10c009906a3cf9f69262609b61741979701946915ce06bcd3992b5725c561",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "40c10c009906a3cf9f69262609b61741979701946915ce06bcd3992b5725c561",
+    "final_delivery_sha256": "40c10c009906a3cf9f69262609b61741979701946915ce06bcd3992b5725c561"
+  },
+  {
+    "file": "inference/native/reference_code/coyo-align/evaluate/retrieval_dataset.py",
+    "source_sha256": "58cc2ef8292dfe0522f0fff07cc80d14ec1402da9ce330f47c2f89c0f25b485d",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "58cc2ef8292dfe0522f0fff07cc80d14ec1402da9ce330f47c2f89c0f25b485d",
+    "final_delivery_sha256": "58cc2ef8292dfe0522f0fff07cc80d14ec1402da9ce330f47c2f89c0f25b485d"
+  },
+  {
+    "file": "inference/native/reference_code/coyo-align/evaluate/eval_all.py",
+    "source_sha256": "78072bcf349339c00766ebd35759fe071d5216898a052e1a240fa86a2201086b",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "78072bcf349339c00766ebd35759fe071d5216898a052e1a240fa86a2201086b",
+    "final_delivery_sha256": "78072bcf349339c00766ebd35759fe071d5216898a052e1a240fa86a2201086b"
+  }
+]

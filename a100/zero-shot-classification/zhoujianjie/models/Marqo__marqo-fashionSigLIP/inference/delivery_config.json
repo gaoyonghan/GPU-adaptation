@@ -1,0 +1,15 @@
+{
+  "model_id": "Marqo/marqo-fashionSigLIP",
+  "launcher": "run_fashion_native.py",
+  "args": [
+    "Marqo/marqo-fashionSigLIP"
+  ],
+  "native_task": "retrieval",
+  "public_evaluator": "unsupported_original_retrieval",
+  "bounded_smoke_supported": true,
+  "required_weights": [
+    "download_receipt.json"
+  ],
+  "required_data": [],
+  "smoke_scope": "document encoder only; complete original retrieval is preserved for default full runs"
+}

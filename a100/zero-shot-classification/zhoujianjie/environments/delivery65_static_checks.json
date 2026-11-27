@@ -1,0 +1,397 @@
+{
+  "models": [
+    {
+      "model": "BAAI/AltCLIP",
+      "python_files_checked": 19,
+      "help_from_two_cwds": "passed",
+      "gpu_executed": false
+    },
+    {
+      "model": "Bingsu/clip-vit-large-patch14-ko",
+      "python_files_checked": 24,
+      "help_from_two_cwds": "passed",
+      "gpu_executed": false
+    },
+    {
+      "model": "HuggingFaceM4/siglip-so400m-14-980-flash-attn2-navit",
+      "python_files_checked": 20,
+      "help_from_two_cwds": "passed",
+      "gpu_executed": false
+    },
+    {
+      "model": "Marqo/marqo-fashionCLIP",
+      "python_files_checked": 19,
+      "help_from_two_cwds": "passed",
+      "gpu_executed": false
+    },
+    {
+      "model": "Marqo/marqo-fashionSigLIP",
+      "python_files_checked": 19,
+      "help_from_two_cwds": "passed",
+      "gpu_executed": false
+    },
+    {
+      "model": "OFA-Sys/chinese-clip-vit-base-patch16",
+      "python_files_checked": 18,
+      "help_from_two_cwds": "passed",
+      "gpu_executed": false
+    },
+    {
+      "model": "OFA-Sys/chinese-clip-vit-huge-patch14",
+      "python_files_checked": 18,
+      "help_from_two_cwds": "passed",
+      "gpu_executed": false
+    },
+    {
+      "model": "OFA-Sys/chinese-clip-vit-large-patch14",
+      "python_files_checked": 18,
+      "help_from_two_cwds": "passed",
+      "gpu_executed": false
+    },
+    {
+      "model": "OFA-Sys/chinese-clip-vit-large-patch14-336px",
+      "python_files_checked": 18,
+      "help_from_two_cwds": "passed",
+      "gpu_executed": false
+    },
+    {
+      "model": "UCSC-VLAA/ViT-L-16-HTxt-Recap-CLIP",
+      "python_files_checked": 5,
+      "help_from_two_cwds": "passed",
+      "gpu_executed": false
+    },
+    {
+      "model": "Xenova/clip-vit-base-patch32",
+      "python_files_checked": 23,
+      "help_from_two_cwds": "passed",
+      "gpu_executed": false
+    },
+    {
+      "model": "apple/MobileCLIP-S2-OpenCLIP",
+      "python_files_checked": 5,
+      "help_from_two_cwds": "passed",
+      "gpu_executed": false
+    },
+    {
+      "model": "facebook/PE-Core-G14-448",
+      "python_files_checked": 18,
+      "help_from_two_cwds": "passed",
+      "gpu_executed": false
+    },
+    {
+      "model": "facebook/PE-Core-L14-336",
+      "python_files_checked": 18,
+      "help_from_two_cwds": "passed",
+      "gpu_executed": false
+    },
+    {
+      "model": "facebook/metaclip-2-worldwide-huge-quickgelu",
+      "python_files_checked": 18,
+      "help_from_two_cwds": "passed",
+      "gpu_executed": false
+    },
+    {
+      "model": "facebook/metaclip-b32-400m",
+      "python_files_checked": 5,
+      "help_from_two_cwds": "passed",
+      "gpu_executed": false
+    },
+    {
+      "model": "facebook/metaclip-h14-fullcc2.5b",
+      "python_files_checked": 5,
+      "help_from_two_cwds": "passed",
+      "gpu_executed": false
+    },
+    {
+      "model": "flax-community/clip-rsicd-v2",
+      "python_files_checked": 18,
+      "help_from_two_cwds": "passed",
+      "gpu_executed": false
+    },
+    {
+      "model": "geolocal/StreetCLIP",
+      "python_files_checked": 25,
+      "help_from_two_cwds": "passed",
+      "gpu_executed": false
+    },
+    {
+      "model": "google/medsiglip-448",
+      "python_files_checked": 18,
+      "help_from_two_cwds": "passed",
+      "gpu_executed": false
+    },
+    {
+      "model": "google/siglip-base-patch16-224",
+      "python_files_checked": 5,
+      "help_from_two_cwds": "passed",
+      "gpu_executed": false
+    },
+    {
+      "model": "google/siglip-base-patch16-256-multilingual",
+      "python_files_checked": 19,
+      "help_from_two_cwds": "passed",
+      "gpu_executed": false
+    },
+    {
+      "model": "google/siglip-base-patch16-512",
+      "python_files_checked": 5,
+      "help_from_two_cwds": "passed",
+      "gpu_executed": false
+    },
+    {
+      "model": "google/siglip-so400m-patch14-224",
+      "python_files_checked": 19,
+      "help_from_two_cwds": "passed",
+      "gpu_executed": false
+    },
+    {
+      "model": "google/siglip-so400m-patch14-384",
+      "python_files_checked": 5,
+      "help_from_two_cwds": "passed",
+      "gpu_executed": false
+    },
+    {
+      "model": "google/siglip-so400m-patch16-256-i18n",
+      "python_files_checked": 19,
+      "help_from_two_cwds": "passed",
+      "gpu_executed": false
+    },
+    {
+      "model": "google/siglip2-base-patch16-224",
+      "python_files_checked": 5,
+      "help_from_two_cwds": "passed",
+      "gpu_executed": false
+    },
+    {
+      "model": "google/siglip2-base-patch16-512",
+      "python_files_checked": 5,
+      "help_from_two_cwds": "passed",
+      "gpu_executed": false
+    },
+    {
+      "model": "google/siglip2-base-patch16-naflex",
+      "python_files_checked": 5,
+      "help_from_two_cwds": "passed",
+      "gpu_executed": false
+    },
+    {
+      "model": "google/siglip2-base-patch32-256",
+      "python_files_checked": 5,
+      "help_from_two_cwds": "passed",
+      "gpu_executed": false
+    },
+    {
+      "model": "google/siglip2-giant-opt-patch16-384",
+      "python_files_checked": 5,
+      "help_from_two_cwds": "passed",
+      "gpu_executed": false
+    },
+    {
+      "model": "google/siglip2-large-patch16-512",
+      "python_files_checked": 5,
+      "help_from_two_cwds": "passed",
+      "gpu_executed": false
+    },
+    {
+      "model": "google/siglip2-so400m-patch14-384",
+      "python_files_checked": 5,
+      "help_from_two_cwds": "passed",
+      "gpu_executed": false
+    },
+    {
+      "model": "google/siglip2-so400m-patch16-512",
+      "python_files_checked": 5,
+      "help_from_two_cwds": "passed",
+      "gpu_executed": false
+    },
+    {
+      "model": "google/siglip2-so400m-patch16-naflex",
+      "python_files_checked": 5,
+      "help_from_two_cwds": "passed",
+      "gpu_executed": false
+    },
+    {
+      "model": "imageomics/bioclip",
+      "python_files_checked": 18,
+      "help_from_two_cwds": "passed",
+      "gpu_executed": false
+    },
+    {
+      "model": "imageomics/bioclip-2",
+      "python_files_checked": 18,
+      "help_from_two_cwds": "passed",
+      "gpu_executed": false
+    },
+    {
+      "model": "intfloat/mmE5-mllama-11b-instruct",
+      "python_files_checked": 18,
+      "help_from_two_cwds": "passed",
+      "gpu_executed": false
+    },
+    {
+      "model": "kakaobrain/align-base",
+      "python_files_checked": 18,
+      "help_from_two_cwds": "passed",
+      "gpu_executed": false
+    },
+    {
+      "model": "laion/CLIP-ViT-B-16-laion2B-s34B-b88K",
+      "python_files_checked": 5,
+      "help_from_two_cwds": "passed",
+      "gpu_executed": false
+    },
+    {
+      "model": "laion/CLIP-ViT-B-32-laion2B-s34B-b79K",
+      "python_files_checked": 5,
+      "help_from_two_cwds": "passed",
+      "gpu_executed": false
+    },
+    {
+      "model": "laion/CLIP-ViT-H-14-laion2B-s32B-b79K",
+      "python_files_checked": 5,
+      "help_from_two_cwds": "passed",
+      "gpu_executed": false
+    },
+    {
+      "model": "laion/CLIP-ViT-L-14-DataComp.XL-s13B-b90K",
+      "python_files_checked": 5,
+      "help_from_two_cwds": "passed",
+      "gpu_executed": false
+    },
+    {
+      "model": "laion/CLIP-ViT-L-14-laion2B-s32B-b82K",
+      "python_files_checked": 5,
+      "help_from_two_cwds": "passed",
+      "gpu_executed": false
+    },
+    {
+      "model": "laion/CLIP-ViT-bigG-14-laion2B-39B-b160k",
+      "python_files_checked": 5,
+      "help_from_two_cwds": "passed",
+      "gpu_executed": false
+    },
+    {
+      "model": "laion/CLIP-ViT-g-14-laion2B-s34B-b88K",
+      "python_files_checked": 5,
+      "help_from_two_cwds": "passed",
+      "gpu_executed": false
+    },
+    {
+      "model": "laion/CLIP-convnext_large_d_320.laion2B-s29B-b131K-ft-soup",
+      "python_files_checked": 5,
+      "help_from_two_cwds": "passed",
+      "gpu_executed": false
+    },
+    {
+      "model": "laion/CLIP-convnext_xxlarge-laion2B-s34B-b82K-augreg-soup",
+      "python_files_checked": 5,
+      "help_from_two_cwds": "passed",
+      "gpu_executed": false
+    },
+    {
+      "model": "lyua1225/clip-huge-zh-75k-steps-bs4096",
+      "python_files_checked": 24,
+      "help_from_two_cwds": "passed",
+      "gpu_executed": false
+    },
+    {
+      "model": "microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224",
+      "python_files_checked": 5,
+      "help_from_two_cwds": "passed",
+      "gpu_executed": false
+    },
+    {
+      "model": "openai/clip-vit-base-patch16",
+      "python_files_checked": 5,
+      "help_from_two_cwds": "passed",
+      "gpu_executed": false
+    },
+    {
+      "model": "openai/clip-vit-base-patch32",
+      "python_files_checked": 5,
+      "help_from_two_cwds": "passed",
+      "gpu_executed": false
+    },
+    {
+      "model": "openai/clip-vit-large-patch14",
+      "python_files_checked": 18,
+      "help_from_two_cwds": "passed",
+      "gpu_executed": false
+    },
+    {
+      "model": "openai/clip-vit-large-patch14-336",
+      "python_files_checked": 5,
+      "help_from_two_cwds": "passed",
+      "gpu_executed": false
+    },
+    {
+      "model": "patrickjohncyh/fashion-clip",
+      "python_files_checked": 19,
+      "help_from_two_cwds": "passed",
+      "gpu_executed": false
+    },
+    {
+      "model": "philschmid/clip-zero-shot-image-classification",
+      "python_files_checked": 23,
+      "help_from_two_cwds": "passed",
+      "gpu_executed": false
+    },
+    {
+      "model": "q-future/one-align",
+      "python_files_checked": 18,
+      "help_from_two_cwds": "passed",
+      "gpu_executed": false
+    },
+    {
+      "model": "qihoo360/fg-clip2-base",
+      "python_files_checked": 18,
+      "help_from_two_cwds": "passed",
+      "gpu_executed": false
+    },
+    {
+      "model": "timm/ViT-B-16-SigLIP",
+      "python_files_checked": 18,
+      "help_from_two_cwds": "passed",
+      "gpu_executed": false
+    },
+    {
+      "model": "timm/ViT-L-16-SigLIP-384",
+      "python_files_checked": 18,
+      "help_from_two_cwds": "passed",
+      "gpu_executed": false
+    },
+    {
+      "model": "timm/ViT-SO400M-14-SigLIP",
+      "python_files_checked": 18,
+      "help_from_two_cwds": "passed",
+      "gpu_executed": false
+    },
+    {
+      "model": "timm/ViT-SO400M-14-SigLIP-384",
+      "python_files_checked": 18,
+      "help_from_two_cwds": "passed",
+      "gpu_executed": false
+    },
+    {
+      "model": "vinid/plip",
+      "python_files_checked": 5,
+      "help_from_two_cwds": "passed",
+      "gpu_executed": false
+    },
+    {
+      "model": "wisdomik/QuiltNet-B-32",
+      "python_files_checked": 5,
+      "help_from_two_cwds": "passed",
+      "gpu_executed": false
+    },
+    {
+      "model": "yuvalkirstain/PickScore_v1",
+      "python_files_checked": 18,
+      "help_from_two_cwds": "passed",
+      "gpu_executed": false
+    }
+  ],
+  "errors": [],
+  "gpu_executed": false,
+  "scope": "Entry and owned adapter AST; --help from model and platform directories; does not import every upstream optional module"
+}

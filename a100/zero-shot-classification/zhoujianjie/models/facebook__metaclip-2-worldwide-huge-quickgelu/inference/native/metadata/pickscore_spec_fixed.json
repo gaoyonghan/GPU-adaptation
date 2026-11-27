@@ -1,0 +1,64 @@
+{
+  "status": "official_data_and_protocol_but_missing_same_checkpoint_reference",
+  "model": {
+    "model_id": "yuvalkirstain/PickScore_v1",
+    "revision": "a4e4367c6dfa7288a00c550414478f865b875800",
+    "local_dir": "/data/zhoujianjie/model_inference_for_GPU_adaptation/classification/zhoujianjie/models/yuvalkirstain__PickScore_v1/weights"
+  },
+  "processor": {
+    "model_id": "laion/CLIP-ViT-H-14-laion2B-s32B-b79K",
+    "revision": "1c2b8495b28150b8a4922ee1c8edee224c284c0c",
+    "local_dir": "/data/zhoujianjie/model_inference_for_GPU_adaptation/classification/zhoujianjie/models/laion__CLIP-ViT-H-14-laion2B-s32B-b79K/weights"
+  },
+  "dataset": {
+    "original_repo": "yuvalkirstain/pickapic_v1",
+    "current_official_link": "pickapic-anonymous/pickapic_v1",
+    "revision": "8e69b58d729339cb7771133c70ee18b527fd4ae3",
+    "splits": [
+      "validation_unique",
+      "test_unique"
+    ],
+    "rows_per_split": 500,
+    "local_root": "/data/zhoujianjie/model_inference_for_GPU_adaptation/dataset/raw/pickapic",
+    "manifest": "/data/zhoujianjie/environment_setup/original_metadata/pickscore_pickapic_v1_eval_manifest.json"
+  },
+  "evaluator": {
+    "repo": "https://github.com/yuvalkirstain/PickScore",
+    "commit": "f79607ff68609c1e6dfa78cba38afeea4c248df1",
+    "local_dir": "/data/zhoujianjie/environment_setup/native_sources/evaluation_audit/reference_code/PickScore",
+    "script": "trainer/scripts/eval_preference_predictor.py"
+  },
+  "protocol": {
+    "preprocessing": "official LAION CLIP-H AutoProcessor; RGB; padding and truncation; max_length=77",
+    "scoring": "L2-normalized image/text features; exp(logit_scale) times dot product; pairwise softmax",
+    "thresholds": [
+      0.0,
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      1.0
+    ],
+    "threshold_selection": "argmax tie-aware accuracy on validation_unique; apply that threshold to test_unique",
+    "metric": "1 for exact label, 0.5 if exactly one of prediction/label is a tie, otherwise 0; arithmetic mean"
+  },
+  "metrics": {
+    "tie-aware preference accuracy": {
+      "official_paper_reference_percent": 70.5,
+      "paper_reference_scope": "mean over three independently trained PickScore random seeds; paper reports variance 0.142",
+      "same_checkpoint_reference_percent": null,
+      "acceptance_status": "diagnostic_only",
+      "reason": "No official source publishes the exact test_unique value for Hugging Face checkpoint revision a4e4367...; the 70.5 paper value is a three-seed aggregate."
+    }
+  },
+  "official_reference_sources": [
+    "https://github.com/yuvalkirstain/PickScore",
+    "https://proceedings.nips.cc/paper_files/paper/2023/file/73aacd8b3b05b4b503d58310b523553c-Paper-Conference.pdf",
+    "https://huggingface.co/spaces/yuvalkirstain/PickScore"
+  ]
+}

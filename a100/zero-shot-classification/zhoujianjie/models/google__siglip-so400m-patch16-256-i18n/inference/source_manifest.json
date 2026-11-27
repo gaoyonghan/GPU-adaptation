@@ -1,0 +1,17 @@
+[
+  {
+    "file": "inference/original_sources/evaluate_siglip_mteb_flickr30k_official.py",
+    "sha256": "a55406c508d4d672a9995f6b5ab613f3c469e2fc1c66531f32b55a97eeb1c27b",
+    "source": "4090 original evaluator"
+  },
+  {
+    "file": "inference/original_sources/prepare_siglip_mteb_flickr30k_official.py",
+    "sha256": "08b828129b0545414d415f8bd9cd5f137f6b2145c4045cb673395c8f8bc90ba2",
+    "source": "4090 original evaluator"
+  },
+  {
+    "file": "inference/original_sources/original_metadata/siglip_mteb_flickr30k_official_preflight.json",
+    "sha256": "4880d8c73f28119bcdbbcc73b5fdcc74e2ad1b46975cd1e3d85039ec5b5f4bff",
+    "source": "frozen original protocol metadata"
+  }
+]

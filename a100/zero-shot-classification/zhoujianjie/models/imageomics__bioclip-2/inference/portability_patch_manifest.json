@@ -1,0 +1,436 @@
+[
+  {
+    "file": "inference/native/native_mme5_python.py",
+    "source_sha256": "c05a7a4cbd7985c816b65773c558c1b3618d46cb41f2464a4b12150cb37623be",
+    "path_expression_edits": 2,
+    "path_mapping_stage_sha256": "222da15204400a4c7fd71daf2ca243fc0d9594d446b56bad36c634ece92799d7",
+    "final_delivery_sha256": "222da15204400a4c7fd71daf2ca243fc0d9594d446b56bad36c634ece92799d7"
+  },
+  {
+    "file": "inference/native/bioclip_native_a100.py",
+    "source_sha256": "be9fdae4bb0596783947dca9dfd125ec9ebafa071650523f6b342e1a7dd4b96d",
+    "path_expression_edits": 8,
+    "path_mapping_stage_sha256": "cace8a94832654913144f80107ed2c407f635a6bb6408347077f8737b36e42a7",
+    "final_delivery_sha256": "eab3303a0b44f8c8e21ea575fb28a024ed51296f5212bb54b595ca41ecf02bcd"
+  },
+  {
+    "file": "inference/native/run_bioclip_native.py",
+    "source_sha256": "f3121ae4a7ccc16630fc8b2b4afb8304d5001d4633bc8119c6a6250d4ee8bb89",
+    "path_expression_edits": 7,
+    "path_mapping_stage_sha256": "1b894126f7b172e259ad7fb6d5b6998db7f0c5afaf9c8ccfe018eca601a2e9a6",
+    "final_delivery_sha256": "9d1820c88977410d0dd2a35aefc374a0479eaebccbf19fe224759c8b5399d303"
+  },
+  {
+    "file": "inference/native/native_fgclip_python.py",
+    "source_sha256": "85db4a246d109f7cf518835afcd67482684f256765ec1a784698966036597228",
+    "path_expression_edits": 6,
+    "path_mapping_stage_sha256": "223e2d938be89d706e31a4fc0ff343bfeb861a7ddaed6dd6b98c3547d9e8dfc5",
+    "final_delivery_sha256": "223e2d938be89d706e31a4fc0ff343bfeb861a7ddaed6dd6b98c3547d9e8dfc5"
+  },
+  {
+    "file": "inference/native/native_python.py",
+    "source_sha256": "ea047f7906c92e5d0173ccd6195c3d183645560aa19bcf826d028044e623005c",
+    "path_expression_edits": 6,
+    "path_mapping_stage_sha256": "2b4b7632421ea8f9b220db6446d5eb9c2892a1c1d13a97a4eda4bdb71a6fef28",
+    "final_delivery_sha256": "1bb949be95f07a3bf556d0290dd9001724efabfae9951668fc5e71896516a5b0"
+  },
+  {
+    "file": "inference/native/evaluate_bioclip_meta_album_official.py",
+    "source_sha256": "bb72a867a415d51dff9eb017848a48db325ec091e553c67fd139190ddb2f36e0",
+    "path_expression_edits": 1,
+    "path_mapping_stage_sha256": "e5eda4daa7e6f1433765c4b65a9270ef482d494aa0c7672a19e67fc187a28eb4",
+    "final_delivery_sha256": "e5eda4daa7e6f1433765c4b65a9270ef482d494aa0c7672a19e67fc187a28eb4"
+  },
+  {
+    "file": "inference/native/sitecustomize.py",
+    "source_sha256": "6eda9fd629a259c259dbd87d1f55fb4004ca20890677a7dee5745f2d7633016b",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "6eda9fd629a259c259dbd87d1f55fb4004ca20890677a7dee5745f2d7633016b",
+    "final_delivery_sha256": "962ac551ad22f7854811868a13cdd4b758c316d57acca6fa2fddea9752ce153b"
+  },
+  {
+    "file": "inference/native/model_paths.py",
+    "source_sha256": "d39241a382eaffe4ca202ac8d47cf9684c09603cc558b7d37519def06614896d",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "d39241a382eaffe4ca202ac8d47cf9684c09603cc558b7d37519def06614896d",
+    "final_delivery_sha256": "d39241a382eaffe4ca202ac8d47cf9684c09603cc558b7d37519def06614896d"
+  },
+  {
+    "file": "inference/native/reference_code/bioclip-2/src/training/__init__.py",
+    "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "final_delivery_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "inference/native/reference_code/bioclip-2/src/training/profiler.py",
+    "source_sha256": "fbaf1aa04fc33f09fc66313126bb62dbf01eb1a7915ff6ed79617cb4dc0c8cd2",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "fbaf1aa04fc33f09fc66313126bb62dbf01eb1a7915ff6ed79617cb4dc0c8cd2",
+    "final_delivery_sha256": "fbaf1aa04fc33f09fc66313126bb62dbf01eb1a7915ff6ed79617cb4dc0c8cd2"
+  },
+  {
+    "file": "inference/native/reference_code/bioclip-2/src/training/train.py",
+    "source_sha256": "8a5c5df8161ed4e423bc7ea37e8c2b9ef0124d59787d7c0c3ea27a806e708857",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "8a5c5df8161ed4e423bc7ea37e8c2b9ef0124d59787d7c0c3ea27a806e708857",
+    "final_delivery_sha256": "8a5c5df8161ed4e423bc7ea37e8c2b9ef0124d59787d7c0c3ea27a806e708857"
+  },
+  {
+    "file": "inference/native/reference_code/bioclip-2/src/training/precision.py",
+    "source_sha256": "9ebca31d589d1b879dce9e8706fbc48e834df1ad4a8cb1486fc2e623ef41edf8",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "9ebca31d589d1b879dce9e8706fbc48e834df1ad4a8cb1486fc2e623ef41edf8",
+    "final_delivery_sha256": "9ebca31d589d1b879dce9e8706fbc48e834df1ad4a8cb1486fc2e623ef41edf8"
+  },
+  {
+    "file": "inference/native/reference_code/bioclip-2/src/training/imagenet_zeroshot_data.py",
+    "source_sha256": "b13e983037fdfadd5381c25a8b48989c9579fbc799bb8a9f98db5c9c95983bd1",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "b13e983037fdfadd5381c25a8b48989c9579fbc799bb8a9f98db5c9c95983bd1",
+    "final_delivery_sha256": "b13e983037fdfadd5381c25a8b48989c9579fbc799bb8a9f98db5c9c95983bd1"
+  },
+  {
+    "file": "inference/native/reference_code/bioclip-2/src/training/params.py",
+    "source_sha256": "8690f2b8e7ad59de47a648c2406f4bb941ce003d8a9e86b44dc6089dc6562fe5",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "8690f2b8e7ad59de47a648c2406f4bb941ce003d8a9e86b44dc6089dc6562fe5",
+    "final_delivery_sha256": "8690f2b8e7ad59de47a648c2406f4bb941ce003d8a9e86b44dc6089dc6562fe5"
+  },
+  {
+    "file": "inference/native/reference_code/bioclip-2/src/training/distributed.py",
+    "source_sha256": "3d62e384d7f3839ededa1fa2a89a7ef2ed4d09ac97e9ed289be5bf02ff335ae6",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "3d62e384d7f3839ededa1fa2a89a7ef2ed4d09ac97e9ed289be5bf02ff335ae6",
+    "final_delivery_sha256": "3d62e384d7f3839ededa1fa2a89a7ef2ed4d09ac97e9ed289be5bf02ff335ae6"
+  },
+  {
+    "file": "inference/native/reference_code/bioclip-2/src/training/logger.py",
+    "source_sha256": "d90ffad0a42e9d8f1b15af6a0db819e178d6a880f8203c6a51368856cd26f3ee",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "d90ffad0a42e9d8f1b15af6a0db819e178d6a880f8203c6a51368856cd26f3ee",
+    "final_delivery_sha256": "d90ffad0a42e9d8f1b15af6a0db819e178d6a880f8203c6a51368856cd26f3ee"
+  },
+  {
+    "file": "inference/native/reference_code/bioclip-2/src/training/main.py",
+    "source_sha256": "a8b044fc284f8dce17b47849cde8570e22e0187d8ab6c9e611169b679770a899",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "a8b044fc284f8dce17b47849cde8570e22e0187d8ab6c9e611169b679770a899",
+    "final_delivery_sha256": "a8b044fc284f8dce17b47849cde8570e22e0187d8ab6c9e611169b679770a899"
+  },
+  {
+    "file": "inference/native/reference_code/bioclip-2/src/training/zero_shot.py",
+    "source_sha256": "48123ed97d84883518553a097dedaff308a6c5605861b94961f76630b8252ee6",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "48123ed97d84883518553a097dedaff308a6c5605861b94961f76630b8252ee6",
+    "final_delivery_sha256": "48123ed97d84883518553a097dedaff308a6c5605861b94961f76630b8252ee6"
+  },
+  {
+    "file": "inference/native/reference_code/bioclip-2/src/training/file_utils.py",
+    "source_sha256": "37b9e166605feefa8de5b8d2b0032ccae8708b5edfa54d82353dafc78bf1b4aa",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "37b9e166605feefa8de5b8d2b0032ccae8708b5edfa54d82353dafc78bf1b4aa",
+    "final_delivery_sha256": "37b9e166605feefa8de5b8d2b0032ccae8708b5edfa54d82353dafc78bf1b4aa"
+  },
+  {
+    "file": "inference/native/reference_code/bioclip-2/src/training/data.py",
+    "source_sha256": "3249482ca4c5099d8adea45897fa7c688bc2293a2f4e3c3f17cf139c16aeebbe",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "3249482ca4c5099d8adea45897fa7c688bc2293a2f4e3c3f17cf139c16aeebbe",
+    "final_delivery_sha256": "3249482ca4c5099d8adea45897fa7c688bc2293a2f4e3c3f17cf139c16aeebbe"
+  },
+  {
+    "file": "inference/native/reference_code/bioclip-2/src/training/scheduler.py",
+    "source_sha256": "1d6d7cc9612bc5bd32999bea7ce813630c5f8ce4569b0c14e6eebb77f4a595d3",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "1d6d7cc9612bc5bd32999bea7ce813630c5f8ce4569b0c14e6eebb77f4a595d3",
+    "final_delivery_sha256": "1d6d7cc9612bc5bd32999bea7ce813630c5f8ce4569b0c14e6eebb77f4a595d3"
+  },
+  {
+    "file": "inference/native/reference_code/bioclip-2/src/open_clip/factory.py",
+    "source_sha256": "40794de446774a1d95e9e55a97f250c1d12d834007c5f58231a5ef1b86f18983",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "40794de446774a1d95e9e55a97f250c1d12d834007c5f58231a5ef1b86f18983",
+    "final_delivery_sha256": "40794de446774a1d95e9e55a97f250c1d12d834007c5f58231a5ef1b86f18983"
+  },
+  {
+    "file": "inference/native/reference_code/bioclip-2/src/open_clip/__init__.py",
+    "source_sha256": "f77b4681172075f93bb28c28ab0167b0cf1096cd29a4eefcaa00b79d41270805",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "f77b4681172075f93bb28c28ab0167b0cf1096cd29a4eefcaa00b79d41270805",
+    "final_delivery_sha256": "f77b4681172075f93bb28c28ab0167b0cf1096cd29a4eefcaa00b79d41270805"
+  },
+  {
+    "file": "inference/native/reference_code/bioclip-2/src/open_clip/loss.py",
+    "source_sha256": "701f1ffd045ed99d02aa0f6a939a949dc644e2d43ad65f83f69d80f4ec23f1e3",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "701f1ffd045ed99d02aa0f6a939a949dc644e2d43ad65f83f69d80f4ec23f1e3",
+    "final_delivery_sha256": "701f1ffd045ed99d02aa0f6a939a949dc644e2d43ad65f83f69d80f4ec23f1e3"
+  },
+  {
+    "file": "inference/native/reference_code/bioclip-2/src/open_clip/coca_model.py",
+    "source_sha256": "5d380fd83ab8df1995e2b29fbd26f2e8b48f054197628738bc436133ebdb702d",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "5d380fd83ab8df1995e2b29fbd26f2e8b48f054197628738bc436133ebdb702d",
+    "final_delivery_sha256": "5d380fd83ab8df1995e2b29fbd26f2e8b48f054197628738bc436133ebdb702d"
+  },
+  {
+    "file": "inference/native/reference_code/bioclip-2/src/open_clip/transform.py",
+    "source_sha256": "11c80cb26058a9e6b6af0169d9655ba3a6a704420082f4d789fd3371b4a75eb8",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "11c80cb26058a9e6b6af0169d9655ba3a6a704420082f4d789fd3371b4a75eb8",
+    "final_delivery_sha256": "11c80cb26058a9e6b6af0169d9655ba3a6a704420082f4d789fd3371b4a75eb8"
+  },
+  {
+    "file": "inference/native/reference_code/bioclip-2/src/open_clip/pos_embed.py",
+    "source_sha256": "153ba2e3de1e50ca1d3b5ffe20309ac8ec085a682c9d1b3f802844b2cc418cbf",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "153ba2e3de1e50ca1d3b5ffe20309ac8ec085a682c9d1b3f802844b2cc418cbf",
+    "final_delivery_sha256": "153ba2e3de1e50ca1d3b5ffe20309ac8ec085a682c9d1b3f802844b2cc418cbf"
+  },
+  {
+    "file": "inference/native/reference_code/bioclip-2/src/open_clip/tokenizer.py",
+    "source_sha256": "0ad6b26e5099ef343ba96a75d00e840ece2e8658f321dd81b1a65488405b8807",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "0ad6b26e5099ef343ba96a75d00e840ece2e8658f321dd81b1a65488405b8807",
+    "final_delivery_sha256": "0ad6b26e5099ef343ba96a75d00e840ece2e8658f321dd81b1a65488405b8807"
+  },
+  {
+    "file": "inference/native/reference_code/bioclip-2/src/open_clip/pretrained.py",
+    "source_sha256": "4f4374c29e6d7c63caff07f5e201d33ef7f53287452bcaf7e5b3ab3c391f0d55",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "4f4374c29e6d7c63caff07f5e201d33ef7f53287452bcaf7e5b3ab3c391f0d55",
+    "final_delivery_sha256": "4f4374c29e6d7c63caff07f5e201d33ef7f53287452bcaf7e5b3ab3c391f0d55"
+  },
+  {
+    "file": "inference/native/reference_code/bioclip-2/src/open_clip/openai.py",
+    "source_sha256": "a85761641ab845dd7f676b441140e9fe846be38f30e4bb56b48354b25840c260",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "a85761641ab845dd7f676b441140e9fe846be38f30e4bb56b48354b25840c260",
+    "final_delivery_sha256": "a85761641ab845dd7f676b441140e9fe846be38f30e4bb56b48354b25840c260"
+  },
+  {
+    "file": "inference/native/reference_code/bioclip-2/src/open_clip/zero_shot_metadata.py",
+    "source_sha256": "3bd8adb168bdf80fd681a71258e67f2c4d0f8ed73eae9b504ed5063e1726bbe9",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "3bd8adb168bdf80fd681a71258e67f2c4d0f8ed73eae9b504ed5063e1726bbe9",
+    "final_delivery_sha256": "3bd8adb168bdf80fd681a71258e67f2c4d0f8ed73eae9b504ed5063e1726bbe9"
+  },
+  {
+    "file": "inference/native/reference_code/bioclip-2/src/open_clip/hf_model.py",
+    "source_sha256": "a02c7eded58ab452d8cdfbc8dcd0e2033d8f4fa2427fba49d02f39aa9f83a1a7",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "a02c7eded58ab452d8cdfbc8dcd0e2033d8f4fa2427fba49d02f39aa9f83a1a7",
+    "final_delivery_sha256": "a02c7eded58ab452d8cdfbc8dcd0e2033d8f4fa2427fba49d02f39aa9f83a1a7"
+  },
+  {
+    "file": "inference/native/reference_code/bioclip-2/src/open_clip/constants.py",
+    "source_sha256": "86526f409147ef559a65a49bbc6a82e8b4340a7fb476b039eef7ca0301a9736d",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "86526f409147ef559a65a49bbc6a82e8b4340a7fb476b039eef7ca0301a9736d",
+    "final_delivery_sha256": "86526f409147ef559a65a49bbc6a82e8b4340a7fb476b039eef7ca0301a9736d"
+  },
+  {
+    "file": "inference/native/reference_code/bioclip-2/src/open_clip/timm_model.py",
+    "source_sha256": "b637d6d6872a1ab439bfa79977262d08528a9d7e0809793506d84a3c5aa203e2",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "b637d6d6872a1ab439bfa79977262d08528a9d7e0809793506d84a3c5aa203e2",
+    "final_delivery_sha256": "b637d6d6872a1ab439bfa79977262d08528a9d7e0809793506d84a3c5aa203e2"
+  },
+  {
+    "file": "inference/native/reference_code/bioclip-2/src/open_clip/transformer.py",
+    "source_sha256": "58325c426f415d5a1c00e8eb95aaf7e0abb0218b9b10f35e55b9fec7b72054e5",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "58325c426f415d5a1c00e8eb95aaf7e0abb0218b9b10f35e55b9fec7b72054e5",
+    "final_delivery_sha256": "58325c426f415d5a1c00e8eb95aaf7e0abb0218b9b10f35e55b9fec7b72054e5"
+  },
+  {
+    "file": "inference/native/reference_code/bioclip-2/src/open_clip/model.py",
+    "source_sha256": "64a25ef900187bcf54655c0312dcd2988ca90ea9a5aba6fc10730d1823b83f33",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "64a25ef900187bcf54655c0312dcd2988ca90ea9a5aba6fc10730d1823b83f33",
+    "final_delivery_sha256": "64a25ef900187bcf54655c0312dcd2988ca90ea9a5aba6fc10730d1823b83f33"
+  },
+  {
+    "file": "inference/native/reference_code/bioclip-2/src/open_clip/push_to_hf_hub.py",
+    "source_sha256": "7cbcc4c599951b1772d53b33db8a91929ab573f1a5b96a777a470889e2c42adc",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "7cbcc4c599951b1772d53b33db8a91929ab573f1a5b96a777a470889e2c42adc",
+    "final_delivery_sha256": "7cbcc4c599951b1772d53b33db8a91929ab573f1a5b96a777a470889e2c42adc"
+  },
+  {
+    "file": "inference/native/reference_code/bioclip-2/src/open_clip/zero_shot_classifier.py",
+    "source_sha256": "683bc78fa3c43d6dae522490a331da005fee8664793db654c9fbb6e0c296aea9",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "683bc78fa3c43d6dae522490a331da005fee8664793db654c9fbb6e0c296aea9",
+    "final_delivery_sha256": "683bc78fa3c43d6dae522490a331da005fee8664793db654c9fbb6e0c296aea9"
+  },
+  {
+    "file": "inference/native/reference_code/bioclip-2/src/open_clip/convert.py",
+    "source_sha256": "796c26cdcab8055edecdcee5e0afddde07cf8b6f2e50521b1b31f2434f649c9b",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "796c26cdcab8055edecdcee5e0afddde07cf8b6f2e50521b1b31f2434f649c9b",
+    "final_delivery_sha256": "796c26cdcab8055edecdcee5e0afddde07cf8b6f2e50521b1b31f2434f649c9b"
+  },
+  {
+    "file": "inference/native/reference_code/bioclip-2/src/open_clip/version.py",
+    "source_sha256": "8b687803ecc1ab5cfd651adce8ab28fe601b9bfa75a1226caff8bb7184fd47aa",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "8b687803ecc1ab5cfd651adce8ab28fe601b9bfa75a1226caff8bb7184fd47aa",
+    "final_delivery_sha256": "8b687803ecc1ab5cfd651adce8ab28fe601b9bfa75a1226caff8bb7184fd47aa"
+  },
+  {
+    "file": "inference/native/reference_code/bioclip-2/src/open_clip/hf_configs.py",
+    "source_sha256": "1f29974215001c88b68c9ed77fa91eab3129347c8245a5c0516c803c630dd807",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "1f29974215001c88b68c9ed77fa91eab3129347c8245a5c0516c803c630dd807",
+    "final_delivery_sha256": "1f29974215001c88b68c9ed77fa91eab3129347c8245a5c0516c803c630dd807"
+  },
+  {
+    "file": "inference/native/reference_code/bioclip-2/src/open_clip/modified_resnet.py",
+    "source_sha256": "4ec3479965ba7e0a316eddf723bf5829896460114d3abf8f9ed5ec9279467ca7",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "4ec3479965ba7e0a316eddf723bf5829896460114d3abf8f9ed5ec9279467ca7",
+    "final_delivery_sha256": "4ec3479965ba7e0a316eddf723bf5829896460114d3abf8f9ed5ec9279467ca7"
+  },
+  {
+    "file": "inference/native/reference_code/bioclip-2/src/open_clip/utils.py",
+    "source_sha256": "c9a87ff715a2e6527fe37c9243aa2d401b3e5aaf394ff0e97b8f327ce425401e",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "c9a87ff715a2e6527fe37c9243aa2d401b3e5aaf394ff0e97b8f327ce425401e",
+    "final_delivery_sha256": "c9a87ff715a2e6527fe37c9243aa2d401b3e5aaf394ff0e97b8f327ce425401e"
+  },
+  {
+    "file": "inference/native/reference_code/bioclip-2/src/imageomics/__init__.py",
+    "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "final_delivery_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "inference/native/reference_code/bioclip-2/src/imageomics/naming_eval.py",
+    "source_sha256": "5114248cb8f00bb96d8b8831fa24234c5932e58d576b9b42b5132c27c6612bbd",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "5114248cb8f00bb96d8b8831fa24234c5932e58d576b9b42b5132c27c6612bbd",
+    "final_delivery_sha256": "5114248cb8f00bb96d8b8831fa24234c5932e58d576b9b42b5132c27c6612bbd"
+  },
+  {
+    "file": "inference/native/reference_code/bioclip-2/src/imageomics/helpers.py",
+    "source_sha256": "9288bd5cbc903cc5bd97393937b7d8a4b2681e5cb970e898b4ad324b779388b6",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "9288bd5cbc903cc5bd97393937b7d8a4b2681e5cb970e898b4ad324b779388b6",
+    "final_delivery_sha256": "9288bd5cbc903cc5bd97393937b7d8a4b2681e5cb970e898b4ad324b779388b6"
+  },
+  {
+    "file": "inference/native/reference_code/bioclip-2/src/imageomics/disk_reproduce.py",
+    "source_sha256": "8b24b1f1f5c51c68b54e598a5261c4998b6aeb28b05e03757cce92039fcf60dd",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "8b24b1f1f5c51c68b54e598a5261c4998b6aeb28b05e03757cce92039fcf60dd",
+    "final_delivery_sha256": "8b24b1f1f5c51c68b54e598a5261c4998b6aeb28b05e03757cce92039fcf60dd"
+  },
+  {
+    "file": "inference/native/reference_code/bioclip-2/src/evaluation/newt.py",
+    "source_sha256": "34fc71466492d930700ded86c4b84aae161ef9cefe3b85298b00d06331420efb",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "34fc71466492d930700ded86c4b84aae161ef9cefe3b85298b00d06331420efb",
+    "final_delivery_sha256": "34fc71466492d930700ded86c4b84aae161ef9cefe3b85298b00d06331420efb"
+  },
+  {
+    "file": "inference/native/reference_code/bioclip-2/src/evaluation/__init__.py",
+    "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "final_delivery_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "inference/native/reference_code/bioclip-2/src/evaluation/simpleshot.py",
+    "source_sha256": "19637b11b178ee097c8cad9ee5fd23748e09ebfc9527f199b5449561ce04a63d",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "19637b11b178ee097c8cad9ee5fd23748e09ebfc9527f199b5449561ce04a63d",
+    "final_delivery_sha256": "19637b11b178ee097c8cad9ee5fd23748e09ebfc9527f199b5449561ce04a63d"
+  },
+  {
+    "file": "inference/native/reference_code/bioclip-2/src/evaluation/extract_features.py",
+    "source_sha256": "597d05935252293ed777cb07ae0630175871b535927956dd34a7757a70e4cb56",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "597d05935252293ed777cb07ae0630175871b535927956dd34a7757a70e4cb56",
+    "final_delivery_sha256": "597d05935252293ed777cb07ae0630175871b535927956dd34a7757a70e4cb56"
+  },
+  {
+    "file": "inference/native/reference_code/bioclip-2/src/evaluation/awa2.py",
+    "source_sha256": "afb0d53466bd56f8e080d6c0e3a64d626463ffb24a0b49b727aae20483fb0f1d",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "afb0d53466bd56f8e080d6c0e3a64d626463ffb24a0b49b727aae20483fb0f1d",
+    "final_delivery_sha256": "afb0d53466bd56f8e080d6c0e3a64d626463ffb24a0b49b727aae20483fb0f1d"
+  },
+  {
+    "file": "inference/native/reference_code/bioclip-2/src/evaluation/params.py",
+    "source_sha256": "d6b189360cedbe9678d0d6db5e850406bbe1ea4e0d6fc7bcbcee759f9ad5dedc",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "d6b189360cedbe9678d0d6db5e850406bbe1ea4e0d6fc7bcbcee759f9ad5dedc",
+    "final_delivery_sha256": "d6b189360cedbe9678d0d6db5e850406bbe1ea4e0d6fc7bcbcee759f9ad5dedc"
+  },
+  {
+    "file": "inference/native/reference_code/bioclip-2/src/evaluation/zero_shot_iid.py",
+    "source_sha256": "576e7c2316735ea42e43fc9c0058a093f7f49975fdb9488b6b38958fc785953d",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "576e7c2316735ea42e43fc9c0058a093f7f49975fdb9488b6b38958fc785953d",
+    "final_delivery_sha256": "576e7c2316735ea42e43fc9c0058a093f7f49975fdb9488b6b38958fc785953d"
+  },
+  {
+    "file": "inference/native/reference_code/bioclip-2/src/evaluation/plantdoc.py",
+    "source_sha256": "8f641f4c47cfe2a7487a77d9dc3e1072fc36dd61202e950c1a5e159a3dc07f9e",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "8f641f4c47cfe2a7487a77d9dc3e1072fc36dd61202e950c1a5e159a3dc07f9e",
+    "final_delivery_sha256": "8f641f4c47cfe2a7487a77d9dc3e1072fc36dd61202e950c1a5e159a3dc07f9e"
+  },
+  {
+    "file": "inference/native/reference_code/bioclip-2/src/evaluation/faster_mix_k_means_pytorch.py",
+    "source_sha256": "ff29fb54a1fd90f34ff7283df314bb9b0acd2a87d65e5fc49ce8aad7a990cfe6",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "ff29fb54a1fd90f34ff7283df314bb9b0acd2a87d65e5fc49ce8aad7a990cfe6",
+    "final_delivery_sha256": "ff29fb54a1fd90f34ff7283df314bb9b0acd2a87d65e5fc49ce8aad7a990cfe6"
+  },
+  {
+    "file": "inference/native/reference_code/bioclip-2/src/evaluation/classification.py",
+    "source_sha256": "1c1e978ef12d421326b01b8506b036a7653db1aaf53dd7f6fb9f73a6e47a82b5",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "1c1e978ef12d421326b01b8506b036a7653db1aaf53dd7f6fb9f73a6e47a82b5",
+    "final_delivery_sha256": "ab53c3294e1f43986177df41274c5f98ccb9db45a5a22f0bcce666756492b302"
+  },
+  {
+    "file": "inference/native/reference_code/bioclip-2/src/evaluation/herbarium19.py",
+    "source_sha256": "4c0e6cde69b31a896e19337998ed6a8da0b39ddf783ce3edbafb443708c76dc1",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "4c0e6cde69b31a896e19337998ed6a8da0b39ddf783ce3edbafb443708c76dc1",
+    "final_delivery_sha256": "4c0e6cde69b31a896e19337998ed6a8da0b39ddf783ce3edbafb443708c76dc1"
+  },
+  {
+    "file": "inference/native/reference_code/bioclip-2/src/evaluation/data.py",
+    "source_sha256": "4668d14c422a7257f9392883b0b9322b699bee3a64f73228cf88daf2b1eb54ab",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "4668d14c422a7257f9392883b0b9322b699bee3a64f73228cf88daf2b1eb54ab",
+    "final_delivery_sha256": "1c92460f407c99a9c0389bcbe4fac0aa407ab4aba02be810b23dea3d8658f3a5"
+  },
+  {
+    "file": "inference/native/reference_code/bioclip-2/src/evaluation/fishnet.py",
+    "source_sha256": "ef691e0c9d92d1e119e988bc13debcea6c15fc3a9dfc79dac4ceae33178139c4",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "ef691e0c9d92d1e119e988bc13debcea6c15fc3a9dfc79dac4ceae33178139c4",
+    "final_delivery_sha256": "ef691e0c9d92d1e119e988bc13debcea6c15fc3a9dfc79dac4ceae33178139c4"
+  },
+  {
+    "file": "inference/native/reference_code/bioclip-2/src/evaluation/utils.py",
+    "source_sha256": "9ed83dcef7bd8602a146d2a2f13d7cb4adf1cc51102bc54c252b89af2ecd2885",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "9ed83dcef7bd8602a146d2a2f13d7cb4adf1cc51102bc54c252b89af2ecd2885",
+    "final_delivery_sha256": "9ed83dcef7bd8602a146d2a2f13d7cb4adf1cc51102bc54c252b89af2ecd2885"
+  },
+  {
+    "file": "inference/native/reference_code/bioclip-2/src/evaluation/few_shot.py",
+    "source_sha256": "aaae5b9929e24ab36ac620bbaa66e656655df73b7da89b2f179369d455d610ee",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "aaae5b9929e24ab36ac620bbaa66e656655df73b7da89b2f179369d455d610ee",
+    "final_delivery_sha256": "aaae5b9929e24ab36ac620bbaa66e656655df73b7da89b2f179369d455d610ee"
+  }
+]

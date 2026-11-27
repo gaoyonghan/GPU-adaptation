@@ -1,0 +1,10 @@
+{
+  "model": "laion/CLIP-convnext_xxlarge-laion2B-s34B-b82K-augreg-soup",
+  "historical_command": [
+    "python",
+    "inference.py"
+  ],
+  "native_evaluator": "evaluation_audit/evaluate_openclip_new_suite_official.py",
+  "historical_a100_environment": null,
+  "purpose": "provenance only; not a central task registry"
+}

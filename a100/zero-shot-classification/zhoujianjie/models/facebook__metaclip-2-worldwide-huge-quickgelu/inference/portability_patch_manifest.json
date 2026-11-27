@@ -1,0 +1,702 @@
+[
+  {
+    "file": "inference/native/native_mme5_python.py",
+    "source_sha256": "c05a7a4cbd7985c816b65773c558c1b3618d46cb41f2464a4b12150cb37623be",
+    "path_expression_edits": 2,
+    "path_mapping_stage_sha256": "222da15204400a4c7fd71daf2ca243fc0d9594d446b56bad36c634ece92799d7",
+    "final_delivery_sha256": "222da15204400a4c7fd71daf2ca243fc0d9594d446b56bad36c634ece92799d7"
+  },
+  {
+    "file": "inference/native/metaclip2_native_a100.py",
+    "source_sha256": "8931938c5b2858b59df0aa9425766f901e7c45a51df3f7414181eb834671e070",
+    "path_expression_edits": 14,
+    "path_mapping_stage_sha256": "d9ffcb6a352e787a963abba4cdfc568ee0f1ab9bbef57f91a3678ae003989cd4",
+    "final_delivery_sha256": "09110a9d37fde6815d1f0f47c80369f6bf8ea45a5f5ff9c7beaab1cd4a62435a"
+  },
+  {
+    "file": "inference/native/native_fgclip_python.py",
+    "source_sha256": "85db4a246d109f7cf518835afcd67482684f256765ec1a784698966036597228",
+    "path_expression_edits": 6,
+    "path_mapping_stage_sha256": "223e2d938be89d706e31a4fc0ff343bfeb861a7ddaed6dd6b98c3547d9e8dfc5",
+    "final_delivery_sha256": "223e2d938be89d706e31a4fc0ff343bfeb861a7ddaed6dd6b98c3547d9e8dfc5"
+  },
+  {
+    "file": "inference/native/run_metaclip2_native.py",
+    "source_sha256": "9f16b01d4691512bc9856089ba6069daa836190d3c5611d5ea0f2020ae560a73",
+    "path_expression_edits": 5,
+    "path_mapping_stage_sha256": "223fa766101f84a45ea8f8e2b277a48a75c9c8f6b497e161ac1ee37376444646",
+    "final_delivery_sha256": "223fa766101f84a45ea8f8e2b277a48a75c9c8f6b497e161ac1ee37376444646"
+  },
+  {
+    "file": "inference/native/evaluate_metaclip2_cvqa_official.py",
+    "source_sha256": "65eea447258122586ea1d69359c7765338991537160db570488307eac47de907",
+    "path_expression_edits": 4,
+    "path_mapping_stage_sha256": "2f4ec18920b1485b8432022cca1625c3f0fc8f5615c9bd7730910c38eb3c5b2f",
+    "final_delivery_sha256": "2f4ec18920b1485b8432022cca1625c3f0fc8f5615c9bd7730910c38eb3c5b2f"
+  },
+  {
+    "file": "inference/native/native_python.py",
+    "source_sha256": "ea047f7906c92e5d0173ccd6195c3d183645560aa19bcf826d028044e623005c",
+    "path_expression_edits": 6,
+    "path_mapping_stage_sha256": "2b4b7632421ea8f9b220db6446d5eb9c2892a1c1d13a97a4eda4bdb71a6fef28",
+    "final_delivery_sha256": "1bb949be95f07a3bf556d0290dd9001724efabfae9951668fc5e71896516a5b0"
+  },
+  {
+    "file": "inference/native/sitecustomize.py",
+    "source_sha256": "6eda9fd629a259c259dbd87d1f55fb4004ca20890677a7dee5745f2d7633016b",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "6eda9fd629a259c259dbd87d1f55fb4004ca20890677a7dee5745f2d7633016b",
+    "final_delivery_sha256": "962ac551ad22f7854811868a13cdd4b758c316d57acca6fa2fddea9752ce153b"
+  },
+  {
+    "file": "inference/native/model_paths.py",
+    "source_sha256": "d39241a382eaffe4ca202ac8d47cf9684c09603cc558b7d37519def06614896d",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "d39241a382eaffe4ca202ac8d47cf9684c09603cc558b7d37519def06614896d",
+    "final_delivery_sha256": "d39241a382eaffe4ca202ac8d47cf9684c09603cc558b7d37519def06614896d"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/setup.py",
+    "source_sha256": "e350cbe3ba666cf3700d8f7067a70017c9749638bc9352ea2fa4c64d7234a471",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "e350cbe3ba666cf3700d8f7067a70017c9749638bc9352ea2fa4c64d7234a471",
+    "final_delivery_sha256": "e350cbe3ba666cf3700d8f7067a70017c9749638bc9352ea2fa4c64d7234a471"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/submit.py",
+    "source_sha256": "bd7d59b15cb641aa00134bffef2335bf7f75df5c9b29e241ee3e5feed335e243",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "bd7d59b15cb641aa00134bffef2335bf7f75df5c9b29e241ee3e5feed335e243",
+    "final_delivery_sha256": "bd7d59b15cb641aa00134bffef2335bf7f75df5c9b29e241ee3e5feed335e243"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/tests/simple_test.py",
+    "source_sha256": "b4b2c34ed486050fa9b33b7b219cd67697c32f60808abf94080f99036de16ae4",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "b4b2c34ed486050fa9b33b7b219cd67697c32f60808abf94080f99036de16ae4",
+    "final_delivery_sha256": "b4b2c34ed486050fa9b33b7b219cd67697c32f60808abf94080f99036de16ae4"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/tests/pretrained_test.py",
+    "source_sha256": "29fadaf74e7caa76cad03387c50581bee4c29dec2d9c05c7428005f6a335aa68",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "29fadaf74e7caa76cad03387c50581bee4c29dec2d9c05c7428005f6a335aa68",
+    "final_delivery_sha256": "29fadaf74e7caa76cad03387c50581bee4c29dec2d9c05c7428005f6a335aa68"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/tests/config_test.py",
+    "source_sha256": "1396e1b8fa83da05a761bc20e760b4d5b76bd1a4f4f62583a507bb62f3c55593",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "1396e1b8fa83da05a761bc20e760b4d5b76bd1a4f4f62583a507bb62f3c55593",
+    "final_delivery_sha256": "1396e1b8fa83da05a761bc20e760b4d5b76bd1a4f4f62583a507bb62f3c55593"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/tests/pipeline_test.py",
+    "source_sha256": "0a7bbc11253cc829f8e7a45ca92670d151ef1eb14ef78c8cc285d01f17113023",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "0a7bbc11253cc829f8e7a45ca92670d151ef1eb14ef78c8cc285d01f17113023",
+    "final_delivery_sha256": "0a7bbc11253cc829f8e7a45ca92670d151ef1eb14ef78c8cc285d01f17113023"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/configs/metaclip_v1_2.py",
+    "source_sha256": "95cf04e62f41dfba850c38ddbd3814915ca42002a7d19e462547d510ce62f157",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "95cf04e62f41dfba850c38ddbd3814915ca42002a7d19e462547d510ce62f157",
+    "final_delivery_sha256": "95cf04e62f41dfba850c38ddbd3814915ca42002a7d19e462547d510ce62f157"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/configs/__init__.py",
+    "source_sha256": "2585c33725ad35d026947617e19288ba52ee553e9237409715deb02df5033bdf",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "2585c33725ad35d026947617e19288ba52ee553e9237409715deb02df5033bdf",
+    "final_delivery_sha256": "2585c33725ad35d026947617e19288ba52ee553e9237409715deb02df5033bdf"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/configs/metaclip_data.py",
+    "source_sha256": "6fc4e00b160842e6cd62f5de537edf5c0d2bb2f99867a621e8d398502a191cab",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "6fc4e00b160842e6cd62f5de537edf5c0d2bb2f99867a621e8d398502a191cab",
+    "final_delivery_sha256": "6fc4e00b160842e6cd62f5de537edf5c0d2bb2f99867a621e8d398502a191cab"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/configs/metaclip_v2.py",
+    "source_sha256": "571cdaf367653b96a1f8cda16f37e544e699251dd7c9a9c37677fb10c1392c15",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "571cdaf367653b96a1f8cda16f37e544e699251dd7c9a9c37677fb10c1392c15",
+    "final_delivery_sha256": "571cdaf367653b96a1f8cda16f37e544e699251dd7c9a9c37677fb10c1392c15"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/configs/altogether.py",
+    "source_sha256": "ba85d32a24a39bf6ec6c251d25f40a7ebd27296b2c9ac72756853901536c04e4",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "ba85d32a24a39bf6ec6c251d25f40a7ebd27296b2c9ac72756853901536c04e4",
+    "final_delivery_sha256": "ba85d32a24a39bf6ec6c251d25f40a7ebd27296b2c9ac72756853901536c04e4"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/configs/metaclip_v1.py",
+    "source_sha256": "6208be031fda0981e4f61c658fd884b7c87f92df2d66be98621dcfa7eb7c12f0",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "6208be031fda0981e4f61c658fd884b7c87f92df2d66be98621dcfa7eb7c12f0",
+    "final_delivery_sha256": "6208be031fda0981e4f61c658fd884b7c87f92df2d66be98621dcfa7eb7c12f0"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/clipeval/eval_all.py",
+    "source_sha256": "f98ccd512d5fc1ab683457d8d3727f8d840dfd00d30682d0f6c0732a82d57043",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "f98ccd512d5fc1ab683457d8d3727f8d840dfd00d30682d0f6c0732a82d57043",
+    "final_delivery_sha256": "f98ccd512d5fc1ab683457d8d3727f8d840dfd00d30682d0f6c0732a82d57043"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/clipeval/cvqa/eval_cvqa.py",
+    "source_sha256": "2557df2feac122e906ee933958d9d516d38082d80c545a32882e684fe2ebef18",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "2557df2feac122e906ee933958d9d516d38082d80c545a32882e684fe2ebef18",
+    "final_delivery_sha256": "2557df2feac122e906ee933958d9d516d38082d80c545a32882e684fe2ebef18"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/clipeval/slip/datasets.py",
+    "source_sha256": "37a9b9ca17266077bcded2bd9e779b15ca16c956ef0d0858c775b87696695ee6",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "37a9b9ca17266077bcded2bd9e779b15ca16c956ef0d0858c775b87696695ee6",
+    "final_delivery_sha256": "37a9b9ca17266077bcded2bd9e779b15ca16c956ef0d0858c775b87696695ee6"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/clipeval/slip/eval_slip.py",
+    "source_sha256": "eefd78c8a177860688c5bf0583c4b665ebe19a94cd786340c8bf2bddab52776d",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "eefd78c8a177860688c5bf0583c4b665ebe19a94cd786340c8bf2bddab52776d",
+    "final_delivery_sha256": "eefd78c8a177860688c5bf0583c4b665ebe19a94cd786340c8bf2bddab52776d"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/clipeval/slip/eval_zeroshot.py",
+    "source_sha256": "783af00d80bc1658356ecf70633af7d4bc6bfdc6195ab923c5056853fd8e54fe",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "783af00d80bc1658356ecf70633af7d4bc6bfdc6195ab923c5056853fd8e54fe",
+    "final_delivery_sha256": "783af00d80bc1658356ecf70633af7d4bc6bfdc6195ab923c5056853fd8e54fe"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/clipeval/xm3600/eval_xm3600.py",
+    "source_sha256": "f603044e828401c1863b22e3e2f966ba622e9d76027538cd6c3c061085759f0b",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "f603044e828401c1863b22e3e2f966ba622e9d76027538cd6c3c061085759f0b",
+    "final_delivery_sha256": "f603044e828401c1863b22e3e2f966ba622e9d76027538cd6c3c061085759f0b"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/apps/multi_distill/factory.py",
+    "source_sha256": "7c5cdfe17b2cdd0fe1a11ee6a04b058ed5d57989a33aaf90a2b89459604d3253",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "7c5cdfe17b2cdd0fe1a11ee6a04b058ed5d57989a33aaf90a2b89459604d3253",
+    "final_delivery_sha256": "7c5cdfe17b2cdd0fe1a11ee6a04b058ed5d57989a33aaf90a2b89459604d3253"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/apps/multi_distill/train.py",
+    "source_sha256": "da20b2d092fa751dda9af5613121d4f858af00523d4a1cef5b5e3bd2c4cc9f38",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "da20b2d092fa751dda9af5613121d4f858af00523d4a1cef5b5e3bd2c4cc9f38",
+    "final_delivery_sha256": "da20b2d092fa751dda9af5613121d4f858af00523d4a1cef5b5e3bd2c4cc9f38"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/apps/multi_distill/main.py",
+    "source_sha256": "3caff0444ee082660c333864603cfc2cb2246663b1fb2d1488193dc0e1db6f8c",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "3caff0444ee082660c333864603cfc2cb2246663b1fb2d1488193dc0e1db6f8c",
+    "final_delivery_sha256": "3caff0444ee082660c333864603cfc2cb2246663b1fb2d1488193dc0e1db6f8c"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/apps/mode/__init__.py",
+    "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "final_delivery_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/apps/mode/prep_feature.py",
+    "source_sha256": "15e444ebb24f213425fd94c3513f796e0f7f808726d96f4fe8dab76d7c1b15ca",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "15e444ebb24f213425fd94c3513f796e0f7f808726d96f4fe8dab76d7c1b15ca",
+    "final_delivery_sha256": "15e444ebb24f213425fd94c3513f796e0f7f808726d96f4fe8dab76d7c1b15ca"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/apps/mode/prep_hrchy.py",
+    "source_sha256": "c363bf64b6dc72898b06fde68f8cbbd6cd7919a4caaec26669cd21a3ac0d592a",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "c363bf64b6dc72898b06fde68f8cbbd6cd7919a4caaec26669cd21a3ac0d592a",
+    "final_delivery_sha256": "c363bf64b6dc72898b06fde68f8cbbd6cd7919a4caaec26669cd21a3ac0d592a"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/apps/mode/get_prep_parser.py",
+    "source_sha256": "93f327d2fd425f123624c406870b9f3d6ea2209eb9bb9aaf37da6bdc79c297a1",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "93f327d2fd425f123624c406870b9f3d6ea2209eb9bb9aaf37da6bdc79c297a1",
+    "final_delivery_sha256": "93f327d2fd425f123624c406870b9f3d6ea2209eb9bb9aaf37da6bdc79c297a1"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/apps/mode/prep_inference.py",
+    "source_sha256": "bd96db244c1eee6fc588ef83e589f812147fe06c8dcb08cc6167850a2c5cdf5f",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "bd96db244c1eee6fc588ef83e589f812147fe06c8dcb08cc6167850a2c5cdf5f",
+    "final_delivery_sha256": "bd96db244c1eee6fc588ef83e589f812147fe06c8dcb08cc6167850a2c5cdf5f"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/apps/mode/prep_caption.py",
+    "source_sha256": "4d9c0e0ee4d95d4f862ef161624d2b8ea3f39248d50b1bfce6a83e4b32e41ede",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "4d9c0e0ee4d95d4f862ef161624d2b8ea3f39248d50b1bfce6a83e4b32e41ede",
+    "final_delivery_sha256": "4d9c0e0ee4d95d4f862ef161624d2b8ea3f39248d50b1bfce6a83e4b32e41ede"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/apps/mode/post_report_ensemble.py",
+    "source_sha256": "d900159dc170a923c63a4f597dd31a451e9fdba3f640a7fa79188b44ee25ae75",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "d900159dc170a923c63a4f597dd31a451e9fdba3f640a7fa79188b44ee25ae75",
+    "final_delivery_sha256": "d900159dc170a923c63a4f597dd31a451e9fdba3f640a7fa79188b44ee25ae75"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/apps/mode/post_expert_eval.py",
+    "source_sha256": "dc87e1526885df17ab024a735b49c079f400a6024c7d5524eb7c733592fba524",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "dc87e1526885df17ab024a735b49c079f400a6024c7d5524eb7c733592fba524",
+    "final_delivery_sha256": "dc87e1526885df17ab024a735b49c079f400a6024c7d5524eb7c733592fba524"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/apps/altogether/infer.py",
+    "source_sha256": "eaac8107ac3072f2c75eda9fe50e25b365b5f41ab69de5cfefe58cb43f83bcf3",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "eaac8107ac3072f2c75eda9fe50e25b365b5f41ab69de5cfefe58cb43f83bcf3",
+    "final_delivery_sha256": "eaac8107ac3072f2c75eda9fe50e25b365b5f41ab69de5cfefe58cb43f83bcf3"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/apps/altogether/src/mini_clip/model_altogether.py",
+    "source_sha256": "1ba87776c3bb9b0b3d42f71e7c204252e38cba8848c113e072b1ccdbf3c6b81c",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "1ba87776c3bb9b0b3d42f71e7c204252e38cba8848c113e072b1ccdbf3c6b81c",
+    "final_delivery_sha256": "1ba87776c3bb9b0b3d42f71e7c204252e38cba8848c113e072b1ccdbf3c6b81c"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/apps/altogether/src/training/train_altogether.py",
+    "source_sha256": "236987a964446d74314e4ff8e27ec0905e6eb28b457d88eb8780c56c560d113f",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "236987a964446d74314e4ff8e27ec0905e6eb28b457d88eb8780c56c560d113f",
+    "final_delivery_sha256": "236987a964446d74314e4ff8e27ec0905e6eb28b457d88eb8780c56c560d113f"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/apps/altogether/src/training/data_altogether_pt.py",
+    "source_sha256": "00adb62cca6f98b5f235da382cd8edffe7dbf9a73e3259609aa8e612e708b16f",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "00adb62cca6f98b5f235da382cd8edffe7dbf9a73e3259609aa8e612e708b16f",
+    "final_delivery_sha256": "00adb62cca6f98b5f235da382cd8edffe7dbf9a73e3259609aa8e612e708b16f"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/apps/altogether/src/training/main.py",
+    "source_sha256": "88ccc08312668af6c9d5edd26bce9258ad92893fe741eb1c1a2ae59a1c68e9df",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "88ccc08312668af6c9d5edd26bce9258ad92893fe741eb1c1a2ae59a1c68e9df",
+    "final_delivery_sha256": "88ccc08312668af6c9d5edd26bce9258ad92893fe741eb1c1a2ae59a1c68e9df"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/apps/altogether/src/training/data_altogether_ft.py",
+    "source_sha256": "27132301dc2322a85c64940d753146a6162b98b5d0e87715e9b0012f8698b323",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "27132301dc2322a85c64940d753146a6162b98b5d0e87715e9b0012f8698b323",
+    "final_delivery_sha256": "27132301dc2322a85c64940d753146a6162b98b5d0e87715e9b0012f8698b323"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/apps/altogether/src/training/data.py",
+    "source_sha256": "6462d901bcd5251ef0b428e95300db894b11f20c108f6e23a4a882a6b7cefea4",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "6462d901bcd5251ef0b428e95300db894b11f20c108f6e23a4a882a6b7cefea4",
+    "final_delivery_sha256": "6462d901bcd5251ef0b428e95300db894b11f20c108f6e23a4a882a6b7cefea4"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/apps/mode/move2root/submitit_mode.py",
+    "source_sha256": "c843d680b2ad0c6b4c07820945544da329c39126ef413c75863d8feb19e4bfec",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "c843d680b2ad0c6b4c07820945544da329c39126ef413c75863d8feb19e4bfec",
+    "final_delivery_sha256": "c843d680b2ad0c6b4c07820945544da329c39126ef413c75863d8feb19e4bfec"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/apps/mode/move2root/configs_mode.py",
+    "source_sha256": "005729027ef3dcd5003b071c2e6a6473ce6725d55c0e56ea65817f5ccf1a3e61",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "005729027ef3dcd5003b071c2e6a6473ce6725d55c0e56ea65817f5ccf1a3e61",
+    "final_delivery_sha256": "005729027ef3dcd5003b071c2e6a6473ce6725d55c0e56ea65817f5ccf1a3e61"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/apps/mode/move2root/run_configs_mode.py",
+    "source_sha256": "9b7978f4bc520a14eedae81ca36a43d97118da4d046c335cf2ef09dd0b79cffd",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "9b7978f4bc520a14eedae81ca36a43d97118da4d046c335cf2ef09dd0b79cffd",
+    "final_delivery_sha256": "9b7978f4bc520a14eedae81ca36a43d97118da4d046c335cf2ef09dd0b79cffd"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/apps/mode/src/training/mode_wds.py",
+    "source_sha256": "94d2822322185b4691938a804e6b36fe412b70b74c429b0424e330760f171efc",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "94d2822322185b4691938a804e6b36fe412b70b74c429b0424e330760f171efc",
+    "final_delivery_sha256": "94d2822322185b4691938a804e6b36fe412b70b74c429b0424e330760f171efc"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/apps/mode/src/training/data.py",
+    "source_sha256": "972a4016660de77b69914812b94b1929a0cd11d790f4bac66239559c3d19d32f",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "972a4016660de77b69914812b94b1929a0cd11d790f4bac66239559c3d19d32f",
+    "final_delivery_sha256": "972a4016660de77b69914812b94b1929a0cd11d790f4bac66239559c3d19d32f"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/metaclip/curation/substr_matching.py",
+    "source_sha256": "b014da4f4b7f77890ced5fbd795763c087fd37bf694c0b89300af6816183ed91",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "b014da4f4b7f77890ced5fbd795763c087fd37bf694c0b89300af6816183ed91",
+    "final_delivery_sha256": "b014da4f4b7f77890ced5fbd795763c087fd37bf694c0b89300af6816183ed91"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/metaclip/curation/parse_wat.py",
+    "source_sha256": "de0ed45cadb39261714b97e65a0a14ac445109e5b915f8ad0d494f7d11eb9b5e",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "de0ed45cadb39261714b97e65a0a14ac445109e5b915f8ad0d494f7d11eb9b5e",
+    "final_delivery_sha256": "de0ed45cadb39261714b97e65a0a14ac445109e5b915f8ad0d494f7d11eb9b5e"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/metaclip/curation/curate.py",
+    "source_sha256": "d757d3ca8e6ea23ebb7f0c7fd8ec4d79cf6a24af57cefc0d6ed7a22f5acd8568",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "d757d3ca8e6ea23ebb7f0c7fd8ec4d79cf6a24af57cefc0d6ed7a22f5acd8568",
+    "final_delivery_sha256": "d757d3ca8e6ea23ebb7f0c7fd8ec4d79cf6a24af57cefc0d6ed7a22f5acd8568"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/metaclip/metadata/build_metadata.py",
+    "source_sha256": "f400a5bac5f7d4d312b441f77ad129f6457617b18985696fceef7ccc34972fe6",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "f400a5bac5f7d4d312b441f77ad129f6457617b18985696fceef7ccc34972fe6",
+    "final_delivery_sha256": "f400a5bac5f7d4d312b441f77ad129f6457617b18985696fceef7ccc34972fe6"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/metaclip/metadata/align_lid_to_wiki.py",
+    "source_sha256": "209de757a1089fd178b33eeeb26d682a28b0c31a9b5673c6e3671e4d855eaff5",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "209de757a1089fd178b33eeeb26d682a28b0c31a9b5673c6e3671e4d855eaff5",
+    "final_delivery_sha256": "209de757a1089fd178b33eeeb26d682a28b0c31a9b5673c6e3671e4d855eaff5"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/metaclip/metadata/build_ngram.py",
+    "source_sha256": "8a6f886f1233704a1bb07d4456aea43c8aec94e8fd33542720474e8bae56c402",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "8a6f886f1233704a1bb07d4456aea43c8aec94e8fd33542720474e8bae56c402",
+    "final_delivery_sha256": "8a6f886f1233704a1bb07d4456aea43c8aec94e8fd33542720474e8bae56c402"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/metaclip/metadata/build_multilingual_wordnet.py",
+    "source_sha256": "aa16b80465001e93c7c52e875ea3089ed759fb6272261ea56ef196f099d6e7bd",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "aa16b80465001e93c7c52e875ea3089ed759fb6272261ea56ef196f099d6e7bd",
+    "final_delivery_sha256": "aa16b80465001e93c7c52e875ea3089ed759fb6272261ea56ef196f099d6e7bd"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/metaclip/metadata/build_title.py",
+    "source_sha256": "f468f27b9fd3aa29ec8313971530b23b344fce97a22b94374a90b02d50a86f6e",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "f468f27b9fd3aa29ec8313971530b23b344fce97a22b94374a90b02d50a86f6e",
+    "final_delivery_sha256": "f468f27b9fd3aa29ec8313971530b23b344fce97a22b94374a90b02d50a86f6e"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/metaclip/metaclip1/substr_matching_ahocorasick.py",
+    "source_sha256": "f5bacfe939599f525b6bbfa09945c402feb00043a5bf93d584703b275ece8517",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "f5bacfe939599f525b6bbfa09945c402feb00043a5bf93d584703b275ece8517",
+    "final_delivery_sha256": "f5bacfe939599f525b6bbfa09945c402feb00043a5bf93d584703b275ece8517"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/metaclip/metaclip1/build_metadata.py",
+    "source_sha256": "0ff1b0fea073c0291b7f4e9bf646cef1d5390b4122db537ee75858d1fc9fdd02",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "0ff1b0fea073c0291b7f4e9bf646cef1d5390b4122db537ee75858d1fc9fdd02",
+    "final_delivery_sha256": "0ff1b0fea073c0291b7f4e9bf646cef1d5390b4122db537ee75858d1fc9fdd02"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/metaclip/metaclip1/substr_matching.py",
+    "source_sha256": "6af2d76a336354906e441ac71d102938c453ba363199307367089af85c59966b",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "6af2d76a336354906e441ac71d102938c453ba363199307367089af85c59966b",
+    "final_delivery_sha256": "6af2d76a336354906e441ac71d102938c453ba363199307367089af85c59966b"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/metaclip/metaclip1/pipeline.py",
+    "source_sha256": "96bfac40dad90d5bf5d80b6cf3086abae76105f62df5b2b1a0f26bcc1f1b9644",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "96bfac40dad90d5bf5d80b6cf3086abae76105f62df5b2b1a0f26bcc1f1b9644",
+    "final_delivery_sha256": "96bfac40dad90d5bf5d80b6cf3086abae76105f62df5b2b1a0f26bcc1f1b9644"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/metaclip/metaclip1/balancing.py",
+    "source_sha256": "46d6046ede4bec3f03d7a7a1ecda903c15a573b8d5b0d58b067da6dbc8d7689b",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "46d6046ede4bec3f03d7a7a1ecda903c15a573b8d5b0d58b067da6dbc8d7689b",
+    "final_delivery_sha256": "46d6046ede4bec3f03d7a7a1ecda903c15a573b8d5b0d58b067da6dbc8d7689b"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/metaclip/metaclip1/cc_matching.py",
+    "source_sha256": "0c73169018d62724cf18a0f75ad90bef8e0f20cfffdb012cde2f91abcf611302",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "0c73169018d62724cf18a0f75ad90bef8e0f20cfffdb012cde2f91abcf611302",
+    "final_delivery_sha256": "0c73169018d62724cf18a0f75ad90bef8e0f20cfffdb012cde2f91abcf611302"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/metaclip/metaclip1/indexing/balance_sampling.py",
+    "source_sha256": "6668faba28ceeb2beaf85961f6fc4db2678743ae5e69a081cfcb892965e6e81a",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "6668faba28ceeb2beaf85961f6fc4db2678743ae5e69a081cfcb892965e6e81a",
+    "final_delivery_sha256": "6668faba28ceeb2beaf85961f6fc4db2678743ae5e69a081cfcb892965e6e81a"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/metaclip/metaclip1/indexing/plot_entry_count.py",
+    "source_sha256": "69ea0936204ba0857ca4585b07824d6e86abd8aa4ea0639ee9d3b3c8d78cf499",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "69ea0936204ba0857ca4585b07824d6e86abd8aa4ea0639ee9d3b3c8d78cf499",
+    "final_delivery_sha256": "69ea0936204ba0857ca4585b07824d6e86abd8aa4ea0639ee9d3b3c8d78cf499"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/metaclip/metaclip1/indexing/entry_count.py",
+    "source_sha256": "7bb214c42ab019e918fa46753cb0129168ea4769406668406c43ec65519dcc9e",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "7bb214c42ab019e918fa46753cb0129168ea4769406668406c43ec65519dcc9e",
+    "final_delivery_sha256": "7bb214c42ab019e918fa46753cb0129168ea4769406668406c43ec65519dcc9e"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/metaclip/metaclip1/indexing/substr_indexing.py",
+    "source_sha256": "593376c11b530eab279e043de679624dd1b65b21186966863200f137327db61b",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "593376c11b530eab279e043de679624dd1b65b21186966863200f137327db61b",
+    "final_delivery_sha256": "593376c11b530eab279e043de679624dd1b65b21186966863200f137327db61b"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/metaclip/metadata/lang_tokenizers/zh.py",
+    "source_sha256": "27d2274328841809ab4e826cd90efa8a1c9a6429ee1dc8e7c5362c6bf4b9bec1",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "27d2274328841809ab4e826cd90efa8a1c9a6429ee1dc8e7c5362c6bf4b9bec1",
+    "final_delivery_sha256": "27d2274328841809ab4e826cd90efa8a1c9a6429ee1dc8e7c5362c6bf4b9bec1"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/metaclip/metadata/lang_tokenizers/bo.py",
+    "source_sha256": "ec48477de715ac8a8709a36bfadace09f9546373c73a61c36ced42a8e19ad48e",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "ec48477de715ac8a8709a36bfadace09f9546373c73a61c36ced42a8e19ad48e",
+    "final_delivery_sha256": "ec48477de715ac8a8709a36bfadace09f9546373c73a61c36ced42a8e19ad48e"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/metaclip/metadata/lang_tokenizers/my.py",
+    "source_sha256": "34db80585795deb4f1f9ca6fa1bc90c157ff894b97531b35a3d6bab96e78e984",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "34db80585795deb4f1f9ca6fa1bc90c157ff894b97531b35a3d6bab96e78e984",
+    "final_delivery_sha256": "34db80585795deb4f1f9ca6fa1bc90c157ff894b97531b35a3d6bab96e78e984"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/metaclip/metadata/lang_tokenizers/km.py",
+    "source_sha256": "026853a908aefc944b2b2c84aedf102435c429fb94af054604ee2cfc3a0c47e6",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "026853a908aefc944b2b2c84aedf102435c429fb94af054604ee2cfc3a0c47e6",
+    "final_delivery_sha256": "026853a908aefc944b2b2c84aedf102435c429fb94af054604ee2cfc3a0c47e6"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/metaclip/metadata/lang_tokenizers/ja.py",
+    "source_sha256": "ece90c1d8dc876a7e0e8fbdd28f35462808fec3fca8b4a958ae228cf1ce0e7b0",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "ece90c1d8dc876a7e0e8fbdd28f35462808fec3fca8b4a958ae228cf1ce0e7b0",
+    "final_delivery_sha256": "ece90c1d8dc876a7e0e8fbdd28f35462808fec3fca8b4a958ae228cf1ce0e7b0"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/metaclip/metadata/lang_tokenizers/th.py",
+    "source_sha256": "9e74f64888d4f672461396ed11bc015052aaaf29df8c4596c5ea9f30a7e4156f",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "9e74f64888d4f672461396ed11bc015052aaaf29df8c4596c5ea9f30a7e4156f",
+    "final_delivery_sha256": "9e74f64888d4f672461396ed11bc015052aaaf29df8c4596c5ea9f30a7e4156f"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/metaclip/metadata/lang_tokenizers/lo.py",
+    "source_sha256": "d1fa72c5a2ac1dbdcbb98d43212ad97c307118c81059d5992f14e2314bb9871d",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "d1fa72c5a2ac1dbdcbb98d43212ad97c307118c81059d5992f14e2314bb9871d",
+    "final_delivery_sha256": "d1fa72c5a2ac1dbdcbb98d43212ad97c307118c81059d5992f14e2314bb9871d"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/src/mini_clip/factory.py",
+    "source_sha256": "87bef3474d5c14700f28c230c1537ac7b4c52adde34ad8c366f889c2f2128fbb",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "87bef3474d5c14700f28c230c1537ac7b4c52adde34ad8c366f889c2f2128fbb",
+    "final_delivery_sha256": "87bef3474d5c14700f28c230c1537ac7b4c52adde34ad8c366f889c2f2128fbb"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/src/mini_clip/__init__.py",
+    "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "final_delivery_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/src/mini_clip/loss.py",
+    "source_sha256": "e2d28b013c4205a059b3f393e390abce59821bf49bb3175ad9d17272b5c3a378",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "e2d28b013c4205a059b3f393e390abce59821bf49bb3175ad9d17272b5c3a378",
+    "final_delivery_sha256": "e2d28b013c4205a059b3f393e390abce59821bf49bb3175ad9d17272b5c3a378"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/src/mini_clip/transform.py",
+    "source_sha256": "ad4aece4fb7cfb6352113647d2f7b82ef205b2cf385ad767229158e362ecd3dd",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "ad4aece4fb7cfb6352113647d2f7b82ef205b2cf385ad767229158e362ecd3dd",
+    "final_delivery_sha256": "ad4aece4fb7cfb6352113647d2f7b82ef205b2cf385ad767229158e362ecd3dd"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/src/mini_clip/tokenizer.py",
+    "source_sha256": "5df439eecda26a36bdefe0178fa76ede415f3b0ad02f054179a1d0f4e85dfdfb",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "5df439eecda26a36bdefe0178fa76ede415f3b0ad02f054179a1d0f4e85dfdfb",
+    "final_delivery_sha256": "5df439eecda26a36bdefe0178fa76ede415f3b0ad02f054179a1d0f4e85dfdfb"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/src/mini_clip/pretrained.py",
+    "source_sha256": "686d66d49266cbe0b4763887e21715474091ce45506168390e19f27443229276",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "686d66d49266cbe0b4763887e21715474091ce45506168390e19f27443229276",
+    "final_delivery_sha256": "686d66d49266cbe0b4763887e21715474091ce45506168390e19f27443229276"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/src/mini_clip/openai.py",
+    "source_sha256": "368e7d9d4a6aff826de1090f94a24187b810029a2b716a33a29d292015c1369d",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "368e7d9d4a6aff826de1090f94a24187b810029a2b716a33a29d292015c1369d",
+    "final_delivery_sha256": "368e7d9d4a6aff826de1090f94a24187b810029a2b716a33a29d292015c1369d"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/src/mini_clip/model.py",
+    "source_sha256": "a93560c1bd5dfc54e878e34943c2be48b865e71582a09dac8911abf572c2ee2e",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "a93560c1bd5dfc54e878e34943c2be48b865e71582a09dac8911abf572c2ee2e",
+    "final_delivery_sha256": "a93560c1bd5dfc54e878e34943c2be48b865e71582a09dac8911abf572c2ee2e"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/src/mini_clip/version.py",
+    "source_sha256": "241fd2165f5e74c13ddff627c5c09201d9ea51ad1287fe8ff925c2c1878a60ca",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "241fd2165f5e74c13ddff627c5c09201d9ea51ad1287fe8ff925c2c1878a60ca",
+    "final_delivery_sha256": "241fd2165f5e74c13ddff627c5c09201d9ea51ad1287fe8ff925c2c1878a60ca"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/src/mini_clip/model_worldwide.py",
+    "source_sha256": "a5f0b400f0585be4c7d4d69679e2e2fae822194975d4f3e9275123141681e81f",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "a5f0b400f0585be4c7d4d69679e2e2fae822194975d4f3e9275123141681e81f",
+    "final_delivery_sha256": "a5f0b400f0585be4c7d4d69679e2e2fae822194975d4f3e9275123141681e81f"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/src/mini_clip/utils.py",
+    "source_sha256": "3dd918855f17a7a4c8daac99030f60e5d233a5301cd4db6298dad3f05ea86e1a",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "3dd918855f17a7a4c8daac99030f60e5d233a5301cd4db6298dad3f05ea86e1a",
+    "final_delivery_sha256": "3dd918855f17a7a4c8daac99030f60e5d233a5301cd4db6298dad3f05ea86e1a"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/src/training/__init__.py",
+    "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "final_delivery_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/src/training/train.py",
+    "source_sha256": "d5313890e756a2f9c1d5757be29afa2f3ca97b60a9fcde5f868f96dac6773fb7",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "d5313890e756a2f9c1d5757be29afa2f3ca97b60a9fcde5f868f96dac6773fb7",
+    "final_delivery_sha256": "d5313890e756a2f9c1d5757be29afa2f3ca97b60a9fcde5f868f96dac6773fb7"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/src/training/checkpoint.py",
+    "source_sha256": "99570367ca332fabaa1b1e9cfd2b4c7b3a40a358bb90597e235bc6756b3c187c",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "99570367ca332fabaa1b1e9cfd2b4c7b3a40a358bb90597e235bc6756b3c187c",
+    "final_delivery_sha256": "99570367ca332fabaa1b1e9cfd2b4c7b3a40a358bb90597e235bc6756b3c187c"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/src/training/precision.py",
+    "source_sha256": "2917b989a3cdfb24cd11c8629835e3cc0ac0a4795d0205beceb6ffbef26c5895",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "2917b989a3cdfb24cd11c8629835e3cc0ac0a4795d0205beceb6ffbef26c5895",
+    "final_delivery_sha256": "2917b989a3cdfb24cd11c8629835e3cc0ac0a4795d0205beceb6ffbef26c5895"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/src/training/detect.py",
+    "source_sha256": "932b855b9721b08c7dc37f4373a14b1e07c24330229017408f31d1d8d8e96c32",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "932b855b9721b08c7dc37f4373a14b1e07c24330229017408f31d1d8d8e96c32",
+    "final_delivery_sha256": "932b855b9721b08c7dc37f4373a14b1e07c24330229017408f31d1d8d8e96c32"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/src/training/data_metaclip.py",
+    "source_sha256": "8ebfec46c45e5906a6b343c5773994da156e3c5c343b5700f14f1b03dd38536d",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "8ebfec46c45e5906a6b343c5773994da156e3c5c343b5700f14f1b03dd38536d",
+    "final_delivery_sha256": "8ebfec46c45e5906a6b343c5773994da156e3c5c343b5700f14f1b03dd38536d"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/src/training/imagenet_zeroshot_data.py",
+    "source_sha256": "4b24ffabf667838342bb72240f43e9a10a13a50ce2b345382412cf3eb768cc80",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "4b24ffabf667838342bb72240f43e9a10a13a50ce2b345382412cf3eb768cc80",
+    "final_delivery_sha256": "4b24ffabf667838342bb72240f43e9a10a13a50ce2b345382412cf3eb768cc80"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/src/training/distributed.py",
+    "source_sha256": "c16d8fac4c6dbc06c6d08c91838e2c1b2913bee8ab7d02b33d62a440132f6c1c",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "c16d8fac4c6dbc06c6d08c91838e2c1b2913bee8ab7d02b33d62a440132f6c1c",
+    "final_delivery_sha256": "c16d8fac4c6dbc06c6d08c91838e2c1b2913bee8ab7d02b33d62a440132f6c1c"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/src/training/logger.py",
+    "source_sha256": "0bb73b9c6dfa338a3a6e1902b13303be602d7832f38ad34401e5386f5f1f82dd",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "0bb73b9c6dfa338a3a6e1902b13303be602d7832f38ad34401e5386f5f1f82dd",
+    "final_delivery_sha256": "0bb73b9c6dfa338a3a6e1902b13303be602d7832f38ad34401e5386f5f1f82dd"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/src/training/main.py",
+    "source_sha256": "daead341ce1e21934180a9c276c42629b8e87e31ca6aec9a6876651fd715f908",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "daead341ce1e21934180a9c276c42629b8e87e31ca6aec9a6876651fd715f908",
+    "final_delivery_sha256": "daead341ce1e21934180a9c276c42629b8e87e31ca6aec9a6876651fd715f908"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/src/training/data_metaclip_v2.py",
+    "source_sha256": "0ade66c9134ced1aacc73e19af5fdd80f8ad85e3d85ac90bf196c8a3b9a01db7",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "0ade66c9134ced1aacc73e19af5fdd80f8ad85e3d85ac90bf196c8a3b9a01db7",
+    "final_delivery_sha256": "0ade66c9134ced1aacc73e19af5fdd80f8ad85e3d85ac90bf196c8a3b9a01db7"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/src/training/zero_shot.py",
+    "source_sha256": "dd38e62a228e9ae473d0a7b426136db0d98066cf47be1fc997ac57bf943235c0",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "dd38e62a228e9ae473d0a7b426136db0d98066cf47be1fc997ac57bf943235c0",
+    "final_delivery_sha256": "dd38e62a228e9ae473d0a7b426136db0d98066cf47be1fc997ac57bf943235c0"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/src/training/data.py",
+    "source_sha256": "ff5fac17eeb35d63b010ddc277b3a710eabb50741d5988d9360365e6e47e64f9",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "ff5fac17eeb35d63b010ddc277b3a710eabb50741d5988d9360365e6e47e64f9",
+    "final_delivery_sha256": "ff5fac17eeb35d63b010ddc277b3a710eabb50741d5988d9360365e6e47e64f9"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/src/training/scheduler.py",
+    "source_sha256": "e3e7a652dddeaf8a2e28751ef054052edadd4deb1ab7860a74f92a567b3c4a6f",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "e3e7a652dddeaf8a2e28751ef054052edadd4deb1ab7860a74f92a567b3c4a6f",
+    "final_delivery_sha256": "e3e7a652dddeaf8a2e28751ef054052edadd4deb1ab7860a74f92a567b3c4a6f"
+  },
+  {
+    "file": "inference/native/reference_code/MetaCLIP/src/training/data_utils.py",
+    "source_sha256": "1d226e22c7177e4b348c7c4ee612432f77895d9a53e95d3d861864ba33edf26a",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "1d226e22c7177e4b348c7c4ee612432f77895d9a53e95d3d861864ba33edf26a",
+    "final_delivery_sha256": "1d226e22c7177e4b348c7c4ee612432f77895d9a53e95d3d861864ba33edf26a"
+  }
+]

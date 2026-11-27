@@ -1,0 +1,187 @@
+[
+  {
+    "file": "inference/original_sources/mme5_native_a100.py",
+    "sha256": "3928b244d8eadb6a97016c5a2126c6b28961660985c699c6fe2f0972e0578e3e",
+    "source": "A100 snapshot"
+  },
+  {
+    "file": "inference/original_sources/native_mme5_python.py",
+    "sha256": "c05a7a4cbd7985c816b65773c558c1b3618d46cb41f2464a4b12150cb37623be",
+    "source": "A100 snapshot"
+  },
+  {
+    "file": "inference/original_sources/run_model.py",
+    "sha256": "6b1c88c470bca26caa104a544237e7767663372ef01a80f26a4637ef1715261d",
+    "source": "A100 snapshot"
+  },
+  {
+    "file": "inference/original_sources/run_special_native.py",
+    "sha256": "2addda73c2d324f9fbd523fb313b95d626109c103be68d88e268fa79b2cc83ae",
+    "source": "A100 snapshot"
+  },
+  {
+    "file": "inference/original_sources/evaluate_mme5_country211_official.py",
+    "sha256": "7fe747a594920cc4a097389f172dcc6b25ec1dfe1027f737954ed514ec31a4d8",
+    "source": "4090 original evaluator"
+  },
+  {
+    "file": "inference/original_sources/reference_code/mmE5_official_4818cdf/LICENSE",
+    "sha256": "cf399c15e4b34b4d02d19a4852de16b89d609352426196fb17435b662b103514",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/mmE5_official_4818cdf/README.md",
+    "sha256": "3b825a14622739e6c26b3ae2bfe34ba596b89171bd6f9b56d35225eb77132c12",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/mmE5_official_4818cdf/demo.py",
+    "sha256": "eb39f60bc4003946f83cd927ae4313ffb78fa738561c5afb7dff57f8f6369609",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/mmE5_official_4818cdf/ds_config.json",
+    "sha256": "36782812212bed0575198d6802395db7b2f2d7d850cc308107608901bf7073c4",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/mmE5_official_4818cdf/eval.py",
+    "sha256": "d9ff6b210472f5c80a125351da78dc1a65e7c6a207f260bd0655f3a52400d559",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/mmE5_official_4818cdf/eval_multi.py",
+    "sha256": "a68b42531d240c07602129283089ffce2ffdf9236ce840c97d2c1646e2e1a198",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/mmE5_official_4818cdf/evaluation/eval_utils.py",
+    "sha256": "3c1422cd45aa67018f89415cb26f58ec53bb66568d281776fc37dd63a5d2b21b",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/mmE5_official_4818cdf/requirements.txt",
+    "sha256": "faecb3084ed07e9809832d52a634739e7cc862422a911e48934e32c8c06787ba",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/mmE5_official_4818cdf/scripts/eval/eval_full.sh",
+    "sha256": "b37355b61e3f9d3ac9e66a26f3c4f6a9973947b1c99bb814848c135a602547b4",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/mmE5_official_4818cdf/scripts/eval/eval_full_multi.sh",
+    "sha256": "98ab9f470240d4a9d28ad77de5c4a844a8ca5bda4f4d76361bdaa2835b31a6e4",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/mmE5_official_4818cdf/scripts/eval/eval_lora.sh",
+    "sha256": "51213ef270680a0a7c4558b9b733620061b79123742e3b51bbd7429593d39d79",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/mmE5_official_4818cdf/scripts/eval/eval_lora_multi.sh",
+    "sha256": "e168901b69cabdf23c2b8775296ef869d1a85e84b615646999d371617d6facf3",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/mmE5_official_4818cdf/scripts/prepare_images.sh",
+    "sha256": "f467c4fb630b329adf546714efca891b9850f95f57a53de0e498fc9c28c1edd6",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/mmE5_official_4818cdf/scripts/train/train.sh",
+    "sha256": "fa805fa588cc1ccc6727cc044cc2ec9be3b66156f2f17890f593c5d193e4964b",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/mmE5_official_4818cdf/src/arguments.py",
+    "sha256": "4d76dd93888b807d8845538886504e2e88001830b1b87d76629dd0fba4aa6903",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/mmE5_official_4818cdf/src/collator.py",
+    "sha256": "e0bb520313c19cad1005a6c60202741be326bf9c006cd399a56ff9d34580d62a",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/mmE5_official_4818cdf/src/dataset.py",
+    "sha256": "9524a724f2e8ea244e8ec7ef4fd1011987bed014dc02bd46823c61b0094a189a",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/mmE5_official_4818cdf/src/model.py",
+    "sha256": "07c4965393a988c7af4b19b903267cdde47fb8a0c5e5f94a88c5fd26c30b8d72",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/mmE5_official_4818cdf/src/trainer.py",
+    "sha256": "f150e84c8e1d3ae4954d228bb6586e2c34f511439a2dc876921f5455099a7985",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/mmE5_official_4818cdf/src/utils.py",
+    "sha256": "ca269f968c82553efc937de3e018b274d7b10b4be68012be4daf025702f2d4ca",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/mmE5_official_4818cdf/src/vlm_backbone/llava_next/__init__.py",
+    "sha256": "9b826043e4eb0aee9a9bb296036708180fc98d7a191631cdf780d56d625e7cf2",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/mmE5_official_4818cdf/src/vlm_backbone/llava_next/modeling_llava_next.py",
+    "sha256": "e92a88d5fbb320c08764a46b01e2d012134a98e3da05b525a82c4d2f9373de3e",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/mmE5_official_4818cdf/src/vlm_backbone/llava_next/processing_llava_next.py",
+    "sha256": "001444b5809a6e1f681791f2c37491efc4ff98213828dc660897aa889b5b528c",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/mmE5_official_4818cdf/src/vlm_backbone/phi3_v/configuration_phi3_v.py",
+    "sha256": "7f24fbceadff0b8c40aabf42ad514b9667bfbe25ac17c19f30c2426b004d0361",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/mmE5_official_4818cdf/src/vlm_backbone/phi3_v/image_embedding_phi3_v.py",
+    "sha256": "b7d50c321ffe715080729c5cb442d67577aa1901ffe25290a9089ba259bdc5d5",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/mmE5_official_4818cdf/src/vlm_backbone/phi3_v/image_processing_phi3_v.py",
+    "sha256": "30c812e67b6b17aeb98ae4b894b35f826f1ca3e5f1aa04bdfbec18d96cd0655f",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/mmE5_official_4818cdf/src/vlm_backbone/phi3_v/modeling_phi3_v.py",
+    "sha256": "e0818f316c8c24aedf59ae63dae65307c15418ed8835bdcdd0efdb4b9a4c3133",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/mmE5_official_4818cdf/src/vlm_backbone/phi3_v/processing_phi3_v.py",
+    "sha256": "f9fbe0d44f33ab1aa7c9935860149dba7574a0d94ce2aef82ef58f324dd24b39",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/mmE5_official_4818cdf/src/vlm_backbone/vlm_dict.py",
+    "sha256": "a58a762874c84bafb480429235c4f7d4287b7513e4ae5bb113b4d389b503ecf0",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/reference_code/mmE5_official_4818cdf/train.py",
+    "sha256": "e3f70bad6692053d0509dde19d0b36f85af17666c6b836f3015068abe3cea7df",
+    "source": "A100 native source snapshot; license retained"
+  },
+  {
+    "file": "inference/original_sources/original_metadata/fgclip2_boxclass_cn_official_spec.json",
+    "sha256": "8512ed91435cbb57883251ffc7b2d849b116acf73064be9bcfb82153be3ea50d",
+    "source": "frozen original protocol metadata"
+  },
+  {
+    "file": "inference/original_sources/original_metadata/onealign_unseen_official_spec.json",
+    "sha256": "8c7ab366dc30f4c0ed9bd13b9933b5ba514341ed7aa7ac95c6c9928ede7aa226",
+    "source": "frozen original protocol metadata"
+  }
+]

@@ -1,0 +1,107 @@
+[
+  {
+    "file": "inference/native/native_mme5_python.py",
+    "source_sha256": "c05a7a4cbd7985c816b65773c558c1b3618d46cb41f2464a4b12150cb37623be",
+    "path_expression_edits": 2,
+    "path_mapping_stage_sha256": "222da15204400a4c7fd71daf2ca243fc0d9594d446b56bad36c634ece92799d7",
+    "final_delivery_sha256": "222da15204400a4c7fd71daf2ca243fc0d9594d446b56bad36c634ece92799d7"
+  },
+  {
+    "file": "inference/native/evaluate_clip_rsicd_a100.py",
+    "source_sha256": "d4aef25b38701cc0bd12333326b830ed9cbd4eac9aedf34f444d030a91d1f6b5",
+    "path_expression_edits": 8,
+    "path_mapping_stage_sha256": "98f3251b663b18e96738099cb3aeaa748358575ac722fc894dca5dd9206022da",
+    "final_delivery_sha256": "98f3251b663b18e96738099cb3aeaa748358575ac722fc894dca5dd9206022da"
+  },
+  {
+    "file": "inference/native/native_fgclip_python.py",
+    "source_sha256": "85db4a246d109f7cf518835afcd67482684f256765ec1a784698966036597228",
+    "path_expression_edits": 6,
+    "path_mapping_stage_sha256": "223e2d938be89d706e31a4fc0ff343bfeb861a7ddaed6dd6b98c3547d9e8dfc5",
+    "final_delivery_sha256": "223e2d938be89d706e31a4fc0ff343bfeb861a7ddaed6dd6b98c3547d9e8dfc5"
+  },
+  {
+    "file": "inference/native/run_rsicd_native.py",
+    "source_sha256": "514b4cdde4e990f4a9492277800e06a099794166c004f3db3dafb3a339f7516c",
+    "path_expression_edits": 6,
+    "path_mapping_stage_sha256": "87511754512e9a847553c250ceffb2ee55ebc3d7c3bbec40ad6bc3a7c6521b18",
+    "final_delivery_sha256": "9b4212e046918aa9f74b3196c1586695f61fb47d827c50fc3ec650a2341e7b02"
+  },
+  {
+    "file": "inference/native/evaluate_clip_rsicd_official.py",
+    "source_sha256": "e1830127b66469c13006e194fbcfa26c250567e111c2be781a362d823f9ec9df",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "e1830127b66469c13006e194fbcfa26c250567e111c2be781a362d823f9ec9df",
+    "final_delivery_sha256": "e1830127b66469c13006e194fbcfa26c250567e111c2be781a362d823f9ec9df"
+  },
+  {
+    "file": "inference/native/native_python.py",
+    "source_sha256": "ea047f7906c92e5d0173ccd6195c3d183645560aa19bcf826d028044e623005c",
+    "path_expression_edits": 6,
+    "path_mapping_stage_sha256": "2b4b7632421ea8f9b220db6446d5eb9c2892a1c1d13a97a4eda4bdb71a6fef28",
+    "final_delivery_sha256": "1bb949be95f07a3bf556d0290dd9001724efabfae9951668fc5e71896516a5b0"
+  },
+  {
+    "file": "inference/native/sitecustomize.py",
+    "source_sha256": "6eda9fd629a259c259dbd87d1f55fb4004ca20890677a7dee5745f2d7633016b",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "6eda9fd629a259c259dbd87d1f55fb4004ca20890677a7dee5745f2d7633016b",
+    "final_delivery_sha256": "962ac551ad22f7854811868a13cdd4b758c316d57acca6fa2fddea9752ce153b"
+  },
+  {
+    "file": "inference/native/model_paths.py",
+    "source_sha256": "d39241a382eaffe4ca202ac8d47cf9684c09603cc558b7d37519def06614896d",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "d39241a382eaffe4ca202ac8d47cf9684c09603cc558b7d37519def06614896d",
+    "final_delivery_sha256": "d39241a382eaffe4ca202ac8d47cf9684c09603cc558b7d37519def06614896d"
+  },
+  {
+    "file": "inference/native/reference_code/CLIP-rsicd/run_clip_flax.py",
+    "source_sha256": "a2d9c923bec252a7552ac6dd2de665ed7ca745dccb9900f23f5895a5c0caf224",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "a2d9c923bec252a7552ac6dd2de665ed7ca745dccb9900f23f5895a5c0caf224",
+    "final_delivery_sha256": "a2d9c923bec252a7552ac6dd2de665ed7ca745dccb9900f23f5895a5c0caf224"
+  },
+  {
+    "file": "inference/native/reference_code/CLIP-rsicd/rsicd.py",
+    "source_sha256": "898d2941a411afb91445f887ee0017aec20f885a8edb1a1ea4ec682a7eae36b0",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "898d2941a411afb91445f887ee0017aec20f885a8edb1a1ea4ec682a7eae36b0",
+    "final_delivery_sha256": "898d2941a411afb91445f887ee0017aec20f885a8edb1a1ea4ec682a7eae36b0"
+  },
+  {
+    "file": "inference/native/reference_code/CLIP-rsicd/run_clip_flax_tv.py",
+    "source_sha256": "d03056657733ccb805637ec21dcbb6681b6c70fe9aa4baab11a525cef969f585",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "d03056657733ccb805637ec21dcbb6681b6c70fe9aa4baab11a525cef969f585",
+    "final_delivery_sha256": "d03056657733ccb805637ec21dcbb6681b6c70fe9aa4baab11a525cef969f585"
+  },
+  {
+    "file": "inference/native/reference_code/CLIP-rsicd/run_clip_eval.py",
+    "source_sha256": "b7424d1ea7eb05e536413ecf877a3b7bcfb5f6244e693d2f46e70bbd0b71f1aa",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "b7424d1ea7eb05e536413ecf877a3b7bcfb5f6244e693d2f46e70bbd0b71f1aa",
+    "final_delivery_sha256": "b7424d1ea7eb05e536413ecf877a3b7bcfb5f6244e693d2f46e70bbd0b71f1aa"
+  },
+  {
+    "file": "inference/native/reference_code/CLIP-rsicd/utils/flax2pt.py",
+    "source_sha256": "23654fd37d45d73bf9fd44b5027a0a9ce84dd576a4e0a95cdeacf65edf5099fd",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "23654fd37d45d73bf9fd44b5027a0a9ce84dd576a4e0a95cdeacf65edf5099fd",
+    "final_delivery_sha256": "23654fd37d45d73bf9fd44b5027a0a9ce84dd576a4e0a95cdeacf65edf5099fd"
+  },
+  {
+    "file": "inference/native/reference_code/CLIP-rsicd/utils/add_processor.py",
+    "source_sha256": "ad605f1dfc934a0b3a51efc89cfb39914250943f5e113f0c9323e6044fb9dafa",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "ad605f1dfc934a0b3a51efc89cfb39914250943f5e113f0c9323e6044fb9dafa",
+    "final_delivery_sha256": "ad605f1dfc934a0b3a51efc89cfb39914250943f5e113f0c9323e6044fb9dafa"
+  },
+  {
+    "file": "inference/native/reference_code/CLIP-rsicd/utils/data.py",
+    "source_sha256": "5e219dbfe681a5103bf996dde868a07bd47eda643f03b6977e8a849ce15f3296",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "5e219dbfe681a5103bf996dde868a07bd47eda643f03b6977e8a849ce15f3296",
+    "final_delivery_sha256": "5e219dbfe681a5103bf996dde868a07bd47eda643f03b6977e8a849ce15f3296"
+  }
+]

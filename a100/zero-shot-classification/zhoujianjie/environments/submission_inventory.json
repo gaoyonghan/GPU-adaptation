@@ -1,0 +1,779 @@
+{
+  "snapshot_date": "2026-11-26",
+  "models": [
+    {
+      "model_directory": "BAAI__AltCLIP",
+      "model_id": "BAAI/AltCLIP",
+      "environment_file": "zeroshot-main.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "completed",
+      "submission_entry_status": "native_port_prepared_pending_validation",
+      "known_limits": "原工程完成不代表独立交付验证完成；见 delivery65_status.csv"
+    },
+    {
+      "model_directory": "Bingsu__clip-vit-large-patch14-ko",
+      "model_id": "Bingsu/clip-vit-large-patch14-ko",
+      "environment_file": "zeroshot-main.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "completed",
+      "submission_entry_status": "native_port_prepared_pending_validation",
+      "known_limits": "原工程完成不代表独立交付验证完成；见 delivery65_status.csv"
+    },
+    {
+      "model_directory": "HuggingFaceM4__siglip-so400m-14-980-flash-attn2-navit",
+      "model_id": "HuggingFaceM4/siglip-so400m-14-980-flash-attn2-navit",
+      "environment_file": "zeroshot-main.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "completed",
+      "submission_entry_status": "native_port_prepared_pending_validation",
+      "known_limits": "原工程完成不代表独立交付验证完成；见 delivery65_status.csv"
+    },
+    {
+      "model_directory": "Marqo__marqo-fashionCLIP",
+      "model_id": "Marqo/marqo-fashionCLIP",
+      "environment_file": "zeroshot-main.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "completed",
+      "submission_entry_status": "native_port_prepared_pending_validation",
+      "known_limits": "原工程完成不代表独立交付验证完成；见 delivery65_status.csv"
+    },
+    {
+      "model_directory": "Marqo__marqo-fashionSigLIP",
+      "model_id": "Marqo/marqo-fashionSigLIP",
+      "environment_file": "zeroshot-main.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "completed",
+      "submission_entry_status": "native_port_prepared_pending_validation",
+      "known_limits": "原工程完成不代表独立交付验证完成；见 delivery65_status.csv"
+    },
+    {
+      "model_directory": "OFA-Sys__chinese-clip-vit-base-patch16",
+      "model_id": "OFA-Sys/chinese-clip-vit-base-patch16",
+      "environment_file": "zeroshot-main.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "completed",
+      "submission_entry_status": "native_port_prepared_pending_validation",
+      "known_limits": "原工程完成不代表独立交付验证完成；见 delivery65_status.csv"
+    },
+    {
+      "model_directory": "OFA-Sys__chinese-clip-vit-huge-patch14",
+      "model_id": "OFA-Sys/chinese-clip-vit-huge-patch14",
+      "environment_file": "zeroshot-main.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "completed",
+      "submission_entry_status": "native_port_prepared_pending_validation",
+      "known_limits": "原工程完成不代表独立交付验证完成；见 delivery65_status.csv"
+    },
+    {
+      "model_directory": "OFA-Sys__chinese-clip-vit-large-patch14",
+      "model_id": "OFA-Sys/chinese-clip-vit-large-patch14",
+      "environment_file": "zeroshot-main.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "completed",
+      "submission_entry_status": "native_port_prepared_pending_validation",
+      "known_limits": "原工程完成不代表独立交付验证完成；见 delivery65_status.csv"
+    },
+    {
+      "model_directory": "OFA-Sys__chinese-clip-vit-large-patch14-336px",
+      "model_id": "OFA-Sys/chinese-clip-vit-large-patch14-336px",
+      "environment_file": "zeroshot-main.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "completed",
+      "submission_entry_status": "native_port_prepared_pending_validation",
+      "known_limits": "原工程完成不代表独立交付验证完成；见 delivery65_status.csv"
+    },
+    {
+      "model_directory": "OysterQAQ__DanbooruCLIP",
+      "model_id": "OysterQAQ/DanbooruCLIP",
+      "environment_file": "zeroshot-main.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "blocked",
+      "submission_entry_status": "native_source_preserved_pending_integration",
+      "known_limits": "isolated install not tested; submission GPU not retested; Not found in relocated project or native source asset search: posts_tail_256m.json.part"
+    },
+    {
+      "model_directory": "UCSC-VLAA__ViT-L-16-HTxt-Recap-CLIP",
+      "model_id": "UCSC-VLAA/ViT-L-16-HTxt-Recap-CLIP",
+      "environment_file": "zeroshot-main.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "completed",
+      "submission_entry_status": "independent_entry_prepared",
+      "known_limits": "原工程完成不代表独立交付验证完成；见 delivery65_status.csv"
+    },
+    {
+      "model_directory": "Xenova__clip-vit-base-patch32",
+      "model_id": "Xenova/clip-vit-base-patch32",
+      "environment_file": "zeroshot-main.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "completed",
+      "submission_entry_status": "native_port_prepared_pending_validation",
+      "known_limits": "原工程完成不代表独立交付验证完成；见 delivery65_status.csv"
+    },
+    {
+      "model_directory": "apple__MobileCLIP-S2-OpenCLIP",
+      "model_id": "apple/MobileCLIP-S2-OpenCLIP",
+      "environment_file": "zeroshot-main.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "completed",
+      "submission_entry_status": "independent_entry_prepared",
+      "known_limits": "原工程完成不代表独立交付验证完成；见 delivery65_status.csv"
+    },
+    {
+      "model_directory": "facebook__PE-Core-G14-448",
+      "model_id": "facebook/PE-Core-G14-448",
+      "environment_file": "zeroshot-main.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "completed",
+      "submission_entry_status": "native_port_prepared_pending_validation",
+      "known_limits": "原工程完成不代表独立交付验证完成；见 delivery65_status.csv"
+    },
+    {
+      "model_directory": "facebook__PE-Core-L14-336",
+      "model_id": "facebook/PE-Core-L14-336",
+      "environment_file": "zeroshot-main.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "completed",
+      "submission_entry_status": "native_port_prepared_pending_validation",
+      "known_limits": "原工程完成不代表独立交付验证完成；见 delivery65_status.csv"
+    },
+    {
+      "model_directory": "facebook__metaclip-2-worldwide-huge-quickgelu",
+      "model_id": "facebook/metaclip-2-worldwide-huge-quickgelu",
+      "environment_file": "zeroshot-metaclip2.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "completed",
+      "submission_entry_status": "native_port_prepared_pending_validation",
+      "known_limits": "原工程完成不代表独立交付验证完成；见 delivery65_status.csv"
+    },
+    {
+      "model_directory": "facebook__metaclip-b32-400m",
+      "model_id": "facebook/metaclip-b32-400m",
+      "environment_file": "zeroshot-main.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "completed",
+      "submission_entry_status": "independent_entry_prepared",
+      "known_limits": "原工程完成不代表独立交付验证完成；见 delivery65_status.csv"
+    },
+    {
+      "model_directory": "facebook__metaclip-h14-fullcc2.5b",
+      "model_id": "facebook/metaclip-h14-fullcc2.5b",
+      "environment_file": "zeroshot-main.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "completed",
+      "submission_entry_status": "independent_entry_prepared",
+      "known_limits": "原工程完成不代表独立交付验证完成；见 delivery65_status.csv"
+    },
+    {
+      "model_directory": "flaviagiammarino__pubmed-clip-vit-base-patch32",
+      "model_id": "flaviagiammarino/pubmed-clip-vit-base-patch32",
+      "environment_file": "zeroshot-main.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "blocked",
+      "submission_entry_status": "native_source_preserved_pending_integration",
+      "known_limits": "isolated install not tested; submission GPU not retested; Original ROCO radiology input and fixed sample manifest have no relocated raw dataset unit or matching archived input; /tmp old path cannot be used"
+    },
+    {
+      "model_directory": "flax-community__clip-rsicd-v2",
+      "model_id": "flax-community/clip-rsicd-v2",
+      "environment_file": "zeroshot-main.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "completed",
+      "submission_entry_status": "native_port_prepared_pending_validation",
+      "known_limits": "原工程完成不代表独立交付验证完成；见 delivery65_status.csv"
+    },
+    {
+      "model_directory": "geolocal__StreetCLIP",
+      "model_id": "geolocal/StreetCLIP",
+      "environment_file": "zeroshot-main.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "completed",
+      "submission_entry_status": "native_port_prepared_pending_validation",
+      "known_limits": "原工程完成不代表独立交付验证完成；见 delivery65_status.csv"
+    },
+    {
+      "model_directory": "google__medsiglip-448",
+      "model_id": "google/medsiglip-448",
+      "environment_file": "zeroshot-main.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "completed",
+      "submission_entry_status": "native_port_prepared_pending_validation",
+      "known_limits": "原工程完成不代表独立交付验证完成；见 delivery65_status.csv"
+    },
+    {
+      "model_directory": "google__siglip-base-patch16-224",
+      "model_id": "google/siglip-base-patch16-224",
+      "environment_file": "zeroshot-main.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "completed",
+      "submission_entry_status": "independent_entry_prepared",
+      "known_limits": "原工程完成不代表独立交付验证完成；见 delivery65_status.csv"
+    },
+    {
+      "model_directory": "google__siglip-base-patch16-256-multilingual",
+      "model_id": "google/siglip-base-patch16-256-multilingual",
+      "environment_file": "zeroshot-main.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "completed",
+      "submission_entry_status": "native_port_prepared_pending_validation",
+      "known_limits": "原工程完成不代表独立交付验证完成；见 delivery65_status.csv"
+    },
+    {
+      "model_directory": "google__siglip-base-patch16-512",
+      "model_id": "google/siglip-base-patch16-512",
+      "environment_file": "zeroshot-main.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "completed",
+      "submission_entry_status": "independent_entry_prepared",
+      "known_limits": "原工程完成不代表独立交付验证完成；见 delivery65_status.csv"
+    },
+    {
+      "model_directory": "google__siglip-so400m-patch14-224",
+      "model_id": "google/siglip-so400m-patch14-224",
+      "environment_file": "zeroshot-main.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "completed",
+      "submission_entry_status": "native_port_prepared_pending_validation",
+      "known_limits": "原工程完成不代表独立交付验证完成；见 delivery65_status.csv"
+    },
+    {
+      "model_directory": "google__siglip-so400m-patch14-384",
+      "model_id": "google/siglip-so400m-patch14-384",
+      "environment_file": "zeroshot-main.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "completed",
+      "submission_entry_status": "independent_entry_prepared",
+      "known_limits": "原工程完成不代表独立交付验证完成；见 delivery65_status.csv"
+    },
+    {
+      "model_directory": "google__siglip-so400m-patch16-256-i18n",
+      "model_id": "google/siglip-so400m-patch16-256-i18n",
+      "environment_file": "zeroshot-main.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "completed",
+      "submission_entry_status": "native_port_prepared_pending_validation",
+      "known_limits": "原工程完成不代表独立交付验证完成；见 delivery65_status.csv"
+    },
+    {
+      "model_directory": "google__siglip2-base-patch16-224",
+      "model_id": "google/siglip2-base-patch16-224",
+      "environment_file": "zeroshot-main.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "completed",
+      "submission_entry_status": "independent_entry_prepared",
+      "known_limits": "原工程完成不代表独立交付验证完成；见 delivery65_status.csv"
+    },
+    {
+      "model_directory": "google__siglip2-base-patch16-512",
+      "model_id": "google/siglip2-base-patch16-512",
+      "environment_file": "zeroshot-main.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "completed",
+      "submission_entry_status": "independent_entry_prepared",
+      "known_limits": "原工程完成不代表独立交付验证完成；见 delivery65_status.csv"
+    },
+    {
+      "model_directory": "google__siglip2-base-patch16-naflex",
+      "model_id": "google/siglip2-base-patch16-naflex",
+      "environment_file": "zeroshot-main.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "completed",
+      "submission_entry_status": "independent_entry_prepared",
+      "known_limits": "原工程完成不代表独立交付验证完成；见 delivery65_status.csv"
+    },
+    {
+      "model_directory": "google__siglip2-base-patch32-256",
+      "model_id": "google/siglip2-base-patch32-256",
+      "environment_file": "zeroshot-main.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "completed",
+      "submission_entry_status": "independent_entry_prepared",
+      "known_limits": "原工程完成不代表独立交付验证完成；见 delivery65_status.csv"
+    },
+    {
+      "model_directory": "google__siglip2-giant-opt-patch16-384",
+      "model_id": "google/siglip2-giant-opt-patch16-384",
+      "environment_file": "zeroshot-main.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "completed",
+      "submission_entry_status": "independent_entry_prepared",
+      "known_limits": "原工程完成不代表独立交付验证完成；见 delivery65_status.csv"
+    },
+    {
+      "model_directory": "google__siglip2-large-patch16-512",
+      "model_id": "google/siglip2-large-patch16-512",
+      "environment_file": "zeroshot-main.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "completed",
+      "submission_entry_status": "independent_entry_prepared",
+      "known_limits": "原工程完成不代表独立交付验证完成；见 delivery65_status.csv"
+    },
+    {
+      "model_directory": "google__siglip2-so400m-patch14-384",
+      "model_id": "google/siglip2-so400m-patch14-384",
+      "environment_file": "zeroshot-main.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "completed",
+      "submission_entry_status": "independent_entry_prepared",
+      "known_limits": "原工程完成不代表独立交付验证完成；见 delivery65_status.csv"
+    },
+    {
+      "model_directory": "google__siglip2-so400m-patch16-512",
+      "model_id": "google/siglip2-so400m-patch16-512",
+      "environment_file": "zeroshot-main.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "completed",
+      "submission_entry_status": "independent_entry_prepared",
+      "known_limits": "原工程完成不代表独立交付验证完成；见 delivery65_status.csv"
+    },
+    {
+      "model_directory": "google__siglip2-so400m-patch16-naflex",
+      "model_id": "google/siglip2-so400m-patch16-naflex",
+      "environment_file": "zeroshot-main.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "completed",
+      "submission_entry_status": "independent_entry_prepared",
+      "known_limits": "原工程完成不代表独立交付验证完成；见 delivery65_status.csv"
+    },
+    {
+      "model_directory": "google__tipsv2-b14",
+      "model_id": "google/tipsv2-b14",
+      "environment_file": "zeroshot-main.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "blocked",
+      "submission_entry_status": "native_source_preserved_pending_integration",
+      "known_limits": "isolated install not tested; submission GPU not retested; Original ImageNet train reference bank and/or frozen KNN features have no relocated raw unit or matching archive; only validation is present"
+    },
+    {
+      "model_directory": "google__tipsv2-g14",
+      "model_id": "google/tipsv2-g14",
+      "environment_file": "zeroshot-main.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "blocked",
+      "submission_entry_status": "native_source_preserved_pending_integration",
+      "known_limits": "isolated install not tested; submission GPU not retested; Original ImageNet train reference bank and/or frozen KNN features have no relocated raw unit or matching archive; only validation is present"
+    },
+    {
+      "model_directory": "google__tipsv2-l14",
+      "model_id": "google/tipsv2-l14",
+      "environment_file": "zeroshot-main.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "blocked",
+      "submission_entry_status": "native_source_preserved_pending_integration",
+      "known_limits": "isolated install not tested; submission GPU not retested; Original ImageNet train reference bank and/or frozen KNN features have no relocated raw unit or matching archive; only validation is present"
+    },
+    {
+      "model_directory": "imageomics__bioclip",
+      "model_id": "imageomics/bioclip",
+      "environment_file": "zeroshot-main.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "completed",
+      "submission_entry_status": "native_port_prepared_pending_validation",
+      "known_limits": "原工程完成不代表独立交付验证完成；见 delivery65_status.csv"
+    },
+    {
+      "model_directory": "imageomics__bioclip-2",
+      "model_id": "imageomics/bioclip-2",
+      "environment_file": "zeroshot-main.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "completed",
+      "submission_entry_status": "native_port_prepared_pending_validation",
+      "known_limits": "原工程完成不代表独立交付验证完成；见 delivery65_status.csv"
+    },
+    {
+      "model_directory": "intfloat__mmE5-mllama-11b-instruct",
+      "model_id": "intfloat/mmE5-mllama-11b-instruct",
+      "environment_file": "zeroshot-mme5.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "completed",
+      "submission_entry_status": "native_port_prepared_pending_validation",
+      "known_limits": "原工程完成不代表独立交付验证完成；见 delivery65_status.csv"
+    },
+    {
+      "model_directory": "kakaobrain__align-base",
+      "model_id": "kakaobrain/align-base",
+      "environment_file": "zeroshot-main.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "completed",
+      "submission_entry_status": "native_port_prepared_pending_validation",
+      "known_limits": "原工程完成不代表独立交付验证完成；见 delivery65_status.csv"
+    },
+    {
+      "model_directory": "laion__CLIP-ViT-B-16-laion2B-s34B-b88K",
+      "model_id": "laion/CLIP-ViT-B-16-laion2B-s34B-b88K",
+      "environment_file": "zeroshot-main.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "completed",
+      "submission_entry_status": "independent_entry_prepared",
+      "known_limits": "原工程完成不代表独立交付验证完成；见 delivery65_status.csv"
+    },
+    {
+      "model_directory": "laion__CLIP-ViT-B-32-laion2B-s34B-b79K",
+      "model_id": "laion/CLIP-ViT-B-32-laion2B-s34B-b79K",
+      "environment_file": "zeroshot-main.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "completed",
+      "submission_entry_status": "independent_entry_prepared",
+      "known_limits": "原工程完成不代表独立交付验证完成；见 delivery65_status.csv"
+    },
+    {
+      "model_directory": "laion__CLIP-ViT-H-14-laion2B-s32B-b79K",
+      "model_id": "laion/CLIP-ViT-H-14-laion2B-s32B-b79K",
+      "environment_file": "zeroshot-main.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "completed",
+      "submission_entry_status": "independent_entry_prepared",
+      "known_limits": "原工程完成不代表独立交付验证完成；见 delivery65_status.csv"
+    },
+    {
+      "model_directory": "laion__CLIP-ViT-L-14-DataComp.XL-s13B-b90K",
+      "model_id": "laion/CLIP-ViT-L-14-DataComp.XL-s13B-b90K",
+      "environment_file": "zeroshot-main.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "completed",
+      "submission_entry_status": "independent_entry_prepared",
+      "known_limits": "原工程完成不代表独立交付验证完成；见 delivery65_status.csv"
+    },
+    {
+      "model_directory": "laion__CLIP-ViT-L-14-laion2B-s32B-b82K",
+      "model_id": "laion/CLIP-ViT-L-14-laion2B-s32B-b82K",
+      "environment_file": "zeroshot-main.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "completed",
+      "submission_entry_status": "independent_entry_prepared",
+      "known_limits": "原工程完成不代表独立交付验证完成；见 delivery65_status.csv"
+    },
+    {
+      "model_directory": "laion__CLIP-ViT-bigG-14-laion2B-39B-b160k",
+      "model_id": "laion/CLIP-ViT-bigG-14-laion2B-39B-b160k",
+      "environment_file": "zeroshot-main.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "completed",
+      "submission_entry_status": "independent_entry_prepared",
+      "known_limits": "原工程完成不代表独立交付验证完成；见 delivery65_status.csv"
+    },
+    {
+      "model_directory": "laion__CLIP-ViT-g-14-laion2B-s34B-b88K",
+      "model_id": "laion/CLIP-ViT-g-14-laion2B-s34B-b88K",
+      "environment_file": "zeroshot-main.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "completed",
+      "submission_entry_status": "independent_entry_prepared",
+      "known_limits": "原工程完成不代表独立交付验证完成；见 delivery65_status.csv"
+    },
+    {
+      "model_directory": "laion__CLIP-convnext_large_d_320.laion2B-s29B-b131K-ft-soup",
+      "model_id": "laion/CLIP-convnext_large_d_320.laion2B-s29B-b131K-ft-soup",
+      "environment_file": "zeroshot-main.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "completed",
+      "submission_entry_status": "independent_entry_prepared",
+      "known_limits": "原工程完成不代表独立交付验证完成；见 delivery65_status.csv"
+    },
+    {
+      "model_directory": "laion__CLIP-convnext_xxlarge-laion2B-s34B-b82K-augreg-soup",
+      "model_id": "laion/CLIP-convnext_xxlarge-laion2B-s34B-b82K-augreg-soup",
+      "environment_file": "zeroshot-main.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "completed",
+      "submission_entry_status": "independent_entry_prepared",
+      "known_limits": "原工程完成不代表独立交付验证完成；见 delivery65_status.csv"
+    },
+    {
+      "model_directory": "lyua1225__clip-huge-zh-75k-steps-bs4096",
+      "model_id": "lyua1225/clip-huge-zh-75k-steps-bs4096",
+      "environment_file": "zeroshot-main.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "completed",
+      "submission_entry_status": "native_port_prepared_pending_validation",
+      "known_limits": "原工程完成不代表独立交付验证完成；见 delivery65_status.csv"
+    },
+    {
+      "model_directory": "microsoft__BiomedCLIP-PubMedBERT_256-vit_base_patch16_224",
+      "model_id": "microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224",
+      "environment_file": "zeroshot-main.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "completed",
+      "submission_entry_status": "independent_entry_prepared",
+      "known_limits": "原工程完成不代表独立交付验证完成；见 delivery65_status.csv"
+    },
+    {
+      "model_directory": "microsoft__LLM2CLIP-EVA02-L-14-336",
+      "model_id": "microsoft/LLM2CLIP-EVA02-L-14-336",
+      "environment_file": "zeroshot-llm2clip.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "failed",
+      "submission_entry_status": "native_source_preserved_pending_integration",
+      "known_limits": "isolated install not tested; submission GPU not retested; g checkpoint shards:  50%|█████     | 2/4 [00:07<00:07,  3.63s/it]\nLoading checkpoint shards:  75%|███████▌  | 3/4 [00:11<00:03,  3.77s/it]\nLoading checkpoint shards: 100%|██████████| 4/4 [00:11<00:00,  2.35s/it]\nLoading checkpoint shards: 100%|██████████| 4/4 [00:11<00:00,  2.79s/it]\nThe attention layers in this model are transitioning from computing the RoPE embeddings internally through `position_ids` (2D tensor with the indexes of the tokens), to using externally computed `position_embeddings` (Tuple of tensors, containing cos and sin). In v4.45 `position_ids` will be removed and `position_embeddings` will be mandatory.\n/data/zhoujianjie/.venvs/zeroshot-main/lib/python3.10/site-packages/timm/models/layers/__init__.py:48: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers\n  warnings.warn(f\"Importing from {__name__} is deprecated, please import via timm.layers\", FutureWarning)\nTraceback (most recent call last):\n  File \"/data/zhoujianjie/model_inference_for_GPU_adaptation/classification/zhoujianjie/models/microsoft__LLM2CLIP-EVA02-L-14-336/inference/bootstrap.py\", line 10, in <module>\n    runpy.run_path(str(Path(__file__).with_name('llm2clip_native.py')),run_name='__main__')\n  File \"/usr/lib/python3.10/runpy.py\", line 289, in run_path\n    return _run_module_code(code, init_globals, run_name,\n  File \"/usr/lib/python3.10/runpy.py\", line 96, in _run_module_code\n    _run_code(code, mod_globals, init_globals,\n  File \"/usr/lib/python3.10/runpy.py\", line 86, in _run_code\n    exec(code, run_globals)\n  File \"/data/zhoujianjie/model_inference_for_GPU_adaptation/classification/zhoujianjie/models/microsoft__LLM2CLIP-EVA02-L-14-336/inference/llm2clip_native.py\", line 266, in <module>\n    main()\n  File \"/data/zhoujianjie/model_inference_for_GPU_adaptation/classification/zhoujianjie/models/microsoft__LLM2CLIP-EVA02-L-14-336/inference/llm2clip_native.py\", line 202, in main\n    model, _, preprocess = create_model_and_transforms(\n  File \"/data/zhoujianjie/environment_setup/native_sources/evaluation_audit/reference_code/LLM2CLIP/llm2clip/eva_clip/factory.py\", line 389, in create_model_and_transforms\n    model = create_model(\n  File \"/data/zhoujianjie/environment_setup/native_sources/evaluation_audit/reference_code/LLM2CLIP/llm2clip/eva_clip/factory.py\", line 282, in create_model\n    model = CustomCLIP(**model_cfg, cast_dtype=cast_dtype)\n  File \"/data/zhoujianjie/environment_setup/native_sources/evaluation_audit/reference_code/LLM2CLIP/llm2clip/eva_clip/model.py\", line 326, in __init__\n    self.visual = _build_vision_tower(embed_dim, vision_cfg, quick_gelu, cast_dtype)\n  File \"/data/zhoujianjie/environment_setup/native_sources/evaluation_audit/reference_code/LLM2CLIP/llm2clip/eva_clip/model.py\", line 111, in _build_vision_tower\n    visual = EVAVisionTransformer(\n  File \"/data/zhoujianjie/environment_setup/native_sources/evaluation_audit/reference_code/LLM2CLIP/llm2clip/eva_clip/eva_vit_model.py\", line 422, in __init__\n    self.blocks = nn.ModuleList([\n  File \"/data/zhoujianjie/environment_setup/native_sources/evaluation_audit/reference_code/LLM2CLIP/llm2clip/eva_clip/eva_vit_model.py\", line 423, in <listcomp>\n    Block(\n  File \"/data/zhoujianjie/environment_setup/native_sources/evaluation_audit/reference_code/LLM2CLIP/llm2clip/eva_clip/eva_vit_model.py\", line 262, in __init__\n    self.norm1 = norm_layer(dim)\n  File \"/usr/local/lib/python3.10/dist-packages/apex/normalization/fused_layer_norm.py\", line 294, in __init__\n    fused_layer_norm_cuda = importlib.import_module(\"fused_layer_norm_cuda\")\n  File \"/usr/lib/python3.10/importlib/__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n  File \"<frozen importlib._bootstrap>\", line 1050, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1027, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1006, in _find_and_load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 674, in _load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 571, in module_from_spec\n  File \"<frozen importlib._bootstrap_external>\", line 1176, in create_module\n  File \"<frozen importlib._bootstrap>\", line 241, in _call_with_frames_removed\nImportError: /usr/local/lib/python3.10/dist-packages/fused_layer_norm_cuda.cpython-310-x86_64-linux-gnu.so: undefined symbol: _ZN3c106detail14torchCheckFailEPKcS2_jRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE\nTraceback (most recent call last):\n  File \"/data/zhoujianjie/environment_setup/run_llm2clip_native.py\", line 13, in <module>\n    subprocess.run(['python',str(model/'inference/bootstrap.py')],check=True)\n  File \"/usr/lib/python3.10/subprocess.py\", line 526, in run\n    raise CalledProcessError(retcode, process.args,\nsubprocess.CalledProcessError: Command '['python', '/data/zhoujianjie/model_inference_for_GPU_adaptation/classification/zhoujianjie/models/microsoft__LLM2CLIP-EVA02-L-14-336/inference/bootstrap.py']' returned non-zero exit status 1.\n"
+    },
+    {
+      "model_directory": "microsoft__colipri",
+      "model_id": "microsoft/colipri",
+      "environment_file": "zeroshot-main.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "blocked",
+      "submission_entry_status": "native_source_preserved_pending_integration",
+      "known_limits": "isolated install not tested; submission GPU not retested; Not found in relocated project or native source asset search: valid_predicted_labels.csv"
+    },
+    {
+      "model_directory": "openai__clip-vit-base-patch16",
+      "model_id": "openai/clip-vit-base-patch16",
+      "environment_file": "zeroshot-main.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "completed",
+      "submission_entry_status": "independent_entry_prepared",
+      "known_limits": "原工程完成不代表独立交付验证完成；见 delivery65_status.csv"
+    },
+    {
+      "model_directory": "openai__clip-vit-base-patch32",
+      "model_id": "openai/clip-vit-base-patch32",
+      "environment_file": "zeroshot-main.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "completed",
+      "submission_entry_status": "independent_entry_prepared",
+      "known_limits": "原工程完成不代表独立交付验证完成；见 delivery65_status.csv"
+    },
+    {
+      "model_directory": "openai__clip-vit-large-patch14",
+      "model_id": "openai/clip-vit-large-patch14",
+      "environment_file": "zeroshot-main.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "completed",
+      "submission_entry_status": "native_port_prepared_pending_validation",
+      "known_limits": "原工程完成不代表独立交付验证完成；见 delivery65_status.csv"
+    },
+    {
+      "model_directory": "openai__clip-vit-large-patch14-336",
+      "model_id": "openai/clip-vit-large-patch14-336",
+      "environment_file": "zeroshot-main.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "completed",
+      "submission_entry_status": "independent_entry_prepared",
+      "known_limits": "原工程完成不代表独立交付验证完成；见 delivery65_status.csv"
+    },
+    {
+      "model_directory": "patrickjohncyh__fashion-clip",
+      "model_id": "patrickjohncyh/fashion-clip",
+      "environment_file": "zeroshot-main.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "completed",
+      "submission_entry_status": "native_port_prepared_pending_validation",
+      "known_limits": "原工程完成不代表独立交付验证完成；见 delivery65_status.csv"
+    },
+    {
+      "model_directory": "philschmid__clip-zero-shot-image-classification",
+      "model_id": "philschmid/clip-zero-shot-image-classification",
+      "environment_file": "zeroshot-main.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "completed",
+      "submission_entry_status": "native_port_prepared_pending_validation",
+      "known_limits": "原工程完成不代表独立交付验证完成；见 delivery65_status.csv"
+    },
+    {
+      "model_directory": "q-future__one-align",
+      "model_id": "q-future/one-align",
+      "environment_file": "zeroshot-onealign.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "completed",
+      "submission_entry_status": "native_port_prepared_pending_validation",
+      "known_limits": "原工程完成不代表独立交付验证完成；见 delivery65_status.csv"
+    },
+    {
+      "model_directory": "qihoo360__fg-clip2-base",
+      "model_id": "qihoo360/fg-clip2-base",
+      "environment_file": "zeroshot-fgclip.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "completed",
+      "submission_entry_status": "native_port_prepared_pending_validation",
+      "known_limits": "原工程完成不代表独立交付验证完成；见 delivery65_status.csv"
+    },
+    {
+      "model_directory": "timm__ViT-B-16-SigLIP",
+      "model_id": "timm/ViT-B-16-SigLIP",
+      "environment_file": "zeroshot-main.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "completed",
+      "submission_entry_status": "native_port_prepared_pending_validation",
+      "known_limits": "原工程完成不代表独立交付验证完成；见 delivery65_status.csv"
+    },
+    {
+      "model_directory": "timm__ViT-L-16-SigLIP-384",
+      "model_id": "timm/ViT-L-16-SigLIP-384",
+      "environment_file": "zeroshot-main.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "completed",
+      "submission_entry_status": "native_port_prepared_pending_validation",
+      "known_limits": "原工程完成不代表独立交付验证完成；见 delivery65_status.csv"
+    },
+    {
+      "model_directory": "timm__ViT-SO400M-14-SigLIP",
+      "model_id": "timm/ViT-SO400M-14-SigLIP",
+      "environment_file": "zeroshot-main.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "completed",
+      "submission_entry_status": "native_port_prepared_pending_validation",
+      "known_limits": "原工程完成不代表独立交付验证完成；见 delivery65_status.csv"
+    },
+    {
+      "model_directory": "timm__ViT-SO400M-14-SigLIP-384",
+      "model_id": "timm/ViT-SO400M-14-SigLIP-384",
+      "environment_file": "zeroshot-main.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "completed",
+      "submission_entry_status": "native_port_prepared_pending_validation",
+      "known_limits": "原工程完成不代表独立交付验证完成；见 delivery65_status.csv"
+    },
+    {
+      "model_directory": "vinid__plip",
+      "model_id": "vinid/plip",
+      "environment_file": "zeroshot-main.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "completed",
+      "submission_entry_status": "independent_entry_prepared",
+      "known_limits": "原工程完成不代表独立交付验证完成；见 delivery65_status.csv"
+    },
+    {
+      "model_directory": "wisdomik__QuiltNet-B-32",
+      "model_id": "wisdomik/QuiltNet-B-32",
+      "environment_file": "zeroshot-main.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "completed",
+      "submission_entry_status": "independent_entry_prepared",
+      "known_limits": "原工程完成不代表独立交付验证完成；见 delivery65_status.csv"
+    },
+    {
+      "model_directory": "woweenie__open-clip-vit-h-nsfw-finetune",
+      "model_id": "woweenie/open-clip-vit-h-nsfw-finetune",
+      "environment_file": "zeroshot-main.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "blocked",
+      "submission_entry_status": "native_source_preserved_pending_integration",
+      "known_limits": "isolated install not tested; submission GPU not retested; Original cashbox_v6 dataset has no relocated dataset unit or matching archive"
+    },
+    {
+      "model_directory": "yuvalkirstain__PickScore_v1",
+      "model_id": "yuvalkirstain/PickScore_v1",
+      "environment_file": "zeroshot-main.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "completed",
+      "submission_entry_status": "native_port_prepared_pending_validation",
+      "known_limits": "原工程完成不代表独立交付验证完成；见 delivery65_status.csv"
+    },
+    {
+      "model_directory": "zer0int__CLIP-GmP-ViT-L-14",
+      "model_id": "zer0int/CLIP-GmP-ViT-L-14",
+      "environment_file": "zeroshot-main.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "blocked",
+      "submission_entry_status": "native_source_preserved_pending_integration",
+      "known_limits": "isolated install not tested; submission GPU not retested; Not found in relocated project or native source asset search: flash_data_release_2023.zip"
+    },
+    {
+      "model_directory": "zer0int__CLIP-SAE-ViT-L-14",
+      "model_id": "zer0int/CLIP-SAE-ViT-L-14",
+      "environment_file": "zeroshot-main.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "blocked",
+      "submission_entry_status": "native_source_preserved_pending_integration",
+      "known_limits": "isolated install not tested; submission GPU not retested; Not found in relocated project or native source asset search: flash_data_release_2023.zip"
+    },
+    {
+      "model_directory": "zer0int__LongCLIP-GmP-ViT-L-14",
+      "model_id": "zer0int/LongCLIP-GmP-ViT-L-14",
+      "environment_file": "zeroshot-main.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "blocked",
+      "submission_entry_status": "native_source_preserved_pending_integration",
+      "known_limits": "isolated install not tested; submission GPU not retested; Not found in relocated project or native source asset search: flash_data_release_2023.zip"
+    },
+    {
+      "model_directory": "zer0int__LongCLIP-SAE-ViT-L-14",
+      "model_id": "zer0int/LongCLIP-SAE-ViT-L-14",
+      "environment_file": "zeroshot-main.txt",
+      "python_version": "3.10",
+      "gpu_runtime": "A100; original base PyTorch/CUDA required",
+      "historical_a100_status": "blocked",
+      "submission_entry_status": "native_source_preserved_pending_integration",
+      "known_limits": "isolated install not tested; submission GPU not retested; Not found in relocated project or native source asset search: flash_data_release_2023.zip"
+    }
+  ],
+  "historical_status_is_not_submission_validation": true,
+  "current_status_report": "delivery65_status.json",
+  "first_batch_scope": 65,
+  "excluded_scope": 12
+}

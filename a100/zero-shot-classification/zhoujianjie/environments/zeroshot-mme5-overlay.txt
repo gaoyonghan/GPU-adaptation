@@ -1,0 +1,12 @@
+# A100 installed overlay snapshot; requires recorded base environment.
+accelerate==0.34.0
+datasets==2.19.2
+dill==0.3.8
+fsspec==2024.3.1
+huggingface-hub==0.28.1
+multiprocess==0.70.16
+peft==0.10.0
+pyarrow-hotfix==0.7
+tokenizers==0.21.0
+transformers==4.48.3
+xxhash==4.0.1

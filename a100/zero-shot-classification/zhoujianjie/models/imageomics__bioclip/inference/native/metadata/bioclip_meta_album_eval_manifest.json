@@ -1,0 +1,135 @@
+{
+  "status": "verified_eval_only",
+  "source": "official Meta-Album Mini datasets on OpenML",
+  "evaluator_commit": "49e1cf50e0341ed41d13353d23cbf963bdb1293a",
+  "total_images": 16200,
+  "train_payload_downloaded": false,
+  "datasets": {
+    "PLK_Mini": {
+      "openml_id": 44282,
+      "openml_name": "Meta_Album_PLK_Mini",
+      "openml_version": 1,
+      "official_page": "https://www.openml.org/d/44282",
+      "official_archive_url": "https://data.openml.org/datasets/0004/44282/PLK_Mini.zip",
+      "cache_dir": "/home/dell/Projects/hengxiang/datasets/evaluation/bioclip_meta_album_official/openml_cache/org/openml/www/datasets/44282",
+      "archive_receipt": {
+        "reused_openml_client_cache": true
+      },
+      "official_annotation": "/home/dell/Projects/hengxiang/evaluation_audit/reference_code/bioclip-2/data/annotation/meta-album/PLK_Mini/metadata.csv",
+      "annotation_sha256": "9cf10b0aa8a0355cfa40bbf1b49f448fb2523ef1624770a6a2c2482451223a2e",
+      "image_count": 3440,
+      "final_eval_dir": "/home/dell/Projects/hengxiang/datasets/evaluation/bioclip_meta_album_official/set0/PLK_Mini/val",
+      "image_manifest_sha256": "a5d1f7098cfa08c08b862841400b11fdef005c30bf423fdf97f06cc5540e01a7",
+      "split_semantics": "full official Meta-Album Mini release, mounted as val by BioCLIP evaluator",
+      "train_payload_downloaded": false
+    },
+    "PLT_VIL_Mini": {
+      "openml_id": 44286,
+      "openml_name": "Meta_Album_PLT_VIL_Mini",
+      "openml_version": 1,
+      "official_page": "https://www.openml.org/d/44286",
+      "official_archive_url": "https://data.openml.org/datasets/0004/44286/PLT_VIL_Mini.zip",
+      "cache_dir": "/home/dell/Projects/hengxiang/datasets/evaluation/bioclip_meta_album_official/official_mini_sources/PLT_VIL_Mini",
+      "archive_receipt": {
+        "reused": true
+      },
+      "official_annotation": "/home/dell/Projects/hengxiang/evaluation_audit/reference_code/bioclip-2/data/annotation/meta-album/PLT_VIL_Mini/metadata.csv",
+      "annotation_sha256": "7def817fb573de45d8128adc458725c1613a02526d74113672dbeda53521b22e",
+      "image_count": 1520,
+      "final_eval_dir": "/home/dell/Projects/hengxiang/datasets/evaluation/bioclip_meta_album_official/set0/PLT_VIL_Mini/val",
+      "image_manifest_sha256": "08ac7c55dd82afb4419faed7495bbd80c240b81515c1e736a43df4ce666590e7",
+      "split_semantics": "full official Meta-Album Mini release, mounted as val by BioCLIP evaluator",
+      "train_payload_downloaded": false
+    },
+    "INS_2_Mini": {
+      "openml_id": 44292,
+      "openml_name": "Meta_Album_INS_2_Mini",
+      "openml_version": 1,
+      "official_page": "https://www.openml.org/d/44292",
+      "official_archive_url": "https://data.openml.org/datasets/0004/44292/INS_2_Mini.zip",
+      "cache_dir": "/home/dell/Projects/hengxiang/datasets/evaluation/bioclip_meta_album_official/official_mini_sources/INS_2_Mini",
+      "archive_receipt": {
+        "reused": true
+      },
+      "official_annotation": "/home/dell/Projects/hengxiang/evaluation_audit/reference_code/bioclip-2/data/annotation/meta-album/INS_2_Mini/metadata.csv",
+      "annotation_sha256": "52f2f3adb3df09d507e09679728ea2c6d8472123a418399303f30a82b22cc3ec",
+      "image_count": 4080,
+      "final_eval_dir": "/home/dell/Projects/hengxiang/datasets/evaluation/bioclip_meta_album_official/set1/INS_2_Mini/val",
+      "image_manifest_sha256": "9eb7994040043fb4f8d7b86e41650a421f35be5882fcb6e3e22819381fb18a55",
+      "split_semantics": "full official Meta-Album Mini release, mounted as val by BioCLIP evaluator",
+      "train_payload_downloaded": false
+    },
+    "PLT_NET_Mini": {
+      "openml_id": 44293,
+      "openml_name": "Meta_Album_PLT_NET_Mini",
+      "openml_version": 1,
+      "official_page": "https://www.openml.org/d/44293",
+      "official_archive_url": "https://data.openml.org/datasets/0004/44293/PLT_NET_Mini.zip",
+      "cache_dir": "/home/dell/Projects/hengxiang/datasets/evaluation/bioclip_meta_album_official/official_mini_sources/PLT_NET_Mini",
+      "archive_receipt": {
+        "reused": true
+      },
+      "official_annotation": "/home/dell/Projects/hengxiang/evaluation_audit/reference_code/bioclip-2/data/annotation/meta-album/PLT_NET_Mini/metadata.csv",
+      "annotation_sha256": "0b04531a6f146e021a9f393dc922e79bed8d63566335ef0511a6c0b08d5e4e05",
+      "image_count": 1000,
+      "final_eval_dir": "/home/dell/Projects/hengxiang/datasets/evaluation/bioclip_meta_album_official/set1/PLT_NET_Mini/val",
+      "image_manifest_sha256": "da16e3dcde50af10817c1d3c48a86599a64310ee07b6dd4fcf8338651d036bfb",
+      "split_semantics": "full official Meta-Album Mini release, mounted as val by BioCLIP evaluator",
+      "train_payload_downloaded": false
+    },
+    "MED_LF_Mini": {
+      "openml_id": 44299,
+      "openml_name": "Meta_Album_MED_LF_Mini",
+      "openml_version": 1,
+      "official_page": "https://www.openml.org/d/44299",
+      "official_archive_url": "https://data.openml.org/datasets/0004/44299/MED_LF_Mini.zip",
+      "cache_dir": "/home/dell/Projects/hengxiang/datasets/evaluation/bioclip_meta_album_official/official_mini_sources/MED_LF_Mini",
+      "archive_receipt": {
+        "reused": true
+      },
+      "official_annotation": "/home/dell/Projects/hengxiang/evaluation_audit/reference_code/bioclip-2/data/annotation/meta-album/MED_LF_Mini/metadata.csv",
+      "annotation_sha256": "21f14cc8432492c42fce6c4a4dc74dd850c38e27fea561b5f84712051b16608f",
+      "image_count": 1000,
+      "final_eval_dir": "/home/dell/Projects/hengxiang/datasets/evaluation/bioclip_meta_album_official/set1/MED_LF_Mini/val",
+      "image_manifest_sha256": "ade1dfadc3f1fdc592e310ee65a8b5f87227f21200f3baf56b8218b51778ecd3",
+      "split_semantics": "full official Meta-Album Mini release, mounted as val by BioCLIP evaluator",
+      "train_payload_downloaded": false
+    },
+    "FNG_Mini": {
+      "openml_id": 44302,
+      "openml_name": "Meta_Album_FNG_Mini",
+      "openml_version": 1,
+      "official_page": "https://www.openml.org/d/44302",
+      "official_archive_url": "https://data.openml.org/datasets/0004/44302/FNG_Mini.zip",
+      "cache_dir": "/home/dell/Projects/hengxiang/datasets/evaluation/bioclip_meta_album_official/official_mini_sources/FNG_Mini",
+      "archive_receipt": {
+        "reused": true
+      },
+      "official_annotation": "/home/dell/Projects/hengxiang/evaluation_audit/reference_code/bioclip-2/data/annotation/meta-album/FNG_Mini/metadata.csv",
+      "annotation_sha256": "e4f231572c2bc59c00bbb5708572249b064b3e53c057da290b58930e87f8ac3b",
+      "image_count": 1000,
+      "final_eval_dir": "/home/dell/Projects/hengxiang/datasets/evaluation/bioclip_meta_album_official/set2/FNG_Mini/val",
+      "image_manifest_sha256": "372f535a465a6c77c05b40564b2957304f2c846406cf021131a77ab44b77056e",
+      "split_semantics": "full official Meta-Album Mini release, mounted as val by BioCLIP evaluator",
+      "train_payload_downloaded": false
+    },
+    "INS_Mini": {
+      "openml_id": 44306,
+      "openml_name": "Meta_Album_INS_Mini",
+      "openml_version": 1,
+      "official_page": "https://www.openml.org/d/44306",
+      "official_archive_url": "https://data.openml.org/datasets/0004/44306/INS_Mini.zip",
+      "cache_dir": "/home/dell/Projects/hengxiang/datasets/evaluation/bioclip_meta_album_official/official_mini_sources/INS_Mini",
+      "archive_receipt": {
+        "reused": true
+      },
+      "official_annotation": "/home/dell/Projects/hengxiang/evaluation_audit/reference_code/bioclip-2/data/annotation/meta-album/INS_Mini/metadata.csv",
+      "annotation_sha256": "a3bee2f00772e3bd7520647ec006fe78f7525712fbd2e48105903595900d5ece",
+      "image_count": 4160,
+      "final_eval_dir": "/home/dell/Projects/hengxiang/datasets/evaluation/bioclip_meta_album_official/set2/INS_Mini/val",
+      "image_manifest_sha256": "7a08b165d95476980b198e42ae90eb1bf6d65f5d001828dc75120b65f7a3db47",
+      "split_semantics": "full official Meta-Album Mini release, mounted as val by BioCLIP evaluator",
+      "train_payload_downloaded": false
+    }
+  }
+}

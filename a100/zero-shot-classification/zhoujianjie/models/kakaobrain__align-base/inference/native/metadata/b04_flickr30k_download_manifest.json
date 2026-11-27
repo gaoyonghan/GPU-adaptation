@@ -1,0 +1,58 @@
+{
+  "generated_at": "2026-08-29T16:00:14+08:00",
+  "batch": "B04-retrieval",
+  "policy": "official test split only; train shards excluded",
+  "datasets": [
+    {
+      "name": "Flickr30k Karpathy test",
+      "source": "clip-benchmark/wds_flickr30k",
+      "revision": "f8af3ceee1b944bf761340682621dfafd23974d2",
+      "split": "test",
+      "samples": 1000,
+      "files": [
+        {
+          "path": "test/0.tar",
+          "bytes": 26869760,
+          "sha256": "cf35de1f64115f12e7828163177af1fe7c68bafbc5b0ec1854a5dfee7aa45f31",
+          "members": 400,
+          "samples": 200,
+          "verified": true
+        },
+        {
+          "path": "test/1.tar",
+          "bytes": 29204480,
+          "sha256": "f81e46b29f6c71199a224e03f22e91cefc3f15e24134c8cad4e4dc0faf12fe50",
+          "members": 400,
+          "samples": 200,
+          "verified": true
+        },
+        {
+          "path": "test/2.tar",
+          "bytes": 29071360,
+          "sha256": "c3882859a250fb3ab880546d533ff3d21ccec1a36b826cc3ee3dbc4c76386692",
+          "members": 400,
+          "samples": 200,
+          "verified": true
+        },
+        {
+          "path": "test/3.tar",
+          "bytes": 31242240,
+          "sha256": "a7af6be2f67ec3534a65171f286c3e8783f45dfe699538f7569c76226281e716",
+          "members": 400,
+          "samples": 200,
+          "verified": true
+        },
+        {
+          "path": "test/4.tar",
+          "bytes": 29184000,
+          "sha256": "d40f9a9a6e982366bdf256bbc9ca5eb1abf6cf0f53679a62af9a26f6f1b8f9f8",
+          "members": 400,
+          "samples": 200,
+          "verified": true
+        }
+      ],
+      "bytes": 145571840,
+      "status": "downloaded/verified"
+    }
+  ]
+}

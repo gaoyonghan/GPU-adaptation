@@ -1,0 +1,60 @@
+{
+  "purpose": "checkpoint_conversion_mapping_evidence_only",
+  "generated_at": "2026-09-05T17:53:07+08:00",
+  "status": "passed",
+  "preflight_mapping": {
+    "export_model": "Xenova/clip-vit-base-patch32",
+    "export_revision": "d15189d7028b43f1d3e65039190477f6af591c2a",
+    "declared_source_model": "openai/clip-vit-base-patch32",
+    "declared_source_commit": "e6a30b603a447e251fdaca1c3056b2a16cdfebeb",
+    "expected_source_commit": "e6a30b603a447e251fdaca1c3056b2a16cdfebeb",
+    "onnx_sha256": "8ac34fc990f890b4bec8d197de81f956fb135a65067e77fadbf8f053656ed711",
+    "expected_onnx_sha256": "8ac34fc990f890b4bec8d197de81f956fb135a65067e77fadbf8f053656ed711",
+    "provider": "CPUExecutionProvider"
+  },
+  "sample_source": "first deterministic rows of pinned ImageNet-1k validation shards",
+  "image_count": 8,
+  "text_count": 8,
+  "shared_processor_source": "openai/clip-vit-base-patch32 local pinned files",
+  "comparisons": {
+    "logits_per_image": {
+      "max_absolute_error": 3.4332275390625e-05,
+      "mean_absolute_error": 1.055002212524414e-05,
+      "minimum_per_sample_cosine": 0.999999999999161
+    },
+    "logits_per_text": {
+      "max_absolute_error": 3.4332275390625e-05,
+      "mean_absolute_error": 1.055002212524414e-05,
+      "minimum_per_sample_cosine": 0.999999999999434
+    },
+    "text_embeds": {
+      "max_absolute_error": 3.8743019104003906e-07,
+      "mean_absolute_error": 3.825753641661933e-08,
+      "minimum_per_sample_cosine": 0.9999999999988856
+    },
+    "image_embeds": {
+      "max_absolute_error": 1.169741153717041e-06,
+      "mean_absolute_error": 8.806033713337769e-08,
+      "minimum_per_sample_cosine": 0.9999999999826039
+    }
+  },
+  "split_tower_artifacts": {
+    "text_model_sha256": "3f6571f5bad13a97c469c1622e1cfc4d9aef78b79fdbfcff804ca357bfada8cc",
+    "vision_model_sha256": "fd6e1402a588279d1723c7534d4bcba5bc0b14b47dfab0e46f8c47b8270d7d40",
+    "comparisons_to_openai_source": {
+      "text_embeds": {
+        "max_absolute_error": 4.72937536239624,
+        "mean_absolute_error": 0.20244553962508516,
+        "minimum_per_sample_cosine": 0.9999999999988883
+      },
+      "image_embeds": {
+        "max_absolute_error": 6.5693769454956055,
+        "mean_absolute_error": 0.2553995133015909,
+        "minimum_per_sample_cosine": 0.9999999999825934
+      }
+    }
+  },
+  "image_retrieval_argmax_equal": true,
+  "text_retrieval_argmax_equal": true,
+  "note": "Passing proves numerical conversion equivalence on these inputs; it is not by itself an official metric run."
+}

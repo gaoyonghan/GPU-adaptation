@@ -1,0 +1,18 @@
+{
+  "model_id": "google/siglip-base-patch16-256-multilingual",
+  "launcher": "run_siglip_native.py",
+  "args": [
+    "google/siglip-base-patch16-256-multilingual"
+  ],
+  "native_task": "retrieval",
+  "public_evaluator": "unsupported_original_retrieval",
+  "bounded_smoke_supported": true,
+  "required_weights": [
+    "download_receipt.json"
+  ],
+  "required_data": [
+    "raw/mteb_flickr30k/corpus/corpus-00000-of-00001.parquet",
+    "raw/mteb_flickr30k/query/test-00000-of-00001.parquet",
+    "raw/mteb_flickr30k/qrels/test-00000-of-00001.parquet"
+  ]
+}

@@ -1,0 +1,4 @@
+# A100 installed overlay snapshot; requires recorded base environment.
+tokenizers==0.19.1
+transformers==4.43.4
+xformers==0.0.29.post3

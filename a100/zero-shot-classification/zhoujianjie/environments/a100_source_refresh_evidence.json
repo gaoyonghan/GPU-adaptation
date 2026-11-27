@@ -1,0 +1,13 @@
+{
+  "snapshot_date": "2026-11-26",
+  "source": "A100 original engineering scripts; copied read-only before independent port",
+  "files": {
+    "native_python.py": "ea047f7906c92e5d0173ccd6195c3d183645560aa19bcf826d028044e623005c",
+    "bioclip_native_a100.py": "be9fdae4bb0596783947dca9dfd125ec9ebafa071650523f6b342e1a7dd4b96d",
+    "onealign_native_a100.py": "cdef1cdfcc297ebcf208b1f9f7f5ebf015abc4f74627ad03d8f62c1155bb1d10",
+    "run_special_native.py": "2addda73c2d324f9fbd523fb313b95d626109c103be68d88e268fa79b2cc83ae",
+    "mme5_native_a100.py": "3928b244d8eadb6a97016c5a2126c6b28961660985c699c6fe2f0972e0578e3e",
+    "fgclip_native_a100.py": "16585c15b569dd31f57691082637e7f28dc7986a3b95658d963ede47bb602a7b"
+  },
+  "note": "Ported files have explicit path/diagnostic/output adaptations and retain original snapshots; these SHA values identify source inputs, not the modified ports."
+}

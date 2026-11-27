@@ -1,0 +1,7 @@
+{
+  "model": "laion/CLIP-convnext_large_d_320.laion2B-s29B-b131K-ft-soup",
+  "historical_a100_status": "completed",
+  "submission_entry_status": "independent_entry_prepared",
+  "gpu_retested_in_submission": false,
+  "reason": null
+}

@@ -1,0 +1,17 @@
+{
+  "model_id": "OFA-Sys/chinese-clip-vit-base-patch16",
+  "launcher": "run_chinese_native.py",
+  "args": [
+    "OFA-Sys/chinese-clip-vit-base-patch16"
+  ],
+  "native_task": "single_label_classification",
+  "public_evaluator": "supported_pending_validation",
+  "bounded_smoke_supported": true,
+  "required_weights": [
+    "download_receipt.json"
+  ],
+  "required_data": [
+    "raw/chinese_clip_fer-2013/test",
+    "raw/chinese_clip_fer-2013/label_cn.txt"
+  ]
+}

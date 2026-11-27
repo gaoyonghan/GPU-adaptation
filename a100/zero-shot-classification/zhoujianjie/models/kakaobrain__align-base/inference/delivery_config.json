@@ -1,0 +1,15 @@
+{
+  "model_id": "kakaobrain/align-base",
+  "launcher": "run_align_native.py",
+  "args": [],
+  "native_task": "retrieval",
+  "public_evaluator": "unsupported_original_retrieval",
+  "bounded_smoke_supported": true,
+  "required_weights": [
+    "download_receipt.json"
+  ],
+  "required_data": [
+    "raw/flickr30k_1",
+    "raw/flickr30k_2/flickr30k_test.json"
+  ]
+}

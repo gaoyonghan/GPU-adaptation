@@ -1,0 +1,10 @@
+{
+  "model": "laion/CLIP-convnext_large_d_320.laion2B-s29B-b131K-ft-soup",
+  "historical_command": [
+    "python",
+    "inference.py"
+  ],
+  "native_evaluator": "evaluation_audit/evaluate_imagenet1k_official.py",
+  "historical_a100_environment": null,
+  "purpose": "provenance only; not a central task registry"
+}

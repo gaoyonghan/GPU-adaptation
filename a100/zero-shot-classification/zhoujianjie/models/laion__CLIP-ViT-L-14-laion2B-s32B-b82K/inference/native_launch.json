@@ -1,0 +1,10 @@
+{
+  "model": "laion/CLIP-ViT-L-14-laion2B-s32B-b82K",
+  "historical_command": [
+    "python",
+    "inference.py"
+  ],
+  "native_evaluator": "evaluation_audit/evaluate_openclip_new_suite_official.py",
+  "historical_a100_environment": null,
+  "purpose": "provenance only; not a central task registry"
+}

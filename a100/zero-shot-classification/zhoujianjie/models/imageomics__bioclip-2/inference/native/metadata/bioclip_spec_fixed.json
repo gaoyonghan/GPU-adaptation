@@ -1,0 +1,131 @@
+{
+  "models": {
+    "imageomics/bioclip": {
+      "revision": "ce901ab3c6a913f9e9ef94ce6d27761069f4f01c",
+      "local_dir": "/data/zhoujianjie/model_inference_for_GPU_adaptation/classification/zhoujianjie/models/imageomics__bioclip/weights"
+    },
+    "imageomics/bioclip-2": {
+      "revision": "2957b322090f9cb17ae72c71981c7218a28d81e0",
+      "local_dir": "/data/zhoujianjie/model_inference_for_GPU_adaptation/classification/zhoujianjie/models/imageomics__bioclip-2/weights"
+    }
+  },
+  "datasets": {
+    "Plankton": {
+      "openml_id": 44282,
+      "path": "/data/zhoujianjie/model_inference_for_GPU_adaptation/dataset/raw/bioclip_PLK_Mini"
+    },
+    "Insects": {
+      "openml_id": 44306,
+      "path": "/data/zhoujianjie/model_inference_for_GPU_adaptation/dataset/raw/bioclip_INS_Mini"
+    },
+    "Insects 2": {
+      "openml_id": 44292,
+      "path": "/data/zhoujianjie/model_inference_for_GPU_adaptation/dataset/raw/bioclip_INS_2_Mini"
+    },
+    "PlantNet": {
+      "openml_id": 44293,
+      "path": "/data/zhoujianjie/model_inference_for_GPU_adaptation/dataset/raw/bioclip_PLT_NET_Mini"
+    },
+    "Fungi": {
+      "openml_id": 44302,
+      "path": "/data/zhoujianjie/model_inference_for_GPU_adaptation/dataset/raw/bioclip_FNG_Mini"
+    },
+    "PlantVillage": {
+      "openml_id": 44286,
+      "path": "/data/zhoujianjie/model_inference_for_GPU_adaptation/dataset/raw/bioclip_PLT_VIL_Mini"
+    },
+    "Medicinal Leaf": {
+      "openml_id": 44299,
+      "path": "/data/zhoujianjie/model_inference_for_GPU_adaptation/dataset/raw/bioclip_MED_LF_Mini"
+    }
+  },
+  "evaluator": {
+    "repository": "https://github.com/Imageomics/bioclip-2",
+    "commit": "49e1cf50e0341ed41d13353d23cbf963bdb1293a",
+    "module": "src.evaluation.classification",
+    "text_type": "asis",
+    "templates": "openai_imagenet_template",
+    "classification_tasks": [
+      "zero_shot",
+      "few_shot"
+    ],
+    "few_shot_folds": 5,
+    "few_shot_k": [
+      1,
+      5
+    ],
+    "separate_training_split_required": false
+  },
+  "official_top1_percent": {
+    "imageomics/bioclip": {
+      "zero_shot": {
+        "Plankton": 6.1,
+        "Insects": 34.9,
+        "Insects 2": 20.5,
+        "PlantNet": 88.2,
+        "Fungi": 40.9,
+        "PlantVillage": 19.0,
+        "Medicinal Leaf": 38.5
+      },
+      "one_shot": {
+        "Plankton": 29.7,
+        "Insects": 57.1,
+        "Insects 2": 20.4,
+        "PlantNet": 67.7,
+        "Fungi": 44.6,
+        "PlantVillage": 59.5,
+        "Medicinal Leaf": 83.7
+      },
+      "five_shot": {
+        "Plankton": 49.2,
+        "Insects": 78.0,
+        "Insects 2": 33.9,
+        "PlantNet": 85.7,
+        "Fungi": 61.6,
+        "PlantVillage": 81.7,
+        "Medicinal Leaf": 96.7
+      }
+    },
+    "imageomics/bioclip-2": {
+      "zero_shot": {
+        "Plankton": 3.9,
+        "Insects": 55.3,
+        "Insects 2": 27.7,
+        "PlantNet": 96.8,
+        "Fungi": 83.8,
+        "PlantVillage": 25.1,
+        "Medicinal Leaf": 57.8
+      },
+      "one_shot": {
+        "Plankton": 32.0,
+        "Insects": 74.6,
+        "Insects 2": 28.4,
+        "PlantNet": 85.8,
+        "Fungi": 70.3,
+        "PlantVillage": 67.6,
+        "Medicinal Leaf": 92.0
+      },
+      "five_shot": {
+        "Plankton": 50.5,
+        "Insects": 89.3,
+        "Insects 2": 44.3,
+        "PlantNet": 94.4,
+        "Fungi": 85.0,
+        "PlantVillage": 83.9,
+        "Medicinal Leaf": 98.4
+      }
+    }
+  },
+  "diagnostic_only": {
+    "metrics": [
+      "Top-3 accuracy",
+      "Top-5 accuracy"
+    ],
+    "reason": "official BioCLIP 2 evaluator emits them, but the same-checkpoint paper references are Top-1 only"
+  },
+  "evidence": {
+    "paper": "NeurIPS 2025 BioCLIP 2 paper, Table 1",
+    "paper_url": "https://proceedings.neurips.cc/paper_files/paper/2025/file/94da80cbfe870c1db958c88a8a27018c-Paper-Conference.pdf",
+    "dataset_source": "https://meta-album.github.io/"
+  }
+}

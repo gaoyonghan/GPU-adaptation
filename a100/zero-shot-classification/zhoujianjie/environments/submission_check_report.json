@@ -1,0 +1,6 @@
+{
+  "current_static_report": "delivery65_static_checks.json",
+  "current_delivery_report": "delivery65_status.json",
+  "historical_first_pass_report": "historical_initial31_submission_check_report.json",
+  "gpu_status": "See per-model delivery table; CPU is not GPU validation"
+}

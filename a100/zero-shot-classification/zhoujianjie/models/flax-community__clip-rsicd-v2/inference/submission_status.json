@@ -1,0 +1,8 @@
+{
+  "model": "flax-community/clip-rsicd-v2",
+  "historical_a100_status": "completed",
+  "submission_entry_status": "native_port_prepared_pending_validation",
+  "gpu_retested_in_submission": false,
+  "reason": null,
+  "public_evaluator": "supported_pending_validation"
+}

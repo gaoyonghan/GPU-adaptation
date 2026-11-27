@@ -1,0 +1,7 @@
+{
+  "model": "google/siglip-so400m-patch14-224",
+  "historical_command": null,
+  "native_evaluator": "evaluation_audit/evaluate_siglip_mteb_flickr30k_official.py",
+  "historical_a100_environment": null,
+  "purpose": "provenance only; not a central task registry"
+}

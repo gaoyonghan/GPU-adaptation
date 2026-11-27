@@ -1,0 +1,8 @@
+{
+  "models": 62,
+  "entry_help_checks": 62,
+  "framework_hashes_checked": 465,
+  "errors": [],
+  "gpu_rerun": false,
+  "only_evaluator_change": "relative path base: contributor directory; public metric code unchanged"
+}

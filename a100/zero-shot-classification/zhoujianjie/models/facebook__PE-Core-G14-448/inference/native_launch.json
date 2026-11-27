@@ -1,0 +1,7 @@
+{
+  "model": "facebook/PE-Core-G14-448",
+  "historical_command": null,
+  "native_evaluator": "evaluation_audit/evaluate_pe_core_imagenet_a.py",
+  "historical_a100_environment": null,
+  "purpose": "provenance only; not a central task registry"
+}

@@ -1,0 +1,331 @@
+[
+  {
+    "file": "inference/native/native_mme5_python.py",
+    "source_sha256": "c05a7a4cbd7985c816b65773c558c1b3618d46cb41f2464a4b12150cb37623be",
+    "path_expression_edits": 2,
+    "path_mapping_stage_sha256": "222da15204400a4c7fd71daf2ca243fc0d9594d446b56bad36c634ece92799d7",
+    "final_delivery_sha256": "222da15204400a4c7fd71daf2ca243fc0d9594d446b56bad36c634ece92799d7"
+  },
+  {
+    "file": "inference/native/native_fgclip_python.py",
+    "source_sha256": "85db4a246d109f7cf518835afcd67482684f256765ec1a784698966036597228",
+    "path_expression_edits": 6,
+    "path_mapping_stage_sha256": "223e2d938be89d706e31a4fc0ff343bfeb861a7ddaed6dd6b98c3547d9e8dfc5",
+    "final_delivery_sha256": "223e2d938be89d706e31a4fc0ff343bfeb861a7ddaed6dd6b98c3547d9e8dfc5"
+  },
+  {
+    "file": "inference/native/evaluate_chinese_clip_original_official.py",
+    "source_sha256": "5ee6216d1c44ad6f609d8bfc4abdb5f776334ecd1583f61cb9a9540efac13e5b",
+    "path_expression_edits": 2,
+    "path_mapping_stage_sha256": "4f652b3c95b6ba39fe55edd857ffc25e0b827194dc45060e49fb7b2cbc44be62",
+    "final_delivery_sha256": "4f652b3c95b6ba39fe55edd857ffc25e0b827194dc45060e49fb7b2cbc44be62"
+  },
+  {
+    "file": "inference/native/chinese_native_a100.py",
+    "source_sha256": "01362d31b39bca945bbcfc23b08b9a925ddcd7cf9b15140d4853b39e56b01224",
+    "path_expression_edits": 9,
+    "path_mapping_stage_sha256": "90d31bd404eb5246a5494fcff760acadd718e75adec75a363cb5e02bc509c074",
+    "final_delivery_sha256": "ba4d9e121801de211a4cdba5c1f6569da53743fd4b8bd9b5b87b1e67a59b90e0"
+  },
+  {
+    "file": "inference/native/run_chinese_native.py",
+    "source_sha256": "d0413fbb56a9476b5a3c5799db8d73cdaeb49d42fc64a476b0cdbb0f5027feec",
+    "path_expression_edits": 5,
+    "path_mapping_stage_sha256": "0568b4260638f504689acbe2828d055dad38d1ced331cb34ce4ec5dfdb0f6463",
+    "final_delivery_sha256": "9f3eab66efab02a02105ee9bc317e7c2291039bbe304bcc8abbec4470500e17a"
+  },
+  {
+    "file": "inference/native/native_python.py",
+    "source_sha256": "ea047f7906c92e5d0173ccd6195c3d183645560aa19bcf826d028044e623005c",
+    "path_expression_edits": 6,
+    "path_mapping_stage_sha256": "2b4b7632421ea8f9b220db6446d5eb9c2892a1c1d13a97a4eda4bdb71a6fef28",
+    "final_delivery_sha256": "1bb949be95f07a3bf556d0290dd9001724efabfae9951668fc5e71896516a5b0"
+  },
+  {
+    "file": "inference/native/sitecustomize.py",
+    "source_sha256": "6eda9fd629a259c259dbd87d1f55fb4004ca20890677a7dee5745f2d7633016b",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "6eda9fd629a259c259dbd87d1f55fb4004ca20890677a7dee5745f2d7633016b",
+    "final_delivery_sha256": "962ac551ad22f7854811868a13cdd4b758c316d57acca6fa2fddea9752ce153b"
+  },
+  {
+    "file": "inference/native/model_paths.py",
+    "source_sha256": "d39241a382eaffe4ca202ac8d47cf9684c09603cc558b7d37519def06614896d",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "d39241a382eaffe4ca202ac8d47cf9684c09603cc558b7d37519def06614896d",
+    "final_delivery_sha256": "d39241a382eaffe4ca202ac8d47cf9684c09603cc558b7d37519def06614896d"
+  },
+  {
+    "file": "inference/native/reference_code/Chinese-CLIP/dataset_transform.py",
+    "source_sha256": "f312910cebe3e8ac62a309f47b06baa88c898d91634ae98d260321ad9b2233f1",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "f312910cebe3e8ac62a309f47b06baa88c898d91634ae98d260321ad9b2233f1",
+    "final_delivery_sha256": "f312910cebe3e8ac62a309f47b06baa88c898d91634ae98d260321ad9b2233f1"
+  },
+  {
+    "file": "inference/native/reference_code/Chinese-CLIP/setup.py",
+    "source_sha256": "2e845e5890260ab27d0bece8ff431d83d17ffa894a283d1d946fa83b40401ac0",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "2e845e5890260ab27d0bece8ff431d83d17ffa894a283d1d946fa83b40401ac0",
+    "final_delivery_sha256": "2e845e5890260ab27d0bece8ff431d83d17ffa894a283d1d946fa83b40401ac0"
+  },
+  {
+    "file": "inference/native/reference_code/Chinese-CLIP/cn_clip/__init__.py",
+    "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "final_delivery_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "inference/native/reference_code/Chinese-CLIP/cn_clip/preprocess/__init__.py",
+    "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "final_delivery_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "inference/native/reference_code/Chinese-CLIP/cn_clip/preprocess/transform_openai_pretrain_weights.py",
+    "source_sha256": "1aaf04b879dedbed38c3d330f81145634b9b8a91d2ce8441357c967930d16c41",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "1aaf04b879dedbed38c3d330f81145634b9b8a91d2ce8441357c967930d16c41",
+    "final_delivery_sha256": "1aaf04b879dedbed38c3d330f81145634b9b8a91d2ce8441357c967930d16c41"
+  },
+  {
+    "file": "inference/native/reference_code/Chinese-CLIP/cn_clip/preprocess/build_lmdb_dataset.py",
+    "source_sha256": "e271f3a92439fbfb5b2f8ee6955547bcb0ba8c0a70f7b350456cec30a7ba2477",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "e271f3a92439fbfb5b2f8ee6955547bcb0ba8c0a70f7b350456cec30a7ba2477",
+    "final_delivery_sha256": "e271f3a92439fbfb5b2f8ee6955547bcb0ba8c0a70f7b350456cec30a7ba2477"
+  },
+  {
+    "file": "inference/native/reference_code/Chinese-CLIP/cn_clip/eval/__init__.py",
+    "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "final_delivery_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "inference/native/reference_code/Chinese-CLIP/cn_clip/eval/evaluation.py",
+    "source_sha256": "606227e1f1f7ddc8521a680919aaf73c4453f8a69e4734a2c1a6f38db6cd98af",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "606227e1f1f7ddc8521a680919aaf73c4453f8a69e4734a2c1a6f38db6cd98af",
+    "final_delivery_sha256": "606227e1f1f7ddc8521a680919aaf73c4453f8a69e4734a2c1a6f38db6cd98af"
+  },
+  {
+    "file": "inference/native/reference_code/Chinese-CLIP/cn_clip/eval/imagenet_zeroshot_templates.py",
+    "source_sha256": "c99c229eae79991677f4172be6a957b3420a8fcaade6328f9b941e1a9784ac92",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "c99c229eae79991677f4172be6a957b3420a8fcaade6328f9b941e1a9784ac92",
+    "final_delivery_sha256": "c99c229eae79991677f4172be6a957b3420a8fcaade6328f9b941e1a9784ac92"
+  },
+  {
+    "file": "inference/native/reference_code/Chinese-CLIP/cn_clip/eval/evaluation_tr.py",
+    "source_sha256": "75f78c2a3e4297dc3f326072bb237a8e031ccad621d306a916ef67303f29d912",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "75f78c2a3e4297dc3f326072bb237a8e031ccad621d306a916ef67303f29d912",
+    "final_delivery_sha256": "75f78c2a3e4297dc3f326072bb237a8e031ccad621d306a916ef67303f29d912"
+  },
+  {
+    "file": "inference/native/reference_code/Chinese-CLIP/cn_clip/eval/make_topk_predictions.py",
+    "source_sha256": "8161b05c317d7001cf4d636617561592d885bf29a92a227fd9e3b7b54ab1a5ef",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "8161b05c317d7001cf4d636617561592d885bf29a92a227fd9e3b7b54ab1a5ef",
+    "final_delivery_sha256": "8161b05c317d7001cf4d636617561592d885bf29a92a227fd9e3b7b54ab1a5ef"
+  },
+  {
+    "file": "inference/native/reference_code/Chinese-CLIP/cn_clip/eval/extract_features.py",
+    "source_sha256": "5394e0e842d3f47d9db367a9a3a33e73a06846f6ab533b535e6c778902b8bb0d",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "5394e0e842d3f47d9db367a9a3a33e73a06846f6ab533b535e6c778902b8bb0d",
+    "final_delivery_sha256": "5394e0e842d3f47d9db367a9a3a33e73a06846f6ab533b535e6c778902b8bb0d"
+  },
+  {
+    "file": "inference/native/reference_code/Chinese-CLIP/cn_clip/eval/transform_ir_annotation_to_tr.py",
+    "source_sha256": "9cd4139a2ccbd8979ac2a16386e7127154bbde5507ffc13897e62efadae6027d",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "9cd4139a2ccbd8979ac2a16386e7127154bbde5507ffc13897e62efadae6027d",
+    "final_delivery_sha256": "9cd4139a2ccbd8979ac2a16386e7127154bbde5507ffc13897e62efadae6027d"
+  },
+  {
+    "file": "inference/native/reference_code/Chinese-CLIP/cn_clip/eval/zeroshot_evaluation.py",
+    "source_sha256": "20f5f2e4075bcc4fe03c3e9b31162b3022b133430ac3b184319b170b444bffc1",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "20f5f2e4075bcc4fe03c3e9b31162b3022b133430ac3b184319b170b444bffc1",
+    "final_delivery_sha256": "20f5f2e4075bcc4fe03c3e9b31162b3022b133430ac3b184319b170b444bffc1"
+  },
+  {
+    "file": "inference/native/reference_code/Chinese-CLIP/cn_clip/eval/make_topk_predictions_tr.py",
+    "source_sha256": "3bf3c21dbc882a35623d86a1990b81c19ebdc68e43bfe98ea96bfc31c22373e3",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "3bf3c21dbc882a35623d86a1990b81c19ebdc68e43bfe98ea96bfc31c22373e3",
+    "final_delivery_sha256": "3bf3c21dbc882a35623d86a1990b81c19ebdc68e43bfe98ea96bfc31c22373e3"
+  },
+  {
+    "file": "inference/native/reference_code/Chinese-CLIP/cn_clip/eval/extract_features_tensorrt.py",
+    "source_sha256": "5f44a1fc027b09a1d8da658c1f9cc0b6d539dadf60c5410fefdfbaf321fa3719",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "5f44a1fc027b09a1d8da658c1f9cc0b6d539dadf60c5410fefdfbaf321fa3719",
+    "final_delivery_sha256": "5f44a1fc027b09a1d8da658c1f9cc0b6d539dadf60c5410fefdfbaf321fa3719"
+  },
+  {
+    "file": "inference/native/reference_code/Chinese-CLIP/cn_clip/eval/data.py",
+    "source_sha256": "bbb99824f6a2e2adceefb9d86d19b0a7ac3edc0eb670846b768dceb04f706f7d",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "bbb99824f6a2e2adceefb9d86d19b0a7ac3edc0eb670846b768dceb04f706f7d",
+    "final_delivery_sha256": "bbb99824f6a2e2adceefb9d86d19b0a7ac3edc0eb670846b768dceb04f706f7d"
+  },
+  {
+    "file": "inference/native/reference_code/Chinese-CLIP/cn_clip/eval/cvinw_zeroshot_templates.py",
+    "source_sha256": "ae3324fae56ada29571f1aafb2b42179bc4c67729558b89afebe36df9d795629",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "ae3324fae56ada29571f1aafb2b42179bc4c67729558b89afebe36df9d795629",
+    "final_delivery_sha256": "ae3324fae56ada29571f1aafb2b42179bc4c67729558b89afebe36df9d795629"
+  },
+  {
+    "file": "inference/native/reference_code/Chinese-CLIP/cn_clip/eval/extract_features_onnx.py",
+    "source_sha256": "c80a1746026fcefb44c1e8653042765ced1e1903cf66eb4959b2105e87a888de",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "c80a1746026fcefb44c1e8653042765ced1e1903cf66eb4959b2105e87a888de",
+    "final_delivery_sha256": "c80a1746026fcefb44c1e8653042765ced1e1903cf66eb4959b2105e87a888de"
+  },
+  {
+    "file": "inference/native/reference_code/Chinese-CLIP/cn_clip/training/__init__.py",
+    "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "final_delivery_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "inference/native/reference_code/Chinese-CLIP/cn_clip/training/train.py",
+    "source_sha256": "57d0218d4a2fa0c64e606883f5cfb40f02a6e83931992d65a1fc42fa8eaf5ba3",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "57d0218d4a2fa0c64e606883f5cfb40f02a6e83931992d65a1fc42fa8eaf5ba3",
+    "final_delivery_sha256": "57d0218d4a2fa0c64e606883f5cfb40f02a6e83931992d65a1fc42fa8eaf5ba3"
+  },
+  {
+    "file": "inference/native/reference_code/Chinese-CLIP/cn_clip/training/params.py",
+    "source_sha256": "29046874d0063b9e495062f40c661a70f6579348c1e6ac1c15a106a153f8fc94",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "29046874d0063b9e495062f40c661a70f6579348c1e6ac1c15a106a153f8fc94",
+    "final_delivery_sha256": "29046874d0063b9e495062f40c661a70f6579348c1e6ac1c15a106a153f8fc94"
+  },
+  {
+    "file": "inference/native/reference_code/Chinese-CLIP/cn_clip/training/logger.py",
+    "source_sha256": "8d14370f340e29e292f3c79126f9984b2d6f40e9578a914c8b6afd785a2ba2be",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "8d14370f340e29e292f3c79126f9984b2d6f40e9578a914c8b6afd785a2ba2be",
+    "final_delivery_sha256": "8d14370f340e29e292f3c79126f9984b2d6f40e9578a914c8b6afd785a2ba2be"
+  },
+  {
+    "file": "inference/native/reference_code/Chinese-CLIP/cn_clip/training/main.py",
+    "source_sha256": "37737135c3bbf4094d1b6a75d04c34bead73409de1cc057b94e56e1c65f0bd62",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "37737135c3bbf4094d1b6a75d04c34bead73409de1cc057b94e56e1c65f0bd62",
+    "final_delivery_sha256": "37737135c3bbf4094d1b6a75d04c34bead73409de1cc057b94e56e1c65f0bd62"
+  },
+  {
+    "file": "inference/native/reference_code/Chinese-CLIP/cn_clip/training/data.py",
+    "source_sha256": "5a52cf4defd7d2583d6611fc1ccf0aacbb9fe16c9673a64b21c7c1a58879df9e",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "5a52cf4defd7d2583d6611fc1ccf0aacbb9fe16c9673a64b21c7c1a58879df9e",
+    "final_delivery_sha256": "5a52cf4defd7d2583d6611fc1ccf0aacbb9fe16c9673a64b21c7c1a58879df9e"
+  },
+  {
+    "file": "inference/native/reference_code/Chinese-CLIP/cn_clip/training/scheduler.py",
+    "source_sha256": "89ab7ff5270d2e142a8f3e22fc2e682374b4f080f04e187c67f88fbcc2d06d59",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "89ab7ff5270d2e142a8f3e22fc2e682374b4f080f04e187c67f88fbcc2d06d59",
+    "final_delivery_sha256": "89ab7ff5270d2e142a8f3e22fc2e682374b4f080f04e187c67f88fbcc2d06d59"
+  },
+  {
+    "file": "inference/native/reference_code/Chinese-CLIP/cn_clip/deploy/__init__.py",
+    "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "final_delivery_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "inference/native/reference_code/Chinese-CLIP/cn_clip/deploy/pytorch_to_onnx.py",
+    "source_sha256": "895307427981dcfc8a6725805bb7f5b7fc0b1e7fa17f5021720564412ca45c90",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "895307427981dcfc8a6725805bb7f5b7fc0b1e7fa17f5021720564412ca45c90",
+    "final_delivery_sha256": "895307427981dcfc8a6725805bb7f5b7fc0b1e7fa17f5021720564412ca45c90"
+  },
+  {
+    "file": "inference/native/reference_code/Chinese-CLIP/cn_clip/deploy/tensorrt_utils.py",
+    "source_sha256": "e7b82e03f65c72a2afc1b317b62cfc7e623093f8a6da7d869254fb1872a37914",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "e7b82e03f65c72a2afc1b317b62cfc7e623093f8a6da7d869254fb1872a37914",
+    "final_delivery_sha256": "e7b82e03f65c72a2afc1b317b62cfc7e623093f8a6da7d869254fb1872a37914"
+  },
+  {
+    "file": "inference/native/reference_code/Chinese-CLIP/cn_clip/deploy/pytorch_to_coreml.py",
+    "source_sha256": "ff1af5c49904bb02c1ac754d0249e9f31da0bd3cd4ee7a7f62942e142bf86981",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "ff1af5c49904bb02c1ac754d0249e9f31da0bd3cd4ee7a7f62942e142bf86981",
+    "final_delivery_sha256": "ff1af5c49904bb02c1ac754d0249e9f31da0bd3cd4ee7a7f62942e142bf86981"
+  },
+  {
+    "file": "inference/native/reference_code/Chinese-CLIP/cn_clip/deploy/onnx_to_tensorrt.py",
+    "source_sha256": "144e002090295615c78d86cd3c99dca05d43fff542f29a640b4324accbfa4be3",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "144e002090295615c78d86cd3c99dca05d43fff542f29a640b4324accbfa4be3",
+    "final_delivery_sha256": "144e002090295615c78d86cd3c99dca05d43fff542f29a640b4324accbfa4be3"
+  },
+  {
+    "file": "inference/native/reference_code/Chinese-CLIP/cn_clip/deploy/speed_benchmark.py",
+    "source_sha256": "9109aa5702d0fae698bbb6d2cc19a3b0c9d6cdc56f4a8aea9c6f9672567f3a13",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "9109aa5702d0fae698bbb6d2cc19a3b0c9d6cdc56f4a8aea9c6f9672567f3a13",
+    "final_delivery_sha256": "9109aa5702d0fae698bbb6d2cc19a3b0c9d6cdc56f4a8aea9c6f9672567f3a13"
+  },
+  {
+    "file": "inference/native/reference_code/Chinese-CLIP/cn_clip/deploy/benchmark_utils.py",
+    "source_sha256": "0730974de005cbe64cd08d257780dbdc6fe95591735f7a0c4390adadec21fd4f",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "0730974de005cbe64cd08d257780dbdc6fe95591735f7a0c4390adadec21fd4f",
+    "final_delivery_sha256": "0730974de005cbe64cd08d257780dbdc6fe95591735f7a0c4390adadec21fd4f"
+  },
+  {
+    "file": "inference/native/reference_code/Chinese-CLIP/cn_clip/clip/__init__.py",
+    "source_sha256": "92ab57999ef5e474cac4feeea22aad56528a2ba98650fcb271bb8cdc7b047b97",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "92ab57999ef5e474cac4feeea22aad56528a2ba98650fcb271bb8cdc7b047b97",
+    "final_delivery_sha256": "92ab57999ef5e474cac4feeea22aad56528a2ba98650fcb271bb8cdc7b047b97"
+  },
+  {
+    "file": "inference/native/reference_code/Chinese-CLIP/cn_clip/clip/bert_tokenizer.py",
+    "source_sha256": "584f8572b41900c5b138853e1d64d3c89d788bbc346faed84728346e7c2e0d74",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "584f8572b41900c5b138853e1d64d3c89d788bbc346faed84728346e7c2e0d74",
+    "final_delivery_sha256": "584f8572b41900c5b138853e1d64d3c89d788bbc346faed84728346e7c2e0d74"
+  },
+  {
+    "file": "inference/native/reference_code/Chinese-CLIP/cn_clip/clip/modeling_bert.py",
+    "source_sha256": "95b3dbb325b5f12f31bc89f67592ec8f02f86f71cabaf72667d909b13c0a7d77",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "95b3dbb325b5f12f31bc89f67592ec8f02f86f71cabaf72667d909b13c0a7d77",
+    "final_delivery_sha256": "95b3dbb325b5f12f31bc89f67592ec8f02f86f71cabaf72667d909b13c0a7d77"
+  },
+  {
+    "file": "inference/native/reference_code/Chinese-CLIP/cn_clip/clip/model.py",
+    "source_sha256": "9887ae2feda606a920bf2d41fa39cb9c3209bc627761f21524f9a6dc0d995e5e",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "9887ae2feda606a920bf2d41fa39cb9c3209bc627761f21524f9a6dc0d995e5e",
+    "final_delivery_sha256": "9887ae2feda606a920bf2d41fa39cb9c3209bc627761f21524f9a6dc0d995e5e"
+  },
+  {
+    "file": "inference/native/reference_code/Chinese-CLIP/cn_clip/clip/configuration_bert.py",
+    "source_sha256": "f3c0a8fd537f13edeb2f5a82a61bb4e7f0a868c7ac36f91ac83ab79d9fe0ece0",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "f3c0a8fd537f13edeb2f5a82a61bb4e7f0a868c7ac36f91ac83ab79d9fe0ece0",
+    "final_delivery_sha256": "f3c0a8fd537f13edeb2f5a82a61bb4e7f0a868c7ac36f91ac83ab79d9fe0ece0"
+  },
+  {
+    "file": "inference/native/reference_code/Chinese-CLIP/cn_clip/clip/utils.py",
+    "source_sha256": "a14ba360b0be9f364c5135653ae079429dcf8c6fb87d522deb74aa3ea346b959",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "a14ba360b0be9f364c5135653ae079429dcf8c6fb87d522deb74aa3ea346b959",
+    "final_delivery_sha256": "a14ba360b0be9f364c5135653ae079429dcf8c6fb87d522deb74aa3ea346b959"
+  }
+]

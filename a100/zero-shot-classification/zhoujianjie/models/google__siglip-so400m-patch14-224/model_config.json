@@ -1,0 +1,59 @@
+{
+  "model_id": "google/siglip-so400m-patch14-224",
+  "revision": "d04cf29fca7b6374f74d8bea1969314492266b5e",
+  "scope": "user_decision_all_77_top20",
+  "historical_task": "MTEB检索评测器",
+  "backend": "Transformers AutoModel/AutoProcessor",
+  "runtime_backend": "Transformers AutoModel/AutoProcessor",
+  "handoff_status": "catalogued_native_protocol_port_pending",
+  "historical_acceptance": "严格官方指标对齐",
+  "official_datasets": "MTEB Flickr30kT2IRetrieval official test",
+  "native_evaluator": "evaluation_audit/evaluate_siglip_mteb_flickr30k_official.py",
+  "native_evaluator_sha256": "a55406c508d4d672a9995f6b5ab613f3c469e2fc1c66531f32b55a97eeb1c27b",
+  "weight_reference": "classification/zhoujianjie/models/google__siglip-so400m-patch14-224/weights",
+  "evidence": [
+    {
+      "source": "results/official/siglip_mteb_flickr30k_t2i/google/siglip-so400m-patch14-224/summary.json",
+      "snapshot": "history/evidence_01.json",
+      "sha256": "64c6768aea9ecdd55395f6518f3c6ea06f15558631178bd75d86b49c01c8b508"
+    }
+  ],
+  "official_dataset": null,
+  "standard_dataset": null,
+  "primary_metrics": [
+    "top1_accuracy"
+  ],
+  "metric_unit": "fraction",
+  "classification_protocol_status": "requires_native_protocol_review_before_top1",
+  "official_claim": null,
+  "model_asset_sha256": {
+    "config.json": "28c6981582dbd0dc6e1c2eeae21a240e6952019bca3cdffbc22b9da2c747cb6b",
+    "download_receipt.json": "5f77cae59d730f67910705618abf45afdc6d5e253a076fdd86ce833ba19c5322",
+    "preprocessor_config.json": "bec6ca696ddd6c2050ce0ea9fcb7581b052d267059a3341b6c1456cab54b1d07",
+    "special_tokens_map.json": "2b6a1ff67a27e0df9ac0c7d93250fc0d87431c7b366b3d5669217104f9088a26",
+    "tokenizer_config.json": "510442560bec4a801b30184d162b3035b72bcf058bd596a783631f7d3324d159"
+  },
+  "framework_sha256": {
+    "zero-shot-classification/zhoujianjie/shared/__init__.py": "ac530da703ede9365e51055357b2227002a9de0097e365da28ac1cd002680710",
+    "zero-shot-classification/zhoujianjie/shared/classification_contract.py": "a4c1f76d0d476ad5a51ba8e66dab28ba94903b62391cfd5addd762a59d53ab0b",
+    "zero-shot-classification/zhoujianjie/shared/handoff_runtime.py": "691077a04b3d8ff962f59255d4771dcbf3f13818828f587ea979c9491a7e755c",
+    "zero-shot-classification/zhoujianjie/shared/classification_metrics.py": "623580d4254977e67cbfcce6c45a6e9f8eedab927e4ec692d26d63f474f49bbb",
+    "zero-shot-classification/zhoujianjie/shared/standard_scoring.py": "b47dfa18dec99f68e0dd35965aee27f116a5ca48f8925bb1ea0847d8cd6c29e8",
+    "zero-shot-classification/zhoujianjie/shared/standard_dataset.py": "9ef01e01d024a5e3897e14e51fe099238701ab6a9c7623946411db892e278098",
+    "zero-shot-classification/zhoujianjie/shared/legacy/evaluate_imagenet1k_official.py": "ee2b1d5af45da948549b811d911325bc94bc8be656be9ed0f9163bd96e2c3a01",
+    "zero-shot-classification/zhoujianjie/shared/legacy/evaluate_b01.py": "7d71c5d270ef59a17d9148b200b6b32e0943cd10c82686b87692fd0211056ab8",
+    "zero-shot-classification/zhoujianjie/shared/legacy/official_22_models.py": "4cec0a47a0479e2c4ae9634e5c58af1979a84340d3fa96e4fcf33de9f1fcc3b8",
+    "zero-shot-classification/zhoujianjie/shared/legacy/imagenet1k_official_spec.py": "3aeb7f0134ee4b55a4a8b2e3aed4d176f76bc892ef1e908bb2fe209e045a43bb",
+    "zero-shot-classification/zhoujianjie/shared/legacy/validate_stage2_models.py": "a4436f1e241f2bc98ec48661fdcee76369b2c73e1bc7b16b14a01cb84a65532a",
+    "zero-shot-classification/zhoujianjie/shared/legacy/prompt_engineering_constants.py": "08b6bfd94da4ad774a87246c615bae191ecf7db47477c4b98e8b7a759aff00d2",
+    "zero-shot-classification/zhoujianjie/shared/legacy/class_names.py": "314a107b4fe15bc163030517d1191d8e6eef4d474fbaf09472323ced989cd46a",
+    "zero-shot-classification/zhoujianjie/Dataset_Coco/coco_bundle.py": "965397e6f697e414bca59d987660d394af5e5cad0be145cdd5d9224cfcc06263",
+    "zero-shot-classification/zhoujianjie/Dataset_Coco/__init__.py": "bc5bb4e4e38cf7a2445eb919778d69361ca2f0cb10db241651d80a217bcf6b85"
+  },
+  "weight_reference_before_packaging": "models/google/siglip-so400m-patch14-224",
+  "a100_historical_status": "completed",
+  "submission_gpu_retested": false,
+  "remaining_work": [
+    "本模型的原生入口尚依赖旧工程路径/外部源码，需完成独立化和标准输出接入。"
+  ]
+}

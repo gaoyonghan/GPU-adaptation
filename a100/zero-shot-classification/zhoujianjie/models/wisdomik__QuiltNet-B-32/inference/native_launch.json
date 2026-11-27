@@ -1,0 +1,10 @@
+{
+  "model": "wisdomik/QuiltNet-B-32",
+  "historical_command": [
+    "python",
+    "inference.py"
+  ],
+  "native_evaluator": "evaluation_audit/evaluate_quiltnet_pcam_official.py",
+  "historical_a100_environment": null,
+  "purpose": "provenance only; not a central task registry"
+}

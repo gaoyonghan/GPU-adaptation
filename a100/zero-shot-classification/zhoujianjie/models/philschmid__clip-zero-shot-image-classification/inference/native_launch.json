@@ -1,0 +1,12 @@
+{
+  "model": "philschmid/clip-zero-shot-image-classification",
+  "historical_command": [
+    "python",
+    "-u",
+    "environment_setup/run_imagenet_remaining.py",
+    "philschmid/clip-zero-shot-image-classification"
+  ],
+  "native_evaluator": "evaluation_audit/evaluate_imagenet1k_official.py",
+  "historical_a100_environment": "/data/zhoujianjie/environment_setup/native_python.py",
+  "purpose": "provenance only; not a central task registry"
+}

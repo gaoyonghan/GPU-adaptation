@@ -1,0 +1,11 @@
+{
+  "model": "google/medsiglip-448",
+  "historical_command": [
+    "python",
+    "-u",
+    "environment_setup/run_medsiglip_native.py"
+  ],
+  "native_evaluator": "evaluation_audit/evaluate_medsiglip_pcam_engineering.py",
+  "historical_a100_environment": "/data/zhoujianjie/environment_setup/native_python.py",
+  "purpose": "provenance only; not a central task registry"
+}

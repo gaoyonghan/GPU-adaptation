@@ -1,0 +1,58 @@
+[
+  {
+    "file": "inference/native/native_mme5_python.py",
+    "source_sha256": "c05a7a4cbd7985c816b65773c558c1b3618d46cb41f2464a4b12150cb37623be",
+    "path_expression_edits": 2,
+    "path_mapping_stage_sha256": "222da15204400a4c7fd71daf2ca243fc0d9594d446b56bad36c634ece92799d7",
+    "final_delivery_sha256": "222da15204400a4c7fd71daf2ca243fc0d9594d446b56bad36c634ece92799d7"
+  },
+  {
+    "file": "inference/native/evaluate_medsiglip_pcam_engineering.py",
+    "source_sha256": "a8cd20088c68c197f214f2bca9da0d5175db5af3b51103d5432362e1e79b6089",
+    "path_expression_edits": 4,
+    "path_mapping_stage_sha256": "d4202f3b40f21066fa24e7b7959e4d575398d34ba180bf1c05151f8bd8845126",
+    "final_delivery_sha256": "d4202f3b40f21066fa24e7b7959e4d575398d34ba180bf1c05151f8bd8845126"
+  },
+  {
+    "file": "inference/native/run_medsiglip_native.py",
+    "source_sha256": "197556e88fca4b9501324e73e7fda174ecb488b5cd3f08c3b3d842fcf42d6c57",
+    "path_expression_edits": 6,
+    "path_mapping_stage_sha256": "8295693a960e7eed0ba7fcf1da3e5b857d6571f0077740e565645349886b3621",
+    "final_delivery_sha256": "8295693a960e7eed0ba7fcf1da3e5b857d6571f0077740e565645349886b3621"
+  },
+  {
+    "file": "inference/native/native_fgclip_python.py",
+    "source_sha256": "85db4a246d109f7cf518835afcd67482684f256765ec1a784698966036597228",
+    "path_expression_edits": 6,
+    "path_mapping_stage_sha256": "223e2d938be89d706e31a4fc0ff343bfeb861a7ddaed6dd6b98c3547d9e8dfc5",
+    "final_delivery_sha256": "223e2d938be89d706e31a4fc0ff343bfeb861a7ddaed6dd6b98c3547d9e8dfc5"
+  },
+  {
+    "file": "inference/native/native_python.py",
+    "source_sha256": "ea047f7906c92e5d0173ccd6195c3d183645560aa19bcf826d028044e623005c",
+    "path_expression_edits": 6,
+    "path_mapping_stage_sha256": "2b4b7632421ea8f9b220db6446d5eb9c2892a1c1d13a97a4eda4bdb71a6fef28",
+    "final_delivery_sha256": "1bb949be95f07a3bf556d0290dd9001724efabfae9951668fc5e71896516a5b0"
+  },
+  {
+    "file": "inference/native/sitecustomize.py",
+    "source_sha256": "6eda9fd629a259c259dbd87d1f55fb4004ca20890677a7dee5745f2d7633016b",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "6eda9fd629a259c259dbd87d1f55fb4004ca20890677a7dee5745f2d7633016b",
+    "final_delivery_sha256": "962ac551ad22f7854811868a13cdd4b758c316d57acca6fa2fddea9752ce153b"
+  },
+  {
+    "file": "inference/native/medsiglip_native_a100.py",
+    "source_sha256": "c74aa43a35151d1e9699993d1421487af4a9f7da5175d6941571ec9951e951ee",
+    "path_expression_edits": 12,
+    "path_mapping_stage_sha256": "55c2976fcc44e541c0effc83f84be1f3d7389484e443d7e933f4d55681524d92",
+    "final_delivery_sha256": "f8e9024f93993838cda6c4461783b98514954ef3d8961d7b4f7d3232bdc8214c"
+  },
+  {
+    "file": "inference/native/model_paths.py",
+    "source_sha256": "d39241a382eaffe4ca202ac8d47cf9684c09603cc558b7d37519def06614896d",
+    "path_expression_edits": 0,
+    "path_mapping_stage_sha256": "d39241a382eaffe4ca202ac8d47cf9684c09603cc558b7d37519def06614896d",
+    "final_delivery_sha256": "d39241a382eaffe4ca202ac8d47cf9684c09603cc558b7d37519def06614896d"
+  }
+]

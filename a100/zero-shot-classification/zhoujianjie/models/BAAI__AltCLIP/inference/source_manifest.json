@@ -1,0 +1,27 @@
+[
+  {
+    "file": "inference/original_sources/run_altclip_native.py",
+    "sha256": "69ebe16e5f0c3053125f674df56d79315c7eff7c6908dfd3f340acedfaa7be67",
+    "source": "A100 snapshot"
+  },
+  {
+    "file": "inference/original_sources/run_model.py",
+    "sha256": "6b1c88c470bca26caa104a544237e7767663372ef01a80f26a4637ef1715261d",
+    "source": "A100 snapshot"
+  },
+  {
+    "file": "inference/original_sources/evaluate_b01.py",
+    "sha256": "77c61ebb4808aa2796a911ed99cee26c9262aebb0884c40e03ce0b6c7a81897e",
+    "source": "4090 original evaluator"
+  },
+  {
+    "file": "inference/original_sources/evaluate_downloaded_retrieval.py",
+    "sha256": "0bbb49cb45c147ab0374077b1c32f4acc5cfa0286112bea2b16f8ad9527a17ff",
+    "source": "4090 original evaluator"
+  },
+  {
+    "file": "inference/original_sources/validate_stage2_models.py",
+    "sha256": "4807fc3d8ef9312bb369da6425ff32b1f16c27d640c0f63662323793f351a75b",
+    "source": "4090 original evaluator"
+  }
+]
