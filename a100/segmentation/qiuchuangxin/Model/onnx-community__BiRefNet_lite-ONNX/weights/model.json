@@ -1,0 +1,26 @@
+{
+  "model_id": "onnx-community__BiRefNet_lite-ONNX",
+  "adapter": "onnx",
+  "weight_path": "weights/onnx/model.onnx",
+  "family": "birefnet-lite",
+  "source_root": "weights",
+  "dataset_root": "../../../../dataset/segmentation",
+  "datasets": [
+    {
+      "name": "DIS5K",
+      "split": [
+        "DIS-VD"
+      ],
+      "protocol": {}
+    }
+  ],
+  "native_task": "前景/背景分割",
+  "native_boundary": "只输出前景概率或掩码；无COCO类别身份",
+  "original_entrypoints": [
+    "gpu-reproduction/benchmark.py --model birefnet-lite"
+  ],
+  "python": "../../venv/bin/python",
+  "evaluation_python": "../../venv/bin/python",
+  "seed": 42,
+  "bundle_root": "result/coco_bundle"
+}

@@ -1,0 +1,26 @@
+{
+  "model_id": "Xenova__modnet",
+  "adapter": "onnx",
+  "weight_path": "weights/onnx/model.onnx",
+  "family": "modnet",
+  "source_root": "weights",
+  "dataset_root": "../../../../dataset/segmentation",
+  "datasets": [
+    {
+      "name": "PPM-100",
+      "split": [
+        "public_eval_100"
+      ],
+      "protocol": {}
+    }
+  ],
+  "native_task": "人像alpha抠图",
+  "native_boundary": "非原论文完全同一实验；continuous alpha指标",
+  "original_entrypoints": [
+    "gpu-reproduction/benchmark.py --model modnet"
+  ],
+  "python": "../../venv/bin/python",
+  "evaluation_python": "../../venv/bin/python",
+  "seed": 42,
+  "bundle_root": "result/coco_bundle"
+}

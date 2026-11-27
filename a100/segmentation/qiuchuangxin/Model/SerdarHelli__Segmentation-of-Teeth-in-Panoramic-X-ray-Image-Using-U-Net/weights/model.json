@@ -1,0 +1,26 @@
+{
+  "model_id": "SerdarHelli__Segmentation-of-Teeth-in-Panoramic-X-ray-Image-Using-U-Net",
+  "adapter": "teeth",
+  "weight_path": "weights",
+  "threshold": 0.25,
+  "source_root": "weights",
+  "dataset_root": "../../../../dataset/segmentation",
+  "datasets": [
+    {
+      "name": "Teeth",
+      "split": [
+        "author_fixed_holdout"
+      ],
+      "protocol": {}
+    }
+  ],
+  "native_task": "2D牙齿二值分割",
+  "native_boundary": "单发布checkpoint无法复现论文10-fold；SavedModel非COCO语义",
+  "original_entrypoints": [
+    "SerdarHelli__Segmentation-of-Teeth-in-Panoramic-X-ray-Image-Using-U-Net/TeethUNetOfficialEval.py"
+  ],
+  "python": "../../venv_tf/bin/python",
+  "evaluation_python": "../../venv/bin/python",
+  "seed": 42,
+  "bundle_root": "result/coco_bundle"
+}

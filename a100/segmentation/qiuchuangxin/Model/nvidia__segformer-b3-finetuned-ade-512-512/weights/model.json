@@ -1,0 +1,28 @@
+{
+  "adapter": "semantic",
+  "adapter_group": "ade20k_shared",
+  "weight_path": "weight/segformer-b3-finetuned-ade-512-512",
+  "source_entry": "shared/ADE20K-evaluator/utils/evaluate_model.py",
+  "model_id": "nvidia__segformer-b3-finetuned-ade-512-512",
+  "source_root": "weights",
+  "dataset_root": "../../../../dataset/segmentation",
+  "datasets": [
+    {
+      "name": "ADE20K",
+      "split": [
+        "validation"
+      ],
+      "protocol": {}
+    }
+  ],
+  "native_task": "ADE20K 150类语义",
+  "native_boundary": "需显式跨标签映射；不能直接当 COCO133 类",
+  "original_entrypoints": [
+    "nvidia__segformer-b3-finetuned-ade-512-512/SegFormerB3ADEStart.py"
+  ],
+  "python": "../../venv/bin/python",
+  "evaluation_python": "../../venv/bin/python",
+  "seed": 42,
+  "native_registry": "shared/ADE20K-evaluator/utils/model_registry.py",
+  "bundle_root": "result/coco_bundle"
+}

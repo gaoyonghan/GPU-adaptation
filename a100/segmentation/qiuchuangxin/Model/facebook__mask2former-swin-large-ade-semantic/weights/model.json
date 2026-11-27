@@ -1,0 +1,28 @@
+{
+  "adapter": "semantic",
+  "adapter_group": "ade20k_shared",
+  "weight_path": "weight",
+  "source_entry": "shared/ADE20K-evaluator/utils/evaluate_model.py",
+  "model_id": "facebook__mask2former-swin-large-ade-semantic",
+  "source_root": "weights",
+  "dataset_root": "../../../../dataset/segmentation",
+  "datasets": [
+    {
+      "name": "ADE20K",
+      "split": [
+        "validation"
+      ],
+      "protocol": {}
+    }
+  ],
+  "native_task": "ADE20K 150类语义",
+  "native_boundary": "需显式跨标签映射；不能直接当 COCO133 类；顶层README的COCO记录过时，脚本/权重配置指向ADE150",
+  "original_entrypoints": [
+    "facebook__mask2former-swin-large-ade-semantic/Mask2FormerSwinLargeADESemanticStart.py"
+  ],
+  "python": "../../venv/bin/python",
+  "evaluation_python": "../../venv/bin/python",
+  "seed": 42,
+  "native_registry": "shared/ADE20K-evaluator/utils/model_registry.py",
+  "bundle_root": "result/coco_bundle"
+}

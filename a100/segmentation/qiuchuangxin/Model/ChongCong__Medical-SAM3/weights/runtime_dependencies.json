@@ -1,0 +1,23 @@
+{
+  "model_id": "ChongCong__Medical-SAM3",
+  "adapter": "medical_sam3",
+  "native_code_files": 93,
+  "dependencies": [
+    "numpy",
+    "Pillow",
+    "torch",
+    "torchvision",
+    "transformers",
+    "timm",
+    "triton",
+    "einops",
+    "iopath",
+    "decord",
+    "ftfy",
+    "regex"
+  ],
+  "loader": "../inference.py",
+  "local_packages_precede_installed_editable_packages": true,
+  "source_root": ".",
+  "package_boundary": "current model directory; no shared runtime code or other model"
+}

@@ -1,0 +1,29 @@
+{
+  "adapter": "semantic",
+  "adapter_group": "fashn",
+  "weight_path": "weights",
+  "source_entry": "FashnATRStart.py",
+  "model_id": "fashn-ai__fashn-human-parser",
+  "source_root": "weights",
+  "dataset_root": "../../../../dataset/segmentation",
+  "datasets": [
+    {
+      "name": "ATR",
+      "split": [
+        "author_seed42_holdout"
+      ],
+      "protocol": {
+        "label_view": "atr_common15"
+      }
+    }
+  ],
+  "native_task": "18类人体解析",
+  "native_boundary": "自身18类与ATR18不同；显式映射，未提供独立官方测试split",
+  "original_entrypoints": [
+    "fashn-ai__fashn-human-parser/FashnATRStart.py"
+  ],
+  "python": "../../venv/bin/python",
+  "evaluation_python": "../../venv/bin/python",
+  "seed": 42,
+  "bundle_root": "result/coco_bundle"
+}

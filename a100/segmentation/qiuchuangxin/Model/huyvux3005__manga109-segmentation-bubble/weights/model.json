@@ -1,0 +1,36 @@
+{
+  "model_id": "huyvux3005__manga109-segmentation-bubble",
+  "adapter": "yolo",
+  "weight_path": "weights/best.pt",
+  "imgsz": 1600,
+  "conf": 0.001,
+  "iou": 0.7,
+  "max_det": 100,
+  "class_agnostic": false,
+  "retina_masks": true,
+  "coco_categories": false,
+  "source_root": "weights",
+  "dataset_root": "../../../../dataset/segmentation",
+  "datasets": [
+    {
+      "name": "Manga109",
+      "split": [
+        "test"
+      ],
+      "protocol": {}
+    }
+  ],
+  "native_task": "漫画气泡实例分割",
+  "native_boundary": "自定义bubble类；COCO只是标注格式，不是COCO80类别",
+  "original_entrypoints": [
+    "huyvux3005__manga109-segmentation-bubble/MangaBubbleStart.py",
+    "gpu-reproduction/additional_models.py manga109"
+  ],
+  "python": "../../venv/bin/python",
+  "evaluation_python": "../../venv/bin/python",
+  "seed": 42,
+  "category_map": {
+    "0": 3
+  },
+  "bundle_root": "result/coco_bundle"
+}

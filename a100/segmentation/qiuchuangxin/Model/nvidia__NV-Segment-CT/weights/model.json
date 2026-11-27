@@ -1,0 +1,25 @@
+{
+  "model_id": "nvidia__NV-Segment-CT",
+  "adapter": "nv_ct",
+  "weight_path": "weights/vista3d_pretrained_model/model.safetensors",
+  "source_root": "weights",
+  "dataset_root": "../../../../dataset/segmentation",
+  "datasets": [
+    {
+      "name": "MSD-Task09-Spleen",
+      "split": [
+        "testing"
+      ],
+      "protocol": {}
+    }
+  ],
+  "native_task": "3D CT分割",
+  "native_boundary": "3D医学体；需体素间距/病例指标，不适合直接COCO",
+  "original_entrypoints": [
+    "nvidia__NV-Segment-CT/NVSegmentCTOfficialEval.py"
+  ],
+  "python": "../../venv/bin/python",
+  "evaluation_python": "../../venv/bin/python",
+  "seed": 42,
+  "bundle_root": "result/coco_bundle"
+}

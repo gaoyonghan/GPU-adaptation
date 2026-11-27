@@ -1,0 +1,28 @@
+{
+  "model_id": "ayoubkirouane__Breast-Cancer_SAM_v1",
+  "adapter": "breast_sam",
+  "weight_path": "weights",
+  "prompt": "gt_box",
+  "source_root": "weights",
+  "dataset_root": "../../../../dataset/segmentation",
+  "datasets": [
+    {
+      "name": "BUSI",
+      "split": [
+        "Val"
+      ],
+      "protocol": {}
+    }
+  ],
+  "native_task": "医学框提示分割",
+  "native_boundary": "默认训练集数据不能宣称held-out测试；GT框提示、医学域",
+  "original_entrypoints": [
+    "ayoubkirouane__Breast-Cancer_SAM_v1/BreastCancerSAMOfficialEval.py"
+  ],
+  "python": "../../venv/bin/python",
+  "evaluation_python": "../../venv/bin/python",
+  "seed": 42,
+  "native_box_padding": true,
+  "prompt_seed": 42,
+  "bundle_root": "result/coco_bundle"
+}

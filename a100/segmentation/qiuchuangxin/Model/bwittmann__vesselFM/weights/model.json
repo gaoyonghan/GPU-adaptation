@@ -1,0 +1,25 @@
+{
+  "model_id": "bwittmann__vesselFM",
+  "adapter": "vessel",
+  "weight_path": "weights/vesselFM_base.pt",
+  "source_root": "weights",
+  "dataset_root": "../../../../dataset/segmentation",
+  "datasets": [
+    {
+      "name": "OCTA",
+      "split": [
+        "public_manual_test"
+      ],
+      "protocol": {}
+    }
+  ],
+  "native_task": "3D血管二值分割",
+  "native_boundary": "3D单通道DynUNet，非2D RGB输入",
+  "original_entrypoints": [
+    "bwittmann__vesselFM/VesselFMOCTAOfficialEval.py"
+  ],
+  "python": "../../venv/bin/python",
+  "evaluation_python": "../../venv/bin/python",
+  "seed": 42,
+  "bundle_root": "result/coco_bundle"
+}
