@@ -1,0 +1,7 @@
+{
+  "schema": "model-eval/mask-coco/v1",
+  "model": "OpenIXCLab__SeC-4B",
+  "complete": true,
+  "bundle": "../../../../../dataset/SeCVOS_OpenIXCLab__SeC-4B_coco/runs/20261123_105209_bd51bb6c",
+  "sample_count": 31514
+}

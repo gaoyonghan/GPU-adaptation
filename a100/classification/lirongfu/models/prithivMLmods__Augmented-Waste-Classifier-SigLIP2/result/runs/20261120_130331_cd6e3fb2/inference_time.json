@@ -1,0 +1,7 @@
+{
+  "prithivMLmods__Augmented-Waste-Classifier-SigLIP2": {
+    "total_latency_s": 8.067249599844217,
+    "sample_count": 3000,
+    "avg_latency_ms": 2.6890831999480724
+  }
+}

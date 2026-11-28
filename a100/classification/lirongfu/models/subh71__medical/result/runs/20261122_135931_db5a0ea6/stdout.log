@@ -1,0 +1,113 @@
+/opt/venvs/classification-eval/lib/python3.10/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+2026-11-22 13:59:37.762761: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2026-11-22 13:59:37.762829: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2026-11-22 13:59:37.763841: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+/opt/venvs/classification-eval/lib/python3.10/site-packages/transformers/models/vit/feature_extraction_vit.py:30: FutureWarning: The class ViTFeatureExtractor is deprecated and will be removed in version 5 of Transformers. Please use ViTImageProcessor instead.
+  warnings.warn(
+subh71__medical:   0%|          | 0/295 [00:00<?, ?image/s]subh71__medical:  22%|██▏       | 64/295 [01:03<03:50,  1.00image/s]subh71__medical:  43%|████▎     | 128/295 [02:06<02:44,  1.01image/s]subh71__medical:  65%|██████▌   | 192/295 [02:54<01:30,  1.14image/s]subh71__medical:  87%|████████▋ | 256/295 [03:52<00:34,  1.13image/s]subh71__medical: 100%|██████████| 295/295 [04:33<00:00,  1.08image/s]subh71__medical: 100%|██████████| 295/295 [04:33<00:00,  1.08image/s]
+Forward timing saved: /data/lirongfu/image-classification/classification/lirongfu/models/subh71__medical/result/inference_time.json [subh71__medical]
+{
+  "schema": "model-eval/metrics/v1",
+  "task": "image_classification",
+  "protocol": "model-eval/score-classification/v1",
+  "model": "subh71__medical",
+  "dataset": [
+    "chest_ct"
+  ],
+  "metric_unit": "fraction",
+  "metrics": {
+    "accuracy": 0.8169491525423729,
+    "top1_accuracy": 0.8169491525423729,
+    "top5_accuracy": null,
+    "balanced_accuracy": 0.8520370370370369,
+    "macro_precision_over_evaluated_target_classes": 0.8501788908765653,
+    "macro_recall_over_evaluated_target_classes": 0.8520370370370369,
+    "macro_f1_over_evaluated_target_classes": 0.8241567167774055,
+    "weighted_f1": 0.8150092977513611
+  },
+  "metric_status": {
+    "top5_accuracy": "not_applicable_fewer_than_five_classes"
+  },
+  "per_class": [
+    {
+      "category_id": 0,
+      "support": 100,
+      "precision": 0.8269230769230769,
+      "recall": 0.86,
+      "f1": 0.8431372549019608
+    },
+    {
+      "category_id": 1,
+      "support": 51,
+      "precision": 0.5930232558139535,
+      "recall": 1.0,
+      "f1": 0.7445255474452555
+    },
+    {
+      "category_id": 2,
+      "support": 54,
+      "precision": 1.0,
+      "recall": 0.9814814814814815,
+      "f1": 0.9906542056074766
+    },
+    {
+      "category_id": 3,
+      "support": 90,
+      "precision": 0.9807692307692307,
+      "recall": 0.5666666666666667,
+      "f1": 0.7183098591549296
+    }
+  ],
+  "scope": {
+    "images": 295,
+    "completed_images": 295,
+    "categories": 4
+  },
+  "evaluation": {
+    "task": "single_label_classification",
+    "top_k": [
+      1,
+      5
+    ],
+    "top5_when_classes_below_five": "not_applicable",
+    "top5_when_ranking_missing": "unavailable",
+    "ranking": "preserve_native_order_no_new_tie_break",
+    "macro_labels": "observed_ground_truth_classes",
+    "zero_division": 0,
+    "unit": "fraction",
+    "sample_weight": "uniform"
+  },
+  "qualification": {
+    "kind": "original_configured_dataset",
+    "data_kind": "hf_disk",
+    "pred_label_map": {},
+    "ignore_pred_label": null,
+    "excluded_samples": 0,
+    "image_layout": "shared images with ImageNet-style image/label manifests"
+  },
+  "native_execution": [
+    "existing native top1 retained; available native class rankings exported"
+  ],
+  "limitations": [
+    "Top-5 is unavailable when native output provides only a final label."
+  ],
+  "evaluator": {
+    "name": "scikit-learn.metrics",
+    "version": "1.7.1",
+    "functions": [
+      "accuracy_score",
+      "precision_recall_fscore_support"
+    ],
+    "top5": "accuracy_score of GT membership in native ordered top5",
+    "source_sha256": "1f7be1029f426e7fbb26e4c6a334be3301a83a511c7757c72a63f4a2ad19d946",
+    "reference": "https://scikit-learn.org/stable/modules/model_evaluation.html"
+  },
+  "input_sha256": {
+    "annotations.json": "ff659122a7da2d4d7d5b8f77772035c405b4043933962e09091085903d6b9988",
+    "predictions.json": "a38c6dacdc20366b89b1a38282a7148054f637701fd9a81432d2e7e65726805c"
+  },
+  "protocol_sha256": "f5bc54e52dad2e98fae858afea5e9e185ccd72dba88231dd8aebcc5e95954779",
+  "inference_executed": false
+}

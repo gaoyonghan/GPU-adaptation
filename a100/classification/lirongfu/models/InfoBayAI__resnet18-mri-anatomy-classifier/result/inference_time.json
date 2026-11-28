@@ -1,0 +1,7 @@
+{
+  "InfoBayAI__resnet18-mri-anatomy-classifier": {
+    "total_latency_s": 1.7968879286199808,
+    "sample_count": 21,
+    "avg_latency_ms": 85.5660918390467
+  }
+}

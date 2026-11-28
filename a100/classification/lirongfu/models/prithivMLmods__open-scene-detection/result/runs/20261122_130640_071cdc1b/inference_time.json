@@ -1,0 +1,7 @@
+{
+  "prithivMLmods__open-scene-detection": {
+    "total_latency_s": 37.47565161250532,
+    "sample_count": 16345,
+    "avg_latency_ms": 2.2927899426433354
+  }
+}

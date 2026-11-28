@@ -1,0 +1,230 @@
+2026-11-23 11:01:25.596907: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2026-11-23 11:01:25.596966: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2026-11-23 11:01:25.597943: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+/opt/venvs/classification-eval/lib/python3.10/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+TensorFlow and JAX classes are deprecated and will be removed in Transformers v5. We recommend migrating to PyTorch classes or pinning your version of Transformers.
+All model checkpoint layers were used when initializing TFViTForImageClassification.
+
+All the layers of TFViTForImageClassification were initialized from the model checkpoint at /tmp/classification-runtime-hqny2e4h/Vishaltiwari2019__food_classifier_one.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use TFViTForImageClassification for predictions without further training.
+Vishaltiwari2019__food_classifier_one:   0%|          | 0/941 [00:00<?, ?image/s]/data/lirongfu/image-classification/classification/lirongfu_recovered/models/Vishaltiwari2019__food_classifier_one/inference/native.py:748: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at /pytorch/torch/csrc/utils/tensor_numpy.cpp:203.)
+  return self._probability_results(torch.from_numpy(np.asarray(logits)))
+Vishaltiwari2019__food_classifier_one:   7%|▋         | 64/941 [05:41<1:18:01,  5.34s/image]Vishaltiwari2019__food_classifier_one:  14%|█▎        | 128/941 [12:04<1:17:31,  5.72s/image]Vishaltiwari2019__food_classifier_one:  20%|██        | 192/941 [17:50<1:09:33,  5.57s/image]Vishaltiwari2019__food_classifier_one:  27%|██▋       | 256/941 [24:04<1:04:50,  5.68s/image]Vishaltiwari2019__food_classifier_one:  34%|███▍      | 320/941 [30:25<59:47,  5.78s/image]  Vishaltiwari2019__food_classifier_one:  41%|████      | 384/941 [35:55<51:41,  5.57s/image]Vishaltiwari2019__food_classifier_one:  48%|████▊     | 448/941 [41:10<44:00,  5.36s/image]Vishaltiwari2019__food_classifier_one:  54%|█████▍    | 512/941 [46:53<38:17,  5.36s/image]Vishaltiwari2019__food_classifier_one:  61%|██████    | 576/941 [52:39<32:41,  5.37s/image]Vishaltiwari2019__food_classifier_one:  68%|██████▊   | 640/941 [57:58<26:20,  5.25s/image]Vishaltiwari2019__food_classifier_one:  75%|███████▍  | 704/941 [1:03:22<20:31,  5.19s/image]Vishaltiwari2019__food_classifier_one:  82%|████████▏ | 768/941 [1:08:36<14:43,  5.11s/image]Vishaltiwari2019__food_classifier_one:  88%|████████▊ | 832/941 [1:13:31<09:00,  4.96s/image]Vishaltiwari2019__food_classifier_one:  95%|█████████▌| 896/941 [1:18:11<03:35,  4.78s/image]Vishaltiwari2019__food_classifier_one: 100%|██████████| 941/941 [1:22:17<00:00,  4.94s/image]Vishaltiwari2019__food_classifier_one: 100%|██████████| 941/941 [1:22:17<00:00,  5.25s/image]
+Forward timing saved: /data/lirongfu/image-classification/classification/lirongfu_recovered/models/Vishaltiwari2019__food_classifier_one/result/inference_time.json [Vishaltiwari2019__food_classifier_one]
+{
+  "schema": "model-eval/metrics/v1",
+  "task": "image_classification",
+  "protocol": "model-eval/score-classification/v1",
+  "model": "Vishaltiwari2019__food_classifier_one",
+  "dataset": [
+    "indian_food"
+  ],
+  "metric_unit": "fraction",
+  "metrics": {
+    "accuracy": 0.8947927736450585,
+    "top1_accuracy": 0.8947927736450585,
+    "top5_accuracy": 0.9808714133900106,
+    "balanced_accuracy": 0.8796169063276483,
+    "macro_precision_over_evaluated_target_classes": 0.9080879398252109,
+    "macro_recall_over_evaluated_target_classes": 0.8796169063276483,
+    "macro_f1_over_evaluated_target_classes": 0.8826663210324606,
+    "weighted_f1": 0.8925676061388974
+  },
+  "metric_status": {
+    "top5_accuracy": "computed"
+  },
+  "per_class": [
+    {
+      "category_id": 0,
+      "support": 52,
+      "precision": 1.0,
+      "recall": 0.9807692307692307,
+      "f1": 0.9902912621359223
+    },
+    {
+      "category_id": 1,
+      "support": 53,
+      "precision": 0.9302325581395349,
+      "recall": 0.7547169811320755,
+      "f1": 0.8333333333333334
+    },
+    {
+      "category_id": 2,
+      "support": 44,
+      "precision": 0.7692307692307693,
+      "recall": 0.9090909090909091,
+      "f1": 0.8333333333333334
+    },
+    {
+      "category_id": 3,
+      "support": 54,
+      "precision": 0.9454545454545454,
+      "recall": 0.9629629629629629,
+      "f1": 0.9541284403669725
+    },
+    {
+      "category_id": 4,
+      "support": 40,
+      "precision": 0.9459459459459459,
+      "recall": 0.875,
+      "f1": 0.9090909090909091
+    },
+    {
+      "category_id": 5,
+      "support": 47,
+      "precision": 0.88,
+      "recall": 0.9361702127659575,
+      "f1": 0.9072164948453608
+    },
+    {
+      "category_id": 6,
+      "support": 49,
+      "precision": 0.9130434782608695,
+      "recall": 0.8571428571428571,
+      "f1": 0.8842105263157894
+    },
+    {
+      "category_id": 7,
+      "support": 18,
+      "precision": 1.0,
+      "recall": 0.3333333333333333,
+      "f1": 0.5
+    },
+    {
+      "category_id": 8,
+      "support": 47,
+      "precision": 0.8181818181818182,
+      "recall": 0.9574468085106383,
+      "f1": 0.8823529411764706
+    },
+    {
+      "category_id": 9,
+      "support": 42,
+      "precision": 0.8636363636363636,
+      "recall": 0.9047619047619048,
+      "f1": 0.8837209302325582
+    },
+    {
+      "category_id": 10,
+      "support": 37,
+      "precision": 0.9487179487179487,
+      "recall": 1.0,
+      "f1": 0.9736842105263158
+    },
+    {
+      "category_id": 11,
+      "support": 44,
+      "precision": 1.0,
+      "recall": 0.8409090909090909,
+      "f1": 0.9135802469135802
+    },
+    {
+      "category_id": 12,
+      "support": 57,
+      "precision": 0.9298245614035088,
+      "recall": 0.9298245614035088,
+      "f1": 0.9298245614035088
+    },
+    {
+      "category_id": 13,
+      "support": 67,
+      "precision": 0.7733333333333333,
+      "recall": 0.8656716417910447,
+      "f1": 0.8169014084507042
+    },
+    {
+      "category_id": 14,
+      "support": 54,
+      "precision": 0.8125,
+      "recall": 0.9629629629629629,
+      "f1": 0.8813559322033898
+    },
+    {
+      "category_id": 15,
+      "support": 55,
+      "precision": 1.0,
+      "recall": 0.7818181818181819,
+      "f1": 0.8775510204081632
+    },
+    {
+      "category_id": 16,
+      "support": 53,
+      "precision": 0.9056603773584906,
+      "recall": 0.9056603773584906,
+      "f1": 0.9056603773584906
+    },
+    {
+      "category_id": 17,
+      "support": 44,
+      "precision": 0.9565217391304348,
+      "recall": 1.0,
+      "f1": 0.9777777777777777
+    },
+    {
+      "category_id": 18,
+      "support": 46,
+      "precision": 0.8235294117647058,
+      "recall": 0.9130434782608695,
+      "f1": 0.865979381443299
+    },
+    {
+      "category_id": 19,
+      "support": 38,
+      "precision": 0.9459459459459459,
+      "recall": 0.9210526315789473,
+      "f1": 0.9333333333333333
+    }
+  ],
+  "scope": {
+    "images": 941,
+    "completed_images": 941,
+    "categories": 20
+  },
+  "evaluation": {
+    "task": "single_label_classification",
+    "top_k": [
+      1,
+      5
+    ],
+    "top5_when_classes_below_five": "not_applicable",
+    "top5_when_ranking_missing": "unavailable",
+    "ranking": "preserve_native_order_no_new_tie_break",
+    "macro_labels": "observed_ground_truth_classes",
+    "zero_division": 0,
+    "unit": "fraction",
+    "sample_weight": "uniform"
+  },
+  "qualification": {
+    "kind": "original_configured_dataset",
+    "data_kind": "hf_disk",
+    "pred_label_map": {},
+    "ignore_pred_label": null,
+    "excluded_samples": 0,
+    "image_layout": "shared images with ImageNet-style image/label manifests"
+  },
+  "native_execution": [
+    "existing native top1 retained; available native class rankings exported"
+  ],
+  "limitations": [
+    "Top-5 is unavailable when native output provides only a final label."
+  ],
+  "evaluator": {
+    "name": "scikit-learn.metrics",
+    "version": "1.7.1",
+    "functions": [
+      "accuracy_score",
+      "precision_recall_fscore_support"
+    ],
+    "top5": "accuracy_score of GT membership in native ordered top5",
+    "source_sha256": "1f7be1029f426e7fbb26e4c6a334be3301a83a511c7757c72a63f4a2ad19d946",
+    "reference": "https://scikit-learn.org/stable/modules/model_evaluation.html"
+  },
+  "input_sha256": {
+    "annotations.json": "791297e65eef0d97f0e2d9c73fdc186f89b25d09dfe82f060da7bf6cd905cb95",
+    "predictions.json": "62a99376cd30cdc6762032dc3df882c68b23d234d7e9c1e843b750641b9bb551"
+  },
+  "protocol_sha256": "a59490e5a37e95e8ac435afd87cef77b74596b903f5b9617bed3eecae6826ad2",
+  "inference_executed": false
+}

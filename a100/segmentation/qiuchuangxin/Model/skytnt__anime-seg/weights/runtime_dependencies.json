@@ -1,0 +1,17 @@
+{
+  "model_id": "skytnt__anime-seg",
+  "adapter": "anime",
+  "native_code_files": 3,
+  "dependencies": [
+    "numpy",
+    "Pillow",
+    "torch",
+    "torchvision",
+    "opencv-python",
+    "safetensors"
+  ],
+  "loader": "../inference.py",
+  "local_packages_precede_installed_editable_packages": true,
+  "source_root": ".",
+  "package_boundary": "current model directory; no shared runtime code or other model"
+}

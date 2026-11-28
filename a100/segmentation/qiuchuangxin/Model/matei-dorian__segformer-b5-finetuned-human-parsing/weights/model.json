@@ -1,0 +1,27 @@
+{
+  "adapter": "semantic",
+  "adapter_group": "atr_shared",
+  "weight_path": "weights",
+  "source_entry": "shared/ATR-evaluator/utils/evaluate_model.py",
+  "model_id": "matei-dorian__segformer-b5-finetuned-human-parsing",
+  "source_root": "weights",
+  "dataset_root": "../../../../dataset/segmentation",
+  "datasets": [
+    {
+      "name": "ATR",
+      "split": [
+        "author_seed42_holdout"
+      ],
+      "protocol": {}
+    }
+  ],
+  "native_task": "ATR18类人体解析",
+  "native_boundary": "解析人体/服饰部件；需检查官方split清单，不能替代COCO类别标签",
+  "original_entrypoints": [
+    "matei-dorian__segformer-b5-finetuned-human-parsing/SegFormerB5HumanParsingStart.py"
+  ],
+  "python": "../../venv/bin/python",
+  "evaluation_python": "../../venv/bin/python",
+  "seed": 42,
+  "bundle_root": "result/coco_bundle"
+}

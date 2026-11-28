@@ -1,0 +1,29 @@
+{
+  "state": "passed",
+  "model": "jameslahm__lsnet_b",
+  "command": [
+    "python",
+    "classification/lirongfu/models/jameslahm__lsnet_b/inference.py",
+    "--device",
+    "cuda",
+    "--batch-size",
+    "64"
+  ],
+  "environment": {
+    "name": "classification-eval",
+    "python_version": "3.10.12"
+  },
+  "input_scope": {
+    "selection": "configured dataset",
+    "max_images": 0,
+    "image": null,
+    "inference_images": 50000,
+    "evaluated_images": 50000
+  },
+  "output_directory": "classification/lirongfu/models/jameslahm__lsnet_b/result/runs/20261120_004550_c4d48819",
+  "dataset_root": "dataset",
+  "weights": "classification/lirongfu/models/jameslahm__lsnet_b/weights/best_model.pth",
+  "log": "stdout.log",
+  "exit_code": 0,
+  "evaluation_bundle": "dataset/imagenet_1k_val_jameslahm__lsnet_b_imagenet/runs/20261120_004550_c4d48819"
+}

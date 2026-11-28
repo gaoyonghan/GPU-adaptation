@@ -1,0 +1,1 @@
+{"model":"prithivMLmods__Deepfake-Detect-Siglip2","dataset":"deepfake_vs_real","bundle":"../../../../../dataset/deepfake_vs_real_prithivMLmods__Deepfake-Detect-Siglip2_imagenet/runs/20261120_165231_9248e5ff","schema":"model-eval/score-classification/v1","complete":true}

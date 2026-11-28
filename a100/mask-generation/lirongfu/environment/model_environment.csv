@@ -1,0 +1,17 @@
+model_directory,environment_file,python_version,gpu_runtime_requirements,known_limitations
+mask-generation/lirongfu/models/OpenIXCLab__SeC-4B,mask-generation/lirongfu/environment/mask-eval.txt,3.10,CUDA; ONNX requires Node.js >=20,保留原生入口的逐图、逐帧或引擎批量设置，不由总入口覆盖
+mask-generation/lirongfu/models/Xenova__slimsam-77-uniform,mask-generation/lirongfu/environment/mask-eval.txt,3.10,CUDA; ONNX requires Node.js >=20,沿用现有项目提示点批次；不是官方图片 batch size；显存不足时原代码可降低提示点批次
+mask-generation/lirongfu/models/Zigeng__SlimSAM-uniform-77,mask-generation/lirongfu/environment/mask-eval.txt,3.10,CUDA; ONNX requires Node.js >=20,沿用现有项目提示点批次；不是官方图片 batch size；显存不足时原代码可降低提示点批次
+mask-generation/lirongfu/models/facebook__sam-vit-base,mask-generation/lirongfu/environment/mask-eval.txt,3.10,CUDA; ONNX requires Node.js >=20,沿用现有项目提示点批次；不是官方图片 batch size；显存不足时原代码可降低提示点批次
+mask-generation/lirongfu/models/facebook__sam-vit-huge,mask-generation/lirongfu/environment/mask-eval.txt,3.10,CUDA; ONNX requires Node.js >=20,沿用现有项目提示点批次；不是官方图片 batch size；显存不足时原代码可降低提示点批次
+mask-generation/lirongfu/models/facebook__sam-vit-large,mask-generation/lirongfu/environment/mask-eval.txt,3.10,CUDA; ONNX requires Node.js >=20,沿用现有项目提示点批次；不是官方图片 batch size；显存不足时原代码可降低提示点批次
+mask-generation/lirongfu/models/facebook__sam2-hiera-large,mask-generation/lirongfu/environment/mask-eval.txt,3.10,CUDA; ONNX requires Node.js >=20,保留原生入口的逐图、逐帧或引擎批量设置，不由总入口覆盖
+mask-generation/lirongfu/models/facebook__sam2-hiera-tiny,mask-generation/lirongfu/environment/mask-eval.txt,3.10,CUDA; ONNX requires Node.js >=20,保留原生入口的逐图、逐帧或引擎批量设置，不由总入口覆盖
+mask-generation/lirongfu/models/facebook__sam2.1-hiera-large,mask-generation/lirongfu/environment/mask-eval.txt,3.10,CUDA; ONNX requires Node.js >=20,保留原生入口的逐图、逐帧或引擎批量设置，不由总入口覆盖
+mask-generation/lirongfu/models/facebook__sam3,mask-generation/lirongfu/environment/mask-eval.txt,3.10,CUDA; ONNX requires Node.js >=20,保留原生入口的逐图、逐帧或引擎批量设置，不由总入口覆盖
+mask-generation/lirongfu/models/facebook__sam3.1,mask-generation/lirongfu/environment/mask-eval.txt,3.10,CUDA; ONNX requires Node.js >=20,保留原生入口的逐图、逐帧或引擎批量设置，不由总入口覆盖
+mask-generation/lirongfu/models/finegrain__finegrain-box-segmenter,mask-generation/lirongfu/environment/mask-eval.txt,3.10,CUDA; ONNX requires Node.js >=20,保留原生入口的逐图、逐帧或引擎批量设置，不由总入口覆盖
+mask-generation/lirongfu/models/onnx-community__sam3-tracker-ONNX,mask-generation/lirongfu/environment/mask-eval.txt,3.10,CUDA; ONNX requires Node.js >=20,沿用现有项目提示点批次；不是官方图片 batch size；显存不足时原代码可降低提示点批次
+mask-generation/lirongfu/models/tiiuae__Falcon-Perception,mask-generation/lirongfu/environment/mask-eval.txt,3.10,CUDA; ONNX requires Node.js >=20,保留原生入口的逐图、逐帧或引擎批量设置，不由总入口覆盖
+mask-generation/lirongfu/models/wanglab__medsam-vit-base,mask-generation/lirongfu/environment/mask-eval.txt,3.10,CUDA; ONNX requires Node.js >=20,保留原生入口的逐图、逐帧或引擎批量设置，不由总入口覆盖
+mask-generation/lirongfu/models/yonigozlan__EdgeTAM-hf,mask-generation/lirongfu/environment/mask-eval.txt,3.10,CUDA; ONNX requires Node.js >=20,保留原生入口的逐图、逐帧或引擎批量设置，不由总入口覆盖

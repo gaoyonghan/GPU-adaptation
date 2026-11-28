@@ -1,0 +1,18 @@
+{
+  "model_id": "ZhengPeng7__BiRefNet_HR",
+  "adapter": "binary",
+  "native_code_files": 7,
+  "dependencies": [
+    "numpy",
+    "Pillow",
+    "torch",
+    "torchvision",
+    "transformers",
+    "safetensors",
+    "timm"
+  ],
+  "loader": "../inference.py",
+  "local_packages_precede_installed_editable_packages": true,
+  "source_root": ".",
+  "package_boundary": "current model directory; no shared runtime code or other model"
+}

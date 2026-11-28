@@ -1,0 +1,7 @@
+{
+  "gtfintechlab__ipomine-yolov8-classifier": {
+    "total_latency_s": 2.960646351799369,
+    "sample_count": 5000,
+    "avg_latency_ms": 0.5921292703598737
+  }
+}

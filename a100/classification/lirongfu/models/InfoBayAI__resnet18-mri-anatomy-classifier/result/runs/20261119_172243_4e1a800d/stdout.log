@@ -1,0 +1,98 @@
+InfoBayAI__resnet18-mri-anatomy-classifier:   0%|          | 0/21 [00:00<?, ?image/s]InfoBayAI__resnet18-mri-anatomy-classifier: 100%|██████████| 21/21 [00:15<00:00,  1.39image/s]InfoBayAI__resnet18-mri-anatomy-classifier: 100%|██████████| 21/21 [00:15<00:00,  1.39image/s]
+Forward timing saved: /data/lirongfu/image-classification/classification/lirongfu/models/InfoBayAI__resnet18-mri-anatomy-classifier/result/inference_time.json [InfoBayAI__resnet18-mri-anatomy-classifier]
+{
+  "schema": "model-eval/metrics/v1",
+  "task": "image_classification",
+  "protocol": "model-eval/score-classification/v1",
+  "model": "InfoBayAI__resnet18-mri-anatomy-classifier",
+  "dataset": [
+    "infobay_mri"
+  ],
+  "metric_unit": "fraction",
+  "metrics": {
+    "accuracy": 0.5238095238095238,
+    "top1_accuracy": 0.5238095238095238,
+    "top5_accuracy": 1.0,
+    "balanced_accuracy": 0.6666666666666666,
+    "macro_precision_over_evaluated_target_classes": 0.4583333333333333,
+    "macro_recall_over_evaluated_target_classes": 0.6666666666666666,
+    "macro_f1_over_evaluated_target_classes": 0.4222222222222222,
+    "weighted_f1": 0.6095238095238096
+  },
+  "metric_status": {
+    "top5_accuracy": "computed"
+  },
+  "per_class": [
+    {
+      "category_id": 0,
+      "support": 18,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666
+    },
+    {
+      "category_id": 2,
+      "support": 1,
+      "precision": 0.25,
+      "recall": 1.0,
+      "f1": 0.4
+    },
+    {
+      "category_id": 3,
+      "support": 2,
+      "precision": 0.125,
+      "recall": 0.5,
+      "f1": 0.2
+    }
+  ],
+  "scope": {
+    "images": 21,
+    "completed_images": 21,
+    "categories": 5
+  },
+  "evaluation": {
+    "task": "single_label_classification",
+    "top_k": [
+      1,
+      5
+    ],
+    "top5_when_classes_below_five": "not_applicable",
+    "top5_when_ranking_missing": "unavailable",
+    "ranking": "preserve_native_order_no_new_tie_break",
+    "macro_labels": "observed_ground_truth_classes",
+    "zero_division": 0,
+    "unit": "fraction",
+    "sample_weight": "uniform"
+  },
+  "qualification": {
+    "kind": "original_configured_dataset",
+    "data_kind": "hf_disk",
+    "pred_label_map": {},
+    "ignore_pred_label": null,
+    "excluded_samples": 0,
+    "image_layout": "shared images with ImageNet-style image/label manifests"
+  },
+  "native_execution": [
+    "existing native top1 retained; available native class rankings exported"
+  ],
+  "limitations": [
+    "Top-5 is unavailable when native output provides only a final label."
+  ],
+  "evaluator": {
+    "name": "scikit-learn.metrics",
+    "version": "1.7.1",
+    "functions": [
+      "accuracy_score",
+      "precision_recall_fscore_support"
+    ],
+    "top5": "accuracy_score of GT membership in native ordered top5",
+    "source_sha256": "1f7be1029f426e7fbb26e4c6a334be3301a83a511c7757c72a63f4a2ad19d946",
+    "reference": "https://scikit-learn.org/stable/modules/model_evaluation.html"
+  },
+  "input_sha256": {
+    "annotations.json": "ef41dcba31b02cdcec60392be7cfb50b8c49fead19e90f86a05246429593cef5",
+    "predictions.json": "a35fd9246ac5829c81a4cf85a758bde65625322557a68b81b76060be57cebe88"
+  },
+  "protocol_sha256": "fabbea9117e72a99c4e2217a7adc777eacaccfc5842080b0ff9b6d5acef94aed",
+  "inference_executed": false
+}

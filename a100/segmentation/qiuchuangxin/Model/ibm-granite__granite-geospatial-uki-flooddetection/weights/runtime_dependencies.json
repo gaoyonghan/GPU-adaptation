@@ -1,0 +1,18 @@
+{
+  "model_id": "ibm-granite__granite-geospatial-uki-flooddetection",
+  "adapter": "geospatial",
+  "native_code_files": 10,
+  "dependencies": [
+    "numpy",
+    "Pillow",
+    "torch",
+    "terratorch",
+    "torchgeo",
+    "lightning",
+    "rasterio"
+  ],
+  "loader": "../inference.py",
+  "local_packages_precede_installed_editable_packages": true,
+  "source_root": ".",
+  "package_boundary": "current model directory; no shared runtime code or other model"
+}

@@ -1,0 +1,7 @@
+{
+  "prithivMLmods__Deepfake-Detect-Siglip2": {
+    "total_latency_s": 21.38661529496312,
+    "sample_count": 8000,
+    "avg_latency_ms": 2.67332691187039
+  }
+}

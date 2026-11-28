@@ -1,0 +1,1 @@
+{"model":"SixAILab__nepa-base-patch14-224-sft","dataset":"imagenet_1k_val","bundle":"../../../../../dataset/imagenet_1k_val_SixAILab__nepa-base-patch14-224-sft_imagenet/runs/20261123_102357_9905a67f","schema":"model-eval/score-classification/v1","complete":true}

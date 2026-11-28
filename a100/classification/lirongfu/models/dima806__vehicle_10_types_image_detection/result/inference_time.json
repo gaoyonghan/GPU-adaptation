@@ -1,0 +1,7 @@
+{
+  "dima806__vehicle_10_types_image_detection": {
+    "total_latency_s": 1.4368284940719604,
+    "sample_count": 400,
+    "avg_latency_ms": 3.592071235179901
+  }
+}

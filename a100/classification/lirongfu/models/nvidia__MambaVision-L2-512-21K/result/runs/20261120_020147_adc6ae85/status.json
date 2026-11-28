@@ -1,0 +1,29 @@
+{
+  "state": "passed",
+  "model": "nvidia__MambaVision-L2-512-21K",
+  "command": [
+    "python",
+    "classification/lirongfu/models/nvidia__MambaVision-L2-512-21K/inference.py",
+    "--device",
+    "cuda",
+    "--batch-size",
+    "64"
+  ],
+  "environment": {
+    "name": "classification-eval",
+    "python_version": "3.10.12"
+  },
+  "input_scope": {
+    "selection": "configured dataset",
+    "max_images": 0,
+    "image": null,
+    "inference_images": 50000,
+    "evaluated_images": 50000
+  },
+  "output_directory": "classification/lirongfu/models/nvidia__MambaVision-L2-512-21K/result/runs/20261120_020147_adc6ae85",
+  "dataset_root": "dataset",
+  "weights": "classification/lirongfu/models/nvidia__MambaVision-L2-512-21K/weights/best_model.pth",
+  "log": "stdout.log",
+  "exit_code": 0,
+  "evaluation_bundle": "dataset/imagenet_1k_val_nvidia__MambaVision-L2-512-21K_imagenet/runs/20261120_020147_adc6ae85"
+}

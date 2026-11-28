@@ -1,0 +1,7 @@
+{
+  "OpenIXCLab__SeC-4B": {
+    "total_latency_s": 1408.7405974157155,
+    "sample_count": 28189,
+    "avg_latency_ms": 49.97483406348985
+  }
+}

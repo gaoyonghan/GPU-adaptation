@@ -1,0 +1,1 @@
+{"model":"nvidia__MambaVision-L2-512-21K","dataset":"imagenet_1k_val","complete":true,"bundle":"../../../../../../../dataset/imagenet_1k_val_nvidia__MambaVision-L2-512-21K_imagenet/runs/20261120_020147_adc6ae85","schema":"model-eval/score-classification/v1"}

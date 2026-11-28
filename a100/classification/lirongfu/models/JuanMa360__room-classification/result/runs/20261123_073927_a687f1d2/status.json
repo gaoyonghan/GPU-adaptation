@@ -1,0 +1,29 @@
+{
+  "state": "passed",
+  "model": "JuanMa360__room-classification",
+  "command": [
+    "python",
+    "classification/lirongfu_recovered/models/JuanMa360__room-classification/inference.py",
+    "--device",
+    "cuda",
+    "--batch-size",
+    "64"
+  ],
+  "environment": {
+    "name": "classification-eval",
+    "python_version": "3.10.12"
+  },
+  "input_scope": {
+    "selection": "configured dataset",
+    "max_images": 0,
+    "image": null,
+    "inference_images": 1558,
+    "evaluated_images": 1558
+  },
+  "output_directory": "classification/lirongfu_recovered/models/JuanMa360__room-classification/result/runs/20261123_073927_a687f1d2",
+  "dataset_root": "dataset",
+  "weights": "classification/lirongfu_recovered/models/JuanMa360__room-classification/weights/best_model.pth",
+  "log": "stdout.log",
+  "exit_code": 0,
+  "evaluation_bundle": "dataset/indoor_scene_JuanMa360__room-classification_imagenet/runs/20261123_073927_a687f1d2"
+}

@@ -1,0 +1,25 @@
+{
+  "model_id": "ibm-granite__granite-geospatial-uki-flooddetection",
+  "adapter": "geospatial",
+  "weight_path": "weights/granite_geospatial_uki_flood_detection_v1.ckpt",
+  "source_root": "weights",
+  "dataset_root": "../../../../dataset/segmentation",
+  "datasets": [
+    {
+      "name": "UKI-Flood",
+      "split": [
+        "holdout"
+      ],
+      "protocol": {}
+    }
+  ],
+  "native_task": "9波段遥感洪水二值语义",
+  "native_boundary": "9输入波段，非RGB；保留地理/云掩码等专用语义",
+  "original_entrypoints": [
+    "ibm-granite__granite-geospatial-uki-flooddetection/UKIFloodOfficialEval.py"
+  ],
+  "python": "../../venv/bin/python",
+  "evaluation_python": "../../venv/bin/python",
+  "seed": 42,
+  "bundle_root": "result/coco_bundle"
+}

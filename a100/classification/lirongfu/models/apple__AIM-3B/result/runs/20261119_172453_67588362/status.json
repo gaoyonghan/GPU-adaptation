@@ -1,0 +1,26 @@
+{
+  "state": "failed",
+  "model": "apple__AIM-3B",
+  "command": [
+    "python",
+    "classification/lirongfu/models/apple__AIM-3B/inference.py",
+    "--device",
+    "cuda",
+    "--batch-size",
+    "64"
+  ],
+  "environment": {
+    "name": "classification-eval",
+    "python_version": "3.10.12"
+  },
+  "input_scope": {
+    "selection": "configured dataset",
+    "max_images": 0,
+    "image": null
+  },
+  "output_directory": "classification/lirongfu/models/apple__AIM-3B/result/runs/20261119_172453_67588362",
+  "dataset_root": "dataset",
+  "weights": "classification/lirongfu/models/apple__AIM-3B/weights/best_model.pth",
+  "log": "stdout.log",
+  "exit_code": 1
+}

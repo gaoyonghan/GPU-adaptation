@@ -1,0 +1,90 @@
+/opt/venvs/classification-eval/lib/python3.10/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+2026-11-22 19:27:13.472437: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2026-11-22 19:27:13.472499: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2026-11-22 19:27:13.473508: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+whizystems__NSFW-filterization:   0%|          | 0/4000 [00:00<?, ?image/s]whizystems__NSFW-filterization:   2%|▏         | 64/4000 [01:08<1:10:02,  1.07s/image]whizystems__NSFW-filterization:   3%|▎         | 128/4000 [02:15<1:08:25,  1.06s/image]whizystems__NSFW-filterization:   5%|▍         | 192/4000 [03:22<1:06:53,  1.05s/image]whizystems__NSFW-filterization:   6%|▋         | 256/4000 [04:28<1:04:58,  1.04s/image]whizystems__NSFW-filterization:   8%|▊         | 320/4000 [05:33<1:03:32,  1.04s/image]whizystems__NSFW-filterization:  10%|▉         | 384/4000 [06:41<1:02:46,  1.04s/image]whizystems__NSFW-filterization:  11%|█         | 448/4000 [07:46<1:01:15,  1.03s/image]whizystems__NSFW-filterization:  13%|█▎        | 512/4000 [08:53<1:00:22,  1.04s/image]whizystems__NSFW-filterization:  14%|█▍        | 576/4000 [09:59<59:02,  1.03s/image]  whizystems__NSFW-filterization:  16%|█▌        | 640/4000 [11:06<58:05,  1.04s/image]whizystems__NSFW-filterization:  18%|█▊        | 704/4000 [12:12<56:53,  1.04s/image]whizystems__NSFW-filterization:  19%|█▉        | 768/4000 [13:17<55:39,  1.03s/image]whizystems__NSFW-filterization:  21%|██        | 832/4000 [14:21<53:55,  1.02s/image]whizystems__NSFW-filterization:  22%|██▏       | 896/4000 [15:25<52:30,  1.01s/image]whizystems__NSFW-filterization:  24%|██▍       | 960/4000 [16:31<51:38,  1.02s/image]whizystems__NSFW-filterization:  26%|██▌       | 1024/4000 [17:35<50:14,  1.01s/image]whizystems__NSFW-filterization:  27%|██▋       | 1088/4000 [18:39<48:56,  1.01s/image]whizystems__NSFW-filterization:  29%|██▉       | 1152/4000 [19:41<47:30,  1.00s/image]whizystems__NSFW-filterization:  30%|███       | 1216/4000 [20:47<46:43,  1.01s/image]whizystems__NSFW-filterization:  32%|███▏      | 1280/4000 [21:53<46:05,  1.02s/image]whizystems__NSFW-filterization:  34%|███▎      | 1344/4000 [22:58<44:55,  1.01s/image]whizystems__NSFW-filterization:  35%|███▌      | 1408/4000 [24:03<43:44,  1.01s/image]whizystems__NSFW-filterization:  37%|███▋      | 1472/4000 [25:08<42:49,  1.02s/image]whizystems__NSFW-filterization:  38%|███▊      | 1536/4000 [26:13<41:47,  1.02s/image]whizystems__NSFW-filterization:  40%|████      | 1600/4000 [27:20<40:59,  1.02s/image]whizystems__NSFW-filterization:  42%|████▏     | 1664/4000 [28:27<40:12,  1.03s/image]whizystems__NSFW-filterization:  43%|████▎     | 1728/4000 [29:32<38:54,  1.03s/image]whizystems__NSFW-filterization:  45%|████▍     | 1792/4000 [30:38<37:44,  1.03s/image]whizystems__NSFW-filterization:  46%|████▋     | 1856/4000 [31:45<36:54,  1.03s/image]whizystems__NSFW-filterization:  48%|████▊     | 1920/4000 [32:51<35:44,  1.03s/image]whizystems__NSFW-filterization:  50%|████▉     | 1984/4000 [33:55<34:24,  1.02s/image]whizystems__NSFW-filterization:  51%|█████     | 2048/4000 [35:00<33:16,  1.02s/image]whizystems__NSFW-filterization:  53%|█████▎    | 2112/4000 [36:06<32:16,  1.03s/image]whizystems__NSFW-filterization:  54%|█████▍    | 2176/4000 [37:14<31:30,  1.04s/image]whizystems__NSFW-filterization:  56%|█████▌    | 2240/4000 [38:21<30:28,  1.04s/image]whizystems__NSFW-filterization:  58%|█████▊    | 2304/4000 [39:27<29:17,  1.04s/image]whizystems__NSFW-filterization:  59%|█████▉    | 2368/4000 [40:33<28:10,  1.04s/image]whizystems__NSFW-filterization:  61%|██████    | 2432/4000 [41:41<27:13,  1.04s/image]whizystems__NSFW-filterization:  62%|██████▏   | 2496/4000 [42:46<25:57,  1.04s/image]whizystems__NSFW-filterization:  64%|██████▍   | 2560/4000 [43:52<24:48,  1.03s/image]whizystems__NSFW-filterization:  66%|██████▌   | 2624/4000 [44:57<23:34,  1.03s/image]whizystems__NSFW-filterization:  67%|██████▋   | 2688/4000 [46:03<22:28,  1.03s/image]whizystems__NSFW-filterization:  69%|██████▉   | 2752/4000 [47:10<21:28,  1.03s/image]whizystems__NSFW-filterization:  70%|███████   | 2816/4000 [48:17<20:27,  1.04s/image]whizystems__NSFW-filterization:  72%|███████▏  | 2880/4000 [49:22<19:17,  1.03s/image]whizystems__NSFW-filterization:  74%|███████▎  | 2944/4000 [50:28<18:10,  1.03s/image]whizystems__NSFW-filterization:  75%|███████▌  | 3008/4000 [51:35<17:08,  1.04s/image]whizystems__NSFW-filterization:  77%|███████▋  | 3072/4000 [52:42<16:04,  1.04s/image]whizystems__NSFW-filterization:  78%|███████▊  | 3136/4000 [53:49<14:57,  1.04s/image]whizystems__NSFW-filterization:  80%|████████  | 3200/4000 [54:54<13:48,  1.04s/image]whizystems__NSFW-filterization:  82%|████████▏ | 3264/4000 [56:00<12:38,  1.03s/image]whizystems__NSFW-filterization:  83%|████████▎ | 3328/4000 [57:07<11:37,  1.04s/image]whizystems__NSFW-filterization:  85%|████████▍ | 3392/4000 [58:13<10:29,  1.03s/image]whizystems__NSFW-filterization:  86%|████████▋ | 3456/4000 [59:18<09:20,  1.03s/image]whizystems__NSFW-filterization:  88%|████████▊ | 3520/4000 [1:00:24<08:13,  1.03s/image]whizystems__NSFW-filterization:  90%|████████▉ | 3584/4000 [1:01:30<07:09,  1.03s/image]whizystems__NSFW-filterization:  91%|█████████ | 3648/4000 [1:02:39<06:06,  1.04s/image]whizystems__NSFW-filterization:  93%|█████████▎| 3712/4000 [1:03:46<05:00,  1.04s/image]whizystems__NSFW-filterization:  94%|█████████▍| 3776/4000 [1:04:51<03:52,  1.04s/image]whizystems__NSFW-filterization:  96%|█████████▌| 3840/4000 [1:05:58<02:46,  1.04s/image]whizystems__NSFW-filterization:  98%|█████████▊| 3904/4000 [1:07:04<01:39,  1.04s/image]whizystems__NSFW-filterization:  99%|█████████▉| 3968/4000 [1:08:11<00:33,  1.04s/image]whizystems__NSFW-filterization: 100%|██████████| 4000/4000 [1:08:43<00:00,  1.04s/image]whizystems__NSFW-filterization: 100%|██████████| 4000/4000 [1:08:43<00:00,  1.03s/image]
+Forward timing saved: /data/lirongfu/image-classification/classification/lirongfu/models/whizystems__NSFW-filterization/result/inference_time.json [whizystems__NSFW-filterization]
+{
+  "schema": "model-eval/metrics/v1",
+  "task": "image_classification",
+  "protocol": "model-eval/score-classification/v1",
+  "model": "whizystems__NSFW-filterization",
+  "dataset": [
+    "decent_scan"
+  ],
+  "metric_unit": "fraction",
+  "metrics": {
+    "accuracy": 0.68825,
+    "top1_accuracy": 0.68825,
+    "top5_accuracy": null,
+    "balanced_accuracy": 0.68825,
+    "macro_precision_over_evaluated_target_classes": 1.0,
+    "macro_recall_over_evaluated_target_classes": 0.68825,
+    "macro_f1_over_evaluated_target_classes": 0.8153413297793574,
+    "weighted_f1": 0.8153413297793574
+  },
+  "metric_status": {
+    "top5_accuracy": "not_applicable_fewer_than_five_classes"
+  },
+  "per_class": [
+    {
+      "category_id": 1,
+      "support": 4000,
+      "precision": 1.0,
+      "recall": 0.68825,
+      "f1": 0.8153413297793574
+    }
+  ],
+  "scope": {
+    "images": 4000,
+    "completed_images": 4000,
+    "categories": 2
+  },
+  "evaluation": {
+    "task": "single_label_classification",
+    "top_k": [
+      1,
+      5
+    ],
+    "top5_when_classes_below_five": "not_applicable",
+    "top5_when_ranking_missing": "unavailable",
+    "ranking": "preserve_native_order_no_new_tie_break",
+    "macro_labels": "observed_ground_truth_classes",
+    "zero_division": 0,
+    "unit": "fraction",
+    "sample_weight": "uniform"
+  },
+  "qualification": {
+    "kind": "original_configured_dataset",
+    "data_kind": "hf_disk",
+    "pred_label_map": {},
+    "ignore_pred_label": null,
+    "excluded_samples": 0,
+    "image_layout": "shared images with ImageNet-style image/label manifests"
+  },
+  "native_execution": [
+    "existing native top1 retained; available native class rankings exported"
+  ],
+  "limitations": [
+    "Top-5 is unavailable when native output provides only a final label."
+  ],
+  "evaluator": {
+    "name": "scikit-learn.metrics",
+    "version": "1.7.1",
+    "functions": [
+      "accuracy_score",
+      "precision_recall_fscore_support"
+    ],
+    "top5": "accuracy_score of GT membership in native ordered top5",
+    "source_sha256": "1f7be1029f426e7fbb26e4c6a334be3301a83a511c7757c72a63f4a2ad19d946",
+    "reference": "https://scikit-learn.org/stable/modules/model_evaluation.html"
+  },
+  "input_sha256": {
+    "annotations.json": "89a24421c71844733c9ce9aa7f08eb8af62c338d1fa36c5c071da4503579e3ee",
+    "predictions.json": "98c160b8e9cb6e0137f4bfc4062d2c1d2ace60dea54a3d7b6cfdff61a0034e17"
+  },
+  "protocol_sha256": "466ea5d5a5893b62641d4a9f470dfaab617e4ef8ee90d1e1afa14e9cfdafc104",
+  "inference_executed": false
+}

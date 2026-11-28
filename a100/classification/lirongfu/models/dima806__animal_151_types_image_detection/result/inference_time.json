@@ -1,0 +1,7 @@
+{
+  "dima806__animal_151_types_image_detection": {
+    "total_latency_s": 5.603302855044603,
+    "sample_count": 1812,
+    "avg_latency_ms": 3.0923304939539755
+  }
+}

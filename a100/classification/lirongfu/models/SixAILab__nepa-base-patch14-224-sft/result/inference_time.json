@@ -1,0 +1,7 @@
+{
+  "SixAILab__nepa-base-patch14-224-sft": {
+    "total_latency_s": 190.322891715914,
+    "sample_count": 50000,
+    "avg_latency_ms": 3.80645783431828
+  }
+}

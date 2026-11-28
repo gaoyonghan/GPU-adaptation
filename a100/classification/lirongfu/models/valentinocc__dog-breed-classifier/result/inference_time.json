@@ -1,0 +1,7 @@
+{
+  "valentinocc__dog-breed-classifier": {
+    "total_latency_s": 2.374202625826001,
+    "sample_count": 8580,
+    "avg_latency_ms": 0.2767135927536132
+  }
+}

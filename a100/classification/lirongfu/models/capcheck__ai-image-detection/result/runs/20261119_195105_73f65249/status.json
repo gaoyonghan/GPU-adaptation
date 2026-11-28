@@ -1,0 +1,29 @@
+{
+  "state": "passed",
+  "model": "capcheck__ai-image-detection",
+  "command": [
+    "python",
+    "classification/lirongfu/models/capcheck__ai-image-detection/inference.py",
+    "--device",
+    "cuda",
+    "--batch-size",
+    "64"
+  ],
+  "environment": {
+    "name": "classification-eval",
+    "python_version": "3.10.12"
+  },
+  "input_scope": {
+    "selection": "configured dataset",
+    "max_images": 0,
+    "image": null,
+    "inference_images": 19996,
+    "evaluated_images": 19996
+  },
+  "output_directory": "classification/lirongfu/models/capcheck__ai-image-detection/result/runs/20261119_195105_73f65249",
+  "dataset_root": "dataset",
+  "weights": "classification/lirongfu/models/capcheck__ai-image-detection/weights/best_model.pth",
+  "log": "stdout.log",
+  "exit_code": 0,
+  "evaluation_bundle": "dataset/cifake_capcheck__ai-image-detection_imagenet/runs/20261119_195105_73f65249"
+}

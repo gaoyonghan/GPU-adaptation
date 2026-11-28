@@ -1,0 +1,29 @@
+{
+  "state": "passed",
+  "model": "hungdang1610__gender",
+  "command": [
+    "python",
+    "classification/lirongfu/models/hungdang1610__gender/inference.py",
+    "--device",
+    "cuda",
+    "--batch-size",
+    "64"
+  ],
+  "environment": {
+    "name": "classification-eval",
+    "python_version": "3.10.12"
+  },
+  "input_scope": {
+    "selection": "configured dataset",
+    "max_images": 0,
+    "image": null,
+    "inference_images": 23704,
+    "evaluated_images": 23704
+  },
+  "output_directory": "classification/lirongfu/models/hungdang1610__gender/result/runs/20261119_214141_c45d598d",
+  "dataset_root": "dataset",
+  "weights": "classification/lirongfu/models/hungdang1610__gender/weights/best_model.pth",
+  "log": "stdout.log",
+  "exit_code": 0,
+  "evaluation_bundle": "dataset/utkface_hungdang1610__gender_imagenet/runs/20261119_214141_c45d598d"
+}

@@ -1,0 +1,7 @@
+{
+  "ufal__vit-historical-page": {
+    "total_latency_s": 0.8356826324015856,
+    "sample_count": 229,
+    "avg_latency_ms": 3.649269137124828
+  }
+}

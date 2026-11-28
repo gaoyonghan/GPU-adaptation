@@ -1,0 +1,7 @@
+{
+  "timm__inception_v4.tf_in1k": {
+    "total_latency_s": 56.65175347402692,
+    "sample_count": 50000,
+    "avg_latency_ms": 1.1330350694805384
+  }
+}

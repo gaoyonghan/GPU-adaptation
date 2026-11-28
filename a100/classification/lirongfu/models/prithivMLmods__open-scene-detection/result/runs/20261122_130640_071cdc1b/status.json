@@ -1,0 +1,29 @@
+{
+  "state": "passed",
+  "model": "prithivMLmods__open-scene-detection",
+  "command": [
+    "python",
+    "classification/lirongfu/models/prithivMLmods__open-scene-detection/inference.py",
+    "--device",
+    "cuda",
+    "--batch-size",
+    "64"
+  ],
+  "environment": {
+    "name": "classification-eval",
+    "python_version": "3.10.12"
+  },
+  "input_scope": {
+    "selection": "configured dataset",
+    "max_images": 0,
+    "image": null,
+    "inference_images": 16345,
+    "evaluated_images": 16345
+  },
+  "output_directory": "classification/lirongfu/models/prithivMLmods__open-scene-detection/result/runs/20261122_130640_071cdc1b",
+  "dataset_root": "dataset",
+  "weights": "classification/lirongfu/models/prithivMLmods__open-scene-detection/weights/best_model.pth",
+  "log": "stdout.log",
+  "exit_code": 0,
+  "evaluation_bundle": "dataset/open_scene_prithivMLmods__open-scene-detection_imagenet/runs/20261122_130640_071cdc1b"
+}

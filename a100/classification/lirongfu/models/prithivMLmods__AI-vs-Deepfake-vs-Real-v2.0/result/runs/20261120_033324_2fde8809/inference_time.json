@@ -1,0 +1,7 @@
+{
+  "prithivMLmods__AI-vs-Deepfake-vs-Real-v2.0": {
+    "total_latency_s": 42.55041364952922,
+    "sample_count": 15980,
+    "avg_latency_ms": 2.662729264676422
+  }
+}

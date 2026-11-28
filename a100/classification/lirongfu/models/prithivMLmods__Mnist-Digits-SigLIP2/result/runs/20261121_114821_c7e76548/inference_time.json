@@ -1,0 +1,7 @@
+{
+  "prithivMLmods__Mnist-Digits-SigLIP2": {
+    "total_latency_s": 159.12009371258318,
+    "sample_count": 60000,
+    "avg_latency_ms": 2.6520015618763866
+  }
+}

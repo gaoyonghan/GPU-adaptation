@@ -1,0 +1,29 @@
+{
+  "state": "passed",
+  "model": "prithivMLmods__AIorNot-SigLIP2",
+  "command": [
+    "python",
+    "classification/lirongfu/models/prithivMLmods__AIorNot-SigLIP2/inference.py",
+    "--device",
+    "cuda",
+    "--batch-size",
+    "64"
+  ],
+  "environment": {
+    "name": "classification-eval",
+    "python_version": "3.10.12"
+  },
+  "input_scope": {
+    "selection": "configured dataset",
+    "max_images": 0,
+    "image": null,
+    "inference_images": 18618,
+    "evaluated_images": 18618
+  },
+  "output_directory": "classification/lirongfu/models/prithivMLmods__AIorNot-SigLIP2/result/runs/20261120_083836_72d8c352",
+  "dataset_root": "dataset",
+  "weights": "classification/lirongfu/models/prithivMLmods__AIorNot-SigLIP2/weights/best_model.pth",
+  "log": "stdout.log",
+  "exit_code": 0,
+  "evaluation_bundle": "dataset/aiornot_prithivMLmods__AIorNot-SigLIP2_imagenet/runs/20261120_083836_72d8c352"
+}

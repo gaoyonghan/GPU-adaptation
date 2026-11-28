@@ -1,0 +1,29 @@
+{
+  "state": "passed",
+  "model": "Bazaar__cv_solar_panel_defect_detection",
+  "command": [
+    "python",
+    "classification/lirongfu_recovered/models/Bazaar__cv_solar_panel_defect_detection/inference.py",
+    "--device",
+    "cuda",
+    "--batch-size",
+    "64"
+  ],
+  "environment": {
+    "name": "classification-eval",
+    "python_version": "3.10.12"
+  },
+  "input_scope": {
+    "selection": "configured dataset",
+    "max_images": 0,
+    "image": null,
+    "inference_images": 512,
+    "evaluated_images": 512
+  },
+  "output_directory": "classification/lirongfu_recovered/models/Bazaar__cv_solar_panel_defect_detection/result/runs/20261123_072508_494253ed",
+  "dataset_root": "dataset",
+  "weights": "classification/lirongfu_recovered/models/Bazaar__cv_solar_panel_defect_detection/weights/best_model.pth",
+  "log": "stdout.log",
+  "exit_code": 0,
+  "evaluation_bundle": "dataset/elpv_Bazaar__cv_solar_panel_defect_detection_imagenet/runs/20261123_072508_494253ed"
+}

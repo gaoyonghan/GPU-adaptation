@@ -1,0 +1,8 @@
+{
+  "model": "Zigeng__SlimSAM-uniform-77",
+  "backend": "sam_hf",
+  "dataset": "SA-1B-val",
+  "batch_policy": "project_prompt_batch",
+  "prompt_batch_size": 64,
+  "batch_note": "沿用现有项目提示点批次；不是官方图片 batch size；显存不足时原代码可降低提示点批次"
+}

@@ -1,0 +1,278 @@
+/opt/venvs/classification-eval/lib/python3.10/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+2026-11-19 17:39:00.798445: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2026-11-19 17:39:00.798508: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2026-11-19 17:39:00.800211: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+asyafalni__arabichar-v3:   0%|          | 0/3360 [00:00<?, ?image/s]asyafalni__arabichar-v3:   2%|▏         | 64/3360 [00:12<11:04,  4.96image/s]asyafalni__arabichar-v3:   4%|▍         | 128/3360 [00:16<06:29,  8.29image/s]asyafalni__arabichar-v3:   6%|▌         | 192/3360 [00:18<04:07, 12.81image/s]asyafalni__arabichar-v3:   8%|▊         | 256/3360 [00:25<04:42, 10.98image/s]asyafalni__arabichar-v3:  10%|▉         | 320/3360 [00:32<04:42, 10.76image/s]asyafalni__arabichar-v3:  11%|█▏        | 384/3360 [00:32<03:05, 16.03image/s]asyafalni__arabichar-v3:  15%|█▌        | 512/3360 [00:32<01:32, 30.90image/s]asyafalni__arabichar-v3:  17%|█▋        | 576/3360 [00:32<01:07, 41.06image/s]asyafalni__arabichar-v3:  19%|█▉        | 640/3360 [00:34<01:07, 40.44image/s]asyafalni__arabichar-v3:  21%|██        | 704/3360 [00:34<00:49, 53.93image/s]asyafalni__arabichar-v3:  23%|██▎       | 768/3360 [00:38<01:16, 33.69image/s]asyafalni__arabichar-v3:  25%|██▍       | 832/3360 [00:39<01:12, 34.74image/s]asyafalni__arabichar-v3:  27%|██▋       | 896/3360 [00:49<02:37, 15.68image/s]asyafalni__arabichar-v3:  29%|██▊       | 960/3360 [00:50<02:06, 18.98image/s]asyafalni__arabichar-v3:  30%|███       | 1024/3360 [00:52<01:46, 21.95image/s]asyafalni__arabichar-v3:  32%|███▏      | 1088/3360 [00:52<01:14, 30.58image/s]asyafalni__arabichar-v3:  36%|███▌      | 1216/3360 [00:53<00:39, 54.93image/s]asyafalni__arabichar-v3:  38%|███▊      | 1280/3360 [00:55<00:47, 44.22image/s]asyafalni__arabichar-v3:  40%|████      | 1344/3360 [00:57<00:49, 40.56image/s]asyafalni__arabichar-v3:  42%|████▏     | 1408/3360 [00:59<00:53, 36.38image/s]asyafalni__arabichar-v3:  44%|████▍     | 1472/3360 [00:59<00:39, 47.96image/s]asyafalni__arabichar-v3:  48%|████▊     | 1600/3360 [01:02<00:37, 47.18image/s]asyafalni__arabichar-v3:  50%|████▉     | 1664/3360 [01:02<00:29, 57.98image/s]asyafalni__arabichar-v3:  51%|█████▏    | 1728/3360 [01:04<00:31, 52.04image/s]asyafalni__arabichar-v3:  53%|█████▎    | 1792/3360 [01:09<00:54, 28.59image/s]asyafalni__arabichar-v3:  55%|█████▌    | 1856/3360 [01:11<00:52, 28.76image/s]asyafalni__arabichar-v3:  57%|█████▋    | 1920/3360 [01:12<00:39, 36.11image/s]asyafalni__arabichar-v3:  61%|██████    | 2048/3360 [01:14<00:28, 46.46image/s]asyafalni__arabichar-v3:  63%|██████▎   | 2112/3360 [01:14<00:21, 58.16image/s]asyafalni__arabichar-v3:  65%|██████▍   | 2176/3360 [01:14<00:15, 74.51image/s]asyafalni__arabichar-v3:  67%|██████▋   | 2240/3360 [01:15<00:17, 65.11image/s]asyafalni__arabichar-v3:  69%|██████▊   | 2304/3360 [01:16<00:13, 78.31image/s]asyafalni__arabichar-v3:  72%|███████▏  | 2432/3360 [01:21<00:24, 38.31image/s]asyafalni__arabichar-v3:  74%|███████▍  | 2496/3360 [01:32<00:52, 16.48image/s]asyafalni__arabichar-v3:  76%|███████▌  | 2560/3360 [01:34<00:43, 18.36image/s]asyafalni__arabichar-v3:  78%|███████▊  | 2624/3360 [01:39<00:43, 17.06image/s]asyafalni__arabichar-v3:  78%|███████▊  | 2624/3360 [01:50<00:43, 17.06image/s]asyafalni__arabichar-v3:  80%|████████  | 2688/3360 [01:54<01:12,  9.29image/s]asyafalni__arabichar-v3:  82%|████████▏ | 2752/3360 [01:56<00:52, 11.57image/s]asyafalni__arabichar-v3:  84%|████████▍ | 2816/3360 [02:05<00:54,  9.97image/s]asyafalni__arabichar-v3:  86%|████████▌ | 2880/3360 [02:07<00:39, 12.07image/s]asyafalni__arabichar-v3:  88%|████████▊ | 2944/3360 [02:11<00:30, 13.42image/s]asyafalni__arabichar-v3:  90%|████████▉ | 3008/3360 [02:19<00:31, 11.07image/s]asyafalni__arabichar-v3:  93%|█████████▎| 3136/3360 [02:28<00:18, 12.23image/s]asyafalni__arabichar-v3:  97%|█████████▋| 3264/3360 [02:34<00:06, 14.84image/s]asyafalni__arabichar-v3:  99%|█████████▉| 3328/3360 [02:35<00:01, 17.35image/s]asyafalni__arabichar-v3: 100%|██████████| 3360/3360 [02:35<00:00, 21.55image/s]
+Forward timing saved: /data/lirongfu/image-classification/classification/lirongfu/models/asyafalni__arabichar-v3/result/inference_time.json [asyafalni__arabichar-v3]
+{
+  "schema": "model-eval/metrics/v1",
+  "task": "image_classification",
+  "protocol": "model-eval/score-classification/v1",
+  "model": "asyafalni__arabichar-v3",
+  "dataset": [
+    "ahcd"
+  ],
+  "metric_unit": "fraction",
+  "metrics": {
+    "accuracy": 0.9773809523809524,
+    "top1_accuracy": 0.9773809523809524,
+    "top5_accuracy": 0.987202380952381,
+    "balanced_accuracy": 0.9773809523809524,
+    "macro_precision_over_evaluated_target_classes": 0.9778357142643904,
+    "macro_recall_over_evaluated_target_classes": 0.9773809523809524,
+    "macro_f1_over_evaluated_target_classes": 0.9773862032508794,
+    "weighted_f1": 0.9773862032508794
+  },
+  "metric_status": {
+    "top5_accuracy": "computed"
+  },
+  "per_class": [
+    {
+      "category_id": 0,
+      "support": 120,
+      "precision": 1.0,
+      "recall": 0.9916666666666667,
+      "f1": 0.99581589958159
+    },
+    {
+      "category_id": 1,
+      "support": 120,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "category_id": 2,
+      "support": 120,
+      "precision": 0.9586776859504132,
+      "recall": 0.9666666666666667,
+      "f1": 0.9626556016597511
+    },
+    {
+      "category_id": 3,
+      "support": 120,
+      "precision": 0.9752066115702479,
+      "recall": 0.9833333333333333,
+      "f1": 0.979253112033195
+    },
+    {
+      "category_id": 4,
+      "support": 120,
+      "precision": 0.9752066115702479,
+      "recall": 0.9833333333333333,
+      "f1": 0.979253112033195
+    },
+    {
+      "category_id": 5,
+      "support": 120,
+      "precision": 0.9435483870967742,
+      "recall": 0.975,
+      "f1": 0.9590163934426229
+    },
+    {
+      "category_id": 6,
+      "support": 120,
+      "precision": 0.9666666666666667,
+      "recall": 0.9666666666666667,
+      "f1": 0.9666666666666667
+    },
+    {
+      "category_id": 7,
+      "support": 120,
+      "precision": 0.9444444444444444,
+      "recall": 0.9916666666666667,
+      "f1": 0.967479674796748
+    },
+    {
+      "category_id": 8,
+      "support": 120,
+      "precision": 0.9590163934426229,
+      "recall": 0.975,
+      "f1": 0.9669421487603306
+    },
+    {
+      "category_id": 9,
+      "support": 120,
+      "precision": 0.9672131147540983,
+      "recall": 0.9833333333333333,
+      "f1": 0.9752066115702479
+    },
+    {
+      "category_id": 10,
+      "support": 120,
+      "precision": 1.0,
+      "recall": 0.9166666666666666,
+      "f1": 0.9565217391304348
+    },
+    {
+      "category_id": 11,
+      "support": 120,
+      "precision": 1.0,
+      "recall": 0.9833333333333333,
+      "f1": 0.9915966386554622
+    },
+    {
+      "category_id": 12,
+      "support": 120,
+      "precision": 0.9834710743801653,
+      "recall": 0.9916666666666667,
+      "f1": 0.9875518672199171
+    },
+    {
+      "category_id": 13,
+      "support": 120,
+      "precision": 0.9523809523809523,
+      "recall": 1.0,
+      "f1": 0.975609756097561
+    },
+    {
+      "category_id": 14,
+      "support": 120,
+      "precision": 1.0,
+      "recall": 0.9583333333333334,
+      "f1": 0.9787234042553191
+    },
+    {
+      "category_id": 15,
+      "support": 120,
+      "precision": 0.96,
+      "recall": 1.0,
+      "f1": 0.9795918367346939
+    },
+    {
+      "category_id": 16,
+      "support": 120,
+      "precision": 1.0,
+      "recall": 0.9583333333333334,
+      "f1": 0.9787234042553191
+    },
+    {
+      "category_id": 17,
+      "support": 120,
+      "precision": 1.0,
+      "recall": 0.975,
+      "f1": 0.9873417721518988
+    },
+    {
+      "category_id": 18,
+      "support": 120,
+      "precision": 0.9915966386554622,
+      "recall": 0.9833333333333333,
+      "f1": 0.9874476987447699
+    },
+    {
+      "category_id": 19,
+      "support": 120,
+      "precision": 0.9444444444444444,
+      "recall": 0.9916666666666667,
+      "f1": 0.967479674796748
+    },
+    {
+      "category_id": 20,
+      "support": 120,
+      "precision": 0.9826086956521739,
+      "recall": 0.9416666666666667,
+      "f1": 0.9617021276595744
+    },
+    {
+      "category_id": 21,
+      "support": 120,
+      "precision": 0.9914529914529915,
+      "recall": 0.9666666666666667,
+      "f1": 0.9789029535864979
+    },
+    {
+      "category_id": 22,
+      "support": 120,
+      "precision": 1.0,
+      "recall": 0.9916666666666667,
+      "f1": 0.99581589958159
+    },
+    {
+      "category_id": 23,
+      "support": 120,
+      "precision": 0.9834710743801653,
+      "recall": 0.9916666666666667,
+      "f1": 0.9875518672199171
+    },
+    {
+      "category_id": 24,
+      "support": 120,
+      "precision": 0.957983193277311,
+      "recall": 0.95,
+      "f1": 0.9539748953974896
+    },
+    {
+      "category_id": 25,
+      "support": 120,
+      "precision": 0.9833333333333333,
+      "recall": 0.9833333333333333,
+      "f1": 0.9833333333333333
+    },
+    {
+      "category_id": 26,
+      "support": 120,
+      "precision": 0.9586776859504132,
+      "recall": 0.9666666666666667,
+      "f1": 0.9626556016597511
+    },
+    {
+      "category_id": 27,
+      "support": 120,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    }
+  ],
+  "scope": {
+    "images": 3360,
+    "completed_images": 3360,
+    "categories": 28
+  },
+  "evaluation": {
+    "task": "single_label_classification",
+    "top_k": [
+      1,
+      5
+    ],
+    "top5_when_classes_below_five": "not_applicable",
+    "top5_when_ranking_missing": "unavailable",
+    "ranking": "preserve_native_order_no_new_tie_break",
+    "macro_labels": "observed_ground_truth_classes",
+    "zero_division": 0,
+    "unit": "fraction",
+    "sample_weight": "uniform"
+  },
+  "qualification": {
+    "kind": "original_configured_dataset",
+    "data_kind": "ahcd",
+    "pred_label_map": {},
+    "ignore_pred_label": null,
+    "excluded_samples": 0,
+    "image_layout": "shared images with ImageNet-style image/label manifests"
+  },
+  "native_execution": [
+    "existing native top1 retained; available native class rankings exported"
+  ],
+  "limitations": [
+    "Top-5 is unavailable when native output provides only a final label."
+  ],
+  "evaluator": {
+    "name": "scikit-learn.metrics",
+    "version": "1.7.1",
+    "functions": [
+      "accuracy_score",
+      "precision_recall_fscore_support"
+    ],
+    "top5": "accuracy_score of GT membership in native ordered top5",
+    "source_sha256": "1f7be1029f426e7fbb26e4c6a334be3301a83a511c7757c72a63f4a2ad19d946",
+    "reference": "https://scikit-learn.org/stable/modules/model_evaluation.html"
+  },
+  "input_sha256": {
+    "annotations.json": "b923c22e9d6c224acd14a14297c86e22fc863fc75889a94520e061e56547b85a",
+    "predictions.json": "b55eeef7dc3c37278a24b5a7548ebb77de40d8b96d2c598470e534928e731752"
+  },
+  "protocol_sha256": "65b9aa6a9ec25b2a0b63cf4ba27fb5b0a81d2728bbe87d07a1d9f36d435c3034",
+  "inference_executed": false
+}

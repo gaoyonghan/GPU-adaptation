@@ -1,0 +1,29 @@
+{
+  "state": "passed",
+  "model": "Parveshiiii__breast-cancer-detector",
+  "command": [
+    "python",
+    "classification/lirongfu_recovered/models/Parveshiiii__breast-cancer-detector/inference.py",
+    "--device",
+    "cuda",
+    "--batch-size",
+    "64"
+  ],
+  "environment": {
+    "name": "classification-eval",
+    "python_version": "3.10.12"
+  },
+  "input_scope": {
+    "selection": "configured dataset",
+    "max_images": 0,
+    "image": null,
+    "inference_images": 647,
+    "evaluated_images": 644
+  },
+  "output_directory": "classification/lirongfu_recovered/models/Parveshiiii__breast-cancer-detector/result/runs/20261123_085635_72e227dd",
+  "dataset_root": "dataset",
+  "weights": "classification/lirongfu_recovered/models/Parveshiiii__breast-cancer-detector/weights/best_model.pth",
+  "log": "stdout.log",
+  "exit_code": 0,
+  "evaluation_bundle": "dataset/breast_external_benchmark_Parveshiiii__breast-cancer-detector_imagenet/runs/20261123_085635_72e227dd"
+}

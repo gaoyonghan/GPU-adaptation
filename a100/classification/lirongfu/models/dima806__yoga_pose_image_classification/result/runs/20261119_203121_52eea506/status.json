@@ -1,0 +1,29 @@
+{
+  "state": "passed",
+  "model": "dima806__yoga_pose_image_classification",
+  "command": [
+    "python",
+    "classification/lirongfu/models/dima806__yoga_pose_image_classification/inference.py",
+    "--device",
+    "cuda",
+    "--batch-size",
+    "64"
+  ],
+  "environment": {
+    "name": "classification-eval",
+    "python_version": "3.10.12"
+  },
+  "input_scope": {
+    "selection": "configured dataset",
+    "max_images": 0,
+    "image": null,
+    "inference_images": 1203,
+    "evaluated_images": 1203
+  },
+  "output_directory": "classification/lirongfu/models/dima806__yoga_pose_image_classification/result/runs/20261119_203121_52eea506",
+  "dataset_root": "dataset",
+  "weights": "classification/lirongfu/models/dima806__yoga_pose_image_classification/weights/best_model.pth",
+  "log": "stdout.log",
+  "exit_code": 0,
+  "evaluation_bundle": "dataset/yoga_pose_dima806__yoga_pose_image_classification_imagenet/runs/20261119_203121_52eea506"
+}

@@ -1,0 +1,29 @@
+{
+  "state": "passed",
+  "model": "OSCF__TrapperAI-v02.2024",
+  "command": [
+    "python",
+    "classification/lirongfu/models/OSCF__TrapperAI-v02.2024/inference.py",
+    "--device",
+    "cuda",
+    "--batch-size",
+    "64"
+  ],
+  "environment": {
+    "name": "classification-eval",
+    "python_version": "3.10.12"
+  },
+  "input_scope": {
+    "selection": "configured dataset",
+    "max_images": 0,
+    "image": null,
+    "inference_images": 382,
+    "evaluated_images": 382
+  },
+  "output_directory": "classification/lirongfu/models/OSCF__TrapperAI-v02.2024/result/runs/20261119_172326_864387ab",
+  "dataset_root": "dataset",
+  "weights": "classification/lirongfu/models/OSCF__TrapperAI-v02.2024/weights/best_model.pth",
+  "log": "stdout.log",
+  "exit_code": 0,
+  "evaluation_bundle": "dataset/animal15_OSCF__TrapperAI-v02.2024_imagenet/runs/20261119_172326_864387ab"
+}
