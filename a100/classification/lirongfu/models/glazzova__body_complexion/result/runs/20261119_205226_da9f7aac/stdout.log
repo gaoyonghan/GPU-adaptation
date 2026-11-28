@@ -1,0 +1,111 @@
+/opt/venvs/classification-eval/lib/python3.10/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+2026-11-19 20:52:38.577420: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2026-11-19 20:52:38.577484: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2026-11-19 20:52:38.583254: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+glazzova__body_complexion:   0%|          | 0/1293 [00:00<?, ?image/s]glazzova__body_complexion:   5%|▍         | 64/1293 [00:47<15:04,  1.36image/s]glazzova__body_complexion:  10%|▉         | 128/1293 [01:16<11:12,  1.73image/s]glazzova__body_complexion:  15%|█▍        | 192/1293 [01:50<10:08,  1.81image/s]glazzova__body_complexion:  20%|█▉        | 256/1293 [02:21<09:03,  1.91image/s]glazzova__body_complexion:  25%|██▍       | 320/1293 [02:40<07:13,  2.24image/s]glazzova__body_complexion:  30%|██▉       | 384/1293 [03:11<06:53,  2.20image/s]glazzova__body_complexion:  35%|███▍      | 448/1293 [03:40<06:24,  2.20image/s]glazzova__body_complexion:  40%|███▉      | 512/1293 [04:26<07:01,  1.85image/s]glazzova__body_complexion:  45%|████▍     | 576/1293 [05:08<06:53,  1.73image/s]glazzova__body_complexion:  49%|████▉     | 640/1293 [05:59<07:02,  1.55image/s]glazzova__body_complexion:  54%|█████▍    | 704/1293 [06:43<06:28,  1.52image/s]glazzova__body_complexion:  59%|█████▉    | 768/1293 [07:30<05:57,  1.47image/s]glazzova__body_complexion:  64%|██████▍   | 832/1293 [08:15<05:16,  1.46image/s]glazzova__body_complexion:  69%|██████▉   | 896/1293 [09:03<04:41,  1.41image/s]glazzova__body_complexion:  74%|███████▍  | 960/1293 [09:48<03:54,  1.42image/s]glazzova__body_complexion:  79%|███████▉  | 1024/1293 [10:27<03:01,  1.48image/s]glazzova__body_complexion:  84%|████████▍ | 1088/1293 [11:06<02:14,  1.53image/s]glazzova__body_complexion:  89%|████████▉ | 1152/1293 [11:44<01:30,  1.56image/s]glazzova__body_complexion:  94%|█████████▍| 1216/1293 [12:35<00:52,  1.46image/s]glazzova__body_complexion:  99%|█████████▉| 1280/1293 [13:22<00:09,  1.43image/s]glazzova__body_complexion: 100%|██████████| 1293/1293 [13:30<00:00,  1.45image/s]glazzova__body_complexion: 100%|██████████| 1293/1293 [13:30<00:00,  1.60image/s]
+Forward timing saved: /data/lirongfu/image-classification/classification/lirongfu/models/glazzova__body_complexion/result/inference_time.json [glazzova__body_complexion]
+{
+  "schema": "model-eval/metrics/v1",
+  "task": "image_classification",
+  "protocol": "model-eval/score-classification/v1",
+  "model": "glazzova__body_complexion",
+  "dataset": [
+    "body_shape_v2"
+  ],
+  "metric_unit": "fraction",
+  "metrics": {
+    "accuracy": 0.3023975251353442,
+    "top1_accuracy": 0.3023975251353442,
+    "top5_accuracy": null,
+    "balanced_accuracy": 0.27116705702170224,
+    "macro_precision_over_evaluated_target_classes": 0.29680603966061336,
+    "macro_recall_over_evaluated_target_classes": 0.27116705702170224,
+    "macro_f1_over_evaluated_target_classes": 0.1919663719704503,
+    "weighted_f1": 0.20329556116028127
+  },
+  "metric_status": {
+    "top5_accuracy": "not_applicable_fewer_than_five_classes"
+  },
+  "per_class": [
+    {
+      "category_id": 0,
+      "support": 404,
+      "precision": 0.3369890329012961,
+      "recall": 0.8366336633663366,
+      "f1": 0.48045486851457003
+    },
+    {
+      "category_id": 1,
+      "support": 113,
+      "precision": 0.08904109589041095,
+      "recall": 0.11504424778761062,
+      "f1": 0.10038610038610038
+    },
+    {
+      "category_id": 2,
+      "support": 491,
+      "precision": 0.5,
+      "recall": 0.010183299389002037,
+      "f1": 0.01996007984031936
+    },
+    {
+      "category_id": 3,
+      "support": 285,
+      "precision": 0.26119402985074625,
+      "recall": 0.12280701754385964,
+      "f1": 0.16706443914081145
+    }
+  ],
+  "scope": {
+    "images": 1293,
+    "completed_images": 1293,
+    "categories": 4
+  },
+  "evaluation": {
+    "task": "single_label_classification",
+    "top_k": [
+      1,
+      5
+    ],
+    "top5_when_classes_below_five": "not_applicable",
+    "top5_when_ranking_missing": "unavailable",
+    "ranking": "preserve_native_order_no_new_tie_break",
+    "macro_labels": "observed_ground_truth_classes",
+    "zero_division": 0,
+    "unit": "fraction",
+    "sample_weight": "uniform"
+  },
+  "qualification": {
+    "kind": "original_configured_dataset",
+    "data_kind": "hf_disk",
+    "pred_label_map": {},
+    "ignore_pred_label": null,
+    "excluded_samples": 0,
+    "image_layout": "shared images with ImageNet-style image/label manifests"
+  },
+  "native_execution": [
+    "existing native top1 retained; available native class rankings exported"
+  ],
+  "limitations": [
+    "Top-5 is unavailable when native output provides only a final label."
+  ],
+  "evaluator": {
+    "name": "scikit-learn.metrics",
+    "version": "1.7.1",
+    "functions": [
+      "accuracy_score",
+      "precision_recall_fscore_support"
+    ],
+    "top5": "accuracy_score of GT membership in native ordered top5",
+    "source_sha256": "1f7be1029f426e7fbb26e4c6a334be3301a83a511c7757c72a63f4a2ad19d946",
+    "reference": "https://scikit-learn.org/stable/modules/model_evaluation.html"
+  },
+  "input_sha256": {
+    "annotations.json": "dc87a70799bbaca872d0a9c34b580f0ed0959a2cf65cc712124f9e9753c63ef2",
+    "predictions.json": "f9f50e35f4061da7457ebf67f9521575026c069b7f43feb5b4453ce3f3ce635a"
+  },
+  "protocol_sha256": "63a474cb00b611184ad20d32857d6e7586f1f5f9ea1ef3ea7163a0fb44d9516c",
+  "inference_executed": false
+}

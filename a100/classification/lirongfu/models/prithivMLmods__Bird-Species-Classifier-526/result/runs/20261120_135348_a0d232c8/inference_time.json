@@ -1,0 +1,7 @@
+{
+  "prithivMLmods__Bird-Species-Classifier-526": {
+    "total_latency_s": 7.163746401667595,
+    "sample_count": 2625,
+    "avg_latency_ms": 2.729046248254322
+  }
+}

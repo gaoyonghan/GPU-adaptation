@@ -1,0 +1,7 @@
+{
+  "Parveshiiii__breast-cancer-detector": {
+    "total_latency_s": 1.8670773934572935,
+    "sample_count": 647,
+    "avg_latency_ms": 2.885745584941721
+  }
+}

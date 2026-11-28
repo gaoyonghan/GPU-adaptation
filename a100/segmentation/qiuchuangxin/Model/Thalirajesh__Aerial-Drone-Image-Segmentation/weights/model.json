@@ -1,0 +1,27 @@
+{
+  "adapter": "semantic",
+  "adapter_group": "aerial",
+  "weight_path": "weights",
+  "source_entry": "AerialDroneStart.py",
+  "model_id": "Thalirajesh__Aerial-Drone-Image-Segmentation",
+  "source_root": "weights",
+  "dataset_root": "../../../../dataset/segmentation",
+  "datasets": [
+    {
+      "name": "SemanticDrone",
+      "split": [
+        "public_holdout_seed42"
+      ],
+      "protocol": {}
+    }
+  ],
+  "native_task": "24类航拍语义",
+  "native_boundary": "公共训练影像代理集合；不能称官方held-out test",
+  "original_entrypoints": [
+    "Thalirajesh__Aerial-Drone-Image-Segmentation/AerialDroneStart.py"
+  ],
+  "python": "../../venv/bin/python",
+  "evaluation_python": "../../venv/bin/python",
+  "seed": 42,
+  "bundle_root": "result/coco_bundle"
+}

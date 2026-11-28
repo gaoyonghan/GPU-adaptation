@@ -1,0 +1,7 @@
+{
+  "ShimaGh__Brain-Tumor-Detection": {
+    "total_latency_s": 2.838693654164672,
+    "sample_count": 810,
+    "avg_latency_ms": 3.5045600668699652
+  }
+}

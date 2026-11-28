@@ -1,0 +1,29 @@
+{
+  "state": "passed",
+  "model": "valentinocc__dog-breed-classifier",
+  "command": [
+    "python",
+    "classification/lirongfu/models/valentinocc__dog-breed-classifier/inference.py",
+    "--device",
+    "cuda",
+    "--batch-size",
+    "64"
+  ],
+  "environment": {
+    "name": "classification-eval",
+    "python_version": "3.10.12"
+  },
+  "input_scope": {
+    "selection": "configured dataset",
+    "max_images": 0,
+    "image": null,
+    "inference_images": 8580,
+    "evaluated_images": 8580
+  },
+  "output_directory": "classification/lirongfu/models/valentinocc__dog-breed-classifier/result/runs/20261122_170850_d75a06a4",
+  "dataset_root": "dataset",
+  "weights": "classification/lirongfu/models/valentinocc__dog-breed-classifier/weights/best_model.pth",
+  "log": "stdout.log",
+  "exit_code": 0,
+  "evaluation_bundle": "dataset/stanford_dogs_valentinocc__dog-breed-classifier_imagenet/runs/20261122_170850_d75a06a4"
+}

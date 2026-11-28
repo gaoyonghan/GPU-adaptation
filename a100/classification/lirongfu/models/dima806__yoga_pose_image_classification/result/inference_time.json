@@ -1,0 +1,7 @@
+{
+  "dima806__yoga_pose_image_classification": {
+    "total_latency_s": 4.156463323161006,
+    "sample_count": 1203,
+    "avg_latency_ms": 3.455081731638409
+  }
+}

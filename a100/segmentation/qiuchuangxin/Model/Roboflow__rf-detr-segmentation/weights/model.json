@@ -1,0 +1,29 @@
+{
+  "adapter": "coco",
+  "adapter_group": "rf_detr_coco",
+  "weight_path": "weights",
+  "source_entry": "RFDETRSegmentationStart.py",
+  "model_id": "Roboflow__rf-detr-segmentation",
+  "source_root": "weights",
+  "dataset_root": "../../../../dataset/segmentation",
+  "datasets": [
+    {
+      "name": "COCO",
+      "split": [
+        "val2017"
+      ],
+      "protocol": {
+        "label_view": "instances"
+      }
+    }
+  ],
+  "native_task": "COCO 80类实例",
+  "native_boundary": "仅 things；转换语义需定义实例重叠和未检出像素，不具备53个stuff类；config 91槽含N/A，保留COCO稀疏ID",
+  "original_entrypoints": [
+    "Roboflow__rf-detr-segmentation/RFDETRSegmentationStart.py"
+  ],
+  "python": "../../venv/bin/python",
+  "evaluation_python": "../../venv/bin/python",
+  "seed": 42,
+  "bundle_root": "result/coco_bundle"
+}

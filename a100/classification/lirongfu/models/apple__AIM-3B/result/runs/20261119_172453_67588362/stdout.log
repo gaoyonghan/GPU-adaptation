@@ -1,0 +1,43 @@
+apple__AIM-3B:   0%|          | 0/50000 [00:00<?, ?image/s]apple__AIM-3B:   0%|          | 0/50000 [00:10<?, ?image/s]
+Traceback (most recent call last):
+  File "/data/lirongfu/image-classification/classification/lirongfu/models/apple__AIM-3B/inference/native.py", line 1038, in <module>
+    main()
+  File "/data/lirongfu/image-classification/classification/lirongfu/models/apple__AIM-3B/inference/native.py", line 1033, in main
+    result = run_dataset_inference(device=args.device, batch_size=args.batch_size, maximum=args.max_samples, output=args.output, checkpoint=args.checkpoint)
+  File "/data/lirongfu/image-classification/classification/lirongfu/models/apple__AIM-3B/inference/native.py", line 1000, in run_dataset_inference
+    infer_batch(batch)
+  File "/data/lirongfu/image-classification/classification/lirongfu/models/apple__AIM-3B/inference/native.py", line 987, in infer_batch
+    outputs = predictor.predict_batch([item[1] for item in items])
+  File "/data/lirongfu/image-classification/classification/lirongfu/models/apple__AIM-3B/inference/native.py", line 780, in predict_batch
+    output = self.model(pixels)
+  File "/opt/venvs/classification-eval/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/opt/venvs/classification-eval/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data/lirongfu/image-classification/classification/lirongfu/models/apple__AIM-3B/inference/native.py", line 99, in measured
+    return self.call(original, *args, **kwargs)
+  File "/data/lirongfu/image-classification/classification/lirongfu/models/apple__AIM-3B/inference/native.py", line 93, in call
+    return function(*args, **kwargs)
+  File "/tmp/classification-runtime-czyecv8w/_shared_test_resources/code/ml-aim/aim-v1/aim/v1/mixins.py", line 23, in forward
+  File "/opt/venvs/classification-eval/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/opt/venvs/classification-eval/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/tmp/classification-runtime-czyecv8w/_shared_test_resources/code/ml-aim/aim-v1/aim/v1/torch/models.py", line 79, in forward
+  File "/opt/venvs/classification-eval/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/opt/venvs/classification-eval/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/tmp/classification-runtime-czyecv8w/_shared_test_resources/code/ml-aim/aim-v1/aim/v1/torch/layers.py", line 320, in forward
+  File "/opt/venvs/classification-eval/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/opt/venvs/classification-eval/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/tmp/classification-runtime-czyecv8w/_shared_test_resources/code/ml-aim/aim-v1/aim/v1/torch/layers.py", line 276, in forward
+  File "/opt/venvs/classification-eval/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/opt/venvs/classification-eval/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/opt/venvs/classification-eval/lib/python3.10/site-packages/torch/nn/modules/activation.py", line 738, in forward
+    return F.gelu(input, approximate=self.approximate)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 768.00 MiB. GPU 0 has a total capacity of 39.56 GiB of which 467.25 MiB is free. Process 125825 has 25.07 GiB memory in use. Process 186179 has 1.91 GiB memory in use. Process 254167 has 12.10 GiB memory in use. Of the allocated memory 11.57 GiB is allocated by PyTorch, and 39.30 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

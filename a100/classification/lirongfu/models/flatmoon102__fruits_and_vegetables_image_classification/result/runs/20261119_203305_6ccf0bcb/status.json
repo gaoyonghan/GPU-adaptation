@@ -1,0 +1,29 @@
+{
+  "state": "passed",
+  "model": "flatmoon102__fruits_and_vegetables_image_classification",
+  "command": [
+    "python",
+    "classification/lirongfu/models/flatmoon102__fruits_and_vegetables_image_classification/inference.py",
+    "--device",
+    "cuda",
+    "--batch-size",
+    "64"
+  ],
+  "environment": {
+    "name": "classification-eval",
+    "python_version": "3.10.12"
+  },
+  "input_scope": {
+    "selection": "configured dataset",
+    "max_images": 0,
+    "image": null,
+    "inference_images": 623,
+    "evaluated_images": 623
+  },
+  "output_directory": "classification/lirongfu/models/flatmoon102__fruits_and_vegetables_image_classification/result/runs/20261119_203305_6ccf0bcb",
+  "dataset_root": "dataset",
+  "weights": "classification/lirongfu/models/flatmoon102__fruits_and_vegetables_image_classification/weights/best_model.pth",
+  "log": "stdout.log",
+  "exit_code": 0,
+  "evaluation_bundle": "dataset/fruit_vegetable_flatmoon102__fruits_and_vegetables_image_classification_imagenet/runs/20261119_203305_6ccf0bcb"
+}

@@ -1,0 +1,1 @@
+{"model":"timm__inception_v4.tf_in1k","dataset":"imagenet_1k_val","complete":true,"bundle":"../../../../../../../dataset/imagenet_1k_val_timm__inception_v4.tf_in1k_imagenet/runs/20261122_140424_292073fc","schema":"model-eval/score-classification/v1"}

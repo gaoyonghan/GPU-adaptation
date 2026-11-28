@@ -1,0 +1,29 @@
+{
+  "state": "passed",
+  "model": "prithivMLmods__Trash-Net",
+  "command": [
+    "python",
+    "classification/lirongfu/models/prithivMLmods__Trash-Net/inference.py",
+    "--device",
+    "cuda",
+    "--batch-size",
+    "64"
+  ],
+  "environment": {
+    "name": "classification-eval",
+    "python_version": "3.10.12"
+  },
+  "input_scope": {
+    "selection": "configured dataset",
+    "max_images": 0,
+    "image": null,
+    "inference_images": 5054,
+    "evaluated_images": 5054
+  },
+  "output_directory": "classification/lirongfu/models/prithivMLmods__Trash-Net/result/runs/20261122_095121_f3e1543d",
+  "dataset_root": "dataset",
+  "weights": "classification/lirongfu/models/prithivMLmods__Trash-Net/weights/best_model.pth",
+  "log": "stdout.log",
+  "exit_code": 0,
+  "evaluation_bundle": "dataset/trashnet_prithivMLmods__Trash-Net_imagenet/runs/20261122_095121_f3e1543d"
+}

@@ -1,0 +1,7 @@
+{
+  "jameslahm__lsnet_b": {
+    "total_latency_s": 22.405743768438697,
+    "sample_count": 50000,
+    "avg_latency_ms": 0.4481148753687739
+  }
+}

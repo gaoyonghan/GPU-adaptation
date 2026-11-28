@@ -1,0 +1,7 @@
+{
+  "touchtech__fashion-images-gender-age": {
+    "total_latency_s": 53.061364348977804,
+    "sample_count": 23704,
+    "avg_latency_ms": 2.2384983272434105
+  }
+}

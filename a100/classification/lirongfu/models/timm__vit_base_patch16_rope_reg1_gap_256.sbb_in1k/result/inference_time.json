@@ -1,0 +1,7 @@
+{
+  "timm__vit_base_patch16_rope_reg1_gap_256.sbb_in1k": {
+    "total_latency_s": 162.28543318249285,
+    "sample_count": 50000,
+    "avg_latency_ms": 3.245708663649857
+  }
+}

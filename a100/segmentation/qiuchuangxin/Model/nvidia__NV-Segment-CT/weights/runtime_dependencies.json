@@ -1,0 +1,19 @@
+{
+  "model_id": "nvidia__NV-Segment-CT",
+  "adapter": "nv_ct",
+  "native_code_files": 5,
+  "dependencies": [
+    "numpy",
+    "Pillow",
+    "torch",
+    "monai",
+    "transformers",
+    "nibabel",
+    "scipy",
+    "safetensors"
+  ],
+  "loader": "../inference.py",
+  "local_packages_precede_installed_editable_packages": true,
+  "source_root": ".",
+  "package_boundary": "current model directory; no shared runtime code or other model"
+}

@@ -1,0 +1,7 @@
+{
+  "kawaimasa__kawai-aesthetic-scorer-convnextv2": {
+    "total_latency_s": 125.13642026297748,
+    "sample_count": 2000,
+    "avg_latency_ms": 62.56821013148874
+  }
+}

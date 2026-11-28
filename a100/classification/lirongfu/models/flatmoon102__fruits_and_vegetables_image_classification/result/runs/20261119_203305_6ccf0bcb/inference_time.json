@@ -1,0 +1,7 @@
+{
+  "flatmoon102__fruits_and_vegetables_image_classification": {
+    "total_latency_s": 2.1066080424934626,
+    "sample_count": 623,
+    "avg_latency_ms": 3.3813933266347713
+  }
+}

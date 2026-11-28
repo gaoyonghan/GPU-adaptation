@@ -1,0 +1,7 @@
+{
+  "apple__AIM-3B": {
+    "total_latency_s": 4248.040435222909,
+    "sample_count": 50000,
+    "avg_latency_ms": 84.96080870445817
+  }
+}

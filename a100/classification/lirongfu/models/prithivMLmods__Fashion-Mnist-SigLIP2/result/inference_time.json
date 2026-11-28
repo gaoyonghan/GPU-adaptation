@@ -1,0 +1,7 @@
+{
+  "prithivMLmods__Fashion-Mnist-SigLIP2": {
+    "total_latency_s": 158.99666484631598,
+    "sample_count": 60000,
+    "avg_latency_ms": 2.649944414105266
+  }
+}

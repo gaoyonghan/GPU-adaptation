@@ -1,0 +1,1 @@
+{"model":"timm__mobilenetv4_conv_aa_large.e230_r448_in12k_ft_in1k","dataset":"imagenet_1k_val","complete":true,"bundle":"../../../../../../../dataset/imagenet_1k_val_timm__mobilenetv4_conv_aa_large.e230_r448_in12k_ft_in1k_imagenet/runs/20261122_143347_18b16257","schema":"model-eval/score-classification/v1"}

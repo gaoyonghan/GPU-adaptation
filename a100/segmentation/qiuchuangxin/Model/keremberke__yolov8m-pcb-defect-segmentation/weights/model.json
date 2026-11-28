@@ -1,0 +1,38 @@
+{
+  "model_id": "keremberke__yolov8m-pcb-defect-segmentation",
+  "adapter": "yolo",
+  "weight_path": "weights/best.pt",
+  "imgsz": 640,
+  "conf": 0.001,
+  "iou": 0.7,
+  "max_det": 300,
+  "class_agnostic": false,
+  "retina_masks": false,
+  "coco_categories": false,
+  "source_root": "weights",
+  "dataset_root": "../../../../dataset/segmentation",
+  "datasets": [
+    {
+      "name": "PCB-Defect",
+      "split": [
+        "valid"
+      ],
+      "protocol": {}
+    }
+  ],
+  "native_task": "PCB缺陷实例分割",
+  "native_boundary": "自定义PCB类；COCO格式不等于COCO类别",
+  "original_entrypoints": [
+    "keremberke__yolov8m-pcb-defect-segmentation/YOLOv8MPCBDefectStart.py"
+  ],
+  "python": "../../venv/bin/python",
+  "evaluation_python": "../../venv/bin/python",
+  "seed": 42,
+  "category_map": {
+    "0": 0,
+    "1": 1,
+    "2": 2,
+    "3": 3
+  },
+  "bundle_root": "result/coco_bundle"
+}

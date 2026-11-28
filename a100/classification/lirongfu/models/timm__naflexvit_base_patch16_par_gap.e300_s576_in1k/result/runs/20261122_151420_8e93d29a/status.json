@@ -1,0 +1,29 @@
+{
+  "state": "passed",
+  "model": "timm__naflexvit_base_patch16_par_gap.e300_s576_in1k",
+  "command": [
+    "python",
+    "classification/lirongfu/models/timm__naflexvit_base_patch16_par_gap.e300_s576_in1k/inference.py",
+    "--device",
+    "cuda",
+    "--batch-size",
+    "64"
+  ],
+  "environment": {
+    "name": "classification-eval",
+    "python_version": "3.10.12"
+  },
+  "input_scope": {
+    "selection": "configured dataset",
+    "max_images": 0,
+    "image": null,
+    "inference_images": 50000,
+    "evaluated_images": 50000
+  },
+  "output_directory": "classification/lirongfu/models/timm__naflexvit_base_patch16_par_gap.e300_s576_in1k/result/runs/20261122_151420_8e93d29a",
+  "dataset_root": "dataset",
+  "weights": "classification/lirongfu/models/timm__naflexvit_base_patch16_par_gap.e300_s576_in1k/weights/best_model.pth",
+  "log": "stdout.log",
+  "exit_code": 0,
+  "evaluation_bundle": "dataset/imagenet_1k_val_timm__naflexvit_base_patch16_par_gap.e300_s576_in1k_imagenet/runs/20261122_151420_8e93d29a"
+}

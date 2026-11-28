@@ -1,0 +1,29 @@
+{
+  "state": "passed",
+  "model": "prithivMLmods__AI-vs-Deepfake-vs-Real-v2.0",
+  "command": [
+    "python",
+    "classification/lirongfu/models/prithivMLmods__AI-vs-Deepfake-vs-Real-v2.0/inference.py",
+    "--device",
+    "cuda",
+    "--batch-size",
+    "64"
+  ],
+  "environment": {
+    "name": "classification-eval",
+    "python_version": "3.10.12"
+  },
+  "input_scope": {
+    "selection": "configured dataset",
+    "max_images": 0,
+    "image": null,
+    "inference_images": 15980,
+    "evaluated_images": 15980
+  },
+  "output_directory": "classification/lirongfu/models/prithivMLmods__AI-vs-Deepfake-vs-Real-v2.0/result/runs/20261120_033324_2fde8809",
+  "dataset_root": "dataset",
+  "weights": "classification/lirongfu/models/prithivMLmods__AI-vs-Deepfake-vs-Real-v2.0/weights/best_model.pth",
+  "log": "stdout.log",
+  "exit_code": 0,
+  "evaluation_bundle": "dataset/ai_deepfake_real_prithivMLmods__AI-vs-Deepfake-vs-Real-v2.0_imagenet/runs/20261120_033324_2fde8809"
+}

@@ -1,0 +1,29 @@
+{
+  "model_id": "briaai__RMBG-2.0",
+  "adapter": "binary",
+  "weight_path": "weights",
+  "family": "rmbg20",
+  "source_root": "weights",
+  "dataset_root": "../../../../dataset/segmentation",
+  "datasets": [
+    {
+      "name": "DIS5K",
+      "split": [
+        "DIS-TE1",
+        "DIS-TE2",
+        "DIS-TE3",
+        "DIS-TE4"
+      ],
+      "protocol": {}
+    }
+  ],
+  "native_task": "前景/背景分割",
+  "native_boundary": "公开替代基准；模型原生非COCO类别语义",
+  "original_entrypoints": [
+    "briaai__RMBG-2.0/RMBG20DIS5KStart.py"
+  ],
+  "python": "../../venv/bin/python",
+  "evaluation_python": "../../venv/bin/python",
+  "seed": 42,
+  "bundle_root": "result/coco_bundle"
+}

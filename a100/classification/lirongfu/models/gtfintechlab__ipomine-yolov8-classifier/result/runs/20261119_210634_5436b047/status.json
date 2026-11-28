@@ -1,0 +1,29 @@
+{
+  "state": "passed",
+  "model": "gtfintechlab__ipomine-yolov8-classifier",
+  "command": [
+    "python",
+    "classification/lirongfu/models/gtfintechlab__ipomine-yolov8-classifier/inference.py",
+    "--device",
+    "cuda",
+    "--batch-size",
+    "64"
+  ],
+  "environment": {
+    "name": "classification-eval",
+    "python_version": "3.10.12"
+  },
+  "input_scope": {
+    "selection": "configured dataset",
+    "max_images": 0,
+    "image": null,
+    "inference_images": 5000,
+    "evaluated_images": 5000
+  },
+  "output_directory": "classification/lirongfu/models/gtfintechlab__ipomine-yolov8-classifier/result/runs/20261119_210634_5436b047",
+  "dataset_root": "dataset",
+  "weights": "classification/lirongfu/models/gtfintechlab__ipomine-yolov8-classifier/weights/best_model.pth",
+  "log": "stdout.log",
+  "exit_code": 0,
+  "evaluation_bundle": "dataset/ipo_images_v2_gtfintechlab__ipomine-yolov8-classifier_imagenet/runs/20261119_210634_5436b047"
+}

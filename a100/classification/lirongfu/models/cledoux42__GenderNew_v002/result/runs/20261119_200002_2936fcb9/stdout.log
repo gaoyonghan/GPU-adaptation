@@ -1,0 +1,99 @@
+/opt/venvs/classification-eval/lib/python3.10/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+2026-11-19 20:00:08.215636: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2026-11-19 20:00:08.215694: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2026-11-19 20:00:08.218993: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+/opt/venvs/classification-eval/lib/python3.10/site-packages/transformers/models/vit/feature_extraction_vit.py:30: FutureWarning: The class ViTFeatureExtractor is deprecated and will be removed in version 5 of Transformers. Please use ViTImageProcessor instead.
+  warnings.warn(
+cledoux42__GenderNew_v002:   0%|          | 0/1554 [00:00<?, ?image/s]cledoux42__GenderNew_v002:   4%|▍         | 64/1554 [00:52<20:11,  1.23image/s]cledoux42__GenderNew_v002:   8%|▊         | 128/1554 [01:38<18:02,  1.32image/s]cledoux42__GenderNew_v002:  12%|█▏        | 192/1554 [02:21<16:25,  1.38image/s]cledoux42__GenderNew_v002:  16%|█▋        | 256/1554 [03:17<16:54,  1.28image/s]cledoux42__GenderNew_v002:  21%|██        | 320/1554 [04:10<16:23,  1.26image/s]cledoux42__GenderNew_v002:  25%|██▍       | 384/1554 [05:04<15:53,  1.23image/s]cledoux42__GenderNew_v002:  29%|██▉       | 448/1554 [05:58<15:12,  1.21image/s]cledoux42__GenderNew_v002:  33%|███▎      | 512/1554 [06:42<13:32,  1.28image/s]cledoux42__GenderNew_v002:  37%|███▋      | 576/1554 [07:46<13:47,  1.18image/s]cledoux42__GenderNew_v002:  41%|████      | 640/1554 [08:38<12:46,  1.19image/s]cledoux42__GenderNew_v002:  45%|████▌     | 704/1554 [09:43<12:38,  1.12image/s]cledoux42__GenderNew_v002:  49%|████▉     | 768/1554 [10:50<12:18,  1.06image/s]cledoux42__GenderNew_v002:  54%|█████▎    | 832/1554 [13:24<16:38,  1.38s/image]cledoux42__GenderNew_v002:  58%|█████▊    | 896/1554 [14:44<14:44,  1.34s/image]cledoux42__GenderNew_v002:  62%|██████▏   | 960/1554 [15:37<11:45,  1.19s/image]cledoux42__GenderNew_v002:  66%|██████▌   | 1024/1554 [16:28<09:27,  1.07s/image]cledoux42__GenderNew_v002:  70%|███████   | 1088/1554 [17:45<08:37,  1.11s/image]cledoux42__GenderNew_v002:  74%|███████▍  | 1152/1554 [18:43<07:00,  1.05s/image]cledoux42__GenderNew_v002:  78%|███████▊  | 1216/1554 [20:08<06:22,  1.13s/image]cledoux42__GenderNew_v002:  82%|████████▏ | 1280/1554 [21:28<05:20,  1.17s/image]cledoux42__GenderNew_v002:  86%|████████▋ | 1344/1554 [22:48<04:10,  1.19s/image]cledoux42__GenderNew_v002:  91%|█████████ | 1408/1554 [23:38<02:35,  1.07s/image]cledoux42__GenderNew_v002:  95%|█████████▍| 1472/1554 [24:26<01:19,  1.03image/s]cledoux42__GenderNew_v002:  99%|█████████▉| 1536/1554 [25:16<00:16,  1.09image/s]cledoux42__GenderNew_v002: 100%|██████████| 1554/1554 [25:30<00:00,  1.11image/s]cledoux42__GenderNew_v002: 100%|██████████| 1554/1554 [25:30<00:00,  1.02image/s]
+Forward timing saved: /data/lirongfu/image-classification/classification/lirongfu/models/cledoux42__GenderNew_v002/result/inference_time.json [cledoux42__GenderNew_v002]
+{
+  "schema": "model-eval/metrics/v1",
+  "task": "image_classification",
+  "protocol": "model-eval/score-classification/v1",
+  "model": "cledoux42__GenderNew_v002",
+  "dataset": [
+    "cledoux_gender"
+  ],
+  "metric_unit": "fraction",
+  "metrics": {
+    "accuracy": 0.9877734877734877,
+    "top1_accuracy": 0.9877734877734877,
+    "top5_accuracy": null,
+    "balanced_accuracy": 0.9877684376164645,
+    "macro_precision_over_evaluated_target_classes": 0.9877854047678996,
+    "macro_recall_over_evaluated_target_classes": 0.9877684376164645,
+    "macro_f1_over_evaluated_target_classes": 0.9877732396856639,
+    "weighted_f1": 0.9877733814501347
+  },
+  "metric_status": {
+    "top5_accuracy": "not_applicable_fewer_than_five_classes"
+  },
+  "per_class": [
+    {
+      "category_id": 0,
+      "support": 779,
+      "precision": 0.9859335038363172,
+      "recall": 0.9897304236200257,
+      "f1": 0.9878283151825753
+    },
+    {
+      "category_id": 1,
+      "support": 775,
+      "precision": 0.9896373056994818,
+      "recall": 0.9858064516129033,
+      "f1": 0.9877181641887525
+    }
+  ],
+  "scope": {
+    "images": 1554,
+    "completed_images": 1554,
+    "categories": 2
+  },
+  "evaluation": {
+    "task": "single_label_classification",
+    "top_k": [
+      1,
+      5
+    ],
+    "top5_when_classes_below_five": "not_applicable",
+    "top5_when_ranking_missing": "unavailable",
+    "ranking": "preserve_native_order_no_new_tie_break",
+    "macro_labels": "observed_ground_truth_classes",
+    "zero_division": 0,
+    "unit": "fraction",
+    "sample_weight": "uniform"
+  },
+  "qualification": {
+    "kind": "original_configured_dataset",
+    "data_kind": "hf_disk",
+    "pred_label_map": {},
+    "ignore_pred_label": null,
+    "excluded_samples": 0,
+    "image_layout": "shared images with ImageNet-style image/label manifests"
+  },
+  "native_execution": [
+    "existing native top1 retained; available native class rankings exported"
+  ],
+  "limitations": [
+    "Top-5 is unavailable when native output provides only a final label."
+  ],
+  "evaluator": {
+    "name": "scikit-learn.metrics",
+    "version": "1.7.1",
+    "functions": [
+      "accuracy_score",
+      "precision_recall_fscore_support"
+    ],
+    "top5": "accuracy_score of GT membership in native ordered top5",
+    "source_sha256": "1f7be1029f426e7fbb26e4c6a334be3301a83a511c7757c72a63f4a2ad19d946",
+    "reference": "https://scikit-learn.org/stable/modules/model_evaluation.html"
+  },
+  "input_sha256": {
+    "annotations.json": "9f2c5d95966f8aae89d25b6fc74347d46c645fdcccb77b3d3a8d1843469462a3",
+    "predictions.json": "665dd87a94565a8329f86e5c8cb920c40f8d80adf86f2ac36ec9525561793ffe"
+  },
+  "protocol_sha256": "4945b9990ed99e9ea03dbc65395cb4e11dbf882f1485fd2fe19ce0accd074494",
+  "inference_executed": false
+}

@@ -1,0 +1,7 @@
+{
+  "prithivMLmods__AIorNot-SigLIP2": {
+    "total_latency_s": 49.57735343836248,
+    "sample_count": 18618,
+    "avg_latency_ms": 2.6628721365540056
+  }
+}

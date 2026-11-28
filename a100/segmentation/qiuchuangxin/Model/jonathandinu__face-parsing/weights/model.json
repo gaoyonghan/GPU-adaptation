@@ -1,0 +1,27 @@
+{
+  "adapter": "semantic",
+  "adapter_group": "face_parsing",
+  "weight_path": "weights",
+  "source_entry": "utils/evaluate_model.py",
+  "model_id": "jonathandinu__face-parsing",
+  "source_root": "weights",
+  "dataset_root": "../../../../dataset/segmentation",
+  "datasets": [
+    {
+      "name": "CelebAMask-HQ",
+      "split": [
+        "test"
+      ],
+      "protocol": {}
+    }
+  ],
+  "native_task": "19类人脸解析",
+  "native_boundary": "面部部件语义；非COCO对象类别",
+  "original_entrypoints": [
+    "jonathandinu__face-parsing/FaceParsingStart.py"
+  ],
+  "python": "../../venv/bin/python",
+  "evaluation_python": "../../venv/bin/python",
+  "seed": 42,
+  "bundle_root": "result/coco_bundle"
+}

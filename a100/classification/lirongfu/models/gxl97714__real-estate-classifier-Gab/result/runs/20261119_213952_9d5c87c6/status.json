@@ -1,0 +1,29 @@
+{
+  "state": "passed",
+  "model": "gxl97714__real-estate-classifier-Gab",
+  "command": [
+    "python",
+    "classification/lirongfu/models/gxl97714__real-estate-classifier-Gab/inference.py",
+    "--device",
+    "cuda",
+    "--batch-size",
+    "64"
+  ],
+  "environment": {
+    "name": "classification-eval",
+    "python_version": "3.10.12"
+  },
+  "input_scope": {
+    "selection": "configured dataset",
+    "max_images": 0,
+    "image": null,
+    "inference_images": 140,
+    "evaluated_images": 140
+  },
+  "output_directory": "classification/lirongfu/models/gxl97714__real-estate-classifier-Gab/result/runs/20261119_213952_9d5c87c6",
+  "dataset_root": "dataset",
+  "weights": "classification/lirongfu/models/gxl97714__real-estate-classifier-Gab/weights/best_model.pth",
+  "log": "stdout.log",
+  "exit_code": 0,
+  "evaluation_bundle": "dataset/indoor_scene_gxl97714__real-estate-classifier-Gab_imagenet/runs/20261119_213952_9d5c87c6"
+}

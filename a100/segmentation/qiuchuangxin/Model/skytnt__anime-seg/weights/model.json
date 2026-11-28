@@ -1,0 +1,28 @@
+{
+  "model_id": "skytnt__anime-seg",
+  "adapter": "anime",
+  "weight_path": "weights/model.safetensors",
+  "source_root": "weights",
+  "dataset_root": "../../../../dataset/segmentation",
+  "datasets": [
+    {
+      "name": "AnimeSeg",
+      "split": [
+        "validation_seed1_frozen"
+      ],
+      "protocol": {}
+    }
+  ],
+  "native_task": "动漫前景分割",
+  "native_boundary": "默认重建作者验证划分并可含合成样本；不能声称独立固定官方测试集",
+  "original_entrypoints": [
+    "skytnt__anime-seg/AnimeSegEvaluate.py"
+  ],
+  "python": "../../venv/bin/python",
+  "evaluation_python": "../../venv/bin/python",
+  "seed": 1,
+  "input_size": 640,
+  "protocol": "native_validation_augmentation_per_sample_seed",
+  "original_full_run_rng_equivalent": false,
+  "bundle_root": "result/coco_bundle"
+}

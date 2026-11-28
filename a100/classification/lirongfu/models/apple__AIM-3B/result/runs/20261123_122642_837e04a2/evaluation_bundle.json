@@ -1,0 +1,1 @@
+{"model":"apple__AIM-3B","dataset":"imagenet_1k_val","complete":true,"bundle":"../../../../../../../dataset/imagenet_1k_val_apple__AIM-3B_imagenet/runs/20261123_122642_837e04a2","schema":"model-eval/score-classification/v1"}

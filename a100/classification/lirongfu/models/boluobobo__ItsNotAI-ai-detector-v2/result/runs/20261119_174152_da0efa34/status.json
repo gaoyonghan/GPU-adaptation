@@ -1,0 +1,29 @@
+{
+  "state": "passed",
+  "model": "boluobobo__ItsNotAI-ai-detector-v2",
+  "command": [
+    "python",
+    "classification/lirongfu/models/boluobobo__ItsNotAI-ai-detector-v2/inference.py",
+    "--device",
+    "cuda",
+    "--batch-size",
+    "64"
+  ],
+  "environment": {
+    "name": "classification-eval",
+    "python_version": "3.10.12"
+  },
+  "input_scope": {
+    "selection": "configured dataset",
+    "max_images": 0,
+    "image": null,
+    "inference_images": 19996,
+    "evaluated_images": 19996
+  },
+  "output_directory": "classification/lirongfu/models/boluobobo__ItsNotAI-ai-detector-v2/result/runs/20261119_174152_da0efa34",
+  "dataset_root": "dataset",
+  "weights": "classification/lirongfu/models/boluobobo__ItsNotAI-ai-detector-v2/weights/best_model.pth",
+  "log": "stdout.log",
+  "exit_code": 0,
+  "evaluation_bundle": "dataset/cifake_boluobobo__ItsNotAI-ai-detector-v2_imagenet/runs/20261119_174152_da0efa34"
+}

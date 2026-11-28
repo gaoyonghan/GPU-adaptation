@@ -1,0 +1,7 @@
+{
+  "timm__naflexvit_base_patch16_par_gap.e300_s576_in1k": {
+    "total_latency_s": 351.72341586463153,
+    "sample_count": 50000,
+    "avg_latency_ms": 7.034468317292631
+  }
+}

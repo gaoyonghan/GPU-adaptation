@@ -1,0 +1,1 @@
+{"model":"timm__vit_mediumd_patch16_reg4_gap_384.sbb2_e200_in12k_ft_in1k","dataset":"imagenet_1k_val","bundle":"../../../../../dataset/imagenet_1k_val_timm__vit_mediumd_patch16_reg4_gap_384.sbb2_e200_in12k_ft_in1k_imagenet/runs/20261122_161754_4559b31b","schema":"model-eval/score-classification/v1","complete":true}

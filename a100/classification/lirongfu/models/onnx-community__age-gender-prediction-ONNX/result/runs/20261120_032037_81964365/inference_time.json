@@ -1,0 +1,7 @@
+{
+  "onnx-community__age-gender-prediction-ONNX": {
+    "total_latency_s": 25.841737363487482,
+    "sample_count": 23704,
+    "avg_latency_ms": 1.0901846677137816
+  }
+}

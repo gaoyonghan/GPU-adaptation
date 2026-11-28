@@ -1,0 +1,16 @@
+{
+  "model_id": "ayoubkirouane__Breast-Cancer_SAM_v1",
+  "adapter": "breast_sam",
+  "native_code_files": 0,
+  "dependencies": [
+    "numpy",
+    "Pillow",
+    "torch",
+    "torchvision",
+    "transformers"
+  ],
+  "loader": "../inference.py",
+  "local_packages_precede_installed_editable_packages": true,
+  "source_root": ".",
+  "package_boundary": "current model directory; no shared runtime code or other model"
+}

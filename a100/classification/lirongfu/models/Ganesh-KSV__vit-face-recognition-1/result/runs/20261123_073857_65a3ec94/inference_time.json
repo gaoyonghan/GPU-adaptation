@@ -1,0 +1,7 @@
+{
+  "Ganesh-KSV__vit-face-recognition-1": {
+    "total_latency_s": 0.27471088618040085,
+    "sample_count": 360,
+    "avg_latency_ms": 0.763085794945558
+  }
+}

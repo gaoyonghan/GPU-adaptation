@@ -1,0 +1,152 @@
+/opt/venvs/classification-eval/lib/python3.10/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+2026-11-19 20:30:02.819643: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2026-11-19 20:30:02.819696: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2026-11-19 20:30:02.821470: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+dima806__vehicle_10_types_image_detection:   0%|          | 0/400 [00:00<?, ?image/s]dima806__vehicle_10_types_image_detection:  16%|█▌        | 64/400 [00:10<00:57,  5.83image/s]dima806__vehicle_10_types_image_detection:  32%|███▏      | 128/400 [00:18<00:39,  6.94image/s]dima806__vehicle_10_types_image_detection:  48%|████▊     | 192/400 [00:26<00:27,  7.47image/s]dima806__vehicle_10_types_image_detection:  64%|██████▍   | 256/400 [00:36<00:20,  6.94image/s]dima806__vehicle_10_types_image_detection:  80%|████████  | 320/400 [00:46<00:11,  6.74image/s]dima806__vehicle_10_types_image_detection:  96%|█████████▌| 384/400 [00:56<00:02,  6.69image/s]dima806__vehicle_10_types_image_detection: 100%|██████████| 400/400 [00:59<00:00,  6.55image/s]dima806__vehicle_10_types_image_detection: 100%|██████████| 400/400 [00:59<00:00,  6.72image/s]
+Forward timing saved: /data/lirongfu/image-classification/classification/lirongfu/models/dima806__vehicle_10_types_image_detection/result/inference_time.json [dima806__vehicle_10_types_image_detection]
+{
+  "schema": "model-eval/metrics/v1",
+  "task": "image_classification",
+  "protocol": "model-eval/score-classification/v1",
+  "model": "dima806__vehicle_10_types_image_detection",
+  "dataset": [
+    "vehicle_classification"
+  ],
+  "metric_unit": "fraction",
+  "metrics": {
+    "accuracy": 0.9175,
+    "top1_accuracy": 0.9175,
+    "top5_accuracy": 1.0,
+    "balanced_accuracy": 0.9175000000000001,
+    "macro_precision_over_evaluated_target_classes": 0.9231700782188588,
+    "macro_recall_over_evaluated_target_classes": 0.9175000000000001,
+    "macro_f1_over_evaluated_target_classes": 0.9176922600729318,
+    "weighted_f1": 0.9176922600729318
+  },
+  "metric_status": {
+    "top5_accuracy": "computed"
+  },
+  "per_class": [
+    {
+      "category_id": 0,
+      "support": 40,
+      "precision": 0.9459459459459459,
+      "recall": 0.875,
+      "f1": 0.9090909090909091
+    },
+    {
+      "category_id": 1,
+      "support": 40,
+      "precision": 0.9523809523809523,
+      "recall": 1.0,
+      "f1": 0.975609756097561
+    },
+    {
+      "category_id": 2,
+      "support": 40,
+      "precision": 0.78,
+      "recall": 0.975,
+      "f1": 0.8666666666666667
+    },
+    {
+      "category_id": 3,
+      "support": 40,
+      "precision": 0.7727272727272727,
+      "recall": 0.85,
+      "f1": 0.8095238095238095
+    },
+    {
+      "category_id": 4,
+      "support": 40,
+      "precision": 0.9090909090909091,
+      "recall": 0.75,
+      "f1": 0.821917808219178
+    },
+    {
+      "category_id": 5,
+      "support": 40,
+      "precision": 0.975609756097561,
+      "recall": 1.0,
+      "f1": 0.9876543209876543
+    },
+    {
+      "category_id": 6,
+      "support": 40,
+      "precision": 0.95,
+      "recall": 0.95,
+      "f1": 0.95
+    },
+    {
+      "category_id": 7,
+      "support": 40,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "category_id": 8,
+      "support": 40,
+      "precision": 1.0,
+      "recall": 0.9,
+      "f1": 0.9473684210526315
+    },
+    {
+      "category_id": 9,
+      "support": 40,
+      "precision": 0.9459459459459459,
+      "recall": 0.875,
+      "f1": 0.9090909090909091
+    }
+  ],
+  "scope": {
+    "images": 400,
+    "completed_images": 400,
+    "categories": 10
+  },
+  "evaluation": {
+    "task": "single_label_classification",
+    "top_k": [
+      1,
+      5
+    ],
+    "top5_when_classes_below_five": "not_applicable",
+    "top5_when_ranking_missing": "unavailable",
+    "ranking": "preserve_native_order_no_new_tie_break",
+    "macro_labels": "observed_ground_truth_classes",
+    "zero_division": 0,
+    "unit": "fraction",
+    "sample_weight": "uniform"
+  },
+  "qualification": {
+    "kind": "original_configured_dataset",
+    "data_kind": "image_paths",
+    "pred_label_map": {},
+    "ignore_pred_label": null,
+    "excluded_samples": 0,
+    "image_layout": "shared images with ImageNet-style image/label manifests"
+  },
+  "native_execution": [
+    "existing native top1 retained; available native class rankings exported"
+  ],
+  "limitations": [
+    "Top-5 is unavailable when native output provides only a final label."
+  ],
+  "evaluator": {
+    "name": "scikit-learn.metrics",
+    "version": "1.7.1",
+    "functions": [
+      "accuracy_score",
+      "precision_recall_fscore_support"
+    ],
+    "top5": "accuracy_score of GT membership in native ordered top5",
+    "source_sha256": "1f7be1029f426e7fbb26e4c6a334be3301a83a511c7757c72a63f4a2ad19d946",
+    "reference": "https://scikit-learn.org/stable/modules/model_evaluation.html"
+  },
+  "input_sha256": {
+    "annotations.json": "111807fe2e87be2002047fc9b289134440f9fd3e178e8697078eb8b0e432177a",
+    "predictions.json": "d9ffd2612368a9e234ac2e63729a5c4644ce768577f33e6d08d8614bfbb5b7b6"
+  },
+  "protocol_sha256": "65568e9eadfca87e0cb48d06236134d82214a21e75086297cfe1803bb6c37c1a",
+  "inference_executed": false
+}

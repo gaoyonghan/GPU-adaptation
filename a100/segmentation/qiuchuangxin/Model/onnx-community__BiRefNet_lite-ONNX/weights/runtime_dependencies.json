@@ -1,0 +1,14 @@
+{
+  "model_id": "onnx-community__BiRefNet_lite-ONNX",
+  "adapter": "onnx",
+  "native_code_files": 0,
+  "dependencies": [
+    "numpy",
+    "Pillow",
+    "onnxruntime or onnxruntime-gpu"
+  ],
+  "loader": "../inference.py",
+  "local_packages_precede_installed_editable_packages": true,
+  "source_root": ".",
+  "package_boundary": "current model directory; no shared runtime code or other model"
+}

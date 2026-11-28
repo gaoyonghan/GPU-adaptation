@@ -1,0 +1,125 @@
+/opt/venvs/classification-eval/lib/python3.10/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+2026-11-22 09:51:26.594316: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2026-11-22 09:51:26.594364: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2026-11-22 09:51:26.595363: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+prithivMLmods__Trash-Net:   0%|          | 0/5054 [00:00<?, ?image/s]prithivMLmods__Trash-Net:   1%|▏         | 64/5054 [03:50<4:59:39,  3.60s/image]prithivMLmods__Trash-Net:   3%|▎         | 128/5054 [07:06<4:29:27,  3.28s/image]prithivMLmods__Trash-Net:   4%|▍         | 192/5054 [11:31<4:57:40,  3.67s/image]prithivMLmods__Trash-Net:   5%|▌         | 256/5054 [16:09<5:15:07,  3.94s/image]prithivMLmods__Trash-Net:   6%|▋         | 320/5054 [20:45<5:21:14,  4.07s/image]prithivMLmods__Trash-Net:   8%|▊         | 384/5054 [25:19<5:22:33,  4.14s/image]prithivMLmods__Trash-Net:   9%|▉         | 448/5054 [29:22<5:09:36,  4.03s/image]prithivMLmods__Trash-Net:  10%|█         | 512/5054 [33:02<4:50:44,  3.84s/image]prithivMLmods__Trash-Net:  11%|█▏        | 576/5054 [35:52<4:19:07,  3.47s/image]prithivMLmods__Trash-Net:  13%|█▎        | 640/5054 [39:24<4:11:53,  3.42s/image]prithivMLmods__Trash-Net:  14%|█▍        | 704/5054 [43:19<4:13:34,  3.50s/image]prithivMLmods__Trash-Net:  15%|█▌        | 768/5054 [47:17<4:14:35,  3.56s/image]prithivMLmods__Trash-Net:  16%|█▋        | 832/5054 [51:17<4:14:55,  3.62s/image]prithivMLmods__Trash-Net:  18%|█▊        | 896/5054 [55:09<4:11:03,  3.62s/image]prithivMLmods__Trash-Net:  19%|█▉        | 960/5054 [59:00<4:06:58,  3.62s/image]prithivMLmods__Trash-Net:  20%|██        | 1024/5054 [1:02:12<3:50:39,  3.43s/image]prithivMLmods__Trash-Net:  22%|██▏       | 1088/5054 [1:06:01<3:49:49,  3.48s/image]prithivMLmods__Trash-Net:  23%|██▎       | 1152/5054 [1:10:02<3:51:38,  3.56s/image]prithivMLmods__Trash-Net:  24%|██▍       | 1216/5054 [1:14:04<3:51:59,  3.63s/image]prithivMLmods__Trash-Net:  25%|██▌       | 1280/5054 [1:18:05<3:50:49,  3.67s/image]prithivMLmods__Trash-Net:  27%|██▋       | 1344/5054 [1:22:16<3:51:32,  3.74s/image]prithivMLmods__Trash-Net:  28%|██▊       | 1408/5054 [1:26:33<3:52:24,  3.82s/image]prithivMLmods__Trash-Net:  29%|██▉       | 1472/5054 [1:30:51<3:52:11,  3.89s/image]prithivMLmods__Trash-Net:  30%|███       | 1536/5054 [1:35:06<3:49:44,  3.92s/image]prithivMLmods__Trash-Net:  32%|███▏      | 1600/5054 [1:39:23<3:47:09,  3.95s/image]prithivMLmods__Trash-Net:  33%|███▎      | 1664/5054 [1:43:38<3:43:35,  3.96s/image]prithivMLmods__Trash-Net:  34%|███▍      | 1728/5054 [1:47:55<3:40:27,  3.98s/image]prithivMLmods__Trash-Net:  35%|███▌      | 1792/5054 [1:52:11<3:36:32,  3.98s/image]prithivMLmods__Trash-Net:  37%|███▋      | 1856/5054 [1:56:26<3:32:15,  3.98s/image]prithivMLmods__Trash-Net:  38%|███▊      | 1920/5054 [2:00:39<3:27:29,  3.97s/image]prithivMLmods__Trash-Net:  39%|███▉      | 1984/5054 [2:03:58<3:10:08,  3.72s/image]prithivMLmods__Trash-Net:  41%|████      | 2048/5054 [2:07:38<3:02:00,  3.63s/image]prithivMLmods__Trash-Net:  42%|████▏     | 2112/5054 [2:11:48<3:02:05,  3.71s/image]prithivMLmods__Trash-Net:  43%|████▎     | 2176/5054 [2:15:52<2:59:34,  3.74s/image]prithivMLmods__Trash-Net:  44%|████▍     | 2240/5054 [2:20:01<2:57:38,  3.79s/image]prithivMLmods__Trash-Net:  46%|████▌     | 2304/5054 [2:24:08<2:54:32,  3.81s/image]prithivMLmods__Trash-Net:  47%|████▋     | 2368/5054 [2:28:01<2:48:10,  3.76s/image]prithivMLmods__Trash-Net:  48%|████▊     | 2432/5054 [2:31:32<2:38:12,  3.62s/image]prithivMLmods__Trash-Net:  49%|████▉     | 2496/5054 [2:35:32<2:35:56,  3.66s/image]prithivMLmods__Trash-Net:  51%|█████     | 2560/5054 [2:37:43<2:12:03,  3.18s/image]prithivMLmods__Trash-Net:  52%|█████▏    | 2624/5054 [2:38:15<1:36:06,  2.37s/image]prithivMLmods__Trash-Net:  53%|█████▎    | 2688/5054 [2:38:45<1:11:01,  1.80s/image]prithivMLmods__Trash-Net:  54%|█████▍    | 2752/5054 [2:39:11<52:59,  1.38s/image]  prithivMLmods__Trash-Net:  56%|█████▌    | 2816/5054 [2:39:46<42:18,  1.13s/image]prithivMLmods__Trash-Net:  57%|█████▋    | 2880/5054 [2:40:16<33:45,  1.07image/s]prithivMLmods__Trash-Net:  58%|█████▊    | 2944/5054 [2:40:57<29:41,  1.18image/s]prithivMLmods__Trash-Net:  60%|█████▉    | 3008/5054 [2:41:58<30:00,  1.14image/s]prithivMLmods__Trash-Net:  61%|██████    | 3072/5054 [2:42:58<29:40,  1.11image/s]prithivMLmods__Trash-Net:  62%|██████▏   | 3136/5054 [2:43:58<29:02,  1.10image/s]prithivMLmods__Trash-Net:  63%|██████▎   | 3200/5054 [2:44:59<28:29,  1.08image/s]prithivMLmods__Trash-Net:  65%|██████▍   | 3264/5054 [2:46:01<27:52,  1.07image/s]prithivMLmods__Trash-Net:  66%|██████▌   | 3328/5054 [2:47:02<27:02,  1.06image/s]prithivMLmods__Trash-Net:  67%|██████▋   | 3392/5054 [2:48:03<26:08,  1.06image/s]prithivMLmods__Trash-Net:  68%|██████▊   | 3456/5054 [2:49:03<25:09,  1.06image/s]prithivMLmods__Trash-Net:  70%|██████▉   | 3520/5054 [2:50:05<24:19,  1.05image/s]prithivMLmods__Trash-Net:  71%|███████   | 3584/5054 [2:51:07<23:23,  1.05image/s]prithivMLmods__Trash-Net:  72%|███████▏  | 3648/5054 [2:52:08<22:23,  1.05image/s]prithivMLmods__Trash-Net:  73%|███████▎  | 3712/5054 [2:53:09<21:23,  1.05image/s]prithivMLmods__Trash-Net:  75%|███████▍  | 3776/5054 [2:54:08<20:03,  1.06image/s]prithivMLmods__Trash-Net:  76%|███████▌  | 3840/5054 [2:55:06<18:52,  1.07image/s]prithivMLmods__Trash-Net:  77%|███████▋  | 3904/5054 [2:56:07<18:02,  1.06image/s]prithivMLmods__Trash-Net:  79%|███████▊  | 3968/5054 [2:57:09<17:08,  1.06image/s]prithivMLmods__Trash-Net:  80%|███████▉  | 4032/5054 [2:58:09<16:06,  1.06image/s]prithivMLmods__Trash-Net:  81%|████████  | 4096/5054 [2:59:11<15:12,  1.05image/s]prithivMLmods__Trash-Net:  82%|████████▏ | 4160/5054 [3:00:14<14:20,  1.04image/s]prithivMLmods__Trash-Net:  84%|████████▎ | 4224/5054 [3:01:16<13:20,  1.04image/s]prithivMLmods__Trash-Net:  85%|████████▍ | 4288/5054 [3:02:18<12:18,  1.04image/s]prithivMLmods__Trash-Net:  86%|████████▌ | 4352/5054 [3:03:20<11:17,  1.04image/s]prithivMLmods__Trash-Net:  87%|████████▋ | 4416/5054 [3:04:22<10:17,  1.03image/s]prithivMLmods__Trash-Net:  89%|████████▊ | 4480/5054 [3:05:26<09:19,  1.03image/s]prithivMLmods__Trash-Net:  90%|████████▉ | 4544/5054 [3:06:26<08:13,  1.03image/s]prithivMLmods__Trash-Net:  91%|█████████ | 4608/5054 [3:07:29<07:11,  1.03image/s]prithivMLmods__Trash-Net:  92%|█████████▏| 4672/5054 [3:08:29<06:07,  1.04image/s]prithivMLmods__Trash-Net:  94%|█████████▎| 4736/5054 [3:09:30<05:05,  1.04image/s]prithivMLmods__Trash-Net:  95%|█████████▍| 4800/5054 [3:10:34<04:06,  1.03image/s]prithivMLmods__Trash-Net:  96%|█████████▌| 4864/5054 [3:11:38<03:05,  1.02image/s]prithivMLmods__Trash-Net:  98%|█████████▊| 4928/5054 [3:12:39<02:02,  1.03image/s]prithivMLmods__Trash-Net:  99%|█████████▉| 4992/5054 [3:13:39<00:59,  1.04image/s]prithivMLmods__Trash-Net: 100%|██████████| 5054/5054 [3:14:40<00:00,  1.03image/s]prithivMLmods__Trash-Net: 100%|██████████| 5054/5054 [3:14:40<00:00,  2.31s/image]
+Forward timing saved: /data/lirongfu/image-classification/classification/lirongfu/models/prithivMLmods__Trash-Net/result/inference_time.json [prithivMLmods__Trash-Net]
+{
+  "schema": "model-eval/metrics/v1",
+  "task": "image_classification",
+  "protocol": "model-eval/score-classification/v1",
+  "model": "prithivMLmods__Trash-Net",
+  "dataset": [
+    "trashnet"
+  ],
+  "metric_unit": "fraction",
+  "metrics": {
+    "accuracy": 0.9590423426988524,
+    "top1_accuracy": 0.9590423426988524,
+    "top5_accuracy": 0.999604273842501,
+    "balanced_accuracy": 0.9522600762505746,
+    "macro_precision_over_evaluated_target_classes": 0.9554927925183335,
+    "macro_recall_over_evaluated_target_classes": 0.9522600762505746,
+    "macro_f1_over_evaluated_target_classes": 0.9535825479178399,
+    "weighted_f1": 0.9590073888601288
+  },
+  "metric_status": {
+    "top5_accuracy": "computed"
+  },
+  "per_class": [
+    {
+      "category_id": 0,
+      "support": 806,
+      "precision": 0.9898477157360406,
+      "recall": 0.967741935483871,
+      "f1": 0.9786700125470514
+    },
+    {
+      "category_id": 1,
+      "support": 1002,
+      "precision": 0.9498525073746312,
+      "recall": 0.9640718562874252,
+      "f1": 0.9569093610698366
+    },
+    {
+      "category_id": 2,
+      "support": 820,
+      "precision": 0.9552599758162031,
+      "recall": 0.9634146341463414,
+      "f1": 0.9593199757134183
+    },
+    {
+      "category_id": 3,
+      "support": 1188,
+      "precision": 0.9414125200642055,
+      "recall": 0.9873737373737373,
+      "f1": 0.9638455217748562
+    },
+    {
+      "category_id": 4,
+      "support": 964,
+      "precision": 0.9844961240310077,
+      "recall": 0.9221991701244814,
+      "f1": 0.9523299410819497
+    },
+    {
+      "category_id": 5,
+      "support": 274,
+      "precision": 0.9120879120879121,
+      "recall": 0.9087591240875912,
+      "f1": 0.9104204753199269
+    }
+  ],
+  "scope": {
+    "images": 5054,
+    "completed_images": 5054,
+    "categories": 6
+  },
+  "evaluation": {
+    "task": "single_label_classification",
+    "top_k": [
+      1,
+      5
+    ],
+    "top5_when_classes_below_five": "not_applicable",
+    "top5_when_ranking_missing": "unavailable",
+    "ranking": "preserve_native_order_no_new_tie_break",
+    "macro_labels": "observed_ground_truth_classes",
+    "zero_division": 0,
+    "unit": "fraction",
+    "sample_weight": "uniform"
+  },
+  "qualification": {
+    "kind": "original_configured_dataset",
+    "data_kind": "trashnet",
+    "pred_label_map": {},
+    "ignore_pred_label": null,
+    "excluded_samples": 0,
+    "image_layout": "shared images with ImageNet-style image/label manifests"
+  },
+  "native_execution": [
+    "existing native top1 retained; available native class rankings exported"
+  ],
+  "limitations": [
+    "Top-5 is unavailable when native output provides only a final label."
+  ],
+  "evaluator": {
+    "name": "scikit-learn.metrics",
+    "version": "1.7.1",
+    "functions": [
+      "accuracy_score",
+      "precision_recall_fscore_support"
+    ],
+    "top5": "accuracy_score of GT membership in native ordered top5",
+    "source_sha256": "1f7be1029f426e7fbb26e4c6a334be3301a83a511c7757c72a63f4a2ad19d946",
+    "reference": "https://scikit-learn.org/stable/modules/model_evaluation.html"
+  },
+  "input_sha256": {
+    "annotations.json": "d8b81d89f15c94bb32e91203a4526ff2e7999550eb20bb4bba2721d3ced48e68",
+    "predictions.json": "e50d77a8bdc509922003e41aca9b3b2c61d89c3f77fce68f79827a71a1980ebb"
+  },
+  "protocol_sha256": "452fb05ba9a8fe0aef2a8ba5dc8219f81366384976e06619ef1427b714b9acde",
+  "inference_executed": false
+}

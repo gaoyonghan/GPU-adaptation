@@ -1,0 +1,29 @@
+{
+  "state": "passed",
+  "model": "Vishaltiwari2019__food_classifier_one",
+  "command": [
+    "python",
+    "classification/lirongfu_recovered/models/Vishaltiwari2019__food_classifier_one/inference.py",
+    "--device",
+    "cuda",
+    "--batch-size",
+    "64"
+  ],
+  "environment": {
+    "name": "classification-eval",
+    "python_version": "3.10.12"
+  },
+  "input_scope": {
+    "selection": "configured dataset",
+    "max_images": 0,
+    "image": null,
+    "inference_images": 941,
+    "evaluated_images": 941
+  },
+  "output_directory": "classification/lirongfu_recovered/models/Vishaltiwari2019__food_classifier_one/result/runs/20261123_110116_58f0186f",
+  "dataset_root": "dataset",
+  "weights": "classification/lirongfu_recovered/models/Vishaltiwari2019__food_classifier_one/weights/best_model.pth",
+  "log": "stdout.log",
+  "exit_code": 0,
+  "evaluation_bundle": "dataset/indian_food_Vishaltiwari2019__food_classifier_one_imagenet/runs/20261123_110116_58f0186f"
+}

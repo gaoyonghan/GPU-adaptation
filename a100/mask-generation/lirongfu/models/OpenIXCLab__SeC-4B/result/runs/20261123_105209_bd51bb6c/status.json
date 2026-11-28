@@ -1,0 +1,34 @@
+{
+  "state": "passed",
+  "model": "OpenIXCLab__SeC-4B",
+  "started_at": "2026-11-23T10:52:09.720789+00:00",
+  "command": [
+    "python",
+    "mask-generation/lirongfu/models/OpenIXCLab__SeC-4B/inference.py",
+    "--device",
+    "cuda"
+  ],
+  "environment": {
+    "name": "mask-eval",
+    "python_version": "3.10.12"
+  },
+  "input_scope": {
+    "dataset": "SeCVOS",
+    "sample_limit": 0,
+    "evaluation_units": 31514,
+    "timing_samples": 28189
+  },
+  "batch_policy": "native_runner_default",
+  "requested_batch_override": null,
+  "configured_prompt_batch_size": null,
+  "dataset_root": "dataset",
+  "weights": "mask-generation/lirongfu/models/OpenIXCLab__SeC-4B/weights/best_model.pth",
+  "output_directory": "mask-generation/lirongfu/models/OpenIXCLab__SeC-4B/result/runs/20261123_105209_bd51bb6c",
+  "log": "stdout.log",
+  "evaluation_bundle": "dataset/SeCVOS_OpenIXCLab__SeC-4B_coco/runs/20261123_105209_bd51bb6c",
+  "metrics": {
+    "miou": 0.6994453139856621
+  },
+  "exit_code": 0,
+  "finished_at": "2026-11-23T12:37:34.502680+00:00"
+}

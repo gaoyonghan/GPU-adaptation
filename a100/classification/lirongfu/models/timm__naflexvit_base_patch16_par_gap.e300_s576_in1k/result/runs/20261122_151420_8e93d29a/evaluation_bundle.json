@@ -1,0 +1,1 @@
+{"model":"timm__naflexvit_base_patch16_par_gap.e300_s576_in1k","dataset":"imagenet_1k_val","complete":true,"bundle":"../../../../../../../dataset/imagenet_1k_val_timm__naflexvit_base_patch16_par_gap.e300_s576_in1k_imagenet/runs/20261122_151420_8e93d29a","schema":"model-eval/score-classification/v1"}

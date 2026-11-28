@@ -1,0 +1,7 @@
+{
+  "whizystems__NSFW-filterization": {
+    "total_latency_s": 4.955040080472827,
+    "sample_count": 4000,
+    "avg_latency_ms": 1.2387600201182067
+  }
+}

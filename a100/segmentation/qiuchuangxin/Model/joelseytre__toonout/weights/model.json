@@ -1,0 +1,25 @@
+{
+  "model_id": "joelseytre__toonout",
+  "adapter": "toonout",
+  "weight_path": "weights/birefnet_finetuned_toonout.pth",
+  "source_root": "weights",
+  "dataset_root": "../../../../dataset/segmentation",
+  "datasets": [
+    {
+      "name": "ToonOut",
+      "split": [
+        "validation"
+      ],
+      "protocol": {}
+    }
+  ],
+  "native_task": "动漫前景分割",
+  "native_boundary": "动漫域前景，不具备COCO多类身份",
+  "original_entrypoints": [
+    "joelseytre__toonout/ToonOutStart.py"
+  ],
+  "python": "../../venv/bin/python",
+  "evaluation_python": "../../venv/bin/python",
+  "seed": 42,
+  "bundle_root": "result/coco_bundle"
+}
